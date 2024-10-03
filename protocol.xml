@@ -48,26 +48,156 @@ Any inquiries can be addressed to:
 	<Name>Exercise HTTP CoinMarketCap</Name>
 	<Description>Exercise HTTP CoinMarketCap DataMiner connector</Description>
 	<Version>1.0.0.1</Version>
-	<IntegrationID>DMS-DRV-</IntegrationID>
+	<IntegrationID>DMS-DRV-001</IntegrationID>
 	<Provider>Skyline Communications</Provider>
-	<Vendor></Vendor>
-	<VendorOID>1.3.6.1.4.1.8813.2.</VendorOID>
-	<DeviceOID></DeviceOID>
-	<ElementType></ElementType>
-	<Type relativeTimers="true">virtual</Type>
-	<Display defaultPage="General" pageOrder="General"/>
+	<Vendor>Skyline Communications</Vendor>
+	<VendorOID>1.3.6.1.4.1.8813.2.1</VendorOID>
+	<DeviceOID>1001</DeviceOID>
+	<ElementType>HTTP Query Sender</ElementType>
+	<Type relativeTimers="true">http</Type>
+	<Display defaultPage="General" pageOrder="General" wideColumnPages=""/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
 		<CassandraReady>true</CassandraReady>
-		<MinimumRequiredVersion>10.1.0.0 - 9966</MinimumRequiredVersion>
+		<MinimumRequiredVersion>10.2.0.0 - 12603</MinimumRequiredVersion>
 	</Compliancies>
 
 	<Params>
+		<Param id="1">
+			<Name>sendRequest</Name>
+			<Type>write</Type>
+			<Information>
+				<Subtext>Sends Request.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>3</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type width="110">button</Type>
+				<Discreets>
+					<Discreet>
+						<Display>Send Request</Display>
+						<Value>1</Value>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+		</Param>
 		<Param id="2">
 			<Name>AfterStartup</Name>
 			<Description>After Startup</Description>
 			<Type>dummy</Type>
+		</Param>
+		<Param id="3" trending="false">
+			<Name>API Key</Name>
+			<Description>API Key</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="password">string</Type>
+			</Measurement>
+		</Param>
+		<Param id="53" setter="true">
+			<Name>API Key</Name>
+			<Description>API Key</Description>
+			<Type>write</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="password">string</Type>
+			</Measurement>
+		</Param>
+		
+		<Param id="100" trending="false">
+			<Name>statusCode</Name>
+			<Description>Status Code</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="200" trending="false">
+			<Name>responseContent</Name>
+			<Description>Response Content</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>2</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type lines="10">string</Type>
+			</Measurement>
 		</Param>
 	</Params>
 
@@ -76,6 +206,21 @@ Any inquiries can be addressed to:
 		<QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
 	</QActions>
 
+	<HTTP>
+		<Session id="1" name="Get Crypto Currency Listing">
+			<Connection id="1" name="Get Crypte Currency Latest">
+				<Request verb="GET" url="v1/cryptocurrency/listings/latest">
+					<Headers>
+						<Header key="X-CMC_PRO_API_KEY" pid="3"></Header>
+					</Headers>
+				</Request>
+				<Response statusCode="100">
+					<Content pid="200"></Content>
+				</Response>
+			</Connection>
+		</Session>
+	</HTTP>
+
 	<Groups>
 		<Group id="2">
 			<Name>After Startup</Name>
@@ -83,6 +228,14 @@ Any inquiries can be addressed to:
 			<Type>poll action</Type>
 			<Content>
 				<Action>2</Action>
+			</Content>
+		</Group>
+		<Group id="1">
+			<Name>Latest Crypto Currency Listing</Name>
+			<Description>Latest Crypto Currency Listing</Description>
+			<Type>poll</Type>
+			<Content>
+				<Session>1</Session>
 			</Content>
 		</Group>
 	</Groups>
@@ -97,6 +250,15 @@ Any inquiries can be addressed to:
 				<Id>1</Id>
 			</Content>
 		</Trigger>
+		<Trigger id="2">
+			<Name>On Button Press 'Send Request'</Name>
+			<On id="1">parameter</On>
+			<Time>change</Time>
+			<Type>action</Type>
+			<Content>
+				<Id>3</Id>
+			</Content>
+		</Trigger>
 	</Triggers>
 
 	<Actions>
@@ -109,6 +271,12 @@ Any inquiries can be addressed to:
 			<Name>After Startup QAction</Name>
 			<On id="2">parameter</On>
 			<Type>run actions</Type>
+		</Action>
+
+		<Action id="3">
+			<Name>Execute Group</Name>
+			<On id="1">group</On>
+			<Type>execute one now</Type>
 		</Action>
 	</Actions>
 
@@ -136,7 +304,13 @@ Any inquiries can be addressed to:
 		</Timer>
 	</Timers>
 
-	<PortSettings>
+	<PortSettings name="HTTP Connection">
+		<BusAddress>
+			<Disabled>true</Disabled>
+		</BusAddress>
+		<IPport>
+			<Disabled>true</Disabled>
+		</IPport>
 	</PortSettings>
 
 	<VersionHistory>

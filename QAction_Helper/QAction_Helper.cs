@@ -8,12 +8,41 @@ namespace Skyline.DataMiner.Scripting
 {
 public static class Parameter
 {
+	/// <summary>PID: 3 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int apiKey_3 = 3;
+	/// <summary>PID: 3 | Type: read</summary>
+	public const int apiKey = 3;
+	/// <summary>PID: 100 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int statuscode_100 = 100;
+	/// <summary>PID: 100 | Type: read</summary>
+	public const int statuscode = 100;
+	/// <summary>PID: 200 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int responsecontent_200 = 200;
+	/// <summary>PID: 200 | Type: read</summary>
+	public const int responsecontent = 200;
 	public class Write
 	{
+		/// <summary>PID: 1 | Type: write</summary>
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public const int sendrequest_1 = 1;
+		/// <summary>PID: 1 | Type: write</summary>
+		public const int sendrequest = 1;
+		/// <summary>PID: 53 | Type: write</summary>
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public const int apiKey_53 = 53;
+		/// <summary>PID: 53 | Type: write</summary>
+		public const int apiKey = 53;
 	}
 }
 public class WriteParameters
 {
+	/// <summary>PID: 1  | Type: write | DISCREETS: Send Request = 1</summary>
+	public System.Object Sendrequest {get { return Protocol.GetParameter(1); }set { Protocol.SetParameter(1, value); }}
+	/// <summary>PID: 53  | Type: write</summary>
+	public System.Object ApiKey {get { return Protocol.GetParameter(53); }set { Protocol.SetParameter(53, value); }}
 	public SLProtocolExt Protocol;
 	public WriteParameters(SLProtocolExt protocol)
 	{
@@ -22,13 +51,44 @@ public class WriteParameters
 }
 public interface SLProtocolExt : SLProtocol
 {
+	object Sendrequest_1 { get; set; }
+	object Sendrequest { get; set; }
 	object Afterstartup_dummy { get; set; }
+	object ApiKey_3 { get; set; }
+	object ApiKey { get; set; }
+	object ApiKey_53 { get; set; }
+	object Statuscode_100 { get; set; }
+	object Statuscode { get; set; }
+	object Responsecontent_200 { get; set; }
+	object Responsecontent { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 {
+	/// <summary>PID: 1  | Type: write | DISCREETS: Send Request = 1</summary>
+	public System.Object Sendrequest_1 {get { return GetParameter(1); }set { SetParameter(1, value); }}
+	/// <summary>PID: 1  | Type: write | DISCREETS: Send Request = 1</summary>
+	public System.Object Sendrequest {get { return Write.Sendrequest; }set { Write.Sendrequest = value; }}
 	/// <summary>PID: 2  | Type: dummy</summary>
 	public System.Object Afterstartup_dummy {get { return GetParameter(2); }set { SetParameter(2, value); }}
+	/// <summary>PID: 3  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object ApiKey_3 {get { return GetParameter(3); }set { SetParameter(3, value); }}
+	/// <summary>PID: 3  | Type: read</summary>
+	public System.Object ApiKey {get { return GetParameter(3); }set { SetParameter(3, value); }}
+	/// <summary>PID: 53  | Type: write</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object ApiKey_53 {get { return GetParameter(53); }set { SetParameter(53, value); }}
+	/// <summary>PID: 100  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Statuscode_100 {get { return GetParameter(100); }set { SetParameter(100, value); }}
+	/// <summary>PID: 100  | Type: read</summary>
+	public System.Object Statuscode {get { return GetParameter(100); }set { SetParameter(100, value); }}
+	/// <summary>PID: 200  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Responsecontent_200 {get { return GetParameter(200); }set { SetParameter(200, value); }}
+	/// <summary>PID: 200  | Type: read</summary>
+	public System.Object Responsecontent {get { return GetParameter(200); }set { SetParameter(200, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{
