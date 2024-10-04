@@ -81,7 +81,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>3</Row>
+						<Row>2</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -100,11 +100,14 @@ Any inquiries can be addressed to:
 			<Description>After Startup</Description>
 			<Type>dummy</Type>
 		</Param>
-		<Param id="3" trending="false">
-			<Name>API Key</Name>
+		<Param id="3" trending="false" save="true">
+			<Name>apiKey</Name>
 			<Description>API Key</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Stores the API key used to authenticate access to the endpoint.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -125,8 +128,8 @@ Any inquiries can be addressed to:
 				<Type options="password">string</Type>
 			</Measurement>
 		</Param>
-		<Param id="53" setter="true">
-			<Name>API Key</Name>
+		<Param id="4" setter="true">
+			<Name>apiKey</Name>
 			<Description>API Key</Description>
 			<Type>write</Type>
 			<Interprete>
@@ -149,17 +152,34 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		
-		<Param id="100" trending="false">
-			<Name>statusCode</Name>
-			<Description>Status Code</Description>
-			<Type>read</Type>
+		<Param id="10">
+			<Name>latestListingsOverview</Name>
+			<Description>Latest Listings Overview</Description>
+			<Type>array</Type>
+			<ArrayOptions index="0" options=";naming=/12">
+				<ColumnOption idx="0" pid="11" type="retrieved" options=""/>
+				<ColumnOption idx="1" pid="12" type="retrieved" options="" />
+				<ColumnOption idx="2" pid="13" type="retrieved" options="" />
+				<ColumnOption idx="3" pid="14" type="retrieved" options="" />
+				<ColumnOption idx="4" pid="15" type="retrieved" options="" />
+				<ColumnOption idx="5" pid="16" type="retrieved" options="" />
+				<ColumnOption idx="6" pid="17" type="retrieved" options="" />
+				<ColumnOption idx="7" pid="18" type="retrieved" options="" />
+				<ColumnOption idx="8" pid="19" type="retrieved" options="" />
+				<ColumnOption idx="9" pid="20" type="retrieved" options="" />
+				<ColumnOption idx="10" pid="21" type="retrieved" options="" />
+				<ColumnOption idx="11" pid="22" type="retrieved" options="" />
+				<ColumnOption idx="12" pid="23" type="retrieved" options="" />
+				<ColumnOption idx="13" pid="24" type="retrieved" options="" />
+				<ColumnOption idx="14" pid="25" type="retrieved" options="" />
+				<ColumnOption idx="15" pid="26" type="retrieved" options="" />
+				<ColumnOption idx="16" pid="27" type="retrieved" options="" />
+			</ArrayOptions>
 			<Information>
+				<Subtext>
+					<![CDATA[Represents detailed cryptocurrency data, including market information, supply metrics, price changes, and rankings for multiple assets.]]>
+				</Subtext>
 			</Information>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -171,14 +191,15 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type options="tab=columns:11|0-12|1-13|2-14|3-15|4-16|5-17|6-18|7-20|9-19|8-21|10-22|11-23|12-24|13-25|14-26|15-27|16,width:80-52-61-154-71-118-122-88-135-68-56-171-84-151-221-208-85,sort:STRING-STRING-STRING-INT-STRING-INT-INT-INT-STRING-STRING-INT-INT-INT-INT-INT-INT-INT,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
-		<Param id="200" trending="false">
-			<Name>responseContent</Name>
-			<Description>Response Content</Description>
+		<Param id="11" trending="false">
+			<Name>latestListingsOverviewInstance</Name>
+			<Description>Instance (Latest Listings Overview)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>This is the key used internally by DataMiner to identify the table entries.</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -187,14 +208,460 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>2</Row>
-					</Position>
-				</Positions>
 			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="12" trending="false">
+			<Name>latestListingsOverviewName</Name>
+			<Description>Name (Latest Listings Overview)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Represents name of the Cryptocurrency.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="13" trending="false">
+			<Name>latestListingsOverviewSymbol</Name>
+			<Description>Symbol (Latest Listings Overview)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Represents the symbol for the cryptocurrency.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="14" trending="false">
+			<Name>latestListingsOverviewNumberOfMarketPairs</Name>
+			<Description>Number of Market Pairs (Latest Listings Overview)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[represents the number of unique trading pairs for a cryptocurrency across all exchanges where it is listed.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 'pairs' unit represents most logical unit for Number of Market Pairs column. -->
+				<Units>pairs</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+				<Range>
+					<Low>0</Low>
+				</Range>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="15" trending="false">
+			<Name>latestListingsOverviewMineable</Name>
+			<Description>Mineable (Latest Listings Overview)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Represents information about the mineability of the cryptocurrency.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>discreet</Type>
+				<Discreets>
+					<Discreet>
+						<Display>Yes</Display>
+						<Value>1</Value>
+					</Discreet>
+					<Discreet>
+						<Display>No</Display>
+						<Value>0</Value>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+		</Param>
+		<Param id="16" trending="false">
+			<Name>latestListingsOverviewMaximumSupply</Name>
+			<Description>Maximum Supply (Latest Listings Overview)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Represents the maximum amount of the cryptocurrency that will ever exist.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>0</Low>
+				</Range>
+				<!-- SuppressValidator 2.9.4 As this parameter represents number of coins, in this case Unit 'coins' is the most appropriate unit. -->
+				<Units>coins</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="17" trending="false">
+			<Name>latestListingsOverviewCirculatingSupply</Name>
+			<Description>Circulating Supply (Latest Listings Overview)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Represents the current amount of the cryptocurrency that is publicly available and circulating in the market.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 As this parameter represents number of coins, in this case Unit 'coins' is the most appropriate unit. -->
+				<Units>coins</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+				<Range>
+					<Low>0</Low>
+				</Range>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="18" trending="false">
+			<Name>latestListingsOverviewTotalSupply</Name>
+			<Description>Total Supply (Latest Listings Overview)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Represents the total amount of the cryptocurrency that currently exists, including coins that are not yet in circulation.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 As this parameter represents number of coins, in this case Unit 'coins' is the most appropriate unit. -->
+				<Units>coins</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+				<Range>
+					<Low>0</Low>
+				</Range>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="19" trending="false">
+			<Name>latestListingsOverviewPlatform</Name>
+			<Description>Platform (Latest Listings Overview)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[The blockchain platform on which the cryptocurrency runs.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="20" trending="false">
+			<Name>latestListingsOverviewCoinMarketCapRank</Name>
+			<Description>Coinmarketcap Rank (Latest Listings Overview)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Represents the rank of the cryptocurrency based on market capitalization on CoinMarketCap.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<!-- SuppressValidator 2.9.7 As this parameter represents rank of the cryptocurrency on CoinMarketCap the units are not needed. -->
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>1</Low>
+				</Range>
+			</Display>
+			<!-- /SuppressValidator 2.9.7 -->
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="21" trending="false">
+			<Name>latestListingsOverviewPrice</Name>
+			<Description>Price (Latest Listings Overview)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Represents the current price of the cryptocurrency in USD.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 As the cryptocurrency value is represented in dollars, the most appropriate unit is 'USD'. -->
+				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+				<Range>
+					<Low>0</Low>
+				</Range>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="22" trending="false">
+			<Name>latestListingsOverviewTradingVolume24Hours</Name>
+			<Description>Trading Volume (24 Hours) (Latest Listings Overview)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Represents the total value of the cryptocurrency traded in the last 24 hours.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 As the cryptocurrency value is represented in dollars, the most appropriate unit is 'USD' -->
+				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+				<Range>
+					<Low>0</Low>
+				</Range>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="23" trending="false">
+			<Name>latestListingsOverviewMarketCap</Name>
+			<Description>Market Cap (Latest Listings Overview)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Represents the total value of a cryptocurrency in circulation.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 As the cryptocurrency value is represented in dollars, the most appropriate unit is 'USD'. -->
+				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+				<Range>
+					<Low>0</Low>
+				</Range>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="24" trending="false">
+			<Name>latestListingsOverviewMarketCapDominance</Name>
+			<Description>Market Cap Dominance (Latest Listings Overview)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Represents the percentage of the total cryptocurrency market that this particular cryptocurrency.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="25" trending="false">
+			<Name>latestListingsOverviewPricePercentageChange24Hours</Name>
+			<Description>Price Percentage Change (24 Hours) (Latest Listings Overview)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Represents the price change over the past 24 hours (in percentages).]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="26" trending="false">
+			<Name>latestListingsOverviewPricePercentangeChange7Days</Name>
+			<Description>Price Percentage Change (7 Days) (Latest Listings Overview)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Represents the price change over the past 7 days (in percentages).]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="27" trending="false">
+			<Name>latestListingsOverviewLastUpdate</Name>
+			<Description>Last Update (Latest Listings Overview)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Represents last timestamp that data was updated.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		
+		
+		<Param id="200" trending="false">
+			<Name>LatestListingStatusCode</Name>
+			<Description>Latest Status Code</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[The status code for the latest listing response.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<Range>
+					<Low>100</Low>
+					<High>600</High>
+				</Range>
+				<RTDisplay>false</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="210" trending="false">
+			<Name>latestListingResponseContent</Name>
+			<Description>Latest Response Content</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[The content of the latest listing response.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
 			<Measurement>
 				<Type lines="10">string</Type>
 			</Measurement>
@@ -207,15 +674,17 @@ Any inquiries can be addressed to:
 	</QActions>
 
 	<HTTP>
-		<Session id="1" name="Get Crypto Currency Listing">
-			<Connection id="1" name="Get Crypte Currency Latest">
+		<Session id="1" name="Get Cryptocurrency Listing">
+			<Connection id="1" name="Get Cryptocurrency Latest">
 				<Request verb="GET" url="v1/cryptocurrency/listings/latest">
 					<Headers>
+						<!-- SuppressValidator 8.3.1 This specific key is needed to access this API endpoint.	 -->
 						<Header key="X-CMC_PRO_API_KEY" pid="3"></Header>
+						<!-- /SuppressValidator 8.3.1 -->
 					</Headers>
 				</Request>
-				<Response statusCode="100">
-					<Content pid="200"></Content>
+				<Response statusCode="200">
+					<Content pid="210"></Content>
 				</Response>
 			</Connection>
 		</Session>
@@ -231,8 +700,8 @@ Any inquiries can be addressed to:
 			</Content>
 		</Group>
 		<Group id="1">
-			<Name>Latest Crypto Currency Listing</Name>
-			<Description>Latest Crypto Currency Listing</Description>
+			<Name>Latest Cryptocurrency Listing</Name>
+			<Description>Latest Cryptocurrency Listing</Description>
 			<Type>poll</Type>
 			<Content>
 				<Session>1</Session>
@@ -325,7 +794,7 @@ Any inquiries can be addressed to:
 									<MinorVersion id="1">
 										<Date>2024-01-11</Date>
 										<Provider>
-											<Author>XXX</Author>
+											<Author>EnisAB</Author>
 											<Company>Skyline Communications</Company>
 										</Provider>
 										<Changes>
