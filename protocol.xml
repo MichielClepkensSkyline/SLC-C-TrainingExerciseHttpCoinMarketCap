@@ -81,7 +81,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>2</Row>
+						<Row>4</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -186,7 +186,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>1</Row>
+						<Row>3</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -395,8 +395,8 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="19" trending="false">
-			<Name>latestListingsOverviewPlatform</Name>
-			<Description>Platform (Latest Listings Overview)</Description>
+			<Name>latestListingsOverviewPlatformName</Name>
+			<Description>Platform Name (Latest Listings Overview)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
@@ -642,7 +642,14 @@ Any inquiries can be addressed to:
 					<Low>100</Low>
 					<High>600</High>
 				</Range>
-				<RTDisplay>false</RTDisplay>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -650,7 +657,7 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="210" trending="false">
 			<Name>latestListingResponseContent</Name>
-			<Description>Latest Response Content</Description>
+			<Description>Latest Listing Response Content</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
@@ -662,6 +669,16 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>2</Row>
+					</Position>
+				</Positions>
+			</Display>
 			<Measurement>
 				<Type lines="10">string</Type>
 			</Measurement>
@@ -670,7 +687,7 @@ Any inquiries can be addressed to:
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
-		<QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
+		<QAction id="2" name="After Recieving Latest Listing Reponse" encoding="csharp" triggers="210" />
 	</QActions>
 
 	<HTTP>

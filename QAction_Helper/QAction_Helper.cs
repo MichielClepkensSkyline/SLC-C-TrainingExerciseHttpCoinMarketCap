@@ -88,9 +88,9 @@ public static class Parameter
 			public const int latestlistingsoverviewtotalsupply = 18;
 			/// <summary>PID: 19 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int latestlistingsoverviewplatform_19 = 19;
+			public const int latestlistingsoverviewplatformname_19 = 19;
 			/// <summary>PID: 19 | Type: read</summary>
-			public const int latestlistingsoverviewplatform = 19;
+			public const int latestlistingsoverviewplatformname = 19;
 			/// <summary>PID: 20 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
 			public const int latestlistingsoverviewcoinmarketcaprank_20 = 20;
@@ -179,9 +179,9 @@ public static class Parameter
 			public const int latestlistingsoverviewtotalsupply = 7;
 			/// <summary>IDX: 8 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int latestlistingsoverviewplatform_19 = 8;
+			public const int latestlistingsoverviewplatformname_19 = 8;
 			/// <summary>IDX: 8 | Type: read</summary>
-			public const int latestlistingsoverviewplatform = 8;
+			public const int latestlistingsoverviewplatformname = 8;
 			/// <summary>IDX: 9 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
 			public const int latestlistingsoverviewcoinmarketcaprank_20 = 9;
@@ -263,8 +263,8 @@ public interface SLProtocolExt : SLProtocol
 	object Latestlistingsoverviewcirculatingsupply { get; set; }
 	object Latestlistingsoverviewtotalsupply_18 { get; set; }
 	object Latestlistingsoverviewtotalsupply { get; set; }
-	object Latestlistingsoverviewplatform_19 { get; set; }
-	object Latestlistingsoverviewplatform { get; set; }
+	object Latestlistingsoverviewplatformname_19 { get; set; }
+	object Latestlistingsoverviewplatformname { get; set; }
 	object Latestlistingsoverviewcoinmarketcaprank_20 { get; set; }
 	object Latestlistingsoverviewcoinmarketcaprank { get; set; }
 	object Latestlistingsoverviewprice_21 { get; set; }
@@ -347,9 +347,9 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Latestlistingsoverviewtotalsupply {get { return GetParameter(18); }set { SetParameter(18, value); }}
 	/// <summary>PID: 19  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Latestlistingsoverviewplatform_19 {get { return GetParameter(19); }set { SetParameter(19, value); }}
+	public System.Object Latestlistingsoverviewplatformname_19 {get { return GetParameter(19); }set { SetParameter(19, value); }}
 	/// <summary>PID: 19  | Type: read</summary>
-	public System.Object Latestlistingsoverviewplatform {get { return GetParameter(19); }set { SetParameter(19, value); }}
+	public System.Object Latestlistingsoverviewplatformname {get { return GetParameter(19); }set { SetParameter(19, value); }}
 	/// <summary>PID: 20  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewcoinmarketcaprank_20 {get { return GetParameter(20); }set { SetParameter(20, value); }}
@@ -459,9 +459,9 @@ public class LatestlistingsoverviewQActionRow : QActionTableRow
 	public System.Object Latestlistingsoverviewtotalsupply { get { if (base.Columns.ContainsKey(7)) { return base.Columns[7]; } else { return null; } } set { if (base.Columns.ContainsKey(7)) { base.Columns[7] = value; } else { base.Columns.Add(7, value); } } }
 	/// <summary>PID: 19 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Latestlistingsoverviewplatform_19 { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
+	public System.Object Latestlistingsoverviewplatformname_19 { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
 	/// <summary>PID: 19 | Type: read</summary>
-	public System.Object Latestlistingsoverviewplatform { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
+	public System.Object Latestlistingsoverviewplatformname { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
 	/// <summary>PID: 20 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewcoinmarketcaprank_20 { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
