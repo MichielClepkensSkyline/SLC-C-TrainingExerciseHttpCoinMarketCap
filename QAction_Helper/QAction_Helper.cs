@@ -310,85 +310,85 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Latestlistingsoverviewinstance_11 {get { return GetParameter(11); }set { SetParameter(11, value); }}
 	/// <summary>PID: 11  | Type: read</summary>
 	public System.Object Latestlistingsoverviewinstance {get { return GetParameter(11); }set { SetParameter(11, value); }}
-	/// <summary>PID: 12  | Type: read</summary>
+	/// <summary>PID: 12  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewname_12 {get { return GetParameter(12); }set { SetParameter(12, value); }}
-	/// <summary>PID: 12  | Type: read</summary>
+	/// <summary>PID: 12  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Latestlistingsoverviewname {get { return GetParameter(12); }set { SetParameter(12, value); }}
-	/// <summary>PID: 13  | Type: read</summary>
+	/// <summary>PID: 13  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewsymbol_13 {get { return GetParameter(13); }set { SetParameter(13, value); }}
-	/// <summary>PID: 13  | Type: read</summary>
+	/// <summary>PID: 13  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Latestlistingsoverviewsymbol {get { return GetParameter(13); }set { SetParameter(13, value); }}
-	/// <summary>PID: 14  | Type: read</summary>
+	/// <summary>PID: 14  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewnumberofmarketpairs_14 {get { return GetParameter(14); }set { SetParameter(14, value); }}
-	/// <summary>PID: 14  | Type: read</summary>
+	/// <summary>PID: 14  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Latestlistingsoverviewnumberofmarketpairs {get { return GetParameter(14); }set { SetParameter(14, value); }}
-	/// <summary>PID: 15  | Type: read | DISCREETS: Yes = 1, No = 0</summary>
+	/// <summary>PID: 15  | Type: read | DISCREETS: Yes = 1, No = 0 | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewmineable_15 {get { return GetParameter(15); }set { SetParameter(15, value); }}
-	/// <summary>PID: 15  | Type: read | DISCREETS: Yes = 1, No = 0</summary>
+	/// <summary>PID: 15  | Type: read | DISCREETS: Yes = 1, No = 0 | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Latestlistingsoverviewmineable {get { return GetParameter(15); }set { SetParameter(15, value); }}
-	/// <summary>PID: 16  | Type: read</summary>
+	/// <summary>PID: 16  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewmaximumsupply_16 {get { return GetParameter(16); }set { SetParameter(16, value); }}
-	/// <summary>PID: 16  | Type: read</summary>
+	/// <summary>PID: 16  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Latestlistingsoverviewmaximumsupply {get { return GetParameter(16); }set { SetParameter(16, value); }}
-	/// <summary>PID: 17  | Type: read</summary>
+	/// <summary>PID: 17  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewcirculatingsupply_17 {get { return GetParameter(17); }set { SetParameter(17, value); }}
-	/// <summary>PID: 17  | Type: read</summary>
+	/// <summary>PID: 17  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Latestlistingsoverviewcirculatingsupply {get { return GetParameter(17); }set { SetParameter(17, value); }}
-	/// <summary>PID: 18  | Type: read</summary>
+	/// <summary>PID: 18  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewtotalsupply_18 {get { return GetParameter(18); }set { SetParameter(18, value); }}
-	/// <summary>PID: 18  | Type: read</summary>
+	/// <summary>PID: 18  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Latestlistingsoverviewtotalsupply {get { return GetParameter(18); }set { SetParameter(18, value); }}
-	/// <summary>PID: 19  | Type: read</summary>
+	/// <summary>PID: 19  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewplatformname_19 {get { return GetParameter(19); }set { SetParameter(19, value); }}
-	/// <summary>PID: 19  | Type: read</summary>
+	/// <summary>PID: 19  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Latestlistingsoverviewplatformname {get { return GetParameter(19); }set { SetParameter(19, value); }}
-	/// <summary>PID: 20  | Type: read</summary>
+	/// <summary>PID: 20  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewcoinmarketcaprank_20 {get { return GetParameter(20); }set { SetParameter(20, value); }}
-	/// <summary>PID: 20  | Type: read</summary>
+	/// <summary>PID: 20  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Latestlistingsoverviewcoinmarketcaprank {get { return GetParameter(20); }set { SetParameter(20, value); }}
-	/// <summary>PID: 21  | Type: read</summary>
+	/// <summary>PID: 21  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewprice_21 {get { return GetParameter(21); }set { SetParameter(21, value); }}
-	/// <summary>PID: 21  | Type: read</summary>
+	/// <summary>PID: 21  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Latestlistingsoverviewprice {get { return GetParameter(21); }set { SetParameter(21, value); }}
-	/// <summary>PID: 22  | Type: read</summary>
+	/// <summary>PID: 22  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewtradingvolume24hours_22 {get { return GetParameter(22); }set { SetParameter(22, value); }}
-	/// <summary>PID: 22  | Type: read</summary>
+	/// <summary>PID: 22  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Latestlistingsoverviewtradingvolume24hours {get { return GetParameter(22); }set { SetParameter(22, value); }}
-	/// <summary>PID: 23  | Type: read</summary>
+	/// <summary>PID: 23  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewmarketcap_23 {get { return GetParameter(23); }set { SetParameter(23, value); }}
-	/// <summary>PID: 23  | Type: read</summary>
+	/// <summary>PID: 23  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Latestlistingsoverviewmarketcap {get { return GetParameter(23); }set { SetParameter(23, value); }}
-	/// <summary>PID: 24  | Type: read</summary>
+	/// <summary>PID: 24  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewmarketcapdominance_24 {get { return GetParameter(24); }set { SetParameter(24, value); }}
-	/// <summary>PID: 24  | Type: read</summary>
+	/// <summary>PID: 24  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Latestlistingsoverviewmarketcapdominance {get { return GetParameter(24); }set { SetParameter(24, value); }}
-	/// <summary>PID: 25  | Type: read</summary>
+	/// <summary>PID: 25  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewpricepercentagechange24hours_25 {get { return GetParameter(25); }set { SetParameter(25, value); }}
-	/// <summary>PID: 25  | Type: read</summary>
+	/// <summary>PID: 25  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Latestlistingsoverviewpricepercentagechange24hours {get { return GetParameter(25); }set { SetParameter(25, value); }}
-	/// <summary>PID: 26  | Type: read</summary>
+	/// <summary>PID: 26  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewpricepercentangechange7days_26 {get { return GetParameter(26); }set { SetParameter(26, value); }}
-	/// <summary>PID: 26  | Type: read</summary>
+	/// <summary>PID: 26  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Latestlistingsoverviewpricepercentangechange7days {get { return GetParameter(26); }set { SetParameter(26, value); }}
-	/// <summary>PID: 27  | Type: read</summary>
+	/// <summary>PID: 27  | Type: read | EXCEPTIONS: N/A = Output: 1/1/0001 12:00:00 AM</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewlastupdate_27 {get { return GetParameter(27); }set { SetParameter(27, value); }}
-	/// <summary>PID: 27  | Type: read</summary>
+	/// <summary>PID: 27  | Type: read | EXCEPTIONS: N/A = Output: 1/1/0001 12:00:00 AM</summary>
 	public System.Object Latestlistingsoverviewlastupdate {get { return GetParameter(27); }set { SetParameter(27, value); }}
 	/// <summary>PID: 200  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]

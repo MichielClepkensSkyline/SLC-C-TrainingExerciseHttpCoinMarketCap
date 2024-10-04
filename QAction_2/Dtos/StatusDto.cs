@@ -10,21 +10,21 @@
         public DateTime Timestamp { get; set; }
 
         [JsonProperty("error_code")]
-        public int ErrorCode { get; set; }
+        public int? ErrorCode { get; set; }
 
         [JsonProperty("error_message")]
         public string ErrorMessage { get; set; }
 
         [JsonProperty("elapsed")]
-        public int Elapsed { get; set; }
+        public int? Elapsed { get; set; }
 
         [JsonProperty("credit_count")]
-        public int CreditCount { get; set; }
+        public int? CreditCount { get; set; }
 
         [JsonProperty("notice")]
         public string Notice { get; set; }
 
         [JsonProperty("total_count")]
-        public int TotalCount { get; set; }
+        public int? TotalCount { get; set; }
     }
 }
