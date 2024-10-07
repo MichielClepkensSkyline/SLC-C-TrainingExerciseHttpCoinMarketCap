@@ -18,11 +18,21 @@ public static class Parameter
 	public const int latestlistingstatuscode_200 = 200;
 	/// <summary>PID: 200 | Type: read</summary>
 	public const int latestlistingstatuscode = 200;
+	/// <summary>PID: 201 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int latestquotesstatuscode_201 = 201;
+	/// <summary>PID: 201 | Type: read</summary>
+	public const int latestquotesstatuscode = 201;
 	/// <summary>PID: 210 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int latestlistingresponsecontent_210 = 210;
 	/// <summary>PID: 210 | Type: read</summary>
 	public const int latestlistingresponsecontent = 210;
+	/// <summary>PID: 211 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int latestquotesresponsecontent_211 = 211;
+	/// <summary>PID: 211 | Type: read</summary>
+	public const int latestquotesresponsecontent = 211;
 	public class Write
 	{
 		/// <summary>PID: 1 | Type: write</summary>
@@ -283,8 +293,12 @@ public interface SLProtocolExt : SLProtocol
 	object Latestlistingsoverviewlastupdate { get; set; }
 	object Latestlistingstatuscode_200 { get; set; }
 	object Latestlistingstatuscode { get; set; }
+	object Latestquotesstatuscode_201 { get; set; }
+	object Latestquotesstatuscode { get; set; }
 	object Latestlistingresponsecontent_210 { get; set; }
 	object Latestlistingresponsecontent { get; set; }
+	object Latestquotesresponsecontent_211 { get; set; }
+	object Latestquotesresponsecontent { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
@@ -395,11 +409,21 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Latestlistingstatuscode_200 {get { return GetParameter(200); }set { SetParameter(200, value); }}
 	/// <summary>PID: 200  | Type: read</summary>
 	public System.Object Latestlistingstatuscode {get { return GetParameter(200); }set { SetParameter(200, value); }}
+	/// <summary>PID: 201  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Latestquotesstatuscode_201 {get { return GetParameter(201); }set { SetParameter(201, value); }}
+	/// <summary>PID: 201  | Type: read</summary>
+	public System.Object Latestquotesstatuscode {get { return GetParameter(201); }set { SetParameter(201, value); }}
 	/// <summary>PID: 210  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingresponsecontent_210 {get { return GetParameter(210); }set { SetParameter(210, value); }}
 	/// <summary>PID: 210  | Type: read</summary>
 	public System.Object Latestlistingresponsecontent {get { return GetParameter(210); }set { SetParameter(210, value); }}
+	/// <summary>PID: 211  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Latestquotesresponsecontent_211 {get { return GetParameter(211); }set { SetParameter(211, value); }}
+	/// <summary>PID: 211  | Type: read</summary>
+	public System.Object Latestquotesresponsecontent {get { return GetParameter(211); }set { SetParameter(211, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{

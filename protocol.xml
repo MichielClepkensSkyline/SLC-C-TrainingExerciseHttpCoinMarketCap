@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>1001</DeviceOID>
 	<ElementType>HTTP Query Sender</ElementType>
 	<Type relativeTimers="true">http</Type>
-	<Display defaultPage="General" pageOrder="General" wideColumnPages=""/>
+	<Display defaultPage="" pageOrder="Latest Listings;Latest Quotes" wideColumnPages=""/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -79,9 +79,14 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Listings</Page>
 						<Column>0</Column>
-						<Row>4</Row>
+						<Row>2</Row>
+					</Position>
+					<Position>
+						<Page>Latest Quotes</Page>
+						<Column>0</Column>
+						<Row>3</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -118,7 +123,12 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Listings</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+					<Position>
+						<Page>Latest Quotes</Page>
 						<Column>0</Column>
 						<Row>0</Row>
 					</Position>
@@ -141,7 +151,12 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Listings</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+					<Position>
+						<Page>Latest Quotes</Page>
 						<Column>0</Column>
 						<Row>0</Row>
 					</Position>
@@ -184,14 +199,14 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Listings</Page>
 						<Column>0</Column>
-						<Row>3</Row>
+						<Row>1</Row>
 					</Position>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:11|0-12|1-13|2-14|3-15|4-16|5-17|6-18|7-20|9-19|8-21|10-22|11-23|12-24|13-25|14-26|15-27|16,width:80-190-61-154-71-140-130-130-135-105-105-171-150-151-221-208-125,sort:STRING-STRING-STRING-INT-STRING-INT-INT-INT-STRING-STRING-INT-INT-INT-INT-INT-INT-INT,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:11|0-12|1-13|2-14|3-15|4-16|5-17|6-18|7-20|9-19|8-21|10-22|11-23|12-24|13-25|14-26|15-27|16,width:80-190-61-154-71-160-160-160-135-105-105-171-150-151-221-208-125,sort:STRING-STRING-STRING-INT-STRING-INT-INT-INT-STRING-STRING-INT-INT-INT-INT-INT-INT-INT,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="11" trending="false">
@@ -725,7 +740,7 @@ Any inquiries can be addressed to:
 		
 		<Param id="200" trending="false">
 			<Name>LatestListingStatusCode</Name>
-			<Description>Latest Status Code</Description>
+			<Description>Latest Listing Status Code</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
@@ -744,9 +759,36 @@ Any inquiries can be addressed to:
 					<High>600</High>
 				</Range>
 				<RTDisplay>true</RTDisplay>
+			</Display>
+			<!-- /SuppressValidator 2.9.7 -->
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="201" trending="false">
+			<Name>LatestQuotesStatusCode</Name>
+			<Description>Latest Quotes Status Code</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[The status code for the latest quotes response.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<!-- SuppressValidator 2.9.7 Units tag not needed as this parameter represents status code of the response. -->
+			<Display>
+				<Range>
+					<Low>100</Low>
+					<High>600</High>
+				</Range>
+				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Quotes</Page>
 						<Column>0</Column>
 						<Row>1</Row>
 					</Position>
@@ -773,9 +815,30 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type lines="10">string</Type>
+			</Measurement>
+		</Param>
+		<Param id="211" trending="false">
+			<Name>latestQuotesResponseContent</Name>
+			<Description>Latest Quotes Response Content</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[The content of the latest quotes response.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Quotes</Page>
 						<Column>0</Column>
 						<Row>2</Row>
 					</Position>
@@ -793,7 +856,7 @@ Any inquiries can be addressed to:
 	</QActions>
 
 	<HTTP>
-		<Session id="1" name="Get Cryptocurrency Listing">
+		<Session id="1" name="Get Cryptocurrency Data">
 			<Connection id="1" name="Get Cryptocurrency Latest">
 				<Request verb="GET" url="v1/cryptocurrency/listings/latest">
 					<Headers>
@@ -804,6 +867,18 @@ Any inquiries can be addressed to:
 				</Request>
 				<Response statusCode="200">
 					<Content pid="210"></Content>
+				</Response>
+			</Connection>
+			<Connection id="2" name="Get Cryptocurrency Quotes">
+				<Request verb="GET" url="v1/global-metrics/quotes/latest">
+					<Headers>
+						<!-- SuppressValidator 8.3.1 This specific key is needed to access this API endpoint.	 -->
+						<Header key="X-CMC_PRO_API_KEY" pid="3"></Header>
+						<!-- /SuppressValidator 8.3.1 -->
+					</Headers>
+				</Request>
+				<Response statusCode="201">
+					<Content pid="211"></Content>
 				</Response>
 			</Connection>
 		</Session>
