@@ -1,12 +1,12 @@
 ﻿namespace QAction_2
 {
-	using System;
-	using System.Linq;
-	using Newtonsoft.Json;
-	using QAction_2.Dtos;
-	using Skyline.DataMiner.Scripting;
+    using System;
+    using System.Linq;
+    using Newtonsoft.Json;
+    using QAction_2.Dtos.LatestListingResponse;
+    using Skyline.DataMiner.Scripting;
 
-	public static class CryptoListingProcessor
+    public static class CryptoListingProcessor
 	{
 		private const string NotAvailableString = "-1";
 		private const int NotAvailableNumber = -1;
@@ -18,7 +18,7 @@
 			SetLatestListingTableColumns(protocol, latestListingResponse);
 		}
 
-		private static void SetLatestListingTableColumns(SLProtocolExt protocol, LatestListingResponseDto latestListingResponse)
+		private static void SetLatestListingTableColumns(SLProtocolExt protocol, ListingResponseDto latestListingResponse)
 		{
 			var latestListingTableRows = latestListingResponse.Data
 				.Where(coinData => coinData != null)
@@ -29,7 +29,7 @@
 			protocol.latestlistingsoverview.FillArray(latestListingTableRows);
 		}
 
-		private static LatestlistingsoverviewQActionRow PrepareLatestListingTableSingleRow(CoinDataDto coinData)
+		private static LatestlistingsoverviewQActionRow PrepareLatestListingTableSingleRow(ListingCoinDataDto coinData)
 		{
 			var latestListingSingleRow = new LatestlistingsoverviewQActionRow
 			{
@@ -55,7 +55,7 @@
 			return latestListingSingleRow;
 		}
 
-		private static LatestListingResponseDto GetAndDeserializeLatestListingResponse(SLProtocolExt protocol)
+		private static ListingResponseDto GetAndDeserializeLatestListingResponse(SLProtocolExt protocol)
 		{
 			var responseString = (string)protocol.GetParameter(Parameter.latestlistingresponsecontent_210);
 
@@ -64,7 +64,7 @@
 				throw new ArgumentException("The response is not a valid string or is empty.");
 			}
 
-			var latestListingResponse = JsonConvert.DeserializeObject<LatestListingResponseDto>(responseString);
+			var latestListingResponse = JsonConvert.DeserializeObject<ListingResponseDto>(responseString);
 
 			if (latestListingResponse == null)
 			{

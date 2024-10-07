@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>1001</DeviceOID>
 	<ElementType>HTTP Query Sender</ElementType>
 	<Type relativeTimers="true">http</Type>
-	<Display defaultPage="" pageOrder="Latest Listings;Latest Quotes" wideColumnPages=""/>
+	<Display defaultPage="General" pageOrder="General;Latest Listings" wideColumnPages=""/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -84,9 +84,9 @@ Any inquiries can be addressed to:
 						<Row>2</Row>
 					</Position>
 					<Position>
-						<Page>Latest Quotes</Page>
+						<Page>General</Page>
 						<Column>0</Column>
-						<Row>3</Row>
+						<Row>19</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -128,7 +128,7 @@ Any inquiries can be addressed to:
 						<Row>0</Row>
 					</Position>
 					<Position>
-						<Page>Latest Quotes</Page>
+						<Page>General</Page>
 						<Column>0</Column>
 						<Row>0</Row>
 					</Position>
@@ -156,7 +156,7 @@ Any inquiries can be addressed to:
 						<Row>0</Row>
 					</Position>
 					<Position>
-						<Page>Latest Quotes</Page>
+						<Page>General</Page>
 						<Column>0</Column>
 						<Row>0</Row>
 					</Position>
@@ -164,6 +164,28 @@ Any inquiries can be addressed to:
 			</Display>
 			<Measurement>
 				<Type options="password">string</Type>
+			</Measurement>
+		</Param>
+		<Param id="5">
+			<Name>titleEndGeneric</Name>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>8</Row>
+					</Position>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>18</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="end">title</Type>
 			</Measurement>
 		</Param>
 		
@@ -737,6 +759,412 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		
+		<Param id="49" trending="false">
+			<Name>globalMetricsLastUpdate</Name>
+			<Description>Global Metrics Last Update</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="datetime">number</Type>
+			</Measurement>
+		</Param>
+		<Param id="50">
+			<Name>titleBeginMarketDominanceMetrics</Name>
+			<Description>Market Dominance Metrics</Description>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>3</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="begin">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="51" trending="false">
+			<Name>marketDominanceBitcoin</Name>
+			<Description>Bitcoin Dominance</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>4</Row>
+					</Position>
+				</Positions>
+				<Decimals>2</Decimals>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="52" trending="false">
+			<Name>marketDominanceEthereum</Name>
+			<Description>Ethereum Dominance</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>6</Row>
+					</Position>
+				</Positions>
+				<Decimals>2</Decimals>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="53" trending="false">
+			<Name>marketDominanceBitcoin24HPrecentageChange</Name>
+			<Description>Bitcoin Dominance Percentage Change (24 H)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>5</Row>
+					</Position>
+				</Positions>
+				<Decimals>3</Decimals>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="54" trending="false">
+			<Name>marketDominanceEthereum24HPercentageChange</Name>
+			<Description>Ethereum Dominance Percentage Change (24 H)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>7</Row>
+					</Position>
+				</Positions>
+				<Decimals>3</Decimals>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="55">
+			<Name>titleBeginVolumeAndMarketCap</Name>
+			<Description>Volume and Market Cap</Description>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>9</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="begin">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="56" trending="false">
+			<Name>volumeAndMarketCapTotalMarketCap</Name>
+			<Description>Total Market Cap</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>USD</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>10</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="57" trending="false">
+			<Name>volumeAndMarketCapTotalVolume24H</Name>
+			<Description>Total Volume (24 H)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>USD</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>11</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="58" trending="false">
+			<Name>volumeAndMarketCapTotalMarketCapYesterday</Name>
+			<Description>Total Market Cap Yesterday</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>USD</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>12</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="59" trending="false">
+			<Name>volumeAndMarketCapTotalMarketCapYesterdayPercentageChange</Name>
+			<Description>Total Market Cap Yesterday Percentage Change</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>13</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="60" trending="false">
+			<Name>volumeAndMarketCapDefiTradingVolume24H</Name>
+			<Description>DeFi Trading Volume (24 H)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>USD</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>14</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="61" trending="false">
+			<Name>volumeAndMarketCapStablecoinTradingVolume24H</Name>
+			<Description>Stablecoin Trading Volume (24 H)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>USD</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>16</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="62" trending="false">
+			<Name>volumeAndMarketCapDefiMarketCap</Name>
+			<Description>DeFi Market Cap</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>USD</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>15</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="63" trending="false">
+			<Name>volumeAndMarketCapStablecoinMarketCap</Name>
+			<Description>Stablecoin Market Cap</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>USD</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>17</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
 		
 		<Param id="200" trending="false">
 			<Name>LatestListingStatusCode</Name>
@@ -766,8 +1194,8 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="201" trending="false">
-			<Name>LatestQuotesStatusCode</Name>
-			<Description>Latest Quotes Status Code</Description>
+			<Name>LatestGlobalMetricsStatusCode</Name>
+			<Description>Latest Global Metrics Status Code</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
@@ -786,13 +1214,6 @@ Any inquiries can be addressed to:
 					<High>600</High>
 				</Range>
 				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>Latest Quotes</Page>
-						<Column>0</Column>
-						<Row>1</Row>
-					</Position>
-				</Positions>
 			</Display>
 			<!-- /SuppressValidator 2.9.7 -->
 			<Measurement>
@@ -821,8 +1242,8 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="211" trending="false">
-			<Name>latestQuotesResponseContent</Name>
-			<Description>Latest Quotes Response Content</Description>
+			<Name>latestGlobalMetricsResponseContent</Name>
+			<Description>Latest Global Metrics Response Content</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
@@ -836,13 +1257,6 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>Latest Quotes</Page>
-						<Column>0</Column>
-						<Row>2</Row>
-					</Position>
-				</Positions>
 			</Display>
 			<Measurement>
 				<Type lines="10">string</Type>
@@ -852,12 +1266,12 @@ Any inquiries can be addressed to:
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
-		<QAction id="2" name="After Recieving Latest Listing Reponse" encoding="csharp" triggers="210" />
+		<QAction id="2" name="After Recieving Reponse" encoding="csharp" triggers="210;211" />
 	</QActions>
 
 	<HTTP>
 		<Session id="1" name="Get Cryptocurrency Data">
-			<Connection id="1" name="Get Cryptocurrency Latest">
+			<Connection id="1" name="Get Cryptocurrency Latest Listings">
 				<Request verb="GET" url="v1/cryptocurrency/listings/latest">
 					<Headers>
 						<!-- SuppressValidator 8.3.1 This specific key is needed to access this API endpoint.	 -->
@@ -869,7 +1283,7 @@ Any inquiries can be addressed to:
 					<Content pid="210"></Content>
 				</Response>
 			</Connection>
-			<Connection id="2" name="Get Cryptocurrency Quotes">
+			<Connection id="2" name="Get Cryptocurrency Latest Global Metrics">
 				<Request verb="GET" url="v1/global-metrics/quotes/latest">
 					<Headers>
 						<!-- SuppressValidator 8.3.1 This specific key is needed to access this API endpoint.	 -->
@@ -894,8 +1308,8 @@ Any inquiries can be addressed to:
 			</Content>
 		</Group>
 		<Group id="1">
-			<Name>Latest Cryptocurrency Listing</Name>
-			<Description>Latest Cryptocurrency Listing</Description>
+			<Name>Latest Cryptocurrency Data</Name>
+			<Description>Latest Cryptocurrency Data</Description>
 			<Type>poll</Type>
 			<Content>
 				<Session>1</Session>

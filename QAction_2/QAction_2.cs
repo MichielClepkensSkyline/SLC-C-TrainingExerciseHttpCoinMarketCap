@@ -16,6 +16,7 @@ public static class QAction
 		try
 		{
 			CryptoListingProcessor.HandleLatestListingResponse(protocol);
+			CryptoGlobalMetricsProcessor.HandlGlobalMetricsResponse(protocol);
 		}
 		catch (Exception ex)
 		{

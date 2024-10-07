@@ -1,10 +1,10 @@
-﻿namespace QAction_2.Dtos
+﻿namespace QAction_2.Dtos.Shared
 {
     using System;
 
     using Newtonsoft.Json;
 
-    internal class StatusDto
+    public class StatusDto
     {
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; set; }
