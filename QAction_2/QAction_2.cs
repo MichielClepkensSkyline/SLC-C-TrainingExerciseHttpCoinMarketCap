@@ -15,8 +15,28 @@ public static class QAction
 	{
 		try
 		{
-			CryptoListingProcessor.HandleLatestListingResponse(protocol);
-			CryptoGlobalMetricsProcessor.HandlGlobalMetricsResponse(protocol);
+			int triggerPID = protocol.GetTriggerParameter();
+
+			protocol.Log($"QA{protocol.QActionID}|TRIGGER|{triggerPID}", LogType.Error, LogLevel.NoLogging);
+
+			switch (triggerPID)
+			{
+				case Parameter.responsecontentlatestlisting_210:
+					CryptoListingProcessor.HandleLatestListingResponse(protocol);
+					break;
+
+				case Parameter.responsecontentlatestglobalmetrics_211:
+					CryptoGlobalMetricsProcessor.HandlGlobalMetricsResponse(protocol);
+					break;
+
+				case Parameter.responsecontentcategories_212:
+					CryptoCategoriesProcessor.HandleCategoriesResponse(protocol);
+					break;
+
+				default:
+					protocol.Log($"Unhandled trigger parameter: {triggerPID}", LogType.Error, LogLevel.NoLogging);
+					break;
+			}
 		}
 		catch (Exception ex)
 		{

@@ -10,7 +10,6 @@
 
 	public static class CryptoGlobalMetricsProcessor
 	{
-		private const string NotAvailableString = "-1";
 		private const int NotAvailableNumber = -1;
 
 		public static void HandlGlobalMetricsResponse(SLProtocolExt protocol)
@@ -21,7 +20,7 @@
 
 		private static GlobalMetricsResponseDto GetAndDeserializeGlobalMetricsResponse(SLProtocolExt protocol)
 		{
-			var responseString = (string)protocol.GetParameter(Parameter.latestglobalmetricsresponsecontent_211);
+			var responseString = (string)protocol.GetParameter(Parameter.responsecontentlatestglobalmetrics_211);
 
 			if (string.IsNullOrWhiteSpace(responseString))
 			{

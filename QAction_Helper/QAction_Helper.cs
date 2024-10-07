@@ -80,24 +80,34 @@ public static class Parameter
 	public const int volumeandmarketcapstablecoinmarketcap = 63;
 	/// <summary>PID: 200 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int latestlistingstatuscode_200 = 200;
+	public const int statuscodelatestlisting_200 = 200;
 	/// <summary>PID: 200 | Type: read</summary>
-	public const int latestlistingstatuscode = 200;
+	public const int statuscodelatestlisting = 200;
 	/// <summary>PID: 201 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int latestglobalmetricsstatuscode_201 = 201;
+	public const int statuscodelatestglobalmetrics_201 = 201;
 	/// <summary>PID: 201 | Type: read</summary>
-	public const int latestglobalmetricsstatuscode = 201;
+	public const int statuscodelatestglobalmetrics = 201;
+	/// <summary>PID: 202 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int statuscodecategories_202 = 202;
+	/// <summary>PID: 202 | Type: read</summary>
+	public const int statuscodecategories = 202;
 	/// <summary>PID: 210 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int latestlistingresponsecontent_210 = 210;
+	public const int responsecontentlatestlisting_210 = 210;
 	/// <summary>PID: 210 | Type: read</summary>
-	public const int latestlistingresponsecontent = 210;
+	public const int responsecontentlatestlisting = 210;
 	/// <summary>PID: 211 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int latestglobalmetricsresponsecontent_211 = 211;
+	public const int responsecontentlatestglobalmetrics_211 = 211;
 	/// <summary>PID: 211 | Type: read</summary>
-	public const int latestglobalmetricsresponsecontent = 211;
+	public const int responsecontentlatestglobalmetrics = 211;
+	/// <summary>PID: 212 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int responsecontentcategories_212 = 212;
+	/// <summary>PID: 212 | Type: read</summary>
+	public const int responsecontentcategories = 212;
 	public class Write
 	{
 		/// <summary>PID: 1 | Type: write</summary>
@@ -299,6 +309,129 @@ public static class Parameter
 			public const int latestlistingsoverviewlastupdate = 16;
 		}
 	}
+	public class Coincategoriesoverview
+	{
+		/// <summary>PID: 70</summary>
+		public const int tablePid = 70;
+		/// <summary>IDX: 0</summary>
+		public const int indexColumn = 0;
+		/// <summary>PID: 71</summary>
+		public const int indexColumnPid = 71;
+		public class Pid
+		{
+			/// <summary>PID: 71 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int coincategoriesoverviewinstance_71 = 71;
+			/// <summary>PID: 71 | Type: read</summary>
+			public const int coincategoriesoverviewinstance = 71;
+			/// <summary>PID: 72 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int coincategoriesoverviewname_72 = 72;
+			/// <summary>PID: 72 | Type: read</summary>
+			public const int coincategoriesoverviewname = 72;
+			/// <summary>PID: 73 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int coincategoriesoverviewnumberoftokens_73 = 73;
+			/// <summary>PID: 73 | Type: read</summary>
+			public const int coincategoriesoverviewnumberoftokens = 73;
+			/// <summary>PID: 74 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int coincategoriesoverviewaveragepricechange_74 = 74;
+			/// <summary>PID: 74 | Type: read</summary>
+			public const int coincategoriesoverviewaveragepricechange = 74;
+			/// <summary>PID: 75 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int coincategoriesoverviewmarketcap_75 = 75;
+			/// <summary>PID: 75 | Type: read</summary>
+			public const int coincategoriesoverviewmarketcap = 75;
+			/// <summary>PID: 76 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int coincategoriesoverviewmarketcapchange_76 = 76;
+			/// <summary>PID: 76 | Type: read</summary>
+			public const int coincategoriesoverviewmarketcapchange = 76;
+			/// <summary>PID: 77 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int coincategoriesoverviewvolume_77 = 77;
+			/// <summary>PID: 77 | Type: read</summary>
+			public const int coincategoriesoverviewvolume = 77;
+			/// <summary>PID: 78 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int coincategoriesoverviewvolumechange_78 = 78;
+			/// <summary>PID: 78 | Type: read</summary>
+			public const int coincategoriesoverviewvolumechange = 78;
+			/// <summary>PID: 79 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int coincategoriesoverviewlastupdated_79 = 79;
+			/// <summary>PID: 79 | Type: read</summary>
+			public const int coincategoriesoverviewlastupdated = 79;
+			/// <summary>PID: 80 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int coincategoriesoverviewlastrefresh_80 = 80;
+			/// <summary>PID: 80 | Type: read</summary>
+			public const int coincategoriesoverviewlastrefresh = 80;
+			public class Write
+			{
+				/// <summary>PID: 81 | Type: write</summary>
+				[EditorBrowsable(EditorBrowsableState.Never)]
+				public const int coincategoriesoverviewrefreshbutton_81 = 81;
+				/// <summary>PID: 81 | Type: write</summary>
+				public const int coincategoriesoverviewrefreshbutton = 81;
+			}
+		}
+		public class Idx
+		{
+			/// <summary>IDX: 0 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int coincategoriesoverviewinstance_71 = 0;
+			/// <summary>IDX: 0 | Type: read</summary>
+			public const int coincategoriesoverviewinstance = 0;
+			/// <summary>IDX: 1 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int coincategoriesoverviewname_72 = 1;
+			/// <summary>IDX: 1 | Type: read</summary>
+			public const int coincategoriesoverviewname = 1;
+			/// <summary>IDX: 2 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int coincategoriesoverviewnumberoftokens_73 = 2;
+			/// <summary>IDX: 2 | Type: read</summary>
+			public const int coincategoriesoverviewnumberoftokens = 2;
+			/// <summary>IDX: 3 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int coincategoriesoverviewaveragepricechange_74 = 3;
+			/// <summary>IDX: 3 | Type: read</summary>
+			public const int coincategoriesoverviewaveragepricechange = 3;
+			/// <summary>IDX: 4 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int coincategoriesoverviewmarketcap_75 = 4;
+			/// <summary>IDX: 4 | Type: read</summary>
+			public const int coincategoriesoverviewmarketcap = 4;
+			/// <summary>IDX: 5 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int coincategoriesoverviewmarketcapchange_76 = 5;
+			/// <summary>IDX: 5 | Type: read</summary>
+			public const int coincategoriesoverviewmarketcapchange = 5;
+			/// <summary>IDX: 6 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int coincategoriesoverviewvolume_77 = 6;
+			/// <summary>IDX: 6 | Type: read</summary>
+			public const int coincategoriesoverviewvolume = 6;
+			/// <summary>IDX: 7 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int coincategoriesoverviewvolumechange_78 = 7;
+			/// <summary>IDX: 7 | Type: read</summary>
+			public const int coincategoriesoverviewvolumechange = 7;
+			/// <summary>IDX: 8 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int coincategoriesoverviewlastupdated_79 = 8;
+			/// <summary>IDX: 8 | Type: read</summary>
+			public const int coincategoriesoverviewlastupdated = 8;
+			/// <summary>IDX: 9 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int coincategoriesoverviewlastrefresh_80 = 9;
+			/// <summary>IDX: 9 | Type: read</summary>
+			public const int coincategoriesoverviewlastrefresh = 9;
+		}
+	}
 }
 public class WriteParameters
 {
@@ -306,6 +439,8 @@ public class WriteParameters
 	public System.Object Sendrequest {get { return Protocol.GetParameter(1); }set { Protocol.SetParameter(1, value); }}
 	/// <summary>PID: 4  | Type: write</summary>
 	public System.Object Apikey {get { return Protocol.GetParameter(4); }set { Protocol.SetParameter(4, value); }}
+	/// <summary>PID: 81  | Type: write | DISCREETS: Refresh = 1</summary>
+	public System.Object Coincategoriesoverviewrefreshbutton {get { return Protocol.GetParameter(81); }set { Protocol.SetParameter(81, value); }}
 	public SLProtocolExt Protocol;
 	public WriteParameters(SLProtocolExt protocol)
 	{
@@ -316,6 +451,8 @@ public interface SLProtocolExt : SLProtocol
 {
 	/// <summary>PID: 10</summary>
 	LatestlistingsoverviewQActionTable latestlistingsoverview { get; set; }
+	/// <summary>PID: 70</summary>
+	CoincategoriesoverviewQActionTable coincategoriesoverview { get; set; }
 	object Sendrequest_1 { get; set; }
 	object Sendrequest { get; set; }
 	object Afterstartup_dummy { get; set; }
@@ -385,20 +522,48 @@ public interface SLProtocolExt : SLProtocol
 	object Volumeandmarketcapdefimarketcap { get; set; }
 	object Volumeandmarketcapstablecoinmarketcap_63 { get; set; }
 	object Volumeandmarketcapstablecoinmarketcap { get; set; }
-	object Latestlistingstatuscode_200 { get; set; }
-	object Latestlistingstatuscode { get; set; }
-	object Latestglobalmetricsstatuscode_201 { get; set; }
-	object Latestglobalmetricsstatuscode { get; set; }
-	object Latestlistingresponsecontent_210 { get; set; }
-	object Latestlistingresponsecontent { get; set; }
-	object Latestglobalmetricsresponsecontent_211 { get; set; }
-	object Latestglobalmetricsresponsecontent { get; set; }
+	object Coincategoriesoverviewinstance_71 { get; set; }
+	object Coincategoriesoverviewinstance { get; set; }
+	object Coincategoriesoverviewname_72 { get; set; }
+	object Coincategoriesoverviewname { get; set; }
+	object Coincategoriesoverviewnumberoftokens_73 { get; set; }
+	object Coincategoriesoverviewnumberoftokens { get; set; }
+	object Coincategoriesoverviewaveragepricechange_74 { get; set; }
+	object Coincategoriesoverviewaveragepricechange { get; set; }
+	object Coincategoriesoverviewmarketcap_75 { get; set; }
+	object Coincategoriesoverviewmarketcap { get; set; }
+	object Coincategoriesoverviewmarketcapchange_76 { get; set; }
+	object Coincategoriesoverviewmarketcapchange { get; set; }
+	object Coincategoriesoverviewvolume_77 { get; set; }
+	object Coincategoriesoverviewvolume { get; set; }
+	object Coincategoriesoverviewvolumechange_78 { get; set; }
+	object Coincategoriesoverviewvolumechange { get; set; }
+	object Coincategoriesoverviewlastupdated_79 { get; set; }
+	object Coincategoriesoverviewlastupdated { get; set; }
+	object Coincategoriesoverviewlastrefresh_80 { get; set; }
+	object Coincategoriesoverviewlastrefresh { get; set; }
+	object Coincategoriesoverviewrefreshbutton_81 { get; set; }
+	object Coincategoriesoverviewrefreshbutton { get; set; }
+	object Statuscodelatestlisting_200 { get; set; }
+	object Statuscodelatestlisting { get; set; }
+	object Statuscodelatestglobalmetrics_201 { get; set; }
+	object Statuscodelatestglobalmetrics { get; set; }
+	object Statuscodecategories_202 { get; set; }
+	object Statuscodecategories { get; set; }
+	object Responsecontentlatestlisting_210 { get; set; }
+	object Responsecontentlatestlisting { get; set; }
+	object Responsecontentlatestglobalmetrics_211 { get; set; }
+	object Responsecontentlatestglobalmetrics { get; set; }
+	object Responsecontentcategories_212 { get; set; }
+	object Responsecontentcategories { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 {
 	/// <summary>PID: 10</summary>
 	public LatestlistingsoverviewQActionTable latestlistingsoverview { get; set; }
+	/// <summary>PID: 70</summary>
+	public CoincategoriesoverviewQActionTable coincategoriesoverview { get; set; }
 	/// <summary>PID: 1  | Type: write | DISCREETS: Send Request = 1</summary>
 	public System.Object Sendrequest_1 {get { return GetParameter(1); }set { SetParameter(1, value); }}
 	/// <summary>PID: 1  | Type: write | DISCREETS: Send Request = 1</summary>
@@ -495,104 +660,169 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Latestlistingsoverviewpricepercentangechange7days_26 {get { return GetParameter(26); }set { SetParameter(26, value); }}
 	/// <summary>PID: 26  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Latestlistingsoverviewpricepercentangechange7days {get { return GetParameter(26); }set { SetParameter(26, value); }}
-	/// <summary>PID: 27  | Type: read | EXCEPTIONS: N/A = Output: 1/1/0001 12:00:00 AM</summary>
+	/// <summary>PID: 27  | Type: read | EXCEPTIONS: N/A = 00:00:00</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewlastupdate_27 {get { return GetParameter(27); }set { SetParameter(27, value); }}
-	/// <summary>PID: 27  | Type: read | EXCEPTIONS: N/A = Output: 1/1/0001 12:00:00 AM</summary>
+	/// <summary>PID: 27  | Type: read | EXCEPTIONS: N/A = 00:00:00</summary>
 	public System.Object Latestlistingsoverviewlastupdate {get { return GetParameter(27); }set { SetParameter(27, value); }}
-	/// <summary>PID: 49  | Type: read</summary>
+	/// <summary>PID: 49  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Globalmetricslastupdate_49 {get { return GetParameter(49); }set { SetParameter(49, value); }}
-	/// <summary>PID: 49  | Type: read</summary>
+	/// <summary>PID: 49  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Globalmetricslastupdate {get { return GetParameter(49); }set { SetParameter(49, value); }}
 	/// <summary>PID: 50  | Type: fixed</summary>
 	public System.Object Titlebeginmarketdominancemetrics__fixed {get { return GetParameter(50); }set { SetParameter(50, value); }}
-	/// <summary>PID: 51  | Type: read</summary>
+	/// <summary>PID: 51  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Marketdominancebitcoin_51 {get { return GetParameter(51); }set { SetParameter(51, value); }}
-	/// <summary>PID: 51  | Type: read</summary>
+	/// <summary>PID: 51  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Marketdominancebitcoin {get { return GetParameter(51); }set { SetParameter(51, value); }}
-	/// <summary>PID: 52  | Type: read</summary>
+	/// <summary>PID: 52  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Marketdominanceethereum_52 {get { return GetParameter(52); }set { SetParameter(52, value); }}
-	/// <summary>PID: 52  | Type: read</summary>
+	/// <summary>PID: 52  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Marketdominanceethereum {get { return GetParameter(52); }set { SetParameter(52, value); }}
-	/// <summary>PID: 53  | Type: read</summary>
+	/// <summary>PID: 53  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Marketdominancebitcoin24hprecentagechange_53 {get { return GetParameter(53); }set { SetParameter(53, value); }}
-	/// <summary>PID: 53  | Type: read</summary>
+	/// <summary>PID: 53  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Marketdominancebitcoin24hprecentagechange {get { return GetParameter(53); }set { SetParameter(53, value); }}
-	/// <summary>PID: 54  | Type: read</summary>
+	/// <summary>PID: 54  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Marketdominanceethereum24hpercentagechange_54 {get { return GetParameter(54); }set { SetParameter(54, value); }}
-	/// <summary>PID: 54  | Type: read</summary>
+	/// <summary>PID: 54  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Marketdominanceethereum24hpercentagechange {get { return GetParameter(54); }set { SetParameter(54, value); }}
 	/// <summary>PID: 55  | Type: fixed</summary>
 	public System.Object Titlebeginvolumeandmarketcap__fixed {get { return GetParameter(55); }set { SetParameter(55, value); }}
-	/// <summary>PID: 56  | Type: read</summary>
+	/// <summary>PID: 56  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Volumeandmarketcaptotalmarketcap_56 {get { return GetParameter(56); }set { SetParameter(56, value); }}
-	/// <summary>PID: 56  | Type: read</summary>
+	/// <summary>PID: 56  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Volumeandmarketcaptotalmarketcap {get { return GetParameter(56); }set { SetParameter(56, value); }}
-	/// <summary>PID: 57  | Type: read</summary>
+	/// <summary>PID: 57  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Volumeandmarketcaptotalvolume24h_57 {get { return GetParameter(57); }set { SetParameter(57, value); }}
-	/// <summary>PID: 57  | Type: read</summary>
+	/// <summary>PID: 57  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Volumeandmarketcaptotalvolume24h {get { return GetParameter(57); }set { SetParameter(57, value); }}
-	/// <summary>PID: 58  | Type: read</summary>
+	/// <summary>PID: 58  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Volumeandmarketcaptotalmarketcapyesterday_58 {get { return GetParameter(58); }set { SetParameter(58, value); }}
-	/// <summary>PID: 58  | Type: read</summary>
+	/// <summary>PID: 58  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Volumeandmarketcaptotalmarketcapyesterday {get { return GetParameter(58); }set { SetParameter(58, value); }}
-	/// <summary>PID: 59  | Type: read</summary>
+	/// <summary>PID: 59  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Volumeandmarketcaptotalmarketcapyesterdaypercentagechange_59 {get { return GetParameter(59); }set { SetParameter(59, value); }}
-	/// <summary>PID: 59  | Type: read</summary>
+	/// <summary>PID: 59  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Volumeandmarketcaptotalmarketcapyesterdaypercentagechange {get { return GetParameter(59); }set { SetParameter(59, value); }}
-	/// <summary>PID: 60  | Type: read</summary>
+	/// <summary>PID: 60  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Volumeandmarketcapdefitradingvolume24h_60 {get { return GetParameter(60); }set { SetParameter(60, value); }}
-	/// <summary>PID: 60  | Type: read</summary>
+	/// <summary>PID: 60  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Volumeandmarketcapdefitradingvolume24h {get { return GetParameter(60); }set { SetParameter(60, value); }}
-	/// <summary>PID: 61  | Type: read</summary>
+	/// <summary>PID: 61  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Volumeandmarketcapstablecointradingvolume24h_61 {get { return GetParameter(61); }set { SetParameter(61, value); }}
-	/// <summary>PID: 61  | Type: read</summary>
+	/// <summary>PID: 61  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Volumeandmarketcapstablecointradingvolume24h {get { return GetParameter(61); }set { SetParameter(61, value); }}
-	/// <summary>PID: 62  | Type: read</summary>
+	/// <summary>PID: 62  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Volumeandmarketcapdefimarketcap_62 {get { return GetParameter(62); }set { SetParameter(62, value); }}
-	/// <summary>PID: 62  | Type: read</summary>
+	/// <summary>PID: 62  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Volumeandmarketcapdefimarketcap {get { return GetParameter(62); }set { SetParameter(62, value); }}
-	/// <summary>PID: 63  | Type: read</summary>
+	/// <summary>PID: 63  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Volumeandmarketcapstablecoinmarketcap_63 {get { return GetParameter(63); }set { SetParameter(63, value); }}
-	/// <summary>PID: 63  | Type: read</summary>
+	/// <summary>PID: 63  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Volumeandmarketcapstablecoinmarketcap {get { return GetParameter(63); }set { SetParameter(63, value); }}
+	/// <summary>PID: 71  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Coincategoriesoverviewinstance_71 {get { return GetParameter(71); }set { SetParameter(71, value); }}
+	/// <summary>PID: 71  | Type: read</summary>
+	public System.Object Coincategoriesoverviewinstance {get { return GetParameter(71); }set { SetParameter(71, value); }}
+	/// <summary>PID: 72  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Coincategoriesoverviewname_72 {get { return GetParameter(72); }set { SetParameter(72, value); }}
+	/// <summary>PID: 72  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	public System.Object Coincategoriesoverviewname {get { return GetParameter(72); }set { SetParameter(72, value); }}
+	/// <summary>PID: 73  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Coincategoriesoverviewnumberoftokens_73 {get { return GetParameter(73); }set { SetParameter(73, value); }}
+	/// <summary>PID: 73  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	public System.Object Coincategoriesoverviewnumberoftokens {get { return GetParameter(73); }set { SetParameter(73, value); }}
+	/// <summary>PID: 74  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Coincategoriesoverviewaveragepricechange_74 {get { return GetParameter(74); }set { SetParameter(74, value); }}
+	/// <summary>PID: 74  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	public System.Object Coincategoriesoverviewaveragepricechange {get { return GetParameter(74); }set { SetParameter(74, value); }}
+	/// <summary>PID: 75  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Coincategoriesoverviewmarketcap_75 {get { return GetParameter(75); }set { SetParameter(75, value); }}
+	/// <summary>PID: 75  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	public System.Object Coincategoriesoverviewmarketcap {get { return GetParameter(75); }set { SetParameter(75, value); }}
+	/// <summary>PID: 76  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Coincategoriesoverviewmarketcapchange_76 {get { return GetParameter(76); }set { SetParameter(76, value); }}
+	/// <summary>PID: 76  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	public System.Object Coincategoriesoverviewmarketcapchange {get { return GetParameter(76); }set { SetParameter(76, value); }}
+	/// <summary>PID: 77  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Coincategoriesoverviewvolume_77 {get { return GetParameter(77); }set { SetParameter(77, value); }}
+	/// <summary>PID: 77  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	public System.Object Coincategoriesoverviewvolume {get { return GetParameter(77); }set { SetParameter(77, value); }}
+	/// <summary>PID: 78  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Coincategoriesoverviewvolumechange_78 {get { return GetParameter(78); }set { SetParameter(78, value); }}
+	/// <summary>PID: 78  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	public System.Object Coincategoriesoverviewvolumechange {get { return GetParameter(78); }set { SetParameter(78, value); }}
+	/// <summary>PID: 79  | Type: read | EXCEPTIONS: N/A = 00:00:00</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Coincategoriesoverviewlastupdated_79 {get { return GetParameter(79); }set { SetParameter(79, value); }}
+	/// <summary>PID: 79  | Type: read | EXCEPTIONS: N/A = 00:00:00</summary>
+	public System.Object Coincategoriesoverviewlastupdated {get { return GetParameter(79); }set { SetParameter(79, value); }}
+	/// <summary>PID: 80  | Type: read | EXCEPTIONS: N/A = 00:00:00</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Coincategoriesoverviewlastrefresh_80 {get { return GetParameter(80); }set { SetParameter(80, value); }}
+	/// <summary>PID: 80  | Type: read | EXCEPTIONS: N/A = 00:00:00</summary>
+	public System.Object Coincategoriesoverviewlastrefresh {get { return GetParameter(80); }set { SetParameter(80, value); }}
+	/// <summary>PID: 81  | Type: write | DISCREETS: Refresh = 1</summary>
+	public System.Object Coincategoriesoverviewrefreshbutton_81 {get { return GetParameter(81); }set { SetParameter(81, value); }}
+	/// <summary>PID: 81  | Type: write | DISCREETS: Refresh = 1</summary>
+	public System.Object Coincategoriesoverviewrefreshbutton {get { return Write.Coincategoriesoverviewrefreshbutton; }set { Write.Coincategoriesoverviewrefreshbutton = value; }}
 	/// <summary>PID: 200  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Latestlistingstatuscode_200 {get { return GetParameter(200); }set { SetParameter(200, value); }}
+	public System.Object Statuscodelatestlisting_200 {get { return GetParameter(200); }set { SetParameter(200, value); }}
 	/// <summary>PID: 200  | Type: read</summary>
-	public System.Object Latestlistingstatuscode {get { return GetParameter(200); }set { SetParameter(200, value); }}
+	public System.Object Statuscodelatestlisting {get { return GetParameter(200); }set { SetParameter(200, value); }}
 	/// <summary>PID: 201  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Latestglobalmetricsstatuscode_201 {get { return GetParameter(201); }set { SetParameter(201, value); }}
+	public System.Object Statuscodelatestglobalmetrics_201 {get { return GetParameter(201); }set { SetParameter(201, value); }}
 	/// <summary>PID: 201  | Type: read</summary>
-	public System.Object Latestglobalmetricsstatuscode {get { return GetParameter(201); }set { SetParameter(201, value); }}
+	public System.Object Statuscodelatestglobalmetrics {get { return GetParameter(201); }set { SetParameter(201, value); }}
+	/// <summary>PID: 202  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Statuscodecategories_202 {get { return GetParameter(202); }set { SetParameter(202, value); }}
+	/// <summary>PID: 202  | Type: read</summary>
+	public System.Object Statuscodecategories {get { return GetParameter(202); }set { SetParameter(202, value); }}
 	/// <summary>PID: 210  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Latestlistingresponsecontent_210 {get { return GetParameter(210); }set { SetParameter(210, value); }}
+	public System.Object Responsecontentlatestlisting_210 {get { return GetParameter(210); }set { SetParameter(210, value); }}
 	/// <summary>PID: 210  | Type: read</summary>
-	public System.Object Latestlistingresponsecontent {get { return GetParameter(210); }set { SetParameter(210, value); }}
+	public System.Object Responsecontentlatestlisting {get { return GetParameter(210); }set { SetParameter(210, value); }}
 	/// <summary>PID: 211  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Latestglobalmetricsresponsecontent_211 {get { return GetParameter(211); }set { SetParameter(211, value); }}
+	public System.Object Responsecontentlatestglobalmetrics_211 {get { return GetParameter(211); }set { SetParameter(211, value); }}
 	/// <summary>PID: 211  | Type: read</summary>
-	public System.Object Latestglobalmetricsresponsecontent {get { return GetParameter(211); }set { SetParameter(211, value); }}
+	public System.Object Responsecontentlatestglobalmetrics {get { return GetParameter(211); }set { SetParameter(211, value); }}
+	/// <summary>PID: 212  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Responsecontentcategories_212 {get { return GetParameter(212); }set { SetParameter(212, value); }}
+	/// <summary>PID: 212  | Type: read</summary>
+	public System.Object Responsecontentcategories {get { return GetParameter(212); }set { SetParameter(212, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{
 		latestlistingsoverview = new LatestlistingsoverviewQActionTable(this, 10, "latestlistingsoverview");
+		coincategoriesoverview = new CoincategoriesoverviewQActionTable(this, 70, "coincategoriesoverview");
 		Write = new WriteParameters(this);
 	}
 }
@@ -602,6 +832,13 @@ public class LatestlistingsoverviewQActionTable : QActionTable, IEnumerable<Late
 	public LatestlistingsoverviewQActionTable(SLProtocol protocol, int tableId, string tableName) : base(protocol, tableId, tableName) { }
 	IEnumerator IEnumerable.GetEnumerator() { return (IEnumerator) GetEnumerator(); }
 	public IEnumerator<LatestlistingsoverviewQActionRow> GetEnumerator() { return new QActionTableEnumerator<LatestlistingsoverviewQActionRow>(this); }
+}
+/// <summary>IDX: 0</summary>
+public class CoincategoriesoverviewQActionTable : QActionTable, IEnumerable<CoincategoriesoverviewQActionRow>
+{
+	public CoincategoriesoverviewQActionTable(SLProtocol protocol, int tableId, string tableName) : base(protocol, tableId, tableName) { }
+	IEnumerator IEnumerable.GetEnumerator() { return (IEnumerator) GetEnumerator(); }
+	public IEnumerator<CoincategoriesoverviewQActionRow> GetEnumerator() { return new QActionTableEnumerator<CoincategoriesoverviewQActionRow>(this); }
 }
 /// <summary>IDX: 0</summary>
 public class LatestlistingsoverviewQActionRow : QActionTableRow
@@ -695,5 +932,67 @@ public class LatestlistingsoverviewQActionRow : QActionTableRow
 	public LatestlistingsoverviewQActionRow(System.Object[] oRow) : base(0, 17, oRow) { }
 	public static implicit operator LatestlistingsoverviewQActionRow(System.Object[] source) { return new LatestlistingsoverviewQActionRow(source); }
 	public static implicit operator System.Object[](LatestlistingsoverviewQActionRow source) { return source.ToObjectArray(); }
+}
+/// <summary>IDX: 0</summary>
+public class CoincategoriesoverviewQActionRow : QActionTableRow
+{
+	/// <summary>PID: 71 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Coincategoriesoverviewinstance_71 { get { if (base.Columns.ContainsKey(0)) { return base.Columns[0]; } else { return null; } } set { if (base.Columns.ContainsKey(0)) { base.Columns[0] = value; } else { base.Columns.Add(0, value); } } }
+	/// <summary>PID: 71 | Type: read</summary>
+	public System.Object Coincategoriesoverviewinstance { get { if (base.Columns.ContainsKey(0)) { return base.Columns[0]; } else { return null; } } set { if (base.Columns.ContainsKey(0)) { base.Columns[0] = value; } else { base.Columns.Add(0, value); } } }
+	/// <summary>PID: 72 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Coincategoriesoverviewname_72 { get { if (base.Columns.ContainsKey(1)) { return base.Columns[1]; } else { return null; } } set { if (base.Columns.ContainsKey(1)) { base.Columns[1] = value; } else { base.Columns.Add(1, value); } } }
+	/// <summary>PID: 72 | Type: read</summary>
+	public System.Object Coincategoriesoverviewname { get { if (base.Columns.ContainsKey(1)) { return base.Columns[1]; } else { return null; } } set { if (base.Columns.ContainsKey(1)) { base.Columns[1] = value; } else { base.Columns.Add(1, value); } } }
+	/// <summary>PID: 73 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Coincategoriesoverviewnumberoftokens_73 { get { if (base.Columns.ContainsKey(2)) { return base.Columns[2]; } else { return null; } } set { if (base.Columns.ContainsKey(2)) { base.Columns[2] = value; } else { base.Columns.Add(2, value); } } }
+	/// <summary>PID: 73 | Type: read</summary>
+	public System.Object Coincategoriesoverviewnumberoftokens { get { if (base.Columns.ContainsKey(2)) { return base.Columns[2]; } else { return null; } } set { if (base.Columns.ContainsKey(2)) { base.Columns[2] = value; } else { base.Columns.Add(2, value); } } }
+	/// <summary>PID: 74 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Coincategoriesoverviewaveragepricechange_74 { get { if (base.Columns.ContainsKey(3)) { return base.Columns[3]; } else { return null; } } set { if (base.Columns.ContainsKey(3)) { base.Columns[3] = value; } else { base.Columns.Add(3, value); } } }
+	/// <summary>PID: 74 | Type: read</summary>
+	public System.Object Coincategoriesoverviewaveragepricechange { get { if (base.Columns.ContainsKey(3)) { return base.Columns[3]; } else { return null; } } set { if (base.Columns.ContainsKey(3)) { base.Columns[3] = value; } else { base.Columns.Add(3, value); } } }
+	/// <summary>PID: 75 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Coincategoriesoverviewmarketcap_75 { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
+	/// <summary>PID: 75 | Type: read</summary>
+	public System.Object Coincategoriesoverviewmarketcap { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
+	/// <summary>PID: 76 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Coincategoriesoverviewmarketcapchange_76 { get { if (base.Columns.ContainsKey(5)) { return base.Columns[5]; } else { return null; } } set { if (base.Columns.ContainsKey(5)) { base.Columns[5] = value; } else { base.Columns.Add(5, value); } } }
+	/// <summary>PID: 76 | Type: read</summary>
+	public System.Object Coincategoriesoverviewmarketcapchange { get { if (base.Columns.ContainsKey(5)) { return base.Columns[5]; } else { return null; } } set { if (base.Columns.ContainsKey(5)) { base.Columns[5] = value; } else { base.Columns.Add(5, value); } } }
+	/// <summary>PID: 77 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Coincategoriesoverviewvolume_77 { get { if (base.Columns.ContainsKey(6)) { return base.Columns[6]; } else { return null; } } set { if (base.Columns.ContainsKey(6)) { base.Columns[6] = value; } else { base.Columns.Add(6, value); } } }
+	/// <summary>PID: 77 | Type: read</summary>
+	public System.Object Coincategoriesoverviewvolume { get { if (base.Columns.ContainsKey(6)) { return base.Columns[6]; } else { return null; } } set { if (base.Columns.ContainsKey(6)) { base.Columns[6] = value; } else { base.Columns.Add(6, value); } } }
+	/// <summary>PID: 78 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Coincategoriesoverviewvolumechange_78 { get { if (base.Columns.ContainsKey(7)) { return base.Columns[7]; } else { return null; } } set { if (base.Columns.ContainsKey(7)) { base.Columns[7] = value; } else { base.Columns.Add(7, value); } } }
+	/// <summary>PID: 78 | Type: read</summary>
+	public System.Object Coincategoriesoverviewvolumechange { get { if (base.Columns.ContainsKey(7)) { return base.Columns[7]; } else { return null; } } set { if (base.Columns.ContainsKey(7)) { base.Columns[7] = value; } else { base.Columns.Add(7, value); } } }
+	/// <summary>PID: 79 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Coincategoriesoverviewlastupdated_79 { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
+	/// <summary>PID: 79 | Type: read</summary>
+	public System.Object Coincategoriesoverviewlastupdated { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
+	/// <summary>PID: 80 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Coincategoriesoverviewlastrefresh_80 { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
+	/// <summary>PID: 80 | Type: read</summary>
+	public System.Object Coincategoriesoverviewlastrefresh { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
+	/// <summary>PID: 81 | Type: write</summary>
+	public System.Object Coincategoriesoverviewrefreshbutton_81 { get { if (base.Columns.ContainsKey(10)) { return base.Columns[10]; } else { return null; } } set { if (base.Columns.ContainsKey(10)) { base.Columns[10] = value; } else { base.Columns.Add(10, value); } } }
+	/// <summary>PID: 81 | Type: write</summary>
+	public System.Object Coincategoriesoverviewrefreshbutton { get { if (base.Columns.ContainsKey(10)) { return base.Columns[10]; } else { return null; } } set { if (base.Columns.ContainsKey(10)) { base.Columns[10] = value; } else { base.Columns.Add(10, value); } } }
+	public CoincategoriesoverviewQActionRow() : base(0, 11) { }
+	public CoincategoriesoverviewQActionRow(System.Object[] oRow) : base(0, 11, oRow) { }
+	public static implicit operator CoincategoriesoverviewQActionRow(System.Object[] source) { return new CoincategoriesoverviewQActionRow(source); }
+	public static implicit operator System.Object[](CoincategoriesoverviewQActionRow source) { return source.ToObjectArray(); }
 }
 }

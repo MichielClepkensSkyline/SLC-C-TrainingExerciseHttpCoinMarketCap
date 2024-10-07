@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>1001</DeviceOID>
 	<ElementType>HTTP Query Sender</ElementType>
 	<Type relativeTimers="true">http</Type>
-	<Display defaultPage="General" pageOrder="General;Latest Listings" wideColumnPages=""/>
+	<Display defaultPage="General" pageOrder="General;Latest Listings;Categories" wideColumnPages=""/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -79,14 +79,19 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>Latest Listings</Page>
-						<Column>0</Column>
-						<Row>2</Row>
-					</Position>
-					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
 						<Row>19</Row>
+					</Position>
+					<Position>
+						<Page>Categories</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+					<Position>
+						<Page>Latest Listings</Page>
+						<Column>0</Column>
+						<Row>1</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -123,11 +128,6 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>Latest Listings</Page>
-						<Column>0</Column>
-						<Row>0</Row>
-					</Position>
-					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
 						<Row>0</Row>
@@ -150,11 +150,6 @@ Any inquiries can be addressed to:
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
-					<Position>
-						<Page>Latest Listings</Page>
-						<Column>0</Column>
-						<Row>0</Row>
-					</Position>
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
@@ -223,7 +218,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Listings</Page>
 						<Column>0</Column>
-						<Row>1</Row>
+						<Row>0</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -745,9 +740,9 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
 				<Exceptions>
-					<Exception id="1" value="Output: 1/1/0001 12:00:00 AM">
+					<Exception id="1" value="00:00:00">
 						<Display state="disabled">N/A</Display>
-						<Value>Output: 1/1/0001 12:00:00 AM</Value>
+						<Value>00:00:00</Value>
 					</Exception>
 				</Exceptions>
 			</Interprete>
@@ -755,7 +750,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type options="datetime">string</Type>
 			</Measurement>
 		</Param>
 		
@@ -769,6 +764,13 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<!--TODO-->
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">N/A</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -812,6 +814,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">N/A</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -843,6 +851,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">N/A</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -874,6 +888,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">N/A</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -901,6 +921,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">N/A</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -946,6 +972,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">N/A</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -975,6 +1007,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">N/A</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1004,6 +1042,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">N/A</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1033,6 +1077,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">N/A</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1059,6 +1109,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">N/A</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1088,6 +1144,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">N/A</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1117,6 +1179,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">N/A</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1146,6 +1214,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">N/A</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1166,8 +1240,307 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		
+		<Param id="70">
+			<Name>coinCategoriesOverview</Name>
+			<Description>Coin Categories Overview</Description>
+			<Type>array</Type>
+			<ArrayOptions index="0" options=";naming=/72">
+				<ColumnOption idx="0" pid="71" type="retrieved" options=""/>
+				<ColumnOption idx="1" pid="72" type="retrieved" options="" />
+				<ColumnOption idx="2" pid="73" type="retrieved" options="" />
+				<ColumnOption idx="3" pid="74" type="retrieved" options="" />
+				<ColumnOption idx="4" pid="75" type="retrieved" options="" />
+				<ColumnOption idx="5" pid="76" type="retrieved" options="" />
+				<ColumnOption idx="6" pid="77" type="retrieved" options="" />
+				<ColumnOption idx="7" pid="78" type="retrieved" options="" />
+				<ColumnOption idx="8" pid="79" type="retrieved" options="" />
+				<ColumnOption idx="9" pid="80" type="retrieved" options="" />
+				<ColumnOption idx="10" pid="81" type="retrieved" options="" />
+			</ArrayOptions>
+			<Information>
+				<Subtext>tableInformation</Subtext>
+			</Information>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Categories</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="tab=columns:71|0-72|1-73|2-74|3-75|4-76|5-77|6-78|7-79|8-80|9-81|10,width:200-200-122-142-160-129-160-107-150-150-222,sort:STRING-STRING-INT-INT-INT-INT-INT-INT-STRING-STRING-STRING,lines:25,filter:true">table</Type>
+			</Measurement>
+		</Param>
+		<Param id="71" trending="false">
+			<Name>coinCategoriesOverviewInstance</Name>
+			<Description>Instance (Coin Categories Overview)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This is the key used internally by DataMiner to identify the table entries.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="72" trending="false">
+			<Name>coinCategoriesOverviewName</Name>
+			<Description>Name [Idx] (Coin Categories Overview)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">N/A</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="73" trending="false">
+			<Name>coinCategoriesOverviewNumberOfTokens</Name>
+			<Description>Number of Tokens (Coin Categories Overview)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">N/A</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="74" trending="false">
+			<Name>coinCategoriesOverviewAveragePriceChange</Name>
+			<Description>Average Price Change (Coin Categories Overview)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">N/A</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="75" trending="false">
+			<Name>coinCategoriesOverviewMarketCap</Name>
+			<Description>Market Cap (Coin Categories Overview)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">N/A</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>USD</Units>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="76" trending="false">
+			<Name>coinCategoriesOverviewMarketCapChange</Name>
+			<Description>Market Cap Change (Coin Categories Overview)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">N/A</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="77" trending="false">
+			<Name>coinCategoriesOverviewVolume</Name>
+			<Description>Volume (Coin Categories Overview)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">N/A</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>USD</Units>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="78" trending="false">
+			<Name>coinCategoriesOverviewVolumeChange</Name>
+			<Description>Volume Change (Coin Categories Overview)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">N/A</Display>
+						<Value>-1</Value>
+					</Exception>
+				</Exceptions>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="79" trending="false">
+			<Name>coinCategoriesOverviewLastUpdated</Name>
+			<Description>Last Updated (Coin Categories Overview)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="00:00:00">
+						<Display state="disabled">N/A</Display>
+						<Value>00:00:00</Value>
+					</Exception>
+				</Exceptions>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type options="datetime">string</Type>
+			</Measurement>
+		</Param>
+		<Param id="80" trending="false">
+			<Name>coinCategoriesOverviewLastRefresh</Name>
+			<Description>Last Refresh (Coin Categories Overview)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="00:00:00">
+						<Display state="disabled">N/A</Display>
+						<Value>00:00:00</Value>
+					</Exception>
+				</Exceptions>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type options="datetime">string</Type>
+			</Measurement>
+		</Param>
+		<Param id="81">
+			<Name>coinCategoriesOverviewRefreshButton</Name>
+			<Description>Refresh (Coin Categories Overview)</Description>
+			<Type>write</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type width="110">button</Type>
+				<Discreets>
+					<Discreet>
+						<Display>Refresh</Display>
+						<Value>1</Value>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+		</Param>
+		
 		<Param id="200" trending="false">
-			<Name>LatestListingStatusCode</Name>
+			<Name>statusCodeLatestListing</Name>
 			<Description>Latest Listing Status Code</Description>
 			<Type>read</Type>
 			<Information>
@@ -1194,12 +1567,39 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="201" trending="false">
-			<Name>LatestGlobalMetricsStatusCode</Name>
+			<Name>statusCodeLatestGlobalMetrics</Name>
 			<Description>Latest Global Metrics Status Code</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[The status code for the latest quotes response.]]>
+					<![CDATA[The status code for the latest Global Metrics response.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<!-- SuppressValidator 2.9.7 Units tag not needed as this parameter represents status code of the response. -->
+			<Display>
+				<Range>
+					<Low>100</Low>
+					<High>600</High>
+				</Range>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<!-- /SuppressValidator 2.9.7 -->
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="202" trending="false">
+			<Name>statusCodeCategories</Name>
+			<Description>Categories Status Code</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[The status code for the latest Categories response.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -1221,7 +1621,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="210" trending="false">
-			<Name>latestListingResponseContent</Name>
+			<Name>responseContentLatestListing</Name>
 			<Description>Latest Listing Response Content</Description>
 			<Type>read</Type>
 			<Information>
@@ -1242,12 +1642,33 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="211" trending="false">
-			<Name>latestGlobalMetricsResponseContent</Name>
+			<Name>responseContentLatestGlobalMetrics</Name>
 			<Description>Latest Global Metrics Response Content</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[The content of the latest quotes response.]]>
+					<![CDATA[The content of the latest Global Metrics response.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type lines="10">string</Type>
+			</Measurement>
+		</Param>
+		<Param id="212" trending="false">
+			<Name>responseContentCategories</Name>
+			<Description>Categories Response Content</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[The content of the latest Categories response.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -1266,7 +1687,7 @@ Any inquiries can be addressed to:
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
-		<QAction id="2" name="After Recieving Reponse" encoding="csharp" triggers="210;211" />
+		<QAction id="2" name="After Recieving Reponse" encoding="csharp" triggers="210;211;212" />
 	</QActions>
 
 	<HTTP>
@@ -1293,6 +1714,18 @@ Any inquiries can be addressed to:
 				</Request>
 				<Response statusCode="201">
 					<Content pid="211"></Content>
+				</Response>
+			</Connection>
+			<Connection id="3" name="Get Cryptocurrency Categories">
+				<Request verb="GET" url="v1/cryptocurrency/categories">
+					<Headers>
+						<!-- SuppressValidator 8.3.1 This specific key is needed to access this API endpoint.	 -->
+						<Header key="X-CMC_PRO_API_KEY" pid="3"></Header>
+						<!-- /SuppressValidator 8.3.1 -->
+					</Headers>
+				</Request>
+				<Response statusCode="202">
+					<Content pid="212"></Content>
 				</Response>
 			</Connection>
 		</Session>
