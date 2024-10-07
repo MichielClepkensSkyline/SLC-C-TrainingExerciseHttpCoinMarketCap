@@ -4,6 +4,7 @@
     using System.Linq;
     using Newtonsoft.Json;
     using QAction_2.Dtos.LatestListingResponse;
+    using QAction_2.Dtos.Shared;
     using Skyline.DataMiner.Scripting;
 
     public static class CryptoListingProcessor
@@ -29,7 +30,7 @@
 			protocol.latestlistingsoverview.FillArray(latestListingTableRows);
 		}
 
-		private static LatestlistingsoverviewQActionRow PrepareLatestListingTableSingleRow(ListingCoinDataDto coinData)
+		private static LatestlistingsoverviewQActionRow PrepareLatestListingTableSingleRow(CoinDataDto coinData)
 		{
 			var latestListingSingleRow = new LatestlistingsoverviewQActionRow
 			{
@@ -49,7 +50,7 @@
 				Latestlistingsoverviewmarketcapdominance_24 = coinData.Quote?.Usd?.MarketCapDominance ?? NotAvailableNumber,
 				Latestlistingsoverviewpricepercentagechange24hours_25 = coinData.Quote?.Usd?.PercentChange24H ?? NotAvailableNumber,
 				Latestlistingsoverviewpricepercentangechange7days_26 = coinData.Quote?.Usd?.PercentChange7D ?? NotAvailableNumber,
-				Latestlistingsoverviewlastupdate_27 = coinData.Quote?.Usd?.LastUpdated ?? NotAvailableDate,
+				Latestlistingsoverviewlastupdate_27 = Convert.ToString(coinData.Quote?.Usd?.LastUpdated ?? NotAvailableDate),
 			};
 
 			return latestListingSingleRow;

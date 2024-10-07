@@ -64,53 +64,7 @@ Any inquiries can be addressed to:
 	</Compliancies>
 
 	<Params>
-		<Param id="1">
-			<Name>sendRequest</Name>
-			<Type>write</Type>
-			<Information>
-				<Subtext>Sends Request.</Subtext>
-			</Information>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>19</Row>
-					</Position>
-					<Position>
-						<Page>Categories</Page>
-						<Column>0</Column>
-						<Row>1</Row>
-					</Position>
-					<Position>
-						<Page>Latest Listings</Page>
-						<Column>0</Column>
-						<Row>1</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type width="110">button</Type>
-				<Discreets>
-					<Discreet>
-						<Display>Send Request</Display>
-						<Value>1</Value>
-					</Discreet>
-				</Discreets>
-			</Measurement>
-		</Param>
-		<Param id="2">
-			<Name>AfterStartup</Name>
-			<Description>After Startup</Description>
-			<Type>dummy</Type>
-		</Param>
-		<Param id="3" trending="false" save="true">
+		<Param id="2" trending="false" save="true">
 			<Name>apiKey</Name>
 			<Description>API Key</Description>
 			<Type>read</Type>
@@ -138,7 +92,7 @@ Any inquiries can be addressed to:
 				<Type options="password">string</Type>
 			</Measurement>
 		</Param>
-		<Param id="4" setter="true">
+		<Param id="3" setter="true">
 			<Name>apiKey</Name>
 			<Description>API Key</Description>
 			<Type>write</Type>
@@ -161,7 +115,7 @@ Any inquiries can be addressed to:
 				<Type options="password">string</Type>
 			</Measurement>
 		</Param>
-		<Param id="5">
+		<Param id="4">
 			<Name>titleEndGeneric</Name>
 			<Type>fixed</Type>
 			<Display>
@@ -182,6 +136,16 @@ Any inquiries can be addressed to:
 			<Measurement>
 				<Type options="end">title</Type>
 			</Measurement>
+		</Param>
+		<Param id="5">
+			<Name>idOfTheRefreshRow</Name>
+			<Description>Id of the Refresh Row</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
 		</Param>
 		
 		<Param id="10">
@@ -223,7 +187,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:11|0-12|1-13|2-14|3-15|4-16|5-17|6-18|7-20|9-19|8-21|10-22|11-23|12-24|13-25|14-26|15-27|16,width:80-190-61-154-71-160-160-160-135-105-105-171-150-151-221-208-125,sort:STRING-STRING-STRING-INT-STRING-INT-INT-INT-STRING-STRING-INT-INT-INT-INT-INT-INT-INT,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:11|0-12|1-13|2-14|3-15|4-16|5-17|6-18|7-20|9-19|8-21|10-22|11-23|12-24|13-25|14-26|15-27|16,width:80-190-61-154-71-160-160-160-135-105-105-171-150-151-221-208-125,sort:STRING-STRING-STRING-INT-STRING-INT-INT-INT-STRING-STRING-INT-INT-INT-INT-INT-INT-INT|DESC|0,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="11" trending="false">
@@ -231,7 +195,9 @@ Any inquiries can be addressed to:
 			<Description>Instance (Latest Listings Overview)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>This is the key used internally by DataMiner to identify the table entries.</Subtext>
+				<Subtext>
+					<![CDATA[This is the key used internally by DataMiner to identify the table entries.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -305,7 +271,7 @@ Any inquiries can be addressed to:
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[represents the number of unique trading pairs for a cryptocurrency across all exchanges where it is listed.]]>
+					<![CDATA[Represents the number of unique trading pairs for a cryptocurrency across all exchanges where it is listed.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -759,16 +725,18 @@ Any inquiries can be addressed to:
 			<Description>Global Metrics Last Update</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Represents the timestamp of the last update to the global metrics data.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
+				<RawType>other</RawType>
+				<Type>string</Type>
 				<LengthType>next param</LengthType>
-				<!--TODO-->
 				<Exceptions>
-					<Exception id="1" value="-1">
+					<Exception id="1" value="00:00:00">
 						<Display state="disabled">N/A</Display>
-						<Value>-1</Value>
+						<Value>00:00:00</Value>
 					</Exception>
 				</Exceptions>
 			</Interprete>
@@ -783,7 +751,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="datetime">number</Type>
+				<Type options="datetime">string</Type>
 			</Measurement>
 		</Param>
 		<Param id="50">
@@ -809,6 +777,9 @@ Any inquiries can be addressed to:
 			<Description>Bitcoin Dominance</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Represents the percentage dominance of Bitcoin in the overall cryptocurrency market.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -846,6 +817,9 @@ Any inquiries can be addressed to:
 			<Description>Ethereum Dominance</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Represents the percentage dominance of Ethereum in the overall cryptocurrency market.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -883,6 +857,9 @@ Any inquiries can be addressed to:
 			<Description>Bitcoin Dominance Percentage Change (24 H)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Represents the percentage change in Bitcoin's market dominance over the last 24 hours.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -906,6 +883,9 @@ Any inquiries can be addressed to:
 					</Position>
 				</Positions>
 				<Decimals>3</Decimals>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -916,6 +896,9 @@ Any inquiries can be addressed to:
 			<Description>Ethereum Dominance Percentage Change (24 H)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Represents the percentage change in Ethereum's market dominance over the last 24 hours.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -939,6 +922,9 @@ Any inquiries can be addressed to:
 					</Position>
 				</Positions>
 				<Decimals>3</Decimals>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -948,6 +934,11 @@ Any inquiries can be addressed to:
 			<Name>titleBeginVolumeAndMarketCap</Name>
 			<Description>Volume and Market Cap</Description>
 			<Type>fixed</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Title section representing data related to the trading volume and market capitalization.]]>
+				</Subtext>
+			</Information>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
@@ -963,10 +954,13 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="56" trending="false">
-			<Name>volumeAndMarketCapTotalMarketCap</Name>
+			<Name>totalMarketCap</Name>
 			<Description>Total Market Cap</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Represents the total market capitalization of all cryptocurrencies combined.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -981,7 +975,9 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 As the value is represented in dollars, the most appropriate unit is 'USD'. -->
 				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -998,10 +994,13 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="57" trending="false">
-			<Name>volumeAndMarketCapTotalVolume24H</Name>
+			<Name>totalVolume24H</Name>
 			<Description>Total Volume (24 H)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Represents the total trading volume of all cryptocurrencies in the last 24 hours.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1016,7 +1015,9 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 As the value is represented in dollars, the most appropriate unit is 'USD'. -->
 				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1033,10 +1034,13 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="58" trending="false">
-			<Name>volumeAndMarketCapTotalMarketCapYesterday</Name>
+			<Name>totalMarketCapYesterday</Name>
 			<Description>Total Market Cap Yesterday</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Represents the total market capitalization of all cryptocurrencies as of the previous day.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1051,7 +1055,9 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 As the value is represented in dollars, the most appropriate unit is 'USD'. -->
 				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1068,10 +1074,13 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="59" trending="false">
-			<Name>volumeAndMarketCapTotalMarketCapYesterdayPercentageChange</Name>
+			<Name>totalMarketCapYesterdayPercentageChange</Name>
 			<Description>Total Market Cap Yesterday Percentage Change</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Represents the percentage change in the total market capitalization compared to the previous day.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1084,6 +1093,7 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<!-- SuppressValidator 2.11.1 No range needed as percentages can skyrocket and plummit. -->
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
@@ -1095,15 +1105,19 @@ Any inquiries can be addressed to:
 					</Position>
 				</Positions>
 			</Display>
+			<!-- /SuppressValidator 2.11.1 -->
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="60" trending="false">
-			<Name>volumeAndMarketCapDefiTradingVolume24H</Name>
-			<Description>DeFi Trading Volume (24 H)</Description>
+			<Name>decentralizedFinanceTradingVolume24H</Name>
+			<Description>Decentralized Finance Trading Volume (24 H)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Represents the trading volume in the last 24 hours for DeFi assets, indicating their market liquidity.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1118,7 +1132,9 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 As the value is represented in dollars, the most appropriate unit is 'USD'. -->
 				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1139,6 +1155,9 @@ Any inquiries can be addressed to:
 			<Description>Stablecoin Trading Volume (24 H)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Represents the trading volume in the last 24 hours for stablecoins, reflecting their market liquidity.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1153,7 +1172,9 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 As the value is represented in dollars, the most appropriate unit is 'USD'. -->
 				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1170,10 +1191,13 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="62" trending="false">
-			<Name>volumeAndMarketCapDefiMarketCap</Name>
-			<Description>DeFi Market Cap</Description>
+			<Name>decentralizedFinanceMarketCap</Name>
+			<Description>Decentralized Finance Market Cap</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Represents the market capitalization of all DeFi assets, indicating the total value of the sector.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1188,7 +1212,9 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 As the value is represented in dollars, the most appropriate unit is 'USD'. -->
 				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1205,10 +1231,13 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="63" trending="false">
-			<Name>volumeAndMarketCapStablecoinMarketCap</Name>
+			<Name>stablecoinMarketCap</Name>
 			<Description>Stablecoin Market Cap</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Represents the market capitalization of all stablecoins, indicating their total value in circulation.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1223,7 +1252,9 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 As the value is represented in dollars, the most appropriate unit is 'USD'. -->
 				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1258,7 +1289,9 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="10" pid="81" type="retrieved" options="" />
 			</ArrayOptions>
 			<Information>
-				<Subtext>tableInformation</Subtext>
+				<Subtext>
+					<![CDATA[Provides an overview of coin categories with details like name, number of tokens, market cap, and more.]]>
+				</Subtext>
 			</Information>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1271,7 +1304,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:71|0-72|1-73|2-74|3-75|4-76|5-77|6-78|7-79|8-80|9-81|10,width:200-200-122-142-160-129-160-107-150-150-222,sort:STRING-STRING-INT-INT-INT-INT-INT-INT-STRING-STRING-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:71|0-72|1-73|2-74|3-75|4-76|5-77|6-78|7-79|8-80|9-81|10,width:200-200-122-142-160-129-160-107-150-150-222,sort:STRING-STRING-INT-INT-INT-INT-INT-INT-STRING|DESC|0-STRING|DESC|1-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="71" trending="false">
@@ -1279,7 +1312,9 @@ Any inquiries can be addressed to:
 			<Description>Instance (Coin Categories Overview)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>This is the key used internally by DataMiner to identify the table entries.</Subtext>
+				<Subtext>
+					<![CDATA[This is the key used internally by DataMiner to identify the table entries.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -1298,6 +1333,9 @@ Any inquiries can be addressed to:
 			<Description>Name [Idx] (Coin Categories Overview)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Represents the name of the coin category.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -1322,6 +1360,9 @@ Any inquiries can be addressed to:
 			<Description>Number of Tokens (Coin Categories Overview)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Indicates the number of tokens available in this coin category.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1336,6 +1377,12 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 'tokens' unit represents the most logical unit for 'Number of Tokens' column. -->
+				<Units>tokens</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1346,6 +1393,9 @@ Any inquiries can be addressed to:
 			<Description>Average Price Change (Coin Categories Overview)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Represents the average percentage change in price for this coin category.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1358,10 +1408,12 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<!-- SuppressValidator 2.11.1 No range needed as percentages can skyrocket and plummit. -->
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
 			</Display>
+			<!-- /SuppressValidator 2.11.1 -->
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
@@ -1371,6 +1423,9 @@ Any inquiries can be addressed to:
 			<Description>Market Cap (Coin Categories Overview)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Indicates the total market capitalization of this coin category in USD.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1385,7 +1440,12 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 As the value is represented in dollars, the most appropriate unit is 'USD'. -->
 				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1396,6 +1456,9 @@ Any inquiries can be addressed to:
 			<Description>Market Cap Change (Coin Categories Overview)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Indicates the percentage change in market capitalization for this coin category.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1408,10 +1471,12 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<!-- SuppressValidator 2.11.1 No range needed as percentages can skyrocket and plummit. -->
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
 			</Display>
+			<!-- /SuppressValidator 2.11.1 -->
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
@@ -1421,6 +1486,9 @@ Any inquiries can be addressed to:
 			<Description>Volume (Coin Categories Overview)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Represents the total trading volume of this coin category in USD.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1435,7 +1503,12 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 As the value is represented in dollars, the most appropriate unit is 'USD'. -->
 				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1446,6 +1519,9 @@ Any inquiries can be addressed to:
 			<Description>Volume Change (Coin Categories Overview)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Indicates the percentage change in trading volume for this coin category.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1458,10 +1534,12 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<!-- SuppressValidator 2.11.1 No range needed as percentages can skyrocket and plummit. -->
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
 			</Display>
+			<!-- /SuppressValidator 2.11.1 -->
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
@@ -1471,6 +1549,9 @@ Any inquiries can be addressed to:
 			<Description>Last Updated (Coin Categories Overview)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Shows the last time data was updated for this coin category.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -1495,6 +1576,9 @@ Any inquiries can be addressed to:
 			<Description>Last Refresh (Coin Categories Overview)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Indicates the last time the data refresh action was performed for this coin category overview.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -1511,7 +1595,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 			</Display>
 			<Measurement>
-				<Type options="datetime">string</Type>
+				<Type>string</Type>
 			</Measurement>
 		</Param>
 		<Param id="81">
@@ -1519,6 +1603,9 @@ Any inquiries can be addressed to:
 			<Description>Refresh (Coin Categories Overview)</Description>
 			<Type>write</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Triggers a manual refresh of the coin category overview data.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1559,7 +1646,6 @@ Any inquiries can be addressed to:
 					<Low>100</Low>
 					<High>600</High>
 				</Range>
-				<RTDisplay>true</RTDisplay>
 			</Display>
 			<!-- /SuppressValidator 2.9.7 -->
 			<Measurement>
@@ -1586,7 +1672,6 @@ Any inquiries can be addressed to:
 					<Low>100</Low>
 					<High>600</High>
 				</Range>
-				<RTDisplay>true</RTDisplay>
 			</Display>
 			<!-- /SuppressValidator 2.9.7 -->
 			<Measurement>
@@ -1613,13 +1698,39 @@ Any inquiries can be addressed to:
 					<Low>100</Low>
 					<High>600</High>
 				</Range>
-				<RTDisplay>true</RTDisplay>
 			</Display>
 			<!-- /SuppressValidator 2.9.7 -->
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
+		<Param id="203" trending="false">
+			<Name>statusCodeCategoriesOnRowRefresh</Name>
+			<Description>Categories Status Code on Row Refresh</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[The status code for the Categories Row Refresh response.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<!-- SuppressValidator 2.9.7 Units tag not needed as this parameter represents status code of the response. -->
+			<Display>
+				<Range>
+					<Low>100</Low>
+					<High>600</High>
+				</Range>
+			</Display>
+			<!-- /SuppressValidator 2.9.7 -->
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		
 		<Param id="210" trending="false">
 			<Name>responseContentLatestListing</Name>
 			<Description>Latest Listing Response Content</Description>
@@ -1634,9 +1745,6 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-			</Display>
 			<Measurement>
 				<Type lines="10">string</Type>
 			</Measurement>
@@ -1655,9 +1763,6 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-			</Display>
 			<Measurement>
 				<Type lines="10">string</Type>
 			</Measurement>
@@ -1668,7 +1773,7 @@ Any inquiries can be addressed to:
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[The content of the latest Categories response.]]>
+					<![CDATA[The content of the Categories Row Refresh response.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -1676,9 +1781,24 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-			</Display>
+			<Measurement>
+				<Type lines="10">string</Type>
+			</Measurement>
+		</Param>
+		<Param id="213" trending="false">
+			<Name>responseContentCategoriesOnRowRefresh</Name>
+			<Description>Categories on Row Refresh Response Content</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[The content of the Categories Row Refresh response.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
 			<Measurement>
 				<Type lines="10">string</Type>
 			</Measurement>
@@ -1687,7 +1807,8 @@ Any inquiries can be addressed to:
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
-		<QAction id="2" name="After Recieving Reponse" encoding="csharp" triggers="210;211;212" />
+		<QAction id="2" name="After Recieving Reponse" encoding="csharp" triggers="210;211;212;213" />
+		<QAction id="3" name="Handle Refresh Category Row" encoding="csharp" triggers="81" row="true" />
 	</QActions>
 
 	<HTTP>
@@ -1729,17 +1850,26 @@ Any inquiries can be addressed to:
 				</Response>
 			</Connection>
 		</Session>
+		<Session id="2" name="Get Categories Row">
+			<Connection id="1" name="Get Categories Row">
+				<Request verb="GET" url="v1/cryptocurrency/category">
+					<Headers>
+						<!-- SuppressValidator 8.3.1 This specific key is needed to access this API endpoint.	 -->
+						<Header key="X-CMC_PRO_API_KEY" pid="3"></Header>
+						<!-- /SuppressValidator 8.3.1 -->
+					</Headers>
+					<Parameters>
+						<Parameter key="id" pid="5"></Parameter>
+					</Parameters>
+				</Request>
+				<Response statusCode="203">
+					<Content pid="213"></Content>
+				</Response>
+			</Connection>
+		</Session>
 	</HTTP>
 
 	<Groups>
-		<Group id="2">
-			<Name>After Startup</Name>
-			<Description>After Startup</Description>
-			<Type>poll action</Type>
-			<Content>
-				<Action>2</Action>
-			</Content>
-		</Group>
 		<Group id="1">
 			<Name>Latest Cryptocurrency Data</Name>
 			<Description>Latest Cryptocurrency Data</Description>
@@ -1748,44 +1878,32 @@ Any inquiries can be addressed to:
 				<Session>1</Session>
 			</Content>
 		</Group>
+		<Group id="2">
+			<Name>Categories Single Row Refresh</Name>
+			<Description>Categories Single Row Refresh</Description>
+			<Type>poll</Type>
+			<Content>
+				<Session>2</Session>
+			</Content>
+		</Group>
 	</Groups>
 
 	<Triggers>
 		<Trigger id="1">
-			<Name>After Startup</Name>
-			<On>protocol</On>
-			<Time>after startup</Time>
-			<Type>action</Type>
-			<Content>
-				<Id>1</Id>
-			</Content>
-		</Trigger>
-		<Trigger id="2">
-			<Name>On Button Press 'Send Request'</Name>
-			<On id="1">parameter</On>
+			<Name>After 'Refresh' Button Press</Name>
+			<On id="5">parameter</On>
 			<Time>change</Time>
 			<Type>action</Type>
 			<Content>
-				<Id>3</Id>
+				<Id>1</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
 
 	<Actions>
 		<Action id="1">
-			<Name>After Startup Group</Name>
+			<Name>Execute Single Row Refresh Group</Name>
 			<On id="2">group</On>
-			<Type>execute next</Type>
-		</Action>
-		<Action id="2">
-			<Name>After Startup QAction</Name>
-			<On id="2">parameter</On>
-			<Type>run actions</Type>
-		</Action>
-
-		<Action id="3">
-			<Name>Execute Group</Name>
-			<On id="1">group</On>
 			<Type>execute one now</Type>
 		</Action>
 	</Actions>
@@ -1803,6 +1921,7 @@ Any inquiries can be addressed to:
 			<Time initial="true" dataDisplay="30000">60000</Time>
 			<Interval>75</Interval>
 			<Content>
+				<Group>1</Group>
 			</Content>
 		</Timer>
 		<Timer id="3">

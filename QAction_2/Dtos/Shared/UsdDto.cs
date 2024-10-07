@@ -1,9 +1,9 @@
-﻿namespace QAction_2.Dtos.LatestListingResponse
+﻿namespace QAction_2.Dtos.Shared
 {
     using System;
     using Newtonsoft.Json;
 
-    internal class ListingUsdDto
+    public class UsdDto
     {
         [JsonProperty("price")]
         public double? Price { get; set; }

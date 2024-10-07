@@ -17,8 +17,6 @@ public static class QAction
 		{
 			int triggerPID = protocol.GetTriggerParameter();
 
-			protocol.Log($"QA{protocol.QActionID}|TRIGGER|{triggerPID}", LogType.Error, LogLevel.NoLogging);
-
 			switch (triggerPID)
 			{
 				case Parameter.responsecontentlatestlisting_210:
@@ -31,6 +29,10 @@ public static class QAction
 
 				case Parameter.responsecontentcategories_212:
 					CryptoCategoriesProcessor.HandleCategoriesResponse(protocol);
+					break;
+
+				case Parameter.responsecontentcategoriesonrowrefresh_213:
+					CryptoCategoriesProcessor.HandleCategoriesSingleRowResponse(protocol);
 					break;
 
 				default:

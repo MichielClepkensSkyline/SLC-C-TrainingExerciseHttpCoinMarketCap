@@ -1,10 +1,10 @@
-﻿namespace QAction_2.Dtos.LatestListingResponse
+﻿namespace QAction_2.Dtos.Shared
 {
     using System;
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    internal class ListingCoinDataDto
+    public class CoinDataDto
     {
         [JsonProperty("id")]
         public int? Id { get; set; }
@@ -40,7 +40,7 @@
         public bool? InfiniteSupply { get; set; }
 
         [JsonProperty("platform")]
-        public ListingPlatformDto Platform { get; set; }
+        public PlatformDto Platform { get; set; }
 
         [JsonProperty("cmc_rank")]
         public int? CmcRank { get; set; }
@@ -49,6 +49,6 @@
         public DateTime LastUpdated { get; set; }
 
         [JsonProperty("quote")]
-        public ListingQuoteDto Quote { get; set; }
+        public QuoteDto Quote { get; set; }
     }
 }

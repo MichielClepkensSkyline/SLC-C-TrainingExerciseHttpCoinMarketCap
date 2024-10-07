@@ -10,6 +10,6 @@
         public StatusDto Status { get; set; }
 
         [JsonProperty("data")]
-        public List<ListingCoinDataDto> Data { get; set; }
+        public List<CoinDataDto> Data { get; set; }
     }
 }

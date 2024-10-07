@@ -8,11 +8,16 @@ namespace Skyline.DataMiner.Scripting
 {
 public static class Parameter
 {
-	/// <summary>PID: 3 | Type: read</summary>
+	/// <summary>PID: 2 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int apikey_3 = 3;
-	/// <summary>PID: 3 | Type: read</summary>
-	public const int apikey = 3;
+	public const int apikey_2 = 2;
+	/// <summary>PID: 2 | Type: read</summary>
+	public const int apikey = 2;
+	/// <summary>PID: 5 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int idoftherefreshrow_5 = 5;
+	/// <summary>PID: 5 | Type: read</summary>
+	public const int idoftherefreshrow = 5;
 	/// <summary>PID: 49 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int globalmetricslastupdate_49 = 49;
@@ -40,29 +45,29 @@ public static class Parameter
 	public const int marketdominanceethereum24hpercentagechange = 54;
 	/// <summary>PID: 56 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int volumeandmarketcaptotalmarketcap_56 = 56;
+	public const int totalmarketcap_56 = 56;
 	/// <summary>PID: 56 | Type: read</summary>
-	public const int volumeandmarketcaptotalmarketcap = 56;
+	public const int totalmarketcap = 56;
 	/// <summary>PID: 57 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int volumeandmarketcaptotalvolume24h_57 = 57;
+	public const int totalvolume24h_57 = 57;
 	/// <summary>PID: 57 | Type: read</summary>
-	public const int volumeandmarketcaptotalvolume24h = 57;
+	public const int totalvolume24h = 57;
 	/// <summary>PID: 58 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int volumeandmarketcaptotalmarketcapyesterday_58 = 58;
+	public const int totalmarketcapyesterday_58 = 58;
 	/// <summary>PID: 58 | Type: read</summary>
-	public const int volumeandmarketcaptotalmarketcapyesterday = 58;
+	public const int totalmarketcapyesterday = 58;
 	/// <summary>PID: 59 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int volumeandmarketcaptotalmarketcapyesterdaypercentagechange_59 = 59;
+	public const int totalmarketcapyesterdaypercentagechange_59 = 59;
 	/// <summary>PID: 59 | Type: read</summary>
-	public const int volumeandmarketcaptotalmarketcapyesterdaypercentagechange = 59;
+	public const int totalmarketcapyesterdaypercentagechange = 59;
 	/// <summary>PID: 60 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int volumeandmarketcapdefitradingvolume24h_60 = 60;
+	public const int decentralizedfinancetradingvolume24h_60 = 60;
 	/// <summary>PID: 60 | Type: read</summary>
-	public const int volumeandmarketcapdefitradingvolume24h = 60;
+	public const int decentralizedfinancetradingvolume24h = 60;
 	/// <summary>PID: 61 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int volumeandmarketcapstablecointradingvolume24h_61 = 61;
@@ -70,14 +75,14 @@ public static class Parameter
 	public const int volumeandmarketcapstablecointradingvolume24h = 61;
 	/// <summary>PID: 62 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int volumeandmarketcapdefimarketcap_62 = 62;
+	public const int decentralizedfinancemarketcap_62 = 62;
 	/// <summary>PID: 62 | Type: read</summary>
-	public const int volumeandmarketcapdefimarketcap = 62;
+	public const int decentralizedfinancemarketcap = 62;
 	/// <summary>PID: 63 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int volumeandmarketcapstablecoinmarketcap_63 = 63;
+	public const int stablecoinmarketcap_63 = 63;
 	/// <summary>PID: 63 | Type: read</summary>
-	public const int volumeandmarketcapstablecoinmarketcap = 63;
+	public const int stablecoinmarketcap = 63;
 	/// <summary>PID: 200 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int statuscodelatestlisting_200 = 200;
@@ -93,6 +98,11 @@ public static class Parameter
 	public const int statuscodecategories_202 = 202;
 	/// <summary>PID: 202 | Type: read</summary>
 	public const int statuscodecategories = 202;
+	/// <summary>PID: 203 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int statuscodecategoriesonrowrefresh_203 = 203;
+	/// <summary>PID: 203 | Type: read</summary>
+	public const int statuscodecategoriesonrowrefresh = 203;
 	/// <summary>PID: 210 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int responsecontentlatestlisting_210 = 210;
@@ -108,18 +118,18 @@ public static class Parameter
 	public const int responsecontentcategories_212 = 212;
 	/// <summary>PID: 212 | Type: read</summary>
 	public const int responsecontentcategories = 212;
+	/// <summary>PID: 213 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int responsecontentcategoriesonrowrefresh_213 = 213;
+	/// <summary>PID: 213 | Type: read</summary>
+	public const int responsecontentcategoriesonrowrefresh = 213;
 	public class Write
 	{
-		/// <summary>PID: 1 | Type: write</summary>
+		/// <summary>PID: 3 | Type: write</summary>
 		[EditorBrowsable(EditorBrowsableState.Never)]
-		public const int sendrequest_1 = 1;
-		/// <summary>PID: 1 | Type: write</summary>
-		public const int sendrequest = 1;
-		/// <summary>PID: 4 | Type: write</summary>
-		[EditorBrowsable(EditorBrowsableState.Never)]
-		public const int apikey_4 = 4;
-		/// <summary>PID: 4 | Type: write</summary>
-		public const int apikey = 4;
+		public const int apikey_3 = 3;
+		/// <summary>PID: 3 | Type: write</summary>
+		public const int apikey = 3;
 	}
 	public class Latestlistingsoverview
 	{
@@ -435,10 +445,8 @@ public static class Parameter
 }
 public class WriteParameters
 {
-	/// <summary>PID: 1  | Type: write | DISCREETS: Send Request = 1</summary>
-	public System.Object Sendrequest {get { return Protocol.GetParameter(1); }set { Protocol.SetParameter(1, value); }}
-	/// <summary>PID: 4  | Type: write</summary>
-	public System.Object Apikey {get { return Protocol.GetParameter(4); }set { Protocol.SetParameter(4, value); }}
+	/// <summary>PID: 3  | Type: write</summary>
+	public System.Object Apikey {get { return Protocol.GetParameter(3); }set { Protocol.SetParameter(3, value); }}
 	/// <summary>PID: 81  | Type: write | DISCREETS: Refresh = 1</summary>
 	public System.Object Coincategoriesoverviewrefreshbutton {get { return Protocol.GetParameter(81); }set { Protocol.SetParameter(81, value); }}
 	public SLProtocolExt Protocol;
@@ -453,13 +461,12 @@ public interface SLProtocolExt : SLProtocol
 	LatestlistingsoverviewQActionTable latestlistingsoverview { get; set; }
 	/// <summary>PID: 70</summary>
 	CoincategoriesoverviewQActionTable coincategoriesoverview { get; set; }
-	object Sendrequest_1 { get; set; }
-	object Sendrequest { get; set; }
-	object Afterstartup_dummy { get; set; }
-	object Apikey_3 { get; set; }
+	object Apikey_2 { get; set; }
 	object Apikey { get; set; }
-	object Apikey_4 { get; set; }
+	object Apikey_3 { get; set; }
 	object Titleendgeneric__fixed { get; set; }
+	object Idoftherefreshrow_5 { get; set; }
+	object Idoftherefreshrow { get; set; }
 	object Latestlistingsoverviewinstance_11 { get; set; }
 	object Latestlistingsoverviewinstance { get; set; }
 	object Latestlistingsoverviewname_12 { get; set; }
@@ -506,22 +513,22 @@ public interface SLProtocolExt : SLProtocol
 	object Marketdominanceethereum24hpercentagechange_54 { get; set; }
 	object Marketdominanceethereum24hpercentagechange { get; set; }
 	object Titlebeginvolumeandmarketcap__fixed { get; set; }
-	object Volumeandmarketcaptotalmarketcap_56 { get; set; }
-	object Volumeandmarketcaptotalmarketcap { get; set; }
-	object Volumeandmarketcaptotalvolume24h_57 { get; set; }
-	object Volumeandmarketcaptotalvolume24h { get; set; }
-	object Volumeandmarketcaptotalmarketcapyesterday_58 { get; set; }
-	object Volumeandmarketcaptotalmarketcapyesterday { get; set; }
-	object Volumeandmarketcaptotalmarketcapyesterdaypercentagechange_59 { get; set; }
-	object Volumeandmarketcaptotalmarketcapyesterdaypercentagechange { get; set; }
-	object Volumeandmarketcapdefitradingvolume24h_60 { get; set; }
-	object Volumeandmarketcapdefitradingvolume24h { get; set; }
+	object Totalmarketcap_56 { get; set; }
+	object Totalmarketcap { get; set; }
+	object Totalvolume24h_57 { get; set; }
+	object Totalvolume24h { get; set; }
+	object Totalmarketcapyesterday_58 { get; set; }
+	object Totalmarketcapyesterday { get; set; }
+	object Totalmarketcapyesterdaypercentagechange_59 { get; set; }
+	object Totalmarketcapyesterdaypercentagechange { get; set; }
+	object Decentralizedfinancetradingvolume24h_60 { get; set; }
+	object Decentralizedfinancetradingvolume24h { get; set; }
 	object Volumeandmarketcapstablecointradingvolume24h_61 { get; set; }
 	object Volumeandmarketcapstablecointradingvolume24h { get; set; }
-	object Volumeandmarketcapdefimarketcap_62 { get; set; }
-	object Volumeandmarketcapdefimarketcap { get; set; }
-	object Volumeandmarketcapstablecoinmarketcap_63 { get; set; }
-	object Volumeandmarketcapstablecoinmarketcap { get; set; }
+	object Decentralizedfinancemarketcap_62 { get; set; }
+	object Decentralizedfinancemarketcap { get; set; }
+	object Stablecoinmarketcap_63 { get; set; }
+	object Stablecoinmarketcap { get; set; }
 	object Coincategoriesoverviewinstance_71 { get; set; }
 	object Coincategoriesoverviewinstance { get; set; }
 	object Coincategoriesoverviewname_72 { get; set; }
@@ -550,12 +557,16 @@ public interface SLProtocolExt : SLProtocol
 	object Statuscodelatestglobalmetrics { get; set; }
 	object Statuscodecategories_202 { get; set; }
 	object Statuscodecategories { get; set; }
+	object Statuscodecategoriesonrowrefresh_203 { get; set; }
+	object Statuscodecategoriesonrowrefresh { get; set; }
 	object Responsecontentlatestlisting_210 { get; set; }
 	object Responsecontentlatestlisting { get; set; }
 	object Responsecontentlatestglobalmetrics_211 { get; set; }
 	object Responsecontentlatestglobalmetrics { get; set; }
 	object Responsecontentcategories_212 { get; set; }
 	object Responsecontentcategories { get; set; }
+	object Responsecontentcategoriesonrowrefresh_213 { get; set; }
+	object Responsecontentcategoriesonrowrefresh { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
@@ -564,22 +575,21 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public LatestlistingsoverviewQActionTable latestlistingsoverview { get; set; }
 	/// <summary>PID: 70</summary>
 	public CoincategoriesoverviewQActionTable coincategoriesoverview { get; set; }
-	/// <summary>PID: 1  | Type: write | DISCREETS: Send Request = 1</summary>
-	public System.Object Sendrequest_1 {get { return GetParameter(1); }set { SetParameter(1, value); }}
-	/// <summary>PID: 1  | Type: write | DISCREETS: Send Request = 1</summary>
-	public System.Object Sendrequest {get { return Write.Sendrequest; }set { Write.Sendrequest = value; }}
-	/// <summary>PID: 2  | Type: dummy</summary>
-	public System.Object Afterstartup_dummy {get { return GetParameter(2); }set { SetParameter(2, value); }}
-	/// <summary>PID: 3  | Type: read</summary>
+	/// <summary>PID: 2  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Apikey_2 {get { return GetParameter(2); }set { SetParameter(2, value); }}
+	/// <summary>PID: 2  | Type: read</summary>
+	public System.Object Apikey {get { return GetParameter(2); }set { SetParameter(2, value); }}
+	/// <summary>PID: 3  | Type: write</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Apikey_3 {get { return GetParameter(3); }set { SetParameter(3, value); }}
-	/// <summary>PID: 3  | Type: read</summary>
-	public System.Object Apikey {get { return GetParameter(3); }set { SetParameter(3, value); }}
-	/// <summary>PID: 4  | Type: write</summary>
+	/// <summary>PID: 4  | Type: fixed</summary>
+	public System.Object Titleendgeneric__fixed {get { return GetParameter(4); }set { SetParameter(4, value); }}
+	/// <summary>PID: 5  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Apikey_4 {get { return GetParameter(4); }set { SetParameter(4, value); }}
-	/// <summary>PID: 5  | Type: fixed</summary>
-	public System.Object Titleendgeneric__fixed {get { return GetParameter(5); }set { SetParameter(5, value); }}
+	public System.Object Idoftherefreshrow_5 {get { return GetParameter(5); }set { SetParameter(5, value); }}
+	/// <summary>PID: 5  | Type: read</summary>
+	public System.Object Idoftherefreshrow {get { return GetParameter(5); }set { SetParameter(5, value); }}
 	/// <summary>PID: 11  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewinstance_11 {get { return GetParameter(11); }set { SetParameter(11, value); }}
@@ -665,10 +675,10 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Latestlistingsoverviewlastupdate_27 {get { return GetParameter(27); }set { SetParameter(27, value); }}
 	/// <summary>PID: 27  | Type: read | EXCEPTIONS: N/A = 00:00:00</summary>
 	public System.Object Latestlistingsoverviewlastupdate {get { return GetParameter(27); }set { SetParameter(27, value); }}
-	/// <summary>PID: 49  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 49  | Type: read | EXCEPTIONS: N/A = 00:00:00</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Globalmetricslastupdate_49 {get { return GetParameter(49); }set { SetParameter(49, value); }}
-	/// <summary>PID: 49  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 49  | Type: read | EXCEPTIONS: N/A = 00:00:00</summary>
 	public System.Object Globalmetricslastupdate {get { return GetParameter(49); }set { SetParameter(49, value); }}
 	/// <summary>PID: 50  | Type: fixed</summary>
 	public System.Object Titlebeginmarketdominancemetrics__fixed {get { return GetParameter(50); }set { SetParameter(50, value); }}
@@ -696,29 +706,29 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Titlebeginvolumeandmarketcap__fixed {get { return GetParameter(55); }set { SetParameter(55, value); }}
 	/// <summary>PID: 56  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Volumeandmarketcaptotalmarketcap_56 {get { return GetParameter(56); }set { SetParameter(56, value); }}
+	public System.Object Totalmarketcap_56 {get { return GetParameter(56); }set { SetParameter(56, value); }}
 	/// <summary>PID: 56  | Type: read | EXCEPTIONS: N/A = -1</summary>
-	public System.Object Volumeandmarketcaptotalmarketcap {get { return GetParameter(56); }set { SetParameter(56, value); }}
+	public System.Object Totalmarketcap {get { return GetParameter(56); }set { SetParameter(56, value); }}
 	/// <summary>PID: 57  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Volumeandmarketcaptotalvolume24h_57 {get { return GetParameter(57); }set { SetParameter(57, value); }}
+	public System.Object Totalvolume24h_57 {get { return GetParameter(57); }set { SetParameter(57, value); }}
 	/// <summary>PID: 57  | Type: read | EXCEPTIONS: N/A = -1</summary>
-	public System.Object Volumeandmarketcaptotalvolume24h {get { return GetParameter(57); }set { SetParameter(57, value); }}
+	public System.Object Totalvolume24h {get { return GetParameter(57); }set { SetParameter(57, value); }}
 	/// <summary>PID: 58  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Volumeandmarketcaptotalmarketcapyesterday_58 {get { return GetParameter(58); }set { SetParameter(58, value); }}
+	public System.Object Totalmarketcapyesterday_58 {get { return GetParameter(58); }set { SetParameter(58, value); }}
 	/// <summary>PID: 58  | Type: read | EXCEPTIONS: N/A = -1</summary>
-	public System.Object Volumeandmarketcaptotalmarketcapyesterday {get { return GetParameter(58); }set { SetParameter(58, value); }}
+	public System.Object Totalmarketcapyesterday {get { return GetParameter(58); }set { SetParameter(58, value); }}
 	/// <summary>PID: 59  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Volumeandmarketcaptotalmarketcapyesterdaypercentagechange_59 {get { return GetParameter(59); }set { SetParameter(59, value); }}
+	public System.Object Totalmarketcapyesterdaypercentagechange_59 {get { return GetParameter(59); }set { SetParameter(59, value); }}
 	/// <summary>PID: 59  | Type: read | EXCEPTIONS: N/A = -1</summary>
-	public System.Object Volumeandmarketcaptotalmarketcapyesterdaypercentagechange {get { return GetParameter(59); }set { SetParameter(59, value); }}
+	public System.Object Totalmarketcapyesterdaypercentagechange {get { return GetParameter(59); }set { SetParameter(59, value); }}
 	/// <summary>PID: 60  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Volumeandmarketcapdefitradingvolume24h_60 {get { return GetParameter(60); }set { SetParameter(60, value); }}
+	public System.Object Decentralizedfinancetradingvolume24h_60 {get { return GetParameter(60); }set { SetParameter(60, value); }}
 	/// <summary>PID: 60  | Type: read | EXCEPTIONS: N/A = -1</summary>
-	public System.Object Volumeandmarketcapdefitradingvolume24h {get { return GetParameter(60); }set { SetParameter(60, value); }}
+	public System.Object Decentralizedfinancetradingvolume24h {get { return GetParameter(60); }set { SetParameter(60, value); }}
 	/// <summary>PID: 61  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Volumeandmarketcapstablecointradingvolume24h_61 {get { return GetParameter(61); }set { SetParameter(61, value); }}
@@ -726,14 +736,14 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Volumeandmarketcapstablecointradingvolume24h {get { return GetParameter(61); }set { SetParameter(61, value); }}
 	/// <summary>PID: 62  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Volumeandmarketcapdefimarketcap_62 {get { return GetParameter(62); }set { SetParameter(62, value); }}
+	public System.Object Decentralizedfinancemarketcap_62 {get { return GetParameter(62); }set { SetParameter(62, value); }}
 	/// <summary>PID: 62  | Type: read | EXCEPTIONS: N/A = -1</summary>
-	public System.Object Volumeandmarketcapdefimarketcap {get { return GetParameter(62); }set { SetParameter(62, value); }}
+	public System.Object Decentralizedfinancemarketcap {get { return GetParameter(62); }set { SetParameter(62, value); }}
 	/// <summary>PID: 63  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Volumeandmarketcapstablecoinmarketcap_63 {get { return GetParameter(63); }set { SetParameter(63, value); }}
+	public System.Object Stablecoinmarketcap_63 {get { return GetParameter(63); }set { SetParameter(63, value); }}
 	/// <summary>PID: 63  | Type: read | EXCEPTIONS: N/A = -1</summary>
-	public System.Object Volumeandmarketcapstablecoinmarketcap {get { return GetParameter(63); }set { SetParameter(63, value); }}
+	public System.Object Stablecoinmarketcap {get { return GetParameter(63); }set { SetParameter(63, value); }}
 	/// <summary>PID: 71  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Coincategoriesoverviewinstance_71 {get { return GetParameter(71); }set { SetParameter(71, value); }}
@@ -803,6 +813,11 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Statuscodecategories_202 {get { return GetParameter(202); }set { SetParameter(202, value); }}
 	/// <summary>PID: 202  | Type: read</summary>
 	public System.Object Statuscodecategories {get { return GetParameter(202); }set { SetParameter(202, value); }}
+	/// <summary>PID: 203  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Statuscodecategoriesonrowrefresh_203 {get { return GetParameter(203); }set { SetParameter(203, value); }}
+	/// <summary>PID: 203  | Type: read</summary>
+	public System.Object Statuscodecategoriesonrowrefresh {get { return GetParameter(203); }set { SetParameter(203, value); }}
 	/// <summary>PID: 210  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Responsecontentlatestlisting_210 {get { return GetParameter(210); }set { SetParameter(210, value); }}
@@ -818,6 +833,11 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Responsecontentcategories_212 {get { return GetParameter(212); }set { SetParameter(212, value); }}
 	/// <summary>PID: 212  | Type: read</summary>
 	public System.Object Responsecontentcategories {get { return GetParameter(212); }set { SetParameter(212, value); }}
+	/// <summary>PID: 213  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Responsecontentcategoriesonrowrefresh_213 {get { return GetParameter(213); }set { SetParameter(213, value); }}
+	/// <summary>PID: 213  | Type: read</summary>
+	public System.Object Responsecontentcategoriesonrowrefresh {get { return GetParameter(213); }set { SetParameter(213, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{

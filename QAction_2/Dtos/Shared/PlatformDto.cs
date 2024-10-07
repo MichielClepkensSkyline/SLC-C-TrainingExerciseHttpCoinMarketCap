@@ -1,8 +1,8 @@
-﻿namespace QAction_2.Dtos.LatestListingResponse
+﻿namespace QAction_2.Dtos.Shared
 {
     using Newtonsoft.Json;
 
-    internal class ListingPlatformDto
+    public class PlatformDto
     {
         [JsonProperty("id")]
         public int? Id { get; set; }
