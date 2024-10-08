@@ -11,6 +11,7 @@
 	public static class CryptoGlobalMetricsProcessor
 	{
 		private const int NotAvailableNumber = -1;
+		private const int NotAvailablePotentialNegativeValues = int.MinValue;
 
 		public static void HandlGlobalMetricsResponse(SLProtocolExt protocol)
 		{
@@ -61,12 +62,12 @@
 					latestQuotesResponse.Data.LastUpdated,
 					latestQuotesResponse.Data.BtcDominance ?? NotAvailableNumber,
 					latestQuotesResponse.Data.EthDominance ?? NotAvailableNumber,
-					latestQuotesResponse.Data.BtcDominance24HPercentageChange ?? NotAvailableNumber,
-					latestQuotesResponse.Data.EthDominance24HPercentageChange ?? NotAvailableNumber,
+					latestQuotesResponse.Data.BtcDominance24HPercentageChange ?? NotAvailablePotentialNegativeValues,
+					latestQuotesResponse.Data.EthDominance24HPercentageChange ?? NotAvailablePotentialNegativeValues,
 					latestQuotesResponse.Data.Quote?.Usd?.TotalMarketCap ?? NotAvailableNumber,
 					latestQuotesResponse.Data.Quote?.Usd.TotalVolume24H ?? NotAvailableNumber,
 					latestQuotesResponse.Data.Quote?.Usd?.TotalMarketCapYesterday ?? NotAvailableNumber,
-					latestQuotesResponse.Data?.Quote?.Usd?.TotalMarketCapYesterdayPercentageChange ?? NotAvailableNumber,
+					latestQuotesResponse.Data?.Quote?.Usd?.TotalMarketCapYesterdayPercentageChange ?? NotAvailablePotentialNegativeValues,
 					latestQuotesResponse.Data.DefiVolume24H ?? NotAvailableNumber,
 					latestQuotesResponse.Data.StablecoinVolume24H ?? NotAvailableNumber,
 					latestQuotesResponse.Data.DefiMarketCap ?? NotAvailableNumber,

@@ -138,8 +138,8 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="5">
-			<Name>idOfTheRefreshRow</Name>
-			<Description>Id of the Refresh Row</Description>
+			<Name>idOfTheRowToRefresh</Name>
+			<Description>Id of the Row to Refresh</Description>
 			<Type>read</Type>
 			<Interprete>
 				<RawType>other</RawType>
@@ -187,7 +187,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:11|0-12|1-13|2-14|3-15|4-16|5-17|6-18|7-20|9-19|8-21|10-22|11-23|12-24|13-25|14-26|15-27|16,width:80-190-61-154-71-160-160-160-135-105-105-171-150-151-221-208-125,sort:STRING-STRING-STRING-INT-STRING-INT-INT-INT-STRING-STRING-INT-INT-INT-INT-INT-INT-INT|DESC|0,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:11|0-12|1-13|2-14|3-15|4-16|5-17|6-18|7-20|9-19|8-21|10-22|11-23|12-24|13-25|14-26|15-27|16,width:80-190-61-154-71-160-160-160-135-150-105-171-150-151-221-208-150,sort:STRING-STRING-STRING-INT-STRING-INT-INT-INT-STRING-STRING-INT-INT-INT-INT-INT-INT-INT|DESC|0,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="11" trending="false">
@@ -462,7 +462,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="20" trending="false">
-			<Name>latestListingsOverviewCoinMarketCapRank</Name>
+			<Name>latestListingsOverviewCoinmarketcapRank</Name>
 			<Description>Coinmarketcap Rank (Latest Listings Overview)</Description>
 			<Type>read</Type>
 			<Information>
@@ -519,7 +519,7 @@ Any inquiries can be addressed to:
 				<Units>USD</Units>
 				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
-					<Low>0.0</Low>
+					<Low>0</Low>
 				</Range>
 				<Decimals>2</Decimals>
 			</Display>
@@ -607,9 +607,9 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Exceptions>
-					<Exception id="1" value="-1">
+					<Exception id="1" value="-2147483648">
 						<Display state="disabled">N/A</Display>
-						<Value>-1</Value>
+						<Value>-2147483648</Value>
 					</Exception>
 				</Exceptions>
 			</Interprete>
@@ -640,21 +640,19 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Exceptions>
-					<Exception id="1" value="-1">
+					<Exception id="1" value="-2147483648">
 						<Display state="disabled">N/A</Display>
-						<Value>-1</Value>
+						<Value>-2147483648</Value>
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<!-- SuppressValidator 2.11.1 No range needed as percentages can skyrocket and plummit. -->
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
-				<Range>
-					<Low>0</Low>
-					<High>100</High>
-				</Range>
 				<Decimals>2</Decimals>
 			</Display>
+			<!-- /SuppressValidator 2.11.1 -->
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
@@ -673,21 +671,19 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Exceptions>
-					<Exception id="1" value="-1">
+					<Exception id="1" value="-2147483648">
 						<Display state="disabled">N/A</Display>
-						<Value>-1</Value>
+						<Value>-2147483648</Value>
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<!-- SuppressValidator 2.11.1 No range needed as percentages can skyrocket and plummit. -->
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
-				<Range>
-					<Low>0</Low>
-					<High>100</High>
-				</Range>
 				<Decimals>2</Decimals>
 			</Display>
+			<!-- /SuppressValidator 2.11.1 -->
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
@@ -866,12 +862,13 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Exceptions>
-					<Exception id="1" value="-1">
+					<Exception id="1" value="-2147483648">
 						<Display state="disabled">N/A</Display>
-						<Value>-1</Value>
+						<Value>-2147483648</Value>
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<!-- SuppressValidator 2.11.1 No range needed as percentages can skyrocket and plummit. -->
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
@@ -883,10 +880,8 @@ Any inquiries can be addressed to:
 					</Position>
 				</Positions>
 				<Decimals>3</Decimals>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Display>
+			<!-- /SuppressValidator 2.11.1 -->
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
@@ -905,12 +900,13 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Exceptions>
-					<Exception id="1" value="-1">
+					<Exception id="1" value="-2147483648">
 						<Display state="disabled">N/A</Display>
-						<Value>-1</Value>
+						<Value>-2147483648</Value>
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<!-- SuppressValidator 2.11.1 No range needed as percentages can skyrocket and plummit. -->
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
@@ -922,10 +918,8 @@ Any inquiries can be addressed to:
 					</Position>
 				</Positions>
 				<Decimals>3</Decimals>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Display>
+			<!-- /SuppressValidator 2.11.1 -->
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
@@ -1087,9 +1081,9 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Exceptions>
-					<Exception id="1" value="-1">
+					<Exception id="1" value="-2147483648">
 						<Display state="disabled">N/A</Display>
-						<Value>-1</Value>
+						<Value>-2147483648</Value>
 					</Exception>
 				</Exceptions>
 			</Interprete>
@@ -1402,9 +1396,9 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Exceptions>
-					<Exception id="1" value="-1">
+					<Exception id="1" value="-2147483648">
 						<Display state="disabled">N/A</Display>
-						<Value>-1</Value>
+						<Value>-2147483648</Value>
 					</Exception>
 				</Exceptions>
 			</Interprete>
@@ -1465,9 +1459,9 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Exceptions>
-					<Exception id="1" value="-1">
+					<Exception id="1" value="-2147483648">
 						<Display state="disabled">N/A</Display>
-						<Value>-1</Value>
+						<Value>-2147483648</Value>
 					</Exception>
 				</Exceptions>
 			</Interprete>
@@ -1528,9 +1522,9 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Exceptions>
-					<Exception id="1" value="-1">
+					<Exception id="1" value="-2147483648">
 						<Display state="disabled">N/A</Display>
-						<Value>-1</Value>
+						<Value>-2147483648</Value>
 					</Exception>
 				</Exceptions>
 			</Interprete>
@@ -1646,6 +1640,7 @@ Any inquiries can be addressed to:
 					<Low>100</Low>
 					<High>600</High>
 				</Range>
+				<RTDisplay>false</RTDisplay>
 			</Display>
 			<!-- /SuppressValidator 2.9.7 -->
 			<Measurement>
@@ -1672,6 +1667,7 @@ Any inquiries can be addressed to:
 					<Low>100</Low>
 					<High>600</High>
 				</Range>
+				<RTDisplay>false</RTDisplay>
 			</Display>
 			<!-- /SuppressValidator 2.9.7 -->
 			<Measurement>
@@ -1698,6 +1694,7 @@ Any inquiries can be addressed to:
 					<Low>100</Low>
 					<High>600</High>
 				</Range>
+				<RTDisplay>false</RTDisplay>
 			</Display>
 			<!-- /SuppressValidator 2.9.7 -->
 			<Measurement>
@@ -1724,6 +1721,7 @@ Any inquiries can be addressed to:
 					<Low>100</Low>
 					<High>600</High>
 				</Range>
+				<RTDisplay>false</RTDisplay>
 			</Display>
 			<!-- /SuppressValidator 2.9.7 -->
 			<Measurement>
@@ -1808,7 +1806,7 @@ Any inquiries can be addressed to:
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
 		<QAction id="2" name="After Recieving Reponse" encoding="csharp" triggers="210;211;212;213" />
-		<QAction id="3" name="Handle Refresh Category Row" encoding="csharp" triggers="81" row="true" />
+		<QAction id="3" name="After 'Refresh' Category Row Button Press" encoding="csharp" triggers="81" row="true" />
 	</QActions>
 
 	<HTTP>
@@ -1823,30 +1821,6 @@ Any inquiries can be addressed to:
 				</Request>
 				<Response statusCode="200">
 					<Content pid="210"></Content>
-				</Response>
-			</Connection>
-			<Connection id="2" name="Get Cryptocurrency Latest Global Metrics">
-				<Request verb="GET" url="v1/global-metrics/quotes/latest">
-					<Headers>
-						<!-- SuppressValidator 8.3.1 This specific key is needed to access this API endpoint.	 -->
-						<Header key="X-CMC_PRO_API_KEY" pid="3"></Header>
-						<!-- /SuppressValidator 8.3.1 -->
-					</Headers>
-				</Request>
-				<Response statusCode="201">
-					<Content pid="211"></Content>
-				</Response>
-			</Connection>
-			<Connection id="3" name="Get Cryptocurrency Categories">
-				<Request verb="GET" url="v1/cryptocurrency/categories">
-					<Headers>
-						<!-- SuppressValidator 8.3.1 This specific key is needed to access this API endpoint.	 -->
-						<Header key="X-CMC_PRO_API_KEY" pid="3"></Header>
-						<!-- /SuppressValidator 8.3.1 -->
-					</Headers>
-				</Request>
-				<Response statusCode="202">
-					<Content pid="212"></Content>
 				</Response>
 			</Connection>
 		</Session>
@@ -1867,30 +1841,64 @@ Any inquiries can be addressed to:
 				</Response>
 			</Connection>
 		</Session>
+		<Session id="3" name="Get Cryptocurrency General Data">
+			<Connection id="1" name="Get Cryptocurrency Categories">
+				<Request verb="GET" url="v1/cryptocurrency/categories">
+					<Headers>
+						<!-- SuppressValidator 8.3.1 This specific key is needed to access this API endpoint.	 -->
+						<Header key="X-CMC_PRO_API_KEY" pid="3"></Header>
+						<!-- /SuppressValidator 8.3.1 -->
+					</Headers>
+				</Request>
+				<Response statusCode="202">
+					<Content pid="212"></Content>
+				</Response>
+			</Connection>
+			<Connection id="2" name="Get Cryptocurrency Latest Global Metrics">
+				<Request verb="GET" url="v1/global-metrics/quotes/latest">
+					<Headers>
+						<!-- SuppressValidator 8.3.1 This specific key is needed to access this API endpoint.	 -->
+						<Header key="X-CMC_PRO_API_KEY" pid="3"></Header>
+						<!-- /SuppressValidator 8.3.1 -->
+					</Headers>
+				</Request>
+				<Response statusCode="201">
+					<Content pid="211"></Content>
+				</Response>
+			</Connection>
+		</Session>
 	</HTTP>
 
 	<Groups>
 		<Group id="1">
-			<Name>Latest Cryptocurrency Data</Name>
-			<Description>Latest Cryptocurrency Data</Description>
+			<Name>pollCryptocurrencyLatestData</Name>
+			<Description>Poll Cryptocurrency Latest Data</Description>
 			<Type>poll</Type>
 			<Content>
 				<Session>1</Session>
 			</Content>
 		</Group>
 		<Group id="2">
-			<Name>Categories Single Row Refresh</Name>
-			<Description>Categories Single Row Refresh</Description>
+			<Name>pollCategoriesRowRefresh</Name>
+			<Description>Poll Categories Row Refresh</Description>
 			<Type>poll</Type>
 			<Content>
 				<Session>2</Session>
+			</Content>
+		</Group>
+		<Group id="3">
+			<Name>pollCryptocurrencyCategories</Name>
+			<Description>Poll Cryptocurrency Categories</Description>
+			<Type>poll</Type>
+			<Content>
+				<Session>3</Session>
 			</Content>
 		</Group>
 	</Groups>
 
 	<Triggers>
 		<Trigger id="1">
-			<Name>After 'Refresh' Button Press</Name>
+			<Name>After Setting Categories Row For Refresh</Name>
 			<On id="5">parameter</On>
 			<Time>change</Time>
 			<Type>action</Type>
@@ -1904,31 +1912,26 @@ Any inquiries can be addressed to:
 		<Action id="1">
 			<Name>Execute Single Row Refresh Group</Name>
 			<On id="2">group</On>
-			<Type>execute one now</Type>
+			<Type>execute one</Type>
 		</Action>
 	</Actions>
 
 	<Timers>
 		<Timer id="1">
-			<Name>Fast Timer (10s)</Name>
-			<Time initial="true">10000</Time>
-			<Interval>75</Interval>
-			<Content>
-			</Content>
-		</Timer>
-		<Timer id="2">
-			<Name>Medium Timer (1m)</Name>
-			<Time initial="true" dataDisplay="30000">60000</Time>
+			<Name>Medium Timer (5m)</Name>
+			<Time initial="true" dataDisplay="60000">300000</Time>
 			<Interval>75</Interval>
 			<Content>
 				<Group>1</Group>
 			</Content>
 		</Timer>
-		<Timer id="3">
+		<Timer id="2">
 			<Name>Slow Timer (1h)</Name>
 			<Time initial="true">3600000</Time>
 			<Interval>75</Interval>
 			<Content>
+				<Group>2</Group>
+				<Group>3</Group>
 			</Content>
 		</Timer>
 	</Timers>

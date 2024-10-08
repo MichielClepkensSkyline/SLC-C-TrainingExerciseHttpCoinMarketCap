@@ -15,6 +15,7 @@
 	{
 		private const int NotAvailableNumber = -1;
 		private const string NotAvailableString = "-1";
+		private const int NotAvailablePotentialNegativeValues = int.MinValue;
 		private static readonly DateTime? NotAvailableDate = DateTime.MinValue;
 
 		public static void HandleCategoriesResponse(SLProtocolExt protocol)
@@ -85,11 +86,11 @@
 				Coincategoriesoverviewinstance_71 = data.Id,
 				Coincategoriesoverviewname_72 = data.Name ?? NotAvailableString,
 				Coincategoriesoverviewnumberoftokens_73 = data.NumTokens ?? NotAvailableNumber,
-				Coincategoriesoverviewaveragepricechange_74 = data.AvgPriceChange ?? NotAvailableNumber,
+				Coincategoriesoverviewaveragepricechange_74 = data.AvgPriceChange ?? NotAvailablePotentialNegativeValues,
 				Coincategoriesoverviewmarketcap_75 = data.MarketCap ?? NotAvailableNumber,
-				Coincategoriesoverviewmarketcapchange_76 = data.MarketCapChange ?? NotAvailableNumber,
+				Coincategoriesoverviewmarketcapchange_76 = data.MarketCapChange ?? NotAvailablePotentialNegativeValues,
 				Coincategoriesoverviewvolume_77 = data.Volume ?? NotAvailableNumber,
-				Coincategoriesoverviewvolumechange_78 = data.VolumeChange ?? NotAvailableNumber,
+				Coincategoriesoverviewvolumechange_78 = data.VolumeChange ?? NotAvailablePotentialNegativeValues,
 				Coincategoriesoverviewlastupdated_79 = Convert.ToString(data.LastUpdated ?? NotAvailableDate),
 				Coincategoriesoverviewlastrefresh_80 = Convert.ToString(DateTime.UtcNow),
 			};
@@ -104,11 +105,11 @@
 				Coincategoriesoverviewinstance_71 = categoryResponse.Data.Id,
 				Coincategoriesoverviewname_72 = categoryResponse.Data.Name ?? NotAvailableString,
 				Coincategoriesoverviewnumberoftokens_73 = categoryResponse.Data?.NumTokens ?? NotAvailableNumber,
-				Coincategoriesoverviewaveragepricechange_74 = categoryResponse.Data?.AvgPriceChange ?? NotAvailableNumber,
+				Coincategoriesoverviewaveragepricechange_74 = categoryResponse.Data?.AvgPriceChange ?? NotAvailablePotentialNegativeValues,
 				Coincategoriesoverviewmarketcap_75 = categoryResponse.Data?.MarketCap ?? NotAvailableNumber,
-				Coincategoriesoverviewmarketcapchange_76 = categoryResponse.Data?.MarketCapChange ?? NotAvailableNumber,
+				Coincategoriesoverviewmarketcapchange_76 = categoryResponse.Data?.MarketCapChange ?? NotAvailablePotentialNegativeValues,
 				Coincategoriesoverviewvolume_77 = categoryResponse.Data?.Volume ?? NotAvailableNumber,
-				Coincategoriesoverviewvolumechange_78 = categoryResponse.Data?.VolumeChange ?? NotAvailableNumber,
+				Coincategoriesoverviewvolumechange_78 = categoryResponse.Data?.VolumeChange ?? NotAvailablePotentialNegativeValues,
 				Coincategoriesoverviewlastupdated_79 = Convert.ToString(categoryResponse.Data?.LastUpdated ?? NotAvailableDate),
 				Coincategoriesoverviewlastrefresh_80 = Convert.ToString(DateTime.UtcNow),
 			};

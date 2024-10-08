@@ -18,7 +18,7 @@ public static class QAction
 	{
 		try
 		{
-			protocol.SetParameter(Parameter.idoftherefreshrow_5, protocol.RowKey());
+			protocol.SetParameter(Parameter.idoftherowtorefresh_5, protocol.RowKey());
 		}
 		catch (Exception ex)
 		{

@@ -15,9 +15,9 @@ public static class Parameter
 	public const int apikey = 2;
 	/// <summary>PID: 5 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int idoftherefreshrow_5 = 5;
+	public const int idoftherowtorefresh_5 = 5;
 	/// <summary>PID: 5 | Type: read</summary>
-	public const int idoftherefreshrow = 5;
+	public const int idoftherowtorefresh = 5;
 	/// <summary>PID: 49 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int globalmetricslastupdate_49 = 49;
@@ -465,8 +465,8 @@ public interface SLProtocolExt : SLProtocol
 	object Apikey { get; set; }
 	object Apikey_3 { get; set; }
 	object Titleendgeneric__fixed { get; set; }
-	object Idoftherefreshrow_5 { get; set; }
-	object Idoftherefreshrow { get; set; }
+	object Idoftherowtorefresh_5 { get; set; }
+	object Idoftherowtorefresh { get; set; }
 	object Latestlistingsoverviewinstance_11 { get; set; }
 	object Latestlistingsoverviewinstance { get; set; }
 	object Latestlistingsoverviewname_12 { get; set; }
@@ -587,9 +587,9 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Titleendgeneric__fixed {get { return GetParameter(4); }set { SetParameter(4, value); }}
 	/// <summary>PID: 5  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Idoftherefreshrow_5 {get { return GetParameter(5); }set { SetParameter(5, value); }}
+	public System.Object Idoftherowtorefresh_5 {get { return GetParameter(5); }set { SetParameter(5, value); }}
 	/// <summary>PID: 5  | Type: read</summary>
-	public System.Object Idoftherefreshrow {get { return GetParameter(5); }set { SetParameter(5, value); }}
+	public System.Object Idoftherowtorefresh {get { return GetParameter(5); }set { SetParameter(5, value); }}
 	/// <summary>PID: 11  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewinstance_11 {get { return GetParameter(11); }set { SetParameter(11, value); }}
@@ -655,20 +655,20 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Latestlistingsoverviewmarketcap_23 {get { return GetParameter(23); }set { SetParameter(23, value); }}
 	/// <summary>PID: 23  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Latestlistingsoverviewmarketcap {get { return GetParameter(23); }set { SetParameter(23, value); }}
-	/// <summary>PID: 24  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 24  | Type: read | EXCEPTIONS: N/A = -2147483648</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewmarketcapdominance_24 {get { return GetParameter(24); }set { SetParameter(24, value); }}
-	/// <summary>PID: 24  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 24  | Type: read | EXCEPTIONS: N/A = -2147483648</summary>
 	public System.Object Latestlistingsoverviewmarketcapdominance {get { return GetParameter(24); }set { SetParameter(24, value); }}
-	/// <summary>PID: 25  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 25  | Type: read | EXCEPTIONS: N/A = -2147483648</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewpricepercentagechange24hours_25 {get { return GetParameter(25); }set { SetParameter(25, value); }}
-	/// <summary>PID: 25  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 25  | Type: read | EXCEPTIONS: N/A = -2147483648</summary>
 	public System.Object Latestlistingsoverviewpricepercentagechange24hours {get { return GetParameter(25); }set { SetParameter(25, value); }}
-	/// <summary>PID: 26  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 26  | Type: read | EXCEPTIONS: N/A = -2147483648</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewpricepercentangechange7days_26 {get { return GetParameter(26); }set { SetParameter(26, value); }}
-	/// <summary>PID: 26  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 26  | Type: read | EXCEPTIONS: N/A = -2147483648</summary>
 	public System.Object Latestlistingsoverviewpricepercentangechange7days {get { return GetParameter(26); }set { SetParameter(26, value); }}
 	/// <summary>PID: 27  | Type: read | EXCEPTIONS: N/A = 00:00:00</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
@@ -692,15 +692,15 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Marketdominanceethereum_52 {get { return GetParameter(52); }set { SetParameter(52, value); }}
 	/// <summary>PID: 52  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Marketdominanceethereum {get { return GetParameter(52); }set { SetParameter(52, value); }}
-	/// <summary>PID: 53  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 53  | Type: read | EXCEPTIONS: N/A = -2147483648</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Marketdominancebitcoin24hprecentagechange_53 {get { return GetParameter(53); }set { SetParameter(53, value); }}
-	/// <summary>PID: 53  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 53  | Type: read | EXCEPTIONS: N/A = -2147483648</summary>
 	public System.Object Marketdominancebitcoin24hprecentagechange {get { return GetParameter(53); }set { SetParameter(53, value); }}
-	/// <summary>PID: 54  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 54  | Type: read | EXCEPTIONS: N/A = -2147483648</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Marketdominanceethereum24hpercentagechange_54 {get { return GetParameter(54); }set { SetParameter(54, value); }}
-	/// <summary>PID: 54  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 54  | Type: read | EXCEPTIONS: N/A = -2147483648</summary>
 	public System.Object Marketdominanceethereum24hpercentagechange {get { return GetParameter(54); }set { SetParameter(54, value); }}
 	/// <summary>PID: 55  | Type: fixed</summary>
 	public System.Object Titlebeginvolumeandmarketcap__fixed {get { return GetParameter(55); }set { SetParameter(55, value); }}
@@ -719,10 +719,10 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Totalmarketcapyesterday_58 {get { return GetParameter(58); }set { SetParameter(58, value); }}
 	/// <summary>PID: 58  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Totalmarketcapyesterday {get { return GetParameter(58); }set { SetParameter(58, value); }}
-	/// <summary>PID: 59  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 59  | Type: read | EXCEPTIONS: N/A = -2147483648</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Totalmarketcapyesterdaypercentagechange_59 {get { return GetParameter(59); }set { SetParameter(59, value); }}
-	/// <summary>PID: 59  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 59  | Type: read | EXCEPTIONS: N/A = -2147483648</summary>
 	public System.Object Totalmarketcapyesterdaypercentagechange {get { return GetParameter(59); }set { SetParameter(59, value); }}
 	/// <summary>PID: 60  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
@@ -759,30 +759,30 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Coincategoriesoverviewnumberoftokens_73 {get { return GetParameter(73); }set { SetParameter(73, value); }}
 	/// <summary>PID: 73  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Coincategoriesoverviewnumberoftokens {get { return GetParameter(73); }set { SetParameter(73, value); }}
-	/// <summary>PID: 74  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 74  | Type: read | EXCEPTIONS: N/A = -2147483648</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Coincategoriesoverviewaveragepricechange_74 {get { return GetParameter(74); }set { SetParameter(74, value); }}
-	/// <summary>PID: 74  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 74  | Type: read | EXCEPTIONS: N/A = -2147483648</summary>
 	public System.Object Coincategoriesoverviewaveragepricechange {get { return GetParameter(74); }set { SetParameter(74, value); }}
 	/// <summary>PID: 75  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Coincategoriesoverviewmarketcap_75 {get { return GetParameter(75); }set { SetParameter(75, value); }}
 	/// <summary>PID: 75  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Coincategoriesoverviewmarketcap {get { return GetParameter(75); }set { SetParameter(75, value); }}
-	/// <summary>PID: 76  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 76  | Type: read | EXCEPTIONS: N/A = -2147483648</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Coincategoriesoverviewmarketcapchange_76 {get { return GetParameter(76); }set { SetParameter(76, value); }}
-	/// <summary>PID: 76  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 76  | Type: read | EXCEPTIONS: N/A = -2147483648</summary>
 	public System.Object Coincategoriesoverviewmarketcapchange {get { return GetParameter(76); }set { SetParameter(76, value); }}
 	/// <summary>PID: 77  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Coincategoriesoverviewvolume_77 {get { return GetParameter(77); }set { SetParameter(77, value); }}
 	/// <summary>PID: 77  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Coincategoriesoverviewvolume {get { return GetParameter(77); }set { SetParameter(77, value); }}
-	/// <summary>PID: 78  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 78  | Type: read | EXCEPTIONS: N/A = -2147483648</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Coincategoriesoverviewvolumechange_78 {get { return GetParameter(78); }set { SetParameter(78, value); }}
-	/// <summary>PID: 78  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 78  | Type: read | EXCEPTIONS: N/A = -2147483648</summary>
 	public System.Object Coincategoriesoverviewvolumechange {get { return GetParameter(78); }set { SetParameter(78, value); }}
 	/// <summary>PID: 79  | Type: read | EXCEPTIONS: N/A = 00:00:00</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]

@@ -11,6 +11,7 @@
 	{
 		private const string NotAvailableString = "-1";
 		private const int NotAvailableNumber = -1;
+		private const int NotAvailablePotentialNegativeValues = int.MinValue;
 		private static readonly DateTime NotAvailableDate = DateTime.MinValue;
 
 		public static void HandleLatestListingResponse(SLProtocolExt protocol)
@@ -47,9 +48,9 @@
 				Latestlistingsoverviewprice_21 = coinData.Quote?.Usd?.Price ?? NotAvailableNumber,
 				Latestlistingsoverviewtradingvolume24hours_22 = coinData.Quote?.Usd?.Volume24H ?? NotAvailableNumber,
 				Latestlistingsoverviewmarketcap_23 = coinData.Quote?.Usd?.MarketCap ?? NotAvailableNumber,
-				Latestlistingsoverviewmarketcapdominance_24 = coinData.Quote?.Usd?.MarketCapDominance ?? NotAvailableNumber,
-				Latestlistingsoverviewpricepercentagechange24hours_25 = coinData.Quote?.Usd?.PercentChange24H ?? NotAvailableNumber,
-				Latestlistingsoverviewpricepercentangechange7days_26 = coinData.Quote?.Usd?.PercentChange7D ?? NotAvailableNumber,
+				Latestlistingsoverviewmarketcapdominance_24 = coinData.Quote?.Usd?.MarketCapDominance ?? NotAvailablePotentialNegativeValues,
+				Latestlistingsoverviewpricepercentagechange24hours_25 = coinData.Quote?.Usd?.PercentChange24H ?? NotAvailablePotentialNegativeValues,
+				Latestlistingsoverviewpricepercentangechange7days_26 = coinData.Quote?.Usd?.PercentChange7D ?? NotAvailablePotentialNegativeValues,
 				Latestlistingsoverviewlastupdate_27 = Convert.ToString(coinData.Quote?.Usd?.LastUpdated ?? NotAvailableDate),
 			};
 

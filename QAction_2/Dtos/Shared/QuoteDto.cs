@@ -7,5 +7,4 @@
         [JsonProperty("USD")]
         public UsdDto Usd { get; set; }
     }
-
 }
