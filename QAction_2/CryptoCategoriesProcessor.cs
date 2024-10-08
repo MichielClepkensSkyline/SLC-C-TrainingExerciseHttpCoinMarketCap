@@ -7,6 +7,7 @@
 	using QAction_2.Dtos.CategoriesResponse;
 
 	using Skyline.DataMiner.Net;
+	using Skyline.DataMiner.Net.VirtualFunctions;
 	using Skyline.DataMiner.Scripting;
 
 	using Parameter = Skyline.DataMiner.Scripting.Parameter;
@@ -30,6 +31,27 @@
 			SetCategoryRow(protocol, categoryResponse);
 		}
 
+		public static SingleCategoryResponseDto GetAndDeserializeSingleCategoryResponse(SLProtocolExt protocol)
+		{
+			var responseString = (string)protocol.GetParameter(Parameter.responsecontentcategoriesonrowrefresh_213);
+
+			protocol.Log($"QA{protocol.QActionID}|TESTING|{responseString}", LogType.Error, LogLevel.NoLogging);
+
+			if (string.IsNullOrWhiteSpace(responseString))
+			{
+				throw new ArgumentException("The response is not a valid string or is empty.");
+			}
+
+			var singleCategoryResponse = JsonConvert.DeserializeObject<SingleCategoryResponseDto>(responseString);
+
+			if (singleCategoryResponse == null)
+			{
+				throw new InvalidOperationException("Failed to deserialize latest listing response.");
+			}
+
+			return singleCategoryResponse;
+		}
+
 		private static CategoriesResponseDto GetAndDeserializeCategoriesResponse(SLProtocolExt protocol)
 		{
 			var responseString = (string)protocol.GetParameter(Parameter.responsecontentcategories_212);
@@ -47,25 +69,6 @@
 			}
 
 			return categoriesResponse;
-		}
-
-		private static SingleCategoryResponseDto GetAndDeserializeSingleCategoryResponse(SLProtocolExt protocol)
-		{
-			var responseString = (string)protocol.GetParameter(Parameter.responsecontentcategoriesonrowrefresh_213);
-
-			if (string.IsNullOrWhiteSpace(responseString))
-			{
-				throw new ArgumentException("The response is not a valid string or is empty.");
-			}
-
-			var singleCategoryResponse = JsonConvert.DeserializeObject<SingleCategoryResponseDto>(responseString);
-
-			if (singleCategoryResponse == null)
-			{
-				throw new InvalidOperationException("Failed to deserialize latest listing response.");
-			}
-
-			return singleCategoryResponse;
 		}
 
 		private static void SetCategoriesColumns(SLProtocolExt protocol, CategoriesResponseDto categoriesResponse)

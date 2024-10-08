@@ -1810,7 +1810,7 @@ Any inquiries can be addressed to:
 	</QActions>
 
 	<HTTP>
-		<Session id="1" name="Get Cryptocurrency Data">
+		<Session id="1" name="Get Cryptocurrency Latest Listings">
 			<Connection id="1" name="Get Cryptocurrency Latest Listings">
 				<Request verb="GET" url="v1/cryptocurrency/listings/latest">
 					<Headers>
@@ -1824,8 +1824,8 @@ Any inquiries can be addressed to:
 				</Response>
 			</Connection>
 		</Session>
-		<Session id="2" name="Get Categories Row">
-			<Connection id="1" name="Get Categories Row">
+		<Session id="2" name="Get Cryptocurrrency Categories Row">
+			<Connection id="1" name="Get Cryptocurrrency Categories Row">
 				<Request verb="GET" url="v1/cryptocurrency/category">
 					<Headers>
 						<!-- SuppressValidator 8.3.1 This specific key is needed to access this API endpoint.	 -->
@@ -1930,7 +1930,6 @@ Any inquiries can be addressed to:
 			<Time initial="true">3600000</Time>
 			<Interval>75</Interval>
 			<Content>
-				<Group>2</Group>
 				<Group>3</Group>
 			</Content>
 		</Timer>

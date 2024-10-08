@@ -74,6 +74,5 @@
 					latestQuotesResponse.Data.StablecoinMarketCap ?? NotAvailableNumber,
 				});
 		}
-
 	}
 }
