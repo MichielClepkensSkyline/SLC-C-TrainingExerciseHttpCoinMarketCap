@@ -35,8 +35,6 @@
 		{
 			var responseString = (string)protocol.GetParameter(Parameter.responsecontentcategoriesonrowrefresh_213);
 
-			protocol.Log($"QA{protocol.QActionID}|TESTING|{responseString}", LogType.Error, LogLevel.NoLogging);
-
 			if (string.IsNullOrWhiteSpace(responseString))
 			{
 				throw new ArgumentException("The response is not a valid string or is empty.");
