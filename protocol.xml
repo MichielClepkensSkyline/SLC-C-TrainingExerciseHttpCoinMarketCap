@@ -167,8 +167,8 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="11" pid="22" type="retrieved" options="" />
 				<ColumnOption idx="12" pid="23" type="retrieved" options="" />
 				<ColumnOption idx="13" pid="24" type="retrieved" options="" />
-				<ColumnOption idx="14" pid="25" type="retrieved" options="" />
-				<ColumnOption idx="15" pid="26" type="retrieved" options="" />
+				<ColumnOption idx="14" pid="25" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="15" pid="26" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
 				<ColumnOption idx="16" pid="27" type="retrieved" options="" />
 			</ArrayOptions>
 			<Information>
@@ -626,7 +626,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="25" trending="false">
+		<Param id="25" trending="true">
 			<Name>latestListingsOverviewPricePercentageChange24Hours</Name>
 			<Description>Price Percentage Change (24 Hours) (Latest Listings Overview)</Description>
 			<Type>read</Type>
@@ -656,6 +656,12 @@ Any inquiries can be addressed to:
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<MiL>-50</MiL>
+				<WaL>-30</WaL>
+				<WaH>30</WaH>
+			</Alarm>
 		</Param>
 		<Param id="26" trending="false">
 			<Name>latestListingsOverviewPricePercentangeChange7Days</Name>
@@ -687,6 +693,12 @@ Any inquiries can be addressed to:
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<MiL>-80</MiL>
+				<WaL>-50</WaL>
+				<WaH>50</WaH>
+			</Alarm>
 		</Param>
 		<Param id="27" trending="false">
 			<Name>latestListingsOverviewLastUpdate</Name>
@@ -788,6 +800,9 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>false</Monitored>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
@@ -848,7 +863,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="53" trending="false">
+		<Param id="53" trending="true">
 			<Name>marketDominanceBitcoin24HPrecentageChange</Name>
 			<Description>Bitcoin Dominance Percentage Change (24 H)</Description>
 			<Type>read</Type>
@@ -885,8 +900,15 @@ Any inquiries can be addressed to:
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-50</CL>
+				<MaL>-30</MaL>
+				<MiL>-10</MiL>
+				<WaL>-5</WaL>
+			</Alarm>
 		</Param>
-		<Param id="54" trending="false">
+		<Param id="54" trending="true">
 			<Name>marketDominanceEthereum24HPercentageChange</Name>
 			<Description>Ethereum Dominance Percentage Change (24 H)</Description>
 			<Type>read</Type>
@@ -923,6 +945,13 @@ Any inquiries can be addressed to:
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-50</CL>
+				<MaL>-30</MaL>
+				<MiL>-10</MiL>
+				<WaL>-5</WaL>
+			</Alarm>
 		</Param>
 		<Param id="55">
 			<Name>titleBeginVolumeAndMarketCap</Name>
@@ -1067,7 +1096,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="59" trending="false">
+		<Param id="59" trending="true">
 			<Name>totalMarketCapYesterdayPercentageChange</Name>
 			<Description>Total Market Cap Yesterday Percentage Change</Description>
 			<Type>read</Type>
@@ -1103,6 +1132,11 @@ Any inquiries can be addressed to:
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-40</CL>
+				<MiL>-20</MiL>
+			</Alarm>
 		</Param>
 		<Param id="60" trending="false">
 			<Name>decentralizedFinanceTradingVolume24H</Name>
@@ -1273,11 +1307,11 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="0" pid="71" type="retrieved" options=""/>
 				<ColumnOption idx="1" pid="72" type="retrieved" options="" />
 				<ColumnOption idx="2" pid="73" type="retrieved" options="" />
-				<ColumnOption idx="3" pid="74" type="retrieved" options="" />
+				<ColumnOption idx="3" pid="74" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
 				<ColumnOption idx="4" pid="75" type="retrieved" options="" />
-				<ColumnOption idx="5" pid="76" type="retrieved" options="" />
+				<ColumnOption idx="5" pid="76" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
 				<ColumnOption idx="6" pid="77" type="retrieved" options="" />
-				<ColumnOption idx="7" pid="78" type="retrieved" options="" />
+				<ColumnOption idx="7" pid="78" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
 				<ColumnOption idx="8" pid="79" type="retrieved" options="" />
 				<ColumnOption idx="9" pid="80" type="retrieved" options="" />
 				<ColumnOption idx="10" pid="81" type="retrieved" options="" />
@@ -1382,7 +1416,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="74" trending="false">
+		<Param id="74" trending="true">
 			<Name>coinCategoriesOverviewAveragePriceChange</Name>
 			<Description>Average Price Change (Coin Categories Overview)</Description>
 			<Type>read</Type>
@@ -1411,6 +1445,11 @@ Any inquiries can be addressed to:
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<WaL>-200</WaL>
+				<WaH>200</WaH>
+			</Alarm>
 		</Param>
 		<Param id="75" trending="false">
 			<Name>coinCategoriesOverviewMarketCap</Name>
@@ -1445,7 +1484,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="76" trending="false">
+		<Param id="76" trending="true">
 			<Name>coinCategoriesOverviewMarketCapChange</Name>
 			<Description>Market Cap Change (Coin Categories Overview)</Description>
 			<Type>read</Type>
@@ -1474,6 +1513,11 @@ Any inquiries can be addressed to:
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<WaL>-200</WaL>
+				<WaH>200</WaH>
+			</Alarm>
 		</Param>
 		<Param id="77" trending="false">
 			<Name>coinCategoriesOverviewVolume</Name>
@@ -1495,6 +1539,9 @@ Any inquiries can be addressed to:
 					</Exception>
 				</Exceptions>
 			</Interprete>
+			<Alarm>
+				<Monitored>false</Monitored>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<!-- SuppressValidator 2.9.4 As the value is represented in dollars, the most appropriate unit is 'USD'. -->
@@ -1508,7 +1555,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="78" trending="false">
+		<Param id="78" trending="true">
 			<Name>coinCategoriesOverviewVolumeChange</Name>
 			<Description>Volume Change (Coin Categories Overview)</Description>
 			<Type>read</Type>
@@ -1537,6 +1584,11 @@ Any inquiries can be addressed to:
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<WaL>-5000</WaL>
+				<WaH>5000</WaH>
+			</Alarm>
 		</Param>
 		<Param id="79" trending="false">
 			<Name>coinCategoriesOverviewLastUpdated</Name>
