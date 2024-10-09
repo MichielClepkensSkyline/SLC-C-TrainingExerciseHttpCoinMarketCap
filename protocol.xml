@@ -710,21 +710,23 @@ Any inquiries can be addressed to:
 				</Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Exceptions>
-					<Exception id="1" value="00:00:00">
+					<Exception id="1" value="0">
 						<Display state="disabled">N/A</Display>
-						<Value>00:00:00</Value>
+						<Value>0</Value>
 					</Exception>
 				</Exceptions>
+				<Decimals>8</Decimals>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Decimals>8</Decimals>
 			</Display>
 			<Measurement>
-				<Type options="datetime">string</Type>
+				<Type options="datetime">number</Type>
 			</Measurement>
 		</Param>
 		
@@ -742,11 +744,12 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
 				<Exceptions>
-					<Exception id="1" value="00:00:00">
+					<Exception id="1" value="0">
 						<Display state="disabled">N/A</Display>
-						<Value>00:00:00</Value>
+						<Value>0</Value>
 					</Exception>
 				</Exceptions>
+				<Decimals>8</Decimals>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -757,9 +760,10 @@ Any inquiries can be addressed to:
 						<Row>1</Row>
 					</Position>
 				</Positions>
+				<Decimals>8</Decimals>
 			</Display>
 			<Measurement>
-				<Type options="datetime">string</Type>
+				<Type options="datetime">number</Type>
 			</Measurement>
 		</Param>
 		<Param id="50">
@@ -1600,21 +1604,23 @@ Any inquiries can be addressed to:
 				</Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Decimals>8</Decimals>
 				<Exceptions>
-					<Exception id="1" value="00:00:00">
+					<Exception id="1" value="0">
 						<Display state="disabled">N/A</Display>
-						<Value>00:00:00</Value>
+						<Value>0</Value>
 					</Exception>
 				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Decimals>8</Decimals>
 			</Display>
 			<Measurement>
-				<Type options="datetime">string</Type>
+				<Type options="datetime">number</Type>
 			</Measurement>
 		</Param>
 		<Param id="80" trending="false">
@@ -1627,21 +1633,23 @@ Any inquiries can be addressed to:
 				</Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Decimals>8</Decimals>
 				<Exceptions>
-					<Exception id="1" value="00:00:00">
+					<Exception id="1" value="0">
 						<Display state="disabled">N/A</Display>
-						<Value>00:00:00</Value>
+						<Value>0</Value>
 					</Exception>
 				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Decimals>8</Decimals>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type options="datetime">number</Type>
 			</Measurement>
 		</Param>
 		<Param id="81">

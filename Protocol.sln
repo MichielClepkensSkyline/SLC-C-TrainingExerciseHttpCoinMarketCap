@@ -47,7 +47,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QAction_2", "QAction_2\QAct
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QAction_3", "QAction_3\QAction_3.csproj", "{4666730F-1296-401D-BF90-33DEFC481478}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QAction_2Tests2", "QAction_2Tests2\QAction_2Tests2.csproj", "{1554A68D-4EAB-41D4-AF1A-A035E208FC6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QAction_2Tests2", "QAction_2Tests2\QAction_2Tests2.csproj", "{1554A68D-4EAB-41D4-AF1A-A035E208FC6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

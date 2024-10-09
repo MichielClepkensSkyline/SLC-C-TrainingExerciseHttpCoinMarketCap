@@ -22,7 +22,7 @@
         public int? NumMarketPairs { get; set; }
 
         [JsonProperty("date_added")]
-        public DateTime DateAdded { get; set; }
+        public DateTime DateAdded { get; set; } = DateTime.MinValue;
 
         [JsonProperty("tags")]
         public List<string> Tags { get; set; }
@@ -46,7 +46,7 @@
         public int? CmcRank { get; set; }
 
         [JsonProperty("last_updated")]
-        public DateTime LastUpdated { get; set; }
+        public DateTime LastUpdated { get; set; } = DateTime.MinValue;
 
         [JsonProperty("quote")]
         public QuoteDto Quote { get; set; }

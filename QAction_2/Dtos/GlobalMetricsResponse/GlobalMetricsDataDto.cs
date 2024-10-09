@@ -76,6 +76,6 @@
 		public GlobalMetricsQuoteDto Quote { get; set; }
 
 		[JsonProperty("last_updated")]
-		public DateTime LastUpdated { get; set; }
+		public DateTime LastUpdated { get; set; } = DateTime.MinValue;
 	}
 }

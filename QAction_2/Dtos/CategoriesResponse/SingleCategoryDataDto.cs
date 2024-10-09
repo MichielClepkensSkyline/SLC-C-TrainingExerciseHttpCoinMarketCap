@@ -23,7 +23,7 @@
 		public int? NumTokens { get; set; }
 
 		[JsonProperty("last_updated")]
-		public DateTime LastUpdated { get; set; }
+		public DateTime LastUpdated { get; set; } = DateTime.MinValue;
 
 		[JsonProperty("avg_price_change")]
 		public double? AvgPriceChange { get; set; }

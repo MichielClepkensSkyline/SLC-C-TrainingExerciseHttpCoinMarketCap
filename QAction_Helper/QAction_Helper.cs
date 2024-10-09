@@ -670,15 +670,15 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Latestlistingsoverviewpricepercentangechange7days_26 {get { return GetParameter(26); }set { SetParameter(26, value); }}
 	/// <summary>PID: 26  | Type: read | EXCEPTIONS: N/A = -2147483648</summary>
 	public System.Object Latestlistingsoverviewpricepercentangechange7days {get { return GetParameter(26); }set { SetParameter(26, value); }}
-	/// <summary>PID: 27  | Type: read | EXCEPTIONS: N/A = 00:00:00</summary>
+	/// <summary>PID: 27  | Type: read | EXCEPTIONS: N/A = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewlastupdate_27 {get { return GetParameter(27); }set { SetParameter(27, value); }}
-	/// <summary>PID: 27  | Type: read | EXCEPTIONS: N/A = 00:00:00</summary>
+	/// <summary>PID: 27  | Type: read | EXCEPTIONS: N/A = 0</summary>
 	public System.Object Latestlistingsoverviewlastupdate {get { return GetParameter(27); }set { SetParameter(27, value); }}
-	/// <summary>PID: 49  | Type: read | EXCEPTIONS: N/A = 00:00:00</summary>
+	/// <summary>PID: 49  | Type: read | EXCEPTIONS: N/A = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Globalmetricslastupdate_49 {get { return GetParameter(49); }set { SetParameter(49, value); }}
-	/// <summary>PID: 49  | Type: read | EXCEPTIONS: N/A = 00:00:00</summary>
+	/// <summary>PID: 49  | Type: read | EXCEPTIONS: N/A = 0</summary>
 	public System.Object Globalmetricslastupdate {get { return GetParameter(49); }set { SetParameter(49, value); }}
 	/// <summary>PID: 50  | Type: fixed</summary>
 	public System.Object Titlebeginmarketdominancemetrics__fixed {get { return GetParameter(50); }set { SetParameter(50, value); }}
@@ -784,15 +784,15 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Coincategoriesoverviewvolumechange_78 {get { return GetParameter(78); }set { SetParameter(78, value); }}
 	/// <summary>PID: 78  | Type: read | EXCEPTIONS: N/A = -2147483648</summary>
 	public System.Object Coincategoriesoverviewvolumechange {get { return GetParameter(78); }set { SetParameter(78, value); }}
-	/// <summary>PID: 79  | Type: read | EXCEPTIONS: N/A = 00:00:00</summary>
+	/// <summary>PID: 79  | Type: read | EXCEPTIONS: N/A = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Coincategoriesoverviewlastupdated_79 {get { return GetParameter(79); }set { SetParameter(79, value); }}
-	/// <summary>PID: 79  | Type: read | EXCEPTIONS: N/A = 00:00:00</summary>
+	/// <summary>PID: 79  | Type: read | EXCEPTIONS: N/A = 0</summary>
 	public System.Object Coincategoriesoverviewlastupdated {get { return GetParameter(79); }set { SetParameter(79, value); }}
-	/// <summary>PID: 80  | Type: read | EXCEPTIONS: N/A = 00:00:00</summary>
+	/// <summary>PID: 80  | Type: read | EXCEPTIONS: N/A = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Coincategoriesoverviewlastrefresh_80 {get { return GetParameter(80); }set { SetParameter(80, value); }}
-	/// <summary>PID: 80  | Type: read | EXCEPTIONS: N/A = 00:00:00</summary>
+	/// <summary>PID: 80  | Type: read | EXCEPTIONS: N/A = 0</summary>
 	public System.Object Coincategoriesoverviewlastrefresh {get { return GetParameter(80); }set { SetParameter(80, value); }}
 	/// <summary>PID: 81  | Type: write | DISCREETS: Refresh = 1</summary>
 	public System.Object Coincategoriesoverviewrefreshbutton_81 {get { return GetParameter(81); }set { SetParameter(81, value); }}

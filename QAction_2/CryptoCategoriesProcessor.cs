@@ -17,7 +17,6 @@
 		private const int NotAvailableNumber = -1;
 		private const string NotAvailableString = "-1";
 		private const int NotAvailablePotentialNegativeValues = int.MinValue;
-		private static readonly DateTime? NotAvailableDate = DateTime.MinValue;
 
 		public static void HandleCategoriesResponse(SLProtocolExt protocol)
 		{
@@ -92,8 +91,8 @@
 				Coincategoriesoverviewmarketcapchange_76 = data.MarketCapChange ?? NotAvailablePotentialNegativeValues,
 				Coincategoriesoverviewvolume_77 = data.Volume ?? NotAvailableNumber,
 				Coincategoriesoverviewvolumechange_78 = data.VolumeChange ?? NotAvailablePotentialNegativeValues,
-				Coincategoriesoverviewlastupdated_79 = Convert.ToString(data.LastUpdated ?? NotAvailableDate),
-				Coincategoriesoverviewlastrefresh_80 = Convert.ToString(DateTime.UtcNow),
+				Coincategoriesoverviewlastupdated_79 = data.LastUpdated.ToOADate(),
+				Coincategoriesoverviewlastrefresh_80 = DateTime.UtcNow.ToOADate(),
 			};
 
 			return categoriesSingleRow;
@@ -111,8 +110,8 @@
 				Coincategoriesoverviewmarketcapchange_76 = categoryResponse.Data?.MarketCapChange ?? NotAvailablePotentialNegativeValues,
 				Coincategoriesoverviewvolume_77 = categoryResponse.Data?.Volume ?? NotAvailableNumber,
 				Coincategoriesoverviewvolumechange_78 = categoryResponse.Data?.VolumeChange ?? NotAvailablePotentialNegativeValues,
-				Coincategoriesoverviewlastupdated_79 = Convert.ToString(categoryResponse.Data?.LastUpdated ?? NotAvailableDate),
-				Coincategoriesoverviewlastrefresh_80 = Convert.ToString(DateTime.UtcNow),
+				Coincategoriesoverviewlastupdated_79 = categoryResponse.Data?.LastUpdated.ToOADate(),
+				Coincategoriesoverviewlastrefresh_80 = DateTime.UtcNow.ToOADate(),
 			};
 
 			protocol.coincategoriesoverview.SetRow(tableRow);
