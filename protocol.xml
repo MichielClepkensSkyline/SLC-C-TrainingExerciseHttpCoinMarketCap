@@ -112,7 +112,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="password">string</Type>
+				<Type>string</Type>
 			</Measurement>
 		</Param>
 		<Param id="4">
@@ -1875,7 +1875,7 @@ Any inquiries can be addressed to:
 				<Request verb="GET" url="v1/cryptocurrency/listings/latest">
 					<Headers>
 						<!-- SuppressValidator 8.3.1 This specific key is needed to access this API endpoint.	 -->
-						<Header key="X-CMC_PRO_API_KEY" pid="3"></Header>
+						<Header key="X-CMC_PRO_API_KEY" pid="2"></Header>
 						<!-- /SuppressValidator 8.3.1 -->
 					</Headers>
 				</Request>
@@ -1889,7 +1889,7 @@ Any inquiries can be addressed to:
 				<Request verb="GET" url="v1/cryptocurrency/category">
 					<Headers>
 						<!-- SuppressValidator 8.3.1 This specific key is needed to access this API endpoint.	 -->
-						<Header key="X-CMC_PRO_API_KEY" pid="3"></Header>
+						<Header key="X-CMC_PRO_API_KEY" pid="2"></Header>
 						<!-- /SuppressValidator 8.3.1 -->
 					</Headers>
 					<Parameters>
@@ -1906,7 +1906,7 @@ Any inquiries can be addressed to:
 				<Request verb="GET" url="v1/cryptocurrency/categories">
 					<Headers>
 						<!-- SuppressValidator 8.3.1 This specific key is needed to access this API endpoint.	 -->
-						<Header key="X-CMC_PRO_API_KEY" pid="3"></Header>
+						<Header key="X-CMC_PRO_API_KEY" pid="2"></Header>
 						<!-- /SuppressValidator 8.3.1 -->
 					</Headers>
 				</Request>
@@ -1918,7 +1918,7 @@ Any inquiries can be addressed to:
 				<Request verb="GET" url="v1/global-metrics/quotes/latest">
 					<Headers>
 						<!-- SuppressValidator 8.3.1 This specific key is needed to access this API endpoint.	 -->
-						<Header key="X-CMC_PRO_API_KEY" pid="3"></Header>
+						<Header key="X-CMC_PRO_API_KEY" pid="2"></Header>
 						<!-- /SuppressValidator 8.3.1 -->
 					</Headers>
 				</Request>
@@ -1966,20 +1966,40 @@ Any inquiries can be addressed to:
 				<Id>1</Id>
 			</Content>
 		</Trigger>
+		<Trigger id="2">
+			<Name>After Api Key Change</Name>
+			<On id="2">parameter</On>
+			<Time>change</Time>
+			<Type>action</Type>
+			<Content>
+				<Id>2</Id>
+				<Id>3</Id>
+			</Content>
+		</Trigger>
 	</Triggers>
 
 	<Actions>
 		<Action id="1">
 			<Name>Execute Single Row Refresh Group</Name>
 			<On id="2">group</On>
-			<Type>execute one</Type>
+			<Type>execute next</Type>
+		</Action>
+		<Action id="2">
+			<Name>Execute Poll Latest Data Group</Name>
+			<On id="1">group</On>
+			<Type>execute next</Type>
+		</Action>
+		<Action id="3">
+			<Name>Execute Poll Categories Data Group</Name>
+			<On id="3">group</On>
+			<Type>execute next</Type>
 		</Action>
 	</Actions>
 
 	<Timers>
 		<Timer id="1">
 			<Name>Medium Timer (5m)</Name>
-			<Time initial="true" dataDisplay="60000">300000</Time>
+			<Time initial="true">300000</Time>
 			<Interval>75</Interval>
 			<Content>
 				<Group>1</Group>
