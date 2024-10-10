@@ -1933,6 +1933,7 @@ Any inquiries can be addressed to:
 		<Group id="1">
 			<Name>pollCryptocurrencyLatestData</Name>
 			<Description>Poll Cryptocurrency Latest Data</Description>
+			<Condition><![CDATA[(id:2 != "")]]></Condition>
 			<Type>poll</Type>
 			<Content>
 				<Session>1</Session>
@@ -1941,6 +1942,7 @@ Any inquiries can be addressed to:
 		<Group id="2">
 			<Name>pollCategoriesRowRefresh</Name>
 			<Description>Poll Categories Row Refresh</Description>
+			<Condition><![CDATA[(id:2 != "")]]></Condition>
 			<Type>poll</Type>
 			<Content>
 				<Session>2</Session>
@@ -1949,6 +1951,7 @@ Any inquiries can be addressed to:
 		<Group id="3">
 			<Name>pollCryptocurrencyCategories</Name>
 			<Description>Poll Cryptocurrency Categories</Description>
+			<Condition><![CDATA[(id:2 != "")]]></Condition>
 			<Type>poll</Type>
 			<Content>
 				<Session>3</Session>
