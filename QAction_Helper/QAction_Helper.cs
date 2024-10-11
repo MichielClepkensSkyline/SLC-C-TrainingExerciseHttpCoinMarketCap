@@ -611,10 +611,10 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Latestlistingsoverviewnumberofmarketpairs_14 {get { return GetParameter(14); }set { SetParameter(14, value); }}
 	/// <summary>PID: 14  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Latestlistingsoverviewnumberofmarketpairs {get { return GetParameter(14); }set { SetParameter(14, value); }}
-	/// <summary>PID: 15  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 15  | Type: read | DISCREETS: Mineable = 1, Unmineable = 0 | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewmineable_15 {get { return GetParameter(15); }set { SetParameter(15, value); }}
-	/// <summary>PID: 15  | Type: read | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 15  | Type: read | DISCREETS: Mineable = 1, Unmineable = 0 | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Latestlistingsoverviewmineable {get { return GetParameter(15); }set { SetParameter(15, value); }}
 	/// <summary>PID: 16  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]

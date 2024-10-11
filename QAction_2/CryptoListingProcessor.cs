@@ -38,7 +38,7 @@
 				Latestlistingsoverviewname_12 = coinData.Name ?? NotAvailableString,
 				Latestlistingsoverviewsymbol_13 = coinData.Symbol ?? NotAvailableString,
 				Latestlistingsoverviewnumberofmarketpairs_14 = coinData.NumMarketPairs ?? NotAvailableNumber,
-				Latestlistingsoverviewmineable_15 = (coinData.Tags != null && coinData.Tags.Contains("mineable")) ? "Yes" : "No",
+				Latestlistingsoverviewmineable_15 = (coinData.Tags != null && coinData.Tags.Contains("mineable")) ? 1 : 0,
 				Latestlistingsoverviewmaximumsupply_16 = coinData.MaxSupply ?? NotAvailableNumber,
 				Latestlistingsoverviewcirculatingsupply_17 = coinData.CirculatingSupply ?? NotAvailableNumber,
 				Latestlistingsoverviewtotalsupply_18 = coinData.TotalSupply ?? NotAvailableNumber,
