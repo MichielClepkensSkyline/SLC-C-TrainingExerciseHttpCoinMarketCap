@@ -15,7 +15,7 @@ public static class QAction
 	{
 		try
 		{
-			int triggerPID = protocol.GetTriggerParameter();
+			int triggerPID = protocol.GetTriggerParameter() - 100;
 
 			switch (triggerPID)
 			{

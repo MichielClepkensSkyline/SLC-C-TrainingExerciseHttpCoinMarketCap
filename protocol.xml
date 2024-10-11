@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>1001</DeviceOID>
 	<ElementType>HTTP Query Sender</ElementType>
 	<Type relativeTimers="true">http</Type>
-	<Display defaultPage="General" pageOrder="General;Latest Listings;Categories" wideColumnPages=""/>
+	<Display defaultPage="General" pageOrder="General;Latest Listings;Categories" wideColumnPages="Latest Listings;Categories"/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -92,7 +92,7 @@ Any inquiries can be addressed to:
 				<Type options="password">string</Type>
 			</Measurement>
 		</Param>
-		<Param id="3" setter="true">
+		<Param id="102" setter="true">
 			<Name>apiKey</Name>
 			<Description>API Key</Description>
 			<Type>write</Type>
@@ -288,7 +288,7 @@ Any inquiries can be addressed to:
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<!-- SuppressValidator 2.9.4 'pairs' unit represents most logical unit for Number of Market Pairs column. -->
-				<Units>pairs</Units>
+				<Units>Pairs</Units>
 				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
@@ -308,8 +308,8 @@ Any inquiries can be addressed to:
 				</Subtext>
 			</Information>
 			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
+				<RawType>other</RawType>
+				<Type>string</Type>
 				<LengthType>next param</LengthType>
 				<Exceptions>
 					<Exception id="1" value="-1">
@@ -322,17 +322,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 			</Display>
 			<Measurement>
-				<Type>discreet</Type>
-				<Discreets>
-					<Discreet>
-						<Display>Yes</Display>
-						<Value>1</Value>
-					</Discreet>
-					<Discreet>
-						<Display>No</Display>
-						<Value>0</Value>
-					</Discreet>
-				</Discreets>
+				<Type>string</Type>
 			</Measurement>
 		</Param>
 		<Param id="16" trending="false">
@@ -361,7 +351,7 @@ Any inquiries can be addressed to:
 					<Low>0</Low>
 				</Range>
 				<!-- SuppressValidator 2.9.4 As this parameter represents number of coins, in this case Unit 'coins' is the most appropriate unit. -->
-				<Units>coins</Units>
+				<Units>Coins</Units>
 				<!-- /SuppressValidator 2.9.4 -->
 			</Display>
 			<Measurement>
@@ -391,7 +381,7 @@ Any inquiries can be addressed to:
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<!-- SuppressValidator 2.9.4 As this parameter represents number of coins, in this case Unit 'coins' is the most appropriate unit. -->
-				<Units>coins</Units>
+				<Units>Coins</Units>
 				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
@@ -424,7 +414,7 @@ Any inquiries can be addressed to:
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<!-- SuppressValidator 2.9.4 As this parameter represents number of coins, in this case Unit 'coins' is the most appropriate unit. -->
-				<Units>coins</Units>
+				<Units>Coins</Units>
 				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
@@ -512,6 +502,7 @@ Any inquiries can be addressed to:
 						<Value>-1</Value>
 					</Exception>
 				</Exceptions>
+				<Decimals>2</Decimals>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -599,7 +590,7 @@ Any inquiries can be addressed to:
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[Represents the percentage of the total cryptocurrency market that this particular cryptocurrency.]]>
+					<![CDATA[Represents the percentage of the total cryptocurrency market share held by this particular cryptocurrency.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -645,6 +636,7 @@ Any inquiries can be addressed to:
 						<Value>-2147483648</Value>
 					</Exception>
 				</Exceptions>
+				<Decimals>2</Decimals>
 			</Interprete>
 			<!-- SuppressValidator 2.11.1 No range needed as percentages can skyrocket and plummit. -->
 			<Display>
@@ -682,6 +674,7 @@ Any inquiries can be addressed to:
 						<Value>-2147483648</Value>
 					</Exception>
 				</Exceptions>
+				<Decimals>2</Decimals>
 			</Interprete>
 			<!-- SuppressValidator 2.11.1 No range needed as percentages can skyrocket and plummit. -->
 			<Display>
@@ -740,8 +733,8 @@ Any inquiries can be addressed to:
 				</Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Exceptions>
 					<Exception id="1" value="0">
@@ -803,6 +796,7 @@ Any inquiries can be addressed to:
 						<Value>-1</Value>
 					</Exception>
 				</Exceptions>
+				<Decimals>2</Decimals>
 			</Interprete>
 			<Alarm>
 				<Monitored>false</Monitored>
@@ -846,6 +840,7 @@ Any inquiries can be addressed to:
 						<Value>-1</Value>
 					</Exception>
 				</Exceptions>
+				<Decimals>2</Decimals>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -886,6 +881,7 @@ Any inquiries can be addressed to:
 						<Value>-2147483648</Value>
 					</Exception>
 				</Exceptions>
+				<Decimals>3</Decimals>
 			</Interprete>
 			<!-- SuppressValidator 2.11.1 No range needed as percentages can skyrocket and plummit. -->
 			<Display>
@@ -931,6 +927,7 @@ Any inquiries can be addressed to:
 						<Value>-2147483648</Value>
 					</Exception>
 				</Exceptions>
+				<Decimals>3</Decimals>
 			</Interprete>
 			<!-- SuppressValidator 2.11.1 No range needed as percentages can skyrocket and plummit. -->
 			<Display>
@@ -1318,7 +1315,7 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="7" pid="78" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
 				<ColumnOption idx="8" pid="79" type="retrieved" options="" />
 				<ColumnOption idx="9" pid="80" type="retrieved" options="" />
-				<ColumnOption idx="10" pid="81" type="retrieved" options="" />
+				<ColumnOption idx="10" pid="170" type="retrieved" options="" />
 			</ArrayOptions>
 			<Information>
 				<Subtext>
@@ -1336,7 +1333,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:71|0-72|1-73|2-74|3-75|4-76|5-77|6-78|7-79|8-80|9-81|10,width:200-200-122-142-160-129-160-107-150-150-222,sort:STRING-STRING-INT-INT-INT-INT-INT-INT-STRING|DESC|0-STRING|DESC|1-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:71|0-72|1-73|2-74|3-75|4-76|5-77|6-78|7-79|8-80|9-170|10,width:200-200-122-142-160-129-160-107-150-150-222,sort:STRING-STRING-INT-INT-INT-INT-INT-INT-STRING|DESC|0-STRING|DESC|1-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="71" trending="false">
@@ -1410,7 +1407,7 @@ Any inquiries can be addressed to:
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<!-- SuppressValidator 2.9.4 'tokens' unit represents the most logical unit for 'Number of Tokens' column. -->
-				<Units>tokens</Units>
+				<Units>Tokens</Units>
 				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
@@ -1652,7 +1649,7 @@ Any inquiries can be addressed to:
 				<Type options="datetime">number</Type>
 			</Measurement>
 		</Param>
-		<Param id="81">
+		<Param id="170">
 			<Name>coinCategoriesOverviewRefreshButton</Name>
 			<Description>Refresh (Coin Categories Overview)</Description>
 			<Type>write</Type>
@@ -1804,7 +1801,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Measurement>
-				<Type lines="10">string</Type>
+				<Type>string</Type>
 			</Measurement>
 		</Param>
 		<Param id="211" trending="false">
@@ -1822,7 +1819,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Measurement>
-				<Type lines="10">string</Type>
+				<Type>string</Type>
 			</Measurement>
 		</Param>
 		<Param id="212" trending="false">
@@ -1840,7 +1837,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Measurement>
-				<Type lines="10">string</Type>
+				<Type>string</Type>
 			</Measurement>
 		</Param>
 		<Param id="213" trending="false">
@@ -1858,15 +1855,36 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Measurement>
-				<Type lines="10">string</Type>
+				<Type>string</Type>
 			</Measurement>
+		</Param>
+
+		<Param id="310">
+			<Name>executeQActionAfterLatestListingDataPoll</Name>
+			<Description>Execute QAction After Latest Listing Data Poll</Description>
+			<Type>dummy</Type>
+		</Param>
+		<Param id="311">
+			<Name>executeQActionAfterGlobalMetricsDataPoll</Name>
+			<Description>Execute QAction After Global Metrics Data Poll</Description>
+			<Type>dummy</Type>
+		</Param>
+		<Param id="312">
+			<Name>executeQActionAfterCategoriesDataPoll</Name>
+			<Description>Execute QAction After Categories Data Poll</Description>
+			<Type>dummy</Type>
+		</Param>
+		<Param id="313">
+			<Name>executeQActionAfterRowRefreshDataPoll</Name>
+			<Description>Execute QAction After Row Refresh Data Poll</Description>
+			<Type>dummy</Type>
 		</Param>
 	</Params>
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
-		<QAction id="2" name="After Recieving Reponse" encoding="csharp" triggers="210;211;212;213" />
-		<QAction id="3" name="After 'Refresh' Category Row Button Press" encoding="csharp" triggers="81" row="true" />
+		<QAction id="2" name="Parse Reponse" encoding="csharp" triggers="310;311;312;313" />
+		<QAction id="3" name="Refresh Category Row" encoding="csharp" triggers="170" row="true" />
 	</QActions>
 
 	<HTTP>
@@ -1949,8 +1967,8 @@ Any inquiries can be addressed to:
 			</Content>
 		</Group>
 		<Group id="3">
-			<Name>pollCryptocurrencyCategories</Name>
-			<Description>Poll Cryptocurrency Categories</Description>
+			<Name>pollCryptocurrencyGeneralData</Name>
+			<Description>Poll Cryptocurrency General Data</Description>
 			<Condition><![CDATA[(id:2 != "")]]></Condition>
 			<Type>poll</Type>
 			<Content>
@@ -1979,6 +1997,34 @@ Any inquiries can be addressed to:
 				<Id>3</Id>
 			</Content>
 		</Trigger>
+		<Trigger id="3">
+			<Name>After Executing Latest Data Group</Name>
+			<On id="1">group</On>
+			<Time>after</Time>
+			<Type>action</Type>
+			<Content>
+				<Id>4</Id>
+			</Content>
+		</Trigger>
+		<Trigger id="4">
+			<Name>After Executing General Data Group</Name>
+			<On id="3">group</On>
+			<Time>after</Time>
+			<Type>action</Type>
+			<Content>
+				<Id>5</Id>
+				<Id>6</Id>
+			</Content>
+		</Trigger>
+		<Trigger id="5">
+			<Name>After Executing Row Refresh Group</Name>
+			<On id="2">group</On>
+			<Time>after</Time>
+			<Type>action</Type>
+			<Content>
+				<Id>7</Id>
+			</Content>
+		</Trigger>
 	</Triggers>
 
 	<Actions>
@@ -1996,6 +2042,26 @@ Any inquiries can be addressed to:
 			<Name>Execute Poll Categories Data Group</Name>
 			<On id="3">group</On>
 			<Type>execute next</Type>
+		</Action>
+		<Action id="4">
+			<Name>Execute Parse Response QAction (Latest Listing)</Name>
+			<On id="310">parameter</On>
+			<Type>run actions</Type>
+		</Action>
+		<Action id="5">
+			<Name>Execute Parse Response QAction (Global Metrics)</Name>
+			<On id="311">parameter</On>
+			<Type>run actions</Type>
+		</Action>
+		<Action id="6">
+			<Name>Execute Parse Response QAction (Categories)</Name>
+			<On id="312">parameter</On>
+			<Type>run actions</Type>
+		</Action>
+		<Action id="7">
+			<Name>Execute Parse Response QAction (Categories Row Refresh)</Name>
+			<On id="313">parameter</On>
+			<Type>run actions</Type>
 		</Action>
 	</Actions>
 

@@ -1,17 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-using QAction_2;
-
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-namespace QAction_2.Tests
+﻿namespace QAction_2.Tests
 {
-	using System.Text;
-
+	using System;
+	using System.IO;
+	using Microsoft.VisualStudio.TestTools.UnitTesting;
 	using Moq;
-
+	using QAction_2;
 	using Skyline.DataMiner.Scripting;
 
 	[TestClass()]

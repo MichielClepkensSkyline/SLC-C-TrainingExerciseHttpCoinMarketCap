@@ -125,11 +125,11 @@ public static class Parameter
 	public const int responsecontentcategoriesonrowrefresh = 213;
 	public class Write
 	{
-		/// <summary>PID: 3 | Type: write</summary>
+		/// <summary>PID: 102 | Type: write</summary>
 		[EditorBrowsable(EditorBrowsableState.Never)]
-		public const int apikey_3 = 3;
-		/// <summary>PID: 3 | Type: write</summary>
-		public const int apikey = 3;
+		public const int apikey_102 = 102;
+		/// <summary>PID: 102 | Type: write</summary>
+		public const int apikey = 102;
 	}
 	public class Latestlistingsoverview
 	{
@@ -381,11 +381,11 @@ public static class Parameter
 			public const int coincategoriesoverviewlastrefresh = 80;
 			public class Write
 			{
-				/// <summary>PID: 81 | Type: write</summary>
+				/// <summary>PID: 170 | Type: write</summary>
 				[EditorBrowsable(EditorBrowsableState.Never)]
-				public const int coincategoriesoverviewrefreshbutton_81 = 81;
-				/// <summary>PID: 81 | Type: write</summary>
-				public const int coincategoriesoverviewrefreshbutton = 81;
+				public const int coincategoriesoverviewrefreshbutton_170 = 170;
+				/// <summary>PID: 170 | Type: write</summary>
+				public const int coincategoriesoverviewrefreshbutton = 170;
 			}
 		}
 		public class Idx
@@ -445,10 +445,10 @@ public static class Parameter
 }
 public class WriteParameters
 {
-	/// <summary>PID: 3  | Type: write</summary>
-	public System.Object Apikey {get { return Protocol.GetParameter(3); }set { Protocol.SetParameter(3, value); }}
-	/// <summary>PID: 81  | Type: write | DISCREETS: Refresh = 1</summary>
-	public System.Object Coincategoriesoverviewrefreshbutton {get { return Protocol.GetParameter(81); }set { Protocol.SetParameter(81, value); }}
+	/// <summary>PID: 102  | Type: write</summary>
+	public System.Object Apikey {get { return Protocol.GetParameter(102); }set { Protocol.SetParameter(102, value); }}
+	/// <summary>PID: 170  | Type: write | DISCREETS: Refresh = 1</summary>
+	public System.Object Coincategoriesoverviewrefreshbutton {get { return Protocol.GetParameter(170); }set { Protocol.SetParameter(170, value); }}
 	public SLProtocolExt Protocol;
 	public WriteParameters(SLProtocolExt protocol)
 	{
@@ -463,7 +463,6 @@ public interface SLProtocolExt : SLProtocol
 	CoincategoriesoverviewQActionTable coincategoriesoverview { get; set; }
 	object Apikey_2 { get; set; }
 	object Apikey { get; set; }
-	object Apikey_3 { get; set; }
 	object Titleendgeneric__fixed { get; set; }
 	object Idoftherowtorefresh_5 { get; set; }
 	object Idoftherowtorefresh { get; set; }
@@ -549,7 +548,8 @@ public interface SLProtocolExt : SLProtocol
 	object Coincategoriesoverviewlastupdated { get; set; }
 	object Coincategoriesoverviewlastrefresh_80 { get; set; }
 	object Coincategoriesoverviewlastrefresh { get; set; }
-	object Coincategoriesoverviewrefreshbutton_81 { get; set; }
+	object Apikey_102 { get; set; }
+	object Coincategoriesoverviewrefreshbutton_170 { get; set; }
 	object Coincategoriesoverviewrefreshbutton { get; set; }
 	object Statuscodelatestlisting_200 { get; set; }
 	object Statuscodelatestlisting { get; set; }
@@ -567,6 +567,10 @@ public interface SLProtocolExt : SLProtocol
 	object Responsecontentcategories { get; set; }
 	object Responsecontentcategoriesonrowrefresh_213 { get; set; }
 	object Responsecontentcategoriesonrowrefresh { get; set; }
+	object Executeqactionafterlatestlistingdatapoll_dummy { get; set; }
+	object Executeqactionafterglobalmetricsdatapoll_dummy { get; set; }
+	object Executeqactionaftercategoriesdatapoll_dummy { get; set; }
+	object Executeqactionafterrowrefreshdatapoll_dummy { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
@@ -580,9 +584,6 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Apikey_2 {get { return GetParameter(2); }set { SetParameter(2, value); }}
 	/// <summary>PID: 2  | Type: read</summary>
 	public System.Object Apikey {get { return GetParameter(2); }set { SetParameter(2, value); }}
-	/// <summary>PID: 3  | Type: write</summary>
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Apikey_3 {get { return GetParameter(3); }set { SetParameter(3, value); }}
 	/// <summary>PID: 4  | Type: fixed</summary>
 	public System.Object Titleendgeneric__fixed {get { return GetParameter(4); }set { SetParameter(4, value); }}
 	/// <summary>PID: 5  | Type: read</summary>
@@ -610,10 +611,10 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Latestlistingsoverviewnumberofmarketpairs_14 {get { return GetParameter(14); }set { SetParameter(14, value); }}
 	/// <summary>PID: 14  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Latestlistingsoverviewnumberofmarketpairs {get { return GetParameter(14); }set { SetParameter(14, value); }}
-	/// <summary>PID: 15  | Type: read | DISCREETS: Yes = 1, No = 0 | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 15  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewmineable_15 {get { return GetParameter(15); }set { SetParameter(15, value); }}
-	/// <summary>PID: 15  | Type: read | DISCREETS: Yes = 1, No = 0 | EXCEPTIONS: N/A = -1</summary>
+	/// <summary>PID: 15  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Latestlistingsoverviewmineable {get { return GetParameter(15); }set { SetParameter(15, value); }}
 	/// <summary>PID: 16  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
@@ -794,9 +795,12 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Coincategoriesoverviewlastrefresh_80 {get { return GetParameter(80); }set { SetParameter(80, value); }}
 	/// <summary>PID: 80  | Type: read | EXCEPTIONS: N/A = 0</summary>
 	public System.Object Coincategoriesoverviewlastrefresh {get { return GetParameter(80); }set { SetParameter(80, value); }}
-	/// <summary>PID: 81  | Type: write | DISCREETS: Refresh = 1</summary>
-	public System.Object Coincategoriesoverviewrefreshbutton_81 {get { return GetParameter(81); }set { SetParameter(81, value); }}
-	/// <summary>PID: 81  | Type: write | DISCREETS: Refresh = 1</summary>
+	/// <summary>PID: 102  | Type: write</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Apikey_102 {get { return GetParameter(102); }set { SetParameter(102, value); }}
+	/// <summary>PID: 170  | Type: write | DISCREETS: Refresh = 1</summary>
+	public System.Object Coincategoriesoverviewrefreshbutton_170 {get { return GetParameter(170); }set { SetParameter(170, value); }}
+	/// <summary>PID: 170  | Type: write | DISCREETS: Refresh = 1</summary>
 	public System.Object Coincategoriesoverviewrefreshbutton {get { return Write.Coincategoriesoverviewrefreshbutton; }set { Write.Coincategoriesoverviewrefreshbutton = value; }}
 	/// <summary>PID: 200  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
@@ -838,6 +842,14 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Responsecontentcategoriesonrowrefresh_213 {get { return GetParameter(213); }set { SetParameter(213, value); }}
 	/// <summary>PID: 213  | Type: read</summary>
 	public System.Object Responsecontentcategoriesonrowrefresh {get { return GetParameter(213); }set { SetParameter(213, value); }}
+	/// <summary>PID: 310  | Type: dummy</summary>
+	public System.Object Executeqactionafterlatestlistingdatapoll_dummy {get { return GetParameter(310); }set { SetParameter(310, value); }}
+	/// <summary>PID: 311  | Type: dummy</summary>
+	public System.Object Executeqactionafterglobalmetricsdatapoll_dummy {get { return GetParameter(311); }set { SetParameter(311, value); }}
+	/// <summary>PID: 312  | Type: dummy</summary>
+	public System.Object Executeqactionaftercategoriesdatapoll_dummy {get { return GetParameter(312); }set { SetParameter(312, value); }}
+	/// <summary>PID: 313  | Type: dummy</summary>
+	public System.Object Executeqactionafterrowrefreshdatapoll_dummy {get { return GetParameter(313); }set { SetParameter(313, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{
@@ -1006,9 +1018,9 @@ public class CoincategoriesoverviewQActionRow : QActionTableRow
 	public System.Object Coincategoriesoverviewlastrefresh_80 { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
 	/// <summary>PID: 80 | Type: read</summary>
 	public System.Object Coincategoriesoverviewlastrefresh { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
-	/// <summary>PID: 81 | Type: write</summary>
-	public System.Object Coincategoriesoverviewrefreshbutton_81 { get { if (base.Columns.ContainsKey(10)) { return base.Columns[10]; } else { return null; } } set { if (base.Columns.ContainsKey(10)) { base.Columns[10] = value; } else { base.Columns.Add(10, value); } } }
-	/// <summary>PID: 81 | Type: write</summary>
+	/// <summary>PID: 170 | Type: write</summary>
+	public System.Object Coincategoriesoverviewrefreshbutton_170 { get { if (base.Columns.ContainsKey(10)) { return base.Columns[10]; } else { return null; } } set { if (base.Columns.ContainsKey(10)) { base.Columns[10] = value; } else { base.Columns.Add(10, value); } } }
+	/// <summary>PID: 170 | Type: write</summary>
 	public System.Object Coincategoriesoverviewrefreshbutton { get { if (base.Columns.ContainsKey(10)) { return base.Columns[10]; } else { return null; } } set { if (base.Columns.ContainsKey(10)) { base.Columns[10] = value; } else { base.Columns.Add(10, value); } } }
 	public CoincategoriesoverviewQActionRow() : base(0, 11) { }
 	public CoincategoriesoverviewQActionRow(System.Object[] oRow) : base(0, 11, oRow) { }
