@@ -299,8 +299,8 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="15" trending="false">
-			<Name>latestListingsOverviewMineable</Name>
-			<Description>Mineable (Latest Listings Overview)</Description>
+			<Name>latestListingsOverviewMineability</Name>
+			<Description>Mineability (Latest Listings Overview)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>

@@ -163,9 +163,9 @@ public static class Parameter
 			public const int latestlistingsoverviewnumberofmarketpairs = 14;
 			/// <summary>PID: 15 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int latestlistingsoverviewmineable_15 = 15;
+			public const int latestlistingsoverviewmineability_15 = 15;
 			/// <summary>PID: 15 | Type: read</summary>
-			public const int latestlistingsoverviewmineable = 15;
+			public const int latestlistingsoverviewmineability = 15;
 			/// <summary>PID: 16 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
 			public const int latestlistingsoverviewmaximumsupply_16 = 16;
@@ -254,9 +254,9 @@ public static class Parameter
 			public const int latestlistingsoverviewnumberofmarketpairs = 3;
 			/// <summary>IDX: 4 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int latestlistingsoverviewmineable_15 = 4;
+			public const int latestlistingsoverviewmineability_15 = 4;
 			/// <summary>IDX: 4 | Type: read</summary>
-			public const int latestlistingsoverviewmineable = 4;
+			public const int latestlistingsoverviewmineability = 4;
 			/// <summary>IDX: 5 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
 			public const int latestlistingsoverviewmaximumsupply_16 = 5;
@@ -474,8 +474,8 @@ public interface SLProtocolExt : SLProtocol
 	object Latestlistingsoverviewsymbol { get; set; }
 	object Latestlistingsoverviewnumberofmarketpairs_14 { get; set; }
 	object Latestlistingsoverviewnumberofmarketpairs { get; set; }
-	object Latestlistingsoverviewmineable_15 { get; set; }
-	object Latestlistingsoverviewmineable { get; set; }
+	object Latestlistingsoverviewmineability_15 { get; set; }
+	object Latestlistingsoverviewmineability { get; set; }
 	object Latestlistingsoverviewmaximumsupply_16 { get; set; }
 	object Latestlistingsoverviewmaximumsupply { get; set; }
 	object Latestlistingsoverviewcirculatingsupply_17 { get; set; }
@@ -613,9 +613,9 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Latestlistingsoverviewnumberofmarketpairs {get { return GetParameter(14); }set { SetParameter(14, value); }}
 	/// <summary>PID: 15  | Type: read | DISCREETS: Mineable = 1, Unmineable = 0 | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Latestlistingsoverviewmineable_15 {get { return GetParameter(15); }set { SetParameter(15, value); }}
+	public System.Object Latestlistingsoverviewmineability_15 {get { return GetParameter(15); }set { SetParameter(15, value); }}
 	/// <summary>PID: 15  | Type: read | DISCREETS: Mineable = 1, Unmineable = 0 | EXCEPTIONS: N/A = -1</summary>
-	public System.Object Latestlistingsoverviewmineable {get { return GetParameter(15); }set { SetParameter(15, value); }}
+	public System.Object Latestlistingsoverviewmineability {get { return GetParameter(15); }set { SetParameter(15, value); }}
 	/// <summary>PID: 16  | Type: read | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewmaximumsupply_16 {get { return GetParameter(16); }set { SetParameter(16, value); }}
@@ -897,9 +897,9 @@ public class LatestlistingsoverviewQActionRow : QActionTableRow
 	public System.Object Latestlistingsoverviewnumberofmarketpairs { get { if (base.Columns.ContainsKey(3)) { return base.Columns[3]; } else { return null; } } set { if (base.Columns.ContainsKey(3)) { base.Columns[3] = value; } else { base.Columns.Add(3, value); } } }
 	/// <summary>PID: 15 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Latestlistingsoverviewmineable_15 { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
+	public System.Object Latestlistingsoverviewmineability_15 { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
 	/// <summary>PID: 15 | Type: read</summary>
-	public System.Object Latestlistingsoverviewmineable { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
+	public System.Object Latestlistingsoverviewmineability { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
 	/// <summary>PID: 16 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsoverviewmaximumsupply_16 { get { if (base.Columns.ContainsKey(5)) { return base.Columns[5]; } else { return null; } } set { if (base.Columns.ContainsKey(5)) { base.Columns[5] = value; } else { base.Columns.Add(5, value); } } }
