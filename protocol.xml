@@ -603,6 +603,7 @@ Any inquiries can be addressed to:
 						<Value>-2147483648</Value>
 					</Exception>
 				</Exceptions>
+				<Decimals>2</Decimals>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
