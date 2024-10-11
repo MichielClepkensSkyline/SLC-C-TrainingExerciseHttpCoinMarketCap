@@ -322,7 +322,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>discreet</Type>
 				<Discreets>
 					<Discreet>
 						<Display>Mineable</Display>
@@ -332,7 +332,6 @@ Any inquiries can be addressed to:
 						<Display>Unmineable</Display>
 						<Value>0</Value>
 					</Discreet>
-					
 				</Discreets>
 			</Measurement>
 		</Param>
