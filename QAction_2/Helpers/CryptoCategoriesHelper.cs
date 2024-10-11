@@ -1,27 +1,49 @@
-﻿namespace QAction_2
+﻿namespace QAction_2.Helpers
 {
 	using System;
 	using System.Linq;
+
 	using Newtonsoft.Json;
 
 	using QAction_2.Dtos.CategoriesResponse;
 
-	using Skyline.DataMiner.Net;
-	using Skyline.DataMiner.Net.VirtualFunctions;
 	using Skyline.DataMiner.Scripting;
 
 	using Parameter = Skyline.DataMiner.Scripting.Parameter;
 
-	public class CryptoCategoriesProcessor
+	public class CryptoCategoriesHelper
 	{
 		private const int NotAvailableNumber = -1;
 		private const string NotAvailableString = "-1";
 		private const int NotAvailablePotentialNegativeValues = int.MinValue;
 
-		public static void HandleCategoriesResponse(SLProtocolExt protocol)
+		// Methods for Entire Table Operations
+		public static CategoriesResponseDto GetAndDeserializeCategoriesResponse(string categoriesResponseString)
 		{
-			var categoriesResponse = GetAndDeserializeCategoriesResponse(protocol);
-			SetCategoriesColumns(protocol, categoriesResponse);
+			if (string.IsNullOrWhiteSpace(categoriesResponseString))
+			{
+				throw new ArgumentException("The response is not a valid string or is empty.");
+			}
+
+			var categoriesResponse = JsonConvert.DeserializeObject<CategoriesResponseDto>(categoriesResponseString);
+
+			if (categoriesResponse == null)
+			{
+				throw new InvalidOperationException("Failed to deserialize latest listing response.");
+			}
+
+			return categoriesResponse;
+		}
+
+		public static void SetCategoriesColumns(SLProtocolExt protocol, CategoriesResponseDto categoriesResponse)
+		{
+			var categoriesTableRows = categoriesResponse.Data
+				.Where(data => data != null)
+				.Select(data => PrepareCategoriesSingleRow(data))
+				.Where(categoriesSingleRow => categoriesSingleRow != null)
+				.ToList<QActionTableRow>();
+
+			protocol.coincategoriesoverview.FillArray(categoriesTableRows);
 		}
 
 		public static void HandleCategoriesSingleRowResponse(SLProtocolExt protocol)
@@ -30,6 +52,7 @@
 			SetCategoryRow(protocol, categoryResponse);
 		}
 
+		// Methods for Single Row Operations
 		public static SingleCategoryResponseDto GetAndDeserializeSingleCategoryResponse(SLProtocolExt protocol)
 		{
 			var responseString = (string)protocol.GetParameter(Parameter.responsecontentcategoriesonrowrefresh_213);
@@ -49,37 +72,7 @@
 			return singleCategoryResponse;
 		}
 
-		private static CategoriesResponseDto GetAndDeserializeCategoriesResponse(SLProtocolExt protocol)
-		{
-			var responseString = (string)protocol.GetParameter(Parameter.responsecontentcategories_212);
-
-			if (string.IsNullOrWhiteSpace(responseString))
-			{
-				throw new ArgumentException("The response is not a valid string or is empty.");
-			}
-
-			var categoriesResponse = JsonConvert.DeserializeObject<CategoriesResponseDto>(responseString);
-
-			if (categoriesResponse == null)
-			{
-				throw new InvalidOperationException("Failed to deserialize latest listing response.");
-			}
-
-			return categoriesResponse;
-		}
-
-		private static void SetCategoriesColumns(SLProtocolExt protocol, CategoriesResponseDto categoriesResponse)
-		{
-			var categoriesTableRows = categoriesResponse.Data
-				.Where(data => data != null)
-				.Select(data => PrepareCategoriesSingleRow(data))
-				.Where(categoriesSingleRow => categoriesSingleRow != null)
-				.ToList<QActionTableRow>();
-
-			protocol.coincategoriesoverview.FillArray(categoriesTableRows);
-		}
-
-		private static CoincategoriesoverviewQActionRow PrepareCategoriesSingleRow(CategoryDto data)
+		public static CoincategoriesoverviewQActionRow PrepareCategoriesSingleRow(CategoryDto data)
 		{
 			var categoriesSingleRow = new CoincategoriesoverviewQActionRow
 			{
@@ -98,7 +91,7 @@
 			return categoriesSingleRow;
 		}
 
-		private static void SetCategoryRow(SLProtocolExt protocol, SingleCategoryResponseDto categoryResponse)
+		public static void SetCategoryRow(SLProtocolExt protocol, SingleCategoryResponseDto categoryResponse)
 		{
 			var tableRow = new CoincategoriesoverviewQActionRow
 			{

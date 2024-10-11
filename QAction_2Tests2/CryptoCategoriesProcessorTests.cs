@@ -1,13 +1,13 @@
 ﻿namespace QAction_2.Tests
 {
-	using System;
-	using System.IO;
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
-	using Moq;
-	using QAction_2;
-	using Skyline.DataMiner.Scripting;
+    using System;
+    using System.IO;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Moq;
+    using QAction_2.Helpers;
+    using Skyline.DataMiner.Scripting;
 
-	[TestClass()]
+    [TestClass()]
 	public class CryptoCategoriesProcessorTests
 	{
 		private Mock<SLProtocolExt> mockProtocol;
@@ -28,7 +28,7 @@
 						 .Returns(responseString);
 
 			// Act
-			var result = CryptoCategoriesProcessor.GetAndDeserializeSingleCategoryResponse(this.mockProtocol.Object);
+			var result = CryptoCategoriesHelper.GetAndDeserializeSingleCategoryResponse(this.mockProtocol.Object);
 
 			// Assert
 			Assert.IsNotNull(result, "The deserialized response should not be null.");

@@ -1,5 +1,7 @@
 using System;
 using QAction_2;
+using QAction_2.Helpers;
+using QAction_2.Processors;
 using Skyline.DataMiner.Scripting;
 
 /// <summary>
@@ -15,24 +17,20 @@ public static class QAction
 	{
 		try
 		{
-			int triggerPID = protocol.GetTriggerParameter() - 100;
+			int triggerPID = protocol.GetTriggerParameter();
 
 			switch (triggerPID)
 			{
-				case Parameter.responsecontentlatestlisting_210:
+				case (int)DummyParameter.ExecuteQActionAfterLatestListingDataPoll_310:
 					CryptoListingProcessor.HandleLatestListingResponse(protocol);
 					break;
 
-				case Parameter.responsecontentlatestglobalmetrics_211:
-					CryptoGlobalMetricsProcessor.HandlGlobalMetricsResponse(protocol);
+				case (int)DummyParameter.ExecuteQActionAfterGeneralDataPoll_311:
+					CryptoGeneralDataProcessor.HandleGeneralDataResponse(protocol);
 					break;
 
-				case Parameter.responsecontentcategories_212:
-					CryptoCategoriesProcessor.HandleCategoriesResponse(protocol);
-					break;
-
-				case Parameter.responsecontentcategoriesonrowrefresh_213:
-					CryptoCategoriesProcessor.HandleCategoriesSingleRowResponse(protocol);
+				case (int)DummyParameter.ExecuteQActionAfterRowRefreshDataPoll_312:
+					CryptoCategoriesHelper.HandleCategoriesSingleRowResponse(protocol);
 					break;
 
 				default:

@@ -381,11 +381,11 @@ public static class Parameter
 			public const int coincategoriesoverviewlastrefresh = 80;
 			public class Write
 			{
-				/// <summary>PID: 170 | Type: write</summary>
+				/// <summary>PID: 181 | Type: write</summary>
 				[EditorBrowsable(EditorBrowsableState.Never)]
-				public const int coincategoriesoverviewrefreshbutton_170 = 170;
-				/// <summary>PID: 170 | Type: write</summary>
-				public const int coincategoriesoverviewrefreshbutton = 170;
+				public const int coincategoriesoverviewrefreshbutton_181 = 181;
+				/// <summary>PID: 181 | Type: write</summary>
+				public const int coincategoriesoverviewrefreshbutton = 181;
 			}
 		}
 		public class Idx
@@ -447,8 +447,8 @@ public class WriteParameters
 {
 	/// <summary>PID: 102  | Type: write</summary>
 	public System.Object Apikey {get { return Protocol.GetParameter(102); }set { Protocol.SetParameter(102, value); }}
-	/// <summary>PID: 170  | Type: write | DISCREETS: Refresh = 1</summary>
-	public System.Object Coincategoriesoverviewrefreshbutton {get { return Protocol.GetParameter(170); }set { Protocol.SetParameter(170, value); }}
+	/// <summary>PID: 181  | Type: write | DISCREETS: Refresh = 1</summary>
+	public System.Object Coincategoriesoverviewrefreshbutton {get { return Protocol.GetParameter(181); }set { Protocol.SetParameter(181, value); }}
 	public SLProtocolExt Protocol;
 	public WriteParameters(SLProtocolExt protocol)
 	{
@@ -549,7 +549,7 @@ public interface SLProtocolExt : SLProtocol
 	object Coincategoriesoverviewlastrefresh_80 { get; set; }
 	object Coincategoriesoverviewlastrefresh { get; set; }
 	object Apikey_102 { get; set; }
-	object Coincategoriesoverviewrefreshbutton_170 { get; set; }
+	object Coincategoriesoverviewrefreshbutton_181 { get; set; }
 	object Coincategoriesoverviewrefreshbutton { get; set; }
 	object Statuscodelatestlisting_200 { get; set; }
 	object Statuscodelatestlisting { get; set; }
@@ -568,8 +568,7 @@ public interface SLProtocolExt : SLProtocol
 	object Responsecontentcategoriesonrowrefresh_213 { get; set; }
 	object Responsecontentcategoriesonrowrefresh { get; set; }
 	object Executeqactionafterlatestlistingdatapoll_dummy { get; set; }
-	object Executeqactionafterglobalmetricsdatapoll_dummy { get; set; }
-	object Executeqactionaftercategoriesdatapoll_dummy { get; set; }
+	object Executeqactionaftergeneraldatapoll_dummy { get; set; }
 	object Executeqactionafterrowrefreshdatapoll_dummy { get; set; }
 	WriteParameters Write { get; set; }
 }
@@ -798,9 +797,9 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	/// <summary>PID: 102  | Type: write</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Apikey_102 {get { return GetParameter(102); }set { SetParameter(102, value); }}
-	/// <summary>PID: 170  | Type: write | DISCREETS: Refresh = 1</summary>
-	public System.Object Coincategoriesoverviewrefreshbutton_170 {get { return GetParameter(170); }set { SetParameter(170, value); }}
-	/// <summary>PID: 170  | Type: write | DISCREETS: Refresh = 1</summary>
+	/// <summary>PID: 181  | Type: write | DISCREETS: Refresh = 1</summary>
+	public System.Object Coincategoriesoverviewrefreshbutton_181 {get { return GetParameter(181); }set { SetParameter(181, value); }}
+	/// <summary>PID: 181  | Type: write | DISCREETS: Refresh = 1</summary>
 	public System.Object Coincategoriesoverviewrefreshbutton {get { return Write.Coincategoriesoverviewrefreshbutton; }set { Write.Coincategoriesoverviewrefreshbutton = value; }}
 	/// <summary>PID: 200  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
@@ -845,11 +844,9 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	/// <summary>PID: 310  | Type: dummy</summary>
 	public System.Object Executeqactionafterlatestlistingdatapoll_dummy {get { return GetParameter(310); }set { SetParameter(310, value); }}
 	/// <summary>PID: 311  | Type: dummy</summary>
-	public System.Object Executeqactionafterglobalmetricsdatapoll_dummy {get { return GetParameter(311); }set { SetParameter(311, value); }}
+	public System.Object Executeqactionaftergeneraldatapoll_dummy {get { return GetParameter(311); }set { SetParameter(311, value); }}
 	/// <summary>PID: 312  | Type: dummy</summary>
-	public System.Object Executeqactionaftercategoriesdatapoll_dummy {get { return GetParameter(312); }set { SetParameter(312, value); }}
-	/// <summary>PID: 313  | Type: dummy</summary>
-	public System.Object Executeqactionafterrowrefreshdatapoll_dummy {get { return GetParameter(313); }set { SetParameter(313, value); }}
+	public System.Object Executeqactionafterrowrefreshdatapoll_dummy {get { return GetParameter(312); }set { SetParameter(312, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{
@@ -1018,9 +1015,9 @@ public class CoincategoriesoverviewQActionRow : QActionTableRow
 	public System.Object Coincategoriesoverviewlastrefresh_80 { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
 	/// <summary>PID: 80 | Type: read</summary>
 	public System.Object Coincategoriesoverviewlastrefresh { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
-	/// <summary>PID: 170 | Type: write</summary>
-	public System.Object Coincategoriesoverviewrefreshbutton_170 { get { if (base.Columns.ContainsKey(10)) { return base.Columns[10]; } else { return null; } } set { if (base.Columns.ContainsKey(10)) { base.Columns[10] = value; } else { base.Columns.Add(10, value); } } }
-	/// <summary>PID: 170 | Type: write</summary>
+	/// <summary>PID: 181 | Type: write</summary>
+	public System.Object Coincategoriesoverviewrefreshbutton_181 { get { if (base.Columns.ContainsKey(10)) { return base.Columns[10]; } else { return null; } } set { if (base.Columns.ContainsKey(10)) { base.Columns[10] = value; } else { base.Columns.Add(10, value); } } }
+	/// <summary>PID: 181 | Type: write</summary>
 	public System.Object Coincategoriesoverviewrefreshbutton { get { if (base.Columns.ContainsKey(10)) { return base.Columns[10]; } else { return null; } } set { if (base.Columns.ContainsKey(10)) { base.Columns[10] = value; } else { base.Columns.Add(10, value); } } }
 	public CoincategoriesoverviewQActionRow() : base(0, 11) { }
 	public CoincategoriesoverviewQActionRow(System.Object[] oRow) : base(0, 11, oRow) { }

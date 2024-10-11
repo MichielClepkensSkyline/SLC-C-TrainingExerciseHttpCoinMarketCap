@@ -1326,7 +1326,7 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="7" pid="78" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
 				<ColumnOption idx="8" pid="79" type="retrieved" options="" />
 				<ColumnOption idx="9" pid="80" type="retrieved" options="" />
-				<ColumnOption idx="10" pid="170" type="retrieved" options="" />
+				<ColumnOption idx="10" pid="181" type="retrieved" options="" />
 			</ArrayOptions>
 			<Information>
 				<Subtext>
@@ -1344,7 +1344,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:71|0-72|1-73|2-74|3-75|4-76|5-77|6-78|7-79|8-80|9-170|10,width:200-200-122-142-160-129-160-107-150-150-222,sort:STRING-STRING-INT-INT-INT-INT-INT-INT-STRING|DESC|0-STRING|DESC|1-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:71|0-72|1-73|2-74|3-75|4-76|5-77|6-78|7-79|8-80|9-181|10,width:200-200-122-142-160-129-160-107-150-150-222,sort:STRING-STRING-INT-INT-INT-INT-INT-INT-STRING|DESC|0-STRING|DESC|1-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="71" trending="false">
@@ -1660,7 +1660,7 @@ Any inquiries can be addressed to:
 				<Type options="datetime">number</Type>
 			</Measurement>
 		</Param>
-		<Param id="170">
+		<Param id="181">
 			<Name>coinCategoriesOverviewRefreshButton</Name>
 			<Description>Refresh (Coin Categories Overview)</Description>
 			<Type>write</Type>
@@ -1876,16 +1876,11 @@ Any inquiries can be addressed to:
 			<Type>dummy</Type>
 		</Param>
 		<Param id="311">
-			<Name>executeQActionAfterGlobalMetricsDataPoll</Name>
-			<Description>Execute QAction After Global Metrics Data Poll</Description>
+			<Name>executeQActionAfterGeneralDataPoll</Name>
+			<Description>Execute QAction After General Data Poll</Description>
 			<Type>dummy</Type>
 		</Param>
 		<Param id="312">
-			<Name>executeQActionAfterCategoriesDataPoll</Name>
-			<Description>Execute QAction After Categories Data Poll</Description>
-			<Type>dummy</Type>
-		</Param>
-		<Param id="313">
 			<Name>executeQActionAfterRowRefreshDataPoll</Name>
 			<Description>Execute QAction After Row Refresh Data Poll</Description>
 			<Type>dummy</Type>
@@ -1894,8 +1889,8 @@ Any inquiries can be addressed to:
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
-		<QAction id="2" name="Parse Reponse" encoding="csharp" triggers="310;311;312;313" />
-		<QAction id="3" name="Refresh Category Row" encoding="csharp" triggers="170" row="true" />
+		<QAction id="2" name="Parse Reponse" encoding="csharp" triggers="310;311;312" />
+		<QAction id="3" name="Refresh Category Row" encoding="csharp" triggers="181" row="true" />
 	</QActions>
 
 	<HTTP>
@@ -2024,7 +2019,6 @@ Any inquiries can be addressed to:
 			<Type>action</Type>
 			<Content>
 				<Id>5</Id>
-				<Id>6</Id>
 			</Content>
 		</Trigger>
 		<Trigger id="5">
@@ -2033,7 +2027,7 @@ Any inquiries can be addressed to:
 			<Time>after</Time>
 			<Type>action</Type>
 			<Content>
-				<Id>7</Id>
+				<Id>6</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
@@ -2060,18 +2054,13 @@ Any inquiries can be addressed to:
 			<Type>run actions</Type>
 		</Action>
 		<Action id="5">
-			<Name>Execute Parse Response QAction (Global Metrics)</Name>
+			<Name>Execute Parse Response QAction (General Data)</Name>
 			<On id="311">parameter</On>
 			<Type>run actions</Type>
 		</Action>
 		<Action id="6">
-			<Name>Execute Parse Response QAction (Categories)</Name>
-			<On id="312">parameter</On>
-			<Type>run actions</Type>
-		</Action>
-		<Action id="7">
 			<Name>Execute Parse Response QAction (Categories Row Refresh)</Name>
-			<On id="313">parameter</On>
+			<On id="312">parameter</On>
 			<Type>run actions</Type>
 		</Action>
 	</Actions>
