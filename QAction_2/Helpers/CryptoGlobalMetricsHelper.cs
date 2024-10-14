@@ -13,7 +13,7 @@
         private const int NotAvailableNumber = -1;
         private const int NotAvailablePotentialNegativeValues = int.MinValue;
 
-        public static GlobalMetricsResponseDto GetAndDeserializeGlobalMetricsResponse(string globalMetricsResponseString)
+        public static GlobalMetricsResponseDto DeserializeGlobalMetricsResponse(string globalMetricsResponseString)
         {
             if (string.IsNullOrWhiteSpace(globalMetricsResponseString))
             {

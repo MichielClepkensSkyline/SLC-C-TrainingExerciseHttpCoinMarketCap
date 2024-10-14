@@ -26,8 +26,8 @@
 
 			return new GeneralDataDto
 			{
-				GlobalMetricsResponse = CryptoGlobalMetricsHelper.GetAndDeserializeGlobalMetricsResponse(globalMetricsResponseString),
-				CategoriesResponse = CryptoCategoriesHelper.GetAndDeserializeCategoriesResponse(categoriesResponseString),
+				GlobalMetricsResponse = CryptoGlobalMetricsHelper.DeserializeGlobalMetricsResponse(globalMetricsResponseString),
+				CategoriesResponse = CryptoCategoriesHelper.DeserializeCategoriesResponse(categoriesResponseString),
 			};
 		}
 

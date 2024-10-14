@@ -18,7 +18,7 @@
 		private const int NotAvailablePotentialNegativeValues = int.MinValue;
 
 		// Methods for Entire Table Operations
-		public static CategoriesResponseDto GetAndDeserializeCategoriesResponse(string categoriesResponseString)
+		public static CategoriesResponseDto DeserializeCategoriesResponse(string categoriesResponseString)
 		{
 			if (string.IsNullOrWhiteSpace(categoriesResponseString))
 			{
