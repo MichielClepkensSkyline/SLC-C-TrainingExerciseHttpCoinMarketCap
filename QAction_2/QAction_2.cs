@@ -1,5 +1,5 @@
 using System;
-using QAction_2;
+using QAction_2.Enums;
 using QAction_2.Helpers;
 using QAction_2.Processors;
 using Skyline.DataMiner.Scripting;

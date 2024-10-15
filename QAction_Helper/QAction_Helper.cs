@@ -13,6 +13,11 @@ public static class Parameter
 	public const int apikey_2 = 2;
 	/// <summary>PID: 2 | Type: read</summary>
 	public const int apikey = 2;
+	/// <summary>PID: 3 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int authenticationstatus_3 = 3;
+	/// <summary>PID: 3 | Type: read</summary>
+	public const int authenticationstatus = 3;
 	/// <summary>PID: 5 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int idoftherowtorefresh_5 = 5;
@@ -463,6 +468,8 @@ public interface SLProtocolExt : SLProtocol
 	CoincategoriesoverviewQActionTable coincategoriesoverview { get; set; }
 	object Apikey_2 { get; set; }
 	object Apikey { get; set; }
+	object Authenticationstatus_3 { get; set; }
+	object Authenticationstatus { get; set; }
 	object Titleendgeneric__fixed { get; set; }
 	object Idoftherowtorefresh_5 { get; set; }
 	object Idoftherowtorefresh { get; set; }
@@ -583,6 +590,11 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Apikey_2 {get { return GetParameter(2); }set { SetParameter(2, value); }}
 	/// <summary>PID: 2  | Type: read</summary>
 	public System.Object Apikey {get { return GetParameter(2); }set { SetParameter(2, value); }}
+	/// <summary>PID: 3  | Type: read | DISCREETS: Successful = 1, Unsuccessful = 2</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Authenticationstatus_3 {get { return GetParameter(3); }set { SetParameter(3, value); }}
+	/// <summary>PID: 3  | Type: read | DISCREETS: Successful = 1, Unsuccessful = 2</summary>
+	public System.Object Authenticationstatus {get { return GetParameter(3); }set { SetParameter(3, value); }}
 	/// <summary>PID: 4  | Type: fixed</summary>
 	public System.Object Titleendgeneric__fixed {get { return GetParameter(4); }set { SetParameter(4, value); }}
 	/// <summary>PID: 5  | Type: read</summary>
