@@ -1986,8 +1986,6 @@ Any inquiries can be addressed to:
 	<Triggers>
 		<Trigger id="1">
 			<Name>After Setting Categories Row For Refresh</Name>
-			<On id="5">parameter</On>
-			<Time>change</Time>
 			<Type>action</Type>
 			<Content>
 				<Id>1</Id>

@@ -1,7 +1,6 @@
 using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
+
+using QAction_3;
 
 using Skyline.DataMiner.Scripting;
 
@@ -19,6 +18,7 @@ public static class QAction
 		try
 		{
 			protocol.SetParameter(Parameter.idoftherowtorefresh_5, protocol.RowKey());
+			protocol.CheckTrigger((int)DummyTrigger.After_Setting_Categories_Row_For_Refresh_1);
 		}
 		catch (Exception ex)
 		{
