@@ -29,8 +29,9 @@
 		{
 			// Arrange
 			var filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TestData", "ExpectedResponse.json");
+			var responseStatusCode = "HTTP/1.1 200";
 			var responseString = File.ReadAllText(filePath);
-			this.mockProtocol.Setup(p => p.GetParameter(213)).Returns(responseString);
+			this.mockProtocol.Setup(p => p.GetParameters(new uint[] { 203, 213 })).Returns(new object[] { responseStatusCode, responseString });
 
 			// Act
 			var result = CryptoCategoriesHelper.GetAndDeserializeSingleCategoryResponse(this.mockProtocol.Object);

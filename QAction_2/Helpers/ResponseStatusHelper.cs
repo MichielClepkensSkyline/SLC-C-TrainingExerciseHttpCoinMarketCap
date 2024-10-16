@@ -22,7 +22,7 @@
 			if (match.Success)
 			{
 				var statusCode = int.Parse(match.Value);
-				SetAuthorizationStatusParam(protocol, statusCode);
+				SetAuthenticationStatusParameter(protocol, statusCode);
 				return statusCode;
 			}
 			else
@@ -31,9 +31,20 @@
 			}
 		}
 
-		private static void SetAuthorizationStatusParam(SLProtocolExt protocol, int statusCode)
+		private static void SetAuthenticationStatusParameter(SLProtocolExt protocol, int statusCode)
 		{
-			protocol.SetParameter(Parameter.authenticationstatus_3, statusCode == 401 ? AuthorizationStatus.Unsuccesssful : AuthorizationStatus.Successful);
+			if (statusCode == 401)
+			{
+				protocol.SetParameter(Parameter.authenticationstatus_3, AuthenticationStatus.Unsuccesssful);
+			}
+			else if (statusCode >= 500)
+			{
+				protocol.SetParameter(Parameter.authenticationstatus_3, AuthenticationStatus.NotAvailable);
+			}
+			else
+			{
+				protocol.SetParameter(Parameter.authenticationstatus_3, AuthenticationStatus.Successful);
+			}
 		}
 	}
 }

@@ -115,7 +115,7 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="3" trending="true">
+		<Param id="3" trending="false">
 			<Name>authenticationStatus</Name>
 			<Description>Authentication Status</Description>
 			<Type>read</Type>
@@ -131,6 +131,8 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
+				<Normal>1</Normal>
+				<CH>2</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -143,7 +145,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>discreet</Type>
 				<Discreets>
 					<Discreet>
 						<Display>Successful</Display>
