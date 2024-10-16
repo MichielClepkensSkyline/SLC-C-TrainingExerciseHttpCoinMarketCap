@@ -590,10 +590,10 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Apikey_2 {get { return GetParameter(2); }set { SetParameter(2, value); }}
 	/// <summary>PID: 2  | Type: read</summary>
 	public System.Object Apikey {get { return GetParameter(2); }set { SetParameter(2, value); }}
-	/// <summary>PID: 3  | Type: read | DISCREETS: Successful = 1, Unsuccessful = 2</summary>
+	/// <summary>PID: 3  | Type: read | DISCREETS: Successful = 1, Unsuccessful = 2 | EXCEPTIONS: N/A = -1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Authenticationstatus_3 {get { return GetParameter(3); }set { SetParameter(3, value); }}
-	/// <summary>PID: 3  | Type: read | DISCREETS: Successful = 1, Unsuccessful = 2</summary>
+	/// <summary>PID: 3  | Type: read | DISCREETS: Successful = 1, Unsuccessful = 2 | EXCEPTIONS: N/A = -1</summary>
 	public System.Object Authenticationstatus {get { return GetParameter(3); }set { SetParameter(3, value); }}
 	/// <summary>PID: 4  | Type: fixed</summary>
 	public System.Object Titleendgeneric__fixed {get { return GetParameter(4); }set { SetParameter(4, value); }}
