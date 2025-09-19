@@ -8,12 +8,29 @@ namespace Skyline.DataMiner.Scripting
 {
 public static class Parameter
 {
+	/// <summary>PID: 10 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int statuscode_10 = 10;
+	/// <summary>PID: 10 | Type: read</summary>
+	public const int statuscode = 10;
+	/// <summary>PID: 11 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int responsecontent_11 = 11;
+	/// <summary>PID: 11 | Type: read</summary>
+	public const int responsecontent = 11;
 	public class Write
 	{
+		/// <summary>PID: 4 | Type: write</summary>
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public const int pollbutton_4 = 4;
+		/// <summary>PID: 4 | Type: write</summary>
+		public const int pollbutton = 4;
 	}
 }
 public class WriteParameters
 {
+	/// <summary>PID: 4  | Type: write | DISCREETS: Send HTTP Request = 1</summary>
+	public System.Object Pollbutton {get { return Protocol.GetParameter(4); }set { Protocol.SetParameter(4, value); }}
 	public SLProtocolExt Protocol;
 	public WriteParameters(SLProtocolExt protocol)
 	{
@@ -23,12 +40,35 @@ public class WriteParameters
 public interface SLProtocolExt : SLProtocol
 {
 	object Afterstartup_dummy { get; set; }
+	object Bearertoken__fixed { get; set; }
+	object Pollbutton_4 { get; set; }
+	object Pollbutton { get; set; }
+	object Statuscode_10 { get; set; }
+	object Statuscode { get; set; }
+	object Responsecontent_11 { get; set; }
+	object Responsecontent { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 {
 	/// <summary>PID: 2  | Type: dummy</summary>
 	public System.Object Afterstartup_dummy {get { return GetParameter(2); }set { SetParameter(2, value); }}
+	/// <summary>PID: 3  | Type: fixed</summary>
+	public System.Object Bearertoken__fixed {get { return GetParameter(3); }set { SetParameter(3, value); }}
+	/// <summary>PID: 4  | Type: write | DISCREETS: Send HTTP Request = 1</summary>
+	public System.Object Pollbutton_4 {get { return GetParameter(4); }set { SetParameter(4, value); }}
+	/// <summary>PID: 4  | Type: write | DISCREETS: Send HTTP Request = 1</summary>
+	public System.Object Pollbutton {get { return Write.Pollbutton; }set { Write.Pollbutton = value; }}
+	/// <summary>PID: 10  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Statuscode_10 {get { return GetParameter(10); }set { SetParameter(10, value); }}
+	/// <summary>PID: 10  | Type: read</summary>
+	public System.Object Statuscode {get { return GetParameter(10); }set { SetParameter(10, value); }}
+	/// <summary>PID: 11  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Responsecontent_11 {get { return GetParameter(11); }set { SetParameter(11, value); }}
+	/// <summary>PID: 11  | Type: read</summary>
+	public System.Object Responsecontent {get { return GetParameter(11); }set { SetParameter(11, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{

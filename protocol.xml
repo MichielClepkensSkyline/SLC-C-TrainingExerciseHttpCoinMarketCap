@@ -45,7 +45,7 @@ Any inquiries can be addressed to:
 -->
 
 <Protocol xmlns="http://www.skyline.be/protocol">
-	<Name>Exercise HTTP CoinMarketCap</Name>
+	<Name>Exercise HTTP CoinMarketCap Sofian</Name>
 	<Description>Exercise HTTP CoinMarketCap DataMiner connector</Description>
 	<Version>1.0.0.1</Version>
 	<IntegrationID>DMS-DRV-</IntegrationID>
@@ -54,8 +54,8 @@ Any inquiries can be addressed to:
 	<VendorOID>1.3.6.1.4.1.8813.2.</VendorOID>
 	<DeviceOID></DeviceOID>
 	<ElementType></ElementType>
-	<Type relativeTimers="true">virtual</Type>
-	<Display defaultPage="General" pageOrder="General"/>
+	<Type relativeTimers="true">http</Type>
+	<Display defaultPage="General" pageOrder="General" wideColumnPages=""/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -69,12 +69,113 @@ Any inquiries can be addressed to:
 			<Description>After Startup</Description>
 			<Type>dummy</Type>
 		</Param>
+		<Param id="3">
+			<Name>bearerToken</Name>
+			<Description>Bearer Token</Description>
+			<Type>fixed</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>fixed</LengthType>
+				<Length>51</Length>
+				<Value>Bearer jWgYFWyQzYAR9ZAm0mvESEKBeerEYw3rYwVEOUvm2Y0=</Value>
+			</Interprete>
+		</Param>
+		<Param id="4">
+			<Name>pollButton</Name>
+			<Type>write</Type>
+			<Information>
+				<Subtext>Button used to send HTTP request.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type width="110">button</Type>
+				<Discreets>
+					<Discreet>
+						<Display>Send HTTP Request</Display>
+						<Value>1</Value>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+		</Param>
+		<Param id="10">
+			<Name>statusCode</Name>
+			<Description>Status Code</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="11">
+			<Name>responseContent</Name>
+			<Description>Response Content</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type lines="20">string</Type>
+			</Measurement>
+		</Param>
 	</Params>
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
 		<QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
 	</QActions>
+
+	<HTTP>
+		<Session id="1" name="Get Latest Listings on Coin Market">
+			<Connection id="1" name="Get Latest Listings on Coin Market">
+				<Request verb="GET" url="api/custom/coinmarketcap?content=latestlistings">
+					<Headers>
+						<Header key="Authorization" pid="3"/>
+					</Headers>
+				</Request>
+				<Response statusCode="10">
+					<Content pid="11"></Content>
+				</Response>
+			</Connection>
+		</Session>
+	</HTTP>
 
 	<Groups>
 		<Group id="2">
@@ -83,6 +184,14 @@ Any inquiries can be addressed to:
 			<Type>poll action</Type>
 			<Content>
 				<Action>2</Action>
+			</Content>
+		</Group>
+		<Group id="4">
+			<Name>HTTP request</Name>
+			<Description>This group sends an HTTP request</Description>
+			<Type>poll</Type>
+			<Content>
+				<Session>1</Session>
 			</Content>
 		</Group>
 	</Groups>
@@ -97,6 +206,15 @@ Any inquiries can be addressed to:
 				<Id>1</Id>
 			</Content>
 		</Trigger>
+		<Trigger id="4">
+			<Name>Send HTTP Request</Name>
+			<On id="4">parameter</On>
+			<Time>change</Time>
+			<Type>action</Type>
+			<Content>
+				<Id>4</Id>
+			</Content>
+		</Trigger>
 	</Triggers>
 
 	<Actions>
@@ -109,6 +227,11 @@ Any inquiries can be addressed to:
 			<Name>After Startup QAction</Name>
 			<On id="2">parameter</On>
 			<Type>run actions</Type>
+		</Action>
+		<Action id="4">
+			<Name>Execute HTTP Group</Name>
+			<On id="4">group</On>
+			<Type>execute next</Type>
 		</Action>
 	</Actions>
 
@@ -136,7 +259,11 @@ Any inquiries can be addressed to:
 		</Timer>
 	</Timers>
 
-	<PortSettings>
+	<PortSettings name="HTTP Connection - CoinMarketCap API Endpoint">
+		<IPport>
+			<DefaultValue>443</DefaultValue>
+			<Disabled>false</Disabled>
+		</IPport>
 	</PortSettings>
 
 	<VersionHistory>
