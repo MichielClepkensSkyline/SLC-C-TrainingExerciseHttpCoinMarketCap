@@ -2,7 +2,7 @@
 <!--
 
 ****************************************************************************
-*  Copyright (c) 2024,  Skyline Communications NV  All Rights Reserved.    *
+*  Copyright (c) 2025,  Skyline Communications NV  All Rights Reserved.    *
 ****************************************************************************
 
 By using this driver, you expressly agree with the usage terms and
@@ -151,7 +151,7 @@ Any inquiries can be addressed to:
 									<MinorVersion id="1">
 										<Date>2024-01-11</Date>
 										<Provider>
-											<Author>XXX</Author>
+											<Author>SKF</Author>
 											<Company>Skyline Communications</Company>
 										</Provider>
 										<Changes>
