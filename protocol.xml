@@ -490,12 +490,214 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
+		<Param id="400">
+			<Name>categories</Name>
+			<Description>Categories</Description>
+			<Type>array</Type>
+			<ArrayOptions index="0">
+				<ColumnOption idx="0" pid="401" type="retrieved" options=""/>
+				<ColumnOption idx="1" pid="402" type="retrieved" options="" />
+				<ColumnOption idx="2" pid="403" type="retrieved" options="" />
+				<ColumnOption idx="3" pid="404" type="retrieved" options="" />
+				<ColumnOption idx="4" pid="405" type="retrieved" options="" />
+				<ColumnOption idx="5" pid="406" type="retrieved" options="" />
+				<ColumnOption idx="6" pid="407" type="retrieved" options="" />
+				<ColumnOption idx="7" pid="408" type="retrieved" options="" />
+				<ColumnOption idx="8" pid="409" type="retrieved" options="" />
+			</ArrayOptions>
+			<Information>
+				<Subtext>This table has all the categories ??</Subtext>
+			</Information>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type options="tab=columns:401|0,width:100,sort:STRING,lines:25,filter:true">table</Type>
+			</Measurement>
+		</Param>
+		<Param id="401" trending="false">
+			<Name>categoriesId</Name>
+			<Description>Id (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This is the key used internally by DataMiner to identify the table entries.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="402" trending="false">
+			<Name>categoriesName</Name>
+			<Description>Name (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This is the name of the categorie.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="403" trending="false">
+			<Name>categoriesNumberOfTokens</Name>
+			<Description>Number of Tokens (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>Amount of Tokens.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="404" trending="false">
+			<Name>categoriesAveragePriceChange</Name>
+			<Description>Average Price Change (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>The average price change in percentage.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="405" trending="false">
+			<Name>categoriesMarketCap</Name>
+			<Description>Market Cap (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>I think this is the maximum market capacity??</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="406" trending="false">
+			<Name>categoriesMarketCapChange</Name>
+			<Description>Market Cap Change (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>The Change in Percentage of the Market Cap.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="407" trending="false">
+			<Name>categoriesVolume</Name>
+			<Description>Volume (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>???</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="408" trending="false">
+			<Name>categoriesVolumeChange</Name>
+			<Description>VolumeChange (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>The Change of the Volume in Percentage.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="409" trending="false">
+			<Name>categoriesLastUpdated</Name>
+			<Description>Last Time Updated (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>Last Time the information was updated.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Decimals>8</Decimals>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>8</Decimals>
+			</Display>
+			<Measurement>
+				<Type options="datetime">number</Type>
+			</Measurement>
+		</Param>
 	</Params>
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
 		<QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
 		<QAction id="3" name="Process Latest Listings Response" encoding="csharp" triggers="11"/>
+		<QAction id="4" name="Process Categories Response" encoding="csharp" triggers="21"/>
 	</QActions>
 
 	<HTTP>
