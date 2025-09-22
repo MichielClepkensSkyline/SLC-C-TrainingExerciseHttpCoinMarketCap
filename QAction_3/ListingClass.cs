@@ -7,7 +7,7 @@
 	using System.Threading.Tasks;
 	using Newtonsoft.Json;
 
-	public class Data
+	public class Listing
     {
         [JsonProperty("id")]
         public string Id { get; set; }
@@ -94,7 +94,7 @@
         public Status Status { get; set; }
 
         [JsonProperty("data")]
-        public List<Data> Data { get; set; }
+        public List<Listing> Listings { get; set; }
     }
 
 	public class Status

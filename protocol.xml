@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>99</DeviceOID>
 	<ElementType>Data Collector</ElementType>
 	<Type relativeTimers="true">http</Type>
-	<Display defaultPage="General" pageOrder="General;----------;LastListing" wideColumnPages=""/>
+	<Display defaultPage="General" pageOrder="General;----------;LastListing;Categories" wideColumnPages=""/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -85,7 +85,9 @@ Any inquiries can be addressed to:
 			<Name>pollButton</Name>
 			<Type>write</Type>
 			<Information>
-				<Subtext>Button used to send HTTP request.</Subtext>
+				<Subtext>
+					<![CDATA[Button used to send HTTP request.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -160,7 +162,9 @@ Any inquiries can be addressed to:
 			<Description>Status Code Categories</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>This param is the status code for the categories API call.</Subtext>
+				<Subtext>
+					<![CDATA[This param is the status code for the categories API call.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -265,7 +269,9 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="10" pid="211" type="retrieved" options="" />
 			</ArrayOptions>
 			<Information>
-				<Subtext>This is the table containing the last listings.</Subtext>
+				<Subtext>
+					<![CDATA[This is the table containing the last listings.]]>
+				</Subtext>
 			</Information>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -286,7 +292,9 @@ Any inquiries can be addressed to:
 			<Description>Id (Last Listings)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>This is the key used internally by DataMiner to identify the table entries.</Subtext>
+				<Subtext>
+					<![CDATA[This is the key used internally by DataMiner to identify the table entries.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -305,7 +313,9 @@ Any inquiries can be addressed to:
 			<Description>Name (Last Listings)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>Name of the coin.</Subtext>
+				<Subtext>
+					<![CDATA[Name of the coin.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -324,7 +334,9 @@ Any inquiries can be addressed to:
 			<Description>Symbol (Last Listings)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>This is the symbol for the coin.</Subtext>
+				<Subtext>
+					<![CDATA[This is the symbol for the coin.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -343,7 +355,9 @@ Any inquiries can be addressed to:
 			<Description>Date Added (Last Listings)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>This is the origin date that the coin was created.</Subtext>
+				<Subtext>
+					<![CDATA[This is the origin date that the coin was created.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -362,7 +376,9 @@ Any inquiries can be addressed to:
 			<Description>Total Supply (Last Listings)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>This is the total amount of coins that are available.</Subtext>
+				<Subtext>
+					<![CDATA[This is the total amount of coins that are available.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -381,7 +397,9 @@ Any inquiries can be addressed to:
 			<Description>Platform Name (Last Listings)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>This is the name of the platform on which the coin relies.</Subtext>
+				<Subtext>
+					<![CDATA[This is the name of the platform on which the coin relies.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -400,7 +418,9 @@ Any inquiries can be addressed to:
 			<Description>Last Updated Time (Last Listings)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>This is the time when the information about the coin was last updated.</Subtext>
+				<Subtext>
+					<![CDATA[This is the time when the information about the coin was last updated.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -419,7 +439,9 @@ Any inquiries can be addressed to:
 			<Description>Quote (Last Listings)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>Real money type for which the exchange rate is mentioned.</Subtext>
+				<Subtext>
+					<![CDATA[Real money type for which the exchange rate is mentioned.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -438,7 +460,9 @@ Any inquiries can be addressed to:
 			<Description>Price Quote (Last Listings)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>The exchange rate.</Subtext>
+				<Subtext>
+					<![CDATA[The exchange rate.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -457,7 +481,9 @@ Any inquiries can be addressed to:
 			<Description>QuoteVolume24h (Last Listings)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>Volume of coins transfered in last 24h?</Subtext>
+				<Subtext>
+					<![CDATA[Volume of coins transfered in last 24h?]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -476,7 +502,9 @@ Any inquiries can be addressed to:
 			<Description>Percent Change 24h (Last Listings)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>Percentage of coin getting more or less value.</Subtext>
+				<Subtext>
+					<![CDATA[Percentage of coin getting more or less value.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -506,13 +534,22 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="8" pid="409" type="retrieved" options="" />
 			</ArrayOptions>
 			<Information>
-				<Subtext>This table has all the categories ??</Subtext>
+				<Subtext>
+					<![CDATA[This table has all the categories ??]]>
+				</Subtext>
 			</Information>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Categories</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:401|0,width:100,sort:STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:401|0-402|1-403|2-404|3-406|5-405|4-407|6-408|7-409|8,width:100-100-122-142-129-100-100-104-156,sort:STRING-STRING-INT-INT-INT-INT-INT-INT-INT,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="401" trending="false">
@@ -520,7 +557,9 @@ Any inquiries can be addressed to:
 			<Description>Id (Categories)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>This is the key used internally by DataMiner to identify the table entries.</Subtext>
+				<Subtext>
+					<![CDATA[This is the key used internally by DataMiner to identify the table entries.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -539,7 +578,9 @@ Any inquiries can be addressed to:
 			<Description>Name (Categories)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>This is the name of the categorie.</Subtext>
+				<Subtext>
+					<![CDATA[This is the name of the categorie.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -558,7 +599,9 @@ Any inquiries can be addressed to:
 			<Description>Number of Tokens (Categories)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>Amount of Tokens.</Subtext>
+				<Subtext>
+					<![CDATA[Amount of Tokens.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -577,7 +620,9 @@ Any inquiries can be addressed to:
 			<Description>Average Price Change (Categories)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>The average price change in percentage.</Subtext>
+				<Subtext>
+					<![CDATA[The average price change in percentage.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -597,7 +642,9 @@ Any inquiries can be addressed to:
 			<Description>Market Cap (Categories)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>I think this is the maximum market capacity??</Subtext>
+				<Subtext>
+					<![CDATA[I think this is the maximum market capacity??]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -616,7 +663,9 @@ Any inquiries can be addressed to:
 			<Description>Market Cap Change (Categories)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>The Change in Percentage of the Market Cap.</Subtext>
+				<Subtext>
+					<![CDATA[The Change in Percentage of the Market Cap.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -636,7 +685,9 @@ Any inquiries can be addressed to:
 			<Description>Volume (Categories)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>???</Subtext>
+				<Subtext>
+					<![CDATA[???]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -655,7 +706,9 @@ Any inquiries can be addressed to:
 			<Description>VolumeChange (Categories)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>The Change of the Volume in Percentage.</Subtext>
+				<Subtext>
+					<![CDATA[The Change of the Volume in Percentage.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -675,7 +728,9 @@ Any inquiries can be addressed to:
 			<Description>Last Time Updated (Categories)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>Last Time the information was updated.</Subtext>
+				<Subtext>
+					<![CDATA[Last Time the information was updated.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>

@@ -32,16 +32,16 @@ public static class QAction
 			if (status == 200)
 			{
 				protocol.Log($"QA{protocol.QActionID}|Run|YES, Let's go", LogType.Error, LogLevel.NoLogging);
-				Root latest_listings = SecureNewtonsoftDeserialization.DeserializeObject<Root>(protocol.GetParameter(Parameter.responsecontent).ToString());
+				Root root = SecureNewtonsoftDeserialization.DeserializeObject<Root>(protocol.GetParameter(Parameter.responsecontent).ToString());
 				int counter = 0;
-				foreach (Data data in latest_listings.Data)
+				foreach (Listing listing in root.Listings)
 				{
-					protocol.Log($"QA{protocol.QActionID}|Run|{data.Name}", LogType.Error, LogLevel.NoLogging);
+					protocol.Log($"QA{protocol.QActionID}|Run|{listing.Name}", LogType.Error, LogLevel.NoLogging);
 					counter++;
 				}
 
 				protocol.Log($"QA{protocol.QActionID}|Run|{counter}", LogType.Error, LogLevel.NoLogging);
-				FillLastListings(protocol, latest_listings.Data);
+				FillLastListings(protocol, root.Listings);
 			}
 			//Parameter.responsecontent
 		}
@@ -51,10 +51,10 @@ public static class QAction
 		}
 	}
 
-	private static void FillLastListings(SLProtocolExt protocol, List<Data> data)
+	private static void FillLastListings(SLProtocolExt protocol, List<Listing> last_listings)
 	{
 		Dictionary<string, LastlistingQActionRow> lastListingRows = new Dictionary<string, LastlistingQActionRow>();
-		foreach (Data listing in data)
+		foreach (Listing listing in last_listings)
 		{
 			protocol.Log($"QA{protocol.QActionID}|Run|{listing.Platform == null}", LogType.Error, LogLevel.NoLogging);
 			LastlistingQActionRow lastlistingQActionRow = new LastlistingQActionRow
