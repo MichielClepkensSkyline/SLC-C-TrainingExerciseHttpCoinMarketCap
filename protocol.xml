@@ -252,6 +252,7 @@ Any inquiries can be addressed to:
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
 		<QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
+		<QAction id="3" name="Process Latest Listings Response" encoding="csharp" triggers="11"/>
 	</QActions>
 
 	<HTTP>
