@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>99</DeviceOID>
 	<ElementType>Data Collector</ElementType>
 	<Type relativeTimers="true">http</Type>
-	<Display defaultPage="General" pageOrder="General" wideColumnPages=""/>
+	<Display defaultPage="General" pageOrder="General;----------;LastListing" wideColumnPages=""/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -245,6 +245,249 @@ Any inquiries can be addressed to:
 			</Display>
 			<Measurement>
 				<Type lines="20">string</Type>
+			</Measurement>
+		</Param>
+		<Param id="200">
+			<Name>lastListing</Name>
+			<Description>Last Listings</Description>
+			<Type>array</Type>
+			<ArrayOptions index="0">
+				<ColumnOption idx="0" pid="201" type="retrieved" options="" />
+				<ColumnOption idx="1" pid="202" type="retrieved" options="" />
+				<ColumnOption idx="2" pid="203" type="retrieved" options="" />
+				<ColumnOption idx="3" pid="204" type="retrieved" options="" />
+				<ColumnOption idx="4" pid="205" type="retrieved" options="" />
+				<ColumnOption idx="5" pid="206" type="retrieved" options="" />
+				<ColumnOption idx="6" pid="207" type="retrieved" options="" />
+				<ColumnOption idx="7" pid="208" type="retrieved" options="" />
+				<ColumnOption idx="8" pid="209" type="retrieved" options="" />
+				<ColumnOption idx="9" pid="210" type="retrieved" options="" />
+				<ColumnOption idx="10" pid="211" type="retrieved" options="" />
+			</ArrayOptions>
+			<Information>
+				<Subtext>This is the table containing the last listings.</Subtext>
+			</Information>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>LastListing</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="tab=columns:201|0-202|1-203|2-204|3-205|4-206|5-207|6-208|7-209|8-210|9-211|10,width:100-100-100-100-100-105-124-100-100-117-131,sort:STRING-STRING-STRING-INT-INT-STRING-INT-STRING-INT-INT-INT,lines:25,filter:true">table</Type>
+			</Measurement>
+		</Param>
+		<Param id="201" trending="false">
+			<Name>lastListingId</Name>
+			<Description>Id (Last Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This is the key used internally by DataMiner to identify the table entries.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="202" trending="false">
+			<Name>lastListingName</Name>
+			<Description>Name (Last Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>Name of the coin.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="203" trending="false">
+			<Name>lastListingSymbol</Name>
+			<Description>Symbol (Last Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This is the symbol for the coin.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="204" trending="false">
+			<Name>lastListingdateAdded</Name>
+			<Description>Date Added (Last Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This is the origin date that the coin was created.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="205" trending="false">
+			<Name>lastListingTotalSupply</Name>
+			<Description>Total Supply (Last Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This is the total amount of coins that are available.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="206" trending="false">
+			<Name>lastListingPlatformName</Name>
+			<Description>Platform Name (Last Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This is the name of the platform on which the coin relies.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="207" trending="false">
+			<Name>lastListingLastUpdated</Name>
+			<Description>Last Updated Time (Last Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This is the time when the information about the coin was last updated.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="208" trending="false">
+			<Name>lastListingquote</Name>
+			<Description>Quote (Last Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>Real money type for which the exchange rate is mentioned.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="209" trending="false">
+			<Name>lastListingQuotePrice</Name>
+			<Description>Price Quote (Last Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>The exchange rate.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="210" trending="false">
+			<Name>lastListingQuoteVolume24h</Name>
+			<Description>QuoteVolume24h (Last Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>Volume of coins transfered in last 24h?</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="211" trending="false">
+			<Name>lastListingPercentChange24h</Name>
+			<Description>Percent Change 24h (Last Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>Percentage of coin getting more or less value.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 	</Params>
