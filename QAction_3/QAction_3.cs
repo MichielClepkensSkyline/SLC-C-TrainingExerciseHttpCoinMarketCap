@@ -8,6 +8,7 @@ using Skyline.DataMiner.Scripting;
 using Skyline.DataMiner.Utils.Protocol.Extension;
 using QAction_3;
 using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
+using System.Linq;
 
 /// <summary>
 /// DataMiner QAction Class.
@@ -18,7 +19,7 @@ public static class QAction
 	/// The QAction entry point.
 	/// </summary>
 	/// <param name="protocol">Link with SLProtocol process.</param>
-	public static void Run(SLProtocol protocol)
+	public static void Run(SLProtocolExt protocol)
 	{
 		try
 		{
@@ -38,7 +39,9 @@ public static class QAction
 					protocol.Log($"QA{protocol.QActionID}|Run|{data.Name}", LogType.Error, LogLevel.NoLogging);
 					counter++;
 				}
+
 				protocol.Log($"QA{protocol.QActionID}|Run|{counter}", LogType.Error, LogLevel.NoLogging);
+				FillLastListings(protocol, latest_listings.Data);
 			}
 			//Parameter.responsecontent
 		}
@@ -48,19 +51,30 @@ public static class QAction
 		}
 	}
 
-	private static void FillLastListings(SLProtocol protocol, Data data)
+	private static void FillLastListings(SLProtocolExt protocol, List<Data> data)
 	{
-		Dictionary<string, >
-		string id = null;
-		string name = null;
-		string symbol = null;
-		DateTime dateAdded = DateTime.Now;
-		double total_supply = 0;
-		string platform_name = null;
-		DateTime lastUpdated = DateTime.Now;
-		string quote = null;
-		double quotePrice = 0;
-		double quoteVolume24h = 0;
-		double percentChange24h = 0;
+		Dictionary<string, LastlistingQActionRow> lastListingRows = new Dictionary<string, LastlistingQActionRow>();
+		foreach (Data listing in data)
+		{
+			protocol.Log($"QA{protocol.QActionID}|Run|{listing.Platform == null}", LogType.Error, LogLevel.NoLogging);
+			LastlistingQActionRow lastlistingQActionRow = new LastlistingQActionRow
+			{
+				Lastlistingid = listing.Id,
+				Lastlistingname = listing.Name,
+				Lastlistingsymbol = listing.Symbol,
+				Lastlistingdateadded = listing.DateAdded,
+				Lastlistingtotalsupply = listing.TotalSupply,
+				Lastlistingplatformname = listing.Platform != null ? listing.Platform.Name : "Test", // Dit kan null zijn, wat dan invullen?
+				Lastlistinglastupdated = listing.LastUpdated,
+				Lastlistingquote = listing.Quote.USD.ToString(),
+				Lastlistingquoteprice = listing.Quote.USD.Price,
+				Lastlistingquotevolume24h = listing.Quote.USD.Volume24h,
+				Lastlistingpercentchange24h = listing.Quote.USD.PercentChange24h,
+			};
+			lastListingRows.Add(listing.Id, lastlistingQActionRow);
+        }
+
+		object[] lastListingColumns = protocol.lastlisting.QActionRowsToObjectFillArray(lastListingRows.Values.ToArray());
+		protocol.FillArray(Parameter.Lastlisting.tablePid, lastListingColumns);
 	}
 }
