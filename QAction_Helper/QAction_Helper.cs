@@ -18,6 +18,26 @@ public static class Parameter
 	public const int responsecontent_11 = 11;
 	/// <summary>PID: 11 | Type: read</summary>
 	public const int responsecontent = 11;
+	/// <summary>PID: 20 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int statuscodecategories_20 = 20;
+	/// <summary>PID: 20 | Type: read</summary>
+	public const int statuscodecategories = 20;
+	/// <summary>PID: 21 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int responsecontentcategories_21 = 21;
+	/// <summary>PID: 21 | Type: read</summary>
+	public const int responsecontentcategories = 21;
+	/// <summary>PID: 30 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int statuscodelatestquotes_30 = 30;
+	/// <summary>PID: 30 | Type: read</summary>
+	public const int statuscodelatestquotes = 30;
+	/// <summary>PID: 31 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int responsecontentlatestquotes_31 = 31;
+	/// <summary>PID: 31 | Type: read</summary>
+	public const int responsecontentlatestquotes = 31;
 	public class Write
 	{
 		/// <summary>PID: 4 | Type: write</summary>
@@ -47,6 +67,14 @@ public interface SLProtocolExt : SLProtocol
 	object Statuscode { get; set; }
 	object Responsecontent_11 { get; set; }
 	object Responsecontent { get; set; }
+	object Statuscodecategories_20 { get; set; }
+	object Statuscodecategories { get; set; }
+	object Responsecontentcategories_21 { get; set; }
+	object Responsecontentcategories { get; set; }
+	object Statuscodelatestquotes_30 { get; set; }
+	object Statuscodelatestquotes { get; set; }
+	object Responsecontentlatestquotes_31 { get; set; }
+	object Responsecontentlatestquotes { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
@@ -69,6 +97,26 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Responsecontent_11 {get { return GetParameter(11); }set { SetParameter(11, value); }}
 	/// <summary>PID: 11  | Type: read</summary>
 	public System.Object Responsecontent {get { return GetParameter(11); }set { SetParameter(11, value); }}
+	/// <summary>PID: 20  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Statuscodecategories_20 {get { return GetParameter(20); }set { SetParameter(20, value); }}
+	/// <summary>PID: 20  | Type: read</summary>
+	public System.Object Statuscodecategories {get { return GetParameter(20); }set { SetParameter(20, value); }}
+	/// <summary>PID: 21  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Responsecontentcategories_21 {get { return GetParameter(21); }set { SetParameter(21, value); }}
+	/// <summary>PID: 21  | Type: read</summary>
+	public System.Object Responsecontentcategories {get { return GetParameter(21); }set { SetParameter(21, value); }}
+	/// <summary>PID: 30  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Statuscodelatestquotes_30 {get { return GetParameter(30); }set { SetParameter(30, value); }}
+	/// <summary>PID: 30  | Type: read</summary>
+	public System.Object Statuscodelatestquotes {get { return GetParameter(30); }set { SetParameter(30, value); }}
+	/// <summary>PID: 31  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Responsecontentlatestquotes_31 {get { return GetParameter(31); }set { SetParameter(31, value); }}
+	/// <summary>PID: 31  | Type: read</summary>
+	public System.Object Responsecontentlatestquotes {get { return GetParameter(31); }set { SetParameter(31, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{

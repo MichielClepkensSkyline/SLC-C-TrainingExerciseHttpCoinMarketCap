@@ -48,12 +48,12 @@ Any inquiries can be addressed to:
 	<Name>Exercise HTTP CoinMarketCap Sofian</Name>
 	<Description>Exercise HTTP CoinMarketCap DataMiner connector</Description>
 	<Version>1.0.0.1</Version>
-	<IntegrationID>DMS-DRV-</IntegrationID>
+	<IntegrationID>DMS-DRV-99</IntegrationID>
 	<Provider>Skyline Communications</Provider>
-	<Vendor></Vendor>
-	<VendorOID>1.3.6.1.4.1.8813.2.</VendorOID>
-	<DeviceOID></DeviceOID>
-	<ElementType></ElementType>
+	<Vendor>Skyline</Vendor>
+	<VendorOID>1.3.6.1.4.1.8813.2.99</VendorOID>
+	<DeviceOID>99</DeviceOID>
+	<ElementType>Data Collector</ElementType>
 	<Type relativeTimers="true">http</Type>
 	<Display defaultPage="General" pageOrder="General" wideColumnPages=""/>
 	<SNMP includepages="true">auto</SNMP>
@@ -97,8 +97,8 @@ Any inquiries can be addressed to:
 				<Positions>
 					<Position>
 						<Page>General</Page>
-						<Column>1</Column>
-						<Row>1</Row>
+						<Column>2</Column>
+						<Row>2</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -126,8 +126,8 @@ Any inquiries can be addressed to:
 				<Positions>
 					<Position>
 						<Page>General</Page>
-						<Column>1</Column>
-						<Row>0</Row>
+						<Column>0</Column>
+						<Row>1</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -147,6 +147,98 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type lines="20">string</Type>
+			</Measurement>
+		</Param>
+		<Param id="20" trending="false">
+			<Name>statusCodeCategories</Name>
+			<Description>Status Code Categories</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This param is the status code for the categories API call.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="21">
+			<Name>responseContentCategories</Name>
+			<Description>Response Content Categories</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type lines="20">string</Type>
+			</Measurement>
+		</Param>
+		<Param id="30">
+			<Name>statusCodeLatestQuotes</Name>
+			<Description>Status Code Latest Quotes</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>2</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+		</Param>
+		<Param id="31">
+			<Name>responseContentLatestQuotes</Name>
+			<Description>Response Content Latest Quotes</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>2</Column>
 						<Row>0</Row>
 					</Position>
 				</Positions>
@@ -175,6 +267,30 @@ Any inquiries can be addressed to:
 				</Response>
 			</Connection>
 		</Session>
+		<Session id="2" name="Get Categories on Coin Market">
+			<Connection id="2" name="Get Categories on Coin Market">
+				<Request verb="GET" url="/api/custom/coinmarketcap?content=categories">
+					<Headers>
+						<Header key="Authorization" pid="3"/>
+					</Headers>
+				</Request>
+				<Response statusCode="20">
+					<Content pid="21"></Content>
+				</Response>
+			</Connection>
+		</Session>
+		<Session id="3" name="Get Latest Quotes on Coin Market">
+			<Connection id="3" name="Get Latest Quotes on Coin Market">
+				<Request verb="GET" url="/api/custom/coinmarketcap?content=latestquotes">
+					<Headers>
+						<Header key="Authorization" pid="3"/>
+					</Headers>
+				</Request>
+				<Response statusCode="30">
+					<Content pid="31"></Content>
+				</Response>
+			</Connection>
+		</Session>
 	</HTTP>
 
 	<Groups>
@@ -192,6 +308,22 @@ Any inquiries can be addressed to:
 			<Type>poll</Type>
 			<Content>
 				<Session>1</Session>
+			</Content>
+		</Group>
+		<Group id="5">
+			<Name>HTTP request Categories</Name>
+			<Description>HTTP request Categories</Description>
+			<Type>poll</Type>
+			<Content>
+				<Session>2</Session>
+			</Content>
+		</Group>
+		<Group id="6">
+			<Name>HTTP request Latest Quotes</Name>
+			<Description>HTTP request Latest Quotes</Description>
+			<Type>poll</Type>
+			<Content>
+				<Session>3</Session>
 			</Content>
 		</Group>
 	</Groups>
@@ -213,6 +345,8 @@ Any inquiries can be addressed to:
 			<Type>action</Type>
 			<Content>
 				<Id>4</Id>
+				<Id>5</Id>
+				<Id>6</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
@@ -231,6 +365,16 @@ Any inquiries can be addressed to:
 		<Action id="4">
 			<Name>Execute HTTP Group</Name>
 			<On id="4">group</On>
+			<Type>execute next</Type>
+		</Action>
+		<Action id="5">
+			<Name>Execute HTTP Group Categories</Name>
+			<On id="5">group</On>
+			<Type>execute next</Type>
+		</Action>
+		<Action id="6">
+			<Name>Execute HTTP Group Latest Quotes</Name>
+			<On id="6">group</On>
 			<Type>execute next</Type>
 		</Action>
 	</Actions>
