@@ -8,12 +8,34 @@ namespace Skyline.DataMiner.Scripting
 {
 public static class Parameter
 {
+	/// <summary>PID: 3 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int httpresponsecodelatestlistings_3 = 3;
+	/// <summary>PID: 3 | Type: read</summary>
+	public const int httpresponsecodelatestlistings = 3;
+	/// <summary>PID: 4 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int jsonresponse_4 = 4;
+	/// <summary>PID: 4 | Type: read</summary>
+	public const int jsonresponse = 4;
+	/// <summary>PID: 5 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int apikey_5 = 5;
+	/// <summary>PID: 5 | Type: read</summary>
+	public const int apikey = 5;
 	public class Write
 	{
+		/// <summary>PID: 6 | Type: write</summary>
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public const int getdata_6 = 6;
+		/// <summary>PID: 6 | Type: write</summary>
+		public const int getdata = 6;
 	}
 }
 public class WriteParameters
 {
+	/// <summary>PID: 6  | Type: write | DISCREETS: Get Data = Get Data</summary>
+	public System.Object Getdata {get { return Protocol.GetParameter(6); }set { Protocol.SetParameter(6, value); }}
 	public SLProtocolExt Protocol;
 	public WriteParameters(SLProtocolExt protocol)
 	{
@@ -23,12 +45,39 @@ public class WriteParameters
 public interface SLProtocolExt : SLProtocol
 {
 	object Afterstartup_dummy { get; set; }
+	object Httpresponsecodelatestlistings_3 { get; set; }
+	object Httpresponsecodelatestlistings { get; set; }
+	object Jsonresponse_4 { get; set; }
+	object Jsonresponse { get; set; }
+	object Apikey_5 { get; set; }
+	object Apikey { get; set; }
+	object Getdata_6 { get; set; }
+	object Getdata { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 {
 	/// <summary>PID: 2  | Type: dummy</summary>
 	public System.Object Afterstartup_dummy {get { return GetParameter(2); }set { SetParameter(2, value); }}
+	/// <summary>PID: 3  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Httpresponsecodelatestlistings_3 {get { return GetParameter(3); }set { SetParameter(3, value); }}
+	/// <summary>PID: 3  | Type: read</summary>
+	public System.Object Httpresponsecodelatestlistings {get { return GetParameter(3); }set { SetParameter(3, value); }}
+	/// <summary>PID: 4  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Jsonresponse_4 {get { return GetParameter(4); }set { SetParameter(4, value); }}
+	/// <summary>PID: 4  | Type: read</summary>
+	public System.Object Jsonresponse {get { return GetParameter(4); }set { SetParameter(4, value); }}
+	/// <summary>PID: 5  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Apikey_5 {get { return GetParameter(5); }set { SetParameter(5, value); }}
+	/// <summary>PID: 5  | Type: read</summary>
+	public System.Object Apikey {get { return GetParameter(5); }set { SetParameter(5, value); }}
+	/// <summary>PID: 6  | Type: write | DISCREETS: Get Data = Get Data</summary>
+	public System.Object Getdata_6 {get { return GetParameter(6); }set { SetParameter(6, value); }}
+	/// <summary>PID: 6  | Type: write | DISCREETS: Get Data = Get Data</summary>
+	public System.Object Getdata {get { return Write.Getdata; }set { Write.Getdata = value; }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{
