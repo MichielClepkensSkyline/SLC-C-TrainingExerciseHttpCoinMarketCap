@@ -234,7 +234,7 @@ Any inquiries can be addressed to:
 			</ArrayOptions>
 			<Information>
 				<Subtext>
-					<![CDATA[This is thhe parameter to display the Latest Listing table]]>
+					<![CDATA[This is the parameter to display the Latest Listing table]]>
 				</Subtext>
 			</Information>
 			<Display>
@@ -448,6 +448,233 @@ Any inquiries can be addressed to:
 			<Type>read</Type>
 			<Information>
 				<Subtext>This is the parameter for display key for the Latest Listings table.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="200">
+			<Name>categories</Name>
+			<Description>Categories</Description>
+			<Type>array</Type>
+			<ArrayOptions index="0">
+				<ColumnOption idx="0" pid="201" type="retrieved" options=""/>
+				<ColumnOption idx="1" pid="202" type="retrieved" options=""/>
+				<ColumnOption idx="2" pid="203" type="retrieved" options=""/>
+				<ColumnOption idx="3" pid="204" type="retrieved" options=""/>
+				<ColumnOption idx="4" pid="205" type="retrieved" options=""/>
+				<ColumnOption idx="5" pid="206" type="retrieved" options=""/>
+				<ColumnOption idx="6" pid="207" type="retrieved" options=""/>
+				<ColumnOption idx="7" pid="208" type="retrieved" options=""/>
+				<ColumnOption idx="8" pid="209" type="retrieved" options=""/>
+				<ColumnOption idx="9" pid="210" type="displaykey" options=""/>
+			</ArrayOptions>
+			<Information>
+				<Subtext><![CDATA[This is the parameter to display the Categories table.]]></Subtext>
+			</Information>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type options="tab=columns:201|0,width:100,sort:STRING,lines:25,filter:true">table</Type>
+			</Measurement>
+		</Param>
+		<Param id="201" trending="false">
+			<Name>categoriesId</Name>
+			<Description>Id (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This is the key used internally by DataMiner to identify the table entries.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="202" trending="false">
+			<Name>categoriesName</Name>
+			<Description>Name (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This is a parameter to display the name of the category.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="203" trending="true">
+			<Name>categoriesNumberOfTokens</Name>
+			<Description>Number of Tokens (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Indicates the total number of tokens within the category.]]>
+			</Subtext>
+
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="204" trending="true">
+			<Name>categoriesAveragePriceChange</Name>
+			<Description>Average Price Change (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Shows the average price change of all tokens in this category.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="205" trending="true">
+			<Name>categoriesMarketCap</Name>
+			<Description>Market Cap (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext><![CDATA[Represents the combined market capitalization of all tokens within the category.]]></Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="206" trending="true">
+			<Name>categoriesMarketCapChange</Name>
+			<Description>Market Cap Change (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext><![CDATA[Displays the percentage change in the category's total market capitalization.]]></Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="207" trending="true">
+			<Name>categoriesVolume</Name>
+			<Description>Volume (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext><![CDATA[Shows the total trading volume for the category across all tokens]]></Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="208" trending="true">
+			<Name>categoriesVolumeChange</Name>
+			<Description>Volume Change (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext><![CDATA[Indicates the percentage change in trading volume for the category, compared to the previous time period.]]></Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="209" trending="false">
+			<Name>categoriesLastUpdated</Name>
+			<Description>Last Updated (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This is a parameter to display the date the category was last updated.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Decimals>8</Decimals>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>8</Decimals>
+			</Display>
+			<Measurement>
+				<Type options="datetime">number</Type>
+			</Measurement>
+		</Param>
+		<Param id="210" trending="false">
+			<Name>categoriesDisplayKey</Name>
+			<Description>Display Key (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This is the parameter for display key for the Categories table.</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
