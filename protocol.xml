@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>0</DeviceOID>
 	<ElementType>Unknown</ElementType>
 	<Type relativeTimers="true">http</Type>
-	<Display defaultPage="General" pageOrder="General;Latest Listings" wideColumnPages="Latest Listings"/>
+	<Display defaultPage="General" pageOrder="General;Latest Listings;Categories" wideColumnPages="Latest Listings;Categories"/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -437,6 +437,11 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -478,13 +483,22 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="9" pid="210" type="displaykey" options=""/>
 			</ArrayOptions>
 			<Information>
-				<Subtext><![CDATA[This is the parameter to display the Categories table.]]></Subtext>
+				<Subtext>
+					<![CDATA[This is the parameter to display the Categories table.]]>
+				</Subtext>
 			</Information>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Categories</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:201|0,width:100,sort:STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:201|0-202|1-203|2-204|3-205|4-206|5-207|6-208|7-209|8-210|9,width:100-100-122-142-100-129-100-107-156-100,sort:STRING|ASC|1-STRING-INT-INT-INT-INT-INT-INT-INT|ASC|0-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="201" trending="false">
@@ -534,8 +548,8 @@ Any inquiries can be addressed to:
 			<Information>
 				<Subtext>
 					<![CDATA[Indicates the total number of tokens within the category.]]>
-			</Subtext>
-
+				</Subtext>
+				
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -575,7 +589,9 @@ Any inquiries can be addressed to:
 			<Description>Market Cap (Categories)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext><![CDATA[Represents the combined market capitalization of all tokens within the category.]]></Subtext>
+				<Subtext>
+					<![CDATA[Represents the combined market capitalization of all tokens within the category.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -594,7 +610,9 @@ Any inquiries can be addressed to:
 			<Description>Market Cap Change (Categories)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext><![CDATA[Displays the percentage change in the category's total market capitalization.]]></Subtext>
+				<Subtext>
+					<![CDATA[Displays the percentage change in the category's total market capitalization.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -603,6 +621,11 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -613,7 +636,9 @@ Any inquiries can be addressed to:
 			<Description>Volume (Categories)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext><![CDATA[Shows the total trading volume for the category across all tokens]]></Subtext>
+				<Subtext>
+					<![CDATA[Shows the total trading volume for the category across all tokens]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -632,7 +657,9 @@ Any inquiries can be addressed to:
 			<Description>Volume Change (Categories)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext><![CDATA[Indicates the percentage change in trading volume for the category, compared to the previous time period.]]></Subtext>
+				<Subtext>
+					<![CDATA[Indicates the percentage change in trading volume for the category, compared to the previous time period.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -641,6 +668,11 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -722,7 +754,8 @@ Any inquiries can be addressed to:
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
 		<QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
-		<QAction id="3" name="Get Latest Listings" encoding="csharp" triggers="4">
+		<QAction id="3" name="Parse Latest Listings" encoding="csharp" triggers="4"></QAction>
+		<QAction id="4" name="Parse Categories" encoding="csharp" triggers="4">
 		</QAction>
 	</QActions>
 

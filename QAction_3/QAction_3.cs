@@ -8,7 +8,7 @@ using Skyline.DataMiner.Scripting;
 using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
 
 /// <summary>
-/// DataMiner QAction Class: Get Latest Listings.
+/// DataMiner QAction Class: Parse Latest Listings.
 /// </summary>
 public static class QAction
 {
