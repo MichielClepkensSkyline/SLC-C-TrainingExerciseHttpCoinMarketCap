@@ -20,9 +20,9 @@ public static class QAction
 	{
 		try
 		{
-			string json = protocol.GetParameter(Parameter.response_4).ToString();
+			string json = protocol.GetParameter(Parameter.responselatestlistings_4).ToString();
 			LatestListings latestListings = SecureNewtonsoftDeserialization.DeserializeObject<LatestListings>(json);
-			var statusCode = protocol.GetParameter(Parameter.statuscodelastlistings_3).ToString();
+			var statusCode = protocol.GetParameter(Parameter.statuscodelatestlistings_3).ToString();
 			int status = Int32.Parse(statusCode.Split(' ')[1]);
 			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run| Status {status}", LogType.Error, LogLevel.NoLogging);
 
@@ -30,6 +30,11 @@ public static class QAction
 			if (status == 200)
 			{
 				FillLatestListingsTable(protocol, latestListings);
+			}
+			else
+			{
+				protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown: Status of the response is: {status}", LogType.Error, LogLevel.NoLogging);
+
 			}
 		}
 		catch (Exception ex)

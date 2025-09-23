@@ -55,12 +55,12 @@ Any inquiries can be addressed to:
 	<DeviceOID>0</DeviceOID>
 	<ElementType>Unknown</ElementType>
 	<Type relativeTimers="true">http</Type>
-	<Display defaultPage="General" pageOrder="General" wideColumnPages=""/>
+	<Display defaultPage="General" pageOrder="General;Latest Listings" wideColumnPages="Latest Listings"/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
 		<CassandraReady>true</CassandraReady>
-		<MinimumRequiredVersion>10.1.0.0 - 9966</MinimumRequiredVersion>
+		<MinimumRequiredVersion>10.3.0.0 - 12752</MinimumRequiredVersion>
 	</Compliancies>
 
 	<Params>
@@ -70,11 +70,37 @@ Any inquiries can be addressed to:
 			<Type>dummy</Type>
 		</Param>
 		<Param id="3" trending="false">
-			<Name>statusCodeLastListings</Name>
-			<Description>Status Code</Description>
+			<Name>statusCodeLatestListings</Name>
+			<Description>Status Code Latest Listings</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>This is a parameter to display the Status Code.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>2</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="4" trending="false">
+			<Name>responseLatestListings</Name>
+			<Description>Response Latest Listings</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This parameter holds the response of the HTTP request for Latest Listings.</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -92,31 +118,6 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
-			</Measurement>
-		</Param>
-		<Param id="4" trending="false">
-			<Name>response</Name>
-			<Description>Response</Description>
-			<Type>read</Type>
-			<Information>
-			</Information>
-			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>4</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
 				<Type lines="30">string</Type>
 			</Measurement>
 		</Param>
@@ -124,6 +125,7 @@ Any inquiries can be addressed to:
 			<Name>sendRequest</Name>
 			<Type>write</Type>
 			<Information>
+				<Subtext>This parameter triggers sending the request.</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -136,7 +138,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>2</Row>
+						<Row>1</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -162,11 +164,63 @@ Any inquiries can be addressed to:
 				<Value>Bearer jWgYFWyQzYAR9ZAm0mvESEKBeerEYw3rYwVEOUvm2Y0=</Value>
 			</Interprete>
 		</Param>
+		<Param id="7" trending="false">
+			<Name>statusCodeCategories</Name>
+			<Description>Status Code Categories</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This is a parameter to display the Status Code of Categories.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>2</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="8" trending="false">
+			<Name>responseCategories</Name>
+			<Description>Response Categories</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This parameter holds the response of the HTTP request for Categories.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>3</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type lines="30">string</Type>
+			</Measurement>
+		</Param>
 		<Param id="100">
 			<Name>latestListings</Name>
 			<Description>Latest Listings</Description>
 			<Type>array</Type>
-			<ArrayOptions index="0">
+			<ArrayOptions index="0" options=";naming=/101,102">
 				<ColumnOption idx="0" pid="101" type="retrieved" options=""/>
 				<ColumnOption idx="1" pid="102" type="retrieved" options=""/>
 				<ColumnOption idx="2" pid="103" type="retrieved" options=""/>
@@ -176,6 +230,7 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="6" pid="107" type="retrieved" options=""/>
 				<ColumnOption idx="7" pid="108" type="retrieved" options=""/>
 				<ColumnOption idx="8" pid="109" type="retrieved" options=""/>
+				<ColumnOption idx="9" pid="110" type="displaykey" options=""/>
 			</ArrayOptions>
 			<Information>
 				<Subtext>
@@ -186,14 +241,14 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Listings</Page>
 						<Column>0</Column>
 						<Row>0</Row>
 					</Position>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:101|0-102|1-103|2-104|3-105|4-106|5-107|6-108|7,width:100-100-100-156-100-100-156-100,sort:STRING-STRING-STRING-INT-INT-INT-INT-INT,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:101|0-102|1-103|2-104|3-106|5-108|7-105|4-107|6-109|8-110|9,width:100-100-100-156-100-100-100-156-154-100,sort:STRING|ASC|1-STRING-STRING-INT-INT-INT-INT-INT|ASC|0-INT-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="101" trending="false">
@@ -387,7 +442,28 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
+		<Param id="110" trending="false">
+			<Name>latestListingsDisplayKey</Name>
+			<Description>Display Key (Latest Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This is the parameter for display key for the Latest Listings table.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
 	</Params>
+	
+	
 	<HTTP>
 		<Session id="1" name="Get Last Listings">
 			<Connection id="1" name="Get Last Listings">
