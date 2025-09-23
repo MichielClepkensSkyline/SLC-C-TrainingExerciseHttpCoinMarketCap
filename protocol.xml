@@ -1142,6 +1142,9 @@ Any inquiries can be addressed to:
 			<Time initial="true" dataDisplay="30000">60000</Time>
 			<Interval>75</Interval>
 			<Content>
+				<Group>4</Group>
+				<Group>5</Group>
+				<Group>6</Group>
 			</Content>
 		</Timer>
 		<Timer id="3">

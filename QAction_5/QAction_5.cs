@@ -1,12 +1,8 @@
 using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
+using Skyline.DataMiner.Scripting;
 using Skyline.DataMiner.Scripting.HTTP;
 using Skyline.DataMiner.Scripting.Quote;
-using Skyline.DataMiner.Scripting;
-//using Skyline.DataMiner.Scripting.HTTP;
-//using Skyline.DataMiner.Scripting.HTTP;
 using Skyline.DataMiner.Utils.Protocol.Extension;
 using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
 
