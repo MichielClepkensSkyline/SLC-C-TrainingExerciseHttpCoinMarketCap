@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>0</DeviceOID>
 	<ElementType>Unknown</ElementType>
 	<Type relativeTimers="true">http</Type>
-	<Display defaultPage="General" pageOrder="General"/>
+	<Display defaultPage="General" pageOrder="General" wideColumnPages=""/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -69,14 +69,357 @@ Any inquiries can be addressed to:
 			<Description>After Startup</Description>
 			<Type>dummy</Type>
 		</Param>
+		<Param id="3" trending="false">
+			<Name>statusCodeLastListings</Name>
+			<Description>Status Code</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This is a parameter to display the Status Code.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>3</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="4" trending="false">
+			<Name>response</Name>
+			<Description>Response</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>4</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type lines="30">string</Type>
+			</Measurement>
+		</Param>
+		<Param id="5">
+			<Name>sendRequest</Name>
+			<Type>write</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>2</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type width="110">button</Type>
+				<Discreets>
+					<Discreet>
+						<Display>Send Request</Display>
+						<Value>1</Value>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+		</Param>
+		<Param id="6">
+			<Name>bearerToken</Name>
+			<Description>Bearer Token</Description>
+			<Type>fixed</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>fixed</LengthType>
+				<Length>51</Length>
+				<Value>Bearer jWgYFWyQzYAR9ZAm0mvESEKBeerEYw3rYwVEOUvm2Y0=</Value>
+			</Interprete>
+		</Param>
+		<Param id="100">
+			<Name>latestListings</Name>
+			<Description>Latest Listings</Description>
+			<Type>array</Type>
+			<ArrayOptions index="0">
+				<ColumnOption idx="0" pid="101" type="retrieved" options=""/>
+				<ColumnOption idx="1" pid="102" type="retrieved" options=""/>
+				<ColumnOption idx="2" pid="103" type="retrieved" options=""/>
+				<ColumnOption idx="3" pid="104" type="retrieved" options=""/>
+				<ColumnOption idx="4" pid="105" type="retrieved" options=""/>
+				<ColumnOption idx="5" pid="106" type="retrieved" options=""/>
+				<ColumnOption idx="6" pid="107" type="retrieved" options=""/>
+				<ColumnOption idx="7" pid="108" type="retrieved" options=""/>
+				<ColumnOption idx="8" pid="109" type="retrieved" options=""/>
+			</ArrayOptions>
+			<Information>
+				<Subtext>
+					<![CDATA[This is thhe parameter to display the Latest Listing table]]>
+				</Subtext>
+			</Information>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="tab=columns:101|0-102|1-103|2-104|3-105|4-106|5-107|6-108|7,width:100-100-100-156-100-100-156-100,sort:STRING-STRING-STRING-INT-INT-INT-INT-INT,lines:25,filter:true">table</Type>
+			</Measurement>
+		</Param>
+		<Param id="101" trending="false">
+			<Name>latestListingsId</Name>
+			<Description>Id (Latest Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This is the key used internally by DataMiner to identify the table entries.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="102" trending="false">
+			<Name>latestListingsName</Name>
+			<Description>Name (Latest Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This is a parameter to display the name of the coin.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="103" trending="false">
+			<Name>latestListingsSymbol</Name>
+			<Description>Symbol (Latest Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This is a parameter to display the symbol of the coin.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="104" trending="false">
+			<Name>latestListingsDateAdded</Name>
+			<Description>Date Added (Latest Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This is a parameter to display the date the coin was added.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Decimals>8</Decimals>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>8</Decimals>
+			</Display>
+			<Measurement>
+				<Type options="datetime">number</Type>
+			</Measurement>
+		</Param>
+		<Param id="105" trending="true">
+			<Name>latestListingsTotalSupply</Name>
+			<Description>Total Supply (Latest Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This is a parameter to display the total amount of a coins.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="106" trending="true">
+			<Name>latestListingsRank</Name>
+			<Description>Rank (Latest Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This is a parameter to display the rank of a coin.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="107" trending="false">
+			<Name>latestListingsLastUpdated</Name>
+			<Description>Last Updated (Latest Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This is a parameter to display the date the coin was last updated.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Decimals>8</Decimals>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>8</Decimals>
+			</Display>
+			<Measurement>
+				<Type options="datetime">number</Type>
+			</Measurement>
+		</Param>
+		<Param id="108" trending="true">
+			<Name>latestListingsPrice</Name>
+			<Description>Price (Latest Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This is a parameter to display the current price of a coin in USD.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="109" trending="true">
+			<Name>latestListings1hPercentageChange</Name>
+			<Description>Precentage Change (1h) (Latest Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
 	</Params>
+	<HTTP>
+		<Session id="1" name="Get Last Listings">
+			<Connection id="1" name="Get Last Listings">
+				<Request verb="GET" url="/api/custom/coinmarketcap?content=latestlistings">
+					<Headers>
+						<Header key="Authorization" pid="6"></Header>
+					</Headers>
+				</Request>
+				<Response statusCode="3">
+					<Content pid="4"></Content>
+				</Response>
+			</Connection>
+		</Session>
+	</HTTP>
+	
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
 		<QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
+		<QAction id="3" name="Get Latest Listings" encoding="csharp" triggers="4">
+		</QAction>
 	</QActions>
 
 	<Groups>
+		<Group id="1">
+			<Name>Get Listings</Name>
+			<Description>Get Listings</Description>
+			<Type>poll</Type>
+			<Content>
+				<Session>1</Session>
+			</Content>
+		</Group>
 		<Group id="2">
 			<Name>After Startup</Name>
 			<Description>After Startup</Description>
@@ -97,6 +440,15 @@ Any inquiries can be addressed to:
 				<Id>1</Id>
 			</Content>
 		</Trigger>
+		<Trigger id="2">
+			<Name>On button press</Name>
+			<On id="5">parameter</On>
+			<Time>change</Time>
+			<Type>action</Type>
+			<Content>
+				<Id>3</Id>
+			</Content>
+		</Trigger>
 	</Triggers>
 
 	<Actions>
@@ -109,6 +461,11 @@ Any inquiries can be addressed to:
 			<Name>After Startup QAction</Name>
 			<On id="2">parameter</On>
 			<Type>run actions</Type>
+		</Action>
+		<Action id="3">
+			<Name>Execute Group</Name>
+			<On id="1">group</On>
+			<Type>execute next</Type>
 		</Action>
 	</Actions>
 
