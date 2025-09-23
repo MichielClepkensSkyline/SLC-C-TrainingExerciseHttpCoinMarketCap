@@ -765,8 +765,8 @@ Any inquiries can be addressed to:
 			<Description>Get Listings</Description>
 			<Type>poll</Type>
 			<Content>
-				<Session>1</Session>
 				<Session>2</Session>
+				<Session>1</Session>
 			</Content>
 		</Group>
 		<Group id="2">

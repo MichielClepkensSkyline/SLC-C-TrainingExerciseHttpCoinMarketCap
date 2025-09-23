@@ -24,12 +24,14 @@ public static class QAction
 		{
 			string json = protocol.GetParameter(Parameter.responsecategories_8).ToString();
 			Categories categories = SecureNewtonsoftDeserialization.DeserializeObject<Categories>(json);
-			string statusCode = protocol.GetParameter(Parameter.statuscodecategories_7).ToString();
-			int status = Int32.Parse(statusCode);
+			string statusCode = protocol.GetParameter(Parameter.statuscodecategories).ToString();
+			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|statusCode: '{statusCode}'", LogType.Information, LogLevel.NoLogging);
+
+			int status = Int32.Parse(statusCode.Split(' ')[1]);
 
 			if(status == 200)
 			{
-
+				FillCategoriesTable(protocol, categories);
 			}
 			else
 			{
@@ -40,5 +42,35 @@ public static class QAction
 		{
 			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}{ex}", LogType.Error, LogLevel.NoLogging);
 		}
+	}
+
+	private static void FillCategoriesTable(SLProtocol protocol, Categories categories)
+	{
+		Dictionary<string, object[]> categoriesTableContent = new Dictionary<string, object[]>();
+
+		foreach (Category category in categories.CategoryList)
+		{
+			if (!String.IsNullOrWhiteSpace(category.Id))
+			{
+				categoriesTableContent[category.Id] = new CategoriesQActionRow
+				{
+					Categoriesid_201 = category.Id.ToString(),
+					Categoriesname_202 = category.Name,
+					Categoriesnumberoftokens_203 = category.NumTokens,
+					Categoriesaveragepricechange_204 = category.AvgPriceChange,
+					Categoriesmarketcap_205 = category.MarketCap,
+					Categoriesmarketcapchange_206 = category.MarketCap,
+					Categoriesvolume_207 = category.Volume,
+					Categoriesvolumechange_208 = category.VolumeChange,
+					Categorieslastupdated_209 = category.LastUpdated.ToOADate(),
+				}.ToObjectArray();
+			}
+			else
+			{
+
+			}
+		}
+
+		protocol.FillArray(Parameter.Categories.tablePid, categoriesTableContent.Values.ToList(), NotifyProtocol.SaveOption.Full);
 	}
 }
