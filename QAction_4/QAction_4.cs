@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+
+using QAction_4;
+
 using Skyline.DataMiner.Scripting;
 using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
 
@@ -19,7 +22,19 @@ public static class QAction
 	{
 		try
 		{
-			
+			string json = protocol.GetParameter(Parameter.responsecategories_8).ToString();
+			Categories categories = SecureNewtonsoftDeserialization.DeserializeObject<Categories>(json);
+			string statusCode = protocol.GetParameter(Parameter.statuscodecategories_7).ToString();
+			int status = Int32.Parse(statusCode);
+
+			if(status == 200)
+			{
+
+			}
+			else
+			{
+
+			}
 		}
 		catch (Exception ex)
 		{
