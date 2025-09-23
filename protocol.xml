@@ -553,6 +553,26 @@ Any inquiries can be addressed to:
 				<Type options="datetime">number</Type>
 			</Measurement>
 		</Param>
+		<Param id="41" trending="false">
+			<Name>LatestQuoteCurreny</Name>
+			<Description>Quote Currency</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext></Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		
 		
 		<Param id="100">
 			<Name>latestListings</Name>
@@ -1167,6 +1187,18 @@ Any inquiries can be addressed to:
 				</Response>
 			</Connection>
 		</Session>
+		<Session id="3" name="Get Latest Quote">
+			<Connection id="1" name="Get Latest Quote">
+				<Request verb="GET" url="/api/custom/coinmarketcap?content=latestquotes">
+					<Headers>
+						<Header key="Authorization" pid="6"></Header>
+					</Headers>
+				</Request>
+				<Response statusCode="9">
+					<Content pid="10"></Content>
+				</Response>
+			</Connection>
+		</Session>
 	</HTTP>
 	
 
@@ -1174,7 +1206,9 @@ Any inquiries can be addressed to:
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
 		<QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
 		<QAction id="3" name="Parse Latest Listings" encoding="csharp" triggers="4"></QAction>
-		<QAction id="4" name="Parse Categories" encoding="csharp" triggers="4">
+		<QAction id="4" name="Parse Categories" encoding="csharp" triggers="8">
+		</QAction>
+		<QAction id="5" name="Parse Latest Quote" encoding="csharp" triggers="10">
 		</QAction>
 	</QActions>
 
@@ -1203,6 +1237,14 @@ Any inquiries can be addressed to:
 				<Session>2</Session>
 			</Content>
 		</Group>
+		<Group id="5">
+			<Name>Get Latest Quote</Name>
+			<Description>Get Latest Quote</Description>
+			<Type>poll</Type>
+			<Content>
+				<Session>3</Session>
+			</Content>
+		</Group>
 	</Groups>
 
 	<Triggers>
@@ -1223,6 +1265,7 @@ Any inquiries can be addressed to:
 			<Content>
 				<Id>3</Id>
 				<Id>4</Id>
+				<Id>5</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
@@ -1246,6 +1289,11 @@ Any inquiries can be addressed to:
 		<Action id="4">
 			<Name>Execute Group Get Categories</Name>
 			<On id="4">group</On>
+			<Type>execute next</Type>
+		</Action>
+		<Action id="5">
+			<Name>Execute Group Get Latest Quote</Name>
+			<On id="5">group</On>
 			<Type>execute next</Type>
 		</Action>
 	</Actions>

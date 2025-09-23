@@ -4,6 +4,7 @@
 	using System.Collections.Generic;
 	using System.Text.Json.Serialization;
 	using Newtonsoft.Json;
+
 	public class Listing
 	{
 		[JsonProperty("id")]

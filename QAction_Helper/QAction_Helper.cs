@@ -93,6 +93,11 @@ public static class Parameter
 	public const int latestquotelastupdate_40 = 40;
 	/// <summary>PID: 40 | Type: read</summary>
 	public const int latestquotelastupdate = 40;
+	/// <summary>PID: 41 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int latestquotecurreny_41 = 41;
+	/// <summary>PID: 41 | Type: read</summary>
+	public const int latestquotecurreny = 41;
 	public class Write
 	{
 		/// <summary>PID: 5 | Type: write</summary>
@@ -422,6 +427,8 @@ public interface SLProtocolExt : SLProtocol
 	object Latestquotetodaychangepercent { get; set; }
 	object Latestquotelastupdate_40 { get; set; }
 	object Latestquotelastupdate { get; set; }
+	object Latestquotecurreny_41 { get; set; }
+	object Latestquotecurreny { get; set; }
 	object Latestlistingsid_101 { get; set; }
 	object Latestlistingsid { get; set; }
 	object Latestlistingsname_102 { get; set; }
@@ -569,6 +576,11 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Latestquotelastupdate_40 {get { return GetParameter(40); }set { SetParameter(40, value); }}
 	/// <summary>PID: 40  | Type: read</summary>
 	public System.Object Latestquotelastupdate {get { return GetParameter(40); }set { SetParameter(40, value); }}
+	/// <summary>PID: 41  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Latestquotecurreny_41 {get { return GetParameter(41); }set { SetParameter(41, value); }}
+	/// <summary>PID: 41  | Type: read</summary>
+	public System.Object Latestquotecurreny {get { return GetParameter(41); }set { SetParameter(41, value); }}
 	/// <summary>PID: 101  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsid_101 {get { return GetParameter(101); }set { SetParameter(101, value); }}
