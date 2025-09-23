@@ -4,56 +4,6 @@
 	using System.Collections.Generic;
 	using System.Text.Json.Serialization;
 	using Newtonsoft.Json;
-
-	/*public class LatestListings
-	{
-		[JsonProperty("data")]
-		public List<Listing> Listings { get; set; }
-
-	}
-
-	public class Listing
-	{
-			[JsonPropertyName("id")]
-			public string Id { get; set; }
-
-			[JsonPropertyName("name")]
-			public string Name { get; set; }
-
-			[JsonPropertyName("symbol")]
-			public string Symbol { get; set; }
-
-			[JsonPropertyName("date_added")]
-			public DateTime DateAdded { get; set; }
-
-			[JsonPropertyName("total_supply")]
-			public long TotalSupply { get; set; }
-
-			[JsonPropertyName("cmc_rank")]
-			public int CmcRank { get; set; }
-
-			[JsonPropertyName("last_updated")]
-			public DateTime LastUpdated { get; set; }
-
-			[JsonPropertyName("quote")]
-			public Quote Quote { get; set; }
-		}
-
-	public class Quote
-	{
-		[JsonPropertyName("USD")]
-		public USD USD { get; set; }
-	}
-
-	public class USD
-	{
-		[JsonPropertyName("price")]
-		public long Price { get; set; }
-
-		[JsonPropertyName("percent_change_1h")]
-		public long PercentChange1h { get; set; }
-
-	}*/
 	public class Listing
 	{
 		[JsonProperty("id")]
@@ -212,6 +162,4 @@
 		[JsonProperty("last_updated")]
 		public DateTime LastUpdated { get; set; }
 	}
-
-
 }

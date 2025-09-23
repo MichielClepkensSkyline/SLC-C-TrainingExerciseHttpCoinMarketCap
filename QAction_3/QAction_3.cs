@@ -49,6 +49,8 @@ public static class QAction
 		{
 			Dictionary<string, object[]> latestListingsTableContent = new Dictionary<string, object[]>();
 
+			var exceptionValue = -100;
+
 			foreach (Listing latest_listing in latestListings.Listings)
 			{
 				if (!String.IsNullOrWhiteSpace(latest_listing.Id))
@@ -62,8 +64,11 @@ public static class QAction
 						Latestlistingstotalsupply_105 = latest_listing.TotalSupply,
 						Latestlistingsrank_106 = latest_listing.CmcRank,
 						Latestlistingslastupdated_107 = latest_listing.LastUpdated.ToOADate(),
-						Latestlistingsprice_108 = latest_listing.Quote.USD.Price,
+						Latestlistingsquoteprice_108 = latest_listing.Quote.USD.Price,
 						Latestlistings1hpercentagechange_109 = latest_listing.Quote.USD.PercentChange1h,
+						Latestlistingsquotevolumechange24h_110 = latest_listing.Quote.USD.VolumeChange24h,
+						Latestlistingsquotemarketcap_111 = latest_listing.Quote.USD.MarketCap,
+						Latestlistingsplatformname_112 = latest_listing.Platform?.Name ?? exceptionValue.ToString(),
 					}.ToObjectArray();
 				}
 				else

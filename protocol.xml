@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>0</DeviceOID>
 	<ElementType>Unknown</ElementType>
 	<Type relativeTimers="true">http</Type>
-	<Display defaultPage="General" pageOrder="General;Latest Listings;Categories" wideColumnPages="Latest Listings;Categories"/>
+	<Display defaultPage="General" pageOrder="General;Latest Listings;Categories;Latest Quote" wideColumnPages="Latest Listings;Categories"/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -74,7 +74,37 @@ Any inquiries can be addressed to:
 			<Description>Status Code Latest Listings</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>This is a parameter to display the Status Code.</Subtext>
+				<Subtext>
+					<![CDATA[This is a parameter to display the Status Code.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="4" trending="false">
+			<Name>responseLatestListings</Name>
+			<Description>Response Latest Listings</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This parameter holds the response of the HTTP request for Latest Listings.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -92,32 +122,6 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
-			</Measurement>
-		</Param>
-		<Param id="4" trending="false">
-			<Name>responseLatestListings</Name>
-			<Description>Response Latest Listings</Description>
-			<Type>read</Type>
-			<Information>
-				<Subtext>This parameter holds the response of the HTTP request for Latest Listings.</Subtext>
-			</Information>
-			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>3</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
 				<Type lines="30">string</Type>
 			</Measurement>
 		</Param>
@@ -125,7 +129,9 @@ Any inquiries can be addressed to:
 			<Name>sendRequest</Name>
 			<Type>write</Type>
 			<Information>
-				<Subtext>This parameter triggers sending the request.</Subtext>
+				<Subtext>
+					<![CDATA[This parameter triggers sending the request.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -138,7 +144,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>1</Row>
+						<Row>0</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -169,7 +175,9 @@ Any inquiries can be addressed to:
 			<Description>Status Code Categories</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>This is a parameter to display the Status Code of Categories.</Subtext>
+				<Subtext>
+					<![CDATA[This is a parameter to display the Status Code of Categories.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -195,7 +203,9 @@ Any inquiries can be addressed to:
 			<Description>Response Categories</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>This parameter holds the response of the HTTP request for Categories.</Subtext>
+				<Subtext>
+					<![CDATA[This parameter holds the response of the HTTP request for Categories.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -216,6 +226,334 @@ Any inquiries can be addressed to:
 				<Type lines="30">string</Type>
 			</Measurement>
 		</Param>
+		<Param id="9" trending="false">
+			<Name>statusCodeLatestQuote</Name>
+			<Description>Status Code Latest Quote</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This is a parameter to display the Status Code of Latest Quote.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>2</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="10" trending="false">
+			<Name>responseLatestQuote</Name>
+			<Description>Response Latest Quote</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This parameter holds the response of the HTTP request for Latest Quote.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>3</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type lines="30">string</Type>
+			</Measurement>
+		</Param>
+		<Param id="30" trending="true">
+			<Name>latestQuoteActiveCryptocurrencies</Name>
+			<Description>Active Cryptocurrencies</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="31" trending="true">
+			<Name>latestQuoteTotalCryptocurrencies</Name>
+			<Description>Total Cryptocurrencies</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="32" trending="true">
+			<Name>latestQuoteActiveExchanges</Name>
+			<Description>Active Exchanges</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>2</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="33" trending="true">
+			<Name>latestQuoteTotalExchanges</Name>
+			<Description>Total Exchanges</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>3</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="34" trending="true">
+			<Name>latestQuoteEthDominance</Name>
+			<Description>Etherium Dominance</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>4</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="35" trending="true">
+			<Name>latestQuoteBtcDominance</Name>
+			<Description>Bitcoin Dominance</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>6</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="36" trending="true">
+			<Name>latestQuoteEthDominance24PercentageChange</Name>
+			<Description>Etherium Dominance 24h Percentage Change</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>5</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="37" trending="true">
+			<Name>latestQuoteBtcDominance24PercentageChange</Name>
+			<Description>Bitcoin Dominance 24h Percentage Change</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>7</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="38" trending="true">
+			<Name>latestQuoteDefi24hPercentageChange</Name>
+			<Description>Defi 24h Percentage Change</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>8</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="39" trending="true">
+			<Name>latestQuoteTodayChangePercent</Name>
+			<Description>Today Change Percent</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>8</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="40" trending="false">
+			<Name>latestQuoteLastUpdate</Name>
+			<Description>Last Update</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext></Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Decimals>8</Decimals>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>8</Decimals>
+			</Display>
+			<Measurement>
+				<Type options="datetime">number</Type>
+			</Measurement>
+		</Param>
+		
 		<Param id="100">
 			<Name>latestListings</Name>
 			<Description>Latest Listings</Description>
@@ -224,13 +562,16 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="0" pid="101" type="retrieved" options=""/>
 				<ColumnOption idx="1" pid="102" type="retrieved" options=""/>
 				<ColumnOption idx="2" pid="103" type="retrieved" options=""/>
-				<ColumnOption idx="3" pid="104" type="retrieved" options=""/>
-				<ColumnOption idx="4" pid="105" type="retrieved" options=""/>
-				<ColumnOption idx="5" pid="106" type="retrieved" options=""/>
-				<ColumnOption idx="6" pid="107" type="retrieved" options=""/>
-				<ColumnOption idx="7" pid="108" type="retrieved" options=""/>
-				<ColumnOption idx="8" pid="109" type="retrieved" options=""/>
-				<ColumnOption idx="9" pid="110" type="displaykey" options=""/>
+				<ColumnOption idx="3" pid="112" type="retrieved" options=""/>
+				<ColumnOption idx="4" pid="104" type="retrieved" options=""/>
+				<ColumnOption idx="5" pid="105" type="retrieved" options=""/>
+				<ColumnOption idx="6" pid="106" type="retrieved" options=""/>
+				<ColumnOption idx="7" pid="107" type="retrieved" options=""/>
+				<ColumnOption idx="8" pid="108" type="retrieved" options=""/>
+				<ColumnOption idx="9" pid="109" type="retrieved" options=""/>
+				<ColumnOption idx="10" pid="110" type="retrieved" options=""/>
+				<ColumnOption idx="11" pid="111" type="retrieved" options=""/>
+				<ColumnOption idx="12" pid="113" type="displaykey" options=""/>
 			</ArrayOptions>
 			<Information>
 				<Subtext>
@@ -248,7 +589,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:101|0-102|1-103|2-104|3-106|5-108|7-105|4-107|6-109|8-110|9,width:100-100-100-156-100-100-100-156-154-100,sort:STRING|ASC|1-STRING-STRING-INT-INT-INT-INT-INT|ASC|0-INT-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:101|0-102|1-103|2-104|4-106|6-108|8-105|5-107|7-109|9-110|10-111|11-112|3-113|12,width:50-100-61-156-50-84-100-156-192-178-178-122-105,sort:STRING|ASC|1-STRING-STRING-INT-INT-INT-INT-INT|ASC|0-INT-STRING-INT-INT-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="101" trending="false">
@@ -371,6 +712,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
+				<!--coins-->
 				<RTDisplay>true</RTDisplay>
 			</Display>
 			<Measurement>
@@ -401,8 +743,8 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="108" trending="true">
-			<Name>latestListingsPrice</Name>
-			<Description>Price (Latest Listings)</Description>
+			<Name>latestListingsQuotePrice</Name>
+			<Description>Price Quote (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
@@ -423,7 +765,7 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="109" trending="true">
 			<Name>latestListings1hPercentageChange</Name>
-			<Description>Precentage Change (1h) (Latest Listings)</Description>
+			<Description>Quote Precentage Change (1h) (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
@@ -447,7 +789,83 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="110" trending="false">
+		<Param id="110" trending="true">
+			<Name>latestListingsQuoteVolumeChange24h</Name>
+			<Description>Quote Volume Change (24h) (Latest Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="111" trending="true">
+			<Name>latestListingsQuoteMarketCap</Name>
+			<Description>Quote Market Cap (Latest Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="112" trending="false">
+			<Name>latestListingsPlatformName</Name>
+			<Description>Platform Name (Latest Listings)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="113" trending="false">
 			<Name>latestListingsDisplayKey</Name>
 			<Description>Display Key (Latest Listings)</Description>
 			<Type>read</Type>
@@ -466,11 +884,12 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
+		
 		<Param id="200">
 			<Name>categories</Name>
 			<Description>Categories</Description>
 			<Type>array</Type>
-			<ArrayOptions index="0">
+			<ArrayOptions index="0" options=";naming=/201,202">
 				<ColumnOption idx="0" pid="201" type="retrieved" options=""/>
 				<ColumnOption idx="1" pid="202" type="retrieved" options=""/>
 				<ColumnOption idx="2" pid="203" type="retrieved" options=""/>
@@ -721,7 +1140,7 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 	</Params>
-	
+	<!--skip the ones with yesterda, the ones with total use-->
 	
 	<HTTP>
 		<Session id="1" name="Get Last Listings">
@@ -760,21 +1179,28 @@ Any inquiries can be addressed to:
 	</QActions>
 
 	<Groups>
-		<Group id="1">
-			<Name>Get Listings</Name>
-			<Description>Get Listings</Description>
-			<Type>poll</Type>
-			<Content>
-				<Session>2</Session>
-				<Session>1</Session>
-			</Content>
-		</Group>
 		<Group id="2">
 			<Name>After Startup</Name>
 			<Description>After Startup</Description>
 			<Type>poll action</Type>
 			<Content>
 				<Action>2</Action>
+			</Content>
+		</Group>
+		<Group id="3">
+			<Name>Get Latest Listings</Name>
+			<Description>Get Latest Listings</Description>
+			<Type>poll</Type>
+			<Content>
+				<Session>1</Session>
+			</Content>
+		</Group>
+		<Group id="4">
+			<Name>Get Categories</Name>
+			<Description>Get Categories</Description>
+			<Type>poll</Type>
+			<Content>
+				<Session>2</Session>
 			</Content>
 		</Group>
 	</Groups>
@@ -796,6 +1222,7 @@ Any inquiries can be addressed to:
 			<Type>action</Type>
 			<Content>
 				<Id>3</Id>
+				<Id>4</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
@@ -812,8 +1239,13 @@ Any inquiries can be addressed to:
 			<Type>run actions</Type>
 		</Action>
 		<Action id="3">
-			<Name>Execute Group</Name>
-			<On id="1">group</On>
+			<Name>Execute Group Get Latest Listings</Name>
+			<On id="3">group</On>
+			<Type>execute next</Type>
+		</Action>
+		<Action id="4">
+			<Name>Execute Group Get Categories</Name>
+			<On id="4">group</On>
 			<Type>execute next</Type>
 		</Action>
 	</Actions>
@@ -831,6 +1263,7 @@ Any inquiries can be addressed to:
 			<Time initial="true" dataDisplay="30000">60000</Time>
 			<Interval>75</Interval>
 			<Content>
+				
 			</Content>
 		</Timer>
 		<Timer id="3">
