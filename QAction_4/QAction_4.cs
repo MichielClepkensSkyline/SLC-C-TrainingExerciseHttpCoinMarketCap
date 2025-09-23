@@ -8,6 +8,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using static Skyline.DataMiner.Scripting.Parameter;
+using Skyline.DataMiner.Scripting.HTTP;
 
 /// <summary>
 /// DataMiner QAction Class.
@@ -22,10 +23,18 @@ public static class QAction
 	{
 		try
 		{
-			protocol.Log($"QA{protocol.QActionID}|RunQA4|QA4 wordt getriggered", LogType.Error, LogLevel.NoLogging);
-            //status code checken
-			Root root = SecureNewtonsoftDeserialization.DeserializeObject<Root>(protocol.GetParameter(Parameter.responsecontentcategories).ToString());
-			FillCategories(protocol, root.Categories);
+            if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodecategories))
+            {
+                Root root = SecureNewtonsoftDeserialization.DeserializeObject<Root>(protocol.GetParameter(Parameter.responsecontentcategories).ToString());
+                if (root.Status.ErrorCode == 0)
+                {
+                    FillCategories(protocol, root.Categories);
+                }
+                else
+                {
+                    protocol.Log($"QA{protocol.QActionID}|QA4Run|{root.Status.ErrorMessage}", LogType.Error, LogLevel.NoLogging);
+                }
+            }
         }
         catch (Exception ex)
 		{
@@ -56,7 +65,8 @@ public static class QAction
         }
 
         object[] categoriesColumns = protocol.categories.QActionRowsToObjectFillArray(categorieRows.Values.ToArray());
-        object succes = protocol.FillArray(Parameter.Categories.tablePid, categoriesColumns);
-        protocol.Log($"QA{protocol.QActionID}|FillCategories|{succes.ToString()} SOFIAN", LogType.Error, LogLevel.NoLogging); // Kan toevoegen voor het checken op succes.
+        protocol.FillArray(Parameter.Categories.tablePid, categoriesColumns);
+        /*object succes = protocol.FillArray(Parameter.Categories.tablePid, categoriesColumns);
+        protocol.Log($"QA{protocol.QActionID}|FillCategories|{succes.ToString()} SOFIAN", LogType.Error, LogLevel.NoLogging); // Kan toevoegen voor het checken op succes.*/
     }
 }

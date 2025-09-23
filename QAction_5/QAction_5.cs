@@ -23,13 +23,18 @@ public static class QAction
 	{
 		try
 		{
-            protocol.Log($"QA{protocol.QActionID}|QA5Run|{StatusCode.CheckStatusCode()}", LogType.Error, LogLevel.NoLogging);
-            //bool yes = HTTP.CheckStatusCode();
-            //CheckStatusCode();
-            protocol.Log($"QA{protocol.QActionID}|RunQA5|QA5 wordt getriggered", LogType.Error, LogLevel.NoLogging);
-            //status code checken
-            Root root = SecureNewtonsoftDeserialization.DeserializeObject<Root>(protocol.GetParameter(Parameter.responsecontentlatestquotes).ToString());
-            FillLatestQuotes(protocol, root.Data);
+            if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodelatestquotes))
+            {
+                Root root = SecureNewtonsoftDeserialization.DeserializeObject<Root>(protocol.GetParameter(Parameter.responsecontentlatestquotes).ToString());
+                if (root.Status.ErrorCode == 0)
+                {
+                    FillLatestQuotes(protocol, root.Data);
+                }
+                else
+                {
+                    protocol.Log($"QA{protocol.QActionID}|QA3Run|{root.Status.ErrorMessage}", LogType.Error, LogLevel.NoLogging);
+                }
+            }
         }
 		catch (Exception ex)
 		{

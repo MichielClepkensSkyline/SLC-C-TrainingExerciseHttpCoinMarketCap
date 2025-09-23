@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
 using System.Globalization;
+using System.Linq;
 using System.Text;
-
 using Skyline.DataMiner.Scripting;
+using Skyline.DataMiner.Scripting.HTTP;
+using Skyline.DataMiner.Scripting.Listing;
 using Skyline.DataMiner.Utils.Protocol.Extension;
 using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
-using System.Linq;
-using Skyline.DataMiner.Scripting.Listing;
 
 /// <summary>
 /// DataMiner QAction Class.
@@ -23,27 +23,18 @@ public static class QAction
 	{
 		try
 		{
-			// Check if status code is 200? (Moet ik ook andere codes chechken? Checken of het begint met een 2?
-			// Beter om in de content status de check te doen?
-			protocol.Log($"QA{protocol.QActionID}|Run|{protocol.GetParameter(Parameter.statuscode)}", LogType.Error, LogLevel.NoLogging);
-			string statusCode = (string)protocol.GetParameter(Parameter.statuscode);
-			int status = Int32.Parse(statusCode.Split(' ')[1]);
-			protocol.Log($"QA{protocol.QActionID}|Run|{status}", LogType.Error, LogLevel.NoLogging);
-			if (status == 200)
+			if (StatusCode.CheckStatusCode(protocol, Parameter.statuscode))
 			{
-				protocol.Log($"QA{protocol.QActionID}|Run|YES, Let's go", LogType.Error, LogLevel.NoLogging);
 				Root root = SecureNewtonsoftDeserialization.DeserializeObject<Root>(protocol.GetParameter(Parameter.responsecontent).ToString());
-				int counter = 0;
-				foreach (Listing listing in root.Listings)
+				if (root.Status.ErrorCode == 0)
 				{
-					protocol.Log($"QA{protocol.QActionID}|Run|{listing.Name}", LogType.Error, LogLevel.NoLogging);
-					counter++;
+					FillLastListings(protocol, root.Listings);
 				}
-
-				protocol.Log($"QA{protocol.QActionID}|Run|{counter}", LogType.Error, LogLevel.NoLogging);
-				FillLastListings(protocol, root.Listings);
-			}
-			//Parameter.responsecontent
+				else
+				{
+					protocol.Log($"QA{protocol.QActionID}|QA3Run|{root.Status.ErrorMessage}", LogType.Error, LogLevel.NoLogging);
+				}
+            }
 		}
 		catch (Exception ex)
 		{
@@ -51,12 +42,11 @@ public static class QAction
 		}
 	}
 
-	private static void FillLastListings(SLProtocolExt protocol, List<Listing> last_listings)
+	private static void FillLastListings(SLProtocolExt protocol, List<Listing> lastListings)
 	{
 		Dictionary<string, LastlistingQActionRow> lastListingRows = new Dictionary<string, LastlistingQActionRow>();
-		foreach (Listing listing in last_listings)
+		foreach (Listing listing in lastListings)
 		{
-			protocol.Log($"QA{protocol.QActionID}|Run|{listing.Platform == null}", LogType.Error, LogLevel.NoLogging);
 			LastlistingQActionRow lastlistingQActionRow = new LastlistingQActionRow
 			{
 				Lastlistingid = listing.Id,
@@ -64,7 +54,7 @@ public static class QAction
 				Lastlistingsymbol = listing.Symbol,
 				Lastlistingdateadded = listing.DateAdded,
 				Lastlistingtotalsupply = listing.TotalSupply,
-				Lastlistingplatformname = listing.Platform != null ? listing.Platform.Name : "", // Dit kan null zijn, wat dan invullen?
+				Lastlistingplatformname = listing.Platform != null ? listing.Platform.Name : string.Empty, // Dit kan null zijn, wat dan invullen?
 				Lastlistinglastupdated = listing.LastUpdated,
 				Lastlistingquote = listing.Quote.USD.ToString(),
 				Lastlistingquoteprice = listing.Quote.USD.Price,
