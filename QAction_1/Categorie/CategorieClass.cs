@@ -1,4 +1,4 @@
-﻿namespace QAction_4
+﻿namespace Skyline.DataMiner.Scripting.Categorie
 {
     using System;
     using System.Collections.Generic;
@@ -69,6 +69,4 @@
         [JsonProperty("notice")]
         public object Notice { get; set; }
     }
-
-
 }

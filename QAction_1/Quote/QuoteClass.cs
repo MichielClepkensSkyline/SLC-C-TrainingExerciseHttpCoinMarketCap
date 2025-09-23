@@ -1,9 +1,8 @@
-﻿namespace QAction_5
+﻿namespace Skyline.DataMiner.Scripting.Quote
 {
     using System;
     using Newtonsoft.Json;
 
-    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
     public class Data
     {
         [JsonProperty("active_cryptocurrencies")]
@@ -219,6 +218,4 @@
         [JsonProperty("last_updated")]
         public DateTime LastUpdated { get; set; }
     }
-
-
 }

@@ -7,6 +7,7 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\QAction_Helper\QAction_Helper.csproj" />
+	<ProjectReference Include="..\QAction_1\QAction_1.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
