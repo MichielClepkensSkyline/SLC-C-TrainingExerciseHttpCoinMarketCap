@@ -38,6 +38,41 @@ public static class Parameter
 	public const int responsecontentlatestquotes_31 = 31;
 	/// <summary>PID: 31 | Type: read</summary>
 	public const int responsecontentlatestquotes = 31;
+	/// <summary>PID: 600 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int activecryptocurrencies_600 = 600;
+	/// <summary>PID: 600 | Type: read</summary>
+	public const int activecryptocurrencies = 600;
+	/// <summary>PID: 601 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int totalcryptocurrencies_601 = 601;
+	/// <summary>PID: 601 | Type: read</summary>
+	public const int totalcryptocurrencies = 601;
+	/// <summary>PID: 602 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int activeexchanges_602 = 602;
+	/// <summary>PID: 602 | Type: read</summary>
+	public const int activeexchanges = 602;
+	/// <summary>PID: 603 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int totalexchanges_603 = 603;
+	/// <summary>PID: 603 | Type: read</summary>
+	public const int totalexchanges = 603;
+	/// <summary>PID: 604 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int ethereumdominance_604 = 604;
+	/// <summary>PID: 604 | Type: read</summary>
+	public const int ethereumdominance = 604;
+	/// <summary>PID: 605 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int bitcoindominance_605 = 605;
+	/// <summary>PID: 605 | Type: read</summary>
+	public const int bitcoindominance = 605;
+	/// <summary>PID: 606 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int lastupdated_606 = 606;
+	/// <summary>PID: 606 | Type: read</summary>
+	public const int lastupdated = 606;
 	public class Write
 	{
 		/// <summary>PID: 4 | Type: write</summary>
@@ -379,6 +414,20 @@ public interface SLProtocolExt : SLProtocol
 	object Categoriestitle { get; set; }
 	object Categoriesdescription_411 { get; set; }
 	object Categoriesdescription { get; set; }
+	object Activecryptocurrencies_600 { get; set; }
+	object Activecryptocurrencies { get; set; }
+	object Totalcryptocurrencies_601 { get; set; }
+	object Totalcryptocurrencies { get; set; }
+	object Activeexchanges_602 { get; set; }
+	object Activeexchanges { get; set; }
+	object Totalexchanges_603 { get; set; }
+	object Totalexchanges { get; set; }
+	object Ethereumdominance_604 { get; set; }
+	object Ethereumdominance { get; set; }
+	object Bitcoindominance_605 { get; set; }
+	object Bitcoindominance { get; set; }
+	object Lastupdated_606 { get; set; }
+	object Lastupdated { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
@@ -535,6 +584,41 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Categoriesdescription_411 {get { return GetParameter(411); }set { SetParameter(411, value); }}
 	/// <summary>PID: 411  | Type: read</summary>
 	public System.Object Categoriesdescription {get { return GetParameter(411); }set { SetParameter(411, value); }}
+	/// <summary>PID: 600  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Activecryptocurrencies_600 {get { return GetParameter(600); }set { SetParameter(600, value); }}
+	/// <summary>PID: 600  | Type: read</summary>
+	public System.Object Activecryptocurrencies {get { return GetParameter(600); }set { SetParameter(600, value); }}
+	/// <summary>PID: 601  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Totalcryptocurrencies_601 {get { return GetParameter(601); }set { SetParameter(601, value); }}
+	/// <summary>PID: 601  | Type: read</summary>
+	public System.Object Totalcryptocurrencies {get { return GetParameter(601); }set { SetParameter(601, value); }}
+	/// <summary>PID: 602  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Activeexchanges_602 {get { return GetParameter(602); }set { SetParameter(602, value); }}
+	/// <summary>PID: 602  | Type: read</summary>
+	public System.Object Activeexchanges {get { return GetParameter(602); }set { SetParameter(602, value); }}
+	/// <summary>PID: 603  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Totalexchanges_603 {get { return GetParameter(603); }set { SetParameter(603, value); }}
+	/// <summary>PID: 603  | Type: read</summary>
+	public System.Object Totalexchanges {get { return GetParameter(603); }set { SetParameter(603, value); }}
+	/// <summary>PID: 604  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Ethereumdominance_604 {get { return GetParameter(604); }set { SetParameter(604, value); }}
+	/// <summary>PID: 604  | Type: read</summary>
+	public System.Object Ethereumdominance {get { return GetParameter(604); }set { SetParameter(604, value); }}
+	/// <summary>PID: 605  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Bitcoindominance_605 {get { return GetParameter(605); }set { SetParameter(605, value); }}
+	/// <summary>PID: 605  | Type: read</summary>
+	public System.Object Bitcoindominance {get { return GetParameter(605); }set { SetParameter(605, value); }}
+	/// <summary>PID: 606  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastupdated_606 {get { return GetParameter(606); }set { SetParameter(606, value); }}
+	/// <summary>PID: 606  | Type: read</summary>
+	public System.Object Lastupdated {get { return GetParameter(606); }set { SetParameter(606, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{

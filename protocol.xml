@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>99</DeviceOID>
 	<ElementType>Data Collector</ElementType>
 	<Type relativeTimers="true">http</Type>
-	<Display defaultPage="General" pageOrder="General;----------;LastListing;Categories" wideColumnPages=""/>
+	<Display defaultPage="General" pageOrder="General;----------;LastListing;Categories;LatestQuote" wideColumnPages=""/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -788,6 +788,212 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
+		<Param id="600" trending="false">
+			<Name>activeCryptocurrencies</Name>
+			<Description>Active Cryptocurrencies</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This is the total amount of active cryptocurrencies.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>LatestQuote</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="601" trending="false">
+			<Name>totalCryptocurrencies</Name>
+			<Description>Total Cryptocurrencies</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This is the total amount of cryptocurrencies that ever existed.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>LatestQuote</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="602" trending="false">
+			<Name>activeExchanges</Name>
+			<Description>Active Exchanges</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[The total amount of active exchanges.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>LatestQuote</Page>
+						<Column>1</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="603" trending="false">
+			<Name>totalExchanges</Name>
+			<Description>Total Exchanges</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[The total amount of exchanges that ever existed.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>LatestQuote</Page>
+						<Column>1</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="604" trending="false">
+			<Name>ethereumDominance</Name>
+			<Description>Ethereum Dominance</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This is in percentage the total amount of valuta that is inside of the Ethereum coin.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>LatestQuote</Page>
+						<Column>0</Column>
+						<Row>2</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>analog</Type>
+			</Measurement>
+		</Param>
+		<Param id="605" trending="false">
+			<Name>bitcoinDominance</Name>
+			<Description>Bitcoin Dominance</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This is in percentage the total amount of valuta that is inside of the Bitcoin coin.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>LatestQuote</Page>
+						<Column>1</Column>
+						<Row>2</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>analog</Type>
+			</Measurement>
+		</Param>
+		<Param id="606" trending="false">
+			<Name>lastUpdated</Name>
+			<Description>Last Time Updated</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[The timestamp of the latest update.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Decimals>8</Decimals>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>8</Decimals>
+				<Positions>
+					<Position>
+						<Page>LatestQuote</Page>
+						<Column>0</Column>
+						<Row>4</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="datetime">number</Type>
+			</Measurement>
+		</Param>
 	</Params>
 
 	<QActions>
@@ -795,6 +1001,7 @@ Any inquiries can be addressed to:
 		<QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
 		<QAction id="3" name="Process Latest Listings Response" encoding="csharp" triggers="11"/>
 		<QAction id="4" name="Process Categories Response" encoding="csharp" triggers="21"/>
+		<QAction id="5" name="Process Latest Quotes Response" encoding="csharp" triggers="31"/>
 	</QActions>
 
 	<HTTP>
