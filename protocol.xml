@@ -251,7 +251,7 @@ Any inquiries can be addressed to:
 				<Type lines="20">string</Type>
 			</Measurement>
 		</Param>
-		<Param id="200">
+		<Param id="200"> <!--De params die ik wil: Id, Name, Symbol, cmc_rank, num_market_pairs, circulating_supply, total_supply, max_supply, last_updated, date_added, tvl_ratio, platform_name, quote, quote_price, quote_volume_24h, quote_volume_change_24h, market_cap, market_cap_dominance, quote_percent_change_1h, quote_percent_change_24h, quote_percent_change_7d-->
 			<Name>lastListing</Name>
 			<Description>Last Listings</Description>
 			<Type>array</Type>
@@ -1131,19 +1131,20 @@ Any inquiries can be addressed to:
 
 	<Timers>
 		<Timer id="1">
-			<Name>Fast Timer (10s)</Name>
-			<Time initial="true">10000</Time>
+			<Name>Fast Timer (30s)</Name>
+			<Time initial="true">30000</Time>
 			<Interval>75</Interval>
 			<Content>
+				<Group>5</Group>
 			</Content>
 		</Timer>
 		<Timer id="2">
 			<Name>Medium Timer (1m)</Name>
-			<Time initial="true" dataDisplay="30000">60000</Time>
+			<Time initial="true">60000</Time>
 			<Interval>75</Interval>
 			<Content>
 				<Group>4</Group>
-				<Group>5</Group>
+				
 				<Group>6</Group>
 			</Content>
 		</Timer>
