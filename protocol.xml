@@ -181,8 +181,8 @@ Any inquiries can be addressed to:
 				<Positions>
 					<Position>
 						<Page>General</Page>
-						<Column>0</Column>
-						<Row>2</Row>
+						<Column>1</Column>
+						<Row>0</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -207,8 +207,8 @@ Any inquiries can be addressed to:
 				<Positions>
 					<Position>
 						<Page>General</Page>
-						<Column>0</Column>
-						<Row>3</Row>
+						<Column>1</Column>
+						<Row>1</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -477,6 +477,18 @@ Any inquiries can be addressed to:
 				</Response>
 			</Connection>
 		</Session>
+		<Session id="2" name="Get Categories">
+			<Connection id="1" name="Get Categories">
+				<Request verb="GET" url="/api/custom/coinmarketcap?content=categories">
+					<Headers>
+						<Header key="Authorization" pid="6"></Header>
+					</Headers>
+				</Request>
+				<Response statusCode="7">
+					<Content pid="8"></Content>
+				</Response>
+			</Connection>
+		</Session>
 	</HTTP>
 	
 
@@ -494,6 +506,7 @@ Any inquiries can be addressed to:
 			<Type>poll</Type>
 			<Content>
 				<Session>1</Session>
+				<Session>2</Session>
 			</Content>
 		</Group>
 		<Group id="2">
