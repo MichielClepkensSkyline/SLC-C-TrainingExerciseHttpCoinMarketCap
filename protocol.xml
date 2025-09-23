@@ -532,6 +532,8 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="6" pid="407" type="retrieved" options="" />
 				<ColumnOption idx="7" pid="408" type="retrieved" options="" />
 				<ColumnOption idx="8" pid="409" type="retrieved" options="" />
+				<ColumnOption idx="9" pid="410" type="retrieved" options="" />
+				<ColumnOption idx="10" pid="411" type="retrieved" options="" />
 			</ArrayOptions>
 			<Information>
 				<Subtext>
@@ -549,7 +551,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:401|0-402|1-403|2-404|3-406|5-405|4-407|6-408|7-409|8,width:100-100-122-142-129-100-100-104-156,sort:STRING-STRING-INT-INT-INT-INT-INT-INT-INT,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:401|0-402|1-403|2-404|3-406|5-405|4-407|6-408|7-409|8-410|9-411|10,width:100-100-122-142-129-100-100-104-156-100-100,sort:STRING-STRING-INT-INT-INT-INT-INT-INT-INT-STRING-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="401" trending="false">
@@ -744,6 +746,46 @@ Any inquiries can be addressed to:
 			</Display>
 			<Measurement>
 				<Type options="datetime">number</Type>
+			</Measurement>
+		</Param>
+		<Param id="410" trending="false">
+			<Name>categoriesTitle</Name>
+			<Description>Title (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[The title of the categorie entry.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="411" trending="false">
+			<Name>categoriesDescription</Name>
+			<Description>Description (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>The description of the categorie entry.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
 			</Measurement>
 		</Param>
 	</Params>

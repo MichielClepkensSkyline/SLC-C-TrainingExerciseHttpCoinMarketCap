@@ -64,7 +64,7 @@ public static class QAction
 				Lastlistingsymbol = listing.Symbol,
 				Lastlistingdateadded = listing.DateAdded,
 				Lastlistingtotalsupply = listing.TotalSupply,
-				Lastlistingplatformname = listing.Platform != null ? listing.Platform.Name : "Test", // Dit kan null zijn, wat dan invullen?
+				Lastlistingplatformname = listing.Platform != null ? listing.Platform.Name : "", // Dit kan null zijn, wat dan invullen?
 				Lastlistinglastupdated = listing.LastUpdated,
 				Lastlistingquote = listing.Quote.USD.ToString(),
 				Lastlistingquoteprice = listing.Quote.USD.Price,

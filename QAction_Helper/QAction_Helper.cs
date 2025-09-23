@@ -229,6 +229,16 @@ public static class Parameter
 			public const int categorieslastupdated_409 = 409;
 			/// <summary>PID: 409 | Type: read</summary>
 			public const int categorieslastupdated = 409;
+			/// <summary>PID: 410 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int categoriestitle_410 = 410;
+			/// <summary>PID: 410 | Type: read</summary>
+			public const int categoriestitle = 410;
+			/// <summary>PID: 411 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int categoriesdescription_411 = 411;
+			/// <summary>PID: 411 | Type: read</summary>
+			public const int categoriesdescription = 411;
 			public class Write
 			{
 			}
@@ -280,6 +290,16 @@ public static class Parameter
 			public const int categorieslastupdated_409 = 8;
 			/// <summary>IDX: 8 | Type: read</summary>
 			public const int categorieslastupdated = 8;
+			/// <summary>IDX: 9 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int categoriestitle_410 = 9;
+			/// <summary>IDX: 9 | Type: read</summary>
+			public const int categoriestitle = 9;
+			/// <summary>IDX: 10 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int categoriesdescription_411 = 10;
+			/// <summary>IDX: 10 | Type: read</summary>
+			public const int categoriesdescription = 10;
 		}
 	}
 }
@@ -355,6 +375,10 @@ public interface SLProtocolExt : SLProtocol
 	object Categoriesvolumechange { get; set; }
 	object Categorieslastupdated_409 { get; set; }
 	object Categorieslastupdated { get; set; }
+	object Categoriestitle_410 { get; set; }
+	object Categoriestitle { get; set; }
+	object Categoriesdescription_411 { get; set; }
+	object Categoriesdescription { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
@@ -501,6 +525,16 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Categorieslastupdated_409 {get { return GetParameter(409); }set { SetParameter(409, value); }}
 	/// <summary>PID: 409  | Type: read</summary>
 	public System.Object Categorieslastupdated {get { return GetParameter(409); }set { SetParameter(409, value); }}
+	/// <summary>PID: 410  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Categoriestitle_410 {get { return GetParameter(410); }set { SetParameter(410, value); }}
+	/// <summary>PID: 410  | Type: read</summary>
+	public System.Object Categoriestitle {get { return GetParameter(410); }set { SetParameter(410, value); }}
+	/// <summary>PID: 411  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Categoriesdescription_411 {get { return GetParameter(411); }set { SetParameter(411, value); }}
+	/// <summary>PID: 411  | Type: read</summary>
+	public System.Object Categoriesdescription {get { return GetParameter(411); }set { SetParameter(411, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{
@@ -634,8 +668,18 @@ public class CategoriesQActionRow : QActionTableRow
 	public System.Object Categorieslastupdated_409 { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
 	/// <summary>PID: 409 | Type: read</summary>
 	public System.Object Categorieslastupdated { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
-	public CategoriesQActionRow() : base(0, 9) { }
-	public CategoriesQActionRow(System.Object[] oRow) : base(0, 9, oRow) { }
+	/// <summary>PID: 410 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Categoriestitle_410 { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
+	/// <summary>PID: 410 | Type: read</summary>
+	public System.Object Categoriestitle { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
+	/// <summary>PID: 411 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Categoriesdescription_411 { get { if (base.Columns.ContainsKey(10)) { return base.Columns[10]; } else { return null; } } set { if (base.Columns.ContainsKey(10)) { base.Columns[10] = value; } else { base.Columns.Add(10, value); } } }
+	/// <summary>PID: 411 | Type: read</summary>
+	public System.Object Categoriesdescription { get { if (base.Columns.ContainsKey(10)) { return base.Columns[10]; } else { return null; } } set { if (base.Columns.ContainsKey(10)) { base.Columns[10] = value; } else { base.Columns.Add(10, value); } } }
+	public CategoriesQActionRow() : base(0, 11) { }
+	public CategoriesQActionRow(System.Object[] oRow) : base(0, 11, oRow) { }
 	public static implicit operator CategoriesQActionRow(System.Object[] source) { return new CategoriesQActionRow(source); }
 	public static implicit operator System.Object[](CategoriesQActionRow source) { return source.ToObjectArray(); }
 }
