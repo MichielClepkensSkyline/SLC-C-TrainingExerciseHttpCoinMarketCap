@@ -265,6 +265,7 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Decimals>0</Decimals>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -298,6 +299,7 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Decimals>0</Decimals>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -342,7 +344,7 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<MaL>100</MaL>
 				<MiL>200</MiL>
 				<WaL>500</WaL>
-				<Normal>100</Normal>
+				<Normal>1000</Normal>
 				<WaH>50000</WaH>
 				<MiH>70000</MiH>
 				<MaH>90000</MaH>
@@ -380,7 +382,7 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<MaL>100</MaL>
 				<MiL>200</MiL>
 				<WaL>500</WaL>
-				<Normal>100</Normal>
+				<Normal>1000</Normal>
 				<WaH>50000</WaH>
 				<MiH>70000</MiH>
 				<MaH>90000</MaH>
@@ -418,7 +420,7 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<MaL>100</MaL>
 				<MiL>200</MiL>
 				<WaL>500</WaL>
-				<Normal>100</Normal>
+				<Normal>1000</Normal>
 				<WaH>50000</WaH>
 				<MiH>70000</MiH>
 				<MaH>90000</MaH>
@@ -537,7 +539,7 @@ The name of the parent platform cryptocurrency.]]>
 			</Measurement>
 		</Param>
 		<Param id="213" trending="false">
-			<Name>lastListingquote</Name>
+			<Name>lastListingQuote</Name>
 			<Description>Quote (Last Listings)</Description>
 			<Type>read</Type>
 			<Information>
@@ -564,7 +566,7 @@ A market quote in the currency conversion option.]]>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[Price in the specified currency for this historical.]]>
+					<![CDATA[Price in the specified currency for this coin.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -581,7 +583,7 @@ A market quote in the currency conversion option.]]>
 				<MaL>100</MaL>
 				<MiL>200</MiL>
 				<WaL>500</WaL>
-				<Normal>100</Normal>
+				<Normal>1000</Normal>
 				<WaH>50000</WaH>
 				<MiH>70000</MiH>
 				<MaH>90000</MaH>
@@ -676,7 +678,7 @@ A market quote in the currency conversion option.]]>
 		</Param>
 		<Param id="217" trending="true">
 			<Name>lastListingMarketCap</Name>
-			<Description>Market Cap (Last Listing)</Description>
+			<Description>Market Cap (Last Listings)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
@@ -691,10 +693,10 @@ A market quote in the currency conversion option.]]>
 			<Alarm>
 				<Monitored>true</Monitored>
 				<CL>500</CL>
-				<MaL>1 000</MaL>
-				<MiL>5 000</MiL>
-				<WaL>10 000</WaL>
-				<Normal>20 000</Normal>
+				<MaL>1000</MaL>
+				<MiL>5000</MiL>
+				<WaL>10000</WaL>
+				<Normal>20000</Normal>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1012,6 +1014,7 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Decimals>0</Decimals>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1084,10 +1087,10 @@ The unique ID of the category.]]>
 			<Alarm>
 				<Monitored>true</Monitored>
 				<CL>500</CL>
-				<MaL>1 000</MaL>
-				<MiL>5 000</MiL>
-				<WaL>10 000</WaL>
-				<Normal>20 000</Normal>
+				<MaL>1000</MaL>
+				<MiL>5000</MiL>
+				<WaL>10000</WaL>
+				<Normal>20000</Normal>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1272,6 +1275,7 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Decimals>0</Decimals>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1310,6 +1314,7 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Decimals>0</Decimals>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1348,6 +1353,7 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Decimals>0</Decimals>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1389,6 +1395,7 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Decimals>0</Decimals>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1430,6 +1437,7 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Decimals>0</Decimals>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1489,6 +1497,10 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>LatestQuote</Page>
@@ -1535,6 +1547,10 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>LatestQuote</Page>
@@ -1705,10 +1721,10 @@ The unique ID of the category.]]>
 			<Alarm>
 				<Monitored>true</Monitored>
 				<CL>500</CL>
-				<MaL>1 000</MaL>
-				<MiL>5 000</MiL>
-				<WaL>10 000</WaL>
-				<Normal>20 000</Normal>
+				<MaL>1000</MaL>
+				<MiL>5000</MiL>
+				<WaL>10000</WaL>
+				<Normal>20000</Normal>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1760,6 +1776,10 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>%</Units>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>LatestQuote</Page>
@@ -1838,10 +1858,10 @@ The unique ID of the category.]]>
 			<Alarm>
 				<Monitored>true</Monitored>
 				<CL>500</CL>
-				<MaL>1 000</MaL>
-				<MiL>5 000</MiL>
-				<WaL>10 000</WaL>
-				<Normal>20 000</Normal>
+				<MaL>1000</MaL>
+				<MiL>5000</MiL>
+				<WaL>10000</WaL>
+				<Normal>20000</Normal>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1893,6 +1913,10 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>%</Units>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>LatestQuote</Page>
@@ -1918,6 +1942,7 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Decimals>0</Decimals>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1959,6 +1984,7 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Decimals>0</Decimals>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1999,10 +2025,10 @@ The unique ID of the category.]]>
 			<Alarm>
 				<Monitored>true</Monitored>
 				<CL>500</CL>
-				<MaL>1 000</MaL>
-				<MiL>5 000</MiL>
-				<WaL>10 000</WaL>
-				<Normal>20 000</Normal>
+				<MaL>1000</MaL>
+				<MiL>5000</MiL>
+				<WaL>10000</WaL>
+				<Normal>20000</Normal>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -2100,7 +2126,6 @@ The unique ID of the category.]]>
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
-		<QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
 		<QAction id="3" name="Process Latest Listings Response" encoding="csharp" triggers="11"/>
 		<QAction id="4" name="Process Categories Response" encoding="csharp" triggers="21"/>
 		<QAction id="5" name="Process Latest Quotes Response" encoding="csharp" triggers="31"/>
