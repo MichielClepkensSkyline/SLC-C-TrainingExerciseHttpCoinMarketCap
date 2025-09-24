@@ -21,9 +21,11 @@ public static class QAction
 			var rowPK = protocol.RowKey();
 			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Row: {rowPK}", LogType.Error, LogLevel.NoLogging);
 
-			string api = "/api/custom/coinmarketcap?content=category&id=" + rowPK.ToString();
+			string api = "api/custom/coinmarketcap?content=category&id=" + rowPK.ToString();
 
 			protocol.SetParameter(Parameter.individualcategoryapi_13, api);
+
+			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|API :{protocol.GetParameter(Parameter.individualcategoryapi_13)}", LogType.Error, LogLevel.NoLogging);
 		}
 		catch (Exception ex)
 		{

@@ -1377,6 +1377,14 @@ Any inquiries can be addressed to:
 				<Session>3</Session>
 			</Content>
 		</Group>
+		<Group id="6">
+			<Name>Get Individual Category</Name>
+			<Description>Get Individual Category</Description>
+			<Type>poll</Type>
+			<Content>
+				<Session>4</Session>
+			</Content>
+		</Group>
 	</Groups>
 
 	<Triggers>
@@ -1398,6 +1406,15 @@ Any inquiries can be addressed to:
 				<Id>3</Id>
 				<Id>4</Id>
 				<Id>5</Id>
+			</Content>
+		</Trigger>
+		<Trigger id="3">
+			<Name>On Individual Category API Change</Name>
+			<On id="13">parameter</On>
+			<Time>change</Time>
+			<Type>action</Type>
+			<Content>
+				<Id>6</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
@@ -1426,6 +1443,11 @@ Any inquiries can be addressed to:
 		<Action id="5">
 			<Name>Execute Group Get Latest Quote</Name>
 			<On id="5">group</On>
+			<Type>execute next</Type>
+		</Action>
+		<Action id="6">
+			<Name>Get Individual Category</Name>
+			<On id="6">group</On>
 			<Type>execute next</Type>
 		</Action>
 	</Actions>
