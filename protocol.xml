@@ -382,6 +382,7 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>currencies</Units>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -413,6 +414,7 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>currencies</Units>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -702,7 +704,7 @@ Any inquiries can be addressed to:
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[]]>
+					<![CDATA[This is a parameter to display the date the quote was last updated.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -773,8 +775,7 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="9" pid="109" type="retrieved" options=""/>
 				<ColumnOption idx="10" pid="110" type="retrieved" options=""/>
 				<ColumnOption idx="11" pid="111" type="retrieved" options=""/>
-				<ColumnOption idx="12" pid="114" type="retrieved" options=""/>
-				<ColumnOption idx="13" pid="113" type="displaykey" options=""/>
+				<ColumnOption idx="12" pid="113" type="displaykey" options=""/>
 			</ArrayOptions>
 			<Information>
 				<Subtext>
@@ -792,7 +793,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:101|0-102|1-103|2-104|4-106|6-108|8-105|5-107|7-109|9-110|10-111|11-112|3-113|13-114|12,width:50-100-61-156-50-84-100-156-192-178-178-122-105-100,sort:STRING|ASC|1-STRING-STRING-INT-INT-INT-INT-INT|ASC|0-INT-STRING-INT-INT-STRING-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:101|0-102|1-103|2-104|4-106|6-108|8-105|5-107|7-109|9-110|10-111|11-112|3-113|12,width:50-100-61-156-50-84-100-156-192-178-178-122-105-100,sort:STRING|ASC|1-STRING-STRING-INT-INT-INT-INT-INT|ASC|0-INT-STRING-INT-INT-STRING-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="101" trending="false">
@@ -895,6 +896,7 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>coins</Units>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -918,7 +920,6 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
-				<!--coins-->
 				<RTDisplay>true</RTDisplay>
 				<Range>
 					<Low>0</Low>
@@ -968,6 +969,7 @@ Any inquiries can be addressed to:
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>2</Decimals>
+				<Units>$</Units>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1104,7 +1106,7 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="114" trending="false">
+		<!--<Param id="114" trending="false">
 			<Name>latestListingsQuoteCurrency</Name>
 			<Description>Currency (Latest Listings)</Description>
 			<Type>read</Type>
@@ -1124,7 +1126,7 @@ Any inquiries can be addressed to:
 			<Measurement>
 				<Type>string</Type>
 			</Measurement>
-		</Param>
+		</Param>-->
 		<Param id="200">
 			<Name>categories</Name>
 			<Description>Categories</Description>
@@ -1218,6 +1220,7 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>tokens</Units>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1269,6 +1272,7 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>$</Units>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1320,6 +1324,7 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>$</Units>
 				<Range>
 					<Low>0</Low>
 				</Range>
