@@ -33,6 +33,66 @@ public static class Parameter
 	public const int jsonresponsecategories_301 = 301;
 	/// <summary>PID: 301 | Type: read</summary>
 	public const int jsonresponsecategories = 301;
+	/// <summary>PID: 500 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int httpresponsecodelatestquotes_500 = 500;
+	/// <summary>PID: 500 | Type: read</summary>
+	public const int httpresponsecodelatestquotes = 500;
+	/// <summary>PID: 501 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int jsonresponselatestquotes_501 = 501;
+	/// <summary>PID: 501 | Type: read</summary>
+	public const int jsonresponselatestquotes = 501;
+	/// <summary>PID: 503 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int activecryptocurrencies_503 = 503;
+	/// <summary>PID: 503 | Type: read</summary>
+	public const int activecryptocurrencies = 503;
+	/// <summary>PID: 504 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int activemarketpairs_504 = 504;
+	/// <summary>PID: 504 | Type: read</summary>
+	public const int activemarketpairs = 504;
+	/// <summary>PID: 505 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int activeexchange_505 = 505;
+	/// <summary>PID: 505 | Type: read</summary>
+	public const int activeexchange = 505;
+	/// <summary>PID: 506 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int lastupdated_506 = 506;
+	/// <summary>PID: 506 | Type: read</summary>
+	public const int lastupdated = 506;
+	/// <summary>PID: 508 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int btcdominance_508 = 508;
+	/// <summary>PID: 508 | Type: read</summary>
+	public const int btcdominance = 508;
+	/// <summary>PID: 509 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int ethdominance_509 = 509;
+	/// <summary>PID: 509 | Type: read</summary>
+	public const int ethdominance = 509;
+	/// <summary>PID: 511 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int totalmarketcap_511 = 511;
+	/// <summary>PID: 511 | Type: read</summary>
+	public const int totalmarketcap = 511;
+	/// <summary>PID: 512 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int total24hvolume_512 = 512;
+	/// <summary>PID: 512 | Type: read</summary>
+	public const int total24hvolume = 512;
+	/// <summary>PID: 514 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int defimarketcap_514 = 514;
+	/// <summary>PID: 514 | Type: read</summary>
+	public const int defimarketcap = 514;
+	/// <summary>PID: 515 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int stablecoinmarketcap_515 = 515;
+	/// <summary>PID: 515 | Type: read</summary>
+	public const int stablecoinmarketcap = 515;
 	public class Write
 	{
 		/// <summary>PID: 6 | Type: write</summary>
@@ -299,6 +359,34 @@ public interface SLProtocolExt : SLProtocol
 	object Categoriesvolume { get; set; }
 	object Categorieslastupdated_407 { get; set; }
 	object Categorieslastupdated { get; set; }
+	object Httpresponsecodelatestquotes_500 { get; set; }
+	object Httpresponsecodelatestquotes { get; set; }
+	object Jsonresponselatestquotes_501 { get; set; }
+	object Jsonresponselatestquotes { get; set; }
+	object Titlebeginoverview__fixed { get; set; }
+	object Activecryptocurrencies_503 { get; set; }
+	object Activecryptocurrencies { get; set; }
+	object Activemarketpairs_504 { get; set; }
+	object Activemarketpairs { get; set; }
+	object Activeexchange_505 { get; set; }
+	object Activeexchange { get; set; }
+	object Lastupdated_506 { get; set; }
+	object Lastupdated { get; set; }
+	object Titlebegindominance__fixed { get; set; }
+	object Btcdominance_508 { get; set; }
+	object Btcdominance { get; set; }
+	object Ethdominance_509 { get; set; }
+	object Ethdominance { get; set; }
+	object Titlebeginmarketprformance__fixed { get; set; }
+	object Totalmarketcap_511 { get; set; }
+	object Totalmarketcap { get; set; }
+	object Total24hvolume_512 { get; set; }
+	object Total24hvolume { get; set; }
+	object Titlebegindefiandstablecoin__fixed { get; set; }
+	object Defimarketcap_514 { get; set; }
+	object Defimarketcap { get; set; }
+	object Stablecoinmarketcap_515 { get; set; }
+	object Stablecoinmarketcap { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
@@ -418,6 +506,74 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Categorieslastupdated_407 {get { return GetParameter(407); }set { SetParameter(407, value); }}
 	/// <summary>PID: 407  | Type: read</summary>
 	public System.Object Categorieslastupdated {get { return GetParameter(407); }set { SetParameter(407, value); }}
+	/// <summary>PID: 500  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Httpresponsecodelatestquotes_500 {get { return GetParameter(500); }set { SetParameter(500, value); }}
+	/// <summary>PID: 500  | Type: read</summary>
+	public System.Object Httpresponsecodelatestquotes {get { return GetParameter(500); }set { SetParameter(500, value); }}
+	/// <summary>PID: 501  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Jsonresponselatestquotes_501 {get { return GetParameter(501); }set { SetParameter(501, value); }}
+	/// <summary>PID: 501  | Type: read</summary>
+	public System.Object Jsonresponselatestquotes {get { return GetParameter(501); }set { SetParameter(501, value); }}
+	/// <summary>PID: 502  | Type: fixed</summary>
+	public System.Object Titlebeginoverview__fixed {get { return GetParameter(502); }set { SetParameter(502, value); }}
+	/// <summary>PID: 503  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Activecryptocurrencies_503 {get { return GetParameter(503); }set { SetParameter(503, value); }}
+	/// <summary>PID: 503  | Type: read</summary>
+	public System.Object Activecryptocurrencies {get { return GetParameter(503); }set { SetParameter(503, value); }}
+	/// <summary>PID: 504  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Activemarketpairs_504 {get { return GetParameter(504); }set { SetParameter(504, value); }}
+	/// <summary>PID: 504  | Type: read</summary>
+	public System.Object Activemarketpairs {get { return GetParameter(504); }set { SetParameter(504, value); }}
+	/// <summary>PID: 505  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Activeexchange_505 {get { return GetParameter(505); }set { SetParameter(505, value); }}
+	/// <summary>PID: 505  | Type: read</summary>
+	public System.Object Activeexchange {get { return GetParameter(505); }set { SetParameter(505, value); }}
+	/// <summary>PID: 506  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastupdated_506 {get { return GetParameter(506); }set { SetParameter(506, value); }}
+	/// <summary>PID: 506  | Type: read</summary>
+	public System.Object Lastupdated {get { return GetParameter(506); }set { SetParameter(506, value); }}
+	/// <summary>PID: 507  | Type: fixed</summary>
+	public System.Object Titlebegindominance__fixed {get { return GetParameter(507); }set { SetParameter(507, value); }}
+	/// <summary>PID: 508  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Btcdominance_508 {get { return GetParameter(508); }set { SetParameter(508, value); }}
+	/// <summary>PID: 508  | Type: read</summary>
+	public System.Object Btcdominance {get { return GetParameter(508); }set { SetParameter(508, value); }}
+	/// <summary>PID: 509  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Ethdominance_509 {get { return GetParameter(509); }set { SetParameter(509, value); }}
+	/// <summary>PID: 509  | Type: read</summary>
+	public System.Object Ethdominance {get { return GetParameter(509); }set { SetParameter(509, value); }}
+	/// <summary>PID: 510  | Type: fixed</summary>
+	public System.Object Titlebeginmarketprformance__fixed {get { return GetParameter(510); }set { SetParameter(510, value); }}
+	/// <summary>PID: 511  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Totalmarketcap_511 {get { return GetParameter(511); }set { SetParameter(511, value); }}
+	/// <summary>PID: 511  | Type: read</summary>
+	public System.Object Totalmarketcap {get { return GetParameter(511); }set { SetParameter(511, value); }}
+	/// <summary>PID: 512  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Total24hvolume_512 {get { return GetParameter(512); }set { SetParameter(512, value); }}
+	/// <summary>PID: 512  | Type: read</summary>
+	public System.Object Total24hvolume {get { return GetParameter(512); }set { SetParameter(512, value); }}
+	/// <summary>PID: 513  | Type: fixed</summary>
+	public System.Object Titlebegindefiandstablecoin__fixed {get { return GetParameter(513); }set { SetParameter(513, value); }}
+	/// <summary>PID: 514  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Defimarketcap_514 {get { return GetParameter(514); }set { SetParameter(514, value); }}
+	/// <summary>PID: 514  | Type: read</summary>
+	public System.Object Defimarketcap {get { return GetParameter(514); }set { SetParameter(514, value); }}
+	/// <summary>PID: 515  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Stablecoinmarketcap_515 {get { return GetParameter(515); }set { SetParameter(515, value); }}
+	/// <summary>PID: 515  | Type: read</summary>
+	public System.Object Stablecoinmarketcap {get { return GetParameter(515); }set { SetParameter(515, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{

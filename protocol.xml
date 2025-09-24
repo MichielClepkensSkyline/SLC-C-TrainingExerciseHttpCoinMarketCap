@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>000</DeviceOID>
 	<ElementType>Crypto Currency Tracker</ElementType>
 	<Type relativeTimers="true">http</Type>
-	<Display defaultPage="General" pageOrder="General;Latest Listings" wideColumnPages=""/>
+	<Display defaultPage="General" pageOrder="General;Latest Listings;Categories" wideColumnPages=""/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -154,7 +154,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>6</Row>
+						<Row>23</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -378,7 +378,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Categories</Page>
 						<Column>0</Column>
 						<Row>0</Row>
 					</Position>
@@ -403,7 +403,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Categories</Page>
 						<Column>0</Column>
 						<Row>1</Row>
 					</Position>
@@ -433,7 +433,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Categories</Page>
 						<Column>0</Column>
 						<Row>2</Row>
 					</Position>
@@ -572,13 +572,390 @@ Any inquiries can be addressed to:
 				<Type options="datetime">number</Type>
 			</Measurement>
 		</Param>
+		<Param id="500" trending="false">
+			<Name>HttpResponseCodeLatestQuotes</Name>
+			<Description>HTTP Response for Latest Quotes</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="501" trending="false">
+			<Name>JsonResponseLatestQuotes</Name>
+			<Description>Json Response for Latest Quotes</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type lines="10">string</Type>
+			</Measurement>
+		</Param>
+		<Param id="502">
+			<Name>TitleBeginOverview</Name>
+			<Description>Overview</Description>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>2</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="begin">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="503" trending="false">
+			<Name>ActiveCryptoCurrencies</Name>
+			<Description>Active Cryptocurrencies</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>3</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="504" trending="false">
+			<Name>ActiveMarketPairs</Name>
+			<Description>Active Market Pairs</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>4</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="505" trending="false">
+			<Name>ActiveExchange</Name>
+			<Description>Active Exchange</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>5</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="506" trending="false">
+			<Name>LastUpdated</Name>
+			<Description>Last Updated</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Decimals>8</Decimals>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>8</Decimals>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>6</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="datetime">number</Type>
+			</Measurement>
+		</Param>
+		<Param id="507">
+			<Name>TitleBeginDominance</Name>
+			<Description>Dominance</Description>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>7</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="begin">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="508" trending="false">
+			<Name>BTCDominance</Name>
+			<Description>BTC Dominace</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>8</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="509" trending="false">
+			<Name>ETHDominance</Name>
+			<Description>ETH Dominance</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>9</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="510">
+			<Name>TitleBeginMarketPrformance</Name>
+			<Description>Market Performance</Description>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>10</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="begin">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="511" trending="false">
+			<Name>TotalMarketCap</Name>
+			<Description>Total Market Cap</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>11</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="512" trending="false">
+			<Name>Total24hVolume</Name>
+			<Description>Total 24h Volume</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>12</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="513">
+			<Name>TitleBeginDeFiAndStablecoin</Name>
+			<Description>DeFi and Stablecoin</Description>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>13</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="begin">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="514" trending="false">
+			<Name>DeFiMarketCap</Name>
+			<Description>DeFi Market Cap</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>14</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="515" trending="false">
+			<Name>StablecoinMarketCap</Name>
+			<Description>Stablecoin Market Cap</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>15</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		
 	</Params>
+
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
 		<QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
 		<QAction id="3" name="Get Latest Listing Data Into a Table" encoding="csharp" triggers="4" />
-		<QAction id="4" name="Get Categories Data Into a Table" encoding="csharp" triggers="301">
+		<QAction id="4" name="Get Categories Data Into a Table" encoding="csharp" triggers="301"/>
+		<QAction id="5" name="Get Latest Quotes Data Into Parameters" encoding="csharp" triggers="501">
 		</QAction>
 	</QActions>
 
@@ -604,6 +981,18 @@ Any inquiries can be addressed to:
 				</Request>
 				<Response statusCode="300">
 					<Content pid="301"></Content>
+				</Response>
+			</Connection>
+		</Session>
+		<Session id="3" name="Get Latest Quotes">
+			<Connection id="1">
+				<Request verb="GET" url="/api/custom/coinmarketcap?content=latestquotes">
+					<Headers>
+						<Header key="Authorization" pid="5"></Header>
+					</Headers>
+				</Request>
+				<Response statusCode="500">
+					<Content pid="501"></Content>
 				</Response>
 			</Connection>
 		</Session>
@@ -634,6 +1023,14 @@ Any inquiries can be addressed to:
 				<Session>2</Session>
 			</Content>
 		</Group>
+		<Group id="5">
+			<Name>Latest Quotes</Name>
+			<Description>Latest Quotes</Description>
+			<Type>poll</Type>
+			<Content>
+				<Session>3</Session>
+			</Content>
+		</Group>
 	</Groups>
 
 	<Triggers>
@@ -654,6 +1051,7 @@ Any inquiries can be addressed to:
 			<Content>
 				<Id>3</Id>
 				<Id>4</Id>
+				<Id>5</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
@@ -677,6 +1075,11 @@ Any inquiries can be addressed to:
 		<Action id="4">
 			<Name>Execute Group Categories</Name>
 			<On id="4">group</On>
+			<Type>execute one now</Type>
+		</Action>
+		<Action id="5">
+			<Name>Execute Group Latest Quotes</Name>
+			<On id="5">group</On>
 			<Type>execute one now</Type>
 		</Action>
 	</Actions>
