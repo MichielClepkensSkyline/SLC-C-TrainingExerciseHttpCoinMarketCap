@@ -23,9 +23,9 @@ public static class QAction
 	{
 		try
 		{
-			if (StatusCode.CheckStatusCode(protocol, Parameter.statuscode))
+			if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodelastlistings))
 			{
-				Root root = SecureNewtonsoftDeserialization.DeserializeObject<Root>(protocol.GetParameter(Parameter.responsecontent).ToString());
+				Root root = SecureNewtonsoftDeserialization.DeserializeObject<Root>(protocol.GetParameter(Parameter.responsecontentlastlistings).ToString());
 				if (root.Status.ErrorCode == 0)
 				{
 					FillLastListings(protocol, root.Listings);

@@ -1,4 +1,5 @@
-﻿namespace Skyline.DataMiner.Scripting.Quote
+﻿// Classes for mapping quote JSON data from CoinMarketCap.
+namespace Skyline.DataMiner.Scripting.Quote
 {
     using System;
     using Newtonsoft.Json;

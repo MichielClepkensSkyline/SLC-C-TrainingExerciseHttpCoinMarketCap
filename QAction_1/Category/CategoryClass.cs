@@ -1,4 +1,5 @@
-﻿namespace Skyline.DataMiner.Scripting.Category
+﻿// // Classes for mapping category JSON data from CoinMarketCap.
+namespace Skyline.DataMiner.Scripting.Category
 {
     using System;
     using System.Collections.Generic;

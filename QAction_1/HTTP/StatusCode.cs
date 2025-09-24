@@ -1,10 +1,7 @@
-﻿namespace Skyline.DataMiner.Scripting.HTTP
+﻿// Utility class for checking HTTP status codes
+namespace Skyline.DataMiner.Scripting.HTTP
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
 
     public static class StatusCode
     {

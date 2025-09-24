@@ -81,126 +81,65 @@ Any inquiries can be addressed to:
 				<Value>Bearer jWgYFWyQzYAR9ZAm0mvESEKBeerEYw3rYwVEOUvm2Y0=</Value>
 			</Interprete>
 		</Param>
-		<Param id="4">
-			<Name>pollButton</Name>
-			<Type>write</Type>
-			<Information>
-				<Subtext>
-					<![CDATA[Button used to send HTTP request.]]>
-				</Subtext>
-			</Information>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-			</Display>
-			<Measurement>
-				<Type width="110">button</Type>
-				<Discreets>
-					<Discreet>
-						<Display>Send HTTP Request</Display>
-						<Value>1</Value>
-					</Discreet>
-				</Discreets>
-			</Measurement>
-		</Param>
 		<Param id="10">
-			<Name>statusCode</Name>
-			<Description>Status Code</Description>
+			<Name>statusCodeLastListings</Name>
+			<Description>HTTP Status Code Last Listings</Description>
 			<Type>read</Type>
 			<Interprete>
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-			</Display>
 		</Param>
 		<Param id="11">
-			<Name>responseContent</Name>
-			<Description>Response Content</Description>
+			<Name>responseContentLastListings</Name>
+			<Description>HTTP Response Content Last Listings</Description>
 			<Type>read</Type>
 			<Interprete>
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-			</Display>
-			<Measurement>
-				<Type lines="20">string</Type>
-			</Measurement>
 		</Param>
 		<Param id="20" trending="false">
 			<Name>statusCodeCategories</Name>
-			<Description>Status Code Categories</Description>
+			<Description>HTTP Status Code Categories</Description>
 			<Type>read</Type>
-			<Information>
-				<Subtext>
-					<![CDATA[This param is the status code for the categories API call.]]>
-				</Subtext>
-			</Information>
 			<Interprete>
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-			</Display>
-			<Measurement>
-				<Type>string</Type>
-			</Measurement>
 		</Param>
 		<Param id="21">
 			<Name>responseContentCategories</Name>
-			<Description>Response Content Categories</Description>
+			<Description>HTTP Response Content Categories</Description>
 			<Type>read</Type>
 			<Interprete>
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-			</Display>
-			<Measurement>
-				<Type lines="20">string</Type>
-			</Measurement>
 		</Param>
 		<Param id="30">
 			<Name>statusCodeLatestQuotes</Name>
-			<Description>Status Code Latest Quotes</Description>
+			<Description>HTTP Status Code Latest Quotes</Description>
 			<Type>read</Type>
 			<Interprete>
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-			</Display>
 		</Param>
 		<Param id="31">
 			<Name>responseContentLatestQuotes</Name>
-			<Description>Response Content Latest Quotes</Description>
+			<Description>HTTP Response Content Latest Quotes</Description>
 			<Type>read</Type>
 			<Interprete>
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-			</Display>
-			<Measurement>
-				<Type lines="20">string</Type>
-			</Measurement>
 		</Param>
 		<Param id="200">
 			<Name>lastListing</Name>
@@ -1346,6 +1285,13 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
 				<Units>coins</Units>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1377,6 +1323,13 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
 				<Units>coins</Units>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1411,6 +1364,13 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
 				<Units>pairs</Units>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>2</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1445,6 +1405,13 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
 				<Units>exchanges</Units>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1476,6 +1443,13 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
 				<Units>exchanges</Units>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1515,6 +1489,13 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>%</Units>
+				<Positions>
+					<Position>
+						<Page>LatestQuote</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>analog</Type>
@@ -1554,6 +1535,13 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>%</Units>
+				<Positions>
+					<Position>
+						<Page>LatestQuote</Page>
+						<Column>1</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>analog</Type>
@@ -1564,7 +1552,9 @@ The unique ID of the category.]]>
 			<Description>Ethereum Domincance 24h Percentage Change</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext><![CDATA[Change of the Ethereum dominance over de last 24h, expressed in percentage delta.]]></Subtext>
+				<Subtext>
+					<![CDATA[Change of the Ethereum dominance over de last 24h, expressed in percentage delta.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1591,6 +1581,13 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>%</Units>
+				<Positions>
+					<Position>
+						<Page>LatestQuote</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1601,7 +1598,9 @@ The unique ID of the category.]]>
 			<Description>Bitcoin Domincance 24h Percentage Change</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext><![CDATA[Change of the Bitcoin dominance over de last 24h, expressed in percentage delta.]]></Subtext>
+				<Subtext>
+					<![CDATA[Change of the Bitcoin dominance over de last 24h, expressed in percentage delta.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1628,6 +1627,13 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>%</Units>
+				<Positions>
+					<Position>
+						<Page>LatestQuote</Page>
+						<Column>1</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1638,7 +1644,9 @@ The unique ID of the category.]]>
 			<Description>DeFi Volume 24h</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext><![CDATA[The sum of rolling 24 hour adjusted volume for DeFi converted into USD.]]></Subtext>
+				<Subtext>
+					<![CDATA[The sum of rolling 24 hour adjusted volume for DeFi converted into USD.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1665,6 +1673,13 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>coins</Units>
+				<Positions>
+					<Position>
+						<Page>LatestQuote</Page>
+						<Column>0</Column>
+						<Row>4</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1675,7 +1690,9 @@ The unique ID of the category.]]>
 			<Description>DeFi Market Cap</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext><![CDATA[The sum of all individual cryptocurrency market capitalizations for DeFi converted into USD.]]></Subtext>
+				<Subtext>
+					<![CDATA[The sum of all individual cryptocurrency market capitalizations for DeFi converted into USD.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1697,6 +1714,13 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>coins</Units>
+				<Positions>
+					<Position>
+						<Page>LatestQuote</Page>
+						<Column>0</Column>
+						<Row>5</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1707,7 +1731,9 @@ The unique ID of the category.]]>
 			<Description>DeFi 24h Percentage Change</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext><![CDATA[This is the percentage that DeFi changed during the last 24h.]]></Subtext>
+				<Subtext>
+					<![CDATA[This is the percentage that DeFi changed during the last 24h.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1734,6 +1760,13 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>%</Units>
+				<Positions>
+					<Position>
+						<Page>LatestQuote</Page>
+						<Column>0</Column>
+						<Row>6</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>analog</Type>
@@ -1744,7 +1777,9 @@ The unique ID of the category.]]>
 			<Description>Stablecoin Volume 24h</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext><![CDATA[The sum of rolling 24 hour adjusted volume for Stablecoin converted into USD.]]></Subtext>
+				<Subtext>
+					<![CDATA[The sum of rolling 24 hour adjusted volume for Stablecoin converted into USD.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1771,6 +1806,13 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>coins</Units>
+				<Positions>
+					<Position>
+						<Page>LatestQuote</Page>
+						<Column>1</Column>
+						<Row>4</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1781,7 +1823,9 @@ The unique ID of the category.]]>
 			<Description>Stablecoin Market Cap</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext><![CDATA[The sum of all individual cryptocurrency market capitalizations for Stablecoin converted into USD.]]></Subtext>
+				<Subtext>
+					<![CDATA[The sum of all individual cryptocurrency market capitalizations for Stablecoin converted into USD.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1803,6 +1847,13 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>coins</Units>
+				<Positions>
+					<Position>
+						<Page>LatestQuote</Page>
+						<Column>1</Column>
+						<Row>5</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1813,7 +1864,9 @@ The unique ID of the category.]]>
 			<Description>Stablecoin 24h Percentage Change</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext><![CDATA[This is the percentage that Stablecoin changed during the last 24h.]]></Subtext>
+				<Subtext>
+					<![CDATA[This is the percentage that Stablecoin changed during the last 24h.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1840,6 +1893,13 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>%</Units>
+				<Positions>
+					<Position>
+						<Page>LatestQuote</Page>
+						<Column>1</Column>
+						<Row>6</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>analog</Type>
@@ -1850,7 +1910,9 @@ The unique ID of the category.]]>
 			<Description>Total Dex Cryptocurrencies</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext><![CDATA[Total amount of cryptocurrencies which are traded via decentralized exchanges and tracked by CoinMarketCap.]]></Subtext>
+				<Subtext>
+					<![CDATA[Total amount of cryptocurrencies which are traded via decentralized exchanges and tracked by CoinMarketCap.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1872,6 +1934,13 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
 				<Units>DEXs</Units>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>2</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1882,7 +1951,9 @@ The unique ID of the category.]]>
 			<Description>Incremental Amount Crypto Past 24h</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext><![CDATA[The amount of cryptocurrencies that are added the last 24h.]]></Subtext>
+				<Subtext>
+					<![CDATA[The amount of cryptocurrencies that are added the last 24h.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -1896,6 +1967,13 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
 				<Units>coins</Units>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>3</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1930,6 +2008,13 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>coins</Units>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>4</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1969,11 +2054,18 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>USD</Units>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>3</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
-		</Param>	
+		</Param>
 		<Param id="619" trending="false">
 			<Name>lastUpdated</Name>
 			<Description>Last Time Updated</Description>
@@ -1992,6 +2084,13 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>8</Decimals>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>4</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type options="datetime">number</Type>
@@ -2056,8 +2155,8 @@ The unique ID of the category.]]>
 			</Content>
 		</Group>
 		<Group id="4">
-			<Name>HTTP request</Name>
-			<Description>This group sends an HTTP request</Description>
+			<Name>HTTP request Last Listings</Name>
+			<Description>HTTP request Last Listings</Description>
 			<Type>poll</Type>
 			<Content>
 				<Session>1</Session>
@@ -2091,17 +2190,6 @@ The unique ID of the category.]]>
 				<Id>1</Id>
 			</Content>
 		</Trigger>
-		<Trigger id="4">
-			<Name>Send HTTP Request</Name>
-			<On id="4">parameter</On>
-			<Time>change</Time>
-			<Type>action</Type>
-			<Content>
-				<Id>4</Id>
-				<Id>5</Id>
-				<Id>6</Id>
-			</Content>
-		</Trigger>
 	</Triggers>
 
 	<Actions>
@@ -2114,21 +2202,6 @@ The unique ID of the category.]]>
 			<Name>After Startup QAction</Name>
 			<On id="2">parameter</On>
 			<Type>run actions</Type>
-		</Action>
-		<Action id="4">
-			<Name>Execute HTTP Group</Name>
-			<On id="4">group</On>
-			<Type>execute next</Type>
-		</Action>
-		<Action id="5">
-			<Name>Execute HTTP Group Categories</Name>
-			<On id="5">group</On>
-			<Type>execute next</Type>
-		</Action>
-		<Action id="6">
-			<Name>Execute HTTP Group Latest Quotes</Name>
-			<On id="6">group</On>
-			<Type>execute next</Type>
 		</Action>
 	</Actions>
 
@@ -2147,15 +2220,14 @@ The unique ID of the category.]]>
 			<Interval>75</Interval>
 			<Content>
 				<Group>4</Group>
-				
-				<Group>6</Group>
 			</Content>
 		</Timer>
 		<Timer id="3">
-			<Name>Slow Timer (1h)</Name>
-			<Time initial="true">3600000</Time>
+			<Name>Slow Timer (5min)</Name>
+			<Time initial="true">300000</Time>
 			<Interval>75</Interval>
 			<Content>
+				<Group>6</Group>
 			</Content>
 		</Timer>
 	</Timers>
