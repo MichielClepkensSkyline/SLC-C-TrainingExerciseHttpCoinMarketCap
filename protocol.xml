@@ -1031,7 +1031,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:201|0-202|1-203|2-204|3-205|4-206|5-207|6-208|7-209|8-210|10-211|9,width:100-100-122-142-100-129-100-107-156-100-143,sort:STRING|ASC|1-STRING-INT-INT-INT-INT-INT-INT-INT|ASC|0-STRING-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:201|0-202|1-203|2-204|3-205|4-206|5-207|6-208|7-209|8-210|10-211|9,width:100-100-122-142-100-129-100-107-156-100-143,sort:STRING|ASC|1-STRING-INT-INT-INT-INT-INT-INT-INT|DESC|0-STRING-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="201" trending="false">

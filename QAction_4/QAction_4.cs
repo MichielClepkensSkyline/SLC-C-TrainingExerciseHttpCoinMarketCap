@@ -59,7 +59,7 @@ public static class QAction
 					Categoriesnumberoftokens_203 = category.NumTokens,
 					Categoriesaveragepricechange_204 = category.AvgPriceChange,
 					Categoriesmarketcap_205 = category.MarketCap,
-					Categoriesmarketcapchange_206 = category.MarketCap,
+					Categoriesmarketcapchange_206 = category.MarketCapChange,
 					Categoriesvolume_207 = category.Volume,
 					Categoriesvolumechange_208 = category.VolumeChange,
 					Categorieslastupdated_209 = category.LastUpdated.ToOADate(),
