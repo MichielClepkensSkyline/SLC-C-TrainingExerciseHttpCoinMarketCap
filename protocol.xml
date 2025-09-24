@@ -282,6 +282,62 @@ Any inquiries can be addressed to:
 				<Type lines="30">string</Type>
 			</Measurement>
 		</Param>
+		<Param id="11" trending="false">
+			<Name>statusCodeIndividualCategory</Name>
+			<Description>Status Code Individual Category</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This is a parameter to display the Status Code of Individual Category.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>3</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="12" trending="false">
+			<Name>responseIndividualCategory</Name>
+			<Description>Response Individual Category</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This parameter holds the response of the HTTP request for Individual Category.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>4</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type lines="30">string</Type>
+			</Measurement>
+		</Param>
 		<Param id="30" trending="true">
 			<Name>latestQuoteActiveCryptocurrencies</Name>
 			<Description>Active Cryptocurrencies</Description>
@@ -524,7 +580,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>8</Row>
+						<Row>9</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -537,7 +593,6 @@ Any inquiries can be addressed to:
 			<Description>Last Update</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -548,6 +603,13 @@ Any inquiries can be addressed to:
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>8</Decimals>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>10</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type options="datetime">number</Type>
@@ -558,7 +620,6 @@ Any inquiries can be addressed to:
 			<Description>Quote Currency</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -567,6 +628,13 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>11</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
 				<Type>string</Type>
@@ -919,7 +987,8 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="6" pid="207" type="retrieved" options=""/>
 				<ColumnOption idx="7" pid="208" type="retrieved" options=""/>
 				<ColumnOption idx="8" pid="209" type="retrieved" options=""/>
-				<ColumnOption idx="9" pid="210" type="displaykey" options=""/>
+				<ColumnOption idx="9" pid="211" type="retrieved" options=""/>
+				<ColumnOption idx="10" pid="210" type="displaykey" options=""/>
 			</ArrayOptions>
 			<Information>
 				<Subtext>
@@ -937,7 +1006,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:201|0-202|1-203|2-204|3-205|4-206|5-207|6-208|7-209|8-210|9,width:100-100-122-142-100-129-100-107-156-100,sort:STRING|ASC|1-STRING-INT-INT-INT-INT-INT-INT-INT|ASC|0-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:201|0-202|1-203|2-204|3-205|4-206|5-207|6-208|7-209|8-210|10-211|9,width:100-100-122-142-100-129-100-107-156-100-143,sort:STRING|ASC|1-STRING-INT-INT-INT-INT-INT-INT-INT|ASC|0-STRING-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="201" trending="false">
@@ -1159,6 +1228,30 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
+		<Param id="211">
+			<Name>categoriesRefreshButton</Name>
+			<Description>Refresh</Description>
+			<Type>write</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type width="110">button</Type>
+				<Discreets>
+					<Discreet>
+						<Display>Refresh Row</Display>
+						<Value>1</Value>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+		</Param>
 	</Params>
 	<!--skip the ones with yesterda, the ones with total use-->
 	
@@ -1196,6 +1289,18 @@ Any inquiries can be addressed to:
 				</Request>
 				<Response statusCode="9">
 					<Content pid="10"></Content>
+				</Response>
+			</Connection>
+		</Session>
+		<Session id="4" name="Get Individual Category">
+			<Connection id="1" name="Get Individual Category">
+				<Request verb="GET" url="">
+					<Headers>
+						<Header key="Authorization" pid="6"></Header>
+					</Headers>
+				</Request>
+				<Response statusCode="11">
+					<Content pid="12"></Content>
 				</Response>
 			</Connection>
 		</Session>

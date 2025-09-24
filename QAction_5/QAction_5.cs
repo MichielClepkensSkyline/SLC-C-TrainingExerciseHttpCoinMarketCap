@@ -60,6 +60,7 @@ public static class QAction
 			{ Parameter.latestquotedefi24hpercentagechange_38, latestQuote.Defi24hPercentageChange },
 			{ Parameter.latestquotetodaychangepercent_39, latestQuote.TodayChangePercent },
 			{ Parameter.latestquotelastupdate_40, latestQuote.LastUpdated },
+			{ Parameter.latestquotecurreny_41, latestQuote.Quote.USD.ToString().Split('.')[1] },
 		};
 		protocol.SetParameters(parameters);
 	}

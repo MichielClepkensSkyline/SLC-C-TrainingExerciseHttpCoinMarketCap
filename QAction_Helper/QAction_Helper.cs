@@ -38,6 +38,16 @@ public static class Parameter
 	public const int responselatestquote_10 = 10;
 	/// <summary>PID: 10 | Type: read</summary>
 	public const int responselatestquote = 10;
+	/// <summary>PID: 11 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int statuscodeindividualcategory_11 = 11;
+	/// <summary>PID: 11 | Type: read</summary>
+	public const int statuscodeindividualcategory = 11;
+	/// <summary>PID: 12 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int responseindividualcategory_12 = 12;
+	/// <summary>PID: 12 | Type: read</summary>
+	public const int responseindividualcategory = 12;
 	/// <summary>PID: 30 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int latestquoteactivecryptocurrencies_30 = 30;
@@ -316,6 +326,11 @@ public static class Parameter
 			public const int categoriesdisplaykey = 210;
 			public class Write
 			{
+				/// <summary>PID: 211 | Type: write</summary>
+				[EditorBrowsable(EditorBrowsableState.Never)]
+				public const int categoriesrefreshbutton_211 = 211;
+				/// <summary>PID: 211 | Type: write</summary>
+				public const int categoriesrefreshbutton = 211;
 			}
 		}
 		public class Idx
@@ -365,11 +380,11 @@ public static class Parameter
 			public const int categorieslastupdated_209 = 8;
 			/// <summary>IDX: 8 | Type: read</summary>
 			public const int categorieslastupdated = 8;
-			/// <summary>IDX: 9 | Type: read</summary>
+			/// <summary>IDX: 10 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int categoriesdisplaykey_210 = 9;
-			/// <summary>IDX: 9 | Type: read</summary>
-			public const int categoriesdisplaykey = 9;
+			public const int categoriesdisplaykey_210 = 10;
+			/// <summary>IDX: 10 | Type: read</summary>
+			public const int categoriesdisplaykey = 10;
 		}
 	}
 }
@@ -377,6 +392,8 @@ public class WriteParameters
 {
 	/// <summary>PID: 5  | Type: write | DISCREETS: Send Request = 1</summary>
 	public System.Object Sendrequest {get { return Protocol.GetParameter(5); }set { Protocol.SetParameter(5, value); }}
+	/// <summary>PID: 211  | Type: write | DISCREETS: Refresh Row = 1</summary>
+	public System.Object Categoriesrefreshbutton {get { return Protocol.GetParameter(211); }set { Protocol.SetParameter(211, value); }}
 	public SLProtocolExt Protocol;
 	public WriteParameters(SLProtocolExt protocol)
 	{
@@ -405,6 +422,10 @@ public interface SLProtocolExt : SLProtocol
 	object Statuscodelatestquote { get; set; }
 	object Responselatestquote_10 { get; set; }
 	object Responselatestquote { get; set; }
+	object Statuscodeindividualcategory_11 { get; set; }
+	object Statuscodeindividualcategory { get; set; }
+	object Responseindividualcategory_12 { get; set; }
+	object Responseindividualcategory { get; set; }
 	object Latestquoteactivecryptocurrencies_30 { get; set; }
 	object Latestquoteactivecryptocurrencies { get; set; }
 	object Latestquotetotalcryptocurrencies_31 { get; set; }
@@ -475,6 +496,8 @@ public interface SLProtocolExt : SLProtocol
 	object Categorieslastupdated { get; set; }
 	object Categoriesdisplaykey_210 { get; set; }
 	object Categoriesdisplaykey { get; set; }
+	object Categoriesrefreshbutton_211 { get; set; }
+	object Categoriesrefreshbutton { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
@@ -521,6 +544,16 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Responselatestquote_10 {get { return GetParameter(10); }set { SetParameter(10, value); }}
 	/// <summary>PID: 10  | Type: read</summary>
 	public System.Object Responselatestquote {get { return GetParameter(10); }set { SetParameter(10, value); }}
+	/// <summary>PID: 11  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Statuscodeindividualcategory_11 {get { return GetParameter(11); }set { SetParameter(11, value); }}
+	/// <summary>PID: 11  | Type: read</summary>
+	public System.Object Statuscodeindividualcategory {get { return GetParameter(11); }set { SetParameter(11, value); }}
+	/// <summary>PID: 12  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Responseindividualcategory_12 {get { return GetParameter(12); }set { SetParameter(12, value); }}
+	/// <summary>PID: 12  | Type: read</summary>
+	public System.Object Responseindividualcategory {get { return GetParameter(12); }set { SetParameter(12, value); }}
 	/// <summary>PID: 30  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestquoteactivecryptocurrencies_30 {get { return GetParameter(30); }set { SetParameter(30, value); }}
@@ -696,6 +729,10 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Categoriesdisplaykey_210 {get { return GetParameter(210); }set { SetParameter(210, value); }}
 	/// <summary>PID: 210  | Type: read</summary>
 	public System.Object Categoriesdisplaykey {get { return GetParameter(210); }set { SetParameter(210, value); }}
+	/// <summary>PID: 211  | Type: write | DISCREETS: Refresh Row = 1</summary>
+	public System.Object Categoriesrefreshbutton_211 {get { return GetParameter(211); }set { SetParameter(211, value); }}
+	/// <summary>PID: 211  | Type: write | DISCREETS: Refresh Row = 1</summary>
+	public System.Object Categoriesrefreshbutton {get { return Write.Categoriesrefreshbutton; }set { Write.Categoriesrefreshbutton = value; }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{
@@ -839,13 +876,17 @@ public class CategoriesQActionRow : QActionTableRow
 	public System.Object Categorieslastupdated_209 { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
 	/// <summary>PID: 209 | Type: read</summary>
 	public System.Object Categorieslastupdated { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
+	/// <summary>PID: 211 | Type: write</summary>
+	public System.Object Categoriesrefreshbutton_211 { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
+	/// <summary>PID: 211 | Type: write</summary>
+	public System.Object Categoriesrefreshbutton { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
 	/// <summary>PID: 210 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Categoriesdisplaykey_210 { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
+	public System.Object Categoriesdisplaykey_210 { get { if (base.Columns.ContainsKey(10)) { return base.Columns[10]; } else { return null; } } set { if (base.Columns.ContainsKey(10)) { base.Columns[10] = value; } else { base.Columns.Add(10, value); } } }
 	/// <summary>PID: 210 | Type: read</summary>
-	public System.Object Categoriesdisplaykey { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
-	public CategoriesQActionRow() : base(0, 10) { }
-	public CategoriesQActionRow(System.Object[] oRow) : base(0, 10, oRow) { }
+	public System.Object Categoriesdisplaykey { get { if (base.Columns.ContainsKey(10)) { return base.Columns[10]; } else { return null; } } set { if (base.Columns.ContainsKey(10)) { base.Columns[10] = value; } else { base.Columns.Add(10, value); } } }
+	public CategoriesQActionRow() : base(0, 11) { }
+	public CategoriesQActionRow(System.Object[] oRow) : base(0, 11, oRow) { }
 	public static implicit operator CategoriesQActionRow(System.Object[] source) { return new CategoriesQActionRow(source); }
 	public static implicit operator System.Object[](CategoriesQActionRow source) { return source.ToObjectArray(); }
 }
