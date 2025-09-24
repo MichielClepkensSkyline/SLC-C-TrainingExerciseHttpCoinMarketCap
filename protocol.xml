@@ -343,6 +343,9 @@ Any inquiries can be addressed to:
 			<Description>Individual Category API</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Stores the constructed API endpoint used to request data for a specific category.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -368,6 +371,9 @@ Any inquiries can be addressed to:
 			<Description>Active Cryptocurrencies</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Total number of currently active cryptocurrencies in the market.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -376,6 +382,9 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
@@ -393,6 +402,9 @@ Any inquiries can be addressed to:
 			<Description>Total Cryptocurrencies</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Total number of cryptocurrencies listed, including both active and inactive.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -401,6 +413,9 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
@@ -418,6 +433,9 @@ Any inquiries can be addressed to:
 			<Description>Active Exchanges</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Number of active exchanges currently operating in the market for a certain currency.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -425,6 +443,10 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
+				<Units>exchanges</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
@@ -443,6 +465,9 @@ Any inquiries can be addressed to:
 			<Description>Total Exchanges</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Total number of exchanges tracked, including both active and inactive ones.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -451,6 +476,10 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>exchanges</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
@@ -468,6 +497,9 @@ Any inquiries can be addressed to:
 			<Description>Etherium Dominance</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Percentage of the total cryptocurrency market capitalization represented by Ethereum.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -477,6 +509,11 @@ Any inquiries can be addressed to:
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>2</Decimals>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
@@ -494,6 +531,9 @@ Any inquiries can be addressed to:
 			<Description>Bitcoin Dominance</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Percentage of the total cryptocurrency market capitalization represented by Bitcoin.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -503,6 +543,11 @@ Any inquiries can be addressed to:
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>2</Decimals>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
@@ -520,6 +565,9 @@ Any inquiries can be addressed to:
 			<Description>Etherium Dominance 24h Percentage Change</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[24-hour percentage change in Ethereum's market dominance.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -529,6 +577,11 @@ Any inquiries can be addressed to:
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>2</Decimals>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
@@ -546,6 +599,9 @@ Any inquiries can be addressed to:
 			<Description>Bitcoin Dominance 24h Percentage Change</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[24-hour percentage change in Bitcoin's market dominance.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -555,6 +611,11 @@ Any inquiries can be addressed to:
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>2</Decimals>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
@@ -572,6 +633,9 @@ Any inquiries can be addressed to:
 			<Description>Defi 24h Percentage Change</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[24-hour percentage change in market capitalization of DeFi-related cryptocurrencies.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -581,6 +645,11 @@ Any inquiries can be addressed to:
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>2</Decimals>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
@@ -598,6 +667,9 @@ Any inquiries can be addressed to:
 			<Description>Today Change Percent</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Overall market percentage change observed during the current day.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -607,6 +679,11 @@ Any inquiries can be addressed to:
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
@@ -624,6 +701,9 @@ Any inquiries can be addressed to:
 			<Description>Last Update</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -651,6 +731,9 @@ Any inquiries can be addressed to:
 			<Description>Quote Currency</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Currency used for displaying all quote-related values (e.g., USD, EUR).]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -812,6 +895,9 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -834,6 +920,9 @@ Any inquiries can be addressed to:
 			<Display>
 				<!--coins-->
 				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -879,6 +968,9 @@ Any inquiries can be addressed to:
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>2</Decimals>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -890,7 +982,7 @@ Any inquiries can be addressed to:
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[This]]>
+					<![CDATA[1-hour percentage price change for the latest listed cryptocurrency.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -917,7 +1009,7 @@ Any inquiries can be addressed to:
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[This]]>
+					<![CDATA[24-hour percentage change in trading volume for the latest listed cryptocurrency.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -944,7 +1036,7 @@ Any inquiries can be addressed to:
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[This]]>
+					<![CDATA[Market capitalization of the latest listed cryptocurrency, expressed as a percentage.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -969,6 +1061,9 @@ Any inquiries can be addressed to:
 			<Description>Platform Name (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Name of the blockchain platform (e.g., Ethereum, Hyperliquid) associated with the listed cryptocurrency.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -993,7 +1088,9 @@ Any inquiries can be addressed to:
 			<Description>Display Key (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>This is the parameter for display key for the Latest Listings table.</Subtext>
+				<Subtext>
+					<![CDATA[This is the parameter for display key for the Latest Listings table.]]>
+			</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -1012,6 +1109,9 @@ Any inquiries can be addressed to:
 			<Description>Currency (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Currency used to express quote values for the latest listed cryptocurrency (e.g., USD, EUR).]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -1118,6 +1218,9 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1140,6 +1243,11 @@ Any inquiries can be addressed to:
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>2</Decimals>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1161,6 +1269,9 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1209,6 +1320,9 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1288,6 +1402,9 @@ Any inquiries can be addressed to:
 			<Description>Refresh</Description>
 			<Type>write</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Triggers a refresh of the selected category row in the table.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>

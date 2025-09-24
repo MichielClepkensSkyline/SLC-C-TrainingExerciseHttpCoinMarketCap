@@ -36,7 +36,7 @@ public static class QAction
 			}
 			else
 			{
-
+				protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown: Status of the response is: {status}", LogType.Error, LogLevel.NoLogging);
 			}
 		}
 		catch (Exception ex)
