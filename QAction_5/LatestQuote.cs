@@ -1,13 +1,6 @@
-﻿
-
-namespace QAction_5
+﻿namespace QAction_5
 {
 	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Net.NetworkInformation;
-	using System.Text;
-	using System.Threading.Tasks;
 	using Newtonsoft.Json;
 
 	public class Data
