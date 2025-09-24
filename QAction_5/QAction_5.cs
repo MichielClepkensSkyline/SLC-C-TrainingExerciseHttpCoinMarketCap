@@ -22,7 +22,11 @@ public static class QAction
             if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodelatestquotes))
             {
                 Root root = SecureNewtonsoftDeserialization.DeserializeObject<Root>(protocol.GetParameter(Parameter.responsecontentlatestquotes).ToString());
-                if (root.Status.ErrorCode == 0)
+                if (root.Status == null)
+                {
+                    protocol.Log($"QA{protocol.QActionID}|Run|root.Status is null", LogType.Error, LogLevel.NoLogging);
+                }
+                else if(root.Status.ErrorCode == 0)
                 {
                     FillLatestQuotes(protocol, root.Data);
                 }
@@ -40,29 +44,32 @@ public static class QAction
 
 	private static void FillLatestQuotes(SLProtocolExt protocol, Data data)
     {
-        Dictionary<int, object> parameters = new Dictionary<int, object>
+        if (data != null)
         {
-            { Parameter.activecryptocurrencies, data.ActiveCryptocurrencies },
-            { Parameter.totalcryptocurrencies, data.TotalCryptocurrencies },
-            { Parameter.activemarketpairs, data.ActiveMarketPairs },
-            { Parameter.activeexchanges, data.ActiveExchanges },
-            { Parameter.totalexchanges, data.TotalExchanges },
-            { Parameter.ethereumdominance, data.EthDominance },
-            { Parameter.bitcoindominance, data.BtcDominance },
-            { Parameter.ethereumdominance24hpercentagechange, data.EthDominance24hPercentageChange },
-            { Parameter.bitcoindominance24hpercentagechange, data.BtcDominance24hPercentageChange },
-            { Parameter.defivolume24h, data.DefiVolume24h },
-            { Parameter.defimarketcap, data.DefiMarketCap },
-            { Parameter.defi24hpercentagechange, data.Defi24hPercentageChange },
-            { Parameter.stablecoinvolume24h, data.StablecoinVolume24h },
-            { Parameter.stablecoinmarketcap, data.StablecoinMarketCap },
-            { Parameter.stablecoin24hpercentagechange, data.Stablecoin24hPercentageChange },
-            { Parameter.totalcryptodexcurrencies, data.TotalCryptoDexCurrencies },
-            { Parameter.past24hincrementalcryptonumber, data.Past24hIncrementalCryptoNumber },
-            { Parameter.totalmarketcap, data.Quote.USD.TotalMarketCap },
-            { Parameter.totalvolume24h, data.Quote.USD.TotalVolume24h },
-            { Parameter.lastupdated, data.LastUpdated },
-        };
-        protocol.SetParameters(parameters);
+            Dictionary<int, object> parameters = new Dictionary<int, object>
+            {
+                { Parameter.activecryptocurrencies, data.ActiveCryptocurrencies },
+                { Parameter.totalcryptocurrencies, data.TotalCryptocurrencies },
+                { Parameter.activemarketpairs, data.ActiveMarketPairs },
+                { Parameter.activeexchanges, data.ActiveExchanges },
+                { Parameter.totalexchanges, data.TotalExchanges },
+                { Parameter.ethereumdominance, data.EthDominance },
+                { Parameter.bitcoindominance, data.BtcDominance },
+                { Parameter.ethereumdominance24hpercentagechange, data.EthDominance24hPercentageChange },
+                { Parameter.bitcoindominance24hpercentagechange, data.BtcDominance24hPercentageChange },
+                { Parameter.defivolume24h, data.DefiVolume24h },
+                { Parameter.defimarketcap, data.DefiMarketCap },
+                { Parameter.defi24hpercentagechange, data.Defi24hPercentageChange },
+                { Parameter.stablecoinvolume24h, data.StablecoinVolume24h },
+                { Parameter.stablecoinmarketcap, data.StablecoinMarketCap },
+                { Parameter.stablecoin24hpercentagechange, data.Stablecoin24hPercentageChange },
+                { Parameter.totalcryptodexcurrencies, data.TotalCryptoDexCurrencies },
+                { Parameter.past24hincrementalcryptonumber, data.Past24hIncrementalCryptoNumber },
+                { Parameter.totalmarketcap, data.Quote?.USD?.TotalMarketCap },
+                { Parameter.totalvolume24h, data.Quote?.USD?.TotalVolume24h },
+                { Parameter.lastupdated, data.LastUpdated },
+            };
+            protocol.SetParameters(parameters);
+        }
 	}
 }

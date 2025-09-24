@@ -26,13 +26,17 @@ public static class QAction
             if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodecategories))
             {
                 Root root = SecureNewtonsoftDeserialization.DeserializeObject<Root>(protocol.GetParameter(Parameter.responsecontentcategories).ToString());
-                if (root.Status.ErrorCode == 0)
+                if (root.Status == null)
+                {
+                    protocol.Log($"QA{protocol.QActionID}|Run|root.Status is null", LogType.Error, LogLevel.NoLogging);
+                }
+                else if (root.Status.ErrorCode == 0)
                 {
                     FillCategories(protocol, root.Categories);
                 }
                 else
                 {
-                    protocol.Log($"QA{protocol.QActionID}|QA4Run|{root.Status.ErrorMessage}", LogType.Error, LogLevel.NoLogging);
+                    protocol.Log($"QA{protocol.QActionID}|Run|{root.Status.ErrorMessage}", LogType.Error, LogLevel.NoLogging);
                 }
             }
         }
@@ -47,21 +51,24 @@ public static class QAction
         Dictionary<string, CategoriesQActionRow> categoryRows = new Dictionary<string, CategoriesQActionRow>();
         foreach (Category category in categories)
         {
-            CategoriesQActionRow categoryQActionRow = new CategoriesQActionRow
+            if (category != null)
             {
-                Categoriesid = category.Id,
-                Categoriesname = category.Name,
-                Categoriestitle = category.Title,
-                Categoriesdescription = category.Description,
-                Categoriesnumberoftokens = category.NumTokens,
-                Categoriesaveragepricechange = category.AvgPriceChange,
-                Categoriesmarketcap = category.MarketCap,
-                Categoriesmarketcapchange = category.MarketCapChange,
-                Categoriesvolume = category.Volume,
-                Categoriesvolumechange = category.VolumeChange,
-                Categorieslastupdated = category.LastUpdated.ToLocalTime(), //TODO fix de tijd
-            };
-            categoryRows.Add(category.Id, categoryQActionRow);
+                CategoriesQActionRow categoryQActionRow = new CategoriesQActionRow
+                {
+                    Categoriesid = category.Id,
+                    Categoriesname = category.Name,
+                    Categoriestitle = category.Title,
+                    Categoriesdescription = category.Description,
+                    Categoriesnumberoftokens = category.NumTokens,
+                    Categoriesaveragepricechange = category.AvgPriceChange,
+                    Categoriesmarketcap = category.MarketCap,
+                    Categoriesmarketcapchange = category.MarketCapChange,
+                    Categoriesvolume = category.Volume,
+                    Categoriesvolumechange = category.VolumeChange,
+                    Categorieslastupdated = category.LastUpdated.ToLocalTime(), //TODO fix de tijd
+                };
+                categoryRows.Add(category.Id, categoryQActionRow);
+            }
         }
 
         object[] categoriesColumns = protocol.categories.QActionRowsToObjectFillArray(categoryRows.Values.ToArray());
