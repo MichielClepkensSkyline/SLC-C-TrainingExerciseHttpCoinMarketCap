@@ -89,7 +89,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>1</Row>
+						<Row>2</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -117,7 +117,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>2</Row>
+						<Row>3</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -302,7 +302,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>3</Row>
+						<Row>4</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -330,12 +330,37 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>4</Row>
+						<Row>5</Row>
 					</Position>
 				</Positions>
 			</Display>
 			<Measurement>
 				<Type lines="30">string</Type>
+			</Measurement>
+		</Param>
+		<Param id="13" trending="false">
+			<Name>individualCategoryAPI</Name>
+			<Description>Individual Category API</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
 			</Measurement>
 		</Param>
 		<Param id="30" trending="true">
@@ -1294,7 +1319,7 @@ Any inquiries can be addressed to:
 		</Session>
 		<Session id="4" name="Get Individual Category">
 			<Connection id="1" name="Get Individual Category">
-				<Request verb="GET" url="">
+				<Request verb="GET" pid="13">
 					<Headers>
 						<Header key="Authorization" pid="6"></Header>
 					</Headers>
@@ -1314,6 +1339,8 @@ Any inquiries can be addressed to:
 		<QAction id="4" name="Parse Categories" encoding="csharp" triggers="8">
 		</QAction>
 		<QAction id="5" name="Parse Latest Quote" encoding="csharp" triggers="10">
+		</QAction>
+		<QAction id="6" name="Make The API To Call in Session 4" encoding="csharp" triggers="211" row="true">
 		</QAction>
 	</QActions>
 

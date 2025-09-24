@@ -48,6 +48,11 @@ public static class Parameter
 	public const int responseindividualcategory_12 = 12;
 	/// <summary>PID: 12 | Type: read</summary>
 	public const int responseindividualcategory = 12;
+	/// <summary>PID: 13 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int individualcategoryapi_13 = 13;
+	/// <summary>PID: 13 | Type: read</summary>
+	public const int individualcategoryapi = 13;
 	/// <summary>PID: 30 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int latestquoteactivecryptocurrencies_30 = 30;
@@ -426,6 +431,8 @@ public interface SLProtocolExt : SLProtocol
 	object Statuscodeindividualcategory { get; set; }
 	object Responseindividualcategory_12 { get; set; }
 	object Responseindividualcategory { get; set; }
+	object Individualcategoryapi_13 { get; set; }
+	object Individualcategoryapi { get; set; }
 	object Latestquoteactivecryptocurrencies_30 { get; set; }
 	object Latestquoteactivecryptocurrencies { get; set; }
 	object Latestquotetotalcryptocurrencies_31 { get; set; }
@@ -554,6 +561,11 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Responseindividualcategory_12 {get { return GetParameter(12); }set { SetParameter(12, value); }}
 	/// <summary>PID: 12  | Type: read</summary>
 	public System.Object Responseindividualcategory {get { return GetParameter(12); }set { SetParameter(12, value); }}
+	/// <summary>PID: 13  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Individualcategoryapi_13 {get { return GetParameter(13); }set { SetParameter(13, value); }}
+	/// <summary>PID: 13  | Type: read</summary>
+	public System.Object Individualcategoryapi {get { return GetParameter(13); }set { SetParameter(13, value); }}
 	/// <summary>PID: 30  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestquoteactivecryptocurrencies_30 {get { return GetParameter(30); }set { SetParameter(30, value); }}
