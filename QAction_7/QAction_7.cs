@@ -24,26 +24,39 @@ public static class QAction
 			string json = protocol.GetParameter(Parameter.responseindividualcategory_12).ToString();
 			Category category = SecureNewtonsoftDeserialization.DeserializeObject<Category>(json);
 			string statusCode = protocol.GetParameter(Parameter.statuscodeindividualcategory_11).ToString();
+			int status = Int32.Parse(statusCode.Split(' ')[1]);
 			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|statusCode: '{statusCode}'  and response {category.Data.Id}", LogType.Information, LogLevel.NoLogging);
 
-			object[] newCategoryRow = new CategoriesQActionRow
+			if (status == 200)
 			{
-				Categoriesid_201 = category.Data.Id.ToString(),
-				Categoriesname_202 = category.Data.Name + " new",
-				Categoriesnumberoftokens_203 = category.Data.NumTokens,
-				Categoriesaveragepricechange_204 = category.Data.AvgPriceChange,
-				Categoriesmarketcap_205 = category.Data.MarketCap,
-				Categoriesmarketcapchange_206 = category.Data.MarketCapChange,
-				Categoriesvolume_207 = category.Data.Volume,
-				Categoriesvolumechange_208 = category.Data.VolumeChange,
-				Categorieslastupdated_209 = category.Data.LastUpdated.ToOADate(),
-			};
-
-			protocol.SetRow(Parameter.Categories.tablePid, category.Data.Id, newCategoryRow);
+				UpdateCategoryRow(protocol, category.Data);
+			}
+			else
+			{
+				protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown: Status of the response is: {status}", LogType.Error, LogLevel.NoLogging);
+			}
 		}
 		catch (Exception ex)
 		{
 			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}{ex}", LogType.Error, LogLevel.NoLogging);
 		}
+	}
+
+	private static void UpdateCategoryRow(SLProtocol protocol, Data category)
+	{
+		object[] newCategoryRow = new CategoriesQActionRow
+		{
+			Categoriesid_201 = category.Id.ToString(),
+			Categoriesname_202 = category.Name,
+			Categoriesnumberoftokens_203 = category.NumTokens,
+			Categoriesaveragepricechange_204 = category.AvgPriceChange,
+			Categoriesmarketcap_205 = category.MarketCap,
+			Categoriesmarketcapchange_206 = category.MarketCapChange,
+			Categoriesvolume_207 = category.Volume,
+			Categoriesvolumechange_208 = category.VolumeChange,
+			Categorieslastupdated_209 = category.LastUpdated.ToOADate(),
+		};
+
+		protocol.SetRow(Parameter.Categories.tablePid, category.Id, newCategoryRow);
 	}
 }
