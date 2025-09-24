@@ -69,6 +69,7 @@ public static class QAction
 						Latestlistingsquotevolumechange24h_110 = latest_listing.Quote.USD.VolumeChange24h,
 						Latestlistingsquotemarketcap_111 = latest_listing.Quote.USD.MarketCap,
 						Latestlistingsplatformname_112 = latest_listing.Platform?.Name ?? exceptionValue.ToString(),
+						Latestlistingsquotecurrency_114 = latest_listing.Quote.USD.ToString().Split('.')[1],
 					}.ToObjectArray();
 				}
 				else

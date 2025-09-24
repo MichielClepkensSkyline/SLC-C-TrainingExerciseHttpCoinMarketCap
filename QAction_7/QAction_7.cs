@@ -24,7 +24,7 @@ public static class QAction
 			string json = protocol.GetParameter(Parameter.responseindividualcategory_12).ToString();
 			Category category = SecureNewtonsoftDeserialization.DeserializeObject<Category>(json);
 			string statusCode = protocol.GetParameter(Parameter.statuscodeindividualcategory_11).ToString();
-			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|statusCode: '{statusCode}'  and response {categories.Data.Id}", LogType.Information, LogLevel.NoLogging);
+			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|statusCode: '{statusCode}'  and response {category.Data.Id}", LogType.Information, LogLevel.NoLogging);
 
 			object[] newCategoryRow = new CategoriesQActionRow
 			{

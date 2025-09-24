@@ -476,6 +476,7 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Decimals>2</Decimals>
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
@@ -501,6 +502,7 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Decimals>2</Decimals>
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
@@ -526,6 +528,7 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Decimals>2</Decimals>
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
@@ -551,6 +554,7 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Decimals>2</Decimals>
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
@@ -576,6 +580,7 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Decimals>2</Decimals>
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
@@ -601,6 +606,7 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
@@ -684,7 +690,8 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="9" pid="109" type="retrieved" options=""/>
 				<ColumnOption idx="10" pid="110" type="retrieved" options=""/>
 				<ColumnOption idx="11" pid="111" type="retrieved" options=""/>
-				<ColumnOption idx="12" pid="113" type="displaykey" options=""/>
+				<ColumnOption idx="12" pid="114" type="retrieved" options=""/>
+				<ColumnOption idx="13" pid="113" type="displaykey" options=""/>
 			</ArrayOptions>
 			<Information>
 				<Subtext>
@@ -702,7 +709,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:101|0-102|1-103|2-104|4-106|6-108|8-105|5-107|7-109|9-110|10-111|11-112|3-113|12,width:50-100-61-156-50-84-100-156-192-178-178-122-105,sort:STRING|ASC|1-STRING-STRING-INT-INT-INT-INT-INT|ASC|0-INT-STRING-INT-INT-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:101|0-102|1-103|2-104|4-106|6-108|8-105|5-107|7-109|9-110|10-111|11-112|3-113|13-114|12,width:50-100-61-156-50-84-100-156-192-178-178-122-105-100,sort:STRING|ASC|1-STRING-STRING-INT-INT-INT-INT-INT|ASC|0-INT-STRING-INT-INT-STRING-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="101" trending="false">
@@ -871,6 +878,7 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Decimals>2</Decimals>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -893,6 +901,7 @@ Any inquiries can be addressed to:
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
+				<Decimals>2</Decimals>
 				<Range>
 					<Low>0</Low>
 					<High>100</High>
@@ -919,6 +928,7 @@ Any inquiries can be addressed to:
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
+				<Decimals>2</Decimals>
 				<Range>
 					<Low>0</Low>
 					<High>100</High>
@@ -997,7 +1007,24 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		
+		<Param id="114" trending="false">
+			<Name>latestListingsQuoteCurrency</Name>
+			<Description>Currency (Latest Listings)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
 		<Param id="200">
 			<Name>categories</Name>
 			<Description>Categories</Description>
@@ -1112,6 +1139,7 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Decimals>2</Decimals>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1159,6 +1187,7 @@ Any inquiries can be addressed to:
 					<Low>0</Low>
 					<High>100</High>
 				</Range>
+				<Decimals>2</Decimals>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1206,6 +1235,7 @@ Any inquiries can be addressed to:
 					<Low>0</Low>
 					<High>100</High>
 				</Range>
+				<Decimals>2</Decimals>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1467,7 +1497,9 @@ Any inquiries can be addressed to:
 			<Time initial="true" dataDisplay="30000">60000</Time>
 			<Interval>75</Interval>
 			<Content>
-				
+				<Group>3</Group>
+				<Group>4</Group>
+				<Group>5</Group>
 			</Content>
 		</Timer>
 		<Timer id="3">
