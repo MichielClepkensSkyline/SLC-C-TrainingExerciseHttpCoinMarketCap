@@ -251,26 +251,38 @@ Any inquiries can be addressed to:
 				<Type lines="20">string</Type>
 			</Measurement>
 		</Param>
-		<Param id="200"> <!--De params die ik wil: Id, Name, Symbol, cmc_rank, num_market_pairs, circulating_supply, total_supply, max_supply, last_updated, date_added, tvl_ratio, platform_name, quote, quote_price, quote_volume_24h, quote_volume_change_24h, market_cap, market_cap_dominance, quote_percent_change_1h, quote_percent_change_24h, quote_percent_change_7d-->
+		<Param id="200">
+			<!--De params die ik wil: Id, Name, Symbol, cmc_rank, num_market_pairs, circulating_supply, total_supply, max_supply, last_updated, date_added, tvl_ratio, platform_name, quote, quote_price, quote_volume_24h, quote_volume_change_24h, market_cap, market_cap_dominance, quote_percent_change_1h, quote_percent_change_24h, quote_percent_change_7d-->
 			<Name>lastListing</Name>
 			<Description>Last Listings</Description>
 			<Type>array</Type>
-			<ArrayOptions index="0">
+			<ArrayOptions index="0" options=";naming=\201,202">
 				<ColumnOption idx="0" pid="201" type="retrieved" options="" />
 				<ColumnOption idx="1" pid="202" type="retrieved" options="" />
 				<ColumnOption idx="2" pid="203" type="retrieved" options="" />
-				<ColumnOption idx="3" pid="204" type="retrieved" options="" />
-				<ColumnOption idx="4" pid="205" type="retrieved" options="" />
-				<ColumnOption idx="5" pid="206" type="retrieved" options="" />
-				<ColumnOption idx="6" pid="207" type="retrieved" options="" />
-				<ColumnOption idx="7" pid="208" type="retrieved" options="" />
+				<ColumnOption idx="3" pid="204" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="4" pid="205" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="5" pid="206" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="6" pid="207" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="7" pid="208" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
 				<ColumnOption idx="8" pid="209" type="retrieved" options="" />
 				<ColumnOption idx="9" pid="210" type="retrieved" options="" />
-				<ColumnOption idx="10" pid="211" type="retrieved" options="" />
+				<ColumnOption idx="10" pid="211" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="11" pid="212" type="retrieved" options="" />
+				<ColumnOption idx="12" pid="213" type="retrieved" options="" />
+				<ColumnOption idx="13" pid="214" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="14" pid="215" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="15" pid="216" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="16" pid="217" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="17" pid="218" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="18" pid="219" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="19" pid="220" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="20" pid="221" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx ="21" pid="222" type="displaykey" options="" />
 			</ArrayOptions>
 			<Information>
 				<Subtext>
-					<![CDATA[This is the table containing the last listings.]]>
+					<![CDATA[Table of all active cryptocurrencies with latest market data.]]>
 				</Subtext>
 			</Information>
 			<Display>
@@ -284,7 +296,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:201|0-202|1-203|2-204|3-205|4-206|5-207|6-208|7-209|8-210|9-211|10,width:100-100-100-100-100-105-124-100-100-117-131,sort:STRING-STRING-STRING-INT-INT-STRING-INT-STRING-INT-INT-INT,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:201|0-202|1-203|2-204|3-205|4-206|5-207|6-208|7-209|8-210|9-211|10-212|11-213|12-214|13-215|14-216|15-217|16-218|17-219|18-220|19-221|20-222|21,width:0-100-100-137-154-122-124-118-167-156-156-105-100-100-124-169-159-151-183-189-183-100,sort:STRING-STRING-STRING-INT|ASC|1-INT-STRING-INT-STRING-INT|DESC|0-INT-INT-STRING-STRING-INT-INT-INT-INT-INT-INT-INT-INT-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="201" trending="false">
@@ -293,7 +305,8 @@ Any inquiries can be addressed to:
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[This is the key used internally by DataMiner to identify the table entries.]]>
+					<![CDATA[This is the key used internally by DataMiner to identify the table entries.
+The unique CoinMarketCap ID for this cryptocurrency.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -314,7 +327,7 @@ Any inquiries can be addressed to:
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[Name of the coin.]]>
+					<![CDATA[The name of this cryptocurrency.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -335,7 +348,7 @@ Any inquiries can be addressed to:
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[This is the symbol for the coin.]]>
+					<![CDATA[The ticker symbol for this cryptocurrency.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -350,34 +363,194 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="204" trending="false">
-			<Name>lastListingdateAdded</Name>
-			<Description>Date Added (Last Listings)</Description>
+		<Param id="204" trending="true">
+			<Name>lastListingCoinMarketCapRank</Name>
+			<Description>Coinmarketcap Rank (Last Listings)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[This is the origin date that the coin was created.]]>
+					<![CDATA[The cryptocurrency's CoinMarketCap rank by market cap.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<Normal>50</Normal>
+				<WaH>100</WaH>
+				<MiH>200</MiH>
+				<MaH>300</MaH>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>ranks</Units>
+				<Decimals>0</Decimals>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="205" trending="false">
+		<Param id="205" trending="true">
+			<Name>lastListingNumMarketPairs</Name>
+			<Description>Number of Market Pairs (Last Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[The number of active trading pairs available for this cryptocurrency across supported exchanges.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>0</Low>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>50</CL>
+				<MaL>100</MaL>
+				<MiL>250</MiL>
+				<WaL>500</WaL>
+				<Normal>750</Normal>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>pairs</Units>
+				<Decimals>0</Decimals>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="206" trending="true">
+			<Name>lastListingCirculatingSupply</Name>
+			<Description>Circulating Supply (Last Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[The approximate number of coins circulating for this cryptocurrency.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>0</Low>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>50</CL>
+				<MaL>100</MaL>
+				<MiL>200</MiL>
+				<WaL>500</WaL>
+				<Normal>100</Normal>
+				<WaH>50000</WaH>
+				<MiH>70000</MiH>
+				<MaH>90000</MaH>
+				<CH>100000</CH>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>coins</Units>
+				<Decimals>3</Decimals>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="207" trending="true">
 			<Name>lastListingTotalSupply</Name>
 			<Description>Total Supply (Last Listings)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[This is the total amount of coins that are available.]]>
+					<![CDATA[The approximate total amount of coins in existence right now (minus any coins that have been verifiably burned).]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>0</Low>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>50</CL>
+				<MaL>100</MaL>
+				<MiL>200</MiL>
+				<WaL>500</WaL>
+				<Normal>100</Normal>
+				<WaH>50000</WaH>
+				<MiH>70000</MiH>
+				<MaH>90000</MaH>
+				<CH>100000</CH>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>coins</Units>
+				<Decimals>3</Decimals>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="208" trending="true">
+			<Name>lastListingMaxSupply</Name>
+			<Description>Maximum Supply (Last Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[The expected maximum limit of coins ever to be available for this cryptocurrency.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>0</Low>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>50</CL>
+				<MaL>100</MaL>
+				<MiL>200</MiL>
+				<WaL>500</WaL>
+				<Normal>100</Normal>
+				<WaH>50000</WaH>
+				<MiH>70000</MiH>
+				<MaH>90000</MaH>
+				<CH>100000</CH>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>coins</Units>
+				<Decimals>3</Decimals>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="209" trending="false">
+			<Name>lastListingLastUpdated</Name>
+			<Description>Timestamp of Last Update (Last Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Timestamp (ISO 8601) of the last time this cryptocurrency's market data was updated.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -387,18 +560,77 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Decimals>8</Decimals>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type options="datetime">number</Type>
 			</Measurement>
 		</Param>
-		<Param id="206" trending="false">
+		<Param id="210" trending="false">
+			<Name>lastListingDateAdded</Name>
+			<Description>Date Added (Last Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Timestamp (ISO 8601) of when this cryptocurrency was added to CoinMarketCap.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>8</Decimals>
+			</Display>
+			<Measurement>
+				<Type options="datetime">number</Type>
+			</Measurement>
+		</Param>
+		<Param id="211" trending="true">
+			<Name>lastListingTotalValueLockedRatio</Name>
+			<Description>Ratio Total Value Locked (Last Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Percentage of Total Value Locked]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<Normal>0.5</Normal>
+				<WaH>1</WaH>
+				<MiH>2</MiH>
+				<MaH>5</MaH>
+				<CH>10</CH>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Decimals>3</Decimals>
+			</Display>
+			<Measurement>
+				<Type>analog</Type>
+			</Measurement>
+		</Param>
+		<Param id="212" trending="false">
 			<Name>lastListingPlatformName</Name>
 			<Description>Platform Name (Last Listings)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[This is the name of the platform on which the coin relies.]]>
+					<![CDATA[Metadata about the parent cryptocurrency platform this cryptocurrency belongs to if it is a token, otherwise null.
+The name of the parent platform cryptocurrency.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -413,34 +645,14 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="207" trending="false">
-			<Name>lastListingLastUpdated</Name>
-			<Description>Last Updated Time (Last Listings)</Description>
-			<Type>read</Type>
-			<Information>
-				<Subtext>
-					<![CDATA[This is the time when the information about the coin was last updated.]]>
-				</Subtext>
-			</Information>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-			</Display>
-			<Measurement>
-				<Type>number</Type>
-			</Measurement>
-		</Param>
-		<Param id="208" trending="false">
+		<Param id="213" trending="false">
 			<Name>lastListingquote</Name>
 			<Description>Quote (Last Listings)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[Real money type for which the exchange rate is mentioned.]]>
+					<![CDATA[A map of market quotes in different currency conversions. The default map included is USD.
+A market quote in the currency conversion option.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -455,55 +667,129 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="209" trending="false">
+		<Param id="214" trending="true">
 			<Name>lastListingQuotePrice</Name>
 			<Description>Price Quote (Last Listings)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[The exchange rate.]]>
+					<![CDATA[Price in the specified currency for this historical.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>50</CL>
+				<MaL>100</MaL>
+				<MiL>200</MiL>
+				<WaL>500</WaL>
+				<Normal>100</Normal>
+				<WaH>50000</WaH>
+				<MiH>70000</MiH>
+				<MaH>90000</MaH>
+				<CH>100000</CH>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>coins</Units>
+				<Decimals>3</Decimals>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="210" trending="false">
+		<Param id="215" trending="true">
 			<Name>lastListingQuoteVolume24h</Name>
-			<Description>QuoteVolume24h (Last Listings)</Description>
+			<Description>Quote Volume 24h (Last Listings)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[Volume of coins transfered in last 24h?]]>
+					<![CDATA[Rolling 24 hour adjusted volume in the specified currency.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Range>
+					<Low>-10000</Low>
+					<High>10000</High>
+				</Range>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-1000</CL>
+				<MaL>-500</MaL>
+				<MiL>-100</MiL>
+				<WaL>-50</WaL>
+				<Normal>0</Normal>
+				<WaH>50</WaH>
+				<MiH>100</MiH>
+				<MaH>500</MaH>
+				<CH>1000</CH>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>coins</Units>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="211" trending="false">
-			<Name>lastListingPercentChange24h</Name>
-			<Description>Percent Change 24h (Last Listings)</Description>
+		<Param id="216" trending="true">
+			<Name>lastListingQuoteVolumeChange24h</Name>
+			<Description>Quote Volume Change 24h (Last Listings)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[Percentage of coin getting more or less value.]]>
+					<![CDATA[24 hour change in the specified currencies volume.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-15</CL>
+				<MaL>-10</MaL>
+				<MiL>-5</MiL>
+				<WaL>-1</WaL>
+				<Normal>0</Normal>
+				<WaH>1</WaH>
+				<MiH>5</MiH>
+				<MaH>10</MaH>
+				<CH>15</CH>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>%</Units>
+			</Display>
+			<Measurement>
+				<Type>analog</Type>
+			</Measurement>
+		</Param>
+		<Param id="217" trending="true">
+			<Name>lastListingMarketCap</Name>
+			<Description>Market Cap (Last Listing)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Market cap in the specified currency.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -511,11 +797,195 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<Info></Info>
+				<CL>500</CL>
+				<MaL>1 000</MaL>
+				<MiL>5 000</MiL>
+				<WaL>10 000</WaL>
+				<Normal>20 000</Normal>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>coins</Units>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="218" trending="true">
+			<Name>lastListingMarketCapDominance</Name>
+			<Description>Market Cap Dominance (Last Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Market cap dominance in the specified currency.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<Info></Info>
+				<CL>0.05</CL>
+				<MaL>0.1</MaL>
+				<MiL>0.5</MiL>
+				<WaL>1</WaL>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>%</Units>
+			</Display>
+			<Measurement>
+				<Type>analog</Type>
+			</Measurement>
+		</Param>
+		<Param id="219" trending="true">
+			<Name>lastListingQuotePercentChange1h</Name>
+			<Description>Quote Percentage Change 1h (Last Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[1 hour change in the specified currency.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-15</CL>
+				<MaL>-10</MaL>
+				<MiL>-5</MiL>
+				<WaL>-1</WaL>
+				<Normal>0</Normal>
+				<WaH>1</WaH>
+				<MiH>5</MiH>
+				<MaH>10</MaH>
+				<CH>15</CH>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>%</Units>
+			</Display>
+			<Measurement>
+				<Type>analog</Type>
+			</Measurement>
+		</Param>
+		<Param id="220" trending="true">
+			<Name>lastListingQuotePercentChange24h</Name>
+			<Description>Quote Percentage Change 24h (Last Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[24 hour change in the specified currency.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-15</CL>
+				<MaL>-10</MaL>
+				<MiL>-5</MiL>
+				<WaL>-1</WaL>
+				<Normal>0</Normal>
+				<WaH>1</WaH>
+				<MiH>5</MiH>
+				<MaH>10</MaH>
+				<CH>15</CH>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>%</Units>
+			</Display>
+			<Measurement>
+				<Type>analog</Type>
+			</Measurement>
+		</Param>
+		<Param id="221" trending="true">
+			<Name>lastListingQuotePercentChange7d</Name>
+			<Description>Quote Percentage Change 7d (Last Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[7 day change in the specified currency.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-15</CL>
+				<MaL>-10</MaL>
+				<MiL>-5</MiL>
+				<WaL>-1</WaL>
+				<Normal>0</Normal>
+				<WaH>1</WaH>
+				<MiH>5</MiH>
+				<MaH>10</MaH>
+				<CH>15</CH>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>%</Units>
+			</Display>
+			<Measurement>
+				<Type>analog</Type>
+			</Measurement>
+		</Param>
+		<Param id="222" trending="false">
+			<Name>displayKey</Name>
+			<Description>Display Key</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[This is the display key of the row.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>string</Type>
 			</Measurement>
 		</Param>
 		<Param id="400">
@@ -636,7 +1106,7 @@ Any inquiries can be addressed to:
 				<Units>%</Units>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>analog</Type>
 			</Measurement>
 		</Param>
 		<Param id="405" trending="false">
@@ -679,7 +1149,7 @@ Any inquiries can be addressed to:
 				<Units>%</Units>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>analog</Type>
 			</Measurement>
 		</Param>
 		<Param id="407" trending="false">
@@ -705,7 +1175,7 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="408" trending="false">
 			<Name>categoriesVolumeChange</Name>
-			<Description>VolumeChange (Categories)</Description>
+			<Description>Volume Change (Categories)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
@@ -722,7 +1192,7 @@ Any inquiries can be addressed to:
 				<Units>%</Units>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>analog</Type>
 			</Measurement>
 		</Param>
 		<Param id="409" trending="false">

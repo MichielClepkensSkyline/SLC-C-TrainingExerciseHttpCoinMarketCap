@@ -108,44 +108,99 @@ public static class Parameter
 			public const int lastlistingsymbol = 203;
 			/// <summary>PID: 204 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int lastlistingdateadded_204 = 204;
+			public const int lastlistingcoinmarketcaprank_204 = 204;
 			/// <summary>PID: 204 | Type: read</summary>
-			public const int lastlistingdateadded = 204;
+			public const int lastlistingcoinmarketcaprank = 204;
 			/// <summary>PID: 205 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int lastlistingtotalsupply_205 = 205;
+			public const int lastlistingnummarketpairs_205 = 205;
 			/// <summary>PID: 205 | Type: read</summary>
-			public const int lastlistingtotalsupply = 205;
+			public const int lastlistingnummarketpairs = 205;
 			/// <summary>PID: 206 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int lastlistingplatformname_206 = 206;
+			public const int lastlistingcirculatingsupply_206 = 206;
 			/// <summary>PID: 206 | Type: read</summary>
-			public const int lastlistingplatformname = 206;
+			public const int lastlistingcirculatingsupply = 206;
 			/// <summary>PID: 207 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int lastlistinglastupdated_207 = 207;
+			public const int lastlistingtotalsupply_207 = 207;
 			/// <summary>PID: 207 | Type: read</summary>
-			public const int lastlistinglastupdated = 207;
+			public const int lastlistingtotalsupply = 207;
 			/// <summary>PID: 208 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int lastlistingquote_208 = 208;
+			public const int lastlistingmaxsupply_208 = 208;
 			/// <summary>PID: 208 | Type: read</summary>
-			public const int lastlistingquote = 208;
+			public const int lastlistingmaxsupply = 208;
 			/// <summary>PID: 209 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int lastlistingquoteprice_209 = 209;
+			public const int lastlistinglastupdated_209 = 209;
 			/// <summary>PID: 209 | Type: read</summary>
-			public const int lastlistingquoteprice = 209;
+			public const int lastlistinglastupdated = 209;
 			/// <summary>PID: 210 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int lastlistingquotevolume24h_210 = 210;
+			public const int lastlistingdateadded_210 = 210;
 			/// <summary>PID: 210 | Type: read</summary>
-			public const int lastlistingquotevolume24h = 210;
+			public const int lastlistingdateadded = 210;
 			/// <summary>PID: 211 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int lastlistingpercentchange24h_211 = 211;
+			public const int lastlistingtotalvaluelockedratio_211 = 211;
 			/// <summary>PID: 211 | Type: read</summary>
-			public const int lastlistingpercentchange24h = 211;
+			public const int lastlistingtotalvaluelockedratio = 211;
+			/// <summary>PID: 212 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int lastlistingplatformname_212 = 212;
+			/// <summary>PID: 212 | Type: read</summary>
+			public const int lastlistingplatformname = 212;
+			/// <summary>PID: 213 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int lastlistingquote_213 = 213;
+			/// <summary>PID: 213 | Type: read</summary>
+			public const int lastlistingquote = 213;
+			/// <summary>PID: 214 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int lastlistingquoteprice_214 = 214;
+			/// <summary>PID: 214 | Type: read</summary>
+			public const int lastlistingquoteprice = 214;
+			/// <summary>PID: 215 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int lastlistingquotevolume24h_215 = 215;
+			/// <summary>PID: 215 | Type: read</summary>
+			public const int lastlistingquotevolume24h = 215;
+			/// <summary>PID: 216 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int lastlistingquotevolumechange24h_216 = 216;
+			/// <summary>PID: 216 | Type: read</summary>
+			public const int lastlistingquotevolumechange24h = 216;
+			/// <summary>PID: 217 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int lastlistingmarketcap_217 = 217;
+			/// <summary>PID: 217 | Type: read</summary>
+			public const int lastlistingmarketcap = 217;
+			/// <summary>PID: 218 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int lastlistingmarketcapdominance_218 = 218;
+			/// <summary>PID: 218 | Type: read</summary>
+			public const int lastlistingmarketcapdominance = 218;
+			/// <summary>PID: 219 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int lastlistingquotepercentchange1h_219 = 219;
+			/// <summary>PID: 219 | Type: read</summary>
+			public const int lastlistingquotepercentchange1h = 219;
+			/// <summary>PID: 220 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int lastlistingquotepercentchange24h_220 = 220;
+			/// <summary>PID: 220 | Type: read</summary>
+			public const int lastlistingquotepercentchange24h = 220;
+			/// <summary>PID: 221 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int lastlistingquotepercentchange7d_221 = 221;
+			/// <summary>PID: 221 | Type: read</summary>
+			public const int lastlistingquotepercentchange7d = 221;
+			/// <summary>PID: 222 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int displaykey_222 = 222;
+			/// <summary>PID: 222 | Type: read</summary>
+			public const int displaykey = 222;
 			public class Write
 			{
 			}
@@ -169,44 +224,99 @@ public static class Parameter
 			public const int lastlistingsymbol = 2;
 			/// <summary>IDX: 3 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int lastlistingdateadded_204 = 3;
+			public const int lastlistingcoinmarketcaprank_204 = 3;
 			/// <summary>IDX: 3 | Type: read</summary>
-			public const int lastlistingdateadded = 3;
+			public const int lastlistingcoinmarketcaprank = 3;
 			/// <summary>IDX: 4 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int lastlistingtotalsupply_205 = 4;
+			public const int lastlistingnummarketpairs_205 = 4;
 			/// <summary>IDX: 4 | Type: read</summary>
-			public const int lastlistingtotalsupply = 4;
+			public const int lastlistingnummarketpairs = 4;
 			/// <summary>IDX: 5 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int lastlistingplatformname_206 = 5;
+			public const int lastlistingcirculatingsupply_206 = 5;
 			/// <summary>IDX: 5 | Type: read</summary>
-			public const int lastlistingplatformname = 5;
+			public const int lastlistingcirculatingsupply = 5;
 			/// <summary>IDX: 6 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int lastlistinglastupdated_207 = 6;
+			public const int lastlistingtotalsupply_207 = 6;
 			/// <summary>IDX: 6 | Type: read</summary>
-			public const int lastlistinglastupdated = 6;
+			public const int lastlistingtotalsupply = 6;
 			/// <summary>IDX: 7 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int lastlistingquote_208 = 7;
+			public const int lastlistingmaxsupply_208 = 7;
 			/// <summary>IDX: 7 | Type: read</summary>
-			public const int lastlistingquote = 7;
+			public const int lastlistingmaxsupply = 7;
 			/// <summary>IDX: 8 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int lastlistingquoteprice_209 = 8;
+			public const int lastlistinglastupdated_209 = 8;
 			/// <summary>IDX: 8 | Type: read</summary>
-			public const int lastlistingquoteprice = 8;
+			public const int lastlistinglastupdated = 8;
 			/// <summary>IDX: 9 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int lastlistingquotevolume24h_210 = 9;
+			public const int lastlistingdateadded_210 = 9;
 			/// <summary>IDX: 9 | Type: read</summary>
-			public const int lastlistingquotevolume24h = 9;
+			public const int lastlistingdateadded = 9;
 			/// <summary>IDX: 10 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int lastlistingpercentchange24h_211 = 10;
+			public const int lastlistingtotalvaluelockedratio_211 = 10;
 			/// <summary>IDX: 10 | Type: read</summary>
-			public const int lastlistingpercentchange24h = 10;
+			public const int lastlistingtotalvaluelockedratio = 10;
+			/// <summary>IDX: 11 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int lastlistingplatformname_212 = 11;
+			/// <summary>IDX: 11 | Type: read</summary>
+			public const int lastlistingplatformname = 11;
+			/// <summary>IDX: 12 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int lastlistingquote_213 = 12;
+			/// <summary>IDX: 12 | Type: read</summary>
+			public const int lastlistingquote = 12;
+			/// <summary>IDX: 13 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int lastlistingquoteprice_214 = 13;
+			/// <summary>IDX: 13 | Type: read</summary>
+			public const int lastlistingquoteprice = 13;
+			/// <summary>IDX: 14 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int lastlistingquotevolume24h_215 = 14;
+			/// <summary>IDX: 14 | Type: read</summary>
+			public const int lastlistingquotevolume24h = 14;
+			/// <summary>IDX: 15 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int lastlistingquotevolumechange24h_216 = 15;
+			/// <summary>IDX: 15 | Type: read</summary>
+			public const int lastlistingquotevolumechange24h = 15;
+			/// <summary>IDX: 16 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int lastlistingmarketcap_217 = 16;
+			/// <summary>IDX: 16 | Type: read</summary>
+			public const int lastlistingmarketcap = 16;
+			/// <summary>IDX: 17 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int lastlistingmarketcapdominance_218 = 17;
+			/// <summary>IDX: 17 | Type: read</summary>
+			public const int lastlistingmarketcapdominance = 17;
+			/// <summary>IDX: 18 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int lastlistingquotepercentchange1h_219 = 18;
+			/// <summary>IDX: 18 | Type: read</summary>
+			public const int lastlistingquotepercentchange1h = 18;
+			/// <summary>IDX: 19 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int lastlistingquotepercentchange24h_220 = 19;
+			/// <summary>IDX: 19 | Type: read</summary>
+			public const int lastlistingquotepercentchange24h = 19;
+			/// <summary>IDX: 20 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int lastlistingquotepercentchange7d_221 = 20;
+			/// <summary>IDX: 20 | Type: read</summary>
+			public const int lastlistingquotepercentchange7d = 20;
+			/// <summary>IDX: 21 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int displaykey_222 = 21;
+			/// <summary>IDX: 21 | Type: read</summary>
+			public const int displaykey = 21;
 		}
 	}
 	public class Categories
@@ -376,22 +486,44 @@ public interface SLProtocolExt : SLProtocol
 	object Lastlistingname { get; set; }
 	object Lastlistingsymbol_203 { get; set; }
 	object Lastlistingsymbol { get; set; }
-	object Lastlistingdateadded_204 { get; set; }
-	object Lastlistingdateadded { get; set; }
-	object Lastlistingtotalsupply_205 { get; set; }
+	object Lastlistingcoinmarketcaprank_204 { get; set; }
+	object Lastlistingcoinmarketcaprank { get; set; }
+	object Lastlistingnummarketpairs_205 { get; set; }
+	object Lastlistingnummarketpairs { get; set; }
+	object Lastlistingcirculatingsupply_206 { get; set; }
+	object Lastlistingcirculatingsupply { get; set; }
+	object Lastlistingtotalsupply_207 { get; set; }
 	object Lastlistingtotalsupply { get; set; }
-	object Lastlistingplatformname_206 { get; set; }
-	object Lastlistingplatformname { get; set; }
-	object Lastlistinglastupdated_207 { get; set; }
+	object Lastlistingmaxsupply_208 { get; set; }
+	object Lastlistingmaxsupply { get; set; }
+	object Lastlistinglastupdated_209 { get; set; }
 	object Lastlistinglastupdated { get; set; }
-	object Lastlistingquote_208 { get; set; }
+	object Lastlistingdateadded_210 { get; set; }
+	object Lastlistingdateadded { get; set; }
+	object Lastlistingtotalvaluelockedratio_211 { get; set; }
+	object Lastlistingtotalvaluelockedratio { get; set; }
+	object Lastlistingplatformname_212 { get; set; }
+	object Lastlistingplatformname { get; set; }
+	object Lastlistingquote_213 { get; set; }
 	object Lastlistingquote { get; set; }
-	object Lastlistingquoteprice_209 { get; set; }
+	object Lastlistingquoteprice_214 { get; set; }
 	object Lastlistingquoteprice { get; set; }
-	object Lastlistingquotevolume24h_210 { get; set; }
+	object Lastlistingquotevolume24h_215 { get; set; }
 	object Lastlistingquotevolume24h { get; set; }
-	object Lastlistingpercentchange24h_211 { get; set; }
-	object Lastlistingpercentchange24h { get; set; }
+	object Lastlistingquotevolumechange24h_216 { get; set; }
+	object Lastlistingquotevolumechange24h { get; set; }
+	object Lastlistingmarketcap_217 { get; set; }
+	object Lastlistingmarketcap { get; set; }
+	object Lastlistingmarketcapdominance_218 { get; set; }
+	object Lastlistingmarketcapdominance { get; set; }
+	object Lastlistingquotepercentchange1h_219 { get; set; }
+	object Lastlistingquotepercentchange1h { get; set; }
+	object Lastlistingquotepercentchange24h_220 { get; set; }
+	object Lastlistingquotepercentchange24h { get; set; }
+	object Lastlistingquotepercentchange7d_221 { get; set; }
+	object Lastlistingquotepercentchange7d { get; set; }
+	object Displaykey_222 { get; set; }
+	object Displaykey { get; set; }
 	object Categoriesid_401 { get; set; }
 	object Categoriesid { get; set; }
 	object Categoriesname_402 { get; set; }
@@ -491,44 +623,99 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Lastlistingsymbol {get { return GetParameter(203); }set { SetParameter(203, value); }}
 	/// <summary>PID: 204  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Lastlistingdateadded_204 {get { return GetParameter(204); }set { SetParameter(204, value); }}
+	public System.Object Lastlistingcoinmarketcaprank_204 {get { return GetParameter(204); }set { SetParameter(204, value); }}
 	/// <summary>PID: 204  | Type: read</summary>
-	public System.Object Lastlistingdateadded {get { return GetParameter(204); }set { SetParameter(204, value); }}
+	public System.Object Lastlistingcoinmarketcaprank {get { return GetParameter(204); }set { SetParameter(204, value); }}
 	/// <summary>PID: 205  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Lastlistingtotalsupply_205 {get { return GetParameter(205); }set { SetParameter(205, value); }}
+	public System.Object Lastlistingnummarketpairs_205 {get { return GetParameter(205); }set { SetParameter(205, value); }}
 	/// <summary>PID: 205  | Type: read</summary>
-	public System.Object Lastlistingtotalsupply {get { return GetParameter(205); }set { SetParameter(205, value); }}
+	public System.Object Lastlistingnummarketpairs {get { return GetParameter(205); }set { SetParameter(205, value); }}
 	/// <summary>PID: 206  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Lastlistingplatformname_206 {get { return GetParameter(206); }set { SetParameter(206, value); }}
+	public System.Object Lastlistingcirculatingsupply_206 {get { return GetParameter(206); }set { SetParameter(206, value); }}
 	/// <summary>PID: 206  | Type: read</summary>
-	public System.Object Lastlistingplatformname {get { return GetParameter(206); }set { SetParameter(206, value); }}
+	public System.Object Lastlistingcirculatingsupply {get { return GetParameter(206); }set { SetParameter(206, value); }}
 	/// <summary>PID: 207  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Lastlistinglastupdated_207 {get { return GetParameter(207); }set { SetParameter(207, value); }}
+	public System.Object Lastlistingtotalsupply_207 {get { return GetParameter(207); }set { SetParameter(207, value); }}
 	/// <summary>PID: 207  | Type: read</summary>
-	public System.Object Lastlistinglastupdated {get { return GetParameter(207); }set { SetParameter(207, value); }}
+	public System.Object Lastlistingtotalsupply {get { return GetParameter(207); }set { SetParameter(207, value); }}
 	/// <summary>PID: 208  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Lastlistingquote_208 {get { return GetParameter(208); }set { SetParameter(208, value); }}
+	public System.Object Lastlistingmaxsupply_208 {get { return GetParameter(208); }set { SetParameter(208, value); }}
 	/// <summary>PID: 208  | Type: read</summary>
-	public System.Object Lastlistingquote {get { return GetParameter(208); }set { SetParameter(208, value); }}
+	public System.Object Lastlistingmaxsupply {get { return GetParameter(208); }set { SetParameter(208, value); }}
 	/// <summary>PID: 209  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Lastlistingquoteprice_209 {get { return GetParameter(209); }set { SetParameter(209, value); }}
+	public System.Object Lastlistinglastupdated_209 {get { return GetParameter(209); }set { SetParameter(209, value); }}
 	/// <summary>PID: 209  | Type: read</summary>
-	public System.Object Lastlistingquoteprice {get { return GetParameter(209); }set { SetParameter(209, value); }}
+	public System.Object Lastlistinglastupdated {get { return GetParameter(209); }set { SetParameter(209, value); }}
 	/// <summary>PID: 210  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Lastlistingquotevolume24h_210 {get { return GetParameter(210); }set { SetParameter(210, value); }}
+	public System.Object Lastlistingdateadded_210 {get { return GetParameter(210); }set { SetParameter(210, value); }}
 	/// <summary>PID: 210  | Type: read</summary>
-	public System.Object Lastlistingquotevolume24h {get { return GetParameter(210); }set { SetParameter(210, value); }}
+	public System.Object Lastlistingdateadded {get { return GetParameter(210); }set { SetParameter(210, value); }}
 	/// <summary>PID: 211  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Lastlistingpercentchange24h_211 {get { return GetParameter(211); }set { SetParameter(211, value); }}
+	public System.Object Lastlistingtotalvaluelockedratio_211 {get { return GetParameter(211); }set { SetParameter(211, value); }}
 	/// <summary>PID: 211  | Type: read</summary>
-	public System.Object Lastlistingpercentchange24h {get { return GetParameter(211); }set { SetParameter(211, value); }}
+	public System.Object Lastlistingtotalvaluelockedratio {get { return GetParameter(211); }set { SetParameter(211, value); }}
+	/// <summary>PID: 212  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastlistingplatformname_212 {get { return GetParameter(212); }set { SetParameter(212, value); }}
+	/// <summary>PID: 212  | Type: read</summary>
+	public System.Object Lastlistingplatformname {get { return GetParameter(212); }set { SetParameter(212, value); }}
+	/// <summary>PID: 213  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastlistingquote_213 {get { return GetParameter(213); }set { SetParameter(213, value); }}
+	/// <summary>PID: 213  | Type: read</summary>
+	public System.Object Lastlistingquote {get { return GetParameter(213); }set { SetParameter(213, value); }}
+	/// <summary>PID: 214  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastlistingquoteprice_214 {get { return GetParameter(214); }set { SetParameter(214, value); }}
+	/// <summary>PID: 214  | Type: read</summary>
+	public System.Object Lastlistingquoteprice {get { return GetParameter(214); }set { SetParameter(214, value); }}
+	/// <summary>PID: 215  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastlistingquotevolume24h_215 {get { return GetParameter(215); }set { SetParameter(215, value); }}
+	/// <summary>PID: 215  | Type: read</summary>
+	public System.Object Lastlistingquotevolume24h {get { return GetParameter(215); }set { SetParameter(215, value); }}
+	/// <summary>PID: 216  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastlistingquotevolumechange24h_216 {get { return GetParameter(216); }set { SetParameter(216, value); }}
+	/// <summary>PID: 216  | Type: read</summary>
+	public System.Object Lastlistingquotevolumechange24h {get { return GetParameter(216); }set { SetParameter(216, value); }}
+	/// <summary>PID: 217  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastlistingmarketcap_217 {get { return GetParameter(217); }set { SetParameter(217, value); }}
+	/// <summary>PID: 217  | Type: read</summary>
+	public System.Object Lastlistingmarketcap {get { return GetParameter(217); }set { SetParameter(217, value); }}
+	/// <summary>PID: 218  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastlistingmarketcapdominance_218 {get { return GetParameter(218); }set { SetParameter(218, value); }}
+	/// <summary>PID: 218  | Type: read</summary>
+	public System.Object Lastlistingmarketcapdominance {get { return GetParameter(218); }set { SetParameter(218, value); }}
+	/// <summary>PID: 219  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastlistingquotepercentchange1h_219 {get { return GetParameter(219); }set { SetParameter(219, value); }}
+	/// <summary>PID: 219  | Type: read</summary>
+	public System.Object Lastlistingquotepercentchange1h {get { return GetParameter(219); }set { SetParameter(219, value); }}
+	/// <summary>PID: 220  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastlistingquotepercentchange24h_220 {get { return GetParameter(220); }set { SetParameter(220, value); }}
+	/// <summary>PID: 220  | Type: read</summary>
+	public System.Object Lastlistingquotepercentchange24h {get { return GetParameter(220); }set { SetParameter(220, value); }}
+	/// <summary>PID: 221  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastlistingquotepercentchange7d_221 {get { return GetParameter(221); }set { SetParameter(221, value); }}
+	/// <summary>PID: 221  | Type: read</summary>
+	public System.Object Lastlistingquotepercentchange7d {get { return GetParameter(221); }set { SetParameter(221, value); }}
+	/// <summary>PID: 222  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Displaykey_222 {get { return GetParameter(222); }set { SetParameter(222, value); }}
+	/// <summary>PID: 222  | Type: read</summary>
+	public System.Object Displaykey {get { return GetParameter(222); }set { SetParameter(222, value); }}
 	/// <summary>PID: 401  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Categoriesid_401 {get { return GetParameter(401); }set { SetParameter(401, value); }}
@@ -661,46 +848,101 @@ public class LastlistingQActionRow : QActionTableRow
 	public System.Object Lastlistingsymbol { get { if (base.Columns.ContainsKey(2)) { return base.Columns[2]; } else { return null; } } set { if (base.Columns.ContainsKey(2)) { base.Columns[2] = value; } else { base.Columns.Add(2, value); } } }
 	/// <summary>PID: 204 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Lastlistingdateadded_204 { get { if (base.Columns.ContainsKey(3)) { return base.Columns[3]; } else { return null; } } set { if (base.Columns.ContainsKey(3)) { base.Columns[3] = value; } else { base.Columns.Add(3, value); } } }
+	public System.Object Lastlistingcoinmarketcaprank_204 { get { if (base.Columns.ContainsKey(3)) { return base.Columns[3]; } else { return null; } } set { if (base.Columns.ContainsKey(3)) { base.Columns[3] = value; } else { base.Columns.Add(3, value); } } }
 	/// <summary>PID: 204 | Type: read</summary>
-	public System.Object Lastlistingdateadded { get { if (base.Columns.ContainsKey(3)) { return base.Columns[3]; } else { return null; } } set { if (base.Columns.ContainsKey(3)) { base.Columns[3] = value; } else { base.Columns.Add(3, value); } } }
+	public System.Object Lastlistingcoinmarketcaprank { get { if (base.Columns.ContainsKey(3)) { return base.Columns[3]; } else { return null; } } set { if (base.Columns.ContainsKey(3)) { base.Columns[3] = value; } else { base.Columns.Add(3, value); } } }
 	/// <summary>PID: 205 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Lastlistingtotalsupply_205 { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
+	public System.Object Lastlistingnummarketpairs_205 { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
 	/// <summary>PID: 205 | Type: read</summary>
-	public System.Object Lastlistingtotalsupply { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
+	public System.Object Lastlistingnummarketpairs { get { if (base.Columns.ContainsKey(4)) { return base.Columns[4]; } else { return null; } } set { if (base.Columns.ContainsKey(4)) { base.Columns[4] = value; } else { base.Columns.Add(4, value); } } }
 	/// <summary>PID: 206 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Lastlistingplatformname_206 { get { if (base.Columns.ContainsKey(5)) { return base.Columns[5]; } else { return null; } } set { if (base.Columns.ContainsKey(5)) { base.Columns[5] = value; } else { base.Columns.Add(5, value); } } }
+	public System.Object Lastlistingcirculatingsupply_206 { get { if (base.Columns.ContainsKey(5)) { return base.Columns[5]; } else { return null; } } set { if (base.Columns.ContainsKey(5)) { base.Columns[5] = value; } else { base.Columns.Add(5, value); } } }
 	/// <summary>PID: 206 | Type: read</summary>
-	public System.Object Lastlistingplatformname { get { if (base.Columns.ContainsKey(5)) { return base.Columns[5]; } else { return null; } } set { if (base.Columns.ContainsKey(5)) { base.Columns[5] = value; } else { base.Columns.Add(5, value); } } }
+	public System.Object Lastlistingcirculatingsupply { get { if (base.Columns.ContainsKey(5)) { return base.Columns[5]; } else { return null; } } set { if (base.Columns.ContainsKey(5)) { base.Columns[5] = value; } else { base.Columns.Add(5, value); } } }
 	/// <summary>PID: 207 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Lastlistinglastupdated_207 { get { if (base.Columns.ContainsKey(6)) { return base.Columns[6]; } else { return null; } } set { if (base.Columns.ContainsKey(6)) { base.Columns[6] = value; } else { base.Columns.Add(6, value); } } }
+	public System.Object Lastlistingtotalsupply_207 { get { if (base.Columns.ContainsKey(6)) { return base.Columns[6]; } else { return null; } } set { if (base.Columns.ContainsKey(6)) { base.Columns[6] = value; } else { base.Columns.Add(6, value); } } }
 	/// <summary>PID: 207 | Type: read</summary>
-	public System.Object Lastlistinglastupdated { get { if (base.Columns.ContainsKey(6)) { return base.Columns[6]; } else { return null; } } set { if (base.Columns.ContainsKey(6)) { base.Columns[6] = value; } else { base.Columns.Add(6, value); } } }
+	public System.Object Lastlistingtotalsupply { get { if (base.Columns.ContainsKey(6)) { return base.Columns[6]; } else { return null; } } set { if (base.Columns.ContainsKey(6)) { base.Columns[6] = value; } else { base.Columns.Add(6, value); } } }
 	/// <summary>PID: 208 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Lastlistingquote_208 { get { if (base.Columns.ContainsKey(7)) { return base.Columns[7]; } else { return null; } } set { if (base.Columns.ContainsKey(7)) { base.Columns[7] = value; } else { base.Columns.Add(7, value); } } }
+	public System.Object Lastlistingmaxsupply_208 { get { if (base.Columns.ContainsKey(7)) { return base.Columns[7]; } else { return null; } } set { if (base.Columns.ContainsKey(7)) { base.Columns[7] = value; } else { base.Columns.Add(7, value); } } }
 	/// <summary>PID: 208 | Type: read</summary>
-	public System.Object Lastlistingquote { get { if (base.Columns.ContainsKey(7)) { return base.Columns[7]; } else { return null; } } set { if (base.Columns.ContainsKey(7)) { base.Columns[7] = value; } else { base.Columns.Add(7, value); } } }
+	public System.Object Lastlistingmaxsupply { get { if (base.Columns.ContainsKey(7)) { return base.Columns[7]; } else { return null; } } set { if (base.Columns.ContainsKey(7)) { base.Columns[7] = value; } else { base.Columns.Add(7, value); } } }
 	/// <summary>PID: 209 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Lastlistingquoteprice_209 { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
+	public System.Object Lastlistinglastupdated_209 { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
 	/// <summary>PID: 209 | Type: read</summary>
-	public System.Object Lastlistingquoteprice { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
+	public System.Object Lastlistinglastupdated { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
 	/// <summary>PID: 210 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Lastlistingquotevolume24h_210 { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
+	public System.Object Lastlistingdateadded_210 { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
 	/// <summary>PID: 210 | Type: read</summary>
-	public System.Object Lastlistingquotevolume24h { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
+	public System.Object Lastlistingdateadded { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
 	/// <summary>PID: 211 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Lastlistingpercentchange24h_211 { get { if (base.Columns.ContainsKey(10)) { return base.Columns[10]; } else { return null; } } set { if (base.Columns.ContainsKey(10)) { base.Columns[10] = value; } else { base.Columns.Add(10, value); } } }
+	public System.Object Lastlistingtotalvaluelockedratio_211 { get { if (base.Columns.ContainsKey(10)) { return base.Columns[10]; } else { return null; } } set { if (base.Columns.ContainsKey(10)) { base.Columns[10] = value; } else { base.Columns.Add(10, value); } } }
 	/// <summary>PID: 211 | Type: read</summary>
-	public System.Object Lastlistingpercentchange24h { get { if (base.Columns.ContainsKey(10)) { return base.Columns[10]; } else { return null; } } set { if (base.Columns.ContainsKey(10)) { base.Columns[10] = value; } else { base.Columns.Add(10, value); } } }
-	public LastlistingQActionRow() : base(0, 11) { }
-	public LastlistingQActionRow(System.Object[] oRow) : base(0, 11, oRow) { }
+	public System.Object Lastlistingtotalvaluelockedratio { get { if (base.Columns.ContainsKey(10)) { return base.Columns[10]; } else { return null; } } set { if (base.Columns.ContainsKey(10)) { base.Columns[10] = value; } else { base.Columns.Add(10, value); } } }
+	/// <summary>PID: 212 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastlistingplatformname_212 { get { if (base.Columns.ContainsKey(11)) { return base.Columns[11]; } else { return null; } } set { if (base.Columns.ContainsKey(11)) { base.Columns[11] = value; } else { base.Columns.Add(11, value); } } }
+	/// <summary>PID: 212 | Type: read</summary>
+	public System.Object Lastlistingplatformname { get { if (base.Columns.ContainsKey(11)) { return base.Columns[11]; } else { return null; } } set { if (base.Columns.ContainsKey(11)) { base.Columns[11] = value; } else { base.Columns.Add(11, value); } } }
+	/// <summary>PID: 213 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastlistingquote_213 { get { if (base.Columns.ContainsKey(12)) { return base.Columns[12]; } else { return null; } } set { if (base.Columns.ContainsKey(12)) { base.Columns[12] = value; } else { base.Columns.Add(12, value); } } }
+	/// <summary>PID: 213 | Type: read</summary>
+	public System.Object Lastlistingquote { get { if (base.Columns.ContainsKey(12)) { return base.Columns[12]; } else { return null; } } set { if (base.Columns.ContainsKey(12)) { base.Columns[12] = value; } else { base.Columns.Add(12, value); } } }
+	/// <summary>PID: 214 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastlistingquoteprice_214 { get { if (base.Columns.ContainsKey(13)) { return base.Columns[13]; } else { return null; } } set { if (base.Columns.ContainsKey(13)) { base.Columns[13] = value; } else { base.Columns.Add(13, value); } } }
+	/// <summary>PID: 214 | Type: read</summary>
+	public System.Object Lastlistingquoteprice { get { if (base.Columns.ContainsKey(13)) { return base.Columns[13]; } else { return null; } } set { if (base.Columns.ContainsKey(13)) { base.Columns[13] = value; } else { base.Columns.Add(13, value); } } }
+	/// <summary>PID: 215 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastlistingquotevolume24h_215 { get { if (base.Columns.ContainsKey(14)) { return base.Columns[14]; } else { return null; } } set { if (base.Columns.ContainsKey(14)) { base.Columns[14] = value; } else { base.Columns.Add(14, value); } } }
+	/// <summary>PID: 215 | Type: read</summary>
+	public System.Object Lastlistingquotevolume24h { get { if (base.Columns.ContainsKey(14)) { return base.Columns[14]; } else { return null; } } set { if (base.Columns.ContainsKey(14)) { base.Columns[14] = value; } else { base.Columns.Add(14, value); } } }
+	/// <summary>PID: 216 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastlistingquotevolumechange24h_216 { get { if (base.Columns.ContainsKey(15)) { return base.Columns[15]; } else { return null; } } set { if (base.Columns.ContainsKey(15)) { base.Columns[15] = value; } else { base.Columns.Add(15, value); } } }
+	/// <summary>PID: 216 | Type: read</summary>
+	public System.Object Lastlistingquotevolumechange24h { get { if (base.Columns.ContainsKey(15)) { return base.Columns[15]; } else { return null; } } set { if (base.Columns.ContainsKey(15)) { base.Columns[15] = value; } else { base.Columns.Add(15, value); } } }
+	/// <summary>PID: 217 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastlistingmarketcap_217 { get { if (base.Columns.ContainsKey(16)) { return base.Columns[16]; } else { return null; } } set { if (base.Columns.ContainsKey(16)) { base.Columns[16] = value; } else { base.Columns.Add(16, value); } } }
+	/// <summary>PID: 217 | Type: read</summary>
+	public System.Object Lastlistingmarketcap { get { if (base.Columns.ContainsKey(16)) { return base.Columns[16]; } else { return null; } } set { if (base.Columns.ContainsKey(16)) { base.Columns[16] = value; } else { base.Columns.Add(16, value); } } }
+	/// <summary>PID: 218 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastlistingmarketcapdominance_218 { get { if (base.Columns.ContainsKey(17)) { return base.Columns[17]; } else { return null; } } set { if (base.Columns.ContainsKey(17)) { base.Columns[17] = value; } else { base.Columns.Add(17, value); } } }
+	/// <summary>PID: 218 | Type: read</summary>
+	public System.Object Lastlistingmarketcapdominance { get { if (base.Columns.ContainsKey(17)) { return base.Columns[17]; } else { return null; } } set { if (base.Columns.ContainsKey(17)) { base.Columns[17] = value; } else { base.Columns.Add(17, value); } } }
+	/// <summary>PID: 219 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastlistingquotepercentchange1h_219 { get { if (base.Columns.ContainsKey(18)) { return base.Columns[18]; } else { return null; } } set { if (base.Columns.ContainsKey(18)) { base.Columns[18] = value; } else { base.Columns.Add(18, value); } } }
+	/// <summary>PID: 219 | Type: read</summary>
+	public System.Object Lastlistingquotepercentchange1h { get { if (base.Columns.ContainsKey(18)) { return base.Columns[18]; } else { return null; } } set { if (base.Columns.ContainsKey(18)) { base.Columns[18] = value; } else { base.Columns.Add(18, value); } } }
+	/// <summary>PID: 220 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastlistingquotepercentchange24h_220 { get { if (base.Columns.ContainsKey(19)) { return base.Columns[19]; } else { return null; } } set { if (base.Columns.ContainsKey(19)) { base.Columns[19] = value; } else { base.Columns.Add(19, value); } } }
+	/// <summary>PID: 220 | Type: read</summary>
+	public System.Object Lastlistingquotepercentchange24h { get { if (base.Columns.ContainsKey(19)) { return base.Columns[19]; } else { return null; } } set { if (base.Columns.ContainsKey(19)) { base.Columns[19] = value; } else { base.Columns.Add(19, value); } } }
+	/// <summary>PID: 221 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastlistingquotepercentchange7d_221 { get { if (base.Columns.ContainsKey(20)) { return base.Columns[20]; } else { return null; } } set { if (base.Columns.ContainsKey(20)) { base.Columns[20] = value; } else { base.Columns.Add(20, value); } } }
+	/// <summary>PID: 221 | Type: read</summary>
+	public System.Object Lastlistingquotepercentchange7d { get { if (base.Columns.ContainsKey(20)) { return base.Columns[20]; } else { return null; } } set { if (base.Columns.ContainsKey(20)) { base.Columns[20] = value; } else { base.Columns.Add(20, value); } } }
+	/// <summary>PID: 222 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Displaykey_222 { get { if (base.Columns.ContainsKey(21)) { return base.Columns[21]; } else { return null; } } set { if (base.Columns.ContainsKey(21)) { base.Columns[21] = value; } else { base.Columns.Add(21, value); } } }
+	/// <summary>PID: 222 | Type: read</summary>
+	public System.Object Displaykey { get { if (base.Columns.ContainsKey(21)) { return base.Columns[21]; } else { return null; } } set { if (base.Columns.ContainsKey(21)) { base.Columns[21] = value; } else { base.Columns.Add(21, value); } } }
+	public LastlistingQActionRow() : base(0, 22) { }
+	public LastlistingQActionRow(System.Object[] oRow) : base(0, 22, oRow) { }
 	public static implicit operator LastlistingQActionRow(System.Object[] source) { return new LastlistingQActionRow(source); }
 	public static implicit operator System.Object[](LastlistingQActionRow source) { return source.ToObjectArray(); }
 }

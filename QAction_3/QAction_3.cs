@@ -52,14 +52,24 @@ public static class QAction
 				Lastlistingid = listing.Id,
 				Lastlistingname = listing.Name,
 				Lastlistingsymbol = listing.Symbol,
-				Lastlistingdateadded = listing.DateAdded,
+				Lastlistingcoinmarketcaprank = listing.CmcRank,
+				Lastlistingnummarketpairs = listing.NumMarketPairs,
+				Lastlistingcirculatingsupply = listing.CirculatingSupply,
 				Lastlistingtotalsupply = listing.TotalSupply,
-				Lastlistingplatformname = listing.Platform != null ? listing.Platform.Name : string.Empty, // Dit kan null zijn, wat dan invullen?
+				Lastlistingmaxsupply = listing.MaxSupply,
 				Lastlistinglastupdated = listing.LastUpdated,
+				Lastlistingdateadded = listing.DateAdded,
+				Lastlistingtotalvaluelockedratio = listing.TvlRatio,
+				Lastlistingplatformname = listing.Platform != null ? listing.Platform.Name : string.Empty, // Dit kan null zijn, wat dan invullen?
 				Lastlistingquote = listing.Quote.USD.ToString(),
 				Lastlistingquoteprice = listing.Quote.USD.Price,
 				Lastlistingquotevolume24h = listing.Quote.USD.Volume24h,
-				Lastlistingpercentchange24h = listing.Quote.USD.PercentChange24h,
+				Lastlistingquotevolumechange24h = listing.Quote.USD.PercentChange24h,
+				Lastlistingmarketcap = listing.Quote.USD.MarketCap,
+				Lastlistingmarketcapdominance = listing.Quote.USD.MarketCapDominance,
+				Lastlistingquotepercentchange1h = listing.Quote.USD.PercentChange1h,
+				Lastlistingquotepercentchange24h = listing.Quote.USD.PercentChange24h,
+				Lastlistingquotepercentchange7d = listing.Quote.USD.PercentChange7d,
 			};
 			lastListingRows.Add(listing.Id, lastlistingQActionRow);
         }
