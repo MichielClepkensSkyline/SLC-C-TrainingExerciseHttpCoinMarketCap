@@ -728,36 +728,6 @@ Any inquiries can be addressed to:
 				<Type options="datetime">number</Type>
 			</Measurement>
 		</Param>
-		<Param id="41" trending="false">
-			<Name>LatestQuoteCurreny</Name>
-			<Description>Quote Currency</Description>
-			<Type>read</Type>
-			<Information>
-				<Subtext>
-					<![CDATA[Currency used for displaying all quote-related values (e.g., USD, EUR).]]>
-				</Subtext>
-			</Information>
-			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>Latest Quote</Page>
-						<Column>0</Column>
-						<Row>11</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type>string</Type>
-			</Measurement>
-		</Param>
-		
-		
 		<Param id="100">
 			<Name>latestListings</Name>
 			<Description>Latest Listings</Description>
@@ -793,7 +763,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:101|0-102|1-103|2-104|4-106|6-108|8-105|5-107|7-109|9-110|10-111|11-112|3-113|12,width:50-100-61-156-50-84-100-156-192-178-178-122-105-100,sort:STRING|ASC|1-STRING-STRING-INT-INT-INT-INT-INT|ASC|0-INT-STRING-INT-INT-STRING-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:101|0-102|1-103|2-104|4-106|6-108|8-105|5-107|7-109|9-110|10-111|11-112|3-113|12,width:50-100-61-156-50-84-100-156-192-178-178-122-105,sort:STRING|ASC|1-STRING-STRING-INT-INT-INT-INT-INT|ASC|0-INT-STRING-INT-INT-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="101" trending="false">
@@ -1092,7 +1062,7 @@ Any inquiries can be addressed to:
 			<Information>
 				<Subtext>
 					<![CDATA[This is the parameter for display key for the Latest Listings table.]]>
-			</Subtext>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
