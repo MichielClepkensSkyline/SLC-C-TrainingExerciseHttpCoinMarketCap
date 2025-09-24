@@ -252,7 +252,6 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="200">
-			<!--De params die ik wil: Id, Name, Symbol, cmc_rank, num_market_pairs, circulating_supply, total_supply, max_supply, last_updated, date_added, tvl_ratio, platform_name, quote, quote_price, quote_volume_24h, quote_volume_change_24h, market_cap, market_cap_dominance, quote_percent_change_1h, quote_percent_change_24h, quote_percent_change_7d-->
 			<Name>lastListing</Name>
 			<Description>Last Listings</Description>
 			<Type>array</Type>
@@ -557,6 +556,7 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Decimals>8</Decimals>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -579,6 +579,7 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Decimals>8</Decimals>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -594,7 +595,7 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[Percentage of Total Value Locked]]>
+					<![CDATA[Percentage of Total Value Locked.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -799,7 +800,6 @@ A market quote in the currency conversion option.]]>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
-				<Info></Info>
 				<CL>500</CL>
 				<MaL>1 000</MaL>
 				<MiL>5 000</MiL>
@@ -835,7 +835,6 @@ A market quote in the currency conversion option.]]>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
-				<Info></Info>
 				<CL>0.05</CL>
 				<MaL>0.1</MaL>
 				<MiL>0.5</MiL>
@@ -968,8 +967,8 @@ A market quote in the currency conversion option.]]>
 			</Measurement>
 		</Param>
 		<Param id="222" trending="false">
-			<Name>displayKey</Name>
-			<Description>Display Key</Description>
+			<Name>lastListingDisplayKey</Name>
+			<Description>Display Key (Last Listings)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
@@ -992,22 +991,23 @@ A market quote in the currency conversion option.]]>
 			<Name>categories</Name>
 			<Description>Categories</Description>
 			<Type>array</Type>
-			<ArrayOptions index="0">
+			<ArrayOptions index="0" options=";naming=\401,402">
 				<ColumnOption idx="0" pid="401" type="retrieved" options=""/>
 				<ColumnOption idx="1" pid="402" type="retrieved" options="" />
 				<ColumnOption idx="2" pid="403" type="retrieved" options="" />
 				<ColumnOption idx="3" pid="404" type="retrieved" options="" />
 				<ColumnOption idx="4" pid="405" type="retrieved" options="" />
-				<ColumnOption idx="5" pid="406" type="retrieved" options="" />
-				<ColumnOption idx="6" pid="407" type="retrieved" options="" />
-				<ColumnOption idx="7" pid="408" type="retrieved" options="" />
-				<ColumnOption idx="8" pid="409" type="retrieved" options="" />
-				<ColumnOption idx="9" pid="410" type="retrieved" options="" />
+				<ColumnOption idx="5" pid="406" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="6" pid="407" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="7" pid="408" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="8" pid="409" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="9" pid="410" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
 				<ColumnOption idx="10" pid="411" type="retrieved" options="" />
+				<ColumnOption idx="11" pid="412" type="displaykey" options="" />
 			</ArrayOptions>
 			<Information>
 				<Subtext>
-					<![CDATA[This table has all the categories ??]]>
+					<![CDATA[The table contains information about all coin categories available on CoinMarketCap.]]>
 				</Subtext>
 			</Information>
 			<Display>
@@ -1021,7 +1021,7 @@ A market quote in the currency conversion option.]]>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:401|0-402|1-403|2-404|3-406|5-405|4-407|6-408|7-409|8-410|9-411|10,width:100-100-122-142-129-100-100-104-156-100-100,sort:STRING-STRING-INT-INT-INT-INT-INT-INT-INT-STRING-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:401|0-402|1-403|2-404|3-406|5-405|4-407|6-408|7-409|8-410|9-411|10-412|11,width:0-100-122-142-142-122-100-129-156-107-156-100,sort:STRING-STRING-INT-INT-INT-INT|DESC|1-INT-INT-INT-STRING-STRING|DESC|0-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="401" trending="false">
@@ -1030,7 +1030,8 @@ A market quote in the currency conversion option.]]>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[This is the key used internally by DataMiner to identify the table entries.]]>
+					<![CDATA[This is the key used internally by DataMiner to identify the table entries.
+The unique ID of the category.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -1051,7 +1052,7 @@ A market quote in the currency conversion option.]]>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[This is the name of the categorie.]]>
+					<![CDATA[The name of the category.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -1067,141 +1068,270 @@ A market quote in the currency conversion option.]]>
 			</Measurement>
 		</Param>
 		<Param id="403" trending="false">
+			<Name>categoriesTitle</Name>
+			<Description>Title (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[The title of the categorie.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="404" trending="false">
+			<Name>categoriesDescription</Name>
+			<Description>Description (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[The description of the categorie.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="405" trending="false">
 			<Name>categoriesNumberOfTokens</Name>
 			<Description>Number of Tokens (Categories)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[Amount of Tokens.]]>
+					<![CDATA[Number of cryptocurrencies included in this category.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>coins</Units>
+				<Decimals>0</Decimals>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="404" trending="false">
+		<Param id="406" trending="true">
 			<Name>categoriesAveragePriceChange</Name>
 			<Description>Average Price Change (Categories)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[The average price change in percentage.]]>
+					<![CDATA[Average price change of coins within this categry.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-15</CL>
+				<MaL>-10</MaL>
+				<MiL>-5</MiL>
+				<WaL>-1</WaL>
+				<Normal>0</Normal>
+				<WaH>1</WaH>
+				<MiH>5</MiH>
+				<MaH>10</MaH>
+				<CH>15</CH>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
+				<Decimals>3</Decimals>
 			</Display>
 			<Measurement>
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
-		<Param id="405" trending="false">
+		<Param id="407" trending="true">
 			<Name>categoriesMarketCap</Name>
 			<Description>Market Cap (Categories)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[I think this is the maximum market capacity??]]>
+					<![CDATA[Market cap of coins within this categry.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>500</CL>
+				<MaL>1 000</MaL>
+				<MiL>5 000</MiL>
+				<WaL>10 000</WaL>
+				<Normal>20 000</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>coins</Units>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="406" trending="false">
+		<Param id="408" trending="true">
 			<Name>categoriesMarketCapChange</Name>
 			<Description>Market Cap Change (Categories)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[The Change in Percentage of the Market Cap.]]>
+					<![CDATA[Market cap change of coins within this categry.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-15</CL>
+				<MaL>-10</MaL>
+				<MiL>-5</MiL>
+				<WaL>-1</WaL>
+				<Normal>0</Normal>
+				<WaH>1</WaH>
+				<MiH>5</MiH>
+				<MaH>10</MaH>
+				<CH>15</CH>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
 				<Units>%</Units>
 			</Display>
 			<Measurement>
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
-		<Param id="407" trending="false">
+		<Param id="409" trending="true">
 			<Name>categoriesVolume</Name>
 			<Description>Volume (Categories)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[???]]>
+					<![CDATA[Volume of coins within this categry]]>
 				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Range>
+					<Low>-1000000</Low>
+					<High>1000000</High>
+				</Range>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-1000</CL>
+				<MaL>-500</MaL>
+				<MiL>-100</MiL>
+				<WaL>-50</WaL>
+				<Normal>0</Normal>
+				<WaH>50</WaH>
+				<MiH>100</MiH>
+				<MaH>500</MaH>
+				<CH>1000</CH>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>coins</Units>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="408" trending="false">
+		<Param id="410" trending="true">
 			<Name>categoriesVolumeChange</Name>
 			<Description>Volume Change (Categories)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[The Change of the Volume in Percentage.]]>
+					<![CDATA[Volume change of coins within this categry.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-15</CL>
+				<MaL>-10</MaL>
+				<MiL>-5</MiL>
+				<WaL>-1</WaL>
+				<Normal>0</Normal>
+				<WaH>1</WaH>
+				<MiH>5</MiH>
+				<MaH>10</MaH>
+				<CH>15</CH>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
 				<Units>%</Units>
 			</Display>
 			<Measurement>
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
-		<Param id="409" trending="false">
+		<Param id="411" trending="false">
 			<Name>categoriesLastUpdated</Name>
 			<Description>Last Time Updated (Categories)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[Last Time the information was updated.]]>
+					<![CDATA[Timestamp (ISO 8601) of when this was last updated.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -1218,33 +1348,14 @@ A market quote in the currency conversion option.]]>
 				<Type options="datetime">number</Type>
 			</Measurement>
 		</Param>
-		<Param id="410" trending="false">
-			<Name>categoriesTitle</Name>
-			<Description>Title (Categories)</Description>
+		<Param id="412" trending="false">
+			<Name>categoriesDisplayKey</Name>
+			<Description>Display Key (Categories)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[The title of the categorie entry.]]>
+					<![CDATA[This is the display key of the row.]]>
 				</Subtext>
-			</Information>
-			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-			</Display>
-			<Measurement>
-				<Type>string</Type>
-			</Measurement>
-		</Param>
-		<Param id="411" trending="false">
-			<Name>categoriesDescription</Name>
-			<Description>Description (Categories)</Description>
-			<Type>read</Type>
-			<Information>
-				<Subtext>The description of the categorie entry.</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -1264,16 +1375,20 @@ A market quote in the currency conversion option.]]>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[This is the total amount of active cryptocurrencies.]]>
+					<![CDATA[Count of active cryptocurrencies tracked by CoinMarketCap.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Decimals>0</Decimals>
 				<Positions>
 					<Position>
 						<Page>LatestQuote</Page>

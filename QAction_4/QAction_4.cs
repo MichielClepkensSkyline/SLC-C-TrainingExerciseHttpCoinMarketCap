@@ -51,6 +51,8 @@ public static class QAction
             {
                 Categoriesid = categorie.Id,
                 Categoriesname = categorie.Name,
+                Categoriestitle = categorie.Title,
+                Categoriesdescription = categorie.Description,
                 Categoriesnumberoftokens = categorie.NumTokens,
                 Categoriesaveragepricechange = categorie.AvgPriceChange,
                 Categoriesmarketcap = categorie.MarketCap,
@@ -58,8 +60,6 @@ public static class QAction
                 Categoriesvolume = categorie.Volume,
                 Categoriesvolumechange = categorie.VolumeChange,
                 Categorieslastupdated = categorie.LastUpdated.ToLocalTime(), //TODO fix de tijd
-                Categoriestitle = categorie.Title,
-                Categoriesdescription = categorie.Description,
             };
             categorieRows.Add(categorie.Id, categorieQActionRow);
         }
