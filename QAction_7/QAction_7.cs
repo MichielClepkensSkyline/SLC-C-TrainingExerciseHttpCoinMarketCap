@@ -1,11 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Text;
-
 using Skyline.DataMiner.Scripting;
-
-using QAction_7;
+using Skyline.DataMiner.Scripting.Categories;
 using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
 
 /// <summary>
@@ -22,14 +21,14 @@ public static class QAction
 		try
 		{
 			string json = protocol.GetParameter(Parameter.responseindividualcategory_12).ToString();
-			Category category = SecureNewtonsoftDeserialization.DeserializeObject<Category>(json);
+			Categories category = SecureNewtonsoftDeserialization.DeserializeObject<Categories>(json);
 			string statusCode = protocol.GetParameter(Parameter.statuscodeindividualcategory_11).ToString();
 			int status = Int32.Parse(statusCode.Split(' ')[1]);
-			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|statusCode: '{statusCode}'  and response {category.Data.Id}", LogType.Information, LogLevel.NoLogging);
+			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|statusCode: '{statusCode}'  and response {category.CategoryList.FirstOrDefault().Id}", LogType.Information, LogLevel.NoLogging);
 
 			if (status == 200)
 			{
-				UpdateCategoryRow(protocol, category.Data);
+				UpdateCategoryRow(protocol, category.CategoryList.FirstOrDefault());
 			}
 			else
 			{
@@ -42,7 +41,7 @@ public static class QAction
 		}
 	}
 
-	private static void UpdateCategoryRow(SLProtocol protocol, Data category)
+	private static void UpdateCategoryRow(SLProtocol protocol, Category category)
 	{
 		object[] newCategoryRow = new CategoriesQActionRow
 		{

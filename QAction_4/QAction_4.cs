@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-
-using QAction_4;
-
 using Skyline.DataMiner.Scripting;
+using Skyline.DataMiner.Scripting.Categories;
 using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
 
 /// <summary>
