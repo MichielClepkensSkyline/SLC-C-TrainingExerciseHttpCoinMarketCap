@@ -1342,6 +1342,8 @@ Any inquiries can be addressed to:
 		</QAction>
 		<QAction id="6" name="Make The API To Call in Session 4" encoding="csharp" triggers="211" row="true">
 		</QAction>
+		<QAction id="7" name="Parse Individual Category" encoding="csharp" triggers="12">
+		</QAction>
 	</QActions>
 
 	<Groups>
