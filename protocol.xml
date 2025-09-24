@@ -96,13 +96,6 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>2</Column>
-						<Row>2</Row>
-					</Position>
-				</Positions>
 			</Display>
 			<Measurement>
 				<Type width="110">button</Type>
@@ -125,13 +118,6 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>1</Row>
-					</Position>
-				</Positions>
 			</Display>
 		</Param>
 		<Param id="11">
@@ -145,13 +131,6 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>0</Row>
-					</Position>
-				</Positions>
 			</Display>
 			<Measurement>
 				<Type lines="20">string</Type>
@@ -173,13 +152,6 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>1</Column>
-						<Row>1</Row>
-					</Position>
-				</Positions>
 			</Display>
 			<Measurement>
 				<Type>string</Type>
@@ -196,13 +168,6 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>1</Column>
-						<Row>0</Row>
-					</Position>
-				</Positions>
 			</Display>
 			<Measurement>
 				<Type lines="20">string</Type>
@@ -219,13 +184,6 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>2</Column>
-						<Row>1</Row>
-					</Position>
-				</Positions>
 			</Display>
 		</Param>
 		<Param id="31">
@@ -239,13 +197,6 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>2</Column>
-						<Row>0</Row>
-					</Position>
-				</Positions>
 			</Display>
 			<Measurement>
 				<Type lines="20">string</Type>
@@ -1073,7 +1024,7 @@ The unique ID of the category.]]>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[The title of the categorie.]]>
+					<![CDATA[The title of the category.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -1094,7 +1045,7 @@ The unique ID of the category.]]>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[The description of the categorie.]]>
+					<![CDATA[The description of the category.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -1141,7 +1092,7 @@ The unique ID of the category.]]>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[Average price change of coins within this categry.]]>
+					<![CDATA[Average price change of coins within this category.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -1180,7 +1131,7 @@ The unique ID of the category.]]>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[Market cap of coins within this categry.]]>
+					<![CDATA[Market cap of coins within this category.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -1214,7 +1165,7 @@ The unique ID of the category.]]>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[Market cap change of coins within this categry.]]>
+					<![CDATA[Market cap change of coins within this category.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -1253,7 +1204,7 @@ The unique ID of the category.]]>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[Volume of coins within this categry]]>
+					<![CDATA[Volume of coins within this category.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -1292,7 +1243,7 @@ The unique ID of the category.]]>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[Volume change of coins within this categry.]]>
+					<![CDATA[Volume change of coins within this category.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -1369,7 +1320,7 @@ The unique ID of the category.]]>
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="600" trending="false">
+		<Param id="600" trending="true">
 			<Name>activeCryptocurrencies</Name>
 			<Description>Active Cryptocurrencies</Description>
 			<Type>read</Type>
@@ -1386,16 +1337,15 @@ The unique ID of the category.]]>
 					<Low>0</Low>
 				</Range>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>0</CL>
+				<WaL>50</WaL>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
-				<Positions>
-					<Position>
-						<Page>LatestQuote</Page>
-						<Column>0</Column>
-						<Row>0</Row>
-					</Position>
-				</Positions>
+				<Units>coins</Units>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1407,155 +1357,630 @@ The unique ID of the category.]]>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[This is the total amount of cryptocurrencies that ever existed.]]>
+					<![CDATA[Count of all cryptocurrencies tracked by CoinMarketCap.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>0</CL>
+				<WaL>50</WaL>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>LatestQuote</Page>
-						<Column>0</Column>
-						<Row>1</Row>
-					</Position>
-				</Positions>
+				<Decimals>0</Decimals>
+				<Units>coins</Units>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="602" trending="false">
+		<Param id="602" trending="true">
+			<Name>activeMarketPairs</Name>
+			<Description>Active Market Pairs</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Count of active market pairs tracked by CoinMarketCap across all exchanges.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>0</Low>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>50</CL>
+				<MaL>100</MaL>
+				<MiL>250</MiL>
+				<WaL>500</WaL>
+				<Normal>750</Normal>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>0</Decimals>
+				<Units>pairs</Units>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="603" trending="true">
 			<Name>activeExchanges</Name>
 			<Description>Active Exchanges</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[The total amount of active exchanges.]]>
+					<![CDATA[Count of active exchanges tracked by CoinMarketCap.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>50</CL>
+				<MaL>100</MaL>
+				<MiL>250</MiL>
+				<WaL>500</WaL>
+				<Normal>750</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>LatestQuote</Page>
-						<Column>1</Column>
-						<Row>0</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type>number</Type>
-			</Measurement>
-		</Param>
-		<Param id="603" trending="false">
-			<Name>totalExchanges</Name>
-			<Description>Total Exchanges</Description>
-			<Type>read</Type>
-			<Information>
-				<Subtext>
-					<![CDATA[The total amount of exchanges that ever existed.]]>
-				</Subtext>
-			</Information>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>LatestQuote</Page>
-						<Column>1</Column>
-						<Row>1</Row>
-					</Position>
-				</Positions>
+				<Decimals>0</Decimals>
+				<Units>exchanges</Units>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="604" trending="false">
+			<Name>totalExchanges</Name>
+			<Description>Total Exchanges</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Count of all exchanges tracked by CoinMarketCap.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>0</Low>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>0</CL>
+				<WaL>50</WaL>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>0</Decimals>
+				<Units>exchanges</Units>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="605" trending="true">
 			<Name>ethereumDominance</Name>
 			<Description>Ethereum Dominance</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[This is in percentage the total amount of valuta that is inside of the Ethereum coin.]]>
+					<![CDATA[Ethereum's market dominance percentage by market cap.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
 				<Range>
 					<Low>0</Low>
 					<High>100</High>
 				</Range>
-				<Positions>
-					<Position>
-						<Page>LatestQuote</Page>
-						<Column>0</Column>
-						<Row>2</Row>
-					</Position>
-				</Positions>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>0.05</CL>
+				<MaL>0.1</MaL>
+				<MiL>0.5</MiL>
+				<WaL>1</WaL>
+				<Normal>5</Normal>
+				<WaH>75</WaH>
+				<MiH>85</MiH>
+				<MaH>95</MaH>
+				<CH>99</CH>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>%</Units>
 			</Display>
 			<Measurement>
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
-		<Param id="605" trending="false">
+		<Param id="606" trending="true">
 			<Name>bitcoinDominance</Name>
 			<Description>Bitcoin Dominance</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[This is in percentage the total amount of valuta that is inside of the Bitcoin coin.]]>
+					<![CDATA[Bitcoin's market dominance percentage by market cap.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
 				<Range>
 					<Low>0</Low>
 					<High>100</High>
 				</Range>
-				<Positions>
-					<Position>
-						<Page>LatestQuote</Page>
-						<Column>1</Column>
-						<Row>2</Row>
-					</Position>
-				</Positions>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>0.05</CL>
+				<MaL>0.1</MaL>
+				<MiL>0.5</MiL>
+				<WaL>1</WaL>
+				<Normal>5</Normal>
+				<WaH>75</WaH>
+				<MiH>85</MiH>
+				<MaH>95</MaH>
+				<CH>99</CH>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>%</Units>
 			</Display>
 			<Measurement>
 				<Type>analog</Type>
 			</Measurement>
 		</Param>
-		<Param id="606" trending="false">
+		<Param id="607" trending="true">
+			<Name>ethereumDominance24hPercentageChange</Name>
+			<Description>Ethereum Domincance 24h Percentage Change</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext><![CDATA[Change of the Ethereum dominance over de last 24h, expressed in percentage delta.]]></Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-50</CL>
+				<MaL>-25</MaL>
+				<MiL>-5</MiL>
+				<WaL>-1</WaL>
+				<Normal>0</Normal>
+				<WaH>1</WaH>
+				<MiH>5</MiH>
+				<MaH>25</MaH>
+				<CH>50</CH>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>%</Units>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="608" trending="true">
+			<Name>bitcoinDominance24hPercentageChange</Name>
+			<Description>Bitcoin Domincance 24h Percentage Change</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext><![CDATA[Change of the Bitcoin dominance over de last 24h, expressed in percentage delta.]]></Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-50</CL>
+				<MaL>-25</MaL>
+				<MiL>-5</MiL>
+				<WaL>-1</WaL>
+				<Normal>0</Normal>
+				<WaH>1</WaH>
+				<MiH>5</MiH>
+				<MaH>25</MaH>
+				<CH>50</CH>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>%</Units>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="609" trending="true">
+			<Name>defiVolume24h</Name>
+			<Description>DeFi Volume 24h</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext><![CDATA[The sum of rolling 24 hour adjusted volume for DeFi converted into USD.]]></Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>-10000</Low>
+					<High>10000</High>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-1000</CL>
+				<MaL>-500</MaL>
+				<MiL>-100</MiL>
+				<WaL>-50</WaL>
+				<Normal>0</Normal>
+				<WaH>50</WaH>
+				<MiH>100</MiH>
+				<MaH>500</MaH>
+				<CH>1000</CH>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>coins</Units>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="610" trending="true">
+			<Name>defiMarketCap</Name>
+			<Description>DeFi Market Cap</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext><![CDATA[The sum of all individual cryptocurrency market capitalizations for DeFi converted into USD.]]></Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>0</Low>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>500</CL>
+				<MaL>1 000</MaL>
+				<MiL>5 000</MiL>
+				<WaL>10 000</WaL>
+				<Normal>20 000</Normal>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>coins</Units>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="611" trending="true">
+			<Name>defi24hPercentageChange</Name>
+			<Description>DeFi 24h Percentage Change</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext><![CDATA[This is the percentage that DeFi changed during the last 24h.]]></Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-50</CL>
+				<MaL>-25</MaL>
+				<MiL>-5</MiL>
+				<WaL>-1</WaL>
+				<Normal>0</Normal>
+				<WaH>1</WaH>
+				<MiH>5</MiH>
+				<MaH>25</MaH>
+				<CH>50</CH>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>%</Units>
+			</Display>
+			<Measurement>
+				<Type>analog</Type>
+			</Measurement>
+		</Param>
+		<Param id="612" trending="true">
+			<Name>stablecoinVolume24h</Name>
+			<Description>Stablecoin Volume 24h</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext><![CDATA[The sum of rolling 24 hour adjusted volume for Stablecoin converted into USD.]]></Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>-10000</Low>
+					<High>10000</High>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-1000</CL>
+				<MaL>-500</MaL>
+				<MiL>-100</MiL>
+				<WaL>-50</WaL>
+				<Normal>0</Normal>
+				<WaH>50</WaH>
+				<MiH>100</MiH>
+				<MaH>500</MaH>
+				<CH>1000</CH>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>coins</Units>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="613" trending="true">
+			<Name>stablecoinMarketCap</Name>
+			<Description>Stablecoin Market Cap</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext><![CDATA[The sum of all individual cryptocurrency market capitalizations for Stablecoin converted into USD.]]></Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>0</Low>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>500</CL>
+				<MaL>1 000</MaL>
+				<MiL>5 000</MiL>
+				<WaL>10 000</WaL>
+				<Normal>20 000</Normal>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>coins</Units>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="614" trending="true">
+			<Name>stablecoin24hPercentageChange</Name>
+			<Description>Stablecoin 24h Percentage Change</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext><![CDATA[This is the percentage that Stablecoin changed during the last 24h.]]></Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-50</CL>
+				<MaL>-25</MaL>
+				<MiL>-5</MiL>
+				<WaL>-1</WaL>
+				<Normal>0</Normal>
+				<WaH>1</WaH>
+				<MiH>5</MiH>
+				<MaH>25</MaH>
+				<CH>50</CH>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>%</Units>
+			</Display>
+			<Measurement>
+				<Type>analog</Type>
+			</Measurement>
+		</Param>
+		<Param id="615" trending="false">
+			<Name>totalCryptoDexCurrencies</Name>
+			<Description>Total Dex Cryptocurrencies</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext><![CDATA[Total amount of cryptocurrencies which are traded via decentralized exchanges and tracked by CoinMarketCap.]]></Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>0</Low>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>0</CL>
+				<MaL>5</MaL>
+				<MiL>10</MiL>
+				<WaL>20</WaL>
+				<Normal>50</Normal>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>0</Decimals>
+				<Units>DEXs</Units>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="616" trending="false">
+			<Name>past24hIncrementalCryptoNumber</Name>
+			<Description>Incremental Amount Crypto Past 24h</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext><![CDATA[The amount of cryptocurrencies that are added the last 24h.]]></Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>0</Low>
+				</Range>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>0</Decimals>
+				<Units>coins</Units>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="617" trending="true">
+			<Name>totalMarketCap</Name>
+			<Description>Total Market Cap</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[The sum of all individual cryptocurrency market capitalizations in the requested USD.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>0</Low>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>500</CL>
+				<MaL>1 000</MaL>
+				<MiL>5 000</MiL>
+				<WaL>10 000</WaL>
+				<Normal>20 000</Normal>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>coins</Units>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="618" trending="true">
+			<Name>totalVolume24h</Name>
+			<Description>Total Volume 24h</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[The sum of rolling 24 hour adjusted volume for all cryptocurrencies in USD.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Range>
+					<Low>-1000000</Low>
+					<High>1000000</High>
+				</Range>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-1000</CL>
+				<MaL>-500</MaL>
+				<MiL>-100</MiL>
+				<WaL>-50</WaL>
+				<Normal>0</Normal>
+				<WaH>50</WaH>
+				<MiH>100</MiH>
+				<MaH>500</MaH>
+				<CH>1000</CH>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>USD</Units>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>	
+		<Param id="619" trending="false">
 			<Name>lastUpdated</Name>
 			<Description>Last Time Updated</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[The timestamp of the latest update.]]>
+					<![CDATA[Timestamp of when this record with general and global metrics was last updated.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -1567,13 +1992,6 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>8</Decimals>
-				<Positions>
-					<Position>
-						<Page>LatestQuote</Page>
-						<Column>0</Column>
-						<Row>4</Row>
-					</Position>
-				</Positions>
 			</Display>
 			<Measurement>
 				<Type options="datetime">number</Type>

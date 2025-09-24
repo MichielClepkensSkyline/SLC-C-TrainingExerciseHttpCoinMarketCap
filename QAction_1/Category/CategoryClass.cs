@@ -1,10 +1,10 @@
-﻿namespace Skyline.DataMiner.Scripting.Categorie
+﻿namespace Skyline.DataMiner.Scripting.Category
 {
     using System;
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class Categorie
+    public class Category
     {
         [JsonProperty("id")]
         public string Id { get; set; }
@@ -46,7 +46,7 @@
         public Status Status { get; set; }
 
         [JsonProperty("data")]
-        public List<Categorie> Categories { get; set; }
+        public List<Category> Categories { get; set; }
     }
 
     public class Status

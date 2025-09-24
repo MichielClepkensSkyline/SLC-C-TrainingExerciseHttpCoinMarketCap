@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using Skyline.DataMiner.Scripting;
-using Skyline.DataMiner.Scripting.Categorie;
+using Skyline.DataMiner.Scripting.Category;
 using Skyline.DataMiner.Scripting.HTTP;
 using Skyline.DataMiner.Utils.Protocol.Extension;
 using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
@@ -42,29 +42,29 @@ public static class QAction
 		}
 	}
 
-	private static void FillCategories(SLProtocolExt protocol, List<Categorie> categories)
+	private static void FillCategories(SLProtocolExt protocol, List<Category> categories)
 	{
-        Dictionary<string, CategoriesQActionRow> categorieRows = new Dictionary<string, CategoriesQActionRow>();
-        foreach (Categorie categorie in categories)
+        Dictionary<string, CategoriesQActionRow> categoryRows = new Dictionary<string, CategoriesQActionRow>();
+        foreach (Category category in categories)
         {
-            CategoriesQActionRow categorieQActionRow = new CategoriesQActionRow
+            CategoriesQActionRow categoryQActionRow = new CategoriesQActionRow
             {
-                Categoriesid = categorie.Id,
-                Categoriesname = categorie.Name,
-                Categoriestitle = categorie.Title,
-                Categoriesdescription = categorie.Description,
-                Categoriesnumberoftokens = categorie.NumTokens,
-                Categoriesaveragepricechange = categorie.AvgPriceChange,
-                Categoriesmarketcap = categorie.MarketCap,
-                Categoriesmarketcapchange = categorie.MarketCapChange,
-                Categoriesvolume = categorie.Volume,
-                Categoriesvolumechange = categorie.VolumeChange,
-                Categorieslastupdated = categorie.LastUpdated.ToLocalTime(), //TODO fix de tijd
+                Categoriesid = category.Id,
+                Categoriesname = category.Name,
+                Categoriestitle = category.Title,
+                Categoriesdescription = category.Description,
+                Categoriesnumberoftokens = category.NumTokens,
+                Categoriesaveragepricechange = category.AvgPriceChange,
+                Categoriesmarketcap = category.MarketCap,
+                Categoriesmarketcapchange = category.MarketCapChange,
+                Categoriesvolume = category.Volume,
+                Categoriesvolumechange = category.VolumeChange,
+                Categorieslastupdated = category.LastUpdated.ToLocalTime(), //TODO fix de tijd
             };
-            categorieRows.Add(categorie.Id, categorieQActionRow);
+            categoryRows.Add(category.Id, categoryQActionRow);
         }
 
-        object[] categoriesColumns = protocol.categories.QActionRowsToObjectFillArray(categorieRows.Values.ToArray());
+        object[] categoriesColumns = protocol.categories.QActionRowsToObjectFillArray(categoryRows.Values.ToArray());
         protocol.FillArray(Parameter.Categories.tablePid, categoriesColumns);
         /*object succes = protocol.FillArray(Parameter.Categories.tablePid, categoriesColumns);
         protocol.Log($"QA{protocol.QActionID}|FillCategories|{succes.ToString()} SOFIAN", LogType.Error, LogLevel.NoLogging); // Kan toevoegen voor het checken op succes.*/

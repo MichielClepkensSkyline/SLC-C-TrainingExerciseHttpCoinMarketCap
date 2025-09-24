@@ -50,29 +50,94 @@ public static class Parameter
 	public const int totalcryptocurrencies = 601;
 	/// <summary>PID: 602 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int activeexchanges_602 = 602;
+	public const int activemarketpairs_602 = 602;
 	/// <summary>PID: 602 | Type: read</summary>
-	public const int activeexchanges = 602;
+	public const int activemarketpairs = 602;
 	/// <summary>PID: 603 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int totalexchanges_603 = 603;
+	public const int activeexchanges_603 = 603;
 	/// <summary>PID: 603 | Type: read</summary>
-	public const int totalexchanges = 603;
+	public const int activeexchanges = 603;
 	/// <summary>PID: 604 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int ethereumdominance_604 = 604;
+	public const int totalexchanges_604 = 604;
 	/// <summary>PID: 604 | Type: read</summary>
-	public const int ethereumdominance = 604;
+	public const int totalexchanges = 604;
 	/// <summary>PID: 605 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int bitcoindominance_605 = 605;
+	public const int ethereumdominance_605 = 605;
 	/// <summary>PID: 605 | Type: read</summary>
-	public const int bitcoindominance = 605;
+	public const int ethereumdominance = 605;
 	/// <summary>PID: 606 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int lastupdated_606 = 606;
+	public const int bitcoindominance_606 = 606;
 	/// <summary>PID: 606 | Type: read</summary>
-	public const int lastupdated = 606;
+	public const int bitcoindominance = 606;
+	/// <summary>PID: 607 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int ethereumdominance24hpercentagechange_607 = 607;
+	/// <summary>PID: 607 | Type: read</summary>
+	public const int ethereumdominance24hpercentagechange = 607;
+	/// <summary>PID: 608 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int bitcoindominance24hpercentagechange_608 = 608;
+	/// <summary>PID: 608 | Type: read</summary>
+	public const int bitcoindominance24hpercentagechange = 608;
+	/// <summary>PID: 609 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int defivolume24h_609 = 609;
+	/// <summary>PID: 609 | Type: read</summary>
+	public const int defivolume24h = 609;
+	/// <summary>PID: 610 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int defimarketcap_610 = 610;
+	/// <summary>PID: 610 | Type: read</summary>
+	public const int defimarketcap = 610;
+	/// <summary>PID: 611 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int defi24hpercentagechange_611 = 611;
+	/// <summary>PID: 611 | Type: read</summary>
+	public const int defi24hpercentagechange = 611;
+	/// <summary>PID: 612 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int stablecoinvolume24h_612 = 612;
+	/// <summary>PID: 612 | Type: read</summary>
+	public const int stablecoinvolume24h = 612;
+	/// <summary>PID: 613 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int stablecoinmarketcap_613 = 613;
+	/// <summary>PID: 613 | Type: read</summary>
+	public const int stablecoinmarketcap = 613;
+	/// <summary>PID: 614 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int stablecoin24hpercentagechange_614 = 614;
+	/// <summary>PID: 614 | Type: read</summary>
+	public const int stablecoin24hpercentagechange = 614;
+	/// <summary>PID: 615 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int totalcryptodexcurrencies_615 = 615;
+	/// <summary>PID: 615 | Type: read</summary>
+	public const int totalcryptodexcurrencies = 615;
+	/// <summary>PID: 616 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int past24hincrementalcryptonumber_616 = 616;
+	/// <summary>PID: 616 | Type: read</summary>
+	public const int past24hincrementalcryptonumber = 616;
+	/// <summary>PID: 617 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int totalmarketcap_617 = 617;
+	/// <summary>PID: 617 | Type: read</summary>
+	public const int totalmarketcap = 617;
+	/// <summary>PID: 618 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int totalvolume24h_618 = 618;
+	/// <summary>PID: 618 | Type: read</summary>
+	public const int totalvolume24h = 618;
+	/// <summary>PID: 619 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int lastupdated_619 = 619;
+	/// <summary>PID: 619 | Type: read</summary>
+	public const int lastupdated = 619;
 	public class Write
 	{
 		/// <summary>PID: 4 | Type: write</summary>
@@ -562,15 +627,41 @@ public interface SLProtocolExt : SLProtocol
 	object Activecryptocurrencies { get; set; }
 	object Totalcryptocurrencies_601 { get; set; }
 	object Totalcryptocurrencies { get; set; }
-	object Activeexchanges_602 { get; set; }
+	object Activemarketpairs_602 { get; set; }
+	object Activemarketpairs { get; set; }
+	object Activeexchanges_603 { get; set; }
 	object Activeexchanges { get; set; }
-	object Totalexchanges_603 { get; set; }
+	object Totalexchanges_604 { get; set; }
 	object Totalexchanges { get; set; }
-	object Ethereumdominance_604 { get; set; }
+	object Ethereumdominance_605 { get; set; }
 	object Ethereumdominance { get; set; }
-	object Bitcoindominance_605 { get; set; }
+	object Bitcoindominance_606 { get; set; }
 	object Bitcoindominance { get; set; }
-	object Lastupdated_606 { get; set; }
+	object Ethereumdominance24hpercentagechange_607 { get; set; }
+	object Ethereumdominance24hpercentagechange { get; set; }
+	object Bitcoindominance24hpercentagechange_608 { get; set; }
+	object Bitcoindominance24hpercentagechange { get; set; }
+	object Defivolume24h_609 { get; set; }
+	object Defivolume24h { get; set; }
+	object Defimarketcap_610 { get; set; }
+	object Defimarketcap { get; set; }
+	object Defi24hpercentagechange_611 { get; set; }
+	object Defi24hpercentagechange { get; set; }
+	object Stablecoinvolume24h_612 { get; set; }
+	object Stablecoinvolume24h { get; set; }
+	object Stablecoinmarketcap_613 { get; set; }
+	object Stablecoinmarketcap { get; set; }
+	object Stablecoin24hpercentagechange_614 { get; set; }
+	object Stablecoin24hpercentagechange { get; set; }
+	object Totalcryptodexcurrencies_615 { get; set; }
+	object Totalcryptodexcurrencies { get; set; }
+	object Past24hincrementalcryptonumber_616 { get; set; }
+	object Past24hincrementalcryptonumber { get; set; }
+	object Totalmarketcap_617 { get; set; }
+	object Totalmarketcap { get; set; }
+	object Totalvolume24h_618 { get; set; }
+	object Totalvolume24h { get; set; }
+	object Lastupdated_619 { get; set; }
 	object Lastupdated { get; set; }
 	WriteParameters Write { get; set; }
 }
@@ -800,29 +891,94 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Totalcryptocurrencies {get { return GetParameter(601); }set { SetParameter(601, value); }}
 	/// <summary>PID: 602  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Activeexchanges_602 {get { return GetParameter(602); }set { SetParameter(602, value); }}
+	public System.Object Activemarketpairs_602 {get { return GetParameter(602); }set { SetParameter(602, value); }}
 	/// <summary>PID: 602  | Type: read</summary>
-	public System.Object Activeexchanges {get { return GetParameter(602); }set { SetParameter(602, value); }}
+	public System.Object Activemarketpairs {get { return GetParameter(602); }set { SetParameter(602, value); }}
 	/// <summary>PID: 603  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Totalexchanges_603 {get { return GetParameter(603); }set { SetParameter(603, value); }}
+	public System.Object Activeexchanges_603 {get { return GetParameter(603); }set { SetParameter(603, value); }}
 	/// <summary>PID: 603  | Type: read</summary>
-	public System.Object Totalexchanges {get { return GetParameter(603); }set { SetParameter(603, value); }}
+	public System.Object Activeexchanges {get { return GetParameter(603); }set { SetParameter(603, value); }}
 	/// <summary>PID: 604  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Ethereumdominance_604 {get { return GetParameter(604); }set { SetParameter(604, value); }}
+	public System.Object Totalexchanges_604 {get { return GetParameter(604); }set { SetParameter(604, value); }}
 	/// <summary>PID: 604  | Type: read</summary>
-	public System.Object Ethereumdominance {get { return GetParameter(604); }set { SetParameter(604, value); }}
+	public System.Object Totalexchanges {get { return GetParameter(604); }set { SetParameter(604, value); }}
 	/// <summary>PID: 605  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Bitcoindominance_605 {get { return GetParameter(605); }set { SetParameter(605, value); }}
+	public System.Object Ethereumdominance_605 {get { return GetParameter(605); }set { SetParameter(605, value); }}
 	/// <summary>PID: 605  | Type: read</summary>
-	public System.Object Bitcoindominance {get { return GetParameter(605); }set { SetParameter(605, value); }}
+	public System.Object Ethereumdominance {get { return GetParameter(605); }set { SetParameter(605, value); }}
 	/// <summary>PID: 606  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Lastupdated_606 {get { return GetParameter(606); }set { SetParameter(606, value); }}
+	public System.Object Bitcoindominance_606 {get { return GetParameter(606); }set { SetParameter(606, value); }}
 	/// <summary>PID: 606  | Type: read</summary>
-	public System.Object Lastupdated {get { return GetParameter(606); }set { SetParameter(606, value); }}
+	public System.Object Bitcoindominance {get { return GetParameter(606); }set { SetParameter(606, value); }}
+	/// <summary>PID: 607  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Ethereumdominance24hpercentagechange_607 {get { return GetParameter(607); }set { SetParameter(607, value); }}
+	/// <summary>PID: 607  | Type: read</summary>
+	public System.Object Ethereumdominance24hpercentagechange {get { return GetParameter(607); }set { SetParameter(607, value); }}
+	/// <summary>PID: 608  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Bitcoindominance24hpercentagechange_608 {get { return GetParameter(608); }set { SetParameter(608, value); }}
+	/// <summary>PID: 608  | Type: read</summary>
+	public System.Object Bitcoindominance24hpercentagechange {get { return GetParameter(608); }set { SetParameter(608, value); }}
+	/// <summary>PID: 609  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Defivolume24h_609 {get { return GetParameter(609); }set { SetParameter(609, value); }}
+	/// <summary>PID: 609  | Type: read</summary>
+	public System.Object Defivolume24h {get { return GetParameter(609); }set { SetParameter(609, value); }}
+	/// <summary>PID: 610  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Defimarketcap_610 {get { return GetParameter(610); }set { SetParameter(610, value); }}
+	/// <summary>PID: 610  | Type: read</summary>
+	public System.Object Defimarketcap {get { return GetParameter(610); }set { SetParameter(610, value); }}
+	/// <summary>PID: 611  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Defi24hpercentagechange_611 {get { return GetParameter(611); }set { SetParameter(611, value); }}
+	/// <summary>PID: 611  | Type: read</summary>
+	public System.Object Defi24hpercentagechange {get { return GetParameter(611); }set { SetParameter(611, value); }}
+	/// <summary>PID: 612  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Stablecoinvolume24h_612 {get { return GetParameter(612); }set { SetParameter(612, value); }}
+	/// <summary>PID: 612  | Type: read</summary>
+	public System.Object Stablecoinvolume24h {get { return GetParameter(612); }set { SetParameter(612, value); }}
+	/// <summary>PID: 613  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Stablecoinmarketcap_613 {get { return GetParameter(613); }set { SetParameter(613, value); }}
+	/// <summary>PID: 613  | Type: read</summary>
+	public System.Object Stablecoinmarketcap {get { return GetParameter(613); }set { SetParameter(613, value); }}
+	/// <summary>PID: 614  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Stablecoin24hpercentagechange_614 {get { return GetParameter(614); }set { SetParameter(614, value); }}
+	/// <summary>PID: 614  | Type: read</summary>
+	public System.Object Stablecoin24hpercentagechange {get { return GetParameter(614); }set { SetParameter(614, value); }}
+	/// <summary>PID: 615  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Totalcryptodexcurrencies_615 {get { return GetParameter(615); }set { SetParameter(615, value); }}
+	/// <summary>PID: 615  | Type: read</summary>
+	public System.Object Totalcryptodexcurrencies {get { return GetParameter(615); }set { SetParameter(615, value); }}
+	/// <summary>PID: 616  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Past24hincrementalcryptonumber_616 {get { return GetParameter(616); }set { SetParameter(616, value); }}
+	/// <summary>PID: 616  | Type: read</summary>
+	public System.Object Past24hincrementalcryptonumber {get { return GetParameter(616); }set { SetParameter(616, value); }}
+	/// <summary>PID: 617  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Totalmarketcap_617 {get { return GetParameter(617); }set { SetParameter(617, value); }}
+	/// <summary>PID: 617  | Type: read</summary>
+	public System.Object Totalmarketcap {get { return GetParameter(617); }set { SetParameter(617, value); }}
+	/// <summary>PID: 618  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Totalvolume24h_618 {get { return GetParameter(618); }set { SetParameter(618, value); }}
+	/// <summary>PID: 618  | Type: read</summary>
+	public System.Object Totalvolume24h {get { return GetParameter(618); }set { SetParameter(618, value); }}
+	/// <summary>PID: 619  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Lastupdated_619 {get { return GetParameter(619); }set { SetParameter(619, value); }}
+	/// <summary>PID: 619  | Type: read</summary>
+	public System.Object Lastupdated {get { return GetParameter(619); }set { SetParameter(619, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{
