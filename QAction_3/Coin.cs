@@ -10,7 +10,7 @@ namespace QAction_3
     public class Coin
     {
         [JsonProperty("id")]
-        public int Id { get; set; }
+        public string Id { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }

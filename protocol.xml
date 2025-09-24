@@ -111,7 +111,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>1</Row>
+						<Row>2</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -154,7 +154,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>2</Row>
+						<Row>3</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -174,15 +174,30 @@ Any inquiries can be addressed to:
 			<Type>array</Type>
 			<ArrayOptions index="0">
 				<ColumnOption idx="0" pid="101" type="retrieved" options=""/>
+				<ColumnOption idx="1" pid="102" type="retrieved" options="" />
+				<ColumnOption idx="2" pid="103" type="retrieved" options="" />
+				<ColumnOption idx="3" pid="104" type="retrieved" options="" />
+				<ColumnOption idx="4" pid="105" type="retrieved" options="" />
+				<ColumnOption idx="5" pid="106" type="retrieved" options="" />
+				<ColumnOption idx="6" pid="107" type="retrieved" options="" />
+				<ColumnOption idx="7" pid="108" type="retrieved" options="" />
+				<ColumnOption idx="8" pid="109" type="retrieved" options="" />
 			</ArrayOptions>
 			<Information>
 				<Subtext>tableInformation</Subtext>
 			</Information>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:101|0,width:100,sort:STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:101|0-103|2-102|1-104|3-105|4-106|5-107|6-108|7-109|8,width:100-100-100-134-122-175-125-103-110,sort:STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="101" trending="false">
@@ -205,11 +220,10 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="102" trending="false">
-			<Name>LatestListnigsName</Name>
+			<Name>LatestListingsName</Name>
 			<Description>Name (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -228,7 +242,6 @@ Any inquiries can be addressed to:
 			<Description>Symbol (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -244,10 +257,9 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="104" trending="false">
 			<Name>LatestListingsCoinMarketCapRank</Name>
-			<Description>CoinMarketCap rank (Latest Listings)</Description>
+			<Description>CoinMarketCap Rank (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -266,7 +278,6 @@ Any inquiries can be addressed to:
 			<Description>Circulating Supply (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -281,11 +292,10 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="106" trending="false">
-			<Name>LatestListingUSDPrice</Name>
+			<Name>LatestListingsUSDPrice</Name>
 			<Description>Price in USD (Latest Listing)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -300,11 +310,10 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="107" trending="false">
-			<Name>latestListingsMarketCap</Name>
+			<Name>LatestListingsMarketCap</Name>
 			<Description>Market Cap in USD (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -318,12 +327,49 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
+		<Param id="108" trending="false">
+			<Name>LatestListings1HourChange</Name>
+			<Description>1 Hour Change (Latest Listings)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="109" trending="false">
+			<Name>LatestListings24HourVolume</Name>
+			<Description>24 Hour Volume (Latest Listings)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		
 	</Params>
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
 		<QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
-		<QAction id="3" name="Poll Listing data into a table" encoding="csharp" triggers="3">
+		<QAction id="3" name="Poll Listing data into a table" encoding="csharp" triggers="4">
 		</QAction>
 	</QActions>
 
