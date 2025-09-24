@@ -20,7 +20,7 @@ public static class QAction
 	{
         try
 		{
-			string data = Convert.ToString(protocol.GetParameter(Parameter.jsonresponse_4));
+			string data = Convert.ToString(protocol.GetParameter(Parameter.jsonresponselatestlistings_4));
 			LatestListings deserializedlatestListings = SecureNewtonsoftDeserialization.DeserializeObject<LatestListings>(data);
 			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Data:{Environment.NewLine}{data}", LogType.Error, LogLevel.NoLogging);
 			Dictionary<string, object[]> latestListingsDictionary = new Dictionary<string, object[]>();

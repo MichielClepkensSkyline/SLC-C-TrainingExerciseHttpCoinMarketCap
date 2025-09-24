@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>000</DeviceOID>
 	<ElementType>Crypto Currency Tracker</ElementType>
 	<Type relativeTimers="true">http</Type>
-	<Display defaultPage="General" pageOrder="General" wideColumnPages=""/>
+	<Display defaultPage="General" pageOrder="General;Latest Listings" wideColumnPages=""/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -71,7 +71,7 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="3" trending="false">
 			<Name>HttpResponseCodeLatestListings</Name>
-			<Description>HTTP Response</Description>
+			<Description>HTTP Response for Latest Listings</Description>
 			<Type>read</Type>
 			<Information>
 			</Information>
@@ -84,7 +84,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Listings</Page>
 						<Column>0</Column>
 						<Row>0</Row>
 					</Position>
@@ -95,8 +95,8 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="4" trending="false">
-			<Name>JsonResponse</Name>
-			<Description>Json Response</Description>
+			<Name>JsonResponseLatestListings</Name>
+			<Description>Json Response for Latest Listings</Description>
 			<Type>read</Type>
 			<Information>
 			</Information>
@@ -109,9 +109,9 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Listings</Page>
 						<Column>0</Column>
-						<Row>2</Row>
+						<Row>1</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -154,7 +154,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>3</Row>
+						<Row>6</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -190,14 +190,14 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Listings</Page>
 						<Column>0</Column>
-						<Row>1</Row>
+						<Row>2</Row>
 					</Position>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:101|0-103|2-102|1-104|3-105|4-106|5-107|6-108|7-109|8,width:100-100-100-134-122-175-125-103-110,sort:STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:101|0-103|2-102|1-104|3-105|4-106|5-107|6-108|7-109|8,width:100-100-100-137-122-175-125-103-110,sort:STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="101" trending="false">
@@ -363,13 +363,222 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		
+		<Param id="300" trending="false">
+			<Name>HttpResponseCodeCategories</Name>
+			<Description>HTTP Response for Categories</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="301" trending="false">
+			<Name>JsonResponseCategories</Name>
+			<Description>Json Response for Categories</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type lines="10">string</Type>
+			</Measurement>
+		</Param>
+		<Param id="400">
+			<Name>Categories</Name>
+			<Description>Categories</Description>
+			<Type>array</Type>
+			<ArrayOptions index="0">
+				<ColumnOption idx="0" pid="401" type="retrieved" options=""/>
+				<ColumnOption idx="1" pid="402" type="retrieved" options="" />
+				<ColumnOption idx="2" pid="403" type="retrieved" options="" />
+				<ColumnOption idx="3" pid="404" type="retrieved" options="" />
+				<ColumnOption idx="4" pid="405" type="retrieved" options="" />
+				<ColumnOption idx="5" pid="406" type="retrieved" options="" />
+				<ColumnOption idx="6" pid="407" type="retrieved" options="" />
+			</ArrayOptions>
+			<Information>
+				<Subtext>tableInformation</Subtext>
+			</Information>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>2</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="tab=columns:401|0-402|1-403|2-404|3-405|4-406|5-407|6,width:100-100-124-142-100-100-156,sort:STRING-STRING-STRING-STRING-STRING-STRING-INT,lines:25,filter:true">table</Type>
+			</Measurement>
+		</Param>
+		<Param id="401" trending="false">
+			<Name>CategoriesId</Name>
+			<Description>Id (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>This is the key used internally by DataMiner to identify the table entries.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="402" trending="false">
+			<Name>CategoriesTitle</Name>
+			<Description>Title (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="403" trending="false">
+			<Name>CategoriesNumberOfTokens</Name>
+			<Description>Number Of Tokens (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="404" trending="false">
+			<Name>CategoriesAvreagePriceChange</Name>
+			<Description>Avreage Price Change (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="405" trending="false">
+			<Name>CategoriesMarketCap</Name>
+			<Description>Market Cap (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="406" trending="false">
+			<Name>CategoriesVolume</Name>
+			<Description>Volume (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="407" trending="false">
+			<Name>CategoriesLastUpdated</Name>
+			<Description>Last Updated (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Decimals>8</Decimals>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>8</Decimals>
+			</Display>
+			<Measurement>
+				<Type options="datetime">number</Type>
+			</Measurement>
+		</Param>
 	</Params>
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
 		<QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
-		<QAction id="3" name="Poll Listing data into a table" encoding="csharp" triggers="4">
+		<QAction id="3" name="Get Latest Listing Data Into a Table" encoding="csharp" triggers="4" />
+		<QAction id="4" name="Get Categories Data Into a Table" encoding="csharp" triggers="301">
 		</QAction>
 	</QActions>
 
@@ -393,8 +602,8 @@ Any inquiries can be addressed to:
 						<Header key="Authorization" pid="5"></Header>
 					</Headers>
 				</Request>
-				<Response statusCode="3">
-					<Content pid="4"></Content>
+				<Response statusCode="300">
+					<Content pid="301"></Content>
 				</Response>
 			</Connection>
 		</Session>
@@ -444,6 +653,7 @@ Any inquiries can be addressed to:
 			<Type>action</Type>
 			<Content>
 				<Id>3</Id>
+				<Id>4</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
