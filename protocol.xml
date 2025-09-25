@@ -591,7 +591,7 @@ Any inquiries can be addressed to:
 				<Decimals>2</Decimals>
 				<Units>%</Units>
 				<Range>
-					<Low>0</Low>
+					<Low>-20</Low>
 					<High>100</High>
 				</Range>
 				<Positions>
@@ -622,13 +622,20 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
+				<CH>5.0</CH>
+				<MaH>3.0</MaH>
+				<MiH>1.5</MiH>
+				<Normal>0</Normal>
+				<MiL>-1.5</MiL>
+				<MaL>-3.0</MaL>
+				<CL>-5.0</CL>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>2</Decimals>
 				<Units>%</Units>
 				<Range>
-					<Low>0</Low>
+					<Low>-20</Low>
 					<High>100</High>
 				</Range>
 				<Positions>
@@ -659,13 +666,20 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
+				<CH>5.0</CH>
+				<MaH>3.0</MaH>
+				<MiH>1.5</MiH>
+				<Normal>0</Normal>
+				<MiL>-1.5</MiL>
+				<MaL>-3.0</MaL>
+				<CL>-5.0</CL>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>2</Decimals>
 				<Units>%</Units>
 				<Range>
-					<Low>0</Low>
+					<Low>-20</Low>
 					<High>100</High>
 				</Range>
 				<Positions>
@@ -696,6 +710,10 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
+				<CH>5.0</CH>
+				<MaH>3.0</MaH>
+				<MiH>1.5</MiH>
+				<Normal>0.5</Normal>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -863,13 +881,19 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
+				<MaH>20.0</MaH>
+				<MiH>15.0</MiH>
+				<Normal>10.0</Normal>
+				<MiL>-6.5</MiL>
+				<MaL>-13.0</MaL>
+				<CL>-20.0</CL>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>%</Units>
 				<Range>
-					<Low>0</Low>
+					<Low>-30</Low>
 					<High>100</High>
 				</Range>
 				<Positions>
@@ -900,13 +924,19 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
+				<MaH>20.0</MaH>
+				<MiH>15.0</MiH>
+				<Normal>10.0</Normal>
+				<MiL>-6.5</MiL>
+				<MaL>-13.0</MaL>
+				<CL>-20.0</CL>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>%</Units>
 				<Range>
-					<Low>0</Low>
+					<Low>-30</Low>
 					<High>100</High>
 				</Range>
 				<Positions>
@@ -997,15 +1027,15 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="1" pid="102" type="retrieved" options=""/>
 				<ColumnOption idx="2" pid="103" type="retrieved" options=""/>
 				<ColumnOption idx="3" pid="112" type="retrieved" options=""/>
-				<ColumnOption idx="4" pid="106" type="retrieved" options=""/>
+				<ColumnOption idx="4" pid="106" type="retrieved" options=";disableHeaderSum;enableHistogram;enableHeatmap"/>
 				<ColumnOption idx="5" pid="114" type="retrieved" options=""/>
 				<ColumnOption idx="6" pid="105" type="retrieved" options=""/>
-				<ColumnOption idx="7" pid="108" type="retrieved" options=""/>
-				<ColumnOption idx="8" pid="109" type="retrieved" options=""/>
-				<ColumnOption idx="9" pid="110" type="retrieved" options=""/>
+				<ColumnOption idx="7" pid="108" type="retrieved" options=";disableHeaderSum;enableHistogram;enableHeatmap"/>
+				<ColumnOption idx="8" pid="109" type="retrieved" options=";disableHeaderSum;enableHistogram;enableHeatmap"/>
+				<ColumnOption idx="9" pid="110" type="retrieved" options=";disableHeaderSum;enableHistogram;enableHeatmap"/>
 				<ColumnOption idx="10" pid="116" type="retrieved" options=""/>
 				<ColumnOption idx="11" pid="111" type="retrieved" options=""/>
-				<ColumnOption idx="12" pid="115" type="retrieved" options=""/>
+				<ColumnOption idx="12" pid="115" type="retrieved" options=";disableHeaderSum;enableHistogram;enableHeatmap"/>
 				<ColumnOption idx="13" pid="107" type="retrieved" options=""/>
 				<ColumnOption idx="14" pid="104" type="retrieved" options=""/>
 				<ColumnOption idx="15" pid="113" type="displaykey" options=""/>
@@ -1113,7 +1143,7 @@ Any inquiries can be addressed to:
 				<Type options="datetime">number</Type>
 			</Measurement>
 		</Param>
-		<Param id="105" trending="true">
+		<Param id="105" trending="false">
 			<Name>latestListingsCirculatingSupply</Name>
 			<Description>Circulating Supply (Latest Listings)</Description>
 			<Type>read</Type>
@@ -1152,6 +1182,14 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<MaH>10</MaH>
+				<MiH>30</MiH>
+				<Normal>60</Normal>
+				<MaL>90</MaL>
+				<CL>100</CL>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Range>
@@ -1199,6 +1237,15 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CH>1000</CH>
+				<MaH>100</MaH>
+				<MiH>10</MiH>
+				<Normal>1</Normal>
+				<MaL>0.1</MaL>
+				<CL>0</CL>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>2</Decimals>
@@ -1225,6 +1272,15 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CH>1</CH>
+				<MaH>0.25</MaH>
+				<MiH>0</MiH>
+				<Normal>-1</Normal>
+				<MaL>-2.5</MaL>
+				<CL>-5</CL>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
@@ -1252,6 +1308,15 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CH>100</CH>
+				<MaH>25</MaH>
+				<MiH>5</MiH>
+				<Normal>-10</Normal>
+				<MaL>-25</MaL>
+				<CL>-40</CL>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
@@ -1265,7 +1330,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="111" trending="true">
+		<Param id="111" trending="false">
 			<Name>latestListingsQuoteMarketCap</Name>
 			<Description>Market Cap (Latest Listings)</Description>
 			<Type>read</Type>
@@ -1281,10 +1346,9 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Units>%</Units>
+				<Units>$</Units>
 				<Range>
 					<Low>0</Low>
-					<High>100</High>
 				</Range>
 			</Display>
 			<Measurement>
@@ -1339,7 +1403,7 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="114" trending="true">
+		<Param id="114" trending="false">
 			<Name>latestListingsMaxSupply</Name>
 			<Description>Maximum Supply (Latest Listings)</Description>
 			<Type>read</Type>
@@ -1384,6 +1448,9 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
@@ -1396,7 +1463,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="116" trending="true">
+		<Param id="116" trending="false">
 			<Name>latestListingsQuoteVolume24h</Name>
 			<Description>Volume(24h) (Latest Listings)</Description>
 			<Type>read</Type>
@@ -1412,11 +1479,10 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Units>%</Units>
+				<Units>$</Units>
 				<Decimals>2</Decimals>
 				<Range>
 					<Low>0</Low>
-					<High>100</High>
 				</Range>
 			</Display>
 			<Measurement>
@@ -1431,11 +1497,11 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="0" pid="201" type="retrieved" options=""/>
 				<ColumnOption idx="1" pid="202" type="retrieved" options=""/>
 				<ColumnOption idx="2" pid="203" type="retrieved" options=""/>
-				<ColumnOption idx="3" pid="204" type="retrieved" options=""/>
+				<ColumnOption idx="3" pid="204" type="retrieved" options=";enableHeaderAvg;enableHistogram;enableHeatmap"/>
 				<ColumnOption idx="4" pid="205" type="retrieved" options=""/>
-				<ColumnOption idx="5" pid="206" type="retrieved" options=""/>
+				<ColumnOption idx="5" pid="206" type="retrieved" options=";enableHeaderAvg;enableHistogram;enableHeatmap"/>
 				<ColumnOption idx="6" pid="207" type="retrieved" options=""/>
-				<ColumnOption idx="7" pid="208" type="retrieved" options=""/>
+				<ColumnOption idx="7" pid="208" type="retrieved" options=";enableHeaderAvg;enableHistogram;enableHeatmap"/>
 				<ColumnOption idx="8" pid="209" type="retrieved" options=""/>
 				<ColumnOption idx="9" pid="211" type="retrieved" options=""/>
 				<ColumnOption idx="10" pid="210" type="displaykey" options=""/>
@@ -1499,7 +1565,7 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="203" trending="true">
+		<Param id="203" trending="false">
 			<Name>categoriesNumberOfTokens</Name>
 			<Description>Number of Tokens (Categories)</Description>
 			<Type>read</Type>
@@ -1539,6 +1605,16 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CH>20.0</CH>
+				<MaH>10.0</MaH>
+				<MiH>5.0</MiH>
+				<Normal>-3.5</Normal>
+				<MiL>-10.0</MiL>
+				<MaL>-20.0</MaL>
+				<CL>-30.0</CL>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>2</Decimals>
@@ -1552,7 +1628,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="205" trending="true">
+		<Param id="205" trending="false">
 			<Name>categoriesMarketCap</Name>
 			<Description>Market Cap (Categories)</Description>
 			<Type>read</Type>
@@ -1591,6 +1667,15 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CH>10.0</CH>
+				<MaH>5.0</MaH>
+				<MiH>3.5</MiH>
+				<Normal>-3.5</Normal>
+				<MaL>-5.0</MaL>
+				<CL>-10.0</CL>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
@@ -1604,7 +1689,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="207" trending="true">
+		<Param id="207" trending="false">
 			<Name>categoriesVolume</Name>
 			<Description>Volume (Categories)</Description>
 			<Type>read</Type>
@@ -1643,6 +1728,16 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CH>100.0</CH>
+				<MaH>50.0</MaH>
+				<MiH>25.0</MiH>
+				<Normal>0</Normal>
+				<MiL>-20.0</MiL>
+				<MaL>-35.0</MaL>
+				<CL>-50.0</CL>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
