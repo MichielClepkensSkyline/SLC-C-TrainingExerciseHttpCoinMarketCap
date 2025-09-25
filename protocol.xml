@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>000</DeviceOID>
 	<ElementType>Crypto Currency Tracker</ElementType>
 	<Type relativeTimers="true">http</Type>
-	<Display defaultPage="General" pageOrder="General;Latest Listings;Categories" wideColumnPages=""/>
+	<Display defaultPage="General" pageOrder="General;Latest Listings;Categories;Latest Quotes" wideColumnPages=""/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -154,7 +154,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>23</Row>
+						<Row>25</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -425,6 +425,7 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="4" pid="405" type="retrieved" options="" />
 				<ColumnOption idx="5" pid="406" type="retrieved" options="" />
 				<ColumnOption idx="6" pid="407" type="retrieved" options="" />
+				<ColumnOption idx="7" pid="408" type="retrieved" options="" />
 			</ArrayOptions>
 			<Information>
 				<Subtext>tableInformation</Subtext>
@@ -440,7 +441,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:401|0-402|1-403|2-404|3-405|4-406|5-407|6,width:100-100-124-142-100-100-156,sort:STRING-STRING-STRING-STRING-STRING-STRING-INT,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:401|0-402|1-403|2-404|3-405|4-406|5-407|6-408|7,width:100-100-124-142-100-100-156-106,sort:STRING-STRING-STRING-STRING-STRING-STRING-INT-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="401" trending="false">
@@ -572,6 +573,29 @@ Any inquiries can be addressed to:
 				<Type options="datetime">number</Type>
 			</Measurement>
 		</Param>
+		<Param id="408">
+			<Name>CategoriesRefresh</Name>
+			<Type>write</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type width="110">button</Type>
+				<Discreets>
+					<Discreet>
+						<Display>Refresh</Display>
+						<Value>Refresh</Value>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+		</Param>
 		<Param id="500" trending="false">
 			<Name>HttpResponseCodeLatestQuotes</Name>
 			<Description>HTTP Response for Latest Quotes</Description>
@@ -587,7 +611,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Quotes</Page>
 						<Column>0</Column>
 						<Row>0</Row>
 					</Position>
@@ -612,7 +636,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Quotes</Page>
 						<Column>0</Column>
 						<Row>1</Row>
 					</Position>
@@ -630,7 +654,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Quotes</Page>
 						<Column>0</Column>
 						<Row>2</Row>
 					</Position>
@@ -655,7 +679,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Quotes</Page>
 						<Column>0</Column>
 						<Row>3</Row>
 					</Position>
@@ -680,7 +704,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Quotes</Page>
 						<Column>0</Column>
 						<Row>4</Row>
 					</Position>
@@ -705,7 +729,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Quotes</Page>
 						<Column>0</Column>
 						<Row>5</Row>
 					</Position>
@@ -732,7 +756,7 @@ Any inquiries can be addressed to:
 				<Decimals>8</Decimals>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Quotes</Page>
 						<Column>0</Column>
 						<Row>6</Row>
 					</Position>
@@ -750,7 +774,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Quotes</Page>
 						<Column>0</Column>
 						<Row>7</Row>
 					</Position>
@@ -775,7 +799,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Quotes</Page>
 						<Column>0</Column>
 						<Row>8</Row>
 					</Position>
@@ -800,7 +824,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Quotes</Page>
 						<Column>0</Column>
 						<Row>9</Row>
 					</Position>
@@ -818,7 +842,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Quotes</Page>
 						<Column>0</Column>
 						<Row>10</Row>
 					</Position>
@@ -843,7 +867,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Quotes</Page>
 						<Column>0</Column>
 						<Row>11</Row>
 					</Position>
@@ -868,7 +892,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Quotes</Page>
 						<Column>0</Column>
 						<Row>12</Row>
 					</Position>
@@ -886,7 +910,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Quotes</Page>
 						<Column>0</Column>
 						<Row>13</Row>
 					</Position>
@@ -911,7 +935,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Quotes</Page>
 						<Column>0</Column>
 						<Row>14</Row>
 					</Position>
@@ -936,9 +960,69 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>General</Page>
+						<Page>Latest Quotes</Page>
 						<Column>0</Column>
 						<Row>15</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="516">
+			<Name>RefreshCategoryURL</Name>
+			<Description>Refresh Category URL</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>text</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+		</Param>
+		<Param id="517" trending="false">
+			<Name>JsonRsponseRefreshCategory</Name>
+			<Description>Json Response Refresh Category</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type lines="10">string</Type>
+			</Measurement>
+		</Param>
+		<Param id="518" trending="false">
+			<Name>HttpResponseCategoryRefresh</Name>
+			<Description>Http Response Category Refresh</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>0</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -955,7 +1039,9 @@ Any inquiries can be addressed to:
 		<QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
 		<QAction id="3" name="Get Latest Listing Data Into a Table" encoding="csharp" triggers="4" />
 		<QAction id="4" name="Get Categories Data Into a Table" encoding="csharp" triggers="301"/>
-		<QAction id="5" name="Get Latest Quotes Data Into Parameters" encoding="csharp" triggers="501">
+		<QAction id="5" name="Get Latest Quotes Data Into Parameters" encoding="csharp" triggers="501" />
+		<QAction id="6" name="Refresh Category by Id" encoding="csharp" triggers="408" row="true" />
+		<QAction id="7" name="Set Singe Row in The Categories Table" encoding="csharp" triggers="517">
 		</QAction>
 	</QActions>
 
@@ -996,6 +1082,18 @@ Any inquiries can be addressed to:
 				</Response>
 			</Connection>
 		</Session>
+		<Session id="4" name="Refresh Category Row">
+			<Connection id="1">
+				<Request verb="GET" pid="516">
+					<Headers>
+						<Header key="Authorization" pid="5"></Header>
+					</Headers>
+				</Request>
+				<Response statusCode="518">
+					<Content pid="517"></Content>
+				</Response>
+			</Connection>
+		</Session>
 	</HTTP>
 
 	<Groups>
@@ -1031,6 +1129,14 @@ Any inquiries can be addressed to:
 				<Session>3</Session>
 			</Content>
 		</Group>
+		<Group id="6">
+			<Name>Refresh Category</Name>
+			<Description>Refresh Category</Description>
+			<Type>poll</Type>
+			<Content>
+				<Session>4</Session>
+			</Content>
+		</Group>
 	</Groups>
 
 	<Triggers>
@@ -1052,6 +1158,15 @@ Any inquiries can be addressed to:
 				<Id>3</Id>
 				<Id>4</Id>
 				<Id>5</Id>
+			</Content>
+		</Trigger>
+		<Trigger id="3">
+			<Name>On Refresh Category URL</Name>
+			<On id="516">parameter</On>
+			<Time>change</Time>
+			<Type>action</Type>
+			<Content>
+				<Id>6</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
@@ -1080,6 +1195,11 @@ Any inquiries can be addressed to:
 		<Action id="5">
 			<Name>Execute Group Latest Quotes</Name>
 			<On id="5">group</On>
+			<Type>execute one now</Type>
+		</Action>
+		<Action id="6">
+			<Name>Execute Group Refresh Category</Name>
+			<On id="6">group</On>
 			<Type>execute one now</Type>
 		</Action>
 	</Actions>

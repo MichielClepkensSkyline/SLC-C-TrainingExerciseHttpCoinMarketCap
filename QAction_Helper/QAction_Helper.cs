@@ -93,6 +93,21 @@ public static class Parameter
 	public const int stablecoinmarketcap_515 = 515;
 	/// <summary>PID: 515 | Type: read</summary>
 	public const int stablecoinmarketcap = 515;
+	/// <summary>PID: 516 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int refreshcategoryurl_516 = 516;
+	/// <summary>PID: 516 | Type: read</summary>
+	public const int refreshcategoryurl = 516;
+	/// <summary>PID: 517 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int jsonrsponserefreshcategory_517 = 517;
+	/// <summary>PID: 517 | Type: read</summary>
+	public const int jsonrsponserefreshcategory = 517;
+	/// <summary>PID: 518 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int httpresponsecategoryrefresh_518 = 518;
+	/// <summary>PID: 518 | Type: read</summary>
+	public const int httpresponsecategoryrefresh = 518;
 	public class Write
 	{
 		/// <summary>PID: 6 | Type: write</summary>
@@ -256,6 +271,11 @@ public static class Parameter
 			public const int categorieslastupdated = 407;
 			public class Write
 			{
+				/// <summary>PID: 408 | Type: write</summary>
+				[EditorBrowsable(EditorBrowsableState.Never)]
+				public const int categoriesrefresh_408 = 408;
+				/// <summary>PID: 408 | Type: write</summary>
+				public const int categoriesrefresh = 408;
 			}
 		}
 		public class Idx
@@ -302,6 +322,8 @@ public class WriteParameters
 {
 	/// <summary>PID: 6  | Type: write | DISCREETS: Get Data = Get Data</summary>
 	public System.Object Getdata {get { return Protocol.GetParameter(6); }set { Protocol.SetParameter(6, value); }}
+	/// <summary>PID: 408  | Type: write | DISCREETS: Refresh = Refresh</summary>
+	public System.Object Categoriesrefresh {get { return Protocol.GetParameter(408); }set { Protocol.SetParameter(408, value); }}
 	public SLProtocolExt Protocol;
 	public WriteParameters(SLProtocolExt protocol)
 	{
@@ -359,6 +381,8 @@ public interface SLProtocolExt : SLProtocol
 	object Categoriesvolume { get; set; }
 	object Categorieslastupdated_407 { get; set; }
 	object Categorieslastupdated { get; set; }
+	object Categoriesrefresh_408 { get; set; }
+	object Categoriesrefresh { get; set; }
 	object Httpresponsecodelatestquotes_500 { get; set; }
 	object Httpresponsecodelatestquotes { get; set; }
 	object Jsonresponselatestquotes_501 { get; set; }
@@ -387,6 +411,12 @@ public interface SLProtocolExt : SLProtocol
 	object Defimarketcap { get; set; }
 	object Stablecoinmarketcap_515 { get; set; }
 	object Stablecoinmarketcap { get; set; }
+	object Refreshcategoryurl_516 { get; set; }
+	object Refreshcategoryurl { get; set; }
+	object Jsonrsponserefreshcategory_517 { get; set; }
+	object Jsonrsponserefreshcategory { get; set; }
+	object Httpresponsecategoryrefresh_518 { get; set; }
+	object Httpresponsecategoryrefresh { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
@@ -506,6 +536,10 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Categorieslastupdated_407 {get { return GetParameter(407); }set { SetParameter(407, value); }}
 	/// <summary>PID: 407  | Type: read</summary>
 	public System.Object Categorieslastupdated {get { return GetParameter(407); }set { SetParameter(407, value); }}
+	/// <summary>PID: 408  | Type: write | DISCREETS: Refresh = Refresh</summary>
+	public System.Object Categoriesrefresh_408 {get { return GetParameter(408); }set { SetParameter(408, value); }}
+	/// <summary>PID: 408  | Type: write | DISCREETS: Refresh = Refresh</summary>
+	public System.Object Categoriesrefresh {get { return Write.Categoriesrefresh; }set { Write.Categoriesrefresh = value; }}
 	/// <summary>PID: 500  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Httpresponsecodelatestquotes_500 {get { return GetParameter(500); }set { SetParameter(500, value); }}
@@ -574,6 +608,21 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Stablecoinmarketcap_515 {get { return GetParameter(515); }set { SetParameter(515, value); }}
 	/// <summary>PID: 515  | Type: read</summary>
 	public System.Object Stablecoinmarketcap {get { return GetParameter(515); }set { SetParameter(515, value); }}
+	/// <summary>PID: 516  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Refreshcategoryurl_516 {get { return GetParameter(516); }set { SetParameter(516, value); }}
+	/// <summary>PID: 516  | Type: read</summary>
+	public System.Object Refreshcategoryurl {get { return GetParameter(516); }set { SetParameter(516, value); }}
+	/// <summary>PID: 517  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Jsonrsponserefreshcategory_517 {get { return GetParameter(517); }set { SetParameter(517, value); }}
+	/// <summary>PID: 517  | Type: read</summary>
+	public System.Object Jsonrsponserefreshcategory {get { return GetParameter(517); }set { SetParameter(517, value); }}
+	/// <summary>PID: 518  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Httpresponsecategoryrefresh_518 {get { return GetParameter(518); }set { SetParameter(518, value); }}
+	/// <summary>PID: 518  | Type: read</summary>
+	public System.Object Httpresponsecategoryrefresh {get { return GetParameter(518); }set { SetParameter(518, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{
@@ -687,8 +736,12 @@ public class CategoriesQActionRow : QActionTableRow
 	public System.Object Categorieslastupdated_407 { get { if (base.Columns.ContainsKey(6)) { return base.Columns[6]; } else { return null; } } set { if (base.Columns.ContainsKey(6)) { base.Columns[6] = value; } else { base.Columns.Add(6, value); } } }
 	/// <summary>PID: 407 | Type: read</summary>
 	public System.Object Categorieslastupdated { get { if (base.Columns.ContainsKey(6)) { return base.Columns[6]; } else { return null; } } set { if (base.Columns.ContainsKey(6)) { base.Columns[6] = value; } else { base.Columns.Add(6, value); } } }
-	public CategoriesQActionRow() : base(0, 7) { }
-	public CategoriesQActionRow(System.Object[] oRow) : base(0, 7, oRow) { }
+	/// <summary>PID: 408 | Type: write</summary>
+	public System.Object Categoriesrefresh_408 { get { if (base.Columns.ContainsKey(7)) { return base.Columns[7]; } else { return null; } } set { if (base.Columns.ContainsKey(7)) { base.Columns[7] = value; } else { base.Columns.Add(7, value); } } }
+	/// <summary>PID: 408 | Type: write</summary>
+	public System.Object Categoriesrefresh { get { if (base.Columns.ContainsKey(7)) { return base.Columns[7]; } else { return null; } } set { if (base.Columns.ContainsKey(7)) { base.Columns[7] = value; } else { base.Columns.Add(7, value); } } }
+	public CategoriesQActionRow() : base(0, 8) { }
+	public CategoriesQActionRow(System.Object[] oRow) : base(0, 8, oRow) { }
 	public static implicit operator CategoriesQActionRow(System.Object[] source) { return new CategoriesQActionRow(source); }
 	public static implicit operator System.Object[](CategoriesQActionRow source) { return source.ToObjectArray(); }
 }
