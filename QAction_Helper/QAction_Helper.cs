@@ -8,6 +8,21 @@ namespace Skyline.DataMiner.Scripting
 {
 public static class Parameter
 {
+	/// <summary>PID: 3 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int authorizationtoken_3 = 3;
+	/// <summary>PID: 3 | Type: read</summary>
+	public const int authorizationtoken = 3;
+	/// <summary>PID: 6 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int bearertoken_6 = 6;
+	/// <summary>PID: 6 | Type: read</summary>
+	public const int bearertoken = 6;
+	/// <summary>PID: 7 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int bearertokenfixed_7 = 7;
+	/// <summary>PID: 7 | Type: read</summary>
+	public const int bearertokenfixed = 7;
 	/// <summary>PID: 50 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int statuscodelastlistings_50 = 50;
@@ -155,6 +170,11 @@ public static class Parameter
 	public const int lastupdated = 619;
 	public class Write
 	{
+		/// <summary>PID: 4 | Type: write</summary>
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public const int authorizationtoken_4 = 4;
+		/// <summary>PID: 4 | Type: write</summary>
+		public const int authorizationtoken = 4;
 	}
 	public class Lastlisting
 	{
@@ -535,6 +555,8 @@ public static class Parameter
 }
 public class WriteParameters
 {
+	/// <summary>PID: 4  | Type: write</summary>
+	public System.Object Authorizationtoken {get { return Protocol.GetParameter(4); }set { Protocol.SetParameter(4, value); }}
 	public SLProtocolExt Protocol;
 	public WriteParameters(SLProtocolExt protocol)
 	{
@@ -548,7 +570,14 @@ public interface SLProtocolExt : SLProtocol
 	/// <summary>PID: 400</summary>
 	CategoriesQActionTable categories { get; set; }
 	object Afterstartup_dummy { get; set; }
-	object Bearertoken__fixed { get; set; }
+	object Authorizationtoken_3 { get; set; }
+	object Authorizationtoken { get; set; }
+	object Authorizationtoken_4 { get; set; }
+	object Bearerprefixhex__fixed { get; set; }
+	object Bearertoken_6 { get; set; }
+	object Bearertoken { get; set; }
+	object Bearertokenfixed_7 { get; set; }
+	object Bearertokenfixed { get; set; }
 	object Titlebeginauthorization__fixed { get; set; }
 	object Titleendauhtorization__fixed { get; set; }
 	object Titlebeginoverallcrypto__fixed { get; set; }
@@ -697,32 +726,50 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public CategoriesQActionTable categories { get; set; }
 	/// <summary>PID: 2  | Type: dummy</summary>
 	public System.Object Afterstartup_dummy {get { return GetParameter(2); }set { SetParameter(2, value); }}
-	/// <summary>PID: 3  | Type: fixed</summary>
-	public System.Object Bearertoken__fixed {get { return GetParameter(3); }set { SetParameter(3, value); }}
-	/// <summary>PID: 4  | Type: fixed</summary>
-	public System.Object Titlebeginauthorization__fixed {get { return GetParameter(4); }set { SetParameter(4, value); }}
+	/// <summary>PID: 3  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Authorizationtoken_3 {get { return GetParameter(3); }set { SetParameter(3, value); }}
+	/// <summary>PID: 3  | Type: read</summary>
+	public System.Object Authorizationtoken {get { return GetParameter(3); }set { SetParameter(3, value); }}
+	/// <summary>PID: 4  | Type: write</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Authorizationtoken_4 {get { return GetParameter(4); }set { SetParameter(4, value); }}
 	/// <summary>PID: 5  | Type: fixed</summary>
-	public System.Object Titleendauhtorization__fixed {get { return GetParameter(5); }set { SetParameter(5, value); }}
-	/// <summary>PID: 6  | Type: fixed</summary>
-	public System.Object Titlebeginoverallcrypto__fixed {get { return GetParameter(6); }set { SetParameter(6, value); }}
-	/// <summary>PID: 7  | Type: fixed</summary>
-	public System.Object Titleendoverallcrypto__fixed {get { return GetParameter(7); }set { SetParameter(7, value); }}
-	/// <summary>PID: 8  | Type: fixed</summary>
-	public System.Object Titlebeginethereum__fixed {get { return GetParameter(8); }set { SetParameter(8, value); }}
-	/// <summary>PID: 9  | Type: fixed</summary>
-	public System.Object Titleendethereum__fixed {get { return GetParameter(9); }set { SetParameter(9, value); }}
+	public System.Object Bearerprefixhex__fixed {get { return GetParameter(5); }set { SetParameter(5, value); }}
+	/// <summary>PID: 6  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Bearertoken_6 {get { return GetParameter(6); }set { SetParameter(6, value); }}
+	/// <summary>PID: 6  | Type: read</summary>
+	public System.Object Bearertoken {get { return GetParameter(6); }set { SetParameter(6, value); }}
+	/// <summary>PID: 7  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Bearertokenfixed_7 {get { return GetParameter(7); }set { SetParameter(7, value); }}
+	/// <summary>PID: 7  | Type: read</summary>
+	public System.Object Bearertokenfixed {get { return GetParameter(7); }set { SetParameter(7, value); }}
 	/// <summary>PID: 10  | Type: fixed</summary>
-	public System.Object Titlebeginbitcoin__fixed {get { return GetParameter(10); }set { SetParameter(10, value); }}
+	public System.Object Titlebeginauthorization__fixed {get { return GetParameter(10); }set { SetParameter(10, value); }}
 	/// <summary>PID: 11  | Type: fixed</summary>
-	public System.Object Titleendbitcoin__fixed {get { return GetParameter(11); }set { SetParameter(11, value); }}
+	public System.Object Titleendauhtorization__fixed {get { return GetParameter(11); }set { SetParameter(11, value); }}
 	/// <summary>PID: 12  | Type: fixed</summary>
-	public System.Object Titlebegindefi__fixed {get { return GetParameter(12); }set { SetParameter(12, value); }}
+	public System.Object Titlebeginoverallcrypto__fixed {get { return GetParameter(12); }set { SetParameter(12, value); }}
 	/// <summary>PID: 13  | Type: fixed</summary>
-	public System.Object Titleenddefi__fixed {get { return GetParameter(13); }set { SetParameter(13, value); }}
+	public System.Object Titleendoverallcrypto__fixed {get { return GetParameter(13); }set { SetParameter(13, value); }}
 	/// <summary>PID: 14  | Type: fixed</summary>
-	public System.Object Titlebeginstablecoin__fixed {get { return GetParameter(14); }set { SetParameter(14, value); }}
+	public System.Object Titlebeginethereum__fixed {get { return GetParameter(14); }set { SetParameter(14, value); }}
 	/// <summary>PID: 15  | Type: fixed</summary>
-	public System.Object Titleendstablecoin__fixed {get { return GetParameter(15); }set { SetParameter(15, value); }}
+	public System.Object Titleendethereum__fixed {get { return GetParameter(15); }set { SetParameter(15, value); }}
+	/// <summary>PID: 16  | Type: fixed</summary>
+	public System.Object Titlebeginbitcoin__fixed {get { return GetParameter(16); }set { SetParameter(16, value); }}
+	/// <summary>PID: 17  | Type: fixed</summary>
+	public System.Object Titleendbitcoin__fixed {get { return GetParameter(17); }set { SetParameter(17, value); }}
+	/// <summary>PID: 18  | Type: fixed</summary>
+	public System.Object Titlebegindefi__fixed {get { return GetParameter(18); }set { SetParameter(18, value); }}
+	/// <summary>PID: 19  | Type: fixed</summary>
+	public System.Object Titleenddefi__fixed {get { return GetParameter(19); }set { SetParameter(19, value); }}
+	/// <summary>PID: 20  | Type: fixed</summary>
+	public System.Object Titlebeginstablecoin__fixed {get { return GetParameter(20); }set { SetParameter(20, value); }}
+	/// <summary>PID: 21  | Type: fixed</summary>
+	public System.Object Titleendstablecoin__fixed {get { return GetParameter(21); }set { SetParameter(21, value); }}
 	/// <summary>PID: 50  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Statuscodelastlistings_50 {get { return GetParameter(50); }set { SetParameter(50, value); }}
@@ -823,10 +870,10 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Lastlistingtotalvaluelockedratio_211 {get { return GetParameter(211); }set { SetParameter(211, value); }}
 	/// <summary>PID: 211  | Type: read</summary>
 	public System.Object Lastlistingtotalvaluelockedratio {get { return GetParameter(211); }set { SetParameter(211, value); }}
-	/// <summary>PID: 212  | Type: read</summary>
+	/// <summary>PID: 212  | Type: read | EXCEPTIONS: No Platform = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Lastlistingplatformname_212 {get { return GetParameter(212); }set { SetParameter(212, value); }}
-	/// <summary>PID: 212  | Type: read</summary>
+	/// <summary>PID: 212  | Type: read | EXCEPTIONS: No Platform = 0</summary>
 	public System.Object Lastlistingplatformname {get { return GetParameter(212); }set { SetParameter(212, value); }}
 	/// <summary>PID: 213  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]

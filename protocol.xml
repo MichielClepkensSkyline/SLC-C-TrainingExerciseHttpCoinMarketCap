@@ -69,10 +69,96 @@ Any inquiries can be addressed to:
 			<Description>After Startup</Description>
 			<Type>dummy</Type>
 		</Param>
-		<Param id="3">
+		<Param id="3" trending="false" save="true">
+			<Name>authorizationToken</Name>
+			<Description>Authorization Token</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Bearer token is used and needed for authorization to the CoinMarketCap API.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="4" setter="true">
+			<Name>authorizationToken</Name>
+			<Description>Authorization Token</Description>
+			<Type>write</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="5" trending="false">
+			<Name>bearerPrefixHex</Name>
+			<Description>Bearer Prefix (ASCII Hexadecimal Encoding)</Description>
+			<Type>fixed</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>fixed</LengthType>
+				<Length>7</Length>
+				<Value>0x420x650x610x720x650x720x20</Value>
+			</Interprete>
+		</Param>
+		<Param id="6" save="true">
 			<Name>bearerToken</Name>
 			<Description>Bearer Token</Description>
-			<Type>fixed</Type>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>5</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="7">
+			<Name>bearerTokenFixed</Name>
+			<Description>Bearer Token</Description>
+			<Type>read</Type>
 			<Interprete>
 				<RawType>other</RawType>
 				<Type>string</Type>
@@ -81,7 +167,7 @@ Any inquiries can be addressed to:
 				<Value>Bearer jWgYFWyQzYAR9ZAm0mvESEKBeerEYw3rYwVEOUvm2Y0=</Value>
 			</Interprete>
 		</Param>
-		<Param id="4">
+		<Param id="10">
 			<Name>titleBeginAuthorization</Name>
 			<Description>Authorization</Description>
 			<Type>fixed</Type>
@@ -99,7 +185,7 @@ Any inquiries can be addressed to:
 				<Type options="begin">title</Type>
 			</Measurement>
 		</Param>
-		<Param id="5">
+		<Param id="11">
 			<Name>titleEndAuhtorization</Name>
 			<Type>fixed</Type>
 			<Display>
@@ -108,7 +194,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>1</Row>
+						<Row>2</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -116,7 +202,7 @@ Any inquiries can be addressed to:
 				<Type options="end">title</Type>
 			</Measurement>
 		</Param>
-		<Param id="6">
+		<Param id="12">
 			<Name>titleBeginOverallCrypto</Name>
 			<Description>Overall Crypto Data</Description>
 			<Type>fixed</Type>
@@ -134,7 +220,7 @@ Any inquiries can be addressed to:
 				<Type options="begin">title</Type>
 			</Measurement>
 		</Param>
-		<Param id="7">
+		<Param id="13">
 			<Name>titleEndOverallCrypto</Name>
 			<Type>fixed</Type>
 			<Display>
@@ -151,7 +237,7 @@ Any inquiries can be addressed to:
 				<Type options="end">title</Type>
 			</Measurement>
 		</Param>
-		<Param id="8">
+		<Param id="14">
 			<Name>titleBeginEthereum</Name>
 			<Description>Ethereum</Description>
 			<Type>fixed</Type>
@@ -169,7 +255,7 @@ Any inquiries can be addressed to:
 				<Type options="begin">title</Type>
 			</Measurement>
 		</Param>
-		<Param id="9">
+		<Param id="15">
 			<Name>titleEndEthereum</Name>
 			<Type>fixed</Type>
 			<Display>
@@ -186,7 +272,7 @@ Any inquiries can be addressed to:
 				<Type options="end">title</Type>
 			</Measurement>
 		</Param>
-		<Param id="10">
+		<Param id="16">
 			<Name>titleBeginBitcoin</Name>
 			<Description>Bitcoin</Description>
 			<Type>fixed</Type>
@@ -204,7 +290,7 @@ Any inquiries can be addressed to:
 				<Type options="begin">title</Type>
 			</Measurement>
 		</Param>
-		<Param id="11">
+		<Param id="17">
 			<Name>titleEndBitcoin</Name>
 			<Type>fixed</Type>
 			<Display>
@@ -221,7 +307,7 @@ Any inquiries can be addressed to:
 				<Type options="end">title</Type>
 			</Measurement>
 		</Param>
-		<Param id="12">
+		<Param id="18">
 			<Name>titleBeginDefi</Name>
 			<Description>Decentralized Finance</Description>
 			<Type>fixed</Type>
@@ -239,7 +325,7 @@ Any inquiries can be addressed to:
 				<Type options="begin">title</Type>
 			</Measurement>
 		</Param>
-		<Param id="13">
+		<Param id="19">
 			<Name>titleEndDefi</Name>
 			<Type>fixed</Type>
 			<Display>
@@ -256,7 +342,7 @@ Any inquiries can be addressed to:
 				<Type options="end">title</Type>
 			</Measurement>
 		</Param>
-		<Param id="14">
+		<Param id="20">
 			<Name>titleBeginStablecoin</Name>
 			<Description>Stablecoin</Description>
 			<Type>fixed</Type>
@@ -274,7 +360,7 @@ Any inquiries can be addressed to:
 				<Type options="begin">title</Type>
 			</Measurement>
 		</Param>
-		<Param id="15">
+		<Param id="21">
 			<Name>titleEndStablecoin</Name>
 			<Type>fixed</Type>
 			<Display>
@@ -529,7 +615,7 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Units>ranks</Units>
+				<Units>Units</Units>
 				<Decimals>0</Decimals>
 			</Display>
 			<Measurement>
@@ -567,7 +653,7 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Units>pairs</Units>
+				<Units>Units</Units>
 				<Decimals>0</Decimals>
 			</Display>
 			<Measurement>
@@ -604,7 +690,7 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Units>coins</Units>
+				<Units>Units</Units>
 				<Decimals>3</Decimals>
 			</Display>
 			<Measurement>
@@ -641,7 +727,7 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Units>coins</Units>
+				<Units>Units</Units>
 				<Decimals>3</Decimals>
 			</Display>
 			<Measurement>
@@ -673,7 +759,7 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Units>coins</Units>
+				<Units>Units</Units>
 				<Decimals>3</Decimals>
 			</Display>
 			<Measurement>
@@ -775,6 +861,12 @@ The name of the parent platform cryptocurrency.]]>
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="no platform">
+						<Display state="disabled">No Platform</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -835,7 +927,7 @@ A market quote in the currency conversion option.]]>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Units>coins</Units>
+				<Units>USD</Units>
 				<Decimals>3</Decimals>
 			</Display>
 			<Measurement>
@@ -873,7 +965,7 @@ A market quote in the currency conversion option.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
-				<Units>coins</Units>
+				<Units>USD</Units>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -945,7 +1037,7 @@ A market quote in the currency conversion option.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
-				<Units>coins</Units>
+				<Units>USD</Units>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -2359,7 +2451,7 @@ The unique ID of the category.]]>
 			<Connection id="1" name="Get Latest Listings on Coin Market">
 				<Request verb="GET" pid="52">
 					<Headers>
-						<Header key="Authorization" pid="3"/>
+						<Header key="Authorization" pid="7"/>
 					</Headers>
 				</Request>
 				<Response statusCode="50">
@@ -2371,7 +2463,7 @@ The unique ID of the category.]]>
 			<Connection id="2" name="Get Categories on Coin Market">
 				<Request verb="GET" pid="62">
 					<Headers>
-						<Header key="Authorization" pid="3"/>
+						<Header key="Authorization" pid="7"/>
 					</Headers>
 				</Request>
 				<Response statusCode="60">
@@ -2383,7 +2475,7 @@ The unique ID of the category.]]>
 			<Connection id="3" name="Get Latest Quotes on Coin Market">
 				<Request verb="GET" pid="72">
 					<Headers>
-						<Header key="Authorization" pid="3"/>
+						<Header key="Authorization" pid="7"/>
 					</Headers>
 				</Request>
 				<Response statusCode="70">
@@ -2438,6 +2530,16 @@ The unique ID of the category.]]>
 				<Id>1</Id>
 			</Content>
 		</Trigger>
+		<Trigger id="4">
+			<Name>Fill in Bearer Token</Name>
+			<On id="3">parameter</On>
+			<Time>change</Time>
+			<Type>action</Type>
+			<Content>
+				<Id>5</Id>
+				<Id>4</Id>
+			</Content>
+		</Trigger>
 	</Triggers>
 
 	<Actions>
@@ -2450,6 +2552,16 @@ The unique ID of the category.]]>
 			<Name>After Startup QAction</Name>
 			<On id="2">parameter</On>
 			<Type>run actions</Type>
+		</Action>
+		<Action id="4">
+			<Name>Append Filled in Authorization Token</Name>
+			<On id="6">parameter</On>
+			<Type id="3">append</Type>
+		</Action>
+		<Action id="5">
+			<Name>Copy Bearer Prefix To Bearer Token</Name>
+			<On id="6">parameter</On>
+			<Type id="5">copy</Type>
 		</Action>
 	</Actions>
 
