@@ -1,8 +1,7 @@
-﻿namespace QAction_3
+﻿namespace Skyline.DataMiner.Scripting.LatestListings
 {
 	using System;
 	using System.Collections.Generic;
-	using System.Text.Json.Serialization;
 	using Newtonsoft.Json;
 
 	public class Listing

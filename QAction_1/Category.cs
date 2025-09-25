@@ -1,5 +1,4 @@
-﻿
-namespace QAction_7
+﻿namespace Skyline.DataMiner.Scripting.Category
 {
 	using System;
 

@@ -1,4 +1,4 @@
-﻿namespace QAction_5
+﻿namespace Skyline.DataMiner.Scripting.LatestQuote
 {
 	using System;
 	using Newtonsoft.Json;

@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>0</DeviceOID>
 	<ElementType>Unknown</ElementType>
 	<Type relativeTimers="true">http</Type>
-	<Display defaultPage="General" pageOrder="General;Latest Listings;Categories;Latest Quote" wideColumnPages="Latest Listings;Categories"/>
+	<Display defaultPage="General" pageOrder="General;Latest Listings;Categories;Latest Quote" wideColumnPages="Latest Quote;Latest Listings;Categories"/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -366,7 +366,7 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="30" trending="true">
+		<Param id="30" trending="false">
 			<Name>latestQuoteActiveCryptocurrencies</Name>
 			<Description>Active Cryptocurrencies</Description>
 			<Type>read</Type>
@@ -390,7 +390,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>0</Row>
+						<Row>2</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -398,7 +398,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="31" trending="true">
+		<Param id="31" trending="false">
 			<Name>latestQuoteTotalCryptocurrencies</Name>
 			<Description>Total Cryptocurrencies</Description>
 			<Type>read</Type>
@@ -422,7 +422,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>1</Row>
+						<Row>3</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -430,7 +430,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="32" trending="true">
+		<Param id="32" trending="false">
 			<Name>latestQuoteActiveExchanges</Name>
 			<Description>Active Exchanges</Description>
 			<Type>read</Type>
@@ -454,7 +454,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>2</Row>
+						<Row>4</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -462,7 +462,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="33" trending="true">
+		<Param id="33" trending="false">
 			<Name>latestQuoteTotalExchanges</Name>
 			<Description>Total Exchanges</Description>
 			<Type>read</Type>
@@ -486,7 +486,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>3</Row>
+						<Row>5</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -494,13 +494,13 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="34" trending="true">
+		<Param id="34" trending="false">
 			<Name>latestQuoteEthDominance</Name>
 			<Description>Etherium Dominance</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[Percentage of the total cryptocurrency market capitalization represented by Ethereum.]]>
+					<![CDATA[Percentage of the total cryptocurrency market capitalization represented by Etherium.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -520,7 +520,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>4</Row>
+						<Row>10</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -528,7 +528,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="35" trending="true">
+		<Param id="35" trending="false">
 			<Name>latestQuoteBtcDominance</Name>
 			<Description>Bitcoin Dominance</Description>
 			<Type>read</Type>
@@ -554,7 +554,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>6</Row>
+						<Row>12</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -576,6 +576,9 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>2</Decimals>
@@ -588,7 +591,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>5</Row>
+						<Row>11</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -610,6 +613,9 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>2</Decimals>
@@ -622,7 +628,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>7</Row>
+						<Row>13</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -644,6 +650,9 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>2</Decimals>
@@ -656,7 +665,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>8</Row>
+						<Row>17</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -678,6 +687,9 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
@@ -690,7 +702,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>9</Row>
+						<Row>6</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -720,7 +732,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>10</Row>
+						<Row>8</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -728,6 +740,247 @@ Any inquiries can be addressed to:
 				<Type options="datetime">number</Type>
 			</Measurement>
 		</Param>
+		<Param id="41" trending="true">
+			<Name>latestQuoteTotalMarketCap24h</Name>
+			<Description>24h Total Market Cap</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Total market capitalization of all cryptocurrencies over the past 24 hours in USD.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>$</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>7</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="42" trending="true">
+			<Name>latestQuoteAltcoinVolume24h</Name>
+			<Description>24h Altcoin Volume</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Trading volume of all altcoins (non-Bitcoin cryptocurrencies) over the past 24 hours in USD.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>$</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>23</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="43" trending="true">
+			<Name>latestQuoteDefiVolume24hPercentageChange</Name>
+			<Description>Defi Volume 24h Percentage Change</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Percentage change in decentralized finance (DeFi) trading volume over the past 24 hours.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>16</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="44" trending="true">
+			<Name>latestQuoteStableCoinVolume24hPercentageChange</Name>
+			<Description>Stablecoin Volume 24h Change</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Percentage change in stablecoin trading volume over the past 24 hours.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>21</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="45" trending="true">
+			<Name>latestQuoteDerivativesVolume24hPercentageChange</Name>
+			<Description>Derivatives Volume 24h Change</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Percentage change in derivatives trading volume over the past 24 hours.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+			</Alarm>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>20</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="46" trending="false">
+			<Name>latestQuoteDerivativesVolume24h</Name>
+			<Description>Derivatives Volume 24h</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Total trading volume of cryptocurrency derivatives over the past 24 hours in USD.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>$</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>19</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="47" trending="false">
+			<Name>latestQuoteDefiVolume24h</Name>
+			<Description>Defi Volume 24h</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Total trading volume of decentralized finance (DeFi) tokens over the past 24 hours in USD.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>3</Decimals>
+				<Units>$</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>15</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		
 		<Param id="100">
 			<Name>latestListings</Name>
 			<Description>Latest Listings</Description>
@@ -737,15 +990,18 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="1" pid="102" type="retrieved" options=""/>
 				<ColumnOption idx="2" pid="103" type="retrieved" options=""/>
 				<ColumnOption idx="3" pid="112" type="retrieved" options=""/>
-				<ColumnOption idx="4" pid="104" type="retrieved" options=""/>
-				<ColumnOption idx="5" pid="105" type="retrieved" options=""/>
-				<ColumnOption idx="6" pid="106" type="retrieved" options=""/>
-				<ColumnOption idx="7" pid="107" type="retrieved" options=""/>
-				<ColumnOption idx="8" pid="108" type="retrieved" options=""/>
-				<ColumnOption idx="9" pid="109" type="retrieved" options=""/>
-				<ColumnOption idx="10" pid="110" type="retrieved" options=""/>
+				<ColumnOption idx="4" pid="106" type="retrieved" options=""/>
+				<ColumnOption idx="5" pid="114" type="retrieved" options=""/>
+				<ColumnOption idx="6" pid="105" type="retrieved" options=""/>
+				<ColumnOption idx="7" pid="108" type="retrieved" options=""/>
+				<ColumnOption idx="8" pid="109" type="retrieved" options=""/>
+				<ColumnOption idx="9" pid="110" type="retrieved" options=""/>
+				<ColumnOption idx="10" pid="116" type="retrieved" options=""/>
 				<ColumnOption idx="11" pid="111" type="retrieved" options=""/>
-				<ColumnOption idx="12" pid="113" type="displaykey" options=""/>
+				<ColumnOption idx="12" pid="115" type="retrieved" options=""/>
+				<ColumnOption idx="13" pid="107" type="retrieved" options=""/>
+				<ColumnOption idx="14" pid="104" type="retrieved" options=""/>
+				<ColumnOption idx="15" pid="113" type="displaykey" options=""/>
 			</ArrayOptions>
 			<Information>
 				<Subtext>
@@ -763,7 +1019,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:101|0-102|1-103|2-104|4-106|6-108|8-105|5-107|7-109|9-110|10-111|11-112|3-113|12,width:50-100-61-156-50-84-100-156-192-178-178-122-105,sort:STRING|ASC|1-STRING-STRING-INT-INT-INT-INT-INT|ASC|0-INT-STRING-INT-INT-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:101|0-102|1-103|2-112|3-106|4-114|5-105|6-108|7-109|8-110|9-116|10-111|11-115|12-107|13-104|14-113|15,width:50-100-61-122-47-130-130-84-78-140-120-150-151-156-156-105,sort:STRING|ASC|1-STRING-STRING-INT-INT-INT-INT-INT-INT-STRING-INT-INT-INT-INT|ASC|0-INT-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="101" trending="false">
@@ -851,12 +1107,12 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="105" trending="true">
-			<Name>latestListingsTotalSupply</Name>
-			<Description>Total Supply (Latest Listings)</Description>
+			<Name>latestListingsCirculatingSupply</Name>
+			<Description>Circulating Supply (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[This is a parameter to display the total amount of a coins.]]>
+					<![CDATA[This is a parameter to display the amount of coins currently circulating in the market.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -924,7 +1180,7 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="108" trending="true">
 			<Name>latestListingsQuotePrice</Name>
-			<Description>Price Quote (Latest Listings)</Description>
+			<Description>Quote Price (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
@@ -950,7 +1206,7 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="109" trending="true">
 			<Name>latestListings1hPercentageChange</Name>
-			<Description>Quote Precentage Change (1h) (Latest Listings)</Description>
+			<Description>1h Change (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
@@ -977,7 +1233,7 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="110" trending="true">
 			<Name>latestListingsQuoteVolumeChange24h</Name>
-			<Description>Quote Volume Change (24h) (Latest Listings)</Description>
+			<Description>Volume Change (24h) (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
@@ -1004,7 +1260,7 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="111" trending="true">
 			<Name>latestListingsQuoteMarketCap</Name>
-			<Description>Quote Market Cap (Latest Listings)</Description>
+			<Description>Market Cap (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
@@ -1076,27 +1332,90 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<!--<Param id="114" trending="false">
-			<Name>latestListingsQuoteCurrency</Name>
-			<Description>Currency (Latest Listings)</Description>
+		<Param id="114" trending="true">
+			<Name>latestListingsMaxSupply</Name>
+			<Description>Maximum Supply (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[Currency used to express quote values for the latest listed cryptocurrency (e.g., USD, EUR).]]>
+					<![CDATA[This is a parameter to display the maximum number of coins that will ever exist.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>coins</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
+		<Param id="115" trending="true">
+			<Name>latestListingsQuoteMarketCapDominance</Name>
+			<Description>Market Cap Dominance (Latest Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Percentage of total crypto market cap this coin represents.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type>number</Type>
 			</Measurement>
-		</Param>-->
+		</Param>
+		<Param id="116" trending="true">
+			<Name>latestListingsQuoteVolume24h</Name>
+			<Description>Volume(24h) (Latest Listings)</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Trading volume over the past 24 hours.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Decimals>2</Decimals>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
+			</Display>
+			<Measurement>
+				<Type>number</Type>
+			</Measurement>
+		</Param>
 		<Param id="200">
 			<Name>categories</Name>
 			<Description>Categories</Description>
@@ -1399,7 +1718,133 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
+		<Param id="300">
+			<Name>titleBeginDominance</Name>
+			<Description>Dominance</Description>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>9</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="begin">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="301">
+			<Name>titleEndGeneric</Name>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>24</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="end">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="302">
+			<Name>titleBeginDefi</Name>
+			<Description>Defi</Description>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>14</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>title</Type>
+			</Measurement>
+		</Param>
+		<Param id="303">
+			<Name>titleBeginDerivativesStablecoin</Name>
+			<Description>Derivatives and Stablecoin</Description>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>18</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>title</Type>
+			</Measurement>
+		</Param>
+		<Param id="304">
+			<Name>titleBeginAltcoin</Name>
+			<Description>Altcoin</Description>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>22</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>title</Type>
+			</Measurement>
+		</Param>
+		<Param id="305">
+			<Name>titleBeginCryptoMarketOverview</Name>
+			<Description>Crypto Market Overview</Description>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>title</Type>
+			</Measurement>
+		</Param>
+		<Param id="306">
+			<Name>titleBeginLatestQuote</Name>
+			<Description>Latest Quote</Description>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Latest Quote</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="begin">title</Type>
+			</Measurement>
+		</Param>
 	</Params>
+	
 	<!--skip the ones with yesterda, the ones with total use-->
 	
 	<HTTP>
