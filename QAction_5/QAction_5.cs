@@ -1,8 +1,10 @@
-using QAction_5;
+
 
 using Skyline.DataMiner.Scripting;
+using Skyline.DataMiner.Scripting.LatestQuote;
 using Skyline.DataMiner.Utils.Protocol.Extension;
 using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
+using Skyline.Protocol.QAction_1;
 
 using System;
 using System.Collections.Generic;
@@ -25,7 +27,15 @@ public static class QAction
 		{
 			string json = protocol.GetParameter(Parameter.responselatestquote_10).ToString();
 			LatestQuote latestQuote = SecureNewtonsoftDeserialization.DeserializeObject<LatestQuote>(json);
-			string statusCode = protocol.GetParameter(Parameter.statuscodelatestquote_9).ToString();
+
+			if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodelatestquote_9))
+			{
+				if (StatusCode.CheckErrorCode(protocol, latestQuote.Status.ErrorCode, latestQuote.Status.ErrorMessage))
+				{
+					FillLatestQuoteParameters(protocol, latestQuote.Data);
+				}
+			}
+			/*string statusCode = protocol.GetParameter(Parameter.statuscodelatestquote_9).ToString();
 			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|statusCode: '{statusCode}'", LogType.Information, LogLevel.NoLogging);
 
 			int status = Int32.Parse(statusCode.Split(' ')[1]);
@@ -37,7 +47,7 @@ public static class QAction
 			else
 			{
 				protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown: Status of the response is: {status}", LogType.Error, LogLevel.NoLogging);
-			}
+			}*/
 		}
 		catch (Exception ex)
 		{
@@ -59,8 +69,14 @@ public static class QAction
 			{ Parameter.latestquotebtcdominance24percentagechange_37, latestQuote.BtcDominance24hPercentageChange },
 			{ Parameter.latestquotedefi24hpercentagechange_38, latestQuote.Defi24hPercentageChange },
 			{ Parameter.latestquotetodaychangepercent_39, latestQuote.TodayChangePercent },
-			{ Parameter.latestquotelastupdate_40, latestQuote.LastUpdated },
-			{ Parameter.latestquotecurreny_41, latestQuote.Quote.USD.ToString().Split('.')[1] },
+			{ Parameter.latestquotelastupdate_40, latestQuote.LastUpdated.ToOADate() },
+			{ Parameter.latestquotetotalmarketcap24h_41, latestQuote.Quote.USD.TotalMarketCap },
+			{ Parameter.latestquotealtcoinvolume24h_42,latestQuote.Quote.USD.AltcoinVolume24h },
+			{ Parameter.latestquotedefivolume24hpercentagechange_43, latestQuote.Quote.USD.Defi24hPercentageChange },
+			{ Parameter.latestquotestablecoinvolume24hpercentagechange_44, latestQuote.Quote.USD.Stablecoin24hPercentageChange },
+			{ Parameter.latestquotederivativesvolume24hpercentagechange_45, latestQuote.Quote.USD.Derivatives24hPercentageChange },
+			{ Parameter.latestquotederivativesvolume24h_46, latestQuote.Quote.USD.DerivativesVolume24h },
+			{ Parameter.latestquotedefivolume24h_47, latestQuote.Quote.USD.DefiVolume24h },
 		};
 		protocol.SetParameters(parameters);
 	}

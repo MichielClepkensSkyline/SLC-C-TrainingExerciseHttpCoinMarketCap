@@ -1,11 +1,13 @@
+using Skyline.DataMiner.Scripting;
+using Skyline.DataMiner.Scripting.Categories;
+using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
+using Skyline.Protocol.QAction_1;
+
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using Skyline.DataMiner.Scripting;
-using Skyline.DataMiner.Scripting.Categories;
-using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
 
 /// <summary>
 /// DataMiner QAction Class: Parse Categories.
@@ -22,7 +24,14 @@ public static class QAction
 		{
 			string json = protocol.GetParameter(Parameter.responsecategories_8).ToString();
 			Categories categories = SecureNewtonsoftDeserialization.DeserializeObject<Categories>(json);
-			string statusCode = protocol.GetParameter(Parameter.statuscodecategories_7).ToString();
+			if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodecategories_7))
+			{
+				if (StatusCode.CheckErrorCode(protocol, categories.Status.ErrorCode, categories.Status.ErrorMessage))
+				{
+					FillCategoriesTable(protocol, categories);
+				}
+			}
+			/*string statusCode = protocol.GetParameter(Parameter.statuscodecategories_7).ToString();
 			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|statusCode: '{statusCode}'", LogType.Information, LogLevel.NoLogging);
 
 			int status = Int32.Parse(statusCode.Split(' ')[1]);
@@ -34,7 +43,7 @@ public static class QAction
 			else
 			{
 				protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown: Status of the response is: {status}", LogType.Error, LogLevel.NoLogging);
-			}
+			}*/
 		}
 		catch (Exception ex)
 		{
