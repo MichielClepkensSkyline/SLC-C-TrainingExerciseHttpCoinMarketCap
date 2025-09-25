@@ -171,6 +171,11 @@ public static class Parameter
 			public const int latestlistings24hourvolume_109 = 109;
 			/// <summary>PID: 109 | Type: read</summary>
 			public const int latestlistings24hourvolume = 109;
+			/// <summary>PID: 110 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int latestlistinglastupdated_110 = 110;
+			/// <summary>PID: 110 | Type: read</summary>
+			public const int latestlistinglastupdated = 110;
 			public class Write
 			{
 			}
@@ -222,6 +227,11 @@ public static class Parameter
 			public const int latestlistings24hourvolume_109 = 8;
 			/// <summary>IDX: 8 | Type: read</summary>
 			public const int latestlistings24hourvolume = 8;
+			/// <summary>IDX: 9 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int latestlistinglastupdated_110 = 9;
+			/// <summary>IDX: 9 | Type: read</summary>
+			public const int latestlistinglastupdated = 9;
 		}
 	}
 	public class Categories
@@ -363,6 +373,8 @@ public interface SLProtocolExt : SLProtocol
 	object Latestlistings1hourchange { get; set; }
 	object Latestlistings24hourvolume_109 { get; set; }
 	object Latestlistings24hourvolume { get; set; }
+	object Latestlistinglastupdated_110 { get; set; }
+	object Latestlistinglastupdated { get; set; }
 	object Httpresponsecodecategories_300 { get; set; }
 	object Httpresponsecodecategories { get; set; }
 	object Jsonresponsecategories_301 { get; set; }
@@ -491,6 +503,11 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Latestlistings24hourvolume_109 {get { return GetParameter(109); }set { SetParameter(109, value); }}
 	/// <summary>PID: 109  | Type: read</summary>
 	public System.Object Latestlistings24hourvolume {get { return GetParameter(109); }set { SetParameter(109, value); }}
+	/// <summary>PID: 110  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Latestlistinglastupdated_110 {get { return GetParameter(110); }set { SetParameter(110, value); }}
+	/// <summary>PID: 110  | Type: read</summary>
+	public System.Object Latestlistinglastupdated {get { return GetParameter(110); }set { SetParameter(110, value); }}
 	/// <summary>PID: 300  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Httpresponsecodecategories_300 {get { return GetParameter(300); }set { SetParameter(300, value); }}
@@ -693,8 +710,13 @@ public class LatestlistingsQActionRow : QActionTableRow
 	public System.Object Latestlistings24hourvolume_109 { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
 	/// <summary>PID: 109 | Type: read</summary>
 	public System.Object Latestlistings24hourvolume { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
-	public LatestlistingsQActionRow() : base(0, 9) { }
-	public LatestlistingsQActionRow(System.Object[] oRow) : base(0, 9, oRow) { }
+	/// <summary>PID: 110 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Latestlistinglastupdated_110 { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
+	/// <summary>PID: 110 | Type: read</summary>
+	public System.Object Latestlistinglastupdated { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
+	public LatestlistingsQActionRow() : base(0, 10) { }
+	public LatestlistingsQActionRow(System.Object[] oRow) : base(0, 10, oRow) { }
 	public static implicit operator LatestlistingsQActionRow(System.Object[] source) { return new LatestlistingsQActionRow(source); }
 	public static implicit operator System.Object[](LatestlistingsQActionRow source) { return source.ToObjectArray(); }
 }

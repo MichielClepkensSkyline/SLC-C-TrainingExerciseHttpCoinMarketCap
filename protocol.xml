@@ -182,6 +182,7 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="6" pid="107" type="retrieved" options="" />
 				<ColumnOption idx="7" pid="108" type="retrieved" options="" />
 				<ColumnOption idx="8" pid="109" type="retrieved" options="" />
+				<ColumnOption idx="9" pid="110" type="retrieved" options="" />
 			</ArrayOptions>
 			<Information>
 				<Subtext>tableInformation</Subtext>
@@ -197,7 +198,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:101|0-103|2-102|1-104|3-105|4-106|5-107|6-108|7-109|8,width:100-100-100-137-122-175-125-103-110,sort:STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:101|0-103|2-102|1-104|3-105|4-106|5-107|6-108|7-109|8-110|9,width:100-100-100-137-122-175-125-103-110-156,sort:STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING-INT,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="101" trending="false">
@@ -361,6 +362,26 @@ Any inquiries can be addressed to:
 			</Display>
 			<Measurement>
 				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="110" trending="false">
+			<Name>LatestListingLastUpdated</Name>
+			<Description>Last Updated (Latest Listings)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<Decimals>8</Decimals>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Decimals>8</Decimals>
+			</Display>
+			<Measurement>
+				<Type options="datetime">number</Type>
 			</Measurement>
 		</Param>
 		<Param id="300" trending="false">
