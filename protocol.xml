@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>99</DeviceOID>
 	<ElementType>Data Collector</ElementType>
 	<Type relativeTimers="true">http</Type>
-	<Display defaultPage="General" pageOrder="General;----------;LastListing;Categories;LatestQuote" wideColumnPages=""/>
+	<Display defaultPage="General" pageOrder="General;----------;Listings;Categories;Quotes" wideColumnPages=""/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -81,7 +81,217 @@ Any inquiries can be addressed to:
 				<Value>Bearer jWgYFWyQzYAR9ZAm0mvESEKBeerEYw3rYwVEOUvm2Y0=</Value>
 			</Interprete>
 		</Param>
+		<Param id="4">
+			<Name>titleBeginAuthorization</Name>
+			<Description>Authorization</Description>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="begin">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="5">
+			<Name>titleEndAuhtorization</Name>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="end">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="6">
+			<Name>titleBeginOverallCrypto</Name>
+			<Description>Overall Crypto Data</Description>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="begin">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="7">
+			<Name>titleEndOverallCrypto</Name>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>11</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="end">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="8">
+			<Name>titleBeginEthereum</Name>
+			<Description>Ethereum</Description>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Quotes</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="begin">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="9">
+			<Name>titleEndEthereum</Name>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Quotes</Page>
+						<Column>0</Column>
+						<Row>3</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="end">title</Type>
+			</Measurement>
+		</Param>
 		<Param id="10">
+			<Name>titleBeginBitcoin</Name>
+			<Description>Bitcoin</Description>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Quotes</Page>
+						<Column>1</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="begin">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="11">
+			<Name>titleEndBitcoin</Name>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Quotes</Page>
+						<Column>1</Column>
+						<Row>3</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="end">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="12">
+			<Name>titleBeginDefi</Name>
+			<Description>Decentralized Finance</Description>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Quotes</Page>
+						<Column>0</Column>
+						<Row>4</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="begin">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="13">
+			<Name>titleEndDefi</Name>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Quotes</Page>
+						<Column>0</Column>
+						<Row>8</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="end">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="14">
+			<Name>titleBeginStablecoin</Name>
+			<Description>Stablecoin</Description>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Quotes</Page>
+						<Column>1</Column>
+						<Row>4</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="begin">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="15">
+			<Name>titleEndStablecoin</Name>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>Quotes</Page>
+						<Column>1</Column>
+						<Row>8</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="end">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="50">
 			<Name>statusCodeLastListings</Name>
 			<Description>HTTP Status Code Last Listings</Description>
 			<Type>read</Type>
@@ -91,7 +301,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 		</Param>
-		<Param id="11">
+		<Param id="51">
 			<Name>responseContentLastListings</Name>
 			<Description>HTTP Response Content Last Listings</Description>
 			<Type>read</Type>
@@ -101,7 +311,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 		</Param>
-		<Param id="12">
+		<Param id="52">
 			<Name>urlLastListings</Name>
 			<Description>HTTP URL Last Listings</Description>
 			<Type>read</Type>
@@ -113,7 +323,7 @@ Any inquiries can be addressed to:
 				<Value>api/custom/coinmarketcap?content=latestlistings</Value>
 			</Interprete>
 		</Param>
-		<Param id="20" trending="false">
+		<Param id="60" trending="false">
 			<Name>statusCodeCategories</Name>
 			<Description>HTTP Status Code Categories</Description>
 			<Type>read</Type>
@@ -123,7 +333,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 		</Param>
-		<Param id="21">
+		<Param id="61">
 			<Name>responseContentCategories</Name>
 			<Description>HTTP Response Content Categories</Description>
 			<Type>read</Type>
@@ -133,7 +343,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 		</Param>
-		<Param id="22">
+		<Param id="62">
 			<Name>urlCategories</Name>
 			<Description>HTTP URL Categories</Description>
 			<Type>read</Type>
@@ -145,7 +355,7 @@ Any inquiries can be addressed to:
 				<Value>api/custom/coinmarketcap?content=categories</Value>
 			</Interprete>
 		</Param>
-		<Param id="30">
+		<Param id="70">
 			<Name>statusCodeLatestQuotes</Name>
 			<Description>HTTP Status Code Latest Quotes</Description>
 			<Type>read</Type>
@@ -155,7 +365,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 		</Param>
-		<Param id="31">
+		<Param id="71">
 			<Name>responseContentLatestQuotes</Name>
 			<Description>HTTP Response Content Latest Quotes</Description>
 			<Type>read</Type>
@@ -165,7 +375,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 		</Param>
-		<Param id="32">
+		<Param id="72">
 			<Name>urlLatestQuotes</Name>
 			<Description>HTTP URL Latest Quotes</Description>
 			<Type>read</Type>
@@ -214,7 +424,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
-						<Page>LastListing</Page>
+						<Page>Listings</Page>
 						<Column>0</Column>
 						<Row>0</Row>
 					</Position>
@@ -1316,8 +1526,8 @@ The unique ID of the category.]]>
 				<Positions>
 					<Position>
 						<Page>General</Page>
-						<Column>0</Column>
-						<Row>0</Row>
+						<Column>1</Column>
+						<Row>1</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -1350,8 +1560,8 @@ The unique ID of the category.]]>
 				<Positions>
 					<Position>
 						<Page>General</Page>
-						<Column>0</Column>
-						<Row>1</Row>
+						<Column>1</Column>
+						<Row>2</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -1395,8 +1605,8 @@ The unique ID of the category.]]>
 				<Positions>
 					<Position>
 						<Page>General</Page>
-						<Column>0</Column>
-						<Row>2</Row>
+						<Column>1</Column>
+						<Row>5</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -1430,7 +1640,7 @@ The unique ID of the category.]]>
 					<Position>
 						<Page>General</Page>
 						<Column>1</Column>
-						<Row>0</Row>
+						<Row>3</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -1464,7 +1674,7 @@ The unique ID of the category.]]>
 					<Position>
 						<Page>General</Page>
 						<Column>1</Column>
-						<Row>1</Row>
+						<Row>4</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -1512,9 +1722,9 @@ The unique ID of the category.]]>
 				</Range>
 				<Positions>
 					<Position>
-						<Page>LatestQuote</Page>
+						<Page>Quotes</Page>
 						<Column>0</Column>
-						<Row>0</Row>
+						<Row>1</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -1562,9 +1772,9 @@ The unique ID of the category.]]>
 				</Range>
 				<Positions>
 					<Position>
-						<Page>LatestQuote</Page>
+						<Page>Quotes</Page>
 						<Column>1</Column>
-						<Row>0</Row>
+						<Row>1</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -1607,9 +1817,9 @@ The unique ID of the category.]]>
 				<Units>%</Units>
 				<Positions>
 					<Position>
-						<Page>LatestQuote</Page>
+						<Page>Quotes</Page>
 						<Column>0</Column>
-						<Row>1</Row>
+						<Row>2</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -1652,9 +1862,9 @@ The unique ID of the category.]]>
 				<Units>%</Units>
 				<Positions>
 					<Position>
-						<Page>LatestQuote</Page>
+						<Page>Quotes</Page>
 						<Column>1</Column>
-						<Row>1</Row>
+						<Row>2</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -1696,9 +1906,9 @@ The unique ID of the category.]]>
 				<Units>coins</Units>
 				<Positions>
 					<Position>
-						<Page>LatestQuote</Page>
+						<Page>Quotes</Page>
 						<Column>0</Column>
-						<Row>4</Row>
+						<Row>5</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -1740,9 +1950,9 @@ The unique ID of the category.]]>
 				<Units>coins</Units>
 				<Positions>
 					<Position>
-						<Page>LatestQuote</Page>
+						<Page>Quotes</Page>
 						<Column>0</Column>
-						<Row>5</Row>
+						<Row>6</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -1790,9 +2000,9 @@ The unique ID of the category.]]>
 				</Range>
 				<Positions>
 					<Position>
-						<Page>LatestQuote</Page>
+						<Page>Quotes</Page>
 						<Column>0</Column>
-						<Row>6</Row>
+						<Row>7</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -1834,9 +2044,9 @@ The unique ID of the category.]]>
 				<Units>coins</Units>
 				<Positions>
 					<Position>
-						<Page>LatestQuote</Page>
+						<Page>Quotes</Page>
 						<Column>1</Column>
-						<Row>4</Row>
+						<Row>5</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -1878,9 +2088,9 @@ The unique ID of the category.]]>
 				<Units>coins</Units>
 				<Positions>
 					<Position>
-						<Page>LatestQuote</Page>
+						<Page>Quotes</Page>
 						<Column>1</Column>
-						<Row>5</Row>
+						<Row>6</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -1928,9 +2138,9 @@ The unique ID of the category.]]>
 				</Range>
 				<Positions>
 					<Position>
-						<Page>LatestQuote</Page>
+						<Page>Quotes</Page>
 						<Column>1</Column>
-						<Row>6</Row>
+						<Row>7</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -1964,7 +2174,7 @@ The unique ID of the category.]]>
 					<Position>
 						<Page>General</Page>
 						<Column>1</Column>
-						<Row>2</Row>
+						<Row>6</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -2008,8 +2218,8 @@ The unique ID of the category.]]>
 				<Positions>
 					<Position>
 						<Page>General</Page>
-						<Column>0</Column>
-						<Row>3</Row>
+						<Column>1</Column>
+						<Row>7</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -2052,8 +2262,8 @@ The unique ID of the category.]]>
 				<Positions>
 					<Position>
 						<Page>General</Page>
-						<Column>0</Column>
-						<Row>4</Row>
+						<Column>1</Column>
+						<Row>8</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -2097,7 +2307,7 @@ The unique ID of the category.]]>
 					<Position>
 						<Page>General</Page>
 						<Column>1</Column>
-						<Row>3</Row>
+						<Row>9</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -2127,7 +2337,7 @@ The unique ID of the category.]]>
 					<Position>
 						<Page>General</Page>
 						<Column>1</Column>
-						<Row>4</Row>
+						<Row>10</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -2139,45 +2349,45 @@ The unique ID of the category.]]>
 
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
-		<QAction id="3" name="Process Latest Listings Response" encoding="csharp" triggers="11"/>
-		<QAction id="4" name="Process Categories Response" encoding="csharp" triggers="21"/>
-		<QAction id="5" name="Process Latest Quotes Response" encoding="csharp" triggers="31"/>
+		<QAction id="3" name="Process Latest Listings Response" encoding="csharp" triggers="51"/>
+		<QAction id="4" name="Process Categories Response" encoding="csharp" triggers="61"/>
+		<QAction id="5" name="Process Latest Quotes Response" encoding="csharp" triggers="71"/>
 	</QActions>
 
 	<HTTP>
 		<Session id="1" name="Get Latest Listings on Coin Market">
 			<Connection id="1" name="Get Latest Listings on Coin Market">
-				<Request verb="GET" pid="12">
+				<Request verb="GET" pid="52">
 					<Headers>
 						<Header key="Authorization" pid="3"/>
 					</Headers>
 				</Request>
-				<Response statusCode="10">
-					<Content pid="11"></Content>
+				<Response statusCode="50">
+					<Content pid="51"></Content>
 				</Response>
 			</Connection>
 		</Session>
 		<Session id="2" name="Get Categories on Coin Market">
 			<Connection id="2" name="Get Categories on Coin Market">
-				<Request verb="GET" pid="22">
+				<Request verb="GET" pid="62">
 					<Headers>
 						<Header key="Authorization" pid="3"/>
 					</Headers>
 				</Request>
-				<Response statusCode="20">
-					<Content pid="21"></Content>
+				<Response statusCode="60">
+					<Content pid="61"></Content>
 				</Response>
 			</Connection>
 		</Session>
 		<Session id="3" name="Get Latest Quotes on Coin Market">
 			<Connection id="3" name="Get Latest Quotes on Coin Market">
-				<Request verb="GET" pid="32">
+				<Request verb="GET" pid="72">
 					<Headers>
 						<Header key="Authorization" pid="3"/>
 					</Headers>
 				</Request>
-				<Response statusCode="30">
-					<Content pid="31"></Content>
+				<Response statusCode="70">
+					<Content pid="71"></Content>
 				</Response>
 			</Connection>
 		</Session>

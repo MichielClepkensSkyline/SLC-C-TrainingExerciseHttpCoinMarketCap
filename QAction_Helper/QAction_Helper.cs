@@ -8,51 +8,51 @@ namespace Skyline.DataMiner.Scripting
 {
 public static class Parameter
 {
-	/// <summary>PID: 10 | Type: read</summary>
+	/// <summary>PID: 50 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int statuscodelastlistings_10 = 10;
-	/// <summary>PID: 10 | Type: read</summary>
-	public const int statuscodelastlistings = 10;
-	/// <summary>PID: 11 | Type: read</summary>
+	public const int statuscodelastlistings_50 = 50;
+	/// <summary>PID: 50 | Type: read</summary>
+	public const int statuscodelastlistings = 50;
+	/// <summary>PID: 51 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int responsecontentlastlistings_11 = 11;
-	/// <summary>PID: 11 | Type: read</summary>
-	public const int responsecontentlastlistings = 11;
-	/// <summary>PID: 12 | Type: read</summary>
+	public const int responsecontentlastlistings_51 = 51;
+	/// <summary>PID: 51 | Type: read</summary>
+	public const int responsecontentlastlistings = 51;
+	/// <summary>PID: 52 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int urllastlistings_12 = 12;
-	/// <summary>PID: 12 | Type: read</summary>
-	public const int urllastlistings = 12;
-	/// <summary>PID: 20 | Type: read</summary>
+	public const int urllastlistings_52 = 52;
+	/// <summary>PID: 52 | Type: read</summary>
+	public const int urllastlistings = 52;
+	/// <summary>PID: 60 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int statuscodecategories_20 = 20;
-	/// <summary>PID: 20 | Type: read</summary>
-	public const int statuscodecategories = 20;
-	/// <summary>PID: 21 | Type: read</summary>
+	public const int statuscodecategories_60 = 60;
+	/// <summary>PID: 60 | Type: read</summary>
+	public const int statuscodecategories = 60;
+	/// <summary>PID: 61 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int responsecontentcategories_21 = 21;
-	/// <summary>PID: 21 | Type: read</summary>
-	public const int responsecontentcategories = 21;
-	/// <summary>PID: 22 | Type: read</summary>
+	public const int responsecontentcategories_61 = 61;
+	/// <summary>PID: 61 | Type: read</summary>
+	public const int responsecontentcategories = 61;
+	/// <summary>PID: 62 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int urlcategories_22 = 22;
-	/// <summary>PID: 22 | Type: read</summary>
-	public const int urlcategories = 22;
-	/// <summary>PID: 30 | Type: read</summary>
+	public const int urlcategories_62 = 62;
+	/// <summary>PID: 62 | Type: read</summary>
+	public const int urlcategories = 62;
+	/// <summary>PID: 70 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int statuscodelatestquotes_30 = 30;
-	/// <summary>PID: 30 | Type: read</summary>
-	public const int statuscodelatestquotes = 30;
-	/// <summary>PID: 31 | Type: read</summary>
+	public const int statuscodelatestquotes_70 = 70;
+	/// <summary>PID: 70 | Type: read</summary>
+	public const int statuscodelatestquotes = 70;
+	/// <summary>PID: 71 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int responsecontentlatestquotes_31 = 31;
-	/// <summary>PID: 31 | Type: read</summary>
-	public const int responsecontentlatestquotes = 31;
-	/// <summary>PID: 32 | Type: read</summary>
+	public const int responsecontentlatestquotes_71 = 71;
+	/// <summary>PID: 71 | Type: read</summary>
+	public const int responsecontentlatestquotes = 71;
+	/// <summary>PID: 72 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int urllatestquotes_32 = 32;
-	/// <summary>PID: 32 | Type: read</summary>
-	public const int urllatestquotes = 32;
+	public const int urllatestquotes_72 = 72;
+	/// <summary>PID: 72 | Type: read</summary>
+	public const int urllatestquotes = 72;
 	/// <summary>PID: 600 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int activecryptocurrencies_600 = 600;
@@ -549,23 +549,35 @@ public interface SLProtocolExt : SLProtocol
 	CategoriesQActionTable categories { get; set; }
 	object Afterstartup_dummy { get; set; }
 	object Bearertoken__fixed { get; set; }
-	object Statuscodelastlistings_10 { get; set; }
+	object Titlebeginauthorization__fixed { get; set; }
+	object Titleendauhtorization__fixed { get; set; }
+	object Titlebeginoverallcrypto__fixed { get; set; }
+	object Titleendoverallcrypto__fixed { get; set; }
+	object Titlebeginethereum__fixed { get; set; }
+	object Titleendethereum__fixed { get; set; }
+	object Titlebeginbitcoin__fixed { get; set; }
+	object Titleendbitcoin__fixed { get; set; }
+	object Titlebegindefi__fixed { get; set; }
+	object Titleenddefi__fixed { get; set; }
+	object Titlebeginstablecoin__fixed { get; set; }
+	object Titleendstablecoin__fixed { get; set; }
+	object Statuscodelastlistings_50 { get; set; }
 	object Statuscodelastlistings { get; set; }
-	object Responsecontentlastlistings_11 { get; set; }
+	object Responsecontentlastlistings_51 { get; set; }
 	object Responsecontentlastlistings { get; set; }
-	object Urllastlistings_12 { get; set; }
+	object Urllastlistings_52 { get; set; }
 	object Urllastlistings { get; set; }
-	object Statuscodecategories_20 { get; set; }
+	object Statuscodecategories_60 { get; set; }
 	object Statuscodecategories { get; set; }
-	object Responsecontentcategories_21 { get; set; }
+	object Responsecontentcategories_61 { get; set; }
 	object Responsecontentcategories { get; set; }
-	object Urlcategories_22 { get; set; }
+	object Urlcategories_62 { get; set; }
 	object Urlcategories { get; set; }
-	object Statuscodelatestquotes_30 { get; set; }
+	object Statuscodelatestquotes_70 { get; set; }
 	object Statuscodelatestquotes { get; set; }
-	object Responsecontentlatestquotes_31 { get; set; }
+	object Responsecontentlatestquotes_71 { get; set; }
 	object Responsecontentlatestquotes { get; set; }
-	object Urllatestquotes_32 { get; set; }
+	object Urllatestquotes_72 { get; set; }
 	object Urllatestquotes { get; set; }
 	object Lastlistingid_201 { get; set; }
 	object Lastlistingid { get; set; }
@@ -687,51 +699,75 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Afterstartup_dummy {get { return GetParameter(2); }set { SetParameter(2, value); }}
 	/// <summary>PID: 3  | Type: fixed</summary>
 	public System.Object Bearertoken__fixed {get { return GetParameter(3); }set { SetParameter(3, value); }}
-	/// <summary>PID: 10  | Type: read</summary>
+	/// <summary>PID: 4  | Type: fixed</summary>
+	public System.Object Titlebeginauthorization__fixed {get { return GetParameter(4); }set { SetParameter(4, value); }}
+	/// <summary>PID: 5  | Type: fixed</summary>
+	public System.Object Titleendauhtorization__fixed {get { return GetParameter(5); }set { SetParameter(5, value); }}
+	/// <summary>PID: 6  | Type: fixed</summary>
+	public System.Object Titlebeginoverallcrypto__fixed {get { return GetParameter(6); }set { SetParameter(6, value); }}
+	/// <summary>PID: 7  | Type: fixed</summary>
+	public System.Object Titleendoverallcrypto__fixed {get { return GetParameter(7); }set { SetParameter(7, value); }}
+	/// <summary>PID: 8  | Type: fixed</summary>
+	public System.Object Titlebeginethereum__fixed {get { return GetParameter(8); }set { SetParameter(8, value); }}
+	/// <summary>PID: 9  | Type: fixed</summary>
+	public System.Object Titleendethereum__fixed {get { return GetParameter(9); }set { SetParameter(9, value); }}
+	/// <summary>PID: 10  | Type: fixed</summary>
+	public System.Object Titlebeginbitcoin__fixed {get { return GetParameter(10); }set { SetParameter(10, value); }}
+	/// <summary>PID: 11  | Type: fixed</summary>
+	public System.Object Titleendbitcoin__fixed {get { return GetParameter(11); }set { SetParameter(11, value); }}
+	/// <summary>PID: 12  | Type: fixed</summary>
+	public System.Object Titlebegindefi__fixed {get { return GetParameter(12); }set { SetParameter(12, value); }}
+	/// <summary>PID: 13  | Type: fixed</summary>
+	public System.Object Titleenddefi__fixed {get { return GetParameter(13); }set { SetParameter(13, value); }}
+	/// <summary>PID: 14  | Type: fixed</summary>
+	public System.Object Titlebeginstablecoin__fixed {get { return GetParameter(14); }set { SetParameter(14, value); }}
+	/// <summary>PID: 15  | Type: fixed</summary>
+	public System.Object Titleendstablecoin__fixed {get { return GetParameter(15); }set { SetParameter(15, value); }}
+	/// <summary>PID: 50  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Statuscodelastlistings_10 {get { return GetParameter(10); }set { SetParameter(10, value); }}
-	/// <summary>PID: 10  | Type: read</summary>
-	public System.Object Statuscodelastlistings {get { return GetParameter(10); }set { SetParameter(10, value); }}
-	/// <summary>PID: 11  | Type: read</summary>
+	public System.Object Statuscodelastlistings_50 {get { return GetParameter(50); }set { SetParameter(50, value); }}
+	/// <summary>PID: 50  | Type: read</summary>
+	public System.Object Statuscodelastlistings {get { return GetParameter(50); }set { SetParameter(50, value); }}
+	/// <summary>PID: 51  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Responsecontentlastlistings_11 {get { return GetParameter(11); }set { SetParameter(11, value); }}
-	/// <summary>PID: 11  | Type: read</summary>
-	public System.Object Responsecontentlastlistings {get { return GetParameter(11); }set { SetParameter(11, value); }}
-	/// <summary>PID: 12  | Type: read</summary>
+	public System.Object Responsecontentlastlistings_51 {get { return GetParameter(51); }set { SetParameter(51, value); }}
+	/// <summary>PID: 51  | Type: read</summary>
+	public System.Object Responsecontentlastlistings {get { return GetParameter(51); }set { SetParameter(51, value); }}
+	/// <summary>PID: 52  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Urllastlistings_12 {get { return GetParameter(12); }set { SetParameter(12, value); }}
-	/// <summary>PID: 12  | Type: read</summary>
-	public System.Object Urllastlistings {get { return GetParameter(12); }set { SetParameter(12, value); }}
-	/// <summary>PID: 20  | Type: read</summary>
+	public System.Object Urllastlistings_52 {get { return GetParameter(52); }set { SetParameter(52, value); }}
+	/// <summary>PID: 52  | Type: read</summary>
+	public System.Object Urllastlistings {get { return GetParameter(52); }set { SetParameter(52, value); }}
+	/// <summary>PID: 60  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Statuscodecategories_20 {get { return GetParameter(20); }set { SetParameter(20, value); }}
-	/// <summary>PID: 20  | Type: read</summary>
-	public System.Object Statuscodecategories {get { return GetParameter(20); }set { SetParameter(20, value); }}
-	/// <summary>PID: 21  | Type: read</summary>
+	public System.Object Statuscodecategories_60 {get { return GetParameter(60); }set { SetParameter(60, value); }}
+	/// <summary>PID: 60  | Type: read</summary>
+	public System.Object Statuscodecategories {get { return GetParameter(60); }set { SetParameter(60, value); }}
+	/// <summary>PID: 61  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Responsecontentcategories_21 {get { return GetParameter(21); }set { SetParameter(21, value); }}
-	/// <summary>PID: 21  | Type: read</summary>
-	public System.Object Responsecontentcategories {get { return GetParameter(21); }set { SetParameter(21, value); }}
-	/// <summary>PID: 22  | Type: read</summary>
+	public System.Object Responsecontentcategories_61 {get { return GetParameter(61); }set { SetParameter(61, value); }}
+	/// <summary>PID: 61  | Type: read</summary>
+	public System.Object Responsecontentcategories {get { return GetParameter(61); }set { SetParameter(61, value); }}
+	/// <summary>PID: 62  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Urlcategories_22 {get { return GetParameter(22); }set { SetParameter(22, value); }}
-	/// <summary>PID: 22  | Type: read</summary>
-	public System.Object Urlcategories {get { return GetParameter(22); }set { SetParameter(22, value); }}
-	/// <summary>PID: 30  | Type: read</summary>
+	public System.Object Urlcategories_62 {get { return GetParameter(62); }set { SetParameter(62, value); }}
+	/// <summary>PID: 62  | Type: read</summary>
+	public System.Object Urlcategories {get { return GetParameter(62); }set { SetParameter(62, value); }}
+	/// <summary>PID: 70  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Statuscodelatestquotes_30 {get { return GetParameter(30); }set { SetParameter(30, value); }}
-	/// <summary>PID: 30  | Type: read</summary>
-	public System.Object Statuscodelatestquotes {get { return GetParameter(30); }set { SetParameter(30, value); }}
-	/// <summary>PID: 31  | Type: read</summary>
+	public System.Object Statuscodelatestquotes_70 {get { return GetParameter(70); }set { SetParameter(70, value); }}
+	/// <summary>PID: 70  | Type: read</summary>
+	public System.Object Statuscodelatestquotes {get { return GetParameter(70); }set { SetParameter(70, value); }}
+	/// <summary>PID: 71  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Responsecontentlatestquotes_31 {get { return GetParameter(31); }set { SetParameter(31, value); }}
-	/// <summary>PID: 31  | Type: read</summary>
-	public System.Object Responsecontentlatestquotes {get { return GetParameter(31); }set { SetParameter(31, value); }}
-	/// <summary>PID: 32  | Type: read</summary>
+	public System.Object Responsecontentlatestquotes_71 {get { return GetParameter(71); }set { SetParameter(71, value); }}
+	/// <summary>PID: 71  | Type: read</summary>
+	public System.Object Responsecontentlatestquotes {get { return GetParameter(71); }set { SetParameter(71, value); }}
+	/// <summary>PID: 72  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Urllatestquotes_32 {get { return GetParameter(32); }set { SetParameter(32, value); }}
-	/// <summary>PID: 32  | Type: read</summary>
-	public System.Object Urllatestquotes {get { return GetParameter(32); }set { SetParameter(32, value); }}
+	public System.Object Urllatestquotes_72 {get { return GetParameter(72); }set { SetParameter(72, value); }}
+	/// <summary>PID: 72  | Type: read</summary>
+	public System.Object Urllatestquotes {get { return GetParameter(72); }set { SetParameter(72, value); }}
 	/// <summary>PID: 201  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Lastlistingid_201 {get { return GetParameter(201); }set { SetParameter(201, value); }}
