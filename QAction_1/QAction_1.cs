@@ -1,4 +1,4 @@
-namespace Skyline.Protocol
+﻿namespace Skyline.Protocol
 {
     using System;
     using System.Collections.Generic;

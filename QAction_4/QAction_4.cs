@@ -1,4 +1,4 @@
-using QAction_4;
+using QAction_1;
 using Skyline.DataMiner.Scripting;
 using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
 using System;
@@ -28,7 +28,7 @@ public static class QAction
             {
                 if (String.IsNullOrWhiteSpace(category.Id))
                 {
-                    protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|No primary key found for traansport stream{Environment.NewLine}", LogType.Error, LogLevel.NoLogging);
+                    protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|No primary key found for Category{Environment.NewLine}", LogType.Error, LogLevel.NoLogging);
                 }
 
                 categoriesDictionary[category.Id] = new CategoriesQActionRow

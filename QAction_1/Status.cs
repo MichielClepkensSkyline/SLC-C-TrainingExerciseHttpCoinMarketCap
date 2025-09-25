@@ -1,12 +1,9 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace QAction_5
+﻿namespace QAction_1
 {
+
+    using System;
+    using Newtonsoft.Json;
+
     public class Status
     {
         [JsonProperty("timestamp")]
@@ -26,5 +23,8 @@ namespace QAction_5
 
         [JsonProperty("notice")]
         public object Notice { get; set; }
+
+        [JsonProperty("total_count")]
+        public int TotalCount { get; set; }
     }
 }

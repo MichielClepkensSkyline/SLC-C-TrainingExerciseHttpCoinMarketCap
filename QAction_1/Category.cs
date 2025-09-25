@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QAction_6
+namespace QAction_1
 {
     public class Category
     {

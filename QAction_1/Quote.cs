@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QAction_3
+namespace QAction_1
 {
     public class Quote
     {

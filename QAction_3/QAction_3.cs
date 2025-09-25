@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using QAction_3;
+using QAction_1;
 using Skyline.DataMiner.Scripting;
 using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
 
@@ -28,7 +28,7 @@ public static class QAction
             {
                 if (String.IsNullOrWhiteSpace(latestListings.Id))
                 {
-                    protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|No primary key found for traansport stream{Environment.NewLine}", LogType.Error, LogLevel.NoLogging);
+                    protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|No primary key found for Latest listings{Environment.NewLine}", LogType.Error, LogLevel.NoLogging);
                 }
 
                 latestListingsDictionary[latestListings.Id] = new LatestlistingsQActionRow
