@@ -23,7 +23,7 @@ public static class QAction
 	{
 		try
 		{
-			if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodelastlistings))
+			if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodelastlistings, Parameter.responsecontentlastlistings, Parameter.urllastlistings))
 			{
 				Root root = SecureNewtonsoftDeserialization.DeserializeObject<Root>(protocol.GetParameter(Parameter.responsecontentlastlistings).ToString());
 				if (root != null)
@@ -60,8 +60,8 @@ public static class QAction
 		{
 			if (listing != null)
 			{
-                LastlistingQActionRow lastlistingQActionRow = new LastlistingQActionRow
-                {
+				LastlistingQActionRow lastlistingQActionRow = new LastlistingQActionRow
+				{
 					Lastlistingid = listing.Id,
 					Lastlistingname = listing.Name,
 					Lastlistingsymbol = listing.Symbol,
@@ -69,11 +69,11 @@ public static class QAction
 					Lastlistingnummarketpairs = listing.NumMarketPairs,
 					Lastlistingcirculatingsupply = listing.CirculatingSupply,
 					Lastlistingtotalsupply = listing.TotalSupply,
-					Lastlistingmaxsupply = listing.MaxSupply,
-					Lastlistinglastupdated = listing.LastUpdated,
-					Lastlistingdateadded = listing.DateAdded,
-					Lastlistingtotalvaluelockedratio = listing.TvlRatio,
-					Lastlistingplatformname = listing.Platform?.Name,
+					Lastlistingmaxsupply = listing.MaxSupply == null ? -1 : listing.MaxSupply,
+					Lastlistinglastupdated = listing.LastUpdated.ToLocalTime().ToOADate(),
+					Lastlistingdateadded = listing.DateAdded.ToOADate(),
+					Lastlistingtotalvaluelockedratio = listing.TvlRatio == null ? 0 : listing.TvlRatio,
+					Lastlistingplatformname = listing.Platform?.Name == null ? "No Platform": listing.Platform?.Name,
 					Lastlistingquote = listing.Quote?.USD?.ToString(),
 					Lastlistingquoteprice = listing.Quote?.USD?.Price,
 					Lastlistingquotevolume24h = listing.Quote?.USD?.Volume24h,
@@ -83,8 +83,8 @@ public static class QAction
 					Lastlistingquotepercentchange1h = listing.Quote?.USD?.PercentChange1h,
 					Lastlistingquotepercentchange24h = listing.Quote?.USD?.PercentChange24h,
 					Lastlistingquotepercentchange7d = listing.Quote?.USD?.PercentChange7d,
-                };
-                lastListingRows.Add(listing.Id, lastlistingQActionRow);
+				};
+				lastListingRows.Add(listing.Id, lastlistingQActionRow);
 			}
         }
 

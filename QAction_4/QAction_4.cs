@@ -23,7 +23,7 @@ public static class QAction
 	{
 		try
 		{
-            if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodecategories))
+            if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodecategories, Parameter.responsecontentcategories, Parameter.urlcategories))
             {
                 Root root = SecureNewtonsoftDeserialization.DeserializeObject<Root>(protocol.GetParameter(Parameter.responsecontentcategories).ToString());
                 if (root.Status == null)
@@ -65,7 +65,7 @@ public static class QAction
                     Categoriesmarketcapchange = category.MarketCapChange,
                     Categoriesvolume = category.Volume,
                     Categoriesvolumechange = category.VolumeChange,
-                    Categorieslastupdated = category.LastUpdated.ToLocalTime(), //TODO fix de tijd
+                    Categorieslastupdated = category.LastUpdated.ToLocalTime().ToOADate(),
                 };
                 categoryRows.Add(category.Id, categoryQActionRow);
             }

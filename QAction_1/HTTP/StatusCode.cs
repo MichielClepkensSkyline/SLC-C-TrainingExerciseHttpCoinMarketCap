@@ -5,9 +5,9 @@ namespace Skyline.DataMiner.Scripting.HTTP
 
     public static class StatusCode
     {
-        public static bool CheckStatusCode(SLProtocol protocol, int id)
+        public static bool CheckStatusCode(SLProtocol protocol, int statusId, int contentId, int urlId)
         {
-            string statusLine = (string) protocol.GetParameter(id);
+            string statusLine = (string) protocol.GetParameter(statusId);
             int statusCode = Int32.Parse(statusLine.Split(' ')[1]);
             if (statusCode == 200)
             {
@@ -15,7 +15,7 @@ namespace Skyline.DataMiner.Scripting.HTTP
             }
             else
             {
-                protocol.Log($"QA{protocol.QActionID}|CheckStatusCode|Bad statuscode: {statusLine}", LogType.Error, LogLevel.NoLogging);
+                protocol.Log($"QA{protocol.QActionID}|CheckStatusCode|Bad statuscode:\nURL API call: {protocol.GetParameter(urlId)} \nStatuscode: {statusLine}\nResponse content: {protocol.GetParameter(contentId)}", LogType.Error, LogLevel.NoLogging);
                 return false;
             }
         }

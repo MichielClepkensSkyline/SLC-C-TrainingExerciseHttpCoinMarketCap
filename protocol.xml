@@ -101,6 +101,18 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 		</Param>
+		<Param id="12">
+			<Name>urlLastListings</Name>
+			<Description>HTTP URL Last Listings</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>fixed</LengthType>
+				<Length>47</Length>
+				<Value>api/custom/coinmarketcap?content=latestlistings</Value>
+			</Interprete>
+		</Param>
 		<Param id="20" trending="false">
 			<Name>statusCodeCategories</Name>
 			<Description>HTTP Status Code Categories</Description>
@@ -119,6 +131,18 @@ Any inquiries can be addressed to:
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
+			</Interprete>
+		</Param>
+		<Param id="22">
+			<Name>urlCategories</Name>
+			<Description>HTTP URL Categories</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>fixed</LengthType>
+				<Length>44</Length>
+				<Value>/api/custom/coinmarketcap?content=categories</Value>			
 			</Interprete>
 		</Param>
 		<Param id="30">
@@ -141,6 +165,18 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 		</Param>
+		<Param id="32">
+			<Name>urlLatestQuotes</Name>
+			<Description>HTTP URL Latest Quotes</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>fixed</LengthType>
+				<Length>46</Length>
+				<Value>/api/custom/coinmarketcap?content=latestquotes</Value>
+			</Interprete>
+		</Param>
 		<Param id="200">
 			<Name>lastListing</Name>
 			<Description>Last Listings</Description>
@@ -149,24 +185,24 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="0" pid="201" type="retrieved" options="" />
 				<ColumnOption idx="1" pid="202" type="retrieved" options="" />
 				<ColumnOption idx="2" pid="203" type="retrieved" options="" />
-				<ColumnOption idx="3" pid="204" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
-				<ColumnOption idx="4" pid="205" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
-				<ColumnOption idx="5" pid="206" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
-				<ColumnOption idx="6" pid="207" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
-				<ColumnOption idx="7" pid="208" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="3" pid="204" type="retrieved" options=";disableHeaderSum;enableHistogram;disableHeatmap" />
+				<ColumnOption idx="4" pid="205" type="retrieved" options=";enableHeaderSum;enableHistogram;disableHeatmap" />
+				<ColumnOption idx="5" pid="206" type="retrieved" options=";disableHeaderSum;enableHistogram;disableHeatmap" />
+				<ColumnOption idx="6" pid="207" type="retrieved" options=";disableHeaderSum;enableHistogram;disableHeatmap" />
+				<ColumnOption idx="7" pid="208" type="retrieved" options="" />
 				<ColumnOption idx="8" pid="209" type="retrieved" options="" />
 				<ColumnOption idx="9" pid="210" type="retrieved" options="" />
-				<ColumnOption idx="10" pid="211" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="10" pid="211" type="retrieved" options=";disableHeaderSum;enableHistogram;enableHeatmap" />
 				<ColumnOption idx="11" pid="212" type="retrieved" options="" />
 				<ColumnOption idx="12" pid="213" type="retrieved" options="" />
-				<ColumnOption idx="13" pid="214" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
-				<ColumnOption idx="14" pid="215" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
-				<ColumnOption idx="15" pid="216" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
-				<ColumnOption idx="16" pid="217" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="13" pid="214" type="retrieved" options=";disableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="14" pid="215" type="retrieved" options=";disableHeaderSum;enableHistogram;disableHeatmap" />
+				<ColumnOption idx="15" pid="216" type="retrieved" options=";enableHeaderAvg;enableHistogram;disableHeatmap" />
+				<ColumnOption idx="16" pid="217" type="retrieved" options=";disableHeaderSum;enableHistogram;disableHeatmap" />
 				<ColumnOption idx="17" pid="218" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
-				<ColumnOption idx="18" pid="219" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
-				<ColumnOption idx="19" pid="220" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
-				<ColumnOption idx="20" pid="221" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="18" pid="219" type="retrieved" options=";enableHeaderAvg;enableHistogram;disableHeatmap" />
+				<ColumnOption idx="19" pid="220" type="retrieved" options=";enableHeaderAvg;enableHistogram;disableHeatmap" />
+				<ColumnOption idx="20" pid="221" type="retrieved" options=";enableHeaderAvg;enableHistogram;disableHeatmap" />
 				<ColumnOption idx ="21" pid="222" type="displaykey" options="" />
 			</ArrayOptions>
 			<Information>
@@ -270,12 +306,16 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 					<Low>0</Low>
 				</Range>
 			</Interprete>
-			<Alarm>
+			<Alarm type="absolute:204">
 				<Monitored>true</Monitored>
-				<Normal>50</Normal>
-				<WaH>100</WaH>
-				<MiH>200</MiH>
-				<MaH>300</MaH>
+				<CL>5</CL>
+				<MaL>3</MaL>
+				<MiL>2</MiL>
+				<WaL>1</WaL>
+				<WaH>1</WaH>
+				<MiH>2</MiH>
+				<MaH>3</MaH>
+				<CH>5</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -304,13 +344,16 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 					<Low>0</Low>
 				</Range>
 			</Interprete>
-			<Alarm>
+			<Alarm type="relative:205">
 				<Monitored>true</Monitored>
 				<CL>50</CL>
-				<MaL>100</MaL>
-				<MiL>250</MiL>
-				<WaL>500</WaL>
-				<Normal>750</Normal>
+				<MaL>30</MaL>
+				<MiL>20</MiL>
+				<WaL>10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -338,17 +381,16 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 					<Low>0</Low>
 				</Range>
 			</Interprete>
-			<Alarm>
+			<Alarm type="relative:206">
 				<Monitored>true</Monitored>
 				<CL>50</CL>
-				<MaL>100</MaL>
-				<MiL>200</MiL>
-				<WaL>500</WaL>
-				<Normal>1000</Normal>
-				<WaH>50000</WaH>
-				<MiH>70000</MiH>
-				<MaH>90000</MaH>
-				<CH>100000</CH>
+				<MaL>30</MaL>
+				<MiL>20</MiL>
+				<WaL>10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -376,17 +418,16 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 					<Low>0</Low>
 				</Range>
 			</Interprete>
-			<Alarm>
+			<Alarm type="relative:207">
 				<Monitored>true</Monitored>
 				<CL>50</CL>
-				<MaL>100</MaL>
-				<MiL>200</MiL>
-				<WaL>500</WaL>
-				<Normal>1000</Normal>
-				<WaH>50000</WaH>
-				<MiH>70000</MiH>
-				<MaH>90000</MaH>
-				<CH>100000</CH>
+				<MaL>30</MaL>
+				<MiL>20</MiL>
+				<WaL>10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -397,7 +438,7 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="208" trending="true">
+		<Param id="208" trending="false">
 			<Name>lastListingMaxSupply</Name>
 			<Description>Maximum Supply (Last Listings)</Description>
 			<Type>read</Type>
@@ -413,19 +454,13 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<Range>
 					<Low>0</Low>
 				</Range>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">No max supply</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
-			<Alarm>
-				<Monitored>true</Monitored>
-				<CL>50</CL>
-				<MaL>100</MaL>
-				<MiL>200</MiL>
-				<WaL>500</WaL>
-				<Normal>1000</Normal>
-				<WaH>50000</WaH>
-				<MiH>70000</MiH>
-				<MaH>90000</MaH>
-				<CH>100000</CH>
-			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>coins</Units>
@@ -513,7 +548,7 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<Decimals>3</Decimals>
 			</Display>
 			<Measurement>
-				<Type>analog</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="212" trending="false">
@@ -577,17 +612,16 @@ A market quote in the currency conversion option.]]>
 					<Low>0</Low>
 				</Range>
 			</Interprete>
-			<Alarm>
+			<Alarm type="relative:214">
 				<Monitored>true</Monitored>
 				<CL>50</CL>
-				<MaL>100</MaL>
-				<MiL>200</MiL>
-				<WaL>500</WaL>
-				<Normal>1000</Normal>
-				<WaH>50000</WaH>
-				<MiH>70000</MiH>
-				<MaH>90000</MaH>
-				<CH>100000</CH>
+				<MaL>30</MaL>
+				<MiL>20</MiL>
+				<WaL>10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -612,21 +646,19 @@ A market quote in the currency conversion option.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Range>
-					<Low>-10000</Low>
-					<High>10000</High>
+					<Low>0</Low>
 				</Range>
 			</Interprete>
-			<Alarm>
+			<Alarm type="relative:215">
 				<Monitored>true</Monitored>
-				<CL>-1000</CL>
-				<MaL>-500</MaL>
-				<MiL>-100</MiL>
-				<WaL>-50</WaL>
-				<Normal>0</Normal>
-				<WaH>50</WaH>
-				<MiH>100</MiH>
-				<MaH>500</MaH>
-				<CH>1000</CH>
+				<CL>50</CL>
+				<MaL>30</MaL>
+				<MiL>20</MiL>
+				<WaL>10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -661,7 +693,6 @@ A market quote in the currency conversion option.]]>
 				<MaL>-10</MaL>
 				<MiL>-5</MiL>
 				<WaL>-1</WaL>
-				<Normal>0</Normal>
 				<WaH>1</WaH>
 				<MiH>5</MiH>
 				<MaH>10</MaH>
@@ -673,7 +704,7 @@ A market quote in the currency conversion option.]]>
 				<Units>%</Units>
 			</Display>
 			<Measurement>
-				<Type>analog</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="217" trending="true">
@@ -690,13 +721,16 @@ A market quote in the currency conversion option.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
-			<Alarm>
+			<Alarm type="relative:217">
 				<Monitored>true</Monitored>
-				<CL>500</CL>
-				<MaL>1000</MaL>
-				<MiL>5000</MiL>
-				<WaL>10000</WaL>
-				<Normal>20000</Normal>
+				<CL>50</CL>
+				<MaL>30</MaL>
+				<MiL>20</MiL>
+				<WaL>10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -727,10 +761,10 @@ A market quote in the currency conversion option.]]>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
-				<CL>0.05</CL>
-				<MaL>0.1</MaL>
-				<MiL>0.5</MiL>
-				<WaL>1</WaL>
+				<CL>0.01</CL>
+				<MaL>0.05</MaL>
+				<MiL>0.1</MiL>
+				<WaL>0.5</WaL>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -738,7 +772,7 @@ A market quote in the currency conversion option.]]>
 				<Units>%</Units>
 			</Display>
 			<Measurement>
-				<Type>analog</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="219" trending="true">
@@ -761,15 +795,14 @@ A market quote in the currency conversion option.]]>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
-				<CL>-15</CL>
-				<MaL>-10</MaL>
-				<MiL>-5</MiL>
-				<WaL>-1</WaL>
-				<Normal>0</Normal>
-				<WaH>1</WaH>
-				<MiH>5</MiH>
-				<MaH>10</MaH>
-				<CH>15</CH>
+				<CL>-50</CL>
+				<MaL>-30</MaL>
+				<MiL>-20</MiL>
+				<WaL>-10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -777,7 +810,7 @@ A market quote in the currency conversion option.]]>
 				<Units>%</Units>
 			</Display>
 			<Measurement>
-				<Type>analog</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="220" trending="true">
@@ -800,15 +833,14 @@ A market quote in the currency conversion option.]]>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
-				<CL>-15</CL>
-				<MaL>-10</MaL>
-				<MiL>-5</MiL>
-				<WaL>-1</WaL>
-				<Normal>0</Normal>
-				<WaH>1</WaH>
-				<MiH>5</MiH>
-				<MaH>10</MaH>
-				<CH>15</CH>
+				<CL>-50</CL>
+				<MaL>-30</MaL>
+				<MiL>-20</MiL>
+				<WaL>-10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -816,7 +848,7 @@ A market quote in the currency conversion option.]]>
 				<Units>%</Units>
 			</Display>
 			<Measurement>
-				<Type>analog</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="221" trending="true">
@@ -839,15 +871,14 @@ A market quote in the currency conversion option.]]>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
-				<CL>-15</CL>
-				<MaL>-10</MaL>
-				<MiL>-5</MiL>
-				<WaL>-1</WaL>
-				<Normal>0</Normal>
-				<WaH>1</WaH>
-				<MiH>5</MiH>
-				<MaH>10</MaH>
-				<CH>15</CH>
+				<CL>-50</CL>
+				<MaL>-30</MaL>
+				<MiL>-20</MiL>
+				<WaL>-10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -855,7 +886,7 @@ A market quote in the currency conversion option.]]>
 				<Units>%</Units>
 			</Display>
 			<Measurement>
-				<Type>analog</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="222" trending="false">
@@ -889,11 +920,11 @@ A market quote in the currency conversion option.]]>
 				<ColumnOption idx="2" pid="403" type="retrieved" options="" />
 				<ColumnOption idx="3" pid="404" type="retrieved" options="" />
 				<ColumnOption idx="4" pid="405" type="retrieved" options="" />
-				<ColumnOption idx="5" pid="406" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
-				<ColumnOption idx="6" pid="407" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
-				<ColumnOption idx="7" pid="408" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
-				<ColumnOption idx="8" pid="409" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
-				<ColumnOption idx="9" pid="410" type="retrieved" options=";enableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="5" pid="406" type="retrieved" options=";enableHeaderAvg;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="6" pid="407" type="retrieved" options=";disableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="7" pid="408" type="retrieved" options=";enableHeaderAvg;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="8" pid="409" type="retrieved" options=";disableHeaderSum;enableHistogram;enableHeatmap" />
+				<ColumnOption idx="9" pid="410" type="retrieved" options=";enableHeaderAvg;enableHistogram;enableHeatmap" />
 				<ColumnOption idx="10" pid="411" type="retrieved" options="" />
 				<ColumnOption idx="11" pid="412" type="displaykey" options="" />
 			</ArrayOptions>
@@ -1048,15 +1079,14 @@ The unique ID of the category.]]>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
-				<CL>-15</CL>
-				<MaL>-10</MaL>
-				<MiL>-5</MiL>
-				<WaL>-1</WaL>
-				<Normal>0</Normal>
-				<WaH>1</WaH>
-				<MiH>5</MiH>
-				<MaH>10</MaH>
-				<CH>15</CH>
+				<CL>-50</CL>
+				<MaL>-30</MaL>
+				<MiL>-20</MiL>
+				<WaL>-10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1064,7 +1094,7 @@ The unique ID of the category.]]>
 				<Decimals>3</Decimals>
 			</Display>
 			<Measurement>
-				<Type>analog</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="407" trending="true">
@@ -1084,13 +1114,16 @@ The unique ID of the category.]]>
 					<Low>0</Low>
 				</Range>
 			</Interprete>
-			<Alarm>
+			<Alarm type="relative:407">
 				<Monitored>true</Monitored>
-				<CL>500</CL>
-				<MaL>1000</MaL>
-				<MiL>5000</MiL>
-				<WaL>10000</WaL>
-				<Normal>20000</Normal>
+				<CL>50</CL>
+				<MaL>30</MaL>
+				<MiL>20</MiL>
+				<WaL>10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1121,15 +1154,14 @@ The unique ID of the category.]]>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
-				<CL>-15</CL>
-				<MaL>-10</MaL>
-				<MiL>-5</MiL>
-				<WaL>-1</WaL>
-				<Normal>0</Normal>
-				<WaH>1</WaH>
-				<MiH>5</MiH>
-				<MaH>10</MaH>
-				<CH>15</CH>
+				<CL>-50</CL>
+				<MaL>-30</MaL>
+				<MiL>-20</MiL>
+				<WaL>-10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1137,7 +1169,7 @@ The unique ID of the category.]]>
 				<Units>%</Units>
 			</Display>
 			<Measurement>
-				<Type>analog</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="409" trending="true">
@@ -1154,21 +1186,19 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Range>
-					<Low>-1000000</Low>
-					<High>1000000</High>
+					<Low>0</Low>
 				</Range>
 			</Interprete>
-			<Alarm>
+			<Alarm type="relative:409">
 				<Monitored>true</Monitored>
-				<CL>-1000</CL>
-				<MaL>-500</MaL>
-				<MiL>-100</MiL>
-				<WaL>-50</WaL>
-				<Normal>0</Normal>
-				<WaH>50</WaH>
-				<MiH>100</MiH>
-				<MaH>500</MaH>
-				<CH>1000</CH>
+				<CL>50</CL>
+				<MaL>30</MaL>
+				<MiL>20</MiL>
+				<WaL>10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1199,15 +1229,14 @@ The unique ID of the category.]]>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
-				<CL>-15</CL>
-				<MaL>-10</MaL>
-				<MiL>-5</MiL>
-				<WaL>-1</WaL>
-				<Normal>0</Normal>
-				<WaH>1</WaH>
-				<MiH>5</MiH>
-				<MaH>10</MaH>
-				<CH>15</CH>
+				<CL>-50</CL>
+				<MaL>-30</MaL>
+				<MiL>-20</MiL>
+				<WaL>-10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1215,7 +1244,7 @@ The unique ID of the category.]]>
 				<Units>%</Units>
 			</Display>
 			<Measurement>
-				<Type>analog</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="411" trending="false">
@@ -1262,7 +1291,7 @@ The unique ID of the category.]]>
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="600" trending="true">
+		<Param id="600" trending="false">
 			<Name>activeCryptocurrencies</Name>
 			<Description>Active Cryptocurrencies</Description>
 			<Type>read</Type>
@@ -1280,11 +1309,6 @@ The unique ID of the category.]]>
 					<Low>0</Low>
 				</Range>
 			</Interprete>
-			<Alarm>
-				<Monitored>true</Monitored>
-				<CL>0</CL>
-				<WaL>50</WaL>
-			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
@@ -1319,11 +1343,6 @@ The unique ID of the category.]]>
 					<Low>0</Low>
 				</Range>
 			</Interprete>
-			<Alarm>
-				<Monitored>true</Monitored>
-				<CL>0</CL>
-				<WaL>50</WaL>
-			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
@@ -1358,13 +1377,16 @@ The unique ID of the category.]]>
 					<Low>0</Low>
 				</Range>
 			</Interprete>
-			<Alarm>
+			<Alarm type="relative:602">
 				<Monitored>true</Monitored>
 				<CL>50</CL>
-				<MaL>100</MaL>
-				<MiL>250</MiL>
-				<WaL>500</WaL>
-				<Normal>750</Normal>
+				<MaL>30</MaL>
+				<MiL>20</MiL>
+				<WaL>10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1382,7 +1404,7 @@ The unique ID of the category.]]>
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="603" trending="true">
+		<Param id="603" trending="false">
 			<Name>activeExchanges</Name>
 			<Description>Active Exchanges</Description>
 			<Type>read</Type>
@@ -1400,14 +1422,6 @@ The unique ID of the category.]]>
 					<Low>0</Low>
 				</Range>
 			</Interprete>
-			<Alarm>
-				<Monitored>true</Monitored>
-				<CL>50</CL>
-				<MaL>100</MaL>
-				<MiL>250</MiL>
-				<WaL>500</WaL>
-				<Normal>750</Normal>
-			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
@@ -1442,11 +1456,6 @@ The unique ID of the category.]]>
 					<Low>0</Low>
 				</Range>
 			</Interprete>
-			<Alarm>
-				<Monitored>true</Monitored>
-				<CL>0</CL>
-				<WaL>50</WaL>
-			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
@@ -1581,17 +1590,16 @@ The unique ID of the category.]]>
 					<High>100</High>
 				</Range>
 			</Interprete>
-			<Alarm>
+			<Alarm type="relative:607">
 				<Monitored>true</Monitored>
-				<CL>-50</CL>
-				<MaL>-25</MaL>
-				<MiL>-5</MiL>
-				<WaL>-1</WaL>
-				<Normal>0</Normal>
+				<CL>15</CL>
+				<MaL>10</MaL>
+				<MiL>5</MiL>
+				<WaL>1</WaL>
 				<WaH>1</WaH>
 				<MiH>5</MiH>
-				<MaH>25</MaH>
-				<CH>50</CH>
+				<MaH>10</MaH>
+				<CH>15</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1627,17 +1635,16 @@ The unique ID of the category.]]>
 					<High>100</High>
 				</Range>
 			</Interprete>
-			<Alarm>
+			<Alarm type="relative:608">
 				<Monitored>true</Monitored>
-				<CL>-50</CL>
-				<MaL>-25</MaL>
-				<MiL>-5</MiL>
-				<WaL>-1</WaL>
-				<Normal>0</Normal>
+				<CL>15</CL>
+				<MaL>10</MaL>
+				<MiL>5</MiL>
+				<WaL>1</WaL>
 				<WaH>1</WaH>
 				<MiH>5</MiH>
-				<MaH>25</MaH>
-				<CH>50</CH>
+				<MaH>10</MaH>
+				<CH>15</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1669,21 +1676,19 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Range>
-					<Low>-10000</Low>
-					<High>10000</High>
+					<Low>0</Low>
 				</Range>
 			</Interprete>
-			<Alarm>
+			<Alarm type="relative:609">
 				<Monitored>true</Monitored>
-				<CL>-1000</CL>
-				<MaL>-500</MaL>
-				<MiL>-100</MiL>
-				<WaL>-50</WaL>
-				<Normal>0</Normal>
-				<WaH>50</WaH>
-				<MiH>100</MiH>
-				<MaH>500</MaH>
-				<CH>1000</CH>
+				<CL>50</CL>
+				<MaL>30</MaL>
+				<MiL>20</MiL>
+				<WaL>10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1718,13 +1723,16 @@ The unique ID of the category.]]>
 					<Low>0</Low>
 				</Range>
 			</Interprete>
-			<Alarm>
+			<Alarm type="relative:610">
 				<Monitored>true</Monitored>
-				<CL>500</CL>
-				<MaL>1000</MaL>
-				<MiL>5000</MiL>
-				<WaL>10000</WaL>
-				<Normal>20000</Normal>
+				<CL>50</CL>
+				<MaL>30</MaL>
+				<MiL>20</MiL>
+				<WaL>10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1763,13 +1771,13 @@ The unique ID of the category.]]>
 			<Alarm>
 				<Monitored>true</Monitored>
 				<CL>-50</CL>
-				<MaL>-25</MaL>
-				<MiL>-5</MiL>
-				<WaL>-1</WaL>
+				<MaL>-30</MaL>
+				<MiL>-20</MiL>
+				<WaL>-10</WaL>
 				<Normal>0</Normal>
-				<WaH>1</WaH>
-				<MiH>5</MiH>
-				<MaH>25</MaH>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
 				<CH>50</CH>
 			</Alarm>
 			<Display>
@@ -1806,21 +1814,19 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Range>
-					<Low>-10000</Low>
-					<High>10000</High>
+					<Low>0</Low>
 				</Range>
 			</Interprete>
-			<Alarm>
+			<Alarm type="relative:612">
 				<Monitored>true</Monitored>
-				<CL>-1000</CL>
-				<MaL>-500</MaL>
-				<MiL>-100</MiL>
-				<WaL>-50</WaL>
-				<Normal>0</Normal>
-				<WaH>50</WaH>
-				<MiH>100</MiH>
-				<MaH>500</MaH>
-				<CH>1000</CH>
+				<CL>50</CL>
+				<MaL>30</MaL>
+				<MiL>20</MiL>
+				<WaL>10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1855,13 +1861,16 @@ The unique ID of the category.]]>
 					<Low>0</Low>
 				</Range>
 			</Interprete>
-			<Alarm>
+			<Alarm type="relative:613">
 				<Monitored>true</Monitored>
-				<CL>500</CL>
-				<MaL>1000</MaL>
-				<MiL>5000</MiL>
-				<WaL>10000</WaL>
-				<Normal>20000</Normal>
+				<CL>50</CL>
+				<MaL>30</MaL>
+				<MiL>20</MiL>
+				<WaL>10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1900,13 +1909,13 @@ The unique ID of the category.]]>
 			<Alarm>
 				<Monitored>true</Monitored>
 				<CL>-50</CL>
-				<MaL>-25</MaL>
-				<MiL>-5</MiL>
-				<WaL>-1</WaL>
+				<MaL>-30</MaL>
+				<MiL>-20</MiL>
+				<WaL>-10</WaL>
 				<Normal>0</Normal>
-				<WaH>1</WaH>
-				<MiH>5</MiH>
-				<MaH>25</MaH>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
 				<CH>50</CH>
 			</Alarm>
 			<Display>
@@ -1947,14 +1956,6 @@ The unique ID of the category.]]>
 					<Low>0</Low>
 				</Range>
 			</Interprete>
-			<Alarm>
-				<Monitored>true</Monitored>
-				<CL>0</CL>
-				<MaL>5</MaL>
-				<MiL>10</MiL>
-				<WaL>20</WaL>
-				<Normal>50</Normal>
-			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
@@ -1989,6 +1990,17 @@ The unique ID of the category.]]>
 					<Low>0</Low>
 				</Range>
 			</Interprete>
+			<Alarm type="relative:616">
+				<Monitored>true</Monitored>
+				<CL>50</CL>
+				<MaL>30</MaL>
+				<MiL>20</MiL>
+				<WaL>10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
@@ -2022,13 +2034,16 @@ The unique ID of the category.]]>
 					<Low>0</Low>
 				</Range>
 			</Interprete>
-			<Alarm>
+			<Alarm type="relative:617">
 				<Monitored>true</Monitored>
-				<CL>500</CL>
-				<MaL>1000</MaL>
-				<MiL>5000</MiL>
-				<WaL>10000</WaL>
-				<Normal>20000</Normal>
+				<CL>50</CL>
+				<MaL>30</MaL>
+				<MiL>20</MiL>
+				<WaL>10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -2060,21 +2075,19 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Range>
-					<Low>-1000000</Low>
-					<High>1000000</High>
+					<Low>0</Low>
 				</Range>
 			</Interprete>
-			<Alarm>
+			<Alarm type="relative:618">
 				<Monitored>true</Monitored>
-				<CL>-1000</CL>
-				<MaL>-500</MaL>
-				<MiL>-100</MiL>
-				<WaL>-50</WaL>
-				<Normal>0</Normal>
-				<WaH>50</WaH>
-				<MiH>100</MiH>
-				<MaH>500</MaH>
-				<CH>1000</CH>
+				<CL>50</CL>
+				<MaL>30</MaL>
+				<MiL>20</MiL>
+				<WaL>10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>50</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>

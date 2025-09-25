@@ -19,7 +19,7 @@ public static class QAction
 	{
 		try
 		{
-            if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodelatestquotes))
+            if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodelatestquotes, Parameter.responsecontentlatestquotes, Parameter.urllatestquotes))
             {
                 Root root = SecureNewtonsoftDeserialization.DeserializeObject<Root>(protocol.GetParameter(Parameter.responsecontentlatestquotes).ToString());
                 if (root.Status == null)
@@ -67,7 +67,7 @@ public static class QAction
                 { Parameter.past24hincrementalcryptonumber, data.Past24hIncrementalCryptoNumber },
                 { Parameter.totalmarketcap, data.Quote?.USD?.TotalMarketCap },
                 { Parameter.totalvolume24h, data.Quote?.USD?.TotalVolume24h },
-                { Parameter.lastupdated, data.LastUpdated },
+                { Parameter.lastupdated, data.LastUpdated.ToLocalTime().ToOADate() },
             };
             protocol.SetParameters(parameters);
         }

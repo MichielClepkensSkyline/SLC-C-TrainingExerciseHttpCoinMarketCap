@@ -18,6 +18,11 @@ public static class Parameter
 	public const int responsecontentlastlistings_11 = 11;
 	/// <summary>PID: 11 | Type: read</summary>
 	public const int responsecontentlastlistings = 11;
+	/// <summary>PID: 12 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int urllastlistings_12 = 12;
+	/// <summary>PID: 12 | Type: read</summary>
+	public const int urllastlistings = 12;
 	/// <summary>PID: 20 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int statuscodecategories_20 = 20;
@@ -28,6 +33,11 @@ public static class Parameter
 	public const int responsecontentcategories_21 = 21;
 	/// <summary>PID: 21 | Type: read</summary>
 	public const int responsecontentcategories = 21;
+	/// <summary>PID: 22 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int urlcategories_22 = 22;
+	/// <summary>PID: 22 | Type: read</summary>
+	public const int urlcategories = 22;
 	/// <summary>PID: 30 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int statuscodelatestquotes_30 = 30;
@@ -38,6 +48,11 @@ public static class Parameter
 	public const int responsecontentlatestquotes_31 = 31;
 	/// <summary>PID: 31 | Type: read</summary>
 	public const int responsecontentlatestquotes = 31;
+	/// <summary>PID: 32 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int urllatestquotes_32 = 32;
+	/// <summary>PID: 32 | Type: read</summary>
+	public const int urllatestquotes = 32;
 	/// <summary>PID: 600 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int activecryptocurrencies_600 = 600;
@@ -538,14 +553,20 @@ public interface SLProtocolExt : SLProtocol
 	object Statuscodelastlistings { get; set; }
 	object Responsecontentlastlistings_11 { get; set; }
 	object Responsecontentlastlistings { get; set; }
+	object Urllastlistings_12 { get; set; }
+	object Urllastlistings { get; set; }
 	object Statuscodecategories_20 { get; set; }
 	object Statuscodecategories { get; set; }
 	object Responsecontentcategories_21 { get; set; }
 	object Responsecontentcategories { get; set; }
+	object Urlcategories_22 { get; set; }
+	object Urlcategories { get; set; }
 	object Statuscodelatestquotes_30 { get; set; }
 	object Statuscodelatestquotes { get; set; }
 	object Responsecontentlatestquotes_31 { get; set; }
 	object Responsecontentlatestquotes { get; set; }
+	object Urllatestquotes_32 { get; set; }
+	object Urllatestquotes { get; set; }
 	object Lastlistingid_201 { get; set; }
 	object Lastlistingid { get; set; }
 	object Lastlistingname_202 { get; set; }
@@ -676,6 +697,11 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Responsecontentlastlistings_11 {get { return GetParameter(11); }set { SetParameter(11, value); }}
 	/// <summary>PID: 11  | Type: read</summary>
 	public System.Object Responsecontentlastlistings {get { return GetParameter(11); }set { SetParameter(11, value); }}
+	/// <summary>PID: 12  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Urllastlistings_12 {get { return GetParameter(12); }set { SetParameter(12, value); }}
+	/// <summary>PID: 12  | Type: read</summary>
+	public System.Object Urllastlistings {get { return GetParameter(12); }set { SetParameter(12, value); }}
 	/// <summary>PID: 20  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Statuscodecategories_20 {get { return GetParameter(20); }set { SetParameter(20, value); }}
@@ -686,6 +712,11 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Responsecontentcategories_21 {get { return GetParameter(21); }set { SetParameter(21, value); }}
 	/// <summary>PID: 21  | Type: read</summary>
 	public System.Object Responsecontentcategories {get { return GetParameter(21); }set { SetParameter(21, value); }}
+	/// <summary>PID: 22  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Urlcategories_22 {get { return GetParameter(22); }set { SetParameter(22, value); }}
+	/// <summary>PID: 22  | Type: read</summary>
+	public System.Object Urlcategories {get { return GetParameter(22); }set { SetParameter(22, value); }}
 	/// <summary>PID: 30  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Statuscodelatestquotes_30 {get { return GetParameter(30); }set { SetParameter(30, value); }}
@@ -696,6 +727,11 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Responsecontentlatestquotes_31 {get { return GetParameter(31); }set { SetParameter(31, value); }}
 	/// <summary>PID: 31  | Type: read</summary>
 	public System.Object Responsecontentlatestquotes {get { return GetParameter(31); }set { SetParameter(31, value); }}
+	/// <summary>PID: 32  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Urllatestquotes_32 {get { return GetParameter(32); }set { SetParameter(32, value); }}
+	/// <summary>PID: 32  | Type: read</summary>
+	public System.Object Urllatestquotes {get { return GetParameter(32); }set { SetParameter(32, value); }}
 	/// <summary>PID: 201  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Lastlistingid_201 {get { return GetParameter(201); }set { SetParameter(201, value); }}
@@ -731,10 +767,10 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Lastlistingtotalsupply_207 {get { return GetParameter(207); }set { SetParameter(207, value); }}
 	/// <summary>PID: 207  | Type: read</summary>
 	public System.Object Lastlistingtotalsupply {get { return GetParameter(207); }set { SetParameter(207, value); }}
-	/// <summary>PID: 208  | Type: read</summary>
+	/// <summary>PID: 208  | Type: read | EXCEPTIONS: No max supply = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Lastlistingmaxsupply_208 {get { return GetParameter(208); }set { SetParameter(208, value); }}
-	/// <summary>PID: 208  | Type: read</summary>
+	/// <summary>PID: 208  | Type: read | EXCEPTIONS: No max supply = 0</summary>
 	public System.Object Lastlistingmaxsupply {get { return GetParameter(208); }set { SetParameter(208, value); }}
 	/// <summary>PID: 209  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
