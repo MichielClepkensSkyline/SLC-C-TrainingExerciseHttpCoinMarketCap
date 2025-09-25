@@ -143,6 +143,11 @@ public static class Parameter
 	public const int latestquotedefivolume24h_47 = 47;
 	/// <summary>PID: 47 | Type: read</summary>
 	public const int latestquotedefivolume24h = 47;
+	/// <summary>PID: 310 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int accesskey_310 = 310;
+	/// <summary>PID: 310 | Type: read</summary>
+	public const int accesskey = 310;
 	public class Write
 	{
 		/// <summary>PID: 5 | Type: write</summary>
@@ -150,6 +155,11 @@ public static class Parameter
 		public const int sendrequest_5 = 5;
 		/// <summary>PID: 5 | Type: write</summary>
 		public const int sendrequest = 5;
+		/// <summary>PID: 360 | Type: write</summary>
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public const int accesskey_360 = 360;
+		/// <summary>PID: 360 | Type: write</summary>
+		public const int accesskey = 360;
 	}
 	public class Latestlistings
 	{
@@ -459,6 +469,8 @@ public class WriteParameters
 	public System.Object Sendrequest {get { return Protocol.GetParameter(5); }set { Protocol.SetParameter(5, value); }}
 	/// <summary>PID: 211  | Type: write | DISCREETS: Refresh Row = 1</summary>
 	public System.Object Categoriesrefreshbutton {get { return Protocol.GetParameter(211); }set { Protocol.SetParameter(211, value); }}
+	/// <summary>PID: 360  | Type: write</summary>
+	public System.Object Accesskey {get { return Protocol.GetParameter(360); }set { Protocol.SetParameter(360, value); }}
 	public SLProtocolExt Protocol;
 	public WriteParameters(SLProtocolExt protocol)
 	{
@@ -478,7 +490,6 @@ public interface SLProtocolExt : SLProtocol
 	object Responselatestlistings { get; set; }
 	object Sendrequest_5 { get; set; }
 	object Sendrequest { get; set; }
-	object Bearertoken__fixed { get; set; }
 	object Statuscodecategories_7 { get; set; }
 	object Statuscodecategories { get; set; }
 	object Responsecategories_8 { get; set; }
@@ -590,6 +601,9 @@ public interface SLProtocolExt : SLProtocol
 	object Titlebeginaltcoin__fixed { get; set; }
 	object Titlebegincryptomarketoverview__fixed { get; set; }
 	object Titlebeginlatestquote__fixed { get; set; }
+	object Accesskey_310 { get; set; }
+	object Accesskey { get; set; }
+	object Accesskey_360 { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
@@ -614,8 +628,6 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Sendrequest_5 {get { return GetParameter(5); }set { SetParameter(5, value); }}
 	/// <summary>PID: 5  | Type: write | DISCREETS: Send Request = 1</summary>
 	public System.Object Sendrequest {get { return Write.Sendrequest; }set { Write.Sendrequest = value; }}
-	/// <summary>PID: 6  | Type: fixed</summary>
-	public System.Object Bearertoken__fixed {get { return GetParameter(6); }set { SetParameter(6, value); }}
 	/// <summary>PID: 7  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Statuscodecategories_7 {get { return GetParameter(7); }set { SetParameter(7, value); }}
@@ -889,6 +901,14 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Titlebegincryptomarketoverview__fixed {get { return GetParameter(305); }set { SetParameter(305, value); }}
 	/// <summary>PID: 306  | Type: fixed</summary>
 	public System.Object Titlebeginlatestquote__fixed {get { return GetParameter(306); }set { SetParameter(306, value); }}
+	/// <summary>PID: 310  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Accesskey_310 {get { return GetParameter(310); }set { SetParameter(310, value); }}
+	/// <summary>PID: 310  | Type: read</summary>
+	public System.Object Accesskey {get { return GetParameter(310); }set { SetParameter(310, value); }}
+	/// <summary>PID: 360  | Type: write</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Accesskey_360 {get { return GetParameter(360); }set { SetParameter(360, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{
