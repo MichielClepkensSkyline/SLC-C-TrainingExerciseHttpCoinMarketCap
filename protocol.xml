@@ -141,8 +141,8 @@ Any inquiries can be addressed to:
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>fixed</LengthType>
-				<Length>44</Length>
-				<Value>/api/custom/coinmarketcap?content=categories</Value>			
+				<Length>43</Length>
+				<Value>api/custom/coinmarketcap?content=categories</Value>
 			</Interprete>
 		</Param>
 		<Param id="30">
@@ -173,8 +173,8 @@ Any inquiries can be addressed to:
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>fixed</LengthType>
-				<Length>46</Length>
-				<Value>/api/custom/coinmarketcap?content=latestquotes</Value>
+				<Length>45</Length>
+				<Value>api/custom/coinmarketcap?content=latestquotes</Value>
 			</Interprete>
 		</Param>
 		<Param id="200">
@@ -2147,7 +2147,7 @@ The unique ID of the category.]]>
 	<HTTP>
 		<Session id="1" name="Get Latest Listings on Coin Market">
 			<Connection id="1" name="Get Latest Listings on Coin Market">
-				<Request verb="GET" url="api/custom/coinmarketcap?content=latestlistings">
+				<Request verb="GET" pid="12">
 					<Headers>
 						<Header key="Authorization" pid="3"/>
 					</Headers>
@@ -2159,7 +2159,7 @@ The unique ID of the category.]]>
 		</Session>
 		<Session id="2" name="Get Categories on Coin Market">
 			<Connection id="2" name="Get Categories on Coin Market">
-				<Request verb="GET" url="/api/custom/coinmarketcap?content=categories">
+				<Request verb="GET" pid="22">
 					<Headers>
 						<Header key="Authorization" pid="3"/>
 					</Headers>
@@ -2171,7 +2171,7 @@ The unique ID of the category.]]>
 		</Session>
 		<Session id="3" name="Get Latest Quotes on Coin Market">
 			<Connection id="3" name="Get Latest Quotes on Coin Market">
-				<Request verb="GET" url="/api/custom/coinmarketcap?content=latestquotes">
+				<Request verb="GET" pid="32">
 					<Headers>
 						<Header key="Authorization" pid="3"/>
 					</Headers>
