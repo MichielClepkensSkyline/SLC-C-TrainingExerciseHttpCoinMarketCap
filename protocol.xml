@@ -525,7 +525,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>analog</Type>
 			</Measurement>
 		</Param>
 		<Param id="35" trending="false">
@@ -559,7 +559,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>analog</Type>
 			</Measurement>
 		</Param>
 		<Param id="36" trending="true">
@@ -578,6 +578,13 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
+				<CH>5.0</CH>
+				<MaH>3.0</MaH>
+				<MiH>1.5</MiH>
+				<Normal>0</Normal>
+				<MiL>-1.5</MiL>
+				<MaL>-3.0</MaL>
+				<CL>-5.0</CL>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -596,7 +603,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>analog</Type>
 			</Measurement>
 		</Param>
 		<Param id="37" trending="true">
@@ -633,7 +640,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>analog</Type>
 			</Measurement>
 		</Param>
 		<Param id="38" trending="true">
@@ -670,7 +677,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>analog</Type>
 			</Measurement>
 		</Param>
 		<Param id="39" trending="true">
@@ -707,7 +714,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>analog</Type>
 			</Measurement>
 		</Param>
 		<Param id="40" trending="false">
@@ -837,7 +844,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>analog</Type>
 			</Measurement>
 		</Param>
 		<Param id="44" trending="true">
@@ -874,7 +881,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>analog</Type>
 			</Measurement>
 		</Param>
 		<Param id="45" trending="true">
@@ -911,7 +918,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>analog</Type>
 			</Measurement>
 		</Param>
 		<Param id="46" trending="false">
@@ -1844,8 +1851,6 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 	</Params>
-	
-	<!--skip the ones with yesterda, the ones with total use-->
 	
 	<HTTP>
 		<Session id="1" name="Get Last Listings">
