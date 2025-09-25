@@ -4,8 +4,9 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using Skyline.DataMiner.Scripting;
-using Skyline.DataMiner.Scripting.Categories;
+using Skyline.DataMiner.Scripting.Category;
 using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
+using Skyline.Protocol.QAction_1;
 
 /// <summary>
 /// DataMiner QAction Class: Parse Individual Category.
@@ -21,18 +22,17 @@ public static class QAction
 		try
 		{
 			string json = protocol.GetParameter(Parameter.responseindividualcategory_12).ToString();
-			Categories category = SecureNewtonsoftDeserialization.DeserializeObject<Categories>(json);
-			string statusCode = protocol.GetParameter(Parameter.statuscodeindividualcategory_11).ToString();
+			Category category = SecureNewtonsoftDeserialization.DeserializeObject<Category>(json);
+			/*string statusCode = protocol.GetParameter(Parameter.statuscodeindividualcategory_11).ToString();
 			int status = Int32.Parse(statusCode.Split(' ')[1]);
-			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|statusCode: '{statusCode}'  and response {category.CategoryList.FirstOrDefault().Id}", LogType.Information, LogLevel.NoLogging);
+			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|statusCode: '{statusCode}'  and response {category.Data.Id}", LogType.Information, LogLevel.NoLogging);*/
 
-			if (status == 200)
+			if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodeindividualcategory_11))
 			{
-				UpdateCategoryRow(protocol, category.CategoryList.FirstOrDefault());
-			}
-			else
-			{
-				protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown: Status of the response is: {status}", LogType.Error, LogLevel.NoLogging);
+				if(StatusCode.CheckErrorCode(protocol, category.Status.ErrorCode, category.Status.ErrorMessage))
+				{
+					UpdateCategoryRow(protocol, category.Data);
+				}
 			}
 		}
 		catch (Exception ex)
@@ -41,7 +41,7 @@ public static class QAction
 		}
 	}
 
-	private static void UpdateCategoryRow(SLProtocol protocol, Category category)
+	private static void UpdateCategoryRow(SLProtocol protocol, Data category)
 	{
 		object[] newCategoryRow = new CategoriesQActionRow
 		{

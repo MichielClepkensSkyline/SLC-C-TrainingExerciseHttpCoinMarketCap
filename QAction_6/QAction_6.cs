@@ -18,18 +18,26 @@ public static class QAction
 	{
 		try
 		{
-			var rowPK = protocol.RowKey();
-			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Row: {rowPK}", LogType.Error, LogLevel.NoLogging);
+			/*var rowPK = protocol.RowKey();
+			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Row: {rowPK}", LogType.Error, LogLevel.NoLogging);*/
 
-			string api = "api/custom/coinmarketcap?content=category&id=" + rowPK.ToString();
+			string api = Form(protocol);
 
 			protocol.SetParameter(Parameter.individualcategoryapi_13, api);
 
-			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|API :{protocol.GetParameter(Parameter.individualcategoryapi_13)}", LogType.Error, LogLevel.NoLogging);
+			//protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|API :{protocol.GetParameter(Parameter.individualcategoryapi_13)}", LogType.Error, LogLevel.NoLogging);
 		}
 		catch (Exception ex)
 		{
 			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}{ex}", LogType.Error, LogLevel.NoLogging);
 		}
+	}
+
+	private static string Form(SLProtocol protocol)
+	{
+		var rowPK = protocol.RowKey();
+		string firstPartOfApi = "api/custom/coinmarketcap?content=category&id=";
+
+		return firstPartOfApi + rowPK.ToString();
 	}
 }
