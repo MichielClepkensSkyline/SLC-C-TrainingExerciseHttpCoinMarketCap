@@ -176,6 +176,11 @@ public static class Parameter
 			public const int latestlistinglastupdated_110 = 110;
 			/// <summary>PID: 110 | Type: read</summary>
 			public const int latestlistinglastupdated = 110;
+			/// <summary>PID: 111 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int latestlistingsdisplaykey_111 = 111;
+			/// <summary>PID: 111 | Type: read</summary>
+			public const int latestlistingsdisplaykey = 111;
 			public class Write
 			{
 			}
@@ -232,6 +237,11 @@ public static class Parameter
 			public const int latestlistinglastupdated_110 = 9;
 			/// <summary>IDX: 9 | Type: read</summary>
 			public const int latestlistinglastupdated = 9;
+			/// <summary>IDX: 10 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int latestlistingsdisplaykey_111 = 10;
+			/// <summary>IDX: 10 | Type: read</summary>
+			public const int latestlistingsdisplaykey = 10;
 		}
 	}
 	public class Categories
@@ -279,13 +289,18 @@ public static class Parameter
 			public const int categorieslastupdated_407 = 407;
 			/// <summary>PID: 407 | Type: read</summary>
 			public const int categorieslastupdated = 407;
+			/// <summary>PID: 408 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int categoriesdisplaykey_408 = 408;
+			/// <summary>PID: 408 | Type: read</summary>
+			public const int categoriesdisplaykey = 408;
 			public class Write
 			{
-				/// <summary>PID: 408 | Type: write</summary>
+				/// <summary>PID: 409 | Type: write</summary>
 				[EditorBrowsable(EditorBrowsableState.Never)]
-				public const int categoriesrefresh_408 = 408;
-				/// <summary>PID: 408 | Type: write</summary>
-				public const int categoriesrefresh = 408;
+				public const int categoriesrefresh_409 = 409;
+				/// <summary>PID: 409 | Type: write</summary>
+				public const int categoriesrefresh = 409;
 			}
 		}
 		public class Idx
@@ -325,6 +340,11 @@ public static class Parameter
 			public const int categorieslastupdated_407 = 6;
 			/// <summary>IDX: 6 | Type: read</summary>
 			public const int categorieslastupdated = 6;
+			/// <summary>IDX: 7 | Type: read</summary>
+			[EditorBrowsable(EditorBrowsableState.Never)]
+			public const int categoriesdisplaykey_408 = 7;
+			/// <summary>IDX: 7 | Type: read</summary>
+			public const int categoriesdisplaykey = 7;
 		}
 	}
 }
@@ -332,8 +352,8 @@ public class WriteParameters
 {
 	/// <summary>PID: 6  | Type: write | DISCREETS: Get Data = Get Data</summary>
 	public System.Object Getdata {get { return Protocol.GetParameter(6); }set { Protocol.SetParameter(6, value); }}
-	/// <summary>PID: 408  | Type: write | DISCREETS: Refresh = Refresh</summary>
-	public System.Object Categoriesrefresh {get { return Protocol.GetParameter(408); }set { Protocol.SetParameter(408, value); }}
+	/// <summary>PID: 409  | Type: write | DISCREETS: Refresh = Refresh</summary>
+	public System.Object Categoriesrefresh {get { return Protocol.GetParameter(409); }set { Protocol.SetParameter(409, value); }}
 	public SLProtocolExt Protocol;
 	public WriteParameters(SLProtocolExt protocol)
 	{
@@ -375,6 +395,8 @@ public interface SLProtocolExt : SLProtocol
 	object Latestlistings24hourvolume { get; set; }
 	object Latestlistinglastupdated_110 { get; set; }
 	object Latestlistinglastupdated { get; set; }
+	object Latestlistingsdisplaykey_111 { get; set; }
+	object Latestlistingsdisplaykey { get; set; }
 	object Httpresponsecodecategories_300 { get; set; }
 	object Httpresponsecodecategories { get; set; }
 	object Jsonresponsecategories_301 { get; set; }
@@ -393,7 +415,9 @@ public interface SLProtocolExt : SLProtocol
 	object Categoriesvolume { get; set; }
 	object Categorieslastupdated_407 { get; set; }
 	object Categorieslastupdated { get; set; }
-	object Categoriesrefresh_408 { get; set; }
+	object Categoriesdisplaykey_408 { get; set; }
+	object Categoriesdisplaykey { get; set; }
+	object Categoriesrefresh_409 { get; set; }
 	object Categoriesrefresh { get; set; }
 	object Httpresponsecodelatestquotes_500 { get; set; }
 	object Httpresponsecodelatestquotes { get; set; }
@@ -508,6 +532,11 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Latestlistinglastupdated_110 {get { return GetParameter(110); }set { SetParameter(110, value); }}
 	/// <summary>PID: 110  | Type: read</summary>
 	public System.Object Latestlistinglastupdated {get { return GetParameter(110); }set { SetParameter(110, value); }}
+	/// <summary>PID: 111  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Latestlistingsdisplaykey_111 {get { return GetParameter(111); }set { SetParameter(111, value); }}
+	/// <summary>PID: 111  | Type: read</summary>
+	public System.Object Latestlistingsdisplaykey {get { return GetParameter(111); }set { SetParameter(111, value); }}
 	/// <summary>PID: 300  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Httpresponsecodecategories_300 {get { return GetParameter(300); }set { SetParameter(300, value); }}
@@ -553,9 +582,14 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Categorieslastupdated_407 {get { return GetParameter(407); }set { SetParameter(407, value); }}
 	/// <summary>PID: 407  | Type: read</summary>
 	public System.Object Categorieslastupdated {get { return GetParameter(407); }set { SetParameter(407, value); }}
-	/// <summary>PID: 408  | Type: write | DISCREETS: Refresh = Refresh</summary>
-	public System.Object Categoriesrefresh_408 {get { return GetParameter(408); }set { SetParameter(408, value); }}
-	/// <summary>PID: 408  | Type: write | DISCREETS: Refresh = Refresh</summary>
+	/// <summary>PID: 408  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Categoriesdisplaykey_408 {get { return GetParameter(408); }set { SetParameter(408, value); }}
+	/// <summary>PID: 408  | Type: read</summary>
+	public System.Object Categoriesdisplaykey {get { return GetParameter(408); }set { SetParameter(408, value); }}
+	/// <summary>PID: 409  | Type: write | DISCREETS: Refresh = Refresh</summary>
+	public System.Object Categoriesrefresh_409 {get { return GetParameter(409); }set { SetParameter(409, value); }}
+	/// <summary>PID: 409  | Type: write | DISCREETS: Refresh = Refresh</summary>
 	public System.Object Categoriesrefresh {get { return Write.Categoriesrefresh; }set { Write.Categoriesrefresh = value; }}
 	/// <summary>PID: 500  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
@@ -715,8 +749,13 @@ public class LatestlistingsQActionRow : QActionTableRow
 	public System.Object Latestlistinglastupdated_110 { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
 	/// <summary>PID: 110 | Type: read</summary>
 	public System.Object Latestlistinglastupdated { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
-	public LatestlistingsQActionRow() : base(0, 10) { }
-	public LatestlistingsQActionRow(System.Object[] oRow) : base(0, 10, oRow) { }
+	/// <summary>PID: 111 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Latestlistingsdisplaykey_111 { get { if (base.Columns.ContainsKey(10)) { return base.Columns[10]; } else { return null; } } set { if (base.Columns.ContainsKey(10)) { base.Columns[10] = value; } else { base.Columns.Add(10, value); } } }
+	/// <summary>PID: 111 | Type: read</summary>
+	public System.Object Latestlistingsdisplaykey { get { if (base.Columns.ContainsKey(10)) { return base.Columns[10]; } else { return null; } } set { if (base.Columns.ContainsKey(10)) { base.Columns[10] = value; } else { base.Columns.Add(10, value); } } }
+	public LatestlistingsQActionRow() : base(0, 11) { }
+	public LatestlistingsQActionRow(System.Object[] oRow) : base(0, 11, oRow) { }
 	public static implicit operator LatestlistingsQActionRow(System.Object[] source) { return new LatestlistingsQActionRow(source); }
 	public static implicit operator System.Object[](LatestlistingsQActionRow source) { return source.ToObjectArray(); }
 }
@@ -758,12 +797,17 @@ public class CategoriesQActionRow : QActionTableRow
 	public System.Object Categorieslastupdated_407 { get { if (base.Columns.ContainsKey(6)) { return base.Columns[6]; } else { return null; } } set { if (base.Columns.ContainsKey(6)) { base.Columns[6] = value; } else { base.Columns.Add(6, value); } } }
 	/// <summary>PID: 407 | Type: read</summary>
 	public System.Object Categorieslastupdated { get { if (base.Columns.ContainsKey(6)) { return base.Columns[6]; } else { return null; } } set { if (base.Columns.ContainsKey(6)) { base.Columns[6] = value; } else { base.Columns.Add(6, value); } } }
-	/// <summary>PID: 408 | Type: write</summary>
-	public System.Object Categoriesrefresh_408 { get { if (base.Columns.ContainsKey(7)) { return base.Columns[7]; } else { return null; } } set { if (base.Columns.ContainsKey(7)) { base.Columns[7] = value; } else { base.Columns.Add(7, value); } } }
-	/// <summary>PID: 408 | Type: write</summary>
-	public System.Object Categoriesrefresh { get { if (base.Columns.ContainsKey(7)) { return base.Columns[7]; } else { return null; } } set { if (base.Columns.ContainsKey(7)) { base.Columns[7] = value; } else { base.Columns.Add(7, value); } } }
-	public CategoriesQActionRow() : base(0, 8) { }
-	public CategoriesQActionRow(System.Object[] oRow) : base(0, 8, oRow) { }
+	/// <summary>PID: 408 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Categoriesdisplaykey_408 { get { if (base.Columns.ContainsKey(7)) { return base.Columns[7]; } else { return null; } } set { if (base.Columns.ContainsKey(7)) { base.Columns[7] = value; } else { base.Columns.Add(7, value); } } }
+	/// <summary>PID: 408 | Type: read</summary>
+	public System.Object Categoriesdisplaykey { get { if (base.Columns.ContainsKey(7)) { return base.Columns[7]; } else { return null; } } set { if (base.Columns.ContainsKey(7)) { base.Columns[7] = value; } else { base.Columns.Add(7, value); } } }
+	/// <summary>PID: 409 | Type: write</summary>
+	public System.Object Categoriesrefresh_409 { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
+	/// <summary>PID: 409 | Type: write</summary>
+	public System.Object Categoriesrefresh { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
+	public CategoriesQActionRow() : base(0, 9) { }
+	public CategoriesQActionRow(System.Object[] oRow) : base(0, 9, oRow) { }
 	public static implicit operator CategoriesQActionRow(System.Object[] source) { return new CategoriesQActionRow(source); }
 	public static implicit operator System.Object[](CategoriesQActionRow source) { return source.ToObjectArray(); }
 }

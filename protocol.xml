@@ -172,7 +172,7 @@ Any inquiries can be addressed to:
 			<Name>LatestListings</Name>
 			<Description>Latest Listings</Description>
 			<Type>array</Type>
-			<ArrayOptions index="0">
+			<ArrayOptions index="0" options=";naming=/101,102">
 				<ColumnOption idx="0" pid="101" type="retrieved" options=""/>
 				<ColumnOption idx="1" pid="102" type="retrieved" options="" />
 				<ColumnOption idx="2" pid="103" type="retrieved" options="" />
@@ -183,6 +183,7 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="7" pid="108" type="retrieved" options="" />
 				<ColumnOption idx="8" pid="109" type="retrieved" options="" />
 				<ColumnOption idx="9" pid="110" type="retrieved" options="" />
+				<ColumnOption idx="10" pid="111" type="displaykey" options="" />
 			</ArrayOptions>
 			<Information>
 				<Subtext>tableInformation</Subtext>
@@ -198,7 +199,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:101|0-103|2-102|1-104|3-105|4-106|5-107|6-108|7-109|8-110|9,width:100-100-100-137-122-175-125-103-110-156,sort:STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING-INT,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:101|0-103|2-102|1-104|3-105|4-106|5-107|6-108|7-109|8-110|9-111|10,width:100-100-100-137-122-175-125-103-110-156-100,sort:STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING-INT-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="101" trending="false">
@@ -384,6 +385,24 @@ Any inquiries can be addressed to:
 				<Type options="datetime">number</Type>
 			</Measurement>
 		</Param>
+		<Param id="111" trending="false">
+			<Name>LatestListingsDisplayKey</Name>
+			<Description>Display Key (Latest Listings)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
 		<Param id="300" trending="false">
 			<Name>HttpResponseCodeCategories</Name>
 			<Description>HTTP Response for Categories</Description>
@@ -438,7 +457,7 @@ Any inquiries can be addressed to:
 			<Name>Categories</Name>
 			<Description>Categories</Description>
 			<Type>array</Type>
-			<ArrayOptions index="0">
+			<ArrayOptions index="0" options=";naming=/402,401">
 				<ColumnOption idx="0" pid="401" type="retrieved" options=""/>
 				<ColumnOption idx="1" pid="402" type="retrieved" options="" />
 				<ColumnOption idx="2" pid="403" type="retrieved" options="" />
@@ -446,7 +465,8 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="4" pid="405" type="retrieved" options="" />
 				<ColumnOption idx="5" pid="406" type="retrieved" options="" />
 				<ColumnOption idx="6" pid="407" type="retrieved" options="" />
-				<ColumnOption idx="7" pid="408" type="retrieved" options="" />
+				<ColumnOption idx="7" pid="408" type="displaykey" options="" />
+				<ColumnOption idx="8" pid="409" type="retrieved" options="" />
 			</ArrayOptions>
 			<Information>
 				<Subtext>tableInformation</Subtext>
@@ -462,7 +482,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:401|0-402|1-403|2-404|3-405|4-406|5-407|6-408|7,width:100-100-124-142-100-100-156-106,sort:STRING-STRING-STRING-STRING-STRING-STRING-INT-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:401|0-402|1-403|2-404|3-405|4-406|5-407|6-408|7-409|8,width:100-100-124-142-100-100-156-200-106,sort:STRING-STRING-STRING-STRING-STRING-STRING-INT-STRING-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="401" trending="false">
@@ -594,7 +614,25 @@ Any inquiries can be addressed to:
 				<Type options="datetime">number</Type>
 			</Measurement>
 		</Param>
-		<Param id="408">
+		<Param id="408" trending="false">
+			<Name>CategoriesDisplayKey</Name>
+			<Description>Display Key (Categories)</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="409">
 			<Name>CategoriesRefresh</Name>
 			<Type>write</Type>
 			<Information>
@@ -1061,7 +1099,7 @@ Any inquiries can be addressed to:
 		<QAction id="3" name="Get Latest Listing Data Into a Table" encoding="csharp" triggers="4" />
 		<QAction id="4" name="Get Categories Data Into a Table" encoding="csharp" triggers="301"/>
 		<QAction id="5" name="Get Latest Quotes Data Into Parameters" encoding="csharp" triggers="501" />
-		<QAction id="6" name="Refresh Category by Id" encoding="csharp" triggers="408" row="true" />
+		<QAction id="6" name="Refresh Category by Id" encoding="csharp" triggers="409" row="true" />
 		<QAction id="7" name="Set Singe Row in The Categories Table" encoding="csharp" triggers="517">
 		</QAction>
 	</QActions>
