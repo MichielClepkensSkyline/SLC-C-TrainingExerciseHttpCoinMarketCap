@@ -9,9 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Internal", "Internal", "{68
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "QActions", "QActions", "{8E650B7F-3545-4C32-95BA-ED462AEBA71D}"
-	ProjectSection(SolutionItems) = preProject
-		QAction_1\Categories\Categories.cs = QAction_1\Categories\Categories.cs
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dlls", "Dlls", "{420C69E6-F4E0-48CD-BAEA-572A7B493EC8}"
 	ProjectSection(SolutionItems) = preProject

@@ -1,11 +1,13 @@
+using Skyline.DataMiner.Scripting;
+using Skyline.DataMiner.Scripting.LatestListings;
+using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
+using Skyline.Protocol.QAction_1;
+
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using QAction_3;
-using Skyline.DataMiner.Scripting;
-using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
 
 /// <summary>
 /// DataMiner QAction Class: Parse Latest Listings.
@@ -22,7 +24,14 @@ public static class QAction
 		{
 			string json = protocol.GetParameter(Parameter.responselatestlistings_4).ToString();
 			LatestListings latestListings = SecureNewtonsoftDeserialization.DeserializeObject<LatestListings>(json);
-			var statusCode = protocol.GetParameter(Parameter.statuscodelatestlistings_3).ToString();
+			if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodelatestlistings_3))
+			{
+				if (StatusCode.CheckErrorCode(protocol, latestListings.Status.ErrorCode, latestListings.Status.ErrorMessage))
+				{
+					FillLatestListingsTable(protocol, latestListings);
+				}
+			}
+			/*var statusCode = protocol.GetParameter(Parameter.statuscodelatestlistings_3).ToString();
 			int status = Int32.Parse(statusCode.Split(' ')[1]);
 			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run| Status {status}", LogType.Error, LogLevel.NoLogging);
 
@@ -35,7 +44,7 @@ public static class QAction
 			{
 				protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown: Status of the response is: {status}", LogType.Error, LogLevel.NoLogging);
 
-			}
+			}*/
 		}
 		catch (Exception ex)
 		{
@@ -61,7 +70,7 @@ public static class QAction
 						Latestlistingsname_102 = latest_listing.Name,
 						Latestlistingssymbol_103 = latest_listing.Symbol,
 						Latestlistingsdateadded_104 = latest_listing.DateAdded.ToOADate(),
-						Latestlistingstotalsupply_105 = latest_listing.TotalSupply,
+						Latestlistingscirculatingsupply_105 = latest_listing.TotalSupply,
 						Latestlistingsrank_106 = latest_listing.CmcRank,
 						Latestlistingslastupdated_107 = latest_listing.LastUpdated.ToOADate(),
 						Latestlistingsquoteprice_108 = latest_listing.Quote.USD.Price,
@@ -69,6 +78,9 @@ public static class QAction
 						Latestlistingsquotevolumechange24h_110 = latest_listing.Quote.USD.VolumeChange24h,
 						Latestlistingsquotemarketcap_111 = latest_listing.Quote.USD.MarketCap,
 						Latestlistingsplatformname_112 = latest_listing.Platform?.Name ?? exceptionValue.ToString(),
+						Latestlistingsmaxsupply_114 = latest_listing.MaxSupply ?? exceptionValue,
+						Latestlistingsquotemarketcapdominance_115 = latest_listing.Quote.USD.MarketCapDominance,
+						Latestlistingsquotevolume24h_116 = latest_listing.Quote.USD.Volume24h,
 					}.ToObjectArray();
 				}
 				else
