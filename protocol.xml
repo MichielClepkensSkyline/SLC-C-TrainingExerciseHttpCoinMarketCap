@@ -2009,6 +2009,7 @@ Any inquiries can be addressed to:
 			</Content>
 		</Group>
 		<Group id="3">
+			<Condition><![CDATA[id:311 != empty]]></Condition>
 			<Name>Get Latest Listings</Name>
 			<Description>Get Latest Listings</Description>
 			<Type>poll</Type>
@@ -2017,6 +2018,7 @@ Any inquiries can be addressed to:
 			</Content>
 		</Group>
 		<Group id="4">
+			<Condition><![CDATA[id:311 != empty]]></Condition>
 			<Name>Get Categories</Name>
 			<Description>Get Categories</Description>
 			<Type>poll</Type>
@@ -2025,6 +2027,7 @@ Any inquiries can be addressed to:
 			</Content>
 		</Group>
 		<Group id="5">
+			<Condition><![CDATA[id:311 != empty]]></Condition>
 			<Name>Get Latest Quote</Name>
 			<Description>Get Latest Quote</Description>
 			<Type>poll</Type>
@@ -2033,6 +2036,7 @@ Any inquiries can be addressed to:
 			</Content>
 		</Group>
 		<Group id="6">
+			<Condition><![CDATA[id:311 != empty]]></Condition>
 			<Name>Get Individual Category</Name>
 			<Description>Get Individual Category</Description>
 			<Type>poll</Type>
@@ -2120,6 +2124,9 @@ Any inquiries can be addressed to:
 			<Time initial="true" dataDisplay="30000">60000</Time>
 			<Interval>75</Interval>
 			<Content>
+				<Group>3</Group>
+				<Group>4</Group>
+				<Group>5</Group>
 			</Content>
 		</Timer>
 		<Timer id="3">
