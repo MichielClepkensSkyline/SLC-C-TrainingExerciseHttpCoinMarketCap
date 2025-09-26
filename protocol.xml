@@ -1110,6 +1110,7 @@ Any inquiries can be addressed to:
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>rank</Units>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1448,7 +1449,9 @@ Any inquiries can be addressed to:
 			<Description>Id (Categories)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>This is the key used internally by DataMiner to identify the table entries.</Subtext>
+				<Subtext>
+					<![CDATA[This is the key used internally by DataMiner to identify the table entries.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -1697,7 +1700,9 @@ Any inquiries can be addressed to:
 			<Description>Display Key (Categories)</Description>
 			<Type>read</Type>
 			<Information>
-				<Subtext>This is the parameter for display key for the Categories table.</Subtext>
+				<Subtext>
+					<![CDATA[This is the parameter for display key for the Categories table.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -1864,10 +1869,34 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="311" save="true">
-			<Name>beareToken</Name>
+			<Name>bearerToken</Name>
 			<Description>Bearer Token</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[Bearer token used for API authentication.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>false</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="312" trending="false" save="true">
+			<Name>accesKeyToken</Name>
+			<Description>Access Key Token</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Access token used for API key authentication.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -1880,27 +1909,9 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>1</Row>
+						<Row>0</Row>
 					</Position>
 				</Positions>
-			</Display>
-			<Measurement>
-				<Type>string</Type>
-			</Measurement>
-		</Param>
-		<Param id="312" save="true">
-			<Name>accesKeyToken</Name>
-			<Description>Access Key Token</Description>
-			<Type>read</Type>
-			<Information>
-			</Information>
-			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
 			</Display>
 			<Measurement>
 				<Type options="password">string</Type>
