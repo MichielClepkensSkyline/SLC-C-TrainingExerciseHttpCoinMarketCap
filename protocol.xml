@@ -297,6 +297,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -329,6 +335,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -361,6 +373,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<Units>exchanges</Units>
@@ -393,6 +411,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -425,6 +449,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -459,6 +489,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -493,6 +529,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -537,6 +579,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -581,6 +629,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -625,6 +679,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -667,6 +727,12 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>8</Decimals>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -696,6 +762,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -729,6 +801,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -762,6 +840,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -796,6 +880,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -839,6 +929,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -882,6 +978,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -915,6 +1017,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1009,6 +1117,12 @@ Any inquiries can be addressed to:
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1030,6 +1144,12 @@ Any inquiries can be addressed to:
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1051,6 +1171,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 				<Decimals>8</Decimals>
 			</Interprete>
 			<Display>
@@ -1074,6 +1200,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1099,6 +1231,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1133,6 +1271,12 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>8</Decimals>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1155,6 +1299,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1190,6 +1340,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1226,6 +1382,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1262,6 +1424,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1366,6 +1534,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-100">
+						<Display state="disabled">Not Available</Display>
+						<Value>-100</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
