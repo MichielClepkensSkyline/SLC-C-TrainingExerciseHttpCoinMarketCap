@@ -600,12 +600,10 @@ public interface SLProtocolExt : SLProtocol
 	object Categoriesrefreshbutton_211 { get; set; }
 	object Categoriesrefreshbutton { get; set; }
 	object Titlebegindominance__fixed { get; set; }
-	object Titleendgeneric__fixed { get; set; }
 	object Titlebegindefi__fixed { get; set; }
 	object Titlebeginderivativesstablecoin__fixed { get; set; }
 	object Titlebeginaltcoin__fixed { get; set; }
 	object Titlebegincryptomarketoverview__fixed { get; set; }
-	object Titlebeginlatestquote__fixed { get; set; }
 	object Bearertoken_311 { get; set; }
 	object Bearertoken { get; set; }
 	object Acceskeytoken_312 { get; set; }
@@ -894,10 +892,8 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Categoriesrefreshbutton_211 {get { return GetParameter(211); }set { SetParameter(211, value); }}
 	/// <summary>PID: 211  | Type: write | DISCREETS: Refresh Row = 1</summary>
 	public System.Object Categoriesrefreshbutton {get { return Write.Categoriesrefreshbutton; }set { Write.Categoriesrefreshbutton = value; }}
-	/// <summary>PID: 300  | Type: fixed</summary>
-	public System.Object Titlebegindominance__fixed {get { return GetParameter(300); }set { SetParameter(300, value); }}
 	/// <summary>PID: 301  | Type: fixed</summary>
-	public System.Object Titleendgeneric__fixed {get { return GetParameter(301); }set { SetParameter(301, value); }}
+	public System.Object Titlebegindominance__fixed {get { return GetParameter(301); }set { SetParameter(301, value); }}
 	/// <summary>PID: 302  | Type: fixed</summary>
 	public System.Object Titlebegindefi__fixed {get { return GetParameter(302); }set { SetParameter(302, value); }}
 	/// <summary>PID: 303  | Type: fixed</summary>
@@ -906,8 +902,6 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Titlebeginaltcoin__fixed {get { return GetParameter(304); }set { SetParameter(304, value); }}
 	/// <summary>PID: 305  | Type: fixed</summary>
 	public System.Object Titlebegincryptomarketoverview__fixed {get { return GetParameter(305); }set { SetParameter(305, value); }}
-	/// <summary>PID: 306  | Type: fixed</summary>
-	public System.Object Titlebeginlatestquote__fixed {get { return GetParameter(306); }set { SetParameter(306, value); }}
 	/// <summary>PID: 311  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Bearertoken_311 {get { return GetParameter(311); }set { SetParameter(311, value); }}

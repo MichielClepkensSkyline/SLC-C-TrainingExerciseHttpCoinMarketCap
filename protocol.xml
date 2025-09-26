@@ -2,7 +2,7 @@
 <!--
 
 ****************************************************************************
-*  Copyright (c) 2024,  Skyline Communications NV  All Rights Reserved.    *
+*  Copyright (c) 2025,  Skyline Communications NV  All Rights Reserved.    *
 ****************************************************************************
 
 By using this driver, you expressly agree with the usage terms and
@@ -55,7 +55,7 @@ Any inquiries can be addressed to:
 	<DeviceOID>0</DeviceOID>
 	<ElementType>Unknown</ElementType>
 	<Type relativeTimers="true">http</Type>
-	<Display defaultPage="General" pageOrder="General;Latest Listings;Categories;Latest Quote" wideColumnPages="Latest Quote;Latest Listings;Categories"/>
+	<Display defaultPage="General" pageOrder="General;Latest Listings;Categories;Latest Quote" wideColumnPages="Latest Listings;Categories"/>
 	<SNMP includepages="true">auto</SNMP>
 
 	<Compliancies>
@@ -308,7 +308,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>2</Row>
+						<Row>1</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -340,7 +340,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>3</Row>
+						<Row>2</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -372,7 +372,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>4</Row>
+						<Row>3</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -404,7 +404,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>5</Row>
+						<Row>4</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -438,7 +438,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>10</Row>
+						<Row>9</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -472,7 +472,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>12</Row>
+						<Row>11</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -516,7 +516,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>11</Row>
+						<Row>10</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -560,7 +560,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>13</Row>
+						<Row>12</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -603,8 +603,8 @@ Any inquiries can be addressed to:
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
-						<Column>0</Column>
-						<Row>17</Row>
+						<Column>1</Column>
+						<Row>7</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -645,7 +645,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>6</Row>
+						<Row>5</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -675,7 +675,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>8</Row>
+						<Row>7</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -708,7 +708,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>7</Row>
+						<Row>6</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -740,8 +740,8 @@ Any inquiries can be addressed to:
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
-						<Column>0</Column>
-						<Row>23</Row>
+						<Column>1</Column>
+						<Row>9</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -774,8 +774,8 @@ Any inquiries can be addressed to:
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
-						<Column>0</Column>
-						<Row>16</Row>
+						<Column>1</Column>
+						<Row>6</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -817,8 +817,8 @@ Any inquiries can be addressed to:
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
-						<Column>0</Column>
-						<Row>21</Row>
+						<Column>1</Column>
+						<Row>3</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -860,8 +860,8 @@ Any inquiries can be addressed to:
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
-						<Column>0</Column>
-						<Row>20</Row>
+						<Column>1</Column>
+						<Row>2</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -893,8 +893,8 @@ Any inquiries can be addressed to:
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
-						<Column>0</Column>
-						<Row>19</Row>
+						<Column>1</Column>
+						<Row>1</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -926,8 +926,8 @@ Any inquiries can be addressed to:
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
-						<Column>0</Column>
-						<Row>15</Row>
+						<Column>1</Column>
+						<Row>5</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -1749,7 +1749,7 @@ Any inquiries can be addressed to:
 				</Discreets>
 			</Measurement>
 		</Param>
-		<Param id="300">
+		<Param id="301">
 			<Name>titleBeginDominance</Name>
 			<Description>Dominance</Description>
 			<Type>fixed</Type>
@@ -1759,29 +1759,12 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>9</Row>
+						<Row>8</Row>
 					</Position>
 				</Positions>
 			</Display>
 			<Measurement>
 				<Type options="begin">title</Type>
-			</Measurement>
-		</Param>
-		<Param id="301">
-			<Name>titleEndGeneric</Name>
-			<Type>fixed</Type>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>Latest Quote</Page>
-						<Column>0</Column>
-						<Row>24</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type options="end">title</Type>
 			</Measurement>
 		</Param>
 		<Param id="302">
@@ -1793,8 +1776,8 @@ Any inquiries can be addressed to:
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
-						<Column>0</Column>
-						<Row>14</Row>
+						<Column>1</Column>
+						<Row>4</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -1811,8 +1794,8 @@ Any inquiries can be addressed to:
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
-						<Column>0</Column>
-						<Row>18</Row>
+						<Column>1</Column>
+						<Row>0</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -1829,8 +1812,8 @@ Any inquiries can be addressed to:
 				<Positions>
 					<Position>
 						<Page>Latest Quote</Page>
-						<Column>0</Column>
-						<Row>22</Row>
+						<Column>1</Column>
+						<Row>8</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -1848,7 +1831,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>Latest Quote</Page>
 						<Column>0</Column>
-						<Row>1</Row>
+						<Row>0</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -1856,24 +1839,7 @@ Any inquiries can be addressed to:
 				<Type>title</Type>
 			</Measurement>
 		</Param>
-		<Param id="306">
-			<Name>titleBeginLatestQuote</Name>
-			<Description>Latest Quote</Description>
-			<Type>fixed</Type>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>Latest Quote</Page>
-						<Column>0</Column>
-						<Row>0</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type options="begin">title</Type>
-			</Measurement>
-		</Param>
+		
 		<Param id="311" save="true">
 			<Name>bearerToken</Name>
 			<Description>Bearer Token</Description>
