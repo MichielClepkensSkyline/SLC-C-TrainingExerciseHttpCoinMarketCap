@@ -74,6 +74,7 @@ Any inquiries can be addressed to:
 			<Description>HTTP Response for Latest Listings</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This is the response code for the latest listings HTTP GET request]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -99,6 +100,7 @@ Any inquiries can be addressed to:
 			<Description>Json Response for Latest Listings</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This parameter stores the JSON response of the latest listings GET request]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -142,6 +144,7 @@ Any inquiries can be addressed to:
 			<Name>GetData</Name>
 			<Type>write</Type>
 			<Information>
+				<Subtext><![CDATA[This is the button to get the all of the data]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -199,7 +202,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:101|0-103|2-102|1-104|3-105|4-106|5-107|6-108|7-109|8-110|9-111|10,width:100-100-100-137-122-175-125-103-110-156-100,sort:STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING-INT-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:101|0-103|2-102|1-104|3-105|4-106|5-107|6-108|7-109|8-110|9-111|10,width:100-100-100-137-122-175-125-103-110-156-100,sort:STRING|DESC|1-STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING-INT|DESC|0-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="101" trending="false">
@@ -226,6 +229,7 @@ Any inquiries can be addressed to:
 			<Description>Name (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This is the name of the coin]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -244,6 +248,7 @@ Any inquiries can be addressed to:
 			<Description>Symbol (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This is the symbol of the coin]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -259,9 +264,10 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="104" trending="false">
 			<Name>LatestListingsCoinMarketCapRank</Name>
-			<Description>CoinMarketCap Rank (Latest Listings)</Description>
+			<Description>Coinmarketcap Rank (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This is the rank of the coin on Coin Market Cap]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -280,6 +286,7 @@ Any inquiries can be addressed to:
 			<Description>Circulating Supply (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This is the circulating supply of the coin]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -298,6 +305,7 @@ Any inquiries can be addressed to:
 			<Description>Price in USD (Latest Listing)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This is the current price of the coin in USD]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -316,6 +324,7 @@ Any inquiries can be addressed to:
 			<Description>Market Cap in USD (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This is the market cap of the coin represented in USD]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -334,6 +343,7 @@ Any inquiries can be addressed to:
 			<Description>1 Hour Change (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This field shows the 1 hour change of the coins value in percentages]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -352,6 +362,7 @@ Any inquiries can be addressed to:
 			<Description>24 Hour Volume (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This field represents the 24 hour volume change of the of the coin in percentages]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -366,10 +377,11 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="110" trending="false">
-			<Name>LatestListingLastUpdated</Name>
+			<Name>LatestListingsLastUpdated</Name>
 			<Description>Last Updated (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This field shows the date and time when the data in the row was last updated]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -390,6 +402,7 @@ Any inquiries can be addressed to:
 			<Description>Display Key (Latest Listings)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This field shows the display key of the row]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -408,6 +421,7 @@ Any inquiries can be addressed to:
 			<Description>HTTP Response for Categories</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This parameter shows the HTTP response code of the Categories GET request]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -433,6 +447,7 @@ Any inquiries can be addressed to:
 			<Description>Json Response for Categories</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This parameter stores the JSON response of the Categories HTTP GET request]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -482,7 +497,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:401|0-402|1-403|2-404|3-405|4-406|5-407|6-408|7-409|8,width:100-100-124-142-100-100-156-200-106,sort:STRING-STRING-STRING-STRING-STRING-STRING-INT-STRING-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:401|0-402|1-403|2-404|3-405|4-406|5-407|6-408|7-409|8,width:100-100-124-142-100-100-156-200-106,sort:STRING|DESC|1-STRING-STRING-STRING-STRING-STRING-INT|DESC|0-STRING-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="401" trending="false">
@@ -509,6 +524,7 @@ Any inquiries can be addressed to:
 			<Description>Title (Categories)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This field shows the title of the category]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -524,9 +540,10 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="403" trending="false">
 			<Name>CategoriesNumberOfTokens</Name>
-			<Description>Number Of Tokens (Categories)</Description>
+			<Description>Number of Tokens (Categories)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This field shows the number of tokens that is currently available in each category]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -545,6 +562,7 @@ Any inquiries can be addressed to:
 			<Description>Avreage Price Change (Categories)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This field shows the avreage price change in the category representet in percentages]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -563,6 +581,7 @@ Any inquiries can be addressed to:
 			<Description>Market Cap (Categories)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This field shows the market cap of each category]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -581,6 +600,7 @@ Any inquiries can be addressed to:
 			<Description>Volume (Categories)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This field shows the current volume of coins in the category]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -599,6 +619,7 @@ Any inquiries can be addressed to:
 			<Description>Last Updated (Categories)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This field shows the last date and time the data in the row was updated]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -619,6 +640,7 @@ Any inquiries can be addressed to:
 			<Description>Display Key (Categories)</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This field shows the display key of the row]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -636,10 +658,11 @@ Any inquiries can be addressed to:
 			<Name>CategoriesRefresh</Name>
 			<Type>write</Type>
 			<Information>
+				<Subtext><![CDATA[This is the button used to refresh the data in the respecive row]]></Subtext>
 			</Information>
 			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
+				<RawType>text</RawType>
+				<Type>string</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
@@ -660,6 +683,7 @@ Any inquiries can be addressed to:
 			<Description>HTTP Response for Latest Quotes</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This is the parameter that stores the HTTP response code of the GET request of the Latest Quotes]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -685,6 +709,7 @@ Any inquiries can be addressed to:
 			<Description>Json Response for Latest Quotes</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This is the JSON response of the Latest Quotes HTTP GET Request]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -728,6 +753,7 @@ Any inquiries can be addressed to:
 			<Description>Active Cryptocurrencies</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This paramter shows the number of active cryptocurrencies]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -753,6 +779,7 @@ Any inquiries can be addressed to:
 			<Description>Active Market Pairs</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This parameter shows the number of active market pairs]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -774,10 +801,11 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="505" trending="false">
-			<Name>ActiveExchange</Name>
-			<Description>Active Exchange</Description>
+			<Name>ActiveExchanges</Name>
+			<Description>Active Exchanges</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This parameter shows the number of active exchanges]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -803,6 +831,7 @@ Any inquiries can be addressed to:
 			<Description>Last Updated</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This parameter shows the date and time the data was last updated]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -848,6 +877,7 @@ Any inquiries can be addressed to:
 			<Description>BTC Dominace</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This field shows the dominace of Bitcoin in the market in percentages]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -873,6 +903,7 @@ Any inquiries can be addressed to:
 			<Description>ETH Dominance</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This parameter shows the data of the dominance of Etherium in the market in percentages]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -916,6 +947,7 @@ Any inquiries can be addressed to:
 			<Description>Total Market Cap</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This parameter shows the total cap of the entire market]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -931,6 +963,12 @@ Any inquiries can be addressed to:
 						<Row>11</Row>
 					</Position>
 				</Positions>
+				<Range>
+					<Low>0</Low>
+				</Range>
+				<!-- SuppressValidator 2.9.4 This is the correct unit for this parameter -->
+				<Units>Coins</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -941,6 +979,7 @@ Any inquiries can be addressed to:
 			<Description>Total 24h Volume</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This parameter shows the total 24h volume of the entire market]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -963,7 +1002,7 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="513">
 			<Name>TitleBeginDeFiAndStablecoin</Name>
-			<Description>DeFi and Stablecoin</Description>
+			<Description>Defi and Stablecoin</Description>
 			<Type>fixed</Type>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -981,9 +1020,10 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="514" trending="false">
 			<Name>DeFiMarketCap</Name>
-			<Description>DeFi Market Cap</Description>
+			<Description>Defi Market Cap</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This parameter shows the DeFi Cap of the enitre market]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -1009,6 +1049,7 @@ Any inquiries can be addressed to:
 			<Description>Stablecoin Market Cap</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This parameter shows the Stablecoin Cap of the entire market]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -1044,6 +1085,7 @@ Any inquiries can be addressed to:
 			<Description>Json Response Refresh Category</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This parameter stores the JSON response of the HTTP GET request of a single resonse]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -1066,9 +1108,10 @@ Any inquiries can be addressed to:
 		</Param>
 		<Param id="518" trending="false">
 			<Name>HttpResponseCategoryRefresh</Name>
-			<Description>Http Response Category Refresh</Description>
+			<Description>HTTP Response Category Refresh</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext><![CDATA[This field shows the HTTP response code of the GET request for a single category]]></Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>

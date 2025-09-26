@@ -30,7 +30,7 @@ public static class QAction
             Dictionary<int,object> parameters = new Dictionary<int,object>();
 			parameters[Parameter.activecryptocurrencies_503]= deserializedlatestQuotes.Data.ActiveCryptocurrencies;
 			parameters[Parameter.activemarketpairs_504] =deserializedlatestQuotes.Data.ActiveMarketPairs;
-			parameters[Parameter.activeexchange_505] = deserializedlatestQuotes.Data.ActiveExchanges;
+			parameters[Parameter.activeexchanges_505] = deserializedlatestQuotes.Data.ActiveExchanges;
 			parameters[Parameter.lastupdated_506] = deserializedlatestQuotes.Data.LastUpdated.ToOADate();
 			parameters[Parameter.btcdominance_508] = deserializedlatestQuotes.Data.BtcDominance;
 			parameters[Parameter.ethdominance_509] =deserializedlatestQuotes.Data.EthDominance;

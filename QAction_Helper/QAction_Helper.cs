@@ -55,9 +55,9 @@ public static class Parameter
 	public const int activemarketpairs = 504;
 	/// <summary>PID: 505 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int activeexchange_505 = 505;
+	public const int activeexchanges_505 = 505;
 	/// <summary>PID: 505 | Type: read</summary>
-	public const int activeexchange = 505;
+	public const int activeexchanges = 505;
 	/// <summary>PID: 506 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int lastupdated_506 = 506;
@@ -173,9 +173,9 @@ public static class Parameter
 			public const int latestlistings24hourvolume = 109;
 			/// <summary>PID: 110 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int latestlistinglastupdated_110 = 110;
+			public const int latestlistingslastupdated_110 = 110;
 			/// <summary>PID: 110 | Type: read</summary>
-			public const int latestlistinglastupdated = 110;
+			public const int latestlistingslastupdated = 110;
 			/// <summary>PID: 111 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
 			public const int latestlistingsdisplaykey_111 = 111;
@@ -234,9 +234,9 @@ public static class Parameter
 			public const int latestlistings24hourvolume = 8;
 			/// <summary>IDX: 9 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int latestlistinglastupdated_110 = 9;
+			public const int latestlistingslastupdated_110 = 9;
 			/// <summary>IDX: 9 | Type: read</summary>
-			public const int latestlistinglastupdated = 9;
+			public const int latestlistingslastupdated = 9;
 			/// <summary>IDX: 10 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
 			public const int latestlistingsdisplaykey_111 = 10;
@@ -393,8 +393,8 @@ public interface SLProtocolExt : SLProtocol
 	object Latestlistings1hourchange { get; set; }
 	object Latestlistings24hourvolume_109 { get; set; }
 	object Latestlistings24hourvolume { get; set; }
-	object Latestlistinglastupdated_110 { get; set; }
-	object Latestlistinglastupdated { get; set; }
+	object Latestlistingslastupdated_110 { get; set; }
+	object Latestlistingslastupdated { get; set; }
 	object Latestlistingsdisplaykey_111 { get; set; }
 	object Latestlistingsdisplaykey { get; set; }
 	object Httpresponsecodecategories_300 { get; set; }
@@ -428,8 +428,8 @@ public interface SLProtocolExt : SLProtocol
 	object Activecryptocurrencies { get; set; }
 	object Activemarketpairs_504 { get; set; }
 	object Activemarketpairs { get; set; }
-	object Activeexchange_505 { get; set; }
-	object Activeexchange { get; set; }
+	object Activeexchanges_505 { get; set; }
+	object Activeexchanges { get; set; }
 	object Lastupdated_506 { get; set; }
 	object Lastupdated { get; set; }
 	object Titlebegindominance__fixed { get; set; }
@@ -529,9 +529,9 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Latestlistings24hourvolume {get { return GetParameter(109); }set { SetParameter(109, value); }}
 	/// <summary>PID: 110  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Latestlistinglastupdated_110 {get { return GetParameter(110); }set { SetParameter(110, value); }}
+	public System.Object Latestlistingslastupdated_110 {get { return GetParameter(110); }set { SetParameter(110, value); }}
 	/// <summary>PID: 110  | Type: read</summary>
-	public System.Object Latestlistinglastupdated {get { return GetParameter(110); }set { SetParameter(110, value); }}
+	public System.Object Latestlistingslastupdated {get { return GetParameter(110); }set { SetParameter(110, value); }}
 	/// <summary>PID: 111  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsdisplaykey_111 {get { return GetParameter(111); }set { SetParameter(111, value); }}
@@ -615,9 +615,9 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Activemarketpairs {get { return GetParameter(504); }set { SetParameter(504, value); }}
 	/// <summary>PID: 505  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Activeexchange_505 {get { return GetParameter(505); }set { SetParameter(505, value); }}
+	public System.Object Activeexchanges_505 {get { return GetParameter(505); }set { SetParameter(505, value); }}
 	/// <summary>PID: 505  | Type: read</summary>
-	public System.Object Activeexchange {get { return GetParameter(505); }set { SetParameter(505, value); }}
+	public System.Object Activeexchanges {get { return GetParameter(505); }set { SetParameter(505, value); }}
 	/// <summary>PID: 506  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Lastupdated_506 {get { return GetParameter(506); }set { SetParameter(506, value); }}
@@ -746,9 +746,9 @@ public class LatestlistingsQActionRow : QActionTableRow
 	public System.Object Latestlistings24hourvolume { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
 	/// <summary>PID: 110 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Latestlistinglastupdated_110 { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
+	public System.Object Latestlistingslastupdated_110 { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
 	/// <summary>PID: 110 | Type: read</summary>
-	public System.Object Latestlistinglastupdated { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
+	public System.Object Latestlistingslastupdated { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
 	/// <summary>PID: 111 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsdisplaykey_111 { get { if (base.Columns.ContainsKey(10)) { return base.Columns[10]; } else { return null; } } set { if (base.Columns.ContainsKey(10)) { base.Columns[10] = value; } else { base.Columns.Add(10, value); } } }

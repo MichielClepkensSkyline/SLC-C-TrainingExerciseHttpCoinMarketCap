@@ -42,7 +42,7 @@ public static class QAction
 					Latestlistingsmarketcap_107 =latestListings.Quote.USD.MarketCap,
 					Latestlistings1hourchange_108= latestListings.Quote.USD.PercentChange1h,
 					Latestlistings24hourvolume_109 = latestListings.Quote.USD.Volume24h,
-					Latestlistinglastupdated_110 = latestListings.LastUpdated.ToOADate(),
+					Latestlistingslastupdated_110 = latestListings.LastUpdated.ToOADate(),
                 }.ToObjectArray();
                 protocol.FillArray(Parameter.Latestlistings.tablePid, latestListingsDictionary.Values.ToList(), NotifyProtocol.SaveOption.Full);
             }
