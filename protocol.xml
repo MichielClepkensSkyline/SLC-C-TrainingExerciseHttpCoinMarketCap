@@ -117,7 +117,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type options="password">string</Type>
 			</Measurement>
 		</Param>
 		<Param id="5" trending="false">
@@ -2656,22 +2656,22 @@ The unique ID of the category.]]>
 		<Action id="7">
 			<Name>Execute Quotes HTTP Request Group</Name>
 			<On id="6">group</On>
-			<Type>execute</Type>
+			<Type>execute next</Type>
 		</Action>
 		<Action id="8">
 			<Name>Execute Categories HTTP Request Group</Name>
 			<On id="5">group</On>
-			<Type>execute</Type>
+			<Type>execute next</Type>
 		</Action>
 		<Action id="9">
 			<Name>Execute Listings HTTP Request Group</Name>
 			<On id="4">group</On>
-			<Type>execute</Type>
+			<Type>execute next</Type>
 		</Action>
 		<Action id="10">
 			<Name>Send HTTP Request for One Category</Name>
 			<On id="7">group</On>
-			<Type>execute</Type>
+			<Type>execute next</Type>
 		</Action>
 	</Actions>
 
