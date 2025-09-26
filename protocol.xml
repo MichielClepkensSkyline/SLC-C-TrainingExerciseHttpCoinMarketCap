@@ -297,16 +297,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 There is no predefined unit currencies. -->
 				<Units>currencies</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -335,16 +331,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 There is no predefined unit currencies. -->
 				<Units>currencies</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -373,15 +365,11 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Display>
+				<!-- SuppressValidator 2.9.4 There is no predefined unit exchanges. -->
 				<Units>exchanges</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -411,16 +399,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 There is no predefined unit exchanges. -->
 				<Units>exchanges</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -449,12 +433,6 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -489,12 +467,6 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -529,12 +501,6 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -579,12 +545,6 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -629,12 +589,6 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -679,12 +633,6 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -727,12 +675,6 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>8</Decimals>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -762,17 +704,13 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
+				<!-- SuppressValidator 2.9.4 There is no predefined unit $. -->
 				<Units>$</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -801,17 +739,13 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
+				<!-- SuppressValidator 2.9.4 There is no predefined unit $. -->
 				<Units>$</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -840,12 +774,6 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -880,12 +808,6 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -929,12 +851,6 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -978,17 +894,13 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
+				<!-- SuppressValidator 2.9.4 There is no predefined unit $. -->
 				<Units>$</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1017,17 +929,13 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
+				<!-- SuppressValidator 2.9.4 There is no predefined unit $. -->
 				<Units>$</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1117,12 +1025,6 @@ Any inquiries can be addressed to:
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1144,12 +1046,6 @@ Any inquiries can be addressed to:
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1171,12 +1067,6 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 				<Decimals>8</Decimals>
 			</Interprete>
 			<Display>
@@ -1200,16 +1090,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 There is no predefined unit coins. -->
 				<Units>coins</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1231,12 +1117,6 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1248,7 +1128,9 @@ Any inquiries can be addressed to:
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 There is no predefined unit rank. -->
 				<Units>rank</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1271,12 +1153,6 @@ Any inquiries can be addressed to:
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>8</Decimals>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1299,12 +1175,6 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1318,7 +1188,9 @@ Any inquiries can be addressed to:
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>2</Decimals>
+				<!-- SuppressValidator 2.9.4 There is no predefined unit $. -->
 				<Units>$</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1340,12 +1212,6 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1382,12 +1248,6 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1424,16 +1284,12 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 There is no predefined unit $. -->
 				<Units>$</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1512,7 +1368,9 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 There is no predefined unit coins. -->
 				<Units>coins</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1534,12 +1392,6 @@ Any inquiries can be addressed to:
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1578,7 +1430,9 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 There is no predefined unit $. -->
 				<Units>$</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Decimals>2</Decimals>
 				<Range>
 					<Low>0</Low>
@@ -1683,7 +1537,9 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 There is no predefined unit tokens. -->
 				<Units>tokens</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1745,7 +1601,9 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 There is no predefined unit $. -->
 				<Units>$</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1806,7 +1664,9 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 There is no predefined unit $. -->
 				<Units>$</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>

@@ -50,8 +50,8 @@ public static class QAction
 					latestListingsTableContent[latest_listing.Id] = new LatestlistingsQActionRow
 					{
 						Latestlistingsid_101 = latest_listing.Id.ToString(),
-						Latestlistingsname_102 = latest_listing.Name,
-						Latestlistingssymbol_103 = latest_listing.Symbol,
+						Latestlistingsname_102 = latest_listing.Name ?? exceptionValue.ToString(),
+						Latestlistingssymbol_103 = latest_listing.Symbol ?? exceptionValue.ToString(),
 						Latestlistingsdateadded_104 = latest_listing.DateAdded.ToOADate(),
 						Latestlistingscirculatingsupply_105 = latest_listing.TotalSupply,
 						Latestlistingsrank_106 = latest_listing.CmcRank,
