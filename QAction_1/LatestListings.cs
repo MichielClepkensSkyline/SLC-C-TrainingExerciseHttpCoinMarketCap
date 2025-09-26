@@ -19,7 +19,7 @@
 		public string Slug { get; set; }
 
 		[JsonProperty("num_market_pairs")]
-		public int NumMarketPairs { get; set; }
+		public int? NumMarketPairs { get; set; }
 
 		[JsonProperty("date_added")]
 		public DateTime DateAdded { get; set; }
@@ -31,10 +31,10 @@
 		public double? MaxSupply { get; set; }
 
 		[JsonProperty("circulating_supply")]
-		public double CirculatingSupply { get; set; }
+		public double? CirculatingSupply { get; set; }
 
 		[JsonProperty("total_supply")]
-		public double TotalSupply { get; set; }
+		public double? TotalSupply { get; set; }
 
 		[JsonProperty("infinite_supply")]
 		public bool InfiniteSupply { get; set; }
@@ -43,7 +43,7 @@
 		public Platform Platform { get; set; }
 
 		[JsonProperty("cmc_rank")]
-		public int CmcRank { get; set; }
+		public int? CmcRank { get; set; }
 
 		[JsonProperty("self_reported_circulating_supply")]
 		public double? SelfReportedCirculatingSupply { get; set; }
@@ -121,40 +121,40 @@
 	public class USD
 	{
 		[JsonProperty("price")]
-		public double Price { get; set; }
+		public double? Price { get; set; }
 
 		[JsonProperty("volume_24h")]
-		public double Volume24h { get; set; }
+		public double? Volume24h { get; set; }
 
 		[JsonProperty("volume_change_24h")]
-		public double VolumeChange24h { get; set; }
+		public double? VolumeChange24h { get; set; }
 
 		[JsonProperty("percent_change_1h")]
-		public double PercentChange1h { get; set; }
+		public double? PercentChange1h { get; set; }
 
 		[JsonProperty("percent_change_24h")]
-		public double PercentChange24h { get; set; }
+		public double? PercentChange24h { get; set; }
 
 		[JsonProperty("percent_change_7d")]
-		public double PercentChange7d { get; set; }
+		public double? PercentChange7d { get; set; }
 
 		[JsonProperty("percent_change_30d")]
-		public double PercentChange30d { get; set; }
+		public double? PercentChange30d { get; set; }
 
 		[JsonProperty("percent_change_60d")]
-		public double PercentChange60d { get; set; }
+		public double? PercentChange60d { get; set; }
 
 		[JsonProperty("percent_change_90d")]
-		public double PercentChange90d { get; set; }
+		public double? PercentChange90d { get; set; }
 
 		[JsonProperty("market_cap")]
-		public double MarketCap { get; set; }
+		public double? MarketCap { get; set; }
 
 		[JsonProperty("market_cap_dominance")]
-		public double MarketCapDominance { get; set; }
+		public double? MarketCapDominance { get; set; }
 
 		[JsonProperty("fully_diluted_market_cap")]
-		public double FullyDilutedMarketCap { get; set; }
+		public double? FullyDilutedMarketCap { get; set; }
 
 		[JsonProperty("tvl")]
 		public double? Tvl { get; set; }

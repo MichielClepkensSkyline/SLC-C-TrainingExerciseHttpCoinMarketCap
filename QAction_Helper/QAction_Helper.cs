@@ -472,7 +472,7 @@ public class WriteParameters
 {
 	/// <summary>PID: 5  | Type: write | DISCREETS: Send Request = 1</summary>
 	public System.Object Sendrequest {get { return Protocol.GetParameter(5); }set { Protocol.SetParameter(5, value); }}
-	/// <summary>PID: 211  | Type: write | DISCREETS: Refresh Row = 1</summary>
+	/// <summary>PID: 211  | Type: write | DISCREETS: Refresh Row = 1 | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Categoriesrefreshbutton {get { return Protocol.GetParameter(211); }set { Protocol.SetParameter(211, value); }}
 	/// <summary>PID: 362  | Type: write</summary>
 	public System.Object Acceskeytoken {get { return Protocol.GetParameter(362); }set { Protocol.SetParameter(362, value); }}
@@ -668,105 +668,105 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Individualcategoryapi_13 {get { return GetParameter(13); }set { SetParameter(13, value); }}
 	/// <summary>PID: 13  | Type: read</summary>
 	public System.Object Individualcategoryapi {get { return GetParameter(13); }set { SetParameter(13, value); }}
-	/// <summary>PID: 30  | Type: read</summary>
+	/// <summary>PID: 30  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestquoteactivecryptocurrencies_30 {get { return GetParameter(30); }set { SetParameter(30, value); }}
-	/// <summary>PID: 30  | Type: read</summary>
+	/// <summary>PID: 30  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestquoteactivecryptocurrencies {get { return GetParameter(30); }set { SetParameter(30, value); }}
-	/// <summary>PID: 31  | Type: read</summary>
+	/// <summary>PID: 31  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestquotetotalcryptocurrencies_31 {get { return GetParameter(31); }set { SetParameter(31, value); }}
-	/// <summary>PID: 31  | Type: read</summary>
+	/// <summary>PID: 31  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestquotetotalcryptocurrencies {get { return GetParameter(31); }set { SetParameter(31, value); }}
-	/// <summary>PID: 32  | Type: read</summary>
+	/// <summary>PID: 32  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestquoteactiveexchanges_32 {get { return GetParameter(32); }set { SetParameter(32, value); }}
-	/// <summary>PID: 32  | Type: read</summary>
+	/// <summary>PID: 32  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestquoteactiveexchanges {get { return GetParameter(32); }set { SetParameter(32, value); }}
-	/// <summary>PID: 33  | Type: read</summary>
+	/// <summary>PID: 33  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestquotetotalexchanges_33 {get { return GetParameter(33); }set { SetParameter(33, value); }}
-	/// <summary>PID: 33  | Type: read</summary>
+	/// <summary>PID: 33  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestquotetotalexchanges {get { return GetParameter(33); }set { SetParameter(33, value); }}
-	/// <summary>PID: 34  | Type: read</summary>
+	/// <summary>PID: 34  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestquoteethdominance_34 {get { return GetParameter(34); }set { SetParameter(34, value); }}
-	/// <summary>PID: 34  | Type: read</summary>
+	/// <summary>PID: 34  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestquoteethdominance {get { return GetParameter(34); }set { SetParameter(34, value); }}
-	/// <summary>PID: 35  | Type: read</summary>
+	/// <summary>PID: 35  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestquotebtcdominance_35 {get { return GetParameter(35); }set { SetParameter(35, value); }}
-	/// <summary>PID: 35  | Type: read</summary>
+	/// <summary>PID: 35  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestquotebtcdominance {get { return GetParameter(35); }set { SetParameter(35, value); }}
-	/// <summary>PID: 36  | Type: read</summary>
+	/// <summary>PID: 36  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestquoteethdominance24percentagechange_36 {get { return GetParameter(36); }set { SetParameter(36, value); }}
-	/// <summary>PID: 36  | Type: read</summary>
+	/// <summary>PID: 36  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestquoteethdominance24percentagechange {get { return GetParameter(36); }set { SetParameter(36, value); }}
-	/// <summary>PID: 37  | Type: read</summary>
+	/// <summary>PID: 37  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestquotebtcdominance24percentagechange_37 {get { return GetParameter(37); }set { SetParameter(37, value); }}
-	/// <summary>PID: 37  | Type: read</summary>
+	/// <summary>PID: 37  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestquotebtcdominance24percentagechange {get { return GetParameter(37); }set { SetParameter(37, value); }}
-	/// <summary>PID: 38  | Type: read</summary>
+	/// <summary>PID: 38  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestquotedefi24hpercentagechange_38 {get { return GetParameter(38); }set { SetParameter(38, value); }}
-	/// <summary>PID: 38  | Type: read</summary>
+	/// <summary>PID: 38  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestquotedefi24hpercentagechange {get { return GetParameter(38); }set { SetParameter(38, value); }}
-	/// <summary>PID: 39  | Type: read</summary>
+	/// <summary>PID: 39  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestquotetodaychangepercent_39 {get { return GetParameter(39); }set { SetParameter(39, value); }}
-	/// <summary>PID: 39  | Type: read</summary>
+	/// <summary>PID: 39  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestquotetodaychangepercent {get { return GetParameter(39); }set { SetParameter(39, value); }}
 	/// <summary>PID: 40  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestquotelastupdate_40 {get { return GetParameter(40); }set { SetParameter(40, value); }}
 	/// <summary>PID: 40  | Type: read</summary>
 	public System.Object Latestquotelastupdate {get { return GetParameter(40); }set { SetParameter(40, value); }}
-	/// <summary>PID: 41  | Type: read</summary>
+	/// <summary>PID: 41  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestquotetotalmarketcap24h_41 {get { return GetParameter(41); }set { SetParameter(41, value); }}
-	/// <summary>PID: 41  | Type: read</summary>
+	/// <summary>PID: 41  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestquotetotalmarketcap24h {get { return GetParameter(41); }set { SetParameter(41, value); }}
-	/// <summary>PID: 42  | Type: read</summary>
+	/// <summary>PID: 42  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestquotealtcoinvolume24h_42 {get { return GetParameter(42); }set { SetParameter(42, value); }}
-	/// <summary>PID: 42  | Type: read</summary>
+	/// <summary>PID: 42  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestquotealtcoinvolume24h {get { return GetParameter(42); }set { SetParameter(42, value); }}
-	/// <summary>PID: 43  | Type: read</summary>
+	/// <summary>PID: 43  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestquotedefivolume24hpercentagechange_43 {get { return GetParameter(43); }set { SetParameter(43, value); }}
-	/// <summary>PID: 43  | Type: read</summary>
+	/// <summary>PID: 43  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestquotedefivolume24hpercentagechange {get { return GetParameter(43); }set { SetParameter(43, value); }}
-	/// <summary>PID: 44  | Type: read</summary>
+	/// <summary>PID: 44  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestquotestablecoinvolume24hpercentagechange_44 {get { return GetParameter(44); }set { SetParameter(44, value); }}
-	/// <summary>PID: 44  | Type: read</summary>
+	/// <summary>PID: 44  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestquotestablecoinvolume24hpercentagechange {get { return GetParameter(44); }set { SetParameter(44, value); }}
-	/// <summary>PID: 45  | Type: read</summary>
+	/// <summary>PID: 45  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestquotederivativesvolume24hpercentagechange_45 {get { return GetParameter(45); }set { SetParameter(45, value); }}
-	/// <summary>PID: 45  | Type: read</summary>
+	/// <summary>PID: 45  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestquotederivativesvolume24hpercentagechange {get { return GetParameter(45); }set { SetParameter(45, value); }}
-	/// <summary>PID: 46  | Type: read</summary>
+	/// <summary>PID: 46  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestquotederivativesvolume24h_46 {get { return GetParameter(46); }set { SetParameter(46, value); }}
-	/// <summary>PID: 46  | Type: read</summary>
+	/// <summary>PID: 46  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestquotederivativesvolume24h {get { return GetParameter(46); }set { SetParameter(46, value); }}
-	/// <summary>PID: 47  | Type: read</summary>
+	/// <summary>PID: 47  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestquotedefivolume24h_47 {get { return GetParameter(47); }set { SetParameter(47, value); }}
-	/// <summary>PID: 47  | Type: read</summary>
+	/// <summary>PID: 47  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestquotedefivolume24h {get { return GetParameter(47); }set { SetParameter(47, value); }}
 	/// <summary>PID: 101  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsid_101 {get { return GetParameter(101); }set { SetParameter(101, value); }}
 	/// <summary>PID: 101  | Type: read</summary>
 	public System.Object Latestlistingsid {get { return GetParameter(101); }set { SetParameter(101, value); }}
-	/// <summary>PID: 102  | Type: read</summary>
+	/// <summary>PID: 102  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsname_102 {get { return GetParameter(102); }set { SetParameter(102, value); }}
-	/// <summary>PID: 102  | Type: read</summary>
+	/// <summary>PID: 102  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestlistingsname {get { return GetParameter(102); }set { SetParameter(102, value); }}
 	/// <summary>PID: 103  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
@@ -778,40 +778,40 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Latestlistingsdateadded_104 {get { return GetParameter(104); }set { SetParameter(104, value); }}
 	/// <summary>PID: 104  | Type: read</summary>
 	public System.Object Latestlistingsdateadded {get { return GetParameter(104); }set { SetParameter(104, value); }}
-	/// <summary>PID: 105  | Type: read</summary>
+	/// <summary>PID: 105  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingscirculatingsupply_105 {get { return GetParameter(105); }set { SetParameter(105, value); }}
-	/// <summary>PID: 105  | Type: read</summary>
+	/// <summary>PID: 105  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestlistingscirculatingsupply {get { return GetParameter(105); }set { SetParameter(105, value); }}
-	/// <summary>PID: 106  | Type: read</summary>
+	/// <summary>PID: 106  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsrank_106 {get { return GetParameter(106); }set { SetParameter(106, value); }}
-	/// <summary>PID: 106  | Type: read</summary>
+	/// <summary>PID: 106  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestlistingsrank {get { return GetParameter(106); }set { SetParameter(106, value); }}
 	/// <summary>PID: 107  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingslastupdated_107 {get { return GetParameter(107); }set { SetParameter(107, value); }}
 	/// <summary>PID: 107  | Type: read</summary>
 	public System.Object Latestlistingslastupdated {get { return GetParameter(107); }set { SetParameter(107, value); }}
-	/// <summary>PID: 108  | Type: read</summary>
+	/// <summary>PID: 108  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsquoteprice_108 {get { return GetParameter(108); }set { SetParameter(108, value); }}
-	/// <summary>PID: 108  | Type: read</summary>
+	/// <summary>PID: 108  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestlistingsquoteprice {get { return GetParameter(108); }set { SetParameter(108, value); }}
-	/// <summary>PID: 109  | Type: read</summary>
+	/// <summary>PID: 109  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistings1hpercentagechange_109 {get { return GetParameter(109); }set { SetParameter(109, value); }}
-	/// <summary>PID: 109  | Type: read</summary>
+	/// <summary>PID: 109  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestlistings1hpercentagechange {get { return GetParameter(109); }set { SetParameter(109, value); }}
-	/// <summary>PID: 110  | Type: read</summary>
+	/// <summary>PID: 110  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsquotevolumechange24h_110 {get { return GetParameter(110); }set { SetParameter(110, value); }}
-	/// <summary>PID: 110  | Type: read</summary>
+	/// <summary>PID: 110  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestlistingsquotevolumechange24h {get { return GetParameter(110); }set { SetParameter(110, value); }}
-	/// <summary>PID: 111  | Type: read</summary>
+	/// <summary>PID: 111  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsquotemarketcap_111 {get { return GetParameter(111); }set { SetParameter(111, value); }}
-	/// <summary>PID: 111  | Type: read</summary>
+	/// <summary>PID: 111  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestlistingsquotemarketcap {get { return GetParameter(111); }set { SetParameter(111, value); }}
 	/// <summary>PID: 112  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
@@ -828,55 +828,55 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Latestlistingsmaxsupply_114 {get { return GetParameter(114); }set { SetParameter(114, value); }}
 	/// <summary>PID: 114  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestlistingsmaxsupply {get { return GetParameter(114); }set { SetParameter(114, value); }}
-	/// <summary>PID: 115  | Type: read</summary>
+	/// <summary>PID: 115  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsquotemarketcapdominance_115 {get { return GetParameter(115); }set { SetParameter(115, value); }}
-	/// <summary>PID: 115  | Type: read</summary>
+	/// <summary>PID: 115  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestlistingsquotemarketcapdominance {get { return GetParameter(115); }set { SetParameter(115, value); }}
-	/// <summary>PID: 116  | Type: read</summary>
+	/// <summary>PID: 116  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsquotevolume24h_116 {get { return GetParameter(116); }set { SetParameter(116, value); }}
-	/// <summary>PID: 116  | Type: read</summary>
+	/// <summary>PID: 116  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Latestlistingsquotevolume24h {get { return GetParameter(116); }set { SetParameter(116, value); }}
 	/// <summary>PID: 201  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Categoriesid_201 {get { return GetParameter(201); }set { SetParameter(201, value); }}
 	/// <summary>PID: 201  | Type: read</summary>
 	public System.Object Categoriesid {get { return GetParameter(201); }set { SetParameter(201, value); }}
-	/// <summary>PID: 202  | Type: read</summary>
+	/// <summary>PID: 202  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Categoriesname_202 {get { return GetParameter(202); }set { SetParameter(202, value); }}
-	/// <summary>PID: 202  | Type: read</summary>
+	/// <summary>PID: 202  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Categoriesname {get { return GetParameter(202); }set { SetParameter(202, value); }}
-	/// <summary>PID: 203  | Type: read</summary>
+	/// <summary>PID: 203  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Categoriesnumberoftokens_203 {get { return GetParameter(203); }set { SetParameter(203, value); }}
-	/// <summary>PID: 203  | Type: read</summary>
+	/// <summary>PID: 203  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Categoriesnumberoftokens {get { return GetParameter(203); }set { SetParameter(203, value); }}
-	/// <summary>PID: 204  | Type: read</summary>
+	/// <summary>PID: 204  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Categoriesaveragepricechange_204 {get { return GetParameter(204); }set { SetParameter(204, value); }}
-	/// <summary>PID: 204  | Type: read</summary>
+	/// <summary>PID: 204  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Categoriesaveragepricechange {get { return GetParameter(204); }set { SetParameter(204, value); }}
-	/// <summary>PID: 205  | Type: read</summary>
+	/// <summary>PID: 205  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Categoriesmarketcap_205 {get { return GetParameter(205); }set { SetParameter(205, value); }}
-	/// <summary>PID: 205  | Type: read</summary>
+	/// <summary>PID: 205  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Categoriesmarketcap {get { return GetParameter(205); }set { SetParameter(205, value); }}
-	/// <summary>PID: 206  | Type: read</summary>
+	/// <summary>PID: 206  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Categoriesmarketcapchange_206 {get { return GetParameter(206); }set { SetParameter(206, value); }}
-	/// <summary>PID: 206  | Type: read</summary>
+	/// <summary>PID: 206  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Categoriesmarketcapchange {get { return GetParameter(206); }set { SetParameter(206, value); }}
-	/// <summary>PID: 207  | Type: read</summary>
+	/// <summary>PID: 207  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Categoriesvolume_207 {get { return GetParameter(207); }set { SetParameter(207, value); }}
-	/// <summary>PID: 207  | Type: read</summary>
+	/// <summary>PID: 207  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Categoriesvolume {get { return GetParameter(207); }set { SetParameter(207, value); }}
-	/// <summary>PID: 208  | Type: read</summary>
+	/// <summary>PID: 208  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Categoriesvolumechange_208 {get { return GetParameter(208); }set { SetParameter(208, value); }}
-	/// <summary>PID: 208  | Type: read</summary>
+	/// <summary>PID: 208  | Type: read | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Categoriesvolumechange {get { return GetParameter(208); }set { SetParameter(208, value); }}
 	/// <summary>PID: 209  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
@@ -888,9 +888,9 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Categoriesdisplaykey_210 {get { return GetParameter(210); }set { SetParameter(210, value); }}
 	/// <summary>PID: 210  | Type: read</summary>
 	public System.Object Categoriesdisplaykey {get { return GetParameter(210); }set { SetParameter(210, value); }}
-	/// <summary>PID: 211  | Type: write | DISCREETS: Refresh Row = 1</summary>
+	/// <summary>PID: 211  | Type: write | DISCREETS: Refresh Row = 1 | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Categoriesrefreshbutton_211 {get { return GetParameter(211); }set { SetParameter(211, value); }}
-	/// <summary>PID: 211  | Type: write | DISCREETS: Refresh Row = 1</summary>
+	/// <summary>PID: 211  | Type: write | DISCREETS: Refresh Row = 1 | EXCEPTIONS: Not Available = -100</summary>
 	public System.Object Categoriesrefreshbutton {get { return Write.Categoriesrefreshbutton; }set { Write.Categoriesrefreshbutton = value; }}
 	/// <summary>PID: 301  | Type: fixed</summary>
 	public System.Object Titlebegindominance__fixed {get { return GetParameter(301); }set { SetParameter(301, value); }}

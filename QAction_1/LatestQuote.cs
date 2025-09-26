@@ -6,88 +6,88 @@
 	public class Data
 	{
 		[JsonProperty("active_cryptocurrencies")]
-		public int ActiveCryptocurrencies { get; set; }
+		public int? ActiveCryptocurrencies { get; set; }
 
 		[JsonProperty("total_cryptocurrencies")]
-		public int TotalCryptocurrencies { get; set; }
+		public int? TotalCryptocurrencies { get; set; }
 
 		[JsonProperty("active_market_pairs")]
-		public int ActiveMarketPairs { get; set; }
+		public int? ActiveMarketPairs { get; set; }
 
 		[JsonProperty("active_exchanges")]
-		public int ActiveExchanges { get; set; }
+		public int? ActiveExchanges { get; set; }
 
 		[JsonProperty("total_exchanges")]
-		public int TotalExchanges { get; set; }
+		public int? TotalExchanges { get; set; }
 
 		[JsonProperty("eth_dominance")]
-		public double EthDominance { get; set; }
+		public double? EthDominance { get; set; }
 
 		[JsonProperty("btc_dominance")]
-		public double BtcDominance { get; set; }
+		public double? BtcDominance { get; set; }
 
 		[JsonProperty("eth_dominance_yesterday")]
-		public double EthDominanceYesterday { get; set; }
+		public double? EthDominanceYesterday { get; set; }
 
 		[JsonProperty("btc_dominance_yesterday")]
-		public double BtcDominanceYesterday { get; set; }
+		public double? BtcDominanceYesterday { get; set; }
 
 		[JsonProperty("eth_dominance_24h_percentage_change")]
-		public double EthDominance24hPercentageChange { get; set; }
+		public double? EthDominance24hPercentageChange { get; set; }
 
 		[JsonProperty("btc_dominance_24h_percentage_change")]
-		public double BtcDominance24hPercentageChange { get; set; }
+		public double? BtcDominance24hPercentageChange { get; set; }
 
 		[JsonProperty("defi_volume_24h")]
-		public double DefiVolume24h { get; set; }
+		public double? DefiVolume24h { get; set; }
 
 		[JsonProperty("defi_volume_24h_reported")]
-		public double DefiVolume24hReported { get; set; }
+		public double? DefiVolume24hReported { get; set; }
 
 		[JsonProperty("defi_market_cap")]
-		public double DefiMarketCap { get; set; }
+		public double? DefiMarketCap { get; set; }
 
 		[JsonProperty("defi_24h_percentage_change")]
-		public double Defi24hPercentageChange { get; set; }
+		public double? Defi24hPercentageChange { get; set; }
 
 		[JsonProperty("stablecoin_volume_24h")]
-		public double StablecoinVolume24h { get; set; }
+		public double? StablecoinVolume24h { get; set; }
 
 		[JsonProperty("stablecoin_volume_24h_reported")]
 		public double StablecoinVolume24hReported { get; set; }
 
 		[JsonProperty("stablecoin_market_cap")]
-		public double StablecoinMarketCap { get; set; }
+		public double? StablecoinMarketCap { get; set; }
 
 		[JsonProperty("stablecoin_24h_percentage_change")]
-		public double Stablecoin24hPercentageChange { get; set; }
+		public double? Stablecoin24hPercentageChange { get; set; }
 
 		[JsonProperty("derivatives_volume_24h")]
-		public double DerivativesVolume24h { get; set; }
+		public double? DerivativesVolume24h { get; set; }
 
 		[JsonProperty("derivatives_volume_24h_reported")]
-		public double DerivativesVolume24hReported { get; set; }
+		public double? DerivativesVolume24hReported { get; set; }
 
 		[JsonProperty("derivatives_24h_percentage_change")]
-		public double Derivatives24hPercentageChange { get; set; }
+		public double? Derivatives24hPercentageChange { get; set; }
 
 		[JsonProperty("total_crypto_dex_currencies")]
-		public int TotalCryptoDexCurrencies { get; set; }
+		public int? TotalCryptoDexCurrencies { get; set; }
 
 		[JsonProperty("today_incremental_crypto_number")]
-		public int TodayIncrementalCryptoNumber { get; set; }
+		public int? TodayIncrementalCryptoNumber { get; set; }
 
 		[JsonProperty("past_24h_incremental_crypto_number")]
-		public int Past24hIncrementalCryptoNumber { get; set; }
+		public int? Past24hIncrementalCryptoNumber { get; set; }
 
 		[JsonProperty("past_7d_incremental_crypto_number")]
-		public int Past7dIncrementalCryptoNumber { get; set; }
+		public int? Past7dIncrementalCryptoNumber { get; set; }
 
 		[JsonProperty("past_30d_incremental_crypto_number")]
-		public int Past30dIncrementalCryptoNumber { get; set; }
+		public int? Past30dIncrementalCryptoNumber { get; set; }
 
 		[JsonProperty("today_change_percent")]
-		public double TodayChangePercent { get; set; }
+		public double? TodayChangePercent { get; set; }
 
 		[JsonProperty("tracked_yearly_number")]
 		public TrackedYearlyNumber TrackedYearlyNumber { get; set; }
@@ -138,7 +138,7 @@
 	public class TrackedYearlyNumber
 	{
 		[JsonProperty("maxIncrementalNumber")]
-		public int MaxIncrementalNumber { get; set; }
+		public int? MaxIncrementalNumber { get; set; }
 
 		[JsonProperty("minIncrementalNumber")]
 		public int MinIncrementalNumber { get; set; }
@@ -153,67 +153,67 @@
 	public class USD
 	{
 		[JsonProperty("total_market_cap")]
-		public double TotalMarketCap { get; set; }
+		public double? TotalMarketCap { get; set; }
 
 		[JsonProperty("total_volume_24h")]
-		public double TotalVolume24h { get; set; }
+		public double? TotalVolume24h { get; set; }
 
 		[JsonProperty("total_volume_24h_reported")]
-		public double TotalVolume24hReported { get; set; }
+		public double? TotalVolume24hReported { get; set; }
 
 		[JsonProperty("altcoin_volume_24h")]
-		public double AltcoinVolume24h { get; set; }
+		public double? AltcoinVolume24h { get; set; }
 
 		[JsonProperty("altcoin_volume_24h_reported")]
-		public double AltcoinVolume24hReported { get; set; }
+		public double? AltcoinVolume24hReported { get; set; }
 
 		[JsonProperty("altcoin_market_cap")]
-		public double AltcoinMarketCap { get; set; }
+		public double? AltcoinMarketCap { get; set; }
 
 		[JsonProperty("defi_volume_24h")]
-		public double DefiVolume24h { get; set; }
+		public double? DefiVolume24h { get; set; }
 
 		[JsonProperty("defi_volume_24h_reported")]
-		public double DefiVolume24hReported { get; set; }
+		public double? DefiVolume24hReported { get; set; }
 
 		[JsonProperty("defi_24h_percentage_change")]
-		public double Defi24hPercentageChange { get; set; }
+		public double? Defi24hPercentageChange { get; set; }
 
 		[JsonProperty("defi_market_cap")]
-		public double DefiMarketCap { get; set; }
+		public double? DefiMarketCap { get; set; }
 
 		[JsonProperty("stablecoin_volume_24h")]
-		public double StablecoinVolume24h { get; set; }
+		public double? StablecoinVolume24h { get; set; }
 
 		[JsonProperty("stablecoin_volume_24h_reported")]
-		public double StablecoinVolume24hReported { get; set; }
+		public double? StablecoinVolume24hReported { get; set; }
 
 		[JsonProperty("stablecoin_24h_percentage_change")]
-		public double Stablecoin24hPercentageChange { get; set; }
+		public double? Stablecoin24hPercentageChange { get; set; }
 
 		[JsonProperty("stablecoin_market_cap")]
-		public double StablecoinMarketCap { get; set; }
+		public double? StablecoinMarketCap { get; set; }
 
 		[JsonProperty("derivatives_volume_24h")]
-		public double DerivativesVolume24h { get; set; }
+		public double? DerivativesVolume24h { get; set; }
 
 		[JsonProperty("derivatives_volume_24h_reported")]
-		public double DerivativesVolume24hReported { get; set; }
+		public double? DerivativesVolume24hReported { get; set; }
 
 		[JsonProperty("derivatives_24h_percentage_change")]
-		public double Derivatives24hPercentageChange { get; set; }
+		public double? Derivatives24hPercentageChange { get; set; }
 
 		[JsonProperty("total_market_cap_yesterday")]
-		public double TotalMarketCapYesterday { get; set; }
+		public double? TotalMarketCapYesterday { get; set; }
 
 		[JsonProperty("total_volume_24h_yesterday")]
-		public long TotalVolume24hYesterday { get; set; }
+		public long? TotalVolume24hYesterday { get; set; }
 
 		[JsonProperty("total_market_cap_yesterday_percentage_change")]
-		public double TotalMarketCapYesterdayPercentageChange { get; set; }
+		public double? TotalMarketCapYesterdayPercentageChange { get; set; }
 
 		[JsonProperty("total_volume_24h_yesterday_percentage_change")]
-		public double TotalVolume24hYesterdayPercentageChange { get; set; }
+		public double? TotalVolume24hYesterdayPercentageChange { get; set; }
 
 		[JsonProperty("last_updated")]
 		public DateTime LastUpdated { get; set; }

@@ -41,6 +41,8 @@ public static class QAction
 	{
 		Dictionary<string, object[]> categoriesTableContent = new Dictionary<string, object[]>();
 
+		var exceptionValue = -100;
+
 		foreach (Category category in categories.CategoryList)
 		{
 			if (!String.IsNullOrWhiteSpace(category.Id))
@@ -48,13 +50,13 @@ public static class QAction
 				categoriesTableContent[category.Id] = new CategoriesQActionRow
 				{
 					Categoriesid_201 = category.Id.ToString(),
-					Categoriesname_202 = category.Name,
-					Categoriesnumberoftokens_203 = category.NumTokens,
-					Categoriesaveragepricechange_204 = category.AvgPriceChange,
-					Categoriesmarketcap_205 = category.MarketCap,
-					Categoriesmarketcapchange_206 = category.MarketCapChange,
-					Categoriesvolume_207 = category.Volume,
-					Categoriesvolumechange_208 = category.VolumeChange,
+					Categoriesname_202 = category.Name ?? exceptionValue.ToString(),
+					Categoriesnumberoftokens_203 = category.NumTokens ?? exceptionValue,
+					Categoriesaveragepricechange_204 = category?.AvgPriceChange ?? exceptionValue,
+					Categoriesmarketcap_205 = category.MarketCap ?? exceptionValue,
+					Categoriesmarketcapchange_206 = category.MarketCapChange ?? exceptionValue,
+					Categoriesvolume_207 = category.Volume ?? exceptionValue,
+					Categoriesvolumechange_208 = category.VolumeChange ?? exceptionValue,
 					Categorieslastupdated_209 = category.LastUpdated.ToOADate(),
 				}.ToObjectArray();
 			}
