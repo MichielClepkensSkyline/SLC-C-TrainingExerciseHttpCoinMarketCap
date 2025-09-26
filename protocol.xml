@@ -1339,7 +1339,7 @@ The unique ID of the category.]]>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Units>coins</Units>
+				<Units>Units</Units>
 				<Decimals>0</Decimals>
 			</Display>
 			<Measurement>
@@ -1415,7 +1415,7 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
-				<Units>coins</Units>
+				<Units>USD</Units>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1490,7 +1490,7 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
-				<Units>coins</Units>
+				<Units>USD</Units>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1599,7 +1599,7 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
-				<Units>coins</Units>
+				<Units>Units</Units>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -1633,7 +1633,7 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
-				<Units>coins</Units>
+				<Units>Units</Units>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -1678,7 +1678,7 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
-				<Units>pairs</Units>
+				<Units>Units</Units>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -1712,7 +1712,7 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
-				<Units>exchanges</Units>
+				<Units>Units</Units>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -1746,7 +1746,7 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
-				<Units>exchanges</Units>
+				<Units>Units</Units>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -1980,7 +1980,7 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
-				<Units>coins</Units>
+				<Units>USD</Units>
 				<Positions>
 					<Position>
 						<Page>Quotes</Page>
@@ -2024,7 +2024,7 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
-				<Units>coins</Units>
+				<Units>USD</Units>
 				<Positions>
 					<Position>
 						<Page>Quotes</Page>
@@ -2043,7 +2043,7 @@ The unique ID of the category.]]>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[This is the percentage that DeFi changed during the last 24h.]]>
+					<![CDATA[This is the percentage that the value of DeFi changed during the last 24h.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -2118,7 +2118,7 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
-				<Units>coins</Units>
+				<Units>USD</Units>
 				<Positions>
 					<Position>
 						<Page>Quotes</Page>
@@ -2162,7 +2162,7 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
-				<Units>coins</Units>
+				<Units>USD</Units>
 				<Positions>
 					<Position>
 						<Page>Quotes</Page>
@@ -2181,7 +2181,7 @@ The unique ID of the category.]]>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[This is the percentage that Stablecoin changed during the last 24h.]]>
+					<![CDATA[This is the percentage that the value of Stablecoin changed during the last 24h.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
@@ -2246,7 +2246,7 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
-				<Units>DEXs</Units>
+				<Units>Units</Units>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -2291,7 +2291,7 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
-				<Units>coins</Units>
+				<Units>Units</Units>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -2335,7 +2335,7 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
-				<Units>coins</Units>
+				<Units>USD</Units>
 				<Positions>
 					<Position>
 						<Page>General</Page>
