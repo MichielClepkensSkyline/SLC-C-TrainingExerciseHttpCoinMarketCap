@@ -1,8 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
 using Skyline.DataMiner.Scripting;
 using Skyline.DataMiner.Scripting.Category;
 using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
@@ -23,9 +19,6 @@ public static class QAction
 		{
 			string json = protocol.GetParameter(Parameter.responseindividualcategory_12).ToString();
 			Category category = SecureNewtonsoftDeserialization.DeserializeObject<Category>(json);
-			/*string statusCode = protocol.GetParameter(Parameter.statuscodeindividualcategory_11).ToString();
-			int status = Int32.Parse(statusCode.Split(' ')[1]);
-			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|statusCode: '{statusCode}'  and response {category.Data.Id}", LogType.Information, LogLevel.NoLogging);*/
 
 			if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodeindividualcategory_11))
 			{

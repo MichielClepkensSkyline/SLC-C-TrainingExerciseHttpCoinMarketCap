@@ -1,8 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
-
 using Skyline.DataMiner.Scripting;
 
 /// <summary>
@@ -19,11 +15,10 @@ public static class QAction
 		try
 		{
 			string token = protocol.GetParameter(Parameter.acceskeytoken_312).ToString();
-			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Access key: {token}", LogType.Error, LogLevel.NoLogging);
+			string bearerPrefix = "Bearer ";
+			string bearerToken = bearerPrefix + token;
 
-			string bearerToken = "Bearer " + token;
-			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|BEarer key: {bearerToken}", LogType.Error, LogLevel.NoLogging);
-			protocol.SetParameter(Parameter.bearetoken_311, bearerToken);
+			protocol.SetParameter(Parameter.bearertoken_311, bearerToken);
 		}
 		catch (Exception ex)
 		{

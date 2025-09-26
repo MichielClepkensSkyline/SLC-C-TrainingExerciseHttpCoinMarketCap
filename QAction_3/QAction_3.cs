@@ -1,13 +1,10 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using Skyline.DataMiner.Scripting;
 using Skyline.DataMiner.Scripting.LatestListings;
 using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
 using Skyline.Protocol.QAction_1;
-
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
 
 /// <summary>
 /// DataMiner QAction Class: Parse Latest Listings.
@@ -31,20 +28,6 @@ public static class QAction
 					FillLatestListingsTable(protocol, latestListings);
 				}
 			}
-			/*var statusCode = protocol.GetParameter(Parameter.statuscodelatestlistings_3).ToString();
-			int status = Int32.Parse(statusCode.Split(' ')[1]);
-			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run| Status {status}", LogType.Error, LogLevel.NoLogging);
-
-
-			if (status == 200)
-			{
-				FillLatestListingsTable(protocol, latestListings);
-			}
-			else
-			{
-				protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown: Status of the response is: {status}", LogType.Error, LogLevel.NoLogging);
-
-			}*/
 		}
 		catch (Exception ex)
 		{
@@ -87,7 +70,6 @@ public static class QAction
 				{
 					protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run| Latest Listing Id is null", LogType.Error, LogLevel.NoLogging);
 				}
-
 			}
 
 			protocol.FillArray(Parameter.Latestlistings.tablePid, latestListingsTableContent.Values.ToList(), NotifyProtocol.SaveOption.Full);

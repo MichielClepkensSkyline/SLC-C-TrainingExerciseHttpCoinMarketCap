@@ -1,16 +1,10 @@
-
-
+using System;
+using System.Collections.Generic;
 using Skyline.DataMiner.Scripting;
 using Skyline.DataMiner.Scripting.LatestQuote;
 using Skyline.DataMiner.Utils.Protocol.Extension;
 using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
 using Skyline.Protocol.QAction_1;
-
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
 
 /// <summary>
 /// DataMiner QAction Class: Parse Latest Quote.
@@ -35,19 +29,6 @@ public static class QAction
 					FillLatestQuoteParameters(protocol, latestQuote.Data);
 				}
 			}
-			/*string statusCode = protocol.GetParameter(Parameter.statuscodelatestquote_9).ToString();
-			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|statusCode: '{statusCode}'", LogType.Information, LogLevel.NoLogging);
-
-			int status = Int32.Parse(statusCode.Split(' ')[1]);
-
-			if (status == 200)
-			{
-				FillLatestQuoteParameters(protocol, latestQuote.Data);
-			}
-			else
-			{
-				protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown: Status of the response is: {status}", LogType.Error, LogLevel.NoLogging);
-			}*/
 		}
 		catch (Exception ex)
 		{

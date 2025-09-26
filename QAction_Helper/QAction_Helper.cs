@@ -145,9 +145,9 @@ public static class Parameter
 	public const int latestquotedefivolume24h = 47;
 	/// <summary>PID: 311 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int bearetoken_311 = 311;
+	public const int bearertoken_311 = 311;
 	/// <summary>PID: 311 | Type: read</summary>
-	public const int bearetoken = 311;
+	public const int bearertoken = 311;
 	/// <summary>PID: 312 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int acceskeytoken_312 = 312;
@@ -606,8 +606,8 @@ public interface SLProtocolExt : SLProtocol
 	object Titlebeginaltcoin__fixed { get; set; }
 	object Titlebegincryptomarketoverview__fixed { get; set; }
 	object Titlebeginlatestquote__fixed { get; set; }
-	object Bearetoken_311 { get; set; }
-	object Bearetoken { get; set; }
+	object Bearertoken_311 { get; set; }
+	object Bearertoken { get; set; }
 	object Acceskeytoken_312 { get; set; }
 	object Acceskeytoken { get; set; }
 	object Acceskeytoken_362 { get; set; }
@@ -910,9 +910,9 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Titlebeginlatestquote__fixed {get { return GetParameter(306); }set { SetParameter(306, value); }}
 	/// <summary>PID: 311  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Bearetoken_311 {get { return GetParameter(311); }set { SetParameter(311, value); }}
+	public System.Object Bearertoken_311 {get { return GetParameter(311); }set { SetParameter(311, value); }}
 	/// <summary>PID: 311  | Type: read</summary>
-	public System.Object Bearetoken {get { return GetParameter(311); }set { SetParameter(311, value); }}
+	public System.Object Bearertoken {get { return GetParameter(311); }set { SetParameter(311, value); }}
 	/// <summary>PID: 312  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Acceskeytoken_312 {get { return GetParameter(312); }set { SetParameter(312, value); }}

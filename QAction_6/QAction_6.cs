@@ -1,12 +1,8 @@
 using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
-
 using Skyline.DataMiner.Scripting;
 
 /// <summary>
-/// DataMiner QAction Class: Make The API To Call in Session 4.
+/// DataMiner QAction Class: Make The Url For Individual Category.
 /// </summary>
 public static class QAction
 {
@@ -18,14 +14,9 @@ public static class QAction
 	{
 		try
 		{
-			/*var rowPK = protocol.RowKey();
-			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Row: {rowPK}", LogType.Error, LogLevel.NoLogging);*/
-
-			string api = Form(protocol);
+			string api = FormUrl(protocol);
 
 			protocol.SetParameter(Parameter.individualcategoryapi_13, api);
-
-			//protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|API :{protocol.GetParameter(Parameter.individualcategoryapi_13)}", LogType.Error, LogLevel.NoLogging);
 		}
 		catch (Exception ex)
 		{
@@ -33,11 +24,13 @@ public static class QAction
 		}
 	}
 
-	private static string Form(SLProtocol protocol)
+	private static string FormUrl(SLProtocol protocol)
 	{
 		var rowPK = protocol.RowKey();
-		string firstPartOfApi = "api/custom/coinmarketcap?content=category&id=";
+		string firstPartOfUrl = "api/custom/coinmarketcap?content=category&id=";
 
-		return firstPartOfApi + rowPK.ToString();
+		string completeUrl = firstPartOfUrl + rowPK.ToString();
+
+		return completeUrl;
 	}
 }
