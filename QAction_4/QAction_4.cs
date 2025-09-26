@@ -72,8 +72,10 @@ public static class QAction
         }
 
         object[] categoriesColumns = protocol.categories.QActionRowsToObjectFillArray(categoryRows.Values.ToArray());
-        protocol.FillArray(Parameter.Categories.tablePid, categoriesColumns);
-        /*object succes = protocol.FillArray(Parameter.Categories.tablePid, categoriesColumns);
-        protocol.Log($"QA{protocol.QActionID}|FillCategories|{succes.ToString()} SOFIAN", LogType.Error, LogLevel.NoLogging); // Kan toevoegen voor het checken op succes.*/
+        bool succes = (bool)protocol.FillArray(Parameter.Categories.tablePid, categoriesColumns);
+        if (!succes)
+        {
+            protocol.Log($"QA{protocol.QActionID}|FillCategories|The categories table set has not succeeded", LogType.Error, LogLevel.NoLogging);
+        }
     }
 }

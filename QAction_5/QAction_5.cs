@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Skyline.DataMiner.Scripting;
 using Skyline.DataMiner.Scripting.HTTP;
 using Skyline.DataMiner.Scripting.Quote;
@@ -42,7 +43,7 @@ public static class QAction
 		}
 	}
 
-	private static void FillLatestQuotes(SLProtocolExt protocol, Data data)
+	private static void FillLatestQuotes(SLProtocol protocol, Data data)
     {
         if (data != null)
         {
@@ -69,7 +70,11 @@ public static class QAction
                 { Parameter.totalvolume24h, data.Quote?.USD?.TotalVolume24h },
                 { Parameter.lastupdated, data.LastUpdated.ToLocalTime().ToOADate() },
             };
-            protocol.SetParameters(parameters);
+            uint[] array_succes = (uint[])protocol.SetParameters(parameters.Keys.ToArray(),parameters.Values.ToArray());
+            if (!array_succes.All(r => r == 0))
+            {
+                protocol.Log($"QA{protocol.QActionID}|FillLatestQuotes|Setting the quote and general params has not succeeded", LogType.Error, LogLevel.NoLogging);
+            }
         }
 	}
 }

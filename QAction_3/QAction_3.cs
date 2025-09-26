@@ -89,6 +89,11 @@ public static class QAction
         }
 
 		object[] lastListingColumns = protocol.lastlisting.QActionRowsToObjectFillArray(lastListingRows.Values.ToArray());
-		protocol.FillArray(Parameter.Lastlisting.tablePid, lastListingColumns);
+		bool succes = (bool)protocol.FillArray(Parameter.Lastlisting.tablePid, lastListingColumns);
+
+		if (! succes)
+		{
+			protocol.Log($"QA{protocol.QActionID}|FillLastListings|The listings table set has not succeeded", LogType.Error, LogLevel.NoLogging);
+		}
 	}
 }

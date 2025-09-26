@@ -63,10 +63,11 @@ public static class QAction
                 Categoriesvolumechange = category.VolumeChange,
                 Categorieslastupdated = category.LastUpdated.ToLocalTime().ToOADate(),
             };
-            protocol.categories.SetRow(category.Id, categoryQActionRow);
+            bool succes = (bool)protocol.categories.SetRow(category.Id, categoryQActionRow)[0];
+            if (!succes)
+            {
+                protocol.Log($"QA{protocol.QActionID}|FillCategory|Setting the category row ({category.Id}) has not succeeded", LogType.Error, LogLevel.NoLogging);
+            }
         }
-
-        /*object succes = protocol.FillArray(Parameter.Categories.tablePid, categoriesColumns);
-        protocol.Log($"QA{protocol.QActionID}|FillCategories|{succes.ToString()} SOFIAN", LogType.Error, LogLevel.NoLogging); // Kan toevoegen voor het checken op succes.*/
     }
 }

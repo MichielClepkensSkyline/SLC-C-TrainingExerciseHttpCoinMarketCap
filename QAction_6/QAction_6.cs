@@ -21,7 +21,11 @@ public static class QAction
 		{
 			string categoryId = protocol.RowKey();
 			string url = $"api/custom/coinmarketcap?content=category&id={categoryId}";
-			protocol.SetParameter(Parameter.urlonecategory, url);
+			int succes = protocol.SetParameter(Parameter.urlonecategory, url);
+			if (succes!=0)
+            {
+                protocol.Log($"QA{protocol.QActionID}|Run|The one category url set has not succeeded", LogType.Error, LogLevel.NoLogging);
+            }
         }
 		catch (Exception ex)
 		{
