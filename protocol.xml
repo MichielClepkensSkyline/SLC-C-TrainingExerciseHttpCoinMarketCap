@@ -613,9 +613,6 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>0</Decimals>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Alarm type="absolute:204">
 				<Monitored>true</Monitored>
@@ -632,6 +629,9 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<RTDisplay>true</RTDisplay>
 				<Units>Units</Units>
 				<Decimals>0</Decimals>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -651,9 +651,6 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>0</Decimals>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Alarm type="relative:205">
 				<Monitored>true</Monitored>
@@ -670,6 +667,9 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<RTDisplay>true</RTDisplay>
 				<Units>Units</Units>
 				<Decimals>0</Decimals>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -688,9 +688,6 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Alarm type="relative:206">
 				<Monitored>true</Monitored>
@@ -707,6 +704,9 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<RTDisplay>true</RTDisplay>
 				<Units>Units</Units>
 				<Decimals>3</Decimals>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -725,9 +725,6 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Alarm type="relative:207">
 				<Monitored>true</Monitored>
@@ -744,6 +741,9 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<RTDisplay>true</RTDisplay>
 				<Units>Units</Units>
 				<Decimals>3</Decimals>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -762,12 +762,9 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>0</Low>
-				</Range>
 				<Exceptions>
 					<Exception id="1" value="-1">
-						<Display state="disabled">No max supply</Display>
+						<Display state="disabled">No Max Supply</Display>
 						<Value>0</Value>
 					</Exception>
 				</Exceptions>
@@ -776,6 +773,9 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<RTDisplay>true</RTDisplay>
 				<Units>Units</Units>
 				<Decimals>3</Decimals>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -840,10 +840,6 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>0</Low>
-					<High>100</High>
-				</Range>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -857,6 +853,10 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
 				<Decimals>3</Decimals>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -925,9 +925,6 @@ A market quote in the currency conversion option.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Alarm type="relative:214">
 				<Monitored>true</Monitored>
@@ -944,6 +941,9 @@ A market quote in the currency conversion option.]]>
 				<RTDisplay>true</RTDisplay>
 				<Units>USD</Units>
 				<Decimals>3</Decimals>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -962,9 +962,6 @@ A market quote in the currency conversion option.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Alarm type="relative:215">
 				<Monitored>true</Monitored>
@@ -981,6 +978,9 @@ A market quote in the currency conversion option.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>USD</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -999,10 +999,6 @@ A market quote in the currency conversion option.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>-100</Low>
-					<High>100</High>
-				</Range>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1019,6 +1015,10 @@ A market quote in the currency conversion option.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>%</Units>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1053,6 +1053,9 @@ A market quote in the currency conversion option.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>USD</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1071,10 +1074,6 @@ A market quote in the currency conversion option.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>0</Low>
-					<High>100</High>
-				</Range>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1087,6 +1086,10 @@ A market quote in the currency conversion option.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1105,10 +1108,6 @@ A market quote in the currency conversion option.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>-100</Low>
-					<High>100</High>
-				</Range>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1125,6 +1124,10 @@ A market quote in the currency conversion option.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>%</Units>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1143,10 +1146,6 @@ A market quote in the currency conversion option.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>-100</Low>
-					<High>100</High>
-				</Range>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1163,6 +1162,10 @@ A market quote in the currency conversion option.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>%</Units>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1181,10 +1184,6 @@ A market quote in the currency conversion option.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>-100</Low>
-					<High>100</High>
-				</Range>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1201,6 +1200,10 @@ A market quote in the currency conversion option.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>%</Units>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1364,14 +1367,14 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>0</Decimals>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>Units</Units>
 				<Decimals>0</Decimals>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1390,10 +1393,6 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>-100</Low>
-					<High>100</High>
-				</Range>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1410,6 +1409,10 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
 				<Decimals>3</Decimals>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1428,9 +1431,6 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Alarm type="relative:407">
 				<Monitored>true</Monitored>
@@ -1447,6 +1447,9 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>USD</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1465,10 +1468,6 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>-100</Low>
-					<High>100</High>
-				</Range>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1485,6 +1484,10 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>%</Units>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1503,9 +1506,6 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Alarm type="relative:409">
 				<Monitored>true</Monitored>
@@ -1522,6 +1522,9 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>USD</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1540,10 +1543,6 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>-100</Low>
-					<High>100</High>
-				</Range>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1560,6 +1559,10 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>%</Units>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
 			</Display>
 			<Measurement>
 				<Type>number</Type>
@@ -1648,14 +1651,14 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>0</Decimals>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
 				<Units>Units</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -1682,14 +1685,14 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>0</Decimals>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
 				<Units>Units</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -1716,9 +1719,6 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>0</Decimals>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Alarm type="relative:602">
 				<Monitored>true</Monitored>
@@ -1735,6 +1735,9 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
 				<Units>Units</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -1761,14 +1764,14 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>0</Decimals>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
 				<Units>Units</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -1795,14 +1798,14 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>0</Decimals>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
 				<Units>Units</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -1828,10 +1831,6 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>0</Low>
-					<High>100</High>
-				</Range>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1878,10 +1877,6 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>0</Low>
-					<High>100</High>
-				</Range>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1928,10 +1923,6 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>-100</Low>
-					<High>100</High>
-				</Range>
 			</Interprete>
 			<Alarm type="relative:607">
 				<Monitored>true</Monitored>
@@ -1948,6 +1939,10 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>%</Units>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>Quotes</Page>
@@ -1973,10 +1968,6 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>-100</Low>
-					<High>100</High>
-				</Range>
 			</Interprete>
 			<Alarm type="relative:608">
 				<Monitored>true</Monitored>
@@ -1993,6 +1984,10 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>%</Units>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>Quotes</Page>
@@ -2007,7 +2002,7 @@ The unique ID of the category.]]>
 		</Param>
 		<Param id="609" trending="true">
 			<Name>defiVolume24h</Name>
-			<Description>DeFi Volume 24h</Description>
+			<Description>Defi Volume 24h</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
@@ -2018,9 +2013,6 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Alarm type="relative:609">
 				<Monitored>true</Monitored>
@@ -2037,6 +2029,9 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>USD</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>Quotes</Page>
@@ -2051,7 +2046,7 @@ The unique ID of the category.]]>
 		</Param>
 		<Param id="610" trending="true">
 			<Name>defiMarketCap</Name>
-			<Description>DeFi Market Cap</Description>
+			<Description>Defi Market Cap</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
@@ -2062,9 +2057,6 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Alarm type="relative:610">
 				<Monitored>true</Monitored>
@@ -2081,6 +2073,9 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>USD</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>Quotes</Page>
@@ -2095,7 +2090,7 @@ The unique ID of the category.]]>
 		</Param>
 		<Param id="611" trending="true">
 			<Name>defi24hPercentageChange</Name>
-			<Description>DeFi 24h Percentage Change</Description>
+			<Description>Defi 24h Percentage Change</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
@@ -2106,10 +2101,6 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>-100</Low>
-					<High>100</High>
-				</Range>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -2156,9 +2147,6 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Alarm type="relative:612">
 				<Monitored>true</Monitored>
@@ -2175,6 +2163,9 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>USD</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>Quotes</Page>
@@ -2200,9 +2191,6 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Alarm type="relative:613">
 				<Monitored>true</Monitored>
@@ -2219,6 +2207,9 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>USD</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>Quotes</Page>
@@ -2244,10 +2235,6 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>-100</Low>
-					<High>100</High>
-				</Range>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -2295,14 +2282,14 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>0</Decimals>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
 				<Units>Units</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -2329,9 +2316,6 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>0</Decimals>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Alarm type="relative:616">
 				<Monitored>true</Monitored>
@@ -2348,6 +2332,9 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>0</Decimals>
 				<Units>Units</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -2373,9 +2360,6 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Alarm type="relative:617">
 				<Monitored>true</Monitored>
@@ -2392,6 +2376,9 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>USD</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>General</Page>
@@ -2417,9 +2404,6 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<Range>
-					<Low>0</Low>
-				</Range>
 			</Interprete>
 			<Alarm type="relative:618">
 				<Monitored>true</Monitored>
@@ -2436,6 +2420,9 @@ The unique ID of the category.]]>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
 				<Units>USD</Units>
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>General</Page>

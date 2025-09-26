@@ -895,10 +895,10 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Lastlistingtotalsupply_207 {get { return GetParameter(207); }set { SetParameter(207, value); }}
 	/// <summary>PID: 207  | Type: read</summary>
 	public System.Object Lastlistingtotalsupply {get { return GetParameter(207); }set { SetParameter(207, value); }}
-	/// <summary>PID: 208  | Type: read | EXCEPTIONS: No max supply = 0</summary>
+	/// <summary>PID: 208  | Type: read | EXCEPTIONS: No Max Supply = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Lastlistingmaxsupply_208 {get { return GetParameter(208); }set { SetParameter(208, value); }}
-	/// <summary>PID: 208  | Type: read | EXCEPTIONS: No max supply = 0</summary>
+	/// <summary>PID: 208  | Type: read | EXCEPTIONS: No Max Supply = 0</summary>
 	public System.Object Lastlistingmaxsupply {get { return GetParameter(208); }set { SetParameter(208, value); }}
 	/// <summary>PID: 209  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
