@@ -431,7 +431,7 @@ Any inquiries can be addressed to:
 				<Decimals>2</Decimals>
 				<Units>%</Units>
 				<Range>
-					<Low>0</Low>
+					<Low>-100</Low>
 					<High>100</High>
 				</Range>
 				<Positions>
@@ -465,7 +465,7 @@ Any inquiries can be addressed to:
 				<Decimals>2</Decimals>
 				<Units>%</Units>
 				<Range>
-					<Low>0</Low>
+					<Low>-100</Low>
 					<High>100</High>
 				</Range>
 				<Positions>
@@ -509,7 +509,7 @@ Any inquiries can be addressed to:
 				<Decimals>2</Decimals>
 				<Units>%</Units>
 				<Range>
-					<Low>-20</Low>
+					<Low>-100</Low>
 					<High>100</High>
 				</Range>
 				<Positions>
@@ -553,7 +553,7 @@ Any inquiries can be addressed to:
 				<Decimals>2</Decimals>
 				<Units>%</Units>
 				<Range>
-					<Low>-20</Low>
+					<Low>-100</Low>
 					<High>100</High>
 				</Range>
 				<Positions>
@@ -597,7 +597,7 @@ Any inquiries can be addressed to:
 				<Decimals>2</Decimals>
 				<Units>%</Units>
 				<Range>
-					<Low>-20</Low>
+					<Low>-100</Low>
 					<High>100</High>
 				</Range>
 				<Positions>
@@ -638,7 +638,7 @@ Any inquiries can be addressed to:
 				<Decimals>3</Decimals>
 				<Units>%</Units>
 				<Range>
-					<Low>0</Low>
+					<Low>-100</Low>
 					<High>100</High>
 				</Range>
 				<Positions>
@@ -768,7 +768,7 @@ Any inquiries can be addressed to:
 				<Decimals>3</Decimals>
 				<Units>%</Units>
 				<Range>
-					<Low>0</Low>
+					<Low>-100</Low>
 					<High>100</High>
 				</Range>
 				<Positions>
@@ -811,7 +811,7 @@ Any inquiries can be addressed to:
 				<Decimals>3</Decimals>
 				<Units>%</Units>
 				<Range>
-					<Low>-30</Low>
+					<Low>-100</Low>
 					<High>100</High>
 				</Range>
 				<Positions>
@@ -854,7 +854,7 @@ Any inquiries can be addressed to:
 				<Decimals>3</Decimals>
 				<Units>%</Units>
 				<Range>
-					<Low>-30</Low>
+					<Low>-100</Low>
 					<High>100</High>
 				</Range>
 				<Positions>
@@ -1205,7 +1205,7 @@ Any inquiries can be addressed to:
 				<Units>%</Units>
 				<Decimals>2</Decimals>
 				<Range>
-					<Low>0</Low>
+					<Low>-100</Low>
 					<High>100</High>
 				</Range>
 			</Display>
@@ -1241,7 +1241,7 @@ Any inquiries can be addressed to:
 				<Units>%</Units>
 				<Decimals>2</Decimals>
 				<Range>
-					<Low>0</Low>
+					<Low>-100</Low>
 					<High>100</High>
 				</Range>
 			</Display>
@@ -1369,12 +1369,18 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
+				<CH>40.0</CH>
+				<MaH>20.0</MaH>
+				<MiH>5.0</MiH>
+				<Normal>1.0</Normal>
+				<MaL>0.1</MaL>
+				<CL>-2.0</CL>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
 				<Range>
-					<Low>0</Low>
+					<Low>-100</Low>
 					<High>100</High>
 				</Range>
 			</Display>
@@ -1541,7 +1547,7 @@ Any inquiries can be addressed to:
 				<Decimals>2</Decimals>
 				<Units>%</Units>
 				<Range>
-					<Low>0</Low>
+					<Low>-100</Low>
 					<High>100</High>
 				</Range>
 			</Display>
@@ -1601,7 +1607,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
 				<Range>
-					<Low>0</Low>
+					<Low>-100</Low>
 					<High>100</High>
 				</Range>
 				<Decimals>2</Decimals>
@@ -1663,7 +1669,7 @@ Any inquiries can be addressed to:
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
 				<Range>
-					<Low>0</Low>
+					<Low>-100</Low>
 					<High>100</High>
 				</Range>
 				<Decimals>2</Decimals>
