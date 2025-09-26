@@ -60,7 +60,7 @@ Any inquiries can be addressed to:
 
 	<Compliancies>
 		<CassandraReady>true</CassandraReady>
-		<MinimumRequiredVersion>10.1.0.0 - 9966</MinimumRequiredVersion>
+		<MinimumRequiredVersion>10.3.0.0 - 12752</MinimumRequiredVersion>
 	</Compliancies>
 
 	<Params>
@@ -939,7 +939,9 @@ A market quote in the currency conversion option.]]>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Decimals>3</Decimals>
 				<Range>
 					<Low>0</Low>
@@ -977,7 +979,9 @@ A market quote in the currency conversion option.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
+				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1052,7 +1056,9 @@ A market quote in the currency conversion option.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
+				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1446,7 +1452,9 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
+				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1521,7 +1529,9 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
+				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -2028,7 +2038,9 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
+				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -2072,7 +2084,9 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
+				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -2162,7 +2176,9 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
+				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -2206,7 +2222,9 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
+				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -2375,7 +2393,9 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
+				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -2419,7 +2439,9 @@ The unique ID of the category.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Decimals>3</Decimals>
+				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
 				<Range>
 					<Low>0</Low>
 				</Range>
