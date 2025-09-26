@@ -1,13 +1,13 @@
-using Skyline.DataMiner.Scripting;
-using Skyline.DataMiner.Scripting.Category;
-using Skyline.DataMiner.Scripting.HTTP;
-using Skyline.DataMiner.Utils.Protocol.Extension;
-using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using Skyline.DataMiner.Scripting;
+using Skyline.DataMiner.Scripting.Category;
+using Skyline.DataMiner.Scripting.HTTP;
+using Skyline.DataMiner.Utils.Protocol.Extension;
+using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
 
 /// <summary>
 /// DataMiner QAction Class.
