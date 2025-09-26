@@ -289,15 +289,21 @@ Any inquiries can be addressed to:
 				<Subtext><![CDATA[This is the circulating supply of the coin]]></Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 This is the correct unit for this parameter -->
+				<Units>Coins</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="106" trending="false">
@@ -308,15 +314,21 @@ Any inquiries can be addressed to:
 				<Subtext><![CDATA[This is the current price of the coin in USD]]></Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 This is the correct unit for this parameter -->
+				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="107" trending="false">
@@ -327,15 +339,21 @@ Any inquiries can be addressed to:
 				<Subtext><![CDATA[This is the market cap of the coin represented in USD]]></Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 This is the correct unit for this parameter -->
+				<Units>USD</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="108" trending="false">
@@ -346,15 +364,20 @@ Any inquiries can be addressed to:
 				<Subtext><![CDATA[This field shows the 1 hour change of the coins value in percentages]]></Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="109" trending="false">
@@ -365,15 +388,20 @@ Any inquiries can be addressed to:
 				<Subtext><![CDATA[This field represents the 24 hour volume change of the of the coin in percentages]]></Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="110" trending="false">
@@ -546,15 +574,21 @@ Any inquiries can be addressed to:
 				<Subtext><![CDATA[This field shows the number of tokens that is currently available in each category]]></Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 This is the correct unit for this parameter -->
+				<Units>Tokens</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="404" trending="false">
@@ -565,15 +599,20 @@ Any inquiries can be addressed to:
 				<Subtext><![CDATA[This field shows the avreage price change in the category representet in percentages]]></Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Range>
+					<Low>-100</Low>
+					<High>100</High>
+				</Range>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="405" trending="false">
@@ -584,15 +623,21 @@ Any inquiries can be addressed to:
 				<Subtext><![CDATA[This field shows the market cap of each category]]></Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 This is the correct unit for this parameter -->
+				<Units>Coins</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="406" trending="false">
@@ -603,15 +648,21 @@ Any inquiries can be addressed to:
 				<Subtext><![CDATA[This field shows the current volume of coins in the category]]></Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 This is the correct unit for this parameter -->
+				<Units>Coins</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+				<Range>
+					<Low>0</Low>
+				</Range>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="407" trending="false">
@@ -756,12 +807,18 @@ Any inquiries can be addressed to:
 				<Subtext><![CDATA[This paramter shows the number of active cryptocurrencies]]></Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 This is the correct unit for this parameter -->
+				<Units>Cryptocurrencies</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>Latest Quotes</Page>
@@ -771,7 +828,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="504" trending="false">
@@ -782,12 +839,18 @@ Any inquiries can be addressed to:
 				<Subtext><![CDATA[This parameter shows the number of active market pairs]]></Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 This is the correct unit for this parameter -->
+				<Units>Pairs</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>Latest Quotes</Page>
@@ -797,7 +860,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="505" trending="false">
@@ -808,12 +871,18 @@ Any inquiries can be addressed to:
 				<Subtext><![CDATA[This parameter shows the number of active exchanges]]></Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 This is the correct unit for this parameter -->
+				<Units>Exchanges</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>Latest Quotes</Page>
@@ -823,7 +892,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="506" trending="false">
@@ -880,11 +949,16 @@ Any inquiries can be addressed to:
 				<Subtext><![CDATA[This field shows the dominace of Bitcoin in the market in percentages]]></Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
@@ -895,7 +969,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="509" trending="false">
@@ -906,12 +980,17 @@ Any inquiries can be addressed to:
 				<Subtext><![CDATA[This parameter shows the data of the dominance of Etherium in the market in percentages]]></Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Units>%</Units>
+				<Range>
+					<Low>0</Low>
+					<High>100</High>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>Latest Quotes</Page>
@@ -921,7 +1000,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="510">
@@ -982,12 +1061,18 @@ Any inquiries can be addressed to:
 				<Subtext><![CDATA[This parameter shows the total 24h volume of the entire market]]></Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 This is the correct unit for this parameter -->
+				<Units>Coins</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>Latest Quotes</Page>
@@ -997,7 +1082,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="513">
@@ -1026,12 +1111,18 @@ Any inquiries can be addressed to:
 				<Subtext><![CDATA[This parameter shows the DeFi Cap of the enitre market]]></Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<!-- SuppressValidator 2.9.4 This is the correct unit for this parameter -->
+				<Units>Coins</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<Positions>
 					<Position>
 						<Page>Latest Quotes</Page>
@@ -1041,7 +1132,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="515" trending="false">
@@ -1052,11 +1143,17 @@ Any inquiries can be addressed to:
 				<Subtext><![CDATA[This parameter shows the Stablecoin Cap of the entire market]]></Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
+				<!-- SuppressValidator 2.9.4 This is the correct unit for this parameter -->
+				<Units>Coins</Units>
+				<!-- /SuppressValidator 2.9.4 -->
+				<Range>
+					<Low>0</Low>
+				</Range>
 				<RTDisplay>true</RTDisplay>
 				<Positions>
 					<Position>
@@ -1067,7 +1164,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="516">
