@@ -94,7 +94,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>string</Type>
+				<Type options="password">string</Type>
 			</Measurement>
 		</Param>
 		<Param id="4" setter="true">
@@ -133,6 +133,16 @@ Any inquiries can be addressed to:
 			</Interprete>
 		</Param>
 		<Param id="6" save="true">
+			<Name>tokenBuilder</Name>
+			<Description>Token Builder</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+		</Param>
+		<Param id="7" trending="false" save="true">
 			<Name>bearerToken</Name>
 			<Description>Bearer Token</Description>
 			<Type>read</Type>
@@ -140,31 +150,6 @@ Any inquiries can be addressed to:
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>5</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type>string</Type>
-			</Measurement>
-		</Param>
-		<Param id="7">
-			<Name>bearerTokenFixed</Name>
-			<Description>Bearer Token</Description>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
-				<LengthType>fixed</LengthType>
-				<Length>51</Length>
-				<Value>Bearer jWgYFWyQzYAR9ZAm0mvESEKBeerEYw3rYwVEOUvm2Y0=</Value>
 			</Interprete>
 		</Param>
 		<Param id="10">
@@ -2536,8 +2521,12 @@ The unique ID of the category.]]>
 			<Time>change</Time>
 			<Type>action</Type>
 			<Content>
-				<Id>5</Id>
 				<Id>4</Id>
+				<Id>5</Id>
+				<Id>6</Id>
+				<Id>7</Id>
+				<Id>8</Id>
+				<Id>9</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
@@ -2554,14 +2543,34 @@ The unique ID of the category.]]>
 			<Type>run actions</Type>
 		</Action>
 		<Action id="4">
-			<Name>Append Filled in Authorization Token</Name>
+			<Name>Copy Prefix to Token Builder</Name>
+			<On id="6">parameter</On>
+			<Type id="5">copy</Type>
+		</Action>
+		<Action id="5">
+			<Name>Append Authorization Token to Token Builder</Name>
 			<On id="6">parameter</On>
 			<Type id="3">append</Type>
 		</Action>
-		<Action id="5">
-			<Name>Copy Bearer Prefix To Bearer Token</Name>
-			<On id="6">parameter</On>
-			<Type id="5">copy</Type>
+		<Action id="6">
+			<Name>Copy Bearer Token</Name>
+			<On id="7">parameter</On>
+			<Type id="6">copy</Type>
+		</Action>
+		<Action id="7">
+			<Name>Execute Quotes HTTP Request Group</Name>
+			<On id="6">group</On>
+			<Type>execute</Type>
+		</Action>
+		<Action id="8">
+			<Name>Execute Categories HTTP Request Group</Name>
+			<On id="5">group</On>
+			<Type>execute</Type>
+		</Action>
+		<Action id="9">
+			<Name>Execute Listings HTTP Request Group</Name>
+			<On id="4">group</On>
+			<Type>execute</Type>
 		</Action>
 	</Actions>
 

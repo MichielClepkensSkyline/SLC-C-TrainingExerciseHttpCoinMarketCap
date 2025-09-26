@@ -15,14 +15,14 @@ public static class Parameter
 	public const int authorizationtoken = 3;
 	/// <summary>PID: 6 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int bearertoken_6 = 6;
+	public const int tokenbuilder_6 = 6;
 	/// <summary>PID: 6 | Type: read</summary>
-	public const int bearertoken = 6;
+	public const int tokenbuilder = 6;
 	/// <summary>PID: 7 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int bearertokenfixed_7 = 7;
+	public const int bearertoken_7 = 7;
 	/// <summary>PID: 7 | Type: read</summary>
-	public const int bearertokenfixed = 7;
+	public const int bearertoken = 7;
 	/// <summary>PID: 50 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int statuscodelastlistings_50 = 50;
@@ -574,10 +574,10 @@ public interface SLProtocolExt : SLProtocol
 	object Authorizationtoken { get; set; }
 	object Authorizationtoken_4 { get; set; }
 	object Bearerprefixhex__fixed { get; set; }
-	object Bearertoken_6 { get; set; }
+	object Tokenbuilder_6 { get; set; }
+	object Tokenbuilder { get; set; }
+	object Bearertoken_7 { get; set; }
 	object Bearertoken { get; set; }
-	object Bearertokenfixed_7 { get; set; }
-	object Bearertokenfixed { get; set; }
 	object Titlebeginauthorization__fixed { get; set; }
 	object Titleendauhtorization__fixed { get; set; }
 	object Titlebeginoverallcrypto__fixed { get; set; }
@@ -738,14 +738,14 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Bearerprefixhex__fixed {get { return GetParameter(5); }set { SetParameter(5, value); }}
 	/// <summary>PID: 6  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Bearertoken_6 {get { return GetParameter(6); }set { SetParameter(6, value); }}
+	public System.Object Tokenbuilder_6 {get { return GetParameter(6); }set { SetParameter(6, value); }}
 	/// <summary>PID: 6  | Type: read</summary>
-	public System.Object Bearertoken {get { return GetParameter(6); }set { SetParameter(6, value); }}
+	public System.Object Tokenbuilder {get { return GetParameter(6); }set { SetParameter(6, value); }}
 	/// <summary>PID: 7  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Bearertokenfixed_7 {get { return GetParameter(7); }set { SetParameter(7, value); }}
+	public System.Object Bearertoken_7 {get { return GetParameter(7); }set { SetParameter(7, value); }}
 	/// <summary>PID: 7  | Type: read</summary>
-	public System.Object Bearertokenfixed {get { return GetParameter(7); }set { SetParameter(7, value); }}
+	public System.Object Bearertoken {get { return GetParameter(7); }set { SetParameter(7, value); }}
 	/// <summary>PID: 10  | Type: fixed</summary>
 	public System.Object Titlebeginauthorization__fixed {get { return GetParameter(10); }set { SetParameter(10, value); }}
 	/// <summary>PID: 11  | Type: fixed</summary>
