@@ -426,6 +426,36 @@ Any inquiries can be addressed to:
 				<Value>api/custom/coinmarketcap?content=categories</Value>
 			</Interprete>
 		</Param>
+		<Param id="63">
+			<Name>urlOneCategory</Name>
+			<Description>HTTP URL for One Category</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+		</Param>
+		<Param id="64" trending="false">
+			<Name>statusCodeOneCategory</Name>
+			<Description>HTTP Status Code One Category</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+		</Param>
+		<Param id="65">
+			<Name>responseContentOneCategory</Name>
+			<Description>HTTP Response Content One Category</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+		</Param>
 		<Param id="70">
 			<Name>statusCodeLatestQuotes</Name>
 			<Description>HTTP Status Code Latest Quotes</Description>
@@ -1213,7 +1243,8 @@ A market quote in the currency conversion option.]]>
 				<ColumnOption idx="8" pid="409" type="retrieved" options=";disableHeaderSum;enableHistogram;enableHeatmap" />
 				<ColumnOption idx="9" pid="410" type="retrieved" options=";enableHeaderAvg;enableHistogram;enableHeatmap" />
 				<ColumnOption idx="10" pid="411" type="retrieved" options="" />
-				<ColumnOption idx="11" pid="412" type="displaykey" options="" />
+				<ColumnOption idx="11" pid="412" type="retrieved" options="" />
+				<ColumnOption idx="12" pid="413" type="displaykey" options="" />
 			</ArrayOptions>
 			<Information>
 				<Subtext>
@@ -1231,7 +1262,7 @@ A market quote in the currency conversion option.]]>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:401|0-402|1-403|2-404|3-406|5-405|4-407|6-408|7-409|8-410|9-411|10-412|11,width:0-100-122-142-142-122-100-129-156-107-156-100,sort:STRING-STRING-INT-INT-INT-INT|DESC|1-INT-INT-INT-STRING-STRING|DESC|0-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:401|0-402|1-403|2-404|3-406|5-405|4-407|6-408|7-409|8-410|9-411|10-412|11-413|12,width:0-100-122-142-142-122-100-129-156-107-156-100-100,sort:STRING-STRING-INT-INT-INT-INT|DESC|1-INT-INT-INT-STRING-STRING|DESC|0-STRING-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="401" trending="false">
@@ -1558,6 +1589,31 @@ The unique ID of the category.]]>
 			</Measurement>
 		</Param>
 		<Param id="412" trending="false">
+			<Name>categoriesRefreshButton</Name>
+			<Description>Refresh Button</Description>
+			<Type>write</Type>
+			<Information>
+				<Subtext>Use this button to refresh the values of this row.</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type width="110">button</Type>
+				<Discreets>
+					<Discreet>
+						<Display>Refresh</Display>
+						<Value>0</Value>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+		</Param>
+		<Param id="413" trending="false">
 			<Name>categoriesDisplayKey</Name>
 			<Description>Display Key (Categories)</Description>
 			<Type>read</Type>
@@ -2429,6 +2485,8 @@ The unique ID of the category.]]>
 		<QAction id="3" name="Process Latest Listings Response" encoding="csharp" triggers="51"/>
 		<QAction id="4" name="Process Categories Response" encoding="csharp" triggers="61"/>
 		<QAction id="5" name="Process Latest Quotes Response" encoding="csharp" triggers="71"/>
+		<QAction id="6" name="Refresh Category Row" encoding="csharp" triggers="412" row="true"/>
+		<QAction id="7" name="Process One Category Response" encoding="csharp" triggers="65"/>
 	</QActions>
 
 	<HTTP>
@@ -2468,6 +2526,18 @@ The unique ID of the category.]]>
 				</Response>
 			</Connection>
 		</Session>
+		<Session id="4" name="Get One Category on Coin Market">
+			<Connection id="4" name="Get One Category on Coin Market">
+				<Request verb="GET" pid="63">
+					<Headers>
+						<Header key="Authorization" pid="7"/>
+					</Headers>
+				</Request>
+				<Response statusCode="64">
+					<Content pid="65"></Content>
+				</Response>
+			</Connection>
+		</Session>
 	</HTTP>
 
 	<Groups>
@@ -2503,6 +2573,14 @@ The unique ID of the category.]]>
 				<Session>3</Session>
 			</Content>
 		</Group>
+		<Group id="7">
+			<Name>HTTP Request One Category</Name>
+			<Description>HTTP Request One Category</Description>
+			<Type>poll</Type>
+			<Content>
+				<Session>4</Session>
+			</Content>
+		</Group>
 	</Groups>
 
 	<Triggers>
@@ -2527,6 +2605,15 @@ The unique ID of the category.]]>
 				<Id>7</Id>
 				<Id>8</Id>
 				<Id>9</Id>
+			</Content>
+		</Trigger>
+		<Trigger id="5">
+			<Name>Change Row Button</Name>
+			<On id="63">parameter</On>
+			<Time>change</Time>
+			<Type>action</Type>
+			<Content>
+				<Id>10</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
@@ -2570,6 +2657,11 @@ The unique ID of the category.]]>
 		<Action id="9">
 			<Name>Execute Listings HTTP Request Group</Name>
 			<On id="4">group</On>
+			<Type>execute</Type>
+		</Action>
+		<Action id="10">
+			<Name>Send HTTP Request for One Category</Name>
+			<On id="7">group</On>
 			<Type>execute</Type>
 		</Action>
 	</Actions>
