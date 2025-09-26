@@ -168,9 +168,9 @@ public static class Parameter
 			public const int latestlistings1hourchange = 108;
 			/// <summary>PID: 109 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int latestlistings24hourvolume_109 = 109;
+			public const int latestlistings24hourvolumechange_109 = 109;
 			/// <summary>PID: 109 | Type: read</summary>
-			public const int latestlistings24hourvolume = 109;
+			public const int latestlistings24hourvolumechange = 109;
 			/// <summary>PID: 110 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
 			public const int latestlistingslastupdated_110 = 110;
@@ -229,9 +229,9 @@ public static class Parameter
 			public const int latestlistings1hourchange = 7;
 			/// <summary>IDX: 8 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
-			public const int latestlistings24hourvolume_109 = 8;
+			public const int latestlistings24hourvolumechange_109 = 8;
 			/// <summary>IDX: 8 | Type: read</summary>
-			public const int latestlistings24hourvolume = 8;
+			public const int latestlistings24hourvolumechange = 8;
 			/// <summary>IDX: 9 | Type: read</summary>
 			[EditorBrowsable(EditorBrowsableState.Never)]
 			public const int latestlistingslastupdated_110 = 9;
@@ -391,8 +391,8 @@ public interface SLProtocolExt : SLProtocol
 	object Latestlistingsmarketcap { get; set; }
 	object Latestlistings1hourchange_108 { get; set; }
 	object Latestlistings1hourchange { get; set; }
-	object Latestlistings24hourvolume_109 { get; set; }
-	object Latestlistings24hourvolume { get; set; }
+	object Latestlistings24hourvolumechange_109 { get; set; }
+	object Latestlistings24hourvolumechange { get; set; }
 	object Latestlistingslastupdated_110 { get; set; }
 	object Latestlistingslastupdated { get; set; }
 	object Latestlistingsdisplaykey_111 { get; set; }
@@ -524,9 +524,9 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Latestlistings1hourchange {get { return GetParameter(108); }set { SetParameter(108, value); }}
 	/// <summary>PID: 109  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Latestlistings24hourvolume_109 {get { return GetParameter(109); }set { SetParameter(109, value); }}
+	public System.Object Latestlistings24hourvolumechange_109 {get { return GetParameter(109); }set { SetParameter(109, value); }}
 	/// <summary>PID: 109  | Type: read</summary>
-	public System.Object Latestlistings24hourvolume {get { return GetParameter(109); }set { SetParameter(109, value); }}
+	public System.Object Latestlistings24hourvolumechange {get { return GetParameter(109); }set { SetParameter(109, value); }}
 	/// <summary>PID: 110  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingslastupdated_110 {get { return GetParameter(110); }set { SetParameter(110, value); }}
@@ -741,9 +741,9 @@ public class LatestlistingsQActionRow : QActionTableRow
 	public System.Object Latestlistings1hourchange { get { if (base.Columns.ContainsKey(7)) { return base.Columns[7]; } else { return null; } } set { if (base.Columns.ContainsKey(7)) { base.Columns[7] = value; } else { base.Columns.Add(7, value); } } }
 	/// <summary>PID: 109 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Latestlistings24hourvolume_109 { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
+	public System.Object Latestlistings24hourvolumechange_109 { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
 	/// <summary>PID: 109 | Type: read</summary>
-	public System.Object Latestlistings24hourvolume { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
+	public System.Object Latestlistings24hourvolumechange { get { if (base.Columns.ContainsKey(8)) { return base.Columns[8]; } else { return null; } } set { if (base.Columns.ContainsKey(8)) { base.Columns[8] = value; } else { base.Columns.Add(8, value); } } }
 	/// <summary>PID: 110 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingslastupdated_110 { get { if (base.Columns.ContainsKey(9)) { return base.Columns[9]; } else { return null; } } set { if (base.Columns.ContainsKey(9)) { base.Columns[9] = value; } else { base.Columns.Add(9, value); } } }
