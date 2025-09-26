@@ -143,11 +143,16 @@ public static class Parameter
 	public const int latestquotedefivolume24h_47 = 47;
 	/// <summary>PID: 47 | Type: read</summary>
 	public const int latestquotedefivolume24h = 47;
-	/// <summary>PID: 310 | Type: read</summary>
+	/// <summary>PID: 311 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int accesskey_310 = 310;
-	/// <summary>PID: 310 | Type: read</summary>
-	public const int accesskey = 310;
+	public const int bearetoken_311 = 311;
+	/// <summary>PID: 311 | Type: read</summary>
+	public const int bearetoken = 311;
+	/// <summary>PID: 312 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int acceskeytoken_312 = 312;
+	/// <summary>PID: 312 | Type: read</summary>
+	public const int acceskeytoken = 312;
 	public class Write
 	{
 		/// <summary>PID: 5 | Type: write</summary>
@@ -155,11 +160,11 @@ public static class Parameter
 		public const int sendrequest_5 = 5;
 		/// <summary>PID: 5 | Type: write</summary>
 		public const int sendrequest = 5;
-		/// <summary>PID: 360 | Type: write</summary>
+		/// <summary>PID: 362 | Type: write</summary>
 		[EditorBrowsable(EditorBrowsableState.Never)]
-		public const int accesskey_360 = 360;
-		/// <summary>PID: 360 | Type: write</summary>
-		public const int accesskey = 360;
+		public const int acceskeytoken_362 = 362;
+		/// <summary>PID: 362 | Type: write</summary>
+		public const int acceskeytoken = 362;
 	}
 	public class Latestlistings
 	{
@@ -469,8 +474,8 @@ public class WriteParameters
 	public System.Object Sendrequest {get { return Protocol.GetParameter(5); }set { Protocol.SetParameter(5, value); }}
 	/// <summary>PID: 211  | Type: write | DISCREETS: Refresh Row = 1</summary>
 	public System.Object Categoriesrefreshbutton {get { return Protocol.GetParameter(211); }set { Protocol.SetParameter(211, value); }}
-	/// <summary>PID: 360  | Type: write</summary>
-	public System.Object Accesskey {get { return Protocol.GetParameter(360); }set { Protocol.SetParameter(360, value); }}
+	/// <summary>PID: 362  | Type: write</summary>
+	public System.Object Acceskeytoken {get { return Protocol.GetParameter(362); }set { Protocol.SetParameter(362, value); }}
 	public SLProtocolExt Protocol;
 	public WriteParameters(SLProtocolExt protocol)
 	{
@@ -601,9 +606,11 @@ public interface SLProtocolExt : SLProtocol
 	object Titlebeginaltcoin__fixed { get; set; }
 	object Titlebegincryptomarketoverview__fixed { get; set; }
 	object Titlebeginlatestquote__fixed { get; set; }
-	object Accesskey_310 { get; set; }
-	object Accesskey { get; set; }
-	object Accesskey_360 { get; set; }
+	object Bearetoken_311 { get; set; }
+	object Bearetoken { get; set; }
+	object Acceskeytoken_312 { get; set; }
+	object Acceskeytoken { get; set; }
+	object Acceskeytoken_362 { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
@@ -901,14 +908,19 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Titlebegincryptomarketoverview__fixed {get { return GetParameter(305); }set { SetParameter(305, value); }}
 	/// <summary>PID: 306  | Type: fixed</summary>
 	public System.Object Titlebeginlatestquote__fixed {get { return GetParameter(306); }set { SetParameter(306, value); }}
-	/// <summary>PID: 310  | Type: read</summary>
+	/// <summary>PID: 311  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Accesskey_310 {get { return GetParameter(310); }set { SetParameter(310, value); }}
-	/// <summary>PID: 310  | Type: read</summary>
-	public System.Object Accesskey {get { return GetParameter(310); }set { SetParameter(310, value); }}
-	/// <summary>PID: 360  | Type: write</summary>
+	public System.Object Bearetoken_311 {get { return GetParameter(311); }set { SetParameter(311, value); }}
+	/// <summary>PID: 311  | Type: read</summary>
+	public System.Object Bearetoken {get { return GetParameter(311); }set { SetParameter(311, value); }}
+	/// <summary>PID: 312  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Accesskey_360 {get { return GetParameter(360); }set { SetParameter(360, value); }}
+	public System.Object Acceskeytoken_312 {get { return GetParameter(312); }set { SetParameter(312, value); }}
+	/// <summary>PID: 312  | Type: read</summary>
+	public System.Object Acceskeytoken {get { return GetParameter(312); }set { SetParameter(312, value); }}
+	/// <summary>PID: 362  | Type: write</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Acceskeytoken_362 {get { return GetParameter(362); }set { SetParameter(362, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{

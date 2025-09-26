@@ -84,7 +84,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
-				<RTDisplay>true</RTDisplay>
+				<RTDisplay>false</RTDisplay>
 			</Display>
 			<Measurement>
 				<Type>string</Type>
@@ -105,7 +105,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
-				<RTDisplay>true</RTDisplay>
+				<RTDisplay>false</RTDisplay>
 			</Display>
 			<Measurement>
 				<Type lines="30">string</Type>
@@ -125,7 +125,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
-				<RTDisplay>true</RTDisplay>
+				<RTDisplay>false</RTDisplay>
 			</Display>
 			<Measurement>
 				<Type width="110">button</Type>
@@ -136,18 +136,6 @@ Any inquiries can be addressed to:
 					</Discreet>
 				</Discreets>
 			</Measurement>
-		</Param>
-		<Param id="6">
-			<Name>bearerToken</Name>
-			<Description>Bearer Token</Description>
-			<Type>fixed</Type>
-			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
-				<LengthType>fixed</LengthType>
-				<Length>51</Length>
-				<Value>Bearer jWgYFWyQzYAR9ZAm0mvESEKBeerEYw3rYwVEOUvm2Y0=</Value>
-			</Interprete>
 		</Param>
 		<Param id="7" trending="false">
 			<Name>statusCodeCategories</Name>
@@ -164,7 +152,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
-				<RTDisplay>true</RTDisplay>
+				<RTDisplay>false</RTDisplay>
 			</Display>
 			<Measurement>
 				<Type>string</Type>
@@ -185,7 +173,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
-				<RTDisplay>true</RTDisplay>
+				<RTDisplay>false</RTDisplay>
 			</Display>
 			<Measurement>
 				<Type lines="30">string</Type>
@@ -206,7 +194,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
-				<RTDisplay>true</RTDisplay>
+				<RTDisplay>false</RTDisplay>
 			</Display>
 			<Measurement>
 				<Type>string</Type>
@@ -227,7 +215,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
-				<RTDisplay>true</RTDisplay>
+				<RTDisplay>false</RTDisplay>
 			</Display>
 			<Measurement>
 				<Type lines="30">string</Type>
@@ -248,7 +236,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
-				<RTDisplay>true</RTDisplay>
+				<RTDisplay>false</RTDisplay>
 			</Display>
 			<Measurement>
 				<Type>string</Type>
@@ -269,7 +257,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
-				<RTDisplay>true</RTDisplay>
+				<RTDisplay>false</RTDisplay>
 			</Display>
 			<Measurement>
 				<Type lines="30">string</Type>
@@ -290,7 +278,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
-				<RTDisplay>true</RTDisplay>
+				<RTDisplay>false</RTDisplay>
 			</Display>
 			<Measurement>
 				<Type>string</Type>
@@ -1875,10 +1863,9 @@ Any inquiries can be addressed to:
 				<Type options="begin">title</Type>
 			</Measurement>
 		</Param>
-		
-		<Param id="310" save="true">
-			<Name>accessKey</Name>
-			<Description>Access Key</Description>
+		<Param id="311" save="true">
+			<Name>beareToken</Name>
+			<Description>Bearer Token</Description>
 			<Type>read</Type>
 			<Information>
 			</Information>
@@ -1886,7 +1873,6 @@ Any inquiries can be addressed to:
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>Please add value</DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1894,17 +1880,35 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>0</Row>
+						<Row>1</Row>
 					</Position>
 				</Positions>
+			</Display>
+			<Measurement>
+				<Type>string</Type>
+			</Measurement>
+		</Param>
+		<Param id="312" save="true">
+			<Name>accesKeyToken</Name>
+			<Description>Access Key Token</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
 			</Display>
 			<Measurement>
 				<Type options="password">string</Type>
 			</Measurement>
 		</Param>
-		<Param id="360" setter="true">
-			<Name>accessKey</Name>
-			<Description>Access Key</Description>
+		<Param id="362" setter="true">
+			<Name>accesKeyToken</Name>
+			<Description>Access Key Token</Description>
 			<Type>write</Type>
 			<Interprete>
 				<RawType>other</RawType>
@@ -1925,7 +1929,6 @@ Any inquiries can be addressed to:
 				<Type options="password">string</Type>
 			</Measurement>
 		</Param>
-		
 	</Params>
 	
 	<HTTP>
@@ -1933,7 +1936,7 @@ Any inquiries can be addressed to:
 			<Connection id="1" name="Get Last Listings">
 				<Request verb="GET" url="/api/custom/coinmarketcap?content=latestlistings">
 					<Headers>
-						<Header key="Authorization" pid="310"></Header>
+						<Header key="Authorization" pid="311"></Header>
 					</Headers>
 				</Request>
 				<Response statusCode="3">
@@ -1945,7 +1948,7 @@ Any inquiries can be addressed to:
 			<Connection id="1" name="Get Categories">
 				<Request verb="GET" url="/api/custom/coinmarketcap?content=categories">
 					<Headers>
-						<Header key="Authorization" pid="310"></Header>
+						<Header key="Authorization" pid="311"></Header>
 					</Headers>
 				</Request>
 				<Response statusCode="7">
@@ -1957,7 +1960,7 @@ Any inquiries can be addressed to:
 			<Connection id="1" name="Get Latest Quote">
 				<Request verb="GET" url="/api/custom/coinmarketcap?content=latestquotes">
 					<Headers>
-						<Header key="Authorization" pid="310"></Header>
+						<Header key="Authorization" pid="311"></Header>
 					</Headers>
 				</Request>
 				<Response statusCode="9">
@@ -1969,7 +1972,7 @@ Any inquiries can be addressed to:
 			<Connection id="1" name="Get Individual Category">
 				<Request verb="GET" pid="13">
 					<Headers>
-						<Header key="Authorization" pid="310"></Header>
+						<Header key="Authorization" pid="311"></Header>
 					</Headers>
 				</Request>
 				<Response statusCode="11">
@@ -1991,6 +1994,8 @@ Any inquiries can be addressed to:
 		<QAction id="6" name="Make The API To Call in Session 4" encoding="csharp" triggers="211" row="true">
 		</QAction>
 		<QAction id="7" name="Parse Individual Category" encoding="csharp" triggers="12">
+		</QAction>
+		<QAction id="8" name="Make a Bearer token" encoding="csharp" triggers="362">
 		</QAction>
 	</QActions>
 
@@ -2048,8 +2053,8 @@ Any inquiries can be addressed to:
 			</Content>
 		</Trigger>
 		<Trigger id="2">
-			<Name>On button press</Name>
-			<On id="310">parameter</On>
+			<Name>On</Name>
+			<On id="311">parameter</On>
 			<Time>change</Time>
 			<Type>action</Type>
 			<Content>
@@ -2115,9 +2120,6 @@ Any inquiries can be addressed to:
 			<Time initial="true" dataDisplay="30000">60000</Time>
 			<Interval>75</Interval>
 			<Content>
-				<Group>3</Group>
-				<Group>4</Group>
-				<Group>5</Group>
 			</Content>
 		</Timer>
 		<Timer id="3">

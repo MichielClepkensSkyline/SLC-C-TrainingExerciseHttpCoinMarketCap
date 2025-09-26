@@ -24,6 +24,8 @@ public static class QAction
 		{
 			string json = protocol.GetParameter(Parameter.responsecategories_8).ToString();
 			Categories categories = SecureNewtonsoftDeserialization.DeserializeObject<Categories>(json);
+			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|BEarer token : {protocol.GetParameter(Parameter.bearetoken_311) }", LogType.Error, LogLevel.NoLogging);
+
 			if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodecategories_7))
 			{
 				if (StatusCode.CheckErrorCode(protocol, categories.Status.ErrorCode, categories.Status.ErrorMessage))
