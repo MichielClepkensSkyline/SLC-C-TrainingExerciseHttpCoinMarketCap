@@ -189,8 +189,8 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="4" pid="105" type="retrieved" options="" />
 				<ColumnOption idx="5" pid="106" type="retrieved" options="" />
 				<ColumnOption idx="6" pid="107" type="retrieved" options="" />
-				<ColumnOption idx="7" pid="108" type="retrieved" options="" />
-				<ColumnOption idx="8" pid="109" type="retrieved" options="" />
+				<ColumnOption idx="7" pid="108" type="retrieved" options=";disableHeaderSum;disableHistogram;enableHeatmap" />
+				<ColumnOption idx="8" pid="109" type="retrieved" options=";disableHeaderSum;disableHistogram;enableHeatmap" />
 				<ColumnOption idx="9" pid="110" type="retrieved" options="" />
 				<ColumnOption idx="10" pid="111" type="displaykey" options="" />
 			</ArrayOptions>
@@ -293,7 +293,7 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="105" trending="false">
+		<Param id="105" trending="true">
 			<Name>LatestListingsCirculatingSupply</Name>
 			<Description>Circulating Supply (Latest Listings)</Description>
 			<Type>read</Type>
@@ -322,7 +322,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="106" trending="false">
+		<Param id="106" trending="true">
 			<Name>LatestListingsUSDPrice</Name>
 			<Description>Price in USD (Latest Listing)</Description>
 			<Type>read</Type>
@@ -351,7 +351,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="107" trending="false">
+		<Param id="107" trending="true">
 			<Name>LatestListingsMarketCap</Name>
 			<Description>Market Cap in USD (Latest Listings)</Description>
 			<Type>read</Type>
@@ -380,7 +380,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="108" trending="false">
+		<Param id="108" trending="true">
 			<Name>LatestListings1HourChange</Name>
 			<Description>1 Hour Change (Latest Listings)</Description>
 			<Type>read</Type>
@@ -395,6 +395,13 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<Decimals>8</Decimals>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-10</CL>
+				<MaL>-7</MaL>
+				<MiL>-3</MiL>
+				<Normal>0</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
@@ -408,7 +415,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="109" trending="false">
+		<Param id="109" trending="true">
 			<Name>LatestListings24HourVolumeChange</Name>
 			<Description>24 Hour Volume Change (Latest Listings)</Description>
 			<Type>read</Type>
@@ -423,6 +430,13 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<Decimals>8</Decimals>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-10</CL>
+				<MaL>-7</MaL>
+				<MiL>-3</MiL>
+				<Normal>0.1</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
@@ -544,7 +558,7 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="0" pid="401" type="retrieved" options=""/>
 				<ColumnOption idx="1" pid="402" type="retrieved" options="" />
 				<ColumnOption idx="2" pid="403" type="retrieved" options="" />
-				<ColumnOption idx="3" pid="404" type="retrieved" options="" />
+				<ColumnOption idx="3" pid="404" type="retrieved" options=";disableHeaderSum;disableHistogram;enableHeatmap" />
 				<ColumnOption idx="4" pid="405" type="retrieved" options="" />
 				<ColumnOption idx="5" pid="406" type="retrieved" options="" />
 				<ColumnOption idx="6" pid="407" type="retrieved" options="" />
@@ -608,7 +622,7 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="403" trending="false">
+		<Param id="403" trending="true">
 			<Name>CategoriesNumberOfTokens</Name>
 			<Description>Number of Tokens (Categories)</Description>
 			<Type>read</Type>
@@ -635,7 +649,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="404" trending="false">
+		<Param id="404" trending="true">
 			<Name>CategoriesAvreagePriceChange</Name>
 			<Description>Avreage Price Change (Categories)</Description>
 			<Type>read</Type>
@@ -650,6 +664,13 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 				<Decimals>8</Decimals>
 			</Interprete>
+			<Alarm>
+				<Monitored>true</Monitored>
+				<CL>-10</CL>
+				<MaL>-7</MaL>
+				<MiL>-3</MiL>
+				<Normal>0</Normal>
+			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>%</Units>
@@ -663,7 +684,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="405" trending="false">
+		<Param id="405" trending="true">
 			<Name>CategoriesMarketCap</Name>
 			<Description>Market Cap (Categories)</Description>
 			<Type>read</Type>
@@ -692,7 +713,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="406" trending="false">
+		<Param id="406" trending="true">
 			<Name>CategoriesVolume</Name>
 			<Description>Volume (Categories)</Description>
 			<Type>read</Type>
@@ -865,7 +886,7 @@ Any inquiries can be addressed to:
 				<Type options="begin">title</Type>
 			</Measurement>
 		</Param>
-		<Param id="503" trending="false">
+		<Param id="503" trending="true">
 			<Name>ActiveCryptoCurrencies</Name>
 			<Description>Active Cryptocurrencies</Description>
 			<Type>read</Type>
@@ -899,7 +920,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="504" trending="false">
+		<Param id="504" trending="true">
 			<Name>ActiveMarketPairs</Name>
 			<Description>Active Market Pairs</Description>
 			<Type>read</Type>
@@ -933,7 +954,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="505" trending="false">
+		<Param id="505" trending="true">
 			<Name>ActiveExchanges</Name>
 			<Description>Active Exchanges</Description>
 			<Type>read</Type>
@@ -1015,7 +1036,7 @@ Any inquiries can be addressed to:
 				<Type options="begin">title</Type>
 			</Measurement>
 		</Param>
-		<Param id="508" trending="false">
+		<Param id="508" trending="true">
 			<Name>BTCDominance</Name>
 			<Description>BTC Dominace</Description>
 			<Type>read</Type>
@@ -1050,7 +1071,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="509" trending="false">
+		<Param id="509" trending="true">
 			<Name>ETHDominance</Name>
 			<Description>ETH Dominance</Description>
 			<Type>read</Type>
@@ -1103,7 +1124,7 @@ Any inquiries can be addressed to:
 				<Type options="begin">title</Type>
 			</Measurement>
 		</Param>
-		<Param id="511" trending="false">
+		<Param id="511" trending="true">
 			<Name>TotalMarketCap</Name>
 			<Description>Total Market Cap</Description>
 			<Type>read</Type>
@@ -1139,7 +1160,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="512" trending="false">
+		<Param id="512" trending="true">
 			<Name>Total24hVolume</Name>
 			<Description>Total 24h Volume</Description>
 			<Type>read</Type>
@@ -1193,7 +1214,7 @@ Any inquiries can be addressed to:
 				<Type options="begin">title</Type>
 			</Measurement>
 		</Param>
-		<Param id="514" trending="false">
+		<Param id="514" trending="true">
 			<Name>DeFiMarketCap</Name>
 			<Description>Defi Market Cap</Description>
 			<Type>read</Type>
@@ -1229,7 +1250,7 @@ Any inquiries can be addressed to:
 				<Type>number</Type>
 			</Measurement>
 		</Param>
-		<Param id="515" trending="false">
+		<Param id="515" trending="true">
 			<Name>StablecoinMarketCap</Name>
 			<Description>Stablecoin Market Cap</Description>
 			<Type>read</Type>
