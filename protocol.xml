@@ -399,8 +399,8 @@ Any inquiries can be addressed to:
 				<Monitored>true</Monitored>
 				<CL>-10</CL>
 				<MaL>-7</MaL>
-				<MiL>-3</MiL>
-				<Normal>0</Normal>
+				<MiL>0</MiL>
+				<Normal>1</Normal>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -435,7 +435,7 @@ Any inquiries can be addressed to:
 				<CL>-10</CL>
 				<MaL>-7</MaL>
 				<MiL>-3</MiL>
-				<Normal>0.1</Normal>
+				<Normal>1</Normal>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -668,8 +668,8 @@ Any inquiries can be addressed to:
 				<Monitored>true</Monitored>
 				<CL>-10</CL>
 				<MaL>-7</MaL>
-				<MiL>-3</MiL>
-				<Normal>0</Normal>
+				<MiL>0</MiL>
+				<Normal>1</Normal>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
