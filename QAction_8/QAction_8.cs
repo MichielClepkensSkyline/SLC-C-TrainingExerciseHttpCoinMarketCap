@@ -18,17 +18,22 @@ public static class QAction
     {
         try
         {
-            var token = protocol.GetParameter(Parameter.bearertokenvalue_7).ToString();
-            var key = protocol.GetParameter(Parameter.apikey_5).ToString();
-
-            string splitKey = key.Split(' ')[0];
-            string newToken = splitKey +' '+ token;
-
-            protocol.SetParameter(Parameter.apikey_5, newToken);
+            SetNewBearerTokenValue(protocol);
         }
         catch (Exception ex)
         {
             protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}{ex}", LogType.Error, LogLevel.NoLogging);
         }
+    }
+
+    public static void SetNewBearerTokenValue(SLProtocol protocol)
+    {
+        var token = protocol.GetParameter(Parameter.bearertokenvalue_7).ToString();
+        var key = protocol.GetParameter(Parameter.apikey_5).ToString();
+
+        string splitKey = key.Split(' ')[0];
+        string newToken = splitKey +' '+ token;
+
+        protocol.SetParameter(Parameter.apikey_5, newToken);
     }
 }

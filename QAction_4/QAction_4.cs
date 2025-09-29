@@ -22,49 +22,54 @@ public static class QAction
     {
         try
         {
-            var helper = new HelperMethods();
-            var httpParameter = protocol.GetParameter(Parameter.httpresponsecodecategories_300);
-            bool statusResponse = helper.CheckStatusCode(httpParameter, protocol);
-
-            if (!statusResponse)
-            {
-                return;
-            }
-
-            string data = Convert.ToString(protocol.GetParameter(Parameter.jsonresponsecategories_301));
-            Categories deserializedCategories = SecureNewtonsoftDeserialization.DeserializeObject<Categories>(data);
-
-            bool jsonStatusResponse = helper.CheckJSONResponseStatus(deserializedCategories.Status, protocol);
-
-            if (!jsonStatusResponse)
-            {
-                return;
-            }
-
-            Dictionary<string, object[]> categoriesDictionary = new Dictionary<string, object[]>();
-            foreach (Category category in deserializedCategories.Data)
-            {
-                if (String.IsNullOrWhiteSpace(category.Id))
-                {
-                    protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|No primary key found for Category {Environment.NewLine}", LogType.Error, LogLevel.NoLogging);
-                }
-
-                categoriesDictionary[category.Id] = new CategoriesQActionRow
-                {
-                    Categoriesid_401 = category.Id,
-                    Categoriestitle_402 = category.Title,
-                    Categoriesnumberoftokens_403 = category.NumTokens,
-                    Categoriesavreagepricechange_404=category.AvgPriceChange,
-                    Categoriesmarketcap_405 = category.MarketCap,
-                    Categoriesvolume_406 =category.Volume,
-                    Categorieslastupdated_407 =category.LastUpdated.ToOADate(),
-                }.ToObjectArray();
-                protocol.FillArray(Parameter.Categories.tablePid, categoriesDictionary.Values.ToList(), NotifyProtocol.SaveOption.Full);
-            }
+            PollCategories(protocol);
         }
         catch (Exception ex)
         {
             protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}{ex}", LogType.Error, LogLevel.NoLogging);
+        }
+    }
+
+    public static void PollCategories(SLProtocol protocol)
+    {
+        var helper = new HelperMethods();
+        var httpParameter = protocol.GetParameter(Parameter.httpresponsecodecategories_300);
+        bool statusResponse = helper.CheckStatusCode(httpParameter, protocol);
+
+        if (!statusResponse)
+        {
+            return;
+        }
+
+        string data = Convert.ToString(protocol.GetParameter(Parameter.jsonresponsecategories_301));
+        Categories deserializedCategories = SecureNewtonsoftDeserialization.DeserializeObject<Categories>(data);
+
+        bool jsonStatusResponse = helper.CheckJSONResponseStatus(deserializedCategories.Status, protocol);
+
+        if (!jsonStatusResponse)
+        {
+            return;
+        }
+
+        Dictionary<string, object[]> categoriesDictionary = new Dictionary<string, object[]>();
+        foreach (Category category in deserializedCategories.Data)
+        {
+            if (String.IsNullOrWhiteSpace(category.Id))
+            {
+                protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|No primary key found for Category {Environment.NewLine}", LogType.Error, LogLevel.NoLogging);
+            }
+
+            categoriesDictionary[category.Id] = new CategoriesQActionRow
+            {
+                Categoriesid_401 = category.Id,
+                Categoriestitle_402 = category.Title,
+                Categoriesnumberoftokens_403 = category.NumTokens,
+                Categoriesavreagepricechange_404=category.AvgPriceChange,
+                Categoriesmarketcap_405 = category.MarketCap,
+                Categoriesvolume_406 =category.Volume,
+                Categorieslastupdated_407 =category.LastUpdated.ToOADate(),
+            }.ToObjectArray();
+            protocol.FillArray(Parameter.Categories.tablePid, categoriesDictionary.Values.ToList(), NotifyProtocol.SaveOption.Full);
         }
     }
 }

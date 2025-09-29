@@ -20,41 +20,46 @@ public static class QAction
     {
         try
         {
-            var helper = new HelperMethods();
-            var httpParameter = protocol.GetParameter(Parameter.httpresponsecategoryrefresh_518);
-            bool statusResponse = helper.CheckStatusCode(httpParameter, protocol);
-
-            if (!statusResponse)
-            {
-                return;
-            }
-
-            string data = Convert.ToString(protocol.GetParameter(Parameter.jsonrsponserefreshcategory_517));
-            Root deserializedlCategory = SecureNewtonsoftDeserialization.DeserializeObject<Root>(data);
-
-            bool jsonStatusResponse = helper.CheckJSONResponseStatus(deserializedlCategory.Status, protocol);
-
-            if (!jsonStatusResponse)
-            {
-                return;
-            }
-
-            object[] newRow = new CategoriesQActionRow
-            {
-                Categoriesid_401 = deserializedlCategory.Data.Id,
-                Categoriestitle_402 = deserializedlCategory.Data.Title,
-                Categoriesnumberoftokens_403 = deserializedlCategory.Data.NumTokens,
-                Categoriesavreagepricechange_404 =deserializedlCategory.Data.AvgPriceChange,
-                Categoriesmarketcap_405 = deserializedlCategory.Data.MarketCap,
-                Categoriesvolume_406 =deserializedlCategory.Data.Volume,
-                Categorieslastupdated_407 =deserializedlCategory.Data.LastUpdated.ToOADate(),
-            };
-
-            protocol.SetRow(Parameter.Categories.tablePid, deserializedlCategory.Data.Id, newRow);
+            GetCategoryRow(protocol);
         }
         catch (Exception ex)
         {
             protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}{ex}", LogType.Error, LogLevel.NoLogging);
         }
+    }
+
+    public static void GetCategoryRow(SLProtocol protocol)
+    {
+        var helper = new HelperMethods();
+        var httpParameter = protocol.GetParameter(Parameter.httpresponsecategoryrefresh_518);
+        bool statusResponse = helper.CheckStatusCode(httpParameter, protocol);
+
+        if (!statusResponse)
+        {
+            return;
+        }
+
+        string data = Convert.ToString(protocol.GetParameter(Parameter.jsonrsponserefreshcategory_517));
+        Root deserializedlCategory = SecureNewtonsoftDeserialization.DeserializeObject<Root>(data);
+
+        bool jsonStatusResponse = helper.CheckJSONResponseStatus(deserializedlCategory.Status, protocol);
+
+        if (!jsonStatusResponse)
+        {
+            return;
+        }
+
+        object[] newRow = new CategoriesQActionRow
+        {
+            Categoriesid_401 = deserializedlCategory.Data.Id,
+            Categoriestitle_402 = deserializedlCategory.Data.Title,
+            Categoriesnumberoftokens_403 = deserializedlCategory.Data.NumTokens,
+            Categoriesavreagepricechange_404 =deserializedlCategory.Data.AvgPriceChange,
+            Categoriesmarketcap_405 = deserializedlCategory.Data.MarketCap,
+            Categoriesvolume_406 =deserializedlCategory.Data.Volume,
+            Categorieslastupdated_407 =deserializedlCategory.Data.LastUpdated.ToOADate(),
+        };
+
+        protocol.SetRow(Parameter.Categories.tablePid, deserializedlCategory.Data.Id, newRow);
     }
 }
