@@ -25,7 +25,7 @@
                 }
                 else
                 {
-                    protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|HTTP Response Code:{Environment.NewLine}{httpToString}", LogType.Error, LogLevel.NoLogging);
+                    protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|HTTP Response Code:{Environment.NewLine}{httpToString}", LogType.Information, LogLevel.NoLogging);
                     return false;
                 }
             }

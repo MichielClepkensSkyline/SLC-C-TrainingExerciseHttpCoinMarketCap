@@ -23,7 +23,6 @@ public static class QAction
             var helper = new HelperMethods();
             var httpParameter = protocol.GetParameter(Parameter.httpresponsecategoryrefresh_518);
             bool statusResponse = helper.CheckStatusCode(httpParameter, protocol);
-            protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Category Response:{Environment.NewLine}{statusResponse}", LogType.Error, LogLevel.NoLogging);
 
             if (!statusResponse)
             {
@@ -32,12 +31,10 @@ public static class QAction
 
             string data = Convert.ToString(protocol.GetParameter(Parameter.jsonrsponserefreshcategory_517));
             Root deserializedlCategory = SecureNewtonsoftDeserialization.DeserializeObject<Root>(data);
-            protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Data:{Environment.NewLine}{data}", LogType.Information, LogLevel.NoLogging);
 
             bool jsonStatusResponse = helper.CheckJSONResponseStatus(deserializedlCategory.Status, protocol);
-            protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Categories Response:{Environment.NewLine}{jsonStatusResponse}", LogType.Information, LogLevel.NoLogging);
 
-            if(!jsonStatusResponse)
+            if (!jsonStatusResponse)
             {
                 return;
             }

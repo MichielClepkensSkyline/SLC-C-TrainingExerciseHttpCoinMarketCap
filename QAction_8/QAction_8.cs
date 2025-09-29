@@ -21,10 +21,9 @@ public static class QAction
             var token = protocol.GetParameter(Parameter.bearertokenvalue_7).ToString();
             var key = protocol.GetParameter(Parameter.apikey_5).ToString();
 
-            string splitKey= key.Split(' ')[0];
-            protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}{splitKey}", LogType.Information, LogLevel.NoLogging);
+            string splitKey = key.Split(' ')[0];
             string newToken = splitKey +' '+ token;
-            protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}{newToken}", LogType.Information, LogLevel.NoLogging);
+
             protocol.SetParameter(Parameter.apikey_5, newToken);
         }
         catch (Exception ex)

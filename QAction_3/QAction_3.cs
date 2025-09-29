@@ -24,7 +24,6 @@ public static class QAction
             var helper = new HelperMethods();
             var httpParameter = protocol.GetParameter(Parameter.httpresponsecodelatestlistings_3);
             bool statusResponse = helper.CheckStatusCode(httpParameter, protocol);
-            protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Latest Listings Response:{Environment.NewLine}{statusResponse}", LogType.Error, LogLevel.NoLogging);
 
             if (!statusResponse)
             {
@@ -33,10 +32,8 @@ public static class QAction
 
             string data = Convert.ToString(protocol.GetParameter(Parameter.jsonresponselatestlistings_4));
             LatestListings deserializedlatestListings = SecureNewtonsoftDeserialization.DeserializeObject<LatestListings>(data);
-            protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Data:{Environment.NewLine}{data}", LogType.Error, LogLevel.NoLogging);
 
             bool jsonStatusResponse = helper.CheckJSONResponseStatus(deserializedlatestListings.Status, protocol);
-            protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Latest Listings Response:{Environment.NewLine}{jsonStatusResponse}", LogType.Information, LogLevel.NoLogging);
 
             if (!jsonStatusResponse)
             {
@@ -48,7 +45,7 @@ public static class QAction
             {
                 if (String.IsNullOrWhiteSpace(latestListings.Id))
                 {
-                    protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|No primary key found for Latest listings{Environment.NewLine}", LogType.Error, LogLevel.NoLogging);
+                    protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|No primary key found for Latest listings{Environment.NewLine}", LogType.Information, LogLevel.NoLogging);
                 }
 
                 latestListingsDictionary[latestListings.Id] = new LatestlistingsQActionRow

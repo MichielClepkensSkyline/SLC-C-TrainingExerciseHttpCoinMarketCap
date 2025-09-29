@@ -28,7 +28,6 @@ public static class QAction
             var helper = new HelperMethods();
             var httpParameter = protocol.GetParameter(Parameter.httpresponsecodelatestquotes_500);
             bool statusResponse = helper.CheckStatusCode(httpParameter, protocol);
-            protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Response Latest Quotes:{Environment.NewLine}{statusResponse}", LogType.Error, LogLevel.NoLogging);
 
             if (!statusResponse)
             {
@@ -37,10 +36,8 @@ public static class QAction
 
             string data = Convert.ToString(protocol.GetParameter(Parameter.jsonresponselatestquotes_501));
             LatestQuotes deserializedlatestQuotes = SecureNewtonsoftDeserialization.DeserializeObject<LatestQuotes>(data);
-            protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Data:{Environment.NewLine}{data}", LogType.Error, LogLevel.NoLogging);
 
             bool jsonStatusResponse = helper.CheckJSONResponseStatus(deserializedlatestQuotes.Status, protocol);
-            protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Categories Response:{Environment.NewLine}{jsonStatusResponse}", LogType.Information, LogLevel.NoLogging);
 
             if (!jsonStatusResponse)
             {
