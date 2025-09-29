@@ -23,6 +23,11 @@ public static class Parameter
 	public const int apikey_5 = 5;
 	/// <summary>PID: 5 | Type: read</summary>
 	public const int apikey = 5;
+	/// <summary>PID: 7 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int bearertokenvalue_7 = 7;
+	/// <summary>PID: 7 | Type: read</summary>
+	public const int bearertokenvalue = 7;
 	/// <summary>PID: 300 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int httpresponsecodecategories_300 = 300;
@@ -115,6 +120,11 @@ public static class Parameter
 		public const int getdata_6 = 6;
 		/// <summary>PID: 6 | Type: write</summary>
 		public const int getdata = 6;
+		/// <summary>PID: 58 | Type: write</summary>
+		[EditorBrowsable(EditorBrowsableState.Never)]
+		public const int bearertokenvalue_58 = 58;
+		/// <summary>PID: 58 | Type: write</summary>
+		public const int bearertokenvalue = 58;
 	}
 	public class Latestlistings
 	{
@@ -352,6 +362,8 @@ public class WriteParameters
 {
 	/// <summary>PID: 6  | Type: write | DISCREETS: Get Data = Get Data</summary>
 	public System.Object Getdata {get { return Protocol.GetParameter(6); }set { Protocol.SetParameter(6, value); }}
+	/// <summary>PID: 58  | Type: write</summary>
+	public System.Object Bearertokenvalue {get { return Protocol.GetParameter(58); }set { Protocol.SetParameter(58, value); }}
 	/// <summary>PID: 409  | Type: write | DISCREETS: Refresh = Refresh</summary>
 	public System.Object Categoriesrefresh {get { return Protocol.GetParameter(409); }set { Protocol.SetParameter(409, value); }}
 	public SLProtocolExt Protocol;
@@ -375,6 +387,9 @@ public interface SLProtocolExt : SLProtocol
 	object Apikey { get; set; }
 	object Getdata_6 { get; set; }
 	object Getdata { get; set; }
+	object Bearertokenvalue_7 { get; set; }
+	object Bearertokenvalue { get; set; }
+	object Bearertokenvalue_58 { get; set; }
 	object Latestlistingsid_101 { get; set; }
 	object Latestlistingsid { get; set; }
 	object Latestlistingsname_102 { get; set; }
@@ -482,6 +497,14 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Getdata_6 {get { return GetParameter(6); }set { SetParameter(6, value); }}
 	/// <summary>PID: 6  | Type: write | DISCREETS: Get Data = Get Data</summary>
 	public System.Object Getdata {get { return Write.Getdata; }set { Write.Getdata = value; }}
+	/// <summary>PID: 7  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Bearertokenvalue_7 {get { return GetParameter(7); }set { SetParameter(7, value); }}
+	/// <summary>PID: 7  | Type: read</summary>
+	public System.Object Bearertokenvalue {get { return GetParameter(7); }set { SetParameter(7, value); }}
+	/// <summary>PID: 58  | Type: write</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Bearertokenvalue_58 {get { return GetParameter(58); }set { SetParameter(58, value); }}
 	/// <summary>PID: 101  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsid_101 {get { return GetParameter(101); }set { SetParameter(101, value); }}

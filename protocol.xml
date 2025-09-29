@@ -125,7 +125,7 @@ Any inquiries can be addressed to:
 				<Type lines="10">string</Type>
 			</Measurement>
 		</Param>
-		<Param id="5" trending="false">
+		<Param id="5" save="true">
 			<Name>APIKey</Name>
 			<Description>API Key</Description>
 			<Type>read</Type>
@@ -135,7 +135,7 @@ Any inquiries can be addressed to:
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>Bearer jWgYFWyQzYAR9ZAm0mvESEKBeerEYw3rYwVEOUvm2Y0=</DefaultValue>
+				<DefaultValue>Bearer </DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>false</RTDisplay>
@@ -163,7 +163,7 @@ Any inquiries can be addressed to:
 					<Position>
 						<Page>General</Page>
 						<Column>0</Column>
-						<Row>25</Row>
+						<Row>28</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -175,6 +175,54 @@ Any inquiries can be addressed to:
 						<Value>Get Data</Value>
 					</Discreet>
 				</Discreets>
+			</Measurement>
+		</Param>
+		<Param id="7" trending="false">
+			<Name>BearerTokenValue</Name>
+			<Description>Bearer Token</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="password">string</Type>
+			</Measurement>
+		</Param>
+		<Param id="58" setter="true">
+			<Name>BearerTokenValue</Name>
+			<Description>Bearer Token</Description>
+			<Type>write</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="password">string</Type>
 			</Measurement>
 		</Param>
 		<Param id="100">
@@ -1312,13 +1360,6 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>1</Row>
-					</Position>
-				</Positions>
 			</Display>
 			<Measurement>
 				<Type lines="10">string</Type>
@@ -1340,19 +1381,11 @@ Any inquiries can be addressed to:
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>0</Row>
-					</Position>
-				</Positions>
 			</Display>
 			<Measurement>
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		
 	</Params>
 
 
@@ -1363,7 +1396,8 @@ Any inquiries can be addressed to:
 		<QAction id="4" name="Get Categories Data Into a Table" encoding="csharp" triggers="301"/>
 		<QAction id="5" name="Get Latest Quotes Data Into Parameters" encoding="csharp" triggers="501" />
 		<QAction id="6" name="Refresh Category by Id" encoding="csharp" triggers="409" row="true" />
-		<QAction id="7" name="Set Singe Row in The Categories Table" encoding="csharp" triggers="517">
+		<QAction id="7" name="Set Singe Row in The Categories Table" encoding="csharp" triggers="517"/>
+		<QAction id="8" name="Set Bearer Token" encoding="csharp" triggers="58">
 		</QAction>
 	</QActions>
 
