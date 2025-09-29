@@ -1,5 +1,6 @@
 ﻿namespace Skyline.Protocol
 {
+    using QAction_1;
     using Skyline.DataMiner.Net.Messages;
     using Skyline.DataMiner.Net.Messages.SLDataGateway;
     using Skyline.DataMiner.Scripting;
@@ -10,17 +11,13 @@
 
     namespace MyExtension
     {
-        public class MyMethods
+        public class HelperMethods
         {
-            public bool CheckStatusCode(object httpResponseParameter,SLProtocol protocol)
+            public bool CheckStatusCode(object httpResponseParameter, SLProtocol protocol)
             {
-                protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Recived parameter:{Environment.NewLine}{httpResponseParameter}", LogType.Information, LogLevel.NoLogging);
-                string httpToString =httpResponseParameter.ToString();
-                protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|parameter to string:{Environment.NewLine}{httpToString}", LogType.Information, LogLevel.NoLogging);
+                string httpToString = httpResponseParameter.ToString();
                 string statusCodeString = httpToString.Split(' ')[1];
-                protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Split string:{Environment.NewLine}{statusCodeString}", LogType.Information, LogLevel.NoLogging);
                 int statusCode = int.Parse(statusCodeString);
-                protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Parsed string:{Environment.NewLine}{statusCode}", LogType.Information, LogLevel.NoLogging);
 
                 if (statusCode == 200)
                 {
@@ -28,7 +25,21 @@
                 }
                 else
                 {
+                    protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|HTTP Response Code:{Environment.NewLine}{httpToString}", LogType.Error, LogLevel.NoLogging);
                     return false;
+                }
+            }
+
+            public bool CheckJSONResponseStatus(Status status, SLProtocol protocol)
+            {
+                if (status.ErrorCode!=0)
+                {
+                    protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Status error message:{Environment.NewLine}{status.ErrorMessage}", LogType.Information, LogLevel.NoLogging);
+                    return false;
+                }
+                else
+                {
+                    return true;
                 }
             }
         }
