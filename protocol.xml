@@ -144,44 +144,14 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="6">
-			<Name>GetData</Name>
-			<Type>write</Type>
-			<Information>
-				<Subtext>
-					<![CDATA[This is the button to get the all of the data]]>
-				</Subtext>
-			</Information>
-			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>28</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type width="110">button</Type>
-				<Discreets>
-					<Discreet>
-						<Display>Get Data</Display>
-						<Value>Get Data</Value>
-					</Discreet>
-				</Discreets>
-			</Measurement>
-		</Param>
 		<Param id="7" trending="false">
 			<Name>BearerTokenValue</Name>
 			<Description>Bearer Token</Description>
 			<Type>read</Type>
 			<Information>
+				<Subtext>
+					<![CDATA[You will enter the recived token here]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>other</RawType>
@@ -202,7 +172,7 @@ Any inquiries can be addressed to:
 				<Type options="password">string</Type>
 			</Measurement>
 		</Param>
-		<Param id="58" setter="true">
+		<Param id="57" setter="true">
 			<Name>BearerTokenValue</Name>
 			<Description>Bearer Token</Description>
 			<Type>write</Type>
@@ -1359,7 +1329,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
-				<RTDisplay>true</RTDisplay>
+				<RTDisplay>false</RTDisplay>
 			</Display>
 			<Measurement>
 				<Type lines="10">string</Type>
@@ -1380,7 +1350,7 @@ Any inquiries can be addressed to:
 				<LengthType>next param</LengthType>
 			</Interprete>
 			<Display>
-				<RTDisplay>true</RTDisplay>
+				<RTDisplay>false</RTDisplay>
 			</Display>
 			<Measurement>
 				<Type>string</Type>
@@ -1397,7 +1367,7 @@ Any inquiries can be addressed to:
 		<QAction id="5" name="Get Latest Quotes Data Into Parameters" encoding="csharp" triggers="501" />
 		<QAction id="6" name="Refresh Category by Id" encoding="csharp" triggers="409" row="true" />
 		<QAction id="7" name="Set Singe Row in The Categories Table" encoding="csharp" triggers="517"/>
-		<QAction id="8" name="Set Bearer Token" encoding="csharp" triggers="58">
+		<QAction id="8" name="Set Bearer Token" encoding="csharp" triggers="57">
 		</QAction>
 	</QActions>
 
@@ -1505,17 +1475,6 @@ Any inquiries can be addressed to:
 				<Id>1</Id>
 			</Content>
 		</Trigger>
-		<Trigger id="2">
-			<Name>On get params</Name>
-			<On id="6">parameter</On>
-			<Time>change</Time>
-			<Type>action</Type>
-			<Content>
-				<Id>3</Id>
-				<Id>4</Id>
-				<Id>5</Id>
-			</Content>
-		</Trigger>
 		<Trigger id="3">
 			<Name>On Refresh Category URL</Name>
 			<On id="516">parameter</On>
@@ -1573,6 +1532,9 @@ Any inquiries can be addressed to:
 			<Time initial="true" dataDisplay="30000">60000</Time>
 			<Interval>75</Interval>
 			<Content>
+				<Group>3</Group>
+				<Group>4</Group>
+				<Group>5</Group>
 			</Content>
 		</Timer>
 		<Timer id="3">
