@@ -1,18 +1,12 @@
 namespace Skyline.Protocol
 {
-	using Skyline.DataMiner.Scripting;
-	using Skyline.DataMiner.Scripting.Categories;
-
 	using System;
-    using System.Collections.Generic;
-    using System.Globalization;
-    using System.Text;
+	using Skyline.DataMiner.Scripting;
 
-    namespace QAction_1
+	namespace QAction_1
     {
         public static class StatusCode
         {
-
             public static bool CheckStatusCode(SLProtocol protocol, int parameterId)
             {
 				string statusCode = protocol.GetParameter(parameterId).ToString();

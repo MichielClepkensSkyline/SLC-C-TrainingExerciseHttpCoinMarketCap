@@ -21,6 +21,7 @@ public static class QAction
 			{
 				return;
 			}
+
 			string json = protocol.GetParameter(Parameter.responseindividualcategory_10).ToString();
 			Category category = SecureNewtonsoftDeserialization.DeserializeObject<Category>(json);
 
