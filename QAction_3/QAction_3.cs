@@ -70,8 +70,6 @@ public static class QAction
 						Latestlistingsquotemarketcapdominance_115 = latest_listing.Quote.USD.MarketCapDominance ?? exceptionValue,
 						Latestlistingsquotevolume24h_116 = latest_listing.Quote.USD.Volume24h ?? exceptionValue,
 					}.ToObjectArray();
-
-					protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run| Latest Listing maximum supply:", LogType.Information, LogLevel.NoLogging);
 				}
 				else
 				{
