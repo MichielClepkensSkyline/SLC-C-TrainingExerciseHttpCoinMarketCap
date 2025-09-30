@@ -111,33 +111,8 @@ Any inquiries can be addressed to:
 				<Type lines="30">string</Type>
 			</Measurement>
 		</Param>
-		<Param id="5">
-			<Name>sendRequest</Name>
-			<Type>write</Type>
-			<Information>
-				<Subtext>
-					<![CDATA[This parameter triggers sending the request.]]>
-				</Subtext>
-			</Information>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-			<Display>
-				<RTDisplay>false</RTDisplay>
-			</Display>
-			<Measurement>
-				<Type width="110">button</Type>
-				<Discreets>
-					<Discreet>
-						<Display>Send Request</Display>
-						<Value>1</Value>
-					</Discreet>
-				</Discreets>
-			</Measurement>
-		</Param>
-		<Param id="7" trending="false">
+		
+		<Param id="5" trending="false">
 			<Name>statusCodeCategories</Name>
 			<Description>Status Code Categories</Description>
 			<Type>read</Type>
@@ -158,7 +133,7 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="8" trending="false">
+		<Param id="6" trending="false">
 			<Name>responseCategories</Name>
 			<Description>Response Categories</Description>
 			<Type>read</Type>
@@ -179,7 +154,7 @@ Any inquiries can be addressed to:
 				<Type lines="30">string</Type>
 			</Measurement>
 		</Param>
-		<Param id="9" trending="false">
+		<Param id="7" trending="false">
 			<Name>statusCodeLatestQuote</Name>
 			<Description>Status Code Latest Quote</Description>
 			<Type>read</Type>
@@ -200,7 +175,7 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="10" trending="false">
+		<Param id="8" trending="false">
 			<Name>responseLatestQuote</Name>
 			<Description>Response Latest Quote</Description>
 			<Type>read</Type>
@@ -221,7 +196,7 @@ Any inquiries can be addressed to:
 				<Type lines="30">string</Type>
 			</Measurement>
 		</Param>
-		<Param id="11" trending="false">
+		<Param id="9" trending="false">
 			<Name>statusCodeIndividualCategory</Name>
 			<Description>Status Code Individual Category</Description>
 			<Type>read</Type>
@@ -242,7 +217,7 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="12" trending="false">
+		<Param id="10" trending="false">
 			<Name>responseIndividualCategory</Name>
 			<Description>Response Individual Category</Description>
 			<Type>read</Type>
@@ -263,7 +238,7 @@ Any inquiries can be addressed to:
 				<Type lines="30">string</Type>
 			</Measurement>
 		</Param>
-		<Param id="13" trending="false">
+		<Param id="11" trending="false">
 			<Name>individualCategoryAPI</Name>
 			<Description>Individual Category API</Description>
 			<Type>read</Type>
@@ -1062,18 +1037,18 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="0" pid="101" type="retrieved" options=""/>
 				<ColumnOption idx="1" pid="102" type="retrieved" options=""/>
 				<ColumnOption idx="2" pid="103" type="retrieved" options=""/>
-				<ColumnOption idx="3" pid="112" type="retrieved" options=""/>
-				<ColumnOption idx="4" pid="106" type="retrieved" options=";disableHeaderSum;enableHistogram;enableHeatmap"/>
-				<ColumnOption idx="5" pid="114" type="retrieved" options=""/>
-				<ColumnOption idx="6" pid="105" type="retrieved" options=""/>
+				<ColumnOption idx="3" pid="104" type="retrieved" options=""/>
+				<ColumnOption idx="4" pid="105" type="retrieved" options=""/>
+				<ColumnOption idx="5" pid="106" type="retrieved" options=";disableHeaderSum;enableHistogram;enableHeatmap"/>
+				<ColumnOption idx="6" pid="107" type="retrieved" options=""/>
 				<ColumnOption idx="7" pid="108" type="retrieved" options=";disableHeaderSum;enableHistogram;enableHeatmap"/>
 				<ColumnOption idx="8" pid="109" type="retrieved" options=";disableHeaderSum;enableHistogram;enableHeatmap"/>
 				<ColumnOption idx="9" pid="110" type="retrieved" options=";disableHeaderSum;enableHistogram;enableHeatmap"/>
-				<ColumnOption idx="10" pid="116" type="retrieved" options=""/>
-				<ColumnOption idx="11" pid="111" type="retrieved" options=""/>
-				<ColumnOption idx="12" pid="115" type="retrieved" options=";disableHeaderSum;enableHistogram;enableHeatmap"/>
-				<ColumnOption idx="13" pid="107" type="retrieved" options=""/>
-				<ColumnOption idx="14" pid="104" type="retrieved" options=""/>
+				<ColumnOption idx="10" pid="111" type="retrieved" options=""/>
+				<ColumnOption idx="11" pid="112" type="retrieved" options=""/>
+				<ColumnOption idx="12" pid="114" type="retrieved" options=""/>
+				<ColumnOption idx="13" pid="115" type="retrieved" options=";disableHeaderSum;enableHistogram;enableHeatmap"/>
+				<ColumnOption idx="14" pid="116" type="retrieved" options=""/>
 				<ColumnOption idx="15" pid="113" type="displaykey" options=""/>
 			</ArrayOptions>
 			<Information>
@@ -1092,7 +1067,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:101|0-102|1-103|2-112|3-106|4-114|5-105|6-108|7-109|8-110|9-116|10-111|11-115|12-107|13-104|14-113|15,width:50-100-61-122-47-130-130-84-78-140-120-150-151-156-156-105,sort:STRING|ASC|1-STRING-STRING-INT-INT-INT-INT-INT-INT-STRING-INT-INT-INT-INT|ASC|0-INT-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:101|0-102|1-103|2-112|11-106|5-114|13-105|4-108|7-109|8-110|9-116|15-111|10-115|14-107|6-104|3-113|12,width:50-100-61-122-81-130-130-84-81-140-120-150-151-156-156-105,sort:STRING|ASC|1-STRING-STRING-INT-INT-INT-INT-INT-INT-STRING-INT-INT-INT-INT|ASC|0-INT-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="101" trending="false">
@@ -1511,12 +1486,14 @@ Any inquiries can be addressed to:
 						<Value>-100</Value>
 					</Exception>
 				</Exceptions>
+				<Decimals>2</Decimals>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<!-- SuppressValidator 2.9.4 There is no predefined unit coins. -->
 				<Units>coins</Units>
 				<!-- /SuppressValidator 2.9.4 -->
+				<Decimals>2</Decimals>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -1614,8 +1591,8 @@ Any inquiries can be addressed to:
 				<ColumnOption idx="6" pid="207" type="retrieved" options=""/>
 				<ColumnOption idx="7" pid="208" type="retrieved" options=";enableHeaderAvg;enableHistogram;enableHeatmap"/>
 				<ColumnOption idx="8" pid="209" type="retrieved" options=""/>
-				<ColumnOption idx="9" pid="211" type="retrieved" options=""/>
-				<ColumnOption idx="10" pid="210" type="displaykey" options=""/>
+				<ColumnOption idx="9" pid="210" type="retrieved" options=""/>
+				<ColumnOption idx="10" pid="211" type="displaykey" options=""/>
 			</ArrayOptions>
 			<Information>
 				<Subtext>
@@ -1633,7 +1610,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:201|0-202|1-203|2-204|3-205|4-206|5-207|6-208|7-209|8-210|10-211|9,width:100-100-122-142-100-129-100-107-156-100-143,sort:STRING|ASC|1-STRING-INT-INT-INT-INT-INT-INT-INT|DESC|0-STRING-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:201|0-202|1-203|2-204|3-205|4-206|5-207|6-208|7-209|8-210|9-211|10,width:100-100-122-142-100-129-100-107-156-100-143,sort:STRING|ASC|1-STRING-INT-INT-INT-INT-INT-INT-INT|DESC|0-STRING-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="201" trending="false">
@@ -1935,7 +1912,34 @@ Any inquiries can be addressed to:
 				<Type options="datetime">number</Type>
 			</Measurement>
 		</Param>
-		<Param id="210" trending="false">
+		<Param id="210">
+			<Name>categoriesRefreshButton</Name>
+			<Description>Refresh</Description>
+			<Type>write</Type>
+			<Information>
+				<Subtext>
+					<![CDATA[Triggers a refresh of the selected category row in the table.]]>
+				</Subtext>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+			</Display>
+			<Measurement>
+				<Type width="110">button</Type>
+				<Discreets>
+					<Discreet>
+						<Display>Refresh Row</Display>
+						<Value>1</Value>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+		</Param>
+		<Param id="211" trending="false">
 			<Name>categoriesDisplayKey</Name>
 			<Description>Display Key (Categories)</Description>
 			<Type>read</Type>
@@ -1954,39 +1958,6 @@ Any inquiries can be addressed to:
 			</Display>
 			<Measurement>
 				<Type>string</Type>
-			</Measurement>
-		</Param>
-		<Param id="211">
-			<Name>categoriesRefreshButton</Name>
-			<Description>Refresh</Description>
-			<Type>write</Type>
-			<Information>
-				<Subtext>
-					<![CDATA[Triggers a refresh of the selected category row in the table.]]>
-				</Subtext>
-			</Information>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<Exceptions>
-					<Exception id="1" value="-100">
-						<Display state="disabled">Not Available</Display>
-						<Value>-100</Value>
-					</Exception>
-				</Exceptions>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-			</Display>
-			<Measurement>
-				<Type width="110">button</Type>
-				<Discreets>
-					<Discreet>
-						<Display>Refresh Row</Display>
-						<Value>1</Value>
-					</Discreet>
-				</Discreets>
 			</Measurement>
 		</Param>
 		<Param id="301">
@@ -2174,8 +2145,8 @@ Any inquiries can be addressed to:
 						<Header key="Authorization" pid="311"></Header>
 					</Headers>
 				</Request>
-				<Response statusCode="7">
-					<Content pid="8"></Content>
+				<Response statusCode="5">
+					<Content pid="6"></Content>
 				</Response>
 			</Connection>
 		</Session>
@@ -2186,20 +2157,20 @@ Any inquiries can be addressed to:
 						<Header key="Authorization" pid="311"></Header>
 					</Headers>
 				</Request>
-				<Response statusCode="9">
-					<Content pid="10"></Content>
+				<Response statusCode="7">
+					<Content pid="8"></Content>
 				</Response>
 			</Connection>
 		</Session>
 		<Session id="4" name="Get Individual Category">
 			<Connection id="1" name="Get Individual Category">
-				<Request verb="GET" pid="13">
+				<Request verb="GET" pid="11">
 					<Headers>
 						<Header key="Authorization" pid="311"></Header>
 					</Headers>
 				</Request>
-				<Response statusCode="11">
-					<Content pid="12"></Content>
+				<Response statusCode="9">
+					<Content pid="10"></Content>
 				</Response>
 			</Connection>
 		</Session>
@@ -2210,13 +2181,13 @@ Any inquiries can be addressed to:
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
 		<QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
 		<QAction id="3" name="Parse Latest Listings" encoding="csharp" triggers="4"></QAction>
-		<QAction id="4" name="Parse Categories" encoding="csharp" triggers="8">
+		<QAction id="4" name="Parse Categories" encoding="csharp" triggers="6">
 		</QAction>
-		<QAction id="5" name="Parse Latest Quote" encoding="csharp" triggers="10">
+		<QAction id="5" name="Parse Latest Quote" encoding="csharp" triggers="8">
 		</QAction>
-		<QAction id="6" name="Make The Url For Individual Category" encoding="csharp" triggers="211" row="true">
+		<QAction id="6" name="Make The Url For Individual Category" encoding="csharp" triggers="210" row="true">
 		</QAction>
-		<QAction id="7" name="Parse Individual Category" encoding="csharp" triggers="12">
+		<QAction id="7" name="Parse Individual Category" encoding="csharp" triggers="10">
 		</QAction>
 		<QAction id="8" name="Make a Bearer token" encoding="csharp" triggers="362">
 		</QAction>
@@ -2292,7 +2263,7 @@ Any inquiries can be addressed to:
 		</Trigger>
 		<Trigger id="3">
 			<Name>On Individual Category API Change</Name>
-			<On id="13">parameter</On>
+			<On id="11">parameter</On>
 			<Time>change</Time>
 			<Type>action</Type>
 			<Content>
@@ -2320,12 +2291,12 @@ Any inquiries can be addressed to:
 		<Action id="4">
 			<Name>Execute Group Get Categories</Name>
 			<On id="4">group</On>
-			<Type>execute next</Type>
+			<Type>execute</Type>
 		</Action>
 		<Action id="5">
 			<Name>Execute Group Get Latest Quote</Name>
 			<On id="5">group</On>
-			<Type>execute next</Type>
+			<Type>execute</Type>
 		</Action>
 		<Action id="6">
 			<Name>Get Individual Category</Name>

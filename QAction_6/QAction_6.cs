@@ -16,7 +16,7 @@ public static class QAction
 		{
 			string api = FormUrl(protocol);
 
-			protocol.SetParameter(Parameter.individualcategoryapi_13, api);
+			protocol.SetParameter(Parameter.individualcategoryapi_11, api);
 		}
 		catch (Exception ex)
 		{

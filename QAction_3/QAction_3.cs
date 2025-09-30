@@ -19,15 +19,20 @@ public static class QAction
 	{
 		try
 		{
+			if (!StatusCode.CheckStatusCode(protocol, Parameter.statuscodelatestlistings_3))
+			{
+				return;
+			}
+
 			string json = protocol.GetParameter(Parameter.responselatestlistings_4).ToString();
 			LatestListings latestListings = SecureNewtonsoftDeserialization.DeserializeObject<LatestListings>(json);
-			if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodelatestlistings_3))
+
+			if (!StatusCode.CheckErrorCode(protocol, latestListings.Status.ErrorCode, latestListings.Status.ErrorMessage))
 			{
-				if (StatusCode.CheckErrorCode(protocol, latestListings.Status.ErrorCode, latestListings.Status.ErrorMessage))
-				{
-					FillLatestListingsTable(protocol, latestListings);
-				}
+				return;
 			}
+
+			FillLatestListingsTable(protocol, latestListings);
 		}
 		catch (Exception ex)
 		{
@@ -41,7 +46,7 @@ public static class QAction
 		{
 			Dictionary<string, object[]> latestListingsTableContent = new Dictionary<string, object[]>();
 
-			var exceptionValue = -100;
+			int exceptionValue = -100;
 
 			foreach (Listing latest_listing in latestListings.Listings)
 			{
@@ -60,11 +65,13 @@ public static class QAction
 						Latestlistings1hpercentagechange_109 = latest_listing.Quote.USD.PercentChange1h ?? exceptionValue,
 						Latestlistingsquotevolumechange24h_110 = latest_listing.Quote.USD.VolumeChange24h ?? exceptionValue,
 						Latestlistingsquotemarketcap_111 = latest_listing.Quote.USD.MarketCap ?? exceptionValue,
-						Latestlistingsplatformname_112 = latest_listing.Platform.Name ?? exceptionValue.ToString(),
+						Latestlistingsplatformname_112 = latest_listing.Platform?.Name ?? exceptionValue.ToString(),
 						Latestlistingsmaxsupply_114 = latest_listing.MaxSupply ?? exceptionValue,
 						Latestlistingsquotemarketcapdominance_115 = latest_listing.Quote.USD.MarketCapDominance ?? exceptionValue,
 						Latestlistingsquotevolume24h_116 = latest_listing.Quote.USD.Volume24h ?? exceptionValue,
 					}.ToObjectArray();
+
+					protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run| Latest Listing maximum supply:", LogType.Information, LogLevel.NoLogging);
 				}
 				else
 				{

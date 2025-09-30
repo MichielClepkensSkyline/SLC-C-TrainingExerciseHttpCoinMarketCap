@@ -19,16 +19,20 @@ public static class QAction
 	{
 		try
 		{
-			string json = protocol.GetParameter(Parameter.responselatestquote_10).ToString();
+			if (!StatusCode.CheckStatusCode(protocol, Parameter.statuscodelatestquote_7))
+			{
+				return;
+			}
+
+			string json = protocol.GetParameter(Parameter.responselatestquote_8).ToString();
 			LatestQuote latestQuote = SecureNewtonsoftDeserialization.DeserializeObject<LatestQuote>(json);
 
-			if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodelatestquote_9))
+			if (!StatusCode.CheckErrorCode(protocol, latestQuote.Status.ErrorCode, latestQuote.Status.ErrorMessage))
 			{
-				if (StatusCode.CheckErrorCode(protocol, latestQuote.Status.ErrorCode, latestQuote.Status.ErrorMessage))
-				{
-					FillLatestQuoteParameters(protocol, latestQuote.Data);
-				}
+				return;
 			}
+
+			FillLatestQuoteParameters(protocol, latestQuote.Data);
 		}
 		catch (Exception ex)
 		{

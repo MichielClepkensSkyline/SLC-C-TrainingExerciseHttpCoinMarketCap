@@ -19,17 +19,20 @@ public static class QAction
 	{
 		try
 		{
-			string json = protocol.GetParameter(Parameter.responsecategories_8).ToString();
-			Categories categories = SecureNewtonsoftDeserialization.DeserializeObject<Categories>(json);
-			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|BEarer token : {protocol.GetParameter(Parameter.bearertoken_311) }", LogType.Error, LogLevel.NoLogging);
-
-			if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodecategories_7))
+			if (!StatusCode.CheckStatusCode(protocol, Parameter.statuscodecategories_5))
 			{
-				if (StatusCode.CheckErrorCode(protocol, categories.Status.ErrorCode, categories.Status.ErrorMessage))
-				{
-					FillCategoriesTable(protocol, categories);
-				}
+				return;
 			}
+
+			string json = protocol.GetParameter(Parameter.responsecategories_6).ToString();
+			Categories categories = SecureNewtonsoftDeserialization.DeserializeObject<Categories>(json);
+
+			if (!StatusCode.CheckErrorCode(protocol, categories.Status.ErrorCode, categories.Status.ErrorMessage))
+			{
+				return;
+			}
+
+			FillCategoriesTable(protocol, categories);
 		}
 		catch (Exception ex)
 		{

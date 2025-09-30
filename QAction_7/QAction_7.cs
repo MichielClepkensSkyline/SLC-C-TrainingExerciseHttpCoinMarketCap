@@ -17,16 +17,19 @@ public static class QAction
 	{
 		try
 		{
-			string json = protocol.GetParameter(Parameter.responseindividualcategory_12).ToString();
+			if (!StatusCode.CheckStatusCode(protocol, Parameter.statuscodeindividualcategory_9))
+			{
+				return;
+			}
+			string json = protocol.GetParameter(Parameter.responseindividualcategory_10).ToString();
 			Category category = SecureNewtonsoftDeserialization.DeserializeObject<Category>(json);
 
-			if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodeindividualcategory_11))
+			if (!StatusCode.CheckErrorCode(protocol, category.Status.ErrorCode, category.Status.ErrorMessage))
 			{
-				if(StatusCode.CheckErrorCode(protocol, category.Status.ErrorCode, category.Status.ErrorMessage))
-				{
-					UpdateCategoryRow(protocol, category.Data);
-				}
+				return;
 			}
+
+			UpdateCategoryRow(protocol, category.Data);
 		}
 		catch (Exception ex)
 		{
