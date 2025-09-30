@@ -942,7 +942,7 @@ A market quote in the currency conversion option.]]>
 				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
 				<!-- /SuppressValidator 2.9.4 -->
-				<Decimals>3</Decimals>
+				<Decimals>2</Decimals>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -978,7 +978,7 @@ A market quote in the currency conversion option.]]>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Decimals>3</Decimals>
+				<Decimals>2</Decimals>
 				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
 				<!-- /SuppressValidator 2.9.4 -->
@@ -1055,7 +1055,7 @@ A market quote in the currency conversion option.]]>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Decimals>3</Decimals>
+				<Decimals>2</Decimals>
 				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
 				<!-- /SuppressValidator 2.9.4 -->
@@ -1451,7 +1451,7 @@ The unique ID of the category.]]>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Decimals>3</Decimals>
+				<Decimals>2</Decimals>
 				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
 				<!-- /SuppressValidator 2.9.4 -->
@@ -1528,7 +1528,7 @@ The unique ID of the category.]]>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Decimals>3</Decimals>
+				<Decimals>2</Decimals>
 				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
 				<!-- /SuppressValidator 2.9.4 -->
@@ -1922,7 +1922,7 @@ The unique ID of the category.]]>
 		</Param>
 		<Param id="607" trending="true">
 			<Name>ethereumDominance24hPercentageChange</Name>
-			<Description>Ethereum Domincance 24h Percentage Change</Description>
+			<Description>Ethereum Dominance 24h Percentage Change</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
@@ -1967,7 +1967,7 @@ The unique ID of the category.]]>
 		</Param>
 		<Param id="608" trending="true">
 			<Name>bitcoinDominance24hPercentageChange</Name>
-			<Description>Bitcoin Domincance 24h Percentage Change</Description>
+			<Description>Bitcoin Dominance 24h Percentage Change</Description>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
@@ -2037,7 +2037,7 @@ The unique ID of the category.]]>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Decimals>3</Decimals>
+				<Decimals>2</Decimals>
 				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
 				<!-- /SuppressValidator 2.9.4 -->
@@ -2083,7 +2083,7 @@ The unique ID of the category.]]>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Decimals>3</Decimals>
+				<Decimals>2</Decimals>
 				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
 				<!-- /SuppressValidator 2.9.4 -->
@@ -2175,7 +2175,7 @@ The unique ID of the category.]]>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Decimals>3</Decimals>
+				<Decimals>2</Decimals>
 				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
 				<!-- /SuppressValidator 2.9.4 -->
@@ -2221,7 +2221,7 @@ The unique ID of the category.]]>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Decimals>3</Decimals>
+				<Decimals>2</Decimals>
 				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
 				<!-- /SuppressValidator 2.9.4 -->
@@ -2392,7 +2392,7 @@ The unique ID of the category.]]>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Decimals>3</Decimals>
+				<Decimals>2</Decimals>
 				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
 				<!-- /SuppressValidator 2.9.4 -->
@@ -2438,7 +2438,7 @@ The unique ID of the category.]]>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
-				<Decimals>3</Decimals>
+				<Decimals>2</Decimals>
 				<!-- SuppressValidator 2.9.4 No appropiate unit defined -->
 				<Units>USD</Units>
 				<!-- /SuppressValidator 2.9.4 -->
@@ -2561,6 +2561,7 @@ The unique ID of the category.]]>
 		<Group id="4">
 			<Name>HTTP request Last Listings</Name>
 			<Description>HTTP request Last Listings</Description>
+			<Condition><![CDATA[id:7 != empty]]></Condition>
 			<Type>poll</Type>
 			<Content>
 				<Session>1</Session>
@@ -2569,6 +2570,7 @@ The unique ID of the category.]]>
 		<Group id="5">
 			<Name>HTTP request Categories</Name>
 			<Description>HTTP request Categories</Description>
+			<Condition><![CDATA[id:7 != empty]]></Condition>
 			<Type>poll</Type>
 			<Content>
 				<Session>2</Session>
@@ -2577,6 +2579,7 @@ The unique ID of the category.]]>
 		<Group id="6">
 			<Name>HTTP request Latest Quotes</Name>
 			<Description>HTTP request Latest Quotes</Description>
+			<Condition><![CDATA[id:7 != empty]]></Condition>
 			<Type>poll</Type>
 			<Content>
 				<Session>3</Session>
@@ -2585,6 +2588,7 @@ The unique ID of the category.]]>
 		<Group id="7">
 			<Name>HTTP Request One Category</Name>
 			<Description>HTTP Request One Category</Description>
+			<Condition><![CDATA[id:7 != empty]]></Condition>
 			<Type>poll</Type>
 			<Content>
 				<Session>4</Session>
