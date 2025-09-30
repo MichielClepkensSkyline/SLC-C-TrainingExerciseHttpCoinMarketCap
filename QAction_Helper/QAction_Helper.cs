@@ -23,11 +23,6 @@ public static class Parameter
 	public const int apikey_5 = 5;
 	/// <summary>PID: 5 | Type: read</summary>
 	public const int apikey = 5;
-	/// <summary>PID: 7 | Type: read</summary>
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	public const int bearertokenvalue_7 = 7;
-	/// <summary>PID: 7 | Type: read</summary>
-	public const int bearertokenvalue = 7;
 	/// <summary>PID: 300 | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public const int httpresponsecodecategories_300 = 300;
@@ -113,13 +108,18 @@ public static class Parameter
 	public const int httpresponsecategoryrefresh_518 = 518;
 	/// <summary>PID: 518 | Type: read</summary>
 	public const int httpresponsecategoryrefresh = 518;
+	/// <summary>PID: 600 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int bearertokenvalue_600 = 600;
+	/// <summary>PID: 600 | Type: read</summary>
+	public const int bearertokenvalue = 600;
 	public class Write
 	{
-		/// <summary>PID: 57 | Type: write</summary>
+		/// <summary>PID: 650 | Type: write</summary>
 		[EditorBrowsable(EditorBrowsableState.Never)]
-		public const int bearertokenvalue_57 = 57;
-		/// <summary>PID: 57 | Type: write</summary>
-		public const int bearertokenvalue = 57;
+		public const int bearertokenvalue_650 = 650;
+		/// <summary>PID: 650 | Type: write</summary>
+		public const int bearertokenvalue = 650;
 	}
 	public class Latestlistings
 	{
@@ -355,10 +355,10 @@ public static class Parameter
 }
 public class WriteParameters
 {
-	/// <summary>PID: 57  | Type: write</summary>
-	public System.Object Bearertokenvalue {get { return Protocol.GetParameter(57); }set { Protocol.SetParameter(57, value); }}
 	/// <summary>PID: 409  | Type: write | DISCREETS: Refresh = Refresh</summary>
 	public System.Object Categoriesrefresh {get { return Protocol.GetParameter(409); }set { Protocol.SetParameter(409, value); }}
+	/// <summary>PID: 650  | Type: write</summary>
+	public System.Object Bearertokenvalue {get { return Protocol.GetParameter(650); }set { Protocol.SetParameter(650, value); }}
 	public SLProtocolExt Protocol;
 	public WriteParameters(SLProtocolExt protocol)
 	{
@@ -378,9 +378,6 @@ public interface SLProtocolExt : SLProtocol
 	object Jsonresponselatestlistings { get; set; }
 	object Apikey_5 { get; set; }
 	object Apikey { get; set; }
-	object Bearertokenvalue_7 { get; set; }
-	object Bearertokenvalue { get; set; }
-	object Bearertokenvalue_57 { get; set; }
 	object Latestlistingsid_101 { get; set; }
 	object Latestlistingsid { get; set; }
 	object Latestlistingsname_102 { get; set; }
@@ -459,6 +456,9 @@ public interface SLProtocolExt : SLProtocol
 	object Jsonrsponserefreshcategory { get; set; }
 	object Httpresponsecategoryrefresh_518 { get; set; }
 	object Httpresponsecategoryrefresh { get; set; }
+	object Bearertokenvalue_600 { get; set; }
+	object Bearertokenvalue { get; set; }
+	object Bearertokenvalue_650 { get; set; }
 	WriteParameters Write { get; set; }
 }
 public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
@@ -484,14 +484,6 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Apikey_5 {get { return GetParameter(5); }set { SetParameter(5, value); }}
 	/// <summary>PID: 5  | Type: read</summary>
 	public System.Object Apikey {get { return GetParameter(5); }set { SetParameter(5, value); }}
-	/// <summary>PID: 7  | Type: read</summary>
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Bearertokenvalue_7 {get { return GetParameter(7); }set { SetParameter(7, value); }}
-	/// <summary>PID: 7  | Type: read</summary>
-	public System.Object Bearertokenvalue {get { return GetParameter(7); }set { SetParameter(7, value); }}
-	/// <summary>PID: 57  | Type: write</summary>
-	[EditorBrowsable(EditorBrowsableState.Never)]
-	public System.Object Bearertokenvalue_57 {get { return GetParameter(57); }set { SetParameter(57, value); }}
 	/// <summary>PID: 101  | Type: read</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Latestlistingsid_101 {get { return GetParameter(101); }set { SetParameter(101, value); }}
@@ -684,6 +676,14 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Httpresponsecategoryrefresh_518 {get { return GetParameter(518); }set { SetParameter(518, value); }}
 	/// <summary>PID: 518  | Type: read</summary>
 	public System.Object Httpresponsecategoryrefresh {get { return GetParameter(518); }set { SetParameter(518, value); }}
+	/// <summary>PID: 600  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Bearertokenvalue_600 {get { return GetParameter(600); }set { SetParameter(600, value); }}
+	/// <summary>PID: 600  | Type: read</summary>
+	public System.Object Bearertokenvalue {get { return GetParameter(600); }set { SetParameter(600, value); }}
+	/// <summary>PID: 650  | Type: write</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Bearertokenvalue_650 {get { return GetParameter(650); }set { SetParameter(650, value); }}
 	public WriteParameters Write { get; set; }
 	public ConcreteSLProtocolExt()
 	{

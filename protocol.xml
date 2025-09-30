@@ -130,57 +130,6 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="7" trending="false" save="true">
-			<Name>BearerTokenValue</Name>
-			<Description>Bearer Token</Description>
-			<Type>read</Type>
-			<Information>
-				<Subtext>
-					<![CDATA[You will enter the recived token here]]>
-				</Subtext>
-			</Information>
-			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>0</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type options="password">string</Type>
-			</Measurement>
-		</Param>
-		<Param id="57" setter="true">
-			<Name>BearerTokenValue</Name>
-			<Description>Bearer Token</Description>
-			<Type>write</Type>
-			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>1</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type options="password">string</Type>
-			</Measurement>
-		</Param>
 		<Param id="100">
 			<Name>LatestListings</Name>
 			<Description>Latest Listings</Description>
@@ -212,7 +161,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:101|0-103|2-102|1-104|3-105|4-106|5-107|6-108|7-109|8-110|9-111|10,width:100-100-100-137-122-175-125-103-156-156-100,sort:STRING|ASC|2-STRING-STRING-STRING|ASC|1-STRING-STRING-STRING-STRING-STRING-INT|ASC|0-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:101|0-103|2-102|1-104|3-105|4-106|5-107|6-108|7-109|8-110|9-111|10,width:0-100-100-137-122-175-125-103-156-156-100,sort:STRING|ASC|2-STRING-STRING-STRING|ASC|1-STRING-STRING-STRING-STRING-STRING-INT|ASC|0-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="101" trending="false">
@@ -569,7 +518,7 @@ Any inquiries can be addressed to:
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:401|0-402|1-403|2-404|3-405|4-406|5-407|6-408|7-409|8,width:100-100-124-142-100-100-156-200-106,sort:STRING|ASC|1-STRING-STRING-STRING-STRING-STRING-INT|ASC|0-STRING-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:401|0-402|1-403|2-404|3-405|4-406|5-407|6-408|7-409|8,width:0-200-124-142-200-200-156-200-106,sort:STRING|ASC|1-STRING-STRING-STRING-STRING-STRING-INT|ASC|0-STRING-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="401" trending="false">
@@ -1314,6 +1263,55 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
+		<Param id="600" trending="false" save="true">
+			<Name>BearerTokenValue</Name>
+			<Description>Token Value</Description>
+			<Type>read</Type>
+			<Information>
+				<Subtext><![CDATA[This is where you put in your token]]></Subtext>
+			</Information>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>0</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="password">string</Type>
+			</Measurement>
+		</Param>
+		<Param id="650" setter="true">
+			<Name>BearerTokenValue</Name>
+			<Description>Token Value</Description>
+			<Type>write</Type>
+			<Interprete>
+				<RawType>other</RawType>
+				<Type>string</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>1</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="password">string</Type>
+			</Measurement>
+		</Param>
 	</Params>
 
 
@@ -1325,7 +1323,7 @@ Any inquiries can be addressed to:
 		<QAction id="5" name="Get Latest Quotes Data Into Parameters" encoding="csharp" triggers="501" />
 		<QAction id="6" name="Refresh Category by Id" encoding="csharp" triggers="409" row="true" />
 		<QAction id="7" name="Set Singe Row in The Categories Table" encoding="csharp" triggers="517"/>
-		<QAction id="8" name="Set Bearer Token" encoding="csharp" triggers="57">
+		<QAction id="8" name="Set Bearer Token" encoding="csharp" triggers="650">
 		</QAction>
 	</QActions>
 
