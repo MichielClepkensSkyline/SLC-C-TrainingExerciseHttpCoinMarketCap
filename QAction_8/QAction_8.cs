@@ -29,10 +29,7 @@ public static class QAction
     public static void SetNewBearerTokenValue(SLProtocol protocol)
     {
         var token = protocol.GetParameter(Parameter.bearertokenvalue_600).ToString();
-        var key = protocol.GetParameter(Parameter.apikey_5).ToString();
-
-        string splitKey = key.Split(' ')[0];
-        string newToken = splitKey +' '+ token;
+        string newToken = "Bearer" +' '+ token;
 
         protocol.SetParameter(Parameter.apikey_5, newToken);
     }

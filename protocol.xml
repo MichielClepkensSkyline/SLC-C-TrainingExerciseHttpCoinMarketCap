@@ -121,7 +121,6 @@ Any inquiries can be addressed to:
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>Bearer </DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>false</RTDisplay>
@@ -1393,6 +1392,7 @@ Any inquiries can be addressed to:
 			<Name>Latest Listings</Name>
 			<Description>Latest Listings</Description>
 			<Type>poll</Type>
+			<Condition><![CDATA[id:5 != empty]]></Condition>
 			<Content>
 				<Session>1</Session>
 			</Content>
@@ -1401,6 +1401,7 @@ Any inquiries can be addressed to:
 			<Name>Categories</Name>
 			<Description>Categories</Description>
 			<Type>poll</Type>
+			<Condition><![CDATA[id:5 != empty]]></Condition>
 			<Content>
 				<Session>2</Session>
 			</Content>
@@ -1409,6 +1410,7 @@ Any inquiries can be addressed to:
 			<Name>Latest Quotes</Name>
 			<Description>Latest Quotes</Description>
 			<Type>poll</Type>
+			<Condition><![CDATA[id:5 != empty]]></Condition>
 			<Content>
 				<Session>3</Session>
 			</Content>
@@ -1417,6 +1419,7 @@ Any inquiries can be addressed to:
 			<Name>Refresh Category</Name>
 			<Description>Refresh Category</Description>
 			<Type>poll</Type>
+			<Condition><![CDATA[id:5 != empty]]></Condition>
 			<Content>
 				<Session>4</Session>
 			</Content>
