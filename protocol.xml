@@ -97,7 +97,7 @@ Any inquiries can be addressed to:
 				<Type options="password">string</Type>
 			</Measurement>
 		</Param>
-		<Param id="4" setter="true">
+		<Param id="103" setter="true">
 			<Name>authorizationToken</Name>
 			<Description>Authorization Token</Description>
 			<Type>write</Type>
@@ -132,17 +132,7 @@ Any inquiries can be addressed to:
 				<Value>0x420x650x610x720x650x720x20</Value>
 			</Interprete>
 		</Param>
-		<Param id="6" save="true">
-			<Name>tokenBuilder</Name>
-			<Description>Token Builder</Description>
-			<Type>read</Type>
-			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
-				<LengthType>next param</LengthType>
-			</Interprete>
-		</Param>
-		<Param id="7" trending="false" save="true">
+		<Param id="6">
 			<Name>bearerToken</Name>
 			<Description>Bearer Token</Description>
 			<Type>read</Type>
@@ -153,6 +143,23 @@ Any inquiries can be addressed to:
 			</Interprete>
 		</Param>
 		<Param id="10">
+			<Name>titleEnd</Name>
+			<Type>fixed</Type>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>0</Column>
+						<Row>2</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type options="end">title</Type>
+			</Measurement>
+		</Param>
+		<Param id="11">
 			<Name>titleBeginAuthorization</Name>
 			<Description>Authorization</Description>
 			<Type>fixed</Type>
@@ -168,23 +175,6 @@ Any inquiries can be addressed to:
 			</Display>
 			<Measurement>
 				<Type options="begin">title</Type>
-			</Measurement>
-		</Param>
-		<Param id="11">
-			<Name>titleEndAuhtorization</Name>
-			<Type>fixed</Type>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>0</Column>
-						<Row>2</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type options="end">title</Type>
 			</Measurement>
 		</Param>
 		<Param id="12">
@@ -206,23 +196,6 @@ Any inquiries can be addressed to:
 			</Measurement>
 		</Param>
 		<Param id="13">
-			<Name>titleEndOverallCrypto</Name>
-			<Type>fixed</Type>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>1</Column>
-						<Row>11</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type options="end">title</Type>
-			</Measurement>
-		</Param>
-		<Param id="14">
 			<Name>titleBeginEthereum</Name>
 			<Description>Ethereum</Description>
 			<Type>fixed</Type>
@@ -240,24 +213,7 @@ Any inquiries can be addressed to:
 				<Type options="begin">title</Type>
 			</Measurement>
 		</Param>
-		<Param id="15">
-			<Name>titleEndEthereum</Name>
-			<Type>fixed</Type>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>Quotes</Page>
-						<Column>0</Column>
-						<Row>3</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type options="end">title</Type>
-			</Measurement>
-		</Param>
-		<Param id="16">
+		<Param id="14">
 			<Name>titleBeginBitcoin</Name>
 			<Description>Bitcoin</Description>
 			<Type>fixed</Type>
@@ -275,24 +231,7 @@ Any inquiries can be addressed to:
 				<Type options="begin">title</Type>
 			</Measurement>
 		</Param>
-		<Param id="17">
-			<Name>titleEndBitcoin</Name>
-			<Type>fixed</Type>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>Quotes</Page>
-						<Column>1</Column>
-						<Row>3</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type options="end">title</Type>
-			</Measurement>
-		</Param>
-		<Param id="18">
+		<Param id="15">
 			<Name>titleBeginDefi</Name>
 			<Description>Decentralized Finance</Description>
 			<Type>fixed</Type>
@@ -310,24 +249,7 @@ Any inquiries can be addressed to:
 				<Type options="begin">title</Type>
 			</Measurement>
 		</Param>
-		<Param id="19">
-			<Name>titleEndDefi</Name>
-			<Type>fixed</Type>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>Quotes</Page>
-						<Column>0</Column>
-						<Row>8</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type options="end">title</Type>
-			</Measurement>
-		</Param>
-		<Param id="20">
+		<Param id="16">
 			<Name>titleBeginStablecoin</Name>
 			<Description>Stablecoin</Description>
 			<Type>fixed</Type>
@@ -343,23 +265,6 @@ Any inquiries can be addressed to:
 			</Display>
 			<Measurement>
 				<Type options="begin">title</Type>
-			</Measurement>
-		</Param>
-		<Param id="21">
-			<Name>titleEndStablecoin</Name>
-			<Type>fixed</Type>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Positions>
-					<Position>
-						<Page>Quotes</Page>
-						<Column>1</Column>
-						<Row>8</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type options="end">title</Type>
 			</Measurement>
 		</Param>
 		<Param id="50">
@@ -1006,14 +911,14 @@ A market quote in the currency conversion option.]]>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
-				<CL>-15</CL>
-				<MaL>-10</MaL>
-				<MiL>-5</MiL>
-				<WaL>-1</WaL>
-				<WaH>1</WaH>
-				<MiH>5</MiH>
-				<MaH>10</MaH>
-				<CH>15</CH>
+				<CL>-40</CL>
+				<MaL>-30</MaL>
+				<MiL>-20</MiL>
+				<WaL>-10</WaL>
+				<WaH>10</WaH>
+				<MiH>20</MiH>
+				<MaH>30</MaH>
+				<CH>40</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1081,12 +986,16 @@ A market quote in the currency conversion option.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
-			<Alarm>
+			<Alarm type="relative:218">
 				<Monitored>true</Monitored>
-				<CL>0.01</CL>
-				<MaL>0.05</MaL>
+				<CL>1</CL>
+				<MaL>0.5</MaL>
 				<MiL>0.1</MiL>
-				<WaL>0.5</WaL>
+				<WaL>0.05</WaL>
+				<WaH>0.05</WaH>
+				<MiH>0.1</MiH>
+				<MaH>0.5</MaH>
+				<CH>1</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1155,14 +1064,14 @@ A market quote in the currency conversion option.]]>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
-				<CL>-50</CL>
-				<MaL>-30</MaL>
-				<MiL>-20</MiL>
-				<WaL>-10</WaL>
-				<WaH>10</WaH>
-				<MiH>20</MiH>
-				<MaH>30</MaH>
-				<CH>50</CH>
+				<CL>-60</CL>
+				<MaL>-40</MaL>
+				<MiL>-30</MiL>
+				<WaL>-20</WaL>
+				<WaH>20</WaH>
+				<MiH>30</MiH>
+				<MaH>40</MaH>
+				<CH>60</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1193,14 +1102,14 @@ A market quote in the currency conversion option.]]>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
-				<CL>-50</CL>
-				<MaL>-30</MaL>
-				<MiL>-20</MiL>
-				<WaL>-10</WaL>
-				<WaH>10</WaH>
-				<MiH>20</MiH>
-				<MaH>30</MaH>
-				<CH>50</CH>
+				<CL>-70</CL>
+				<MaL>-50</MaL>
+				<MiL>-40</MiL>
+				<WaL>-30</WaL>
+				<WaH>30</WaH>
+				<MiH>40</MiH>
+				<MaH>50</MaH>
+				<CH>70</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1403,12 +1312,12 @@ The unique ID of the category.]]>
 			<Alarm>
 				<Monitored>true</Monitored>
 				<CL>-50</CL>
-				<MaL>-30</MaL>
-				<MiL>-20</MiL>
-				<WaL>-10</WaL>
-				<WaH>10</WaH>
-				<MiH>20</MiH>
-				<MaH>30</MaH>
+				<MaL>-40</MaL>
+				<MiL>-30</MiL>
+				<WaL>-20</WaL>
+				<WaH>20</WaH>
+				<MiH>30</MiH>
+				<MaH>40</MaH>
 				<CH>50</CH>
 			</Alarm>
 			<Display>
@@ -1480,12 +1389,12 @@ The unique ID of the category.]]>
 			<Alarm>
 				<Monitored>true</Monitored>
 				<CL>-50</CL>
-				<MaL>-30</MaL>
-				<MiL>-20</MiL>
-				<WaL>-10</WaL>
-				<WaH>10</WaH>
-				<MiH>20</MiH>
-				<MaH>30</MaH>
+				<MaL>-40</MaL>
+				<MiL>-30</MiL>
+				<WaL>-20</WaL>
+				<WaH>20</WaH>
+				<MiH>30</MiH>
+				<MaH>40</MaH>
 				<CH>50</CH>
 			</Alarm>
 			<Display>
@@ -1556,14 +1465,14 @@ The unique ID of the category.]]>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
-				<CL>-50</CL>
-				<MaL>-30</MaL>
-				<MiL>-20</MiL>
-				<WaL>-10</WaL>
-				<WaH>10</WaH>
-				<MiH>20</MiH>
-				<MaH>30</MaH>
-				<CH>50</CH>
+				<CL>-99</CL>
+				<MaL>-95</MaL>
+				<MiL>-75</MiL>
+				<WaL>-50</WaL>
+				<WaH>50</WaH>
+				<MiH>75</MiH>
+				<MaH>95</MaH>
+				<CH>99</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1606,7 +1515,9 @@ The unique ID of the category.]]>
 			<Description>Refresh Button</Description>
 			<Type>write</Type>
 			<Information>
-				<Subtext>Use this button to refresh the values of this row.</Subtext>
+				<Subtext>
+					<![CDATA[Use this button to refresh the values of this row.]]>
+				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -2503,7 +2414,7 @@ The unique ID of the category.]]>
 			<Connection id="1" name="Get Latest Listings on Coin Market">
 				<Request verb="GET" pid="52">
 					<Headers>
-						<Header key="Authorization" pid="7"/>
+						<Header key="Authorization" pid="6"/>
 					</Headers>
 				</Request>
 				<Response statusCode="50">
@@ -2515,7 +2426,7 @@ The unique ID of the category.]]>
 			<Connection id="2" name="Get Categories on Coin Market">
 				<Request verb="GET" pid="62">
 					<Headers>
-						<Header key="Authorization" pid="7"/>
+						<Header key="Authorization" pid="6"/>
 					</Headers>
 				</Request>
 				<Response statusCode="60">
@@ -2527,7 +2438,7 @@ The unique ID of the category.]]>
 			<Connection id="3" name="Get Latest Quotes on Coin Market">
 				<Request verb="GET" pid="72">
 					<Headers>
-						<Header key="Authorization" pid="7"/>
+						<Header key="Authorization" pid="6"/>
 					</Headers>
 				</Request>
 				<Response statusCode="70">
@@ -2539,7 +2450,7 @@ The unique ID of the category.]]>
 			<Connection id="4" name="Get One Category on Coin Market">
 				<Request verb="GET" pid="63">
 					<Headers>
-						<Header key="Authorization" pid="7"/>
+						<Header key="Authorization" pid="6"/>
 					</Headers>
 				</Request>
 				<Response statusCode="64">
@@ -2556,12 +2467,13 @@ The unique ID of the category.]]>
 			<Type>poll action</Type>
 			<Content>
 				<Action>2</Action>
+				<Action>3</Action>
 			</Content>
 		</Group>
 		<Group id="4">
 			<Name>HTTP request Last Listings</Name>
 			<Description>HTTP request Last Listings</Description>
-			<Condition><![CDATA[id:7 != empty]]></Condition>
+			<Condition><![CDATA[id:3 != empty]]></Condition>
 			<Type>poll</Type>
 			<Content>
 				<Session>1</Session>
@@ -2570,7 +2482,7 @@ The unique ID of the category.]]>
 		<Group id="5">
 			<Name>HTTP request Categories</Name>
 			<Description>HTTP request Categories</Description>
-			<Condition><![CDATA[id:7 != empty]]></Condition>
+			<Condition><![CDATA[id:3 != empty]]></Condition>
 			<Type>poll</Type>
 			<Content>
 				<Session>2</Session>
@@ -2579,7 +2491,7 @@ The unique ID of the category.]]>
 		<Group id="6">
 			<Name>HTTP request Latest Quotes</Name>
 			<Description>HTTP request Latest Quotes</Description>
-			<Condition><![CDATA[id:7 != empty]]></Condition>
+			<Condition><![CDATA[id:3 != empty]]></Condition>
 			<Type>poll</Type>
 			<Content>
 				<Session>3</Session>
@@ -2588,7 +2500,7 @@ The unique ID of the category.]]>
 		<Group id="7">
 			<Name>HTTP Request One Category</Name>
 			<Description>HTTP Request One Category</Description>
-			<Condition><![CDATA[id:7 != empty]]></Condition>
+			<Condition><![CDATA[id:3 != empty]]></Condition>
 			<Type>poll</Type>
 			<Content>
 				<Session>4</Session>
@@ -2614,7 +2526,6 @@ The unique ID of the category.]]>
 			<Content>
 				<Id>4</Id>
 				<Id>5</Id>
-				<Id>6</Id>
 				<Id>7</Id>
 				<Id>8</Id>
 				<Id>9</Id>
@@ -2642,20 +2553,20 @@ The unique ID of the category.]]>
 			<On id="2">parameter</On>
 			<Type>run actions</Type>
 		</Action>
+		<Action id="3">
+			<Name>After Startup Build Bearer Token</Name>
+			<On id="3">parameter</On>
+			<Type>go</Type>
+		</Action>
 		<Action id="4">
-			<Name>Copy Prefix to Token Builder</Name>
+			<Name>Copy Prefix to Bearer Token</Name>
 			<On id="6">parameter</On>
 			<Type id="5">copy</Type>
 		</Action>
 		<Action id="5">
-			<Name>Append Authorization Token to Token Builder</Name>
+			<Name>Append Authorization Token to Bearer Token</Name>
 			<On id="6">parameter</On>
 			<Type id="3">append</Type>
-		</Action>
-		<Action id="6">
-			<Name>Copy Bearer Token</Name>
-			<On id="7">parameter</On>
-			<Type id="6">copy</Type>
 		</Action>
 		<Action id="7">
 			<Name>Execute Quotes HTTP Request Group</Name>
