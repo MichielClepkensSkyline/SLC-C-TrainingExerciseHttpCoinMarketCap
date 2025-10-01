@@ -22,7 +22,7 @@ namespace Tests
             mockProtocol.Setup(p => p.GetParameter(Parameter.httpresponsecodelatestquotes_500)).Returns("HTTP/1.1 200 OK");
 
             string json = @"
-        {
+            {
             ""status"": {
                 ""timestamp"": ""2025-10-01T12:00:00Z"",
                 ""error_code"": 0,
@@ -44,10 +44,10 @@ namespace Tests
                         ""totalVolume24h"": 98000000.12,
                         ""defiMarketCap"": 330000000.33,
                         ""stablecoinMarketCap"": 270000000.44
+                        }
                     }
                 }
-            }
-        }";
+            }";
 
             mockProtocol.Setup(p => p.GetParameter(Parameter.jsonresponselatestquotes_501)).Returns(json);
 
