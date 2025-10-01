@@ -1437,6 +1437,17 @@ Any inquiries can be addressed to:
 			</Content>
 		</Trigger>
 		<Trigger id="3">
+			<Name>On Token Change</Name>
+			<On id="5">parameter</On>
+			<Time>change</Time>
+			<Type>action</Type>
+			<Content>
+				<Id>3</Id>
+				<Id>4</Id>
+				<Id>5</Id>
+			</Content>
+		</Trigger>
+		<Trigger id="3">
 			<Name>On Refresh Category URL</Name>
 			<On id="516">parameter</On>
 			<Time>change</Time>
