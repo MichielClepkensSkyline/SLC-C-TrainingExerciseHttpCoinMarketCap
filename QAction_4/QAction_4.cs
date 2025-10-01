@@ -48,25 +48,24 @@ public static class QAction
 
 		foreach (Category category in categories.CategoryList)
 		{
-			if (!String.IsNullOrWhiteSpace(category.Id))
-			{
-				categoriesTableContent[category.Id] = new CategoriesQActionRow
-				{
-					Categoriesid_201 = category.Id.ToString(),
-					Categoriesname_202 = category.Name ?? exceptionValue.ToString(),
-					Categoriesnumberoftokens_203 = category.NumTokens ?? exceptionValue,
-					Categoriesaveragepricechange_204 = category?.AvgPriceChange ?? exceptionValue,
-					Categoriesmarketcap_205 = category.MarketCap ?? exceptionValue,
-					Categoriesmarketcapchange_206 = category.MarketCapChange ?? exceptionValue,
-					Categoriesvolume_207 = category.Volume ?? exceptionValue,
-					Categoriesvolumechange_208 = category.VolumeChange ?? exceptionValue,
-					Categorieslastupdated_209 = category.LastUpdated.ToOADate(),
-				}.ToObjectArray();
-			}
-			else
+			if (String.IsNullOrWhiteSpace(category.Id))
 			{
 				protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run| Category Id is null", LogType.Error, LogLevel.NoLogging);
+				return;
 			}
+
+			categoriesTableContent[category.Id] = new CategoriesQActionRow
+			{
+				Categoriesid_201 = category.Id.ToString(),
+				Categoriesname_202 = category.Name ?? exceptionValue.ToString(),
+				Categoriesnumberoftokens_203 = category.NumTokens ?? exceptionValue,
+				Categoriesaveragepricechange_204 = category?.AvgPriceChange ?? exceptionValue,
+				Categoriesmarketcap_205 = category.MarketCap ?? exceptionValue,
+				Categoriesmarketcapchange_206 = category.MarketCapChange ?? exceptionValue,
+				Categoriesvolume_207 = category.Volume ?? exceptionValue,
+				Categoriesvolumechange_208 = category.VolumeChange ?? exceptionValue,
+				Categorieslastupdated_209 = category.LastUpdated.ToOADate(),
+			}.ToObjectArray();
 		}
 
 		protocol.FillArray(Parameter.Categories.tablePid, categoriesTableContent.Values.ToList(), NotifyProtocol.SaveOption.Full);
