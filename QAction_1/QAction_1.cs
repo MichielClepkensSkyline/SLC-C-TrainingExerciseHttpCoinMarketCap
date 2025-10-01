@@ -13,7 +13,7 @@
     {
         public class HelperMethods
         {
-            public bool CheckStatusCode(object httpResponseParameter, SLProtocol protocol)
+            public virtual bool CheckStatusCode(object httpResponseParameter, SLProtocol protocol)
             {
                 string httpToString = httpResponseParameter.ToString();
                 string statusCodeString = httpToString.Split(' ')[1];
@@ -30,7 +30,7 @@
                 }
             }
 
-            public bool CheckJSONResponseStatus(Status status, SLProtocol protocol)
+            public virtual bool CheckJSONResponseStatus(Status status, SLProtocol protocol)
             {
                 if (status.ErrorCode!=0)
                 {

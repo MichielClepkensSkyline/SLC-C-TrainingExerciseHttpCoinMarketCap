@@ -59,7 +59,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QAction_8", "QAction_8\QAct
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QAction_1Tests", "QAction_1Tests\QAction_1Tests.csproj", "{E13BFCF3-756F-4D69-861F-578D0C105C1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QAction_3Tests1", "QAction_3Tests1\QAction_3Tests1.csproj", "{694CE6AF-F612-4F88-A02A-EF2076001250}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QAction_3Tests", "QAction_3Tests2\QAction_3Tests.csproj", "{92AB15F1-AF1B-4E5E-B27F-BD94214CB488}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,10 +107,10 @@ Global
 		{E13BFCF3-756F-4D69-861F-578D0C105C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E13BFCF3-756F-4D69-861F-578D0C105C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E13BFCF3-756F-4D69-861F-578D0C105C1E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{694CE6AF-F612-4F88-A02A-EF2076001250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{694CE6AF-F612-4F88-A02A-EF2076001250}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{694CE6AF-F612-4F88-A02A-EF2076001250}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{694CE6AF-F612-4F88-A02A-EF2076001250}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92AB15F1-AF1B-4E5E-B27F-BD94214CB488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92AB15F1-AF1B-4E5E-B27F-BD94214CB488}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92AB15F1-AF1B-4E5E-B27F-BD94214CB488}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92AB15F1-AF1B-4E5E-B27F-BD94214CB488}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
