@@ -1,18 +1,9 @@
 ﻿namespace Tests
 {
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-	using Moq;
-
-	using Skyline.DataMiner.Net;
-	using Skyline.DataMiner.Scripting;
-
 	using System;
-	using System.Collections.Generic;
-	using System.IO;
-	using System.Linq;
-	using System.Text;
-	using System.Threading.Tasks;
+	using Microsoft.VisualStudio.TestTools.UnitTesting;
+	using Moq;
+	using Skyline.DataMiner.Scripting;
 
 	[TestClass]
 	public class QActionTests
@@ -25,7 +16,6 @@
 		{
 			protocol = new Mock<SLProtocol>();
 		}
-
 
 		[TestMethod]
 		public void FormUrlTest_ReturnsCorrectUrl_ValidRowKey()

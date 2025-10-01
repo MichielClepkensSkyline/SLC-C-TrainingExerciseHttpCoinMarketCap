@@ -2,9 +2,6 @@
 {
 	using System;
 	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
-	using System.Threading.Tasks;
 	using Microsoft.VisualStudio.TestTools.UnitTesting;
 	using Moq;
 	using Skyline.DataMiner.Scripting;
@@ -13,7 +10,6 @@
 	[TestClass]
 	public class QActionTests
 	{
-
 		private static Mock<SLProtocol> protocol;
 
 		[TestInitialize]
@@ -26,14 +22,9 @@
 		[TestMethod]
 		public void RunTest_ShouldReturn_StatusCheckFails()
 		{
-			//Arrange
 			protocol.Setup(p => p.GetParameter(Parameter.statuscodecategories_5)).Returns("HTTP/1.1 500 Internal Server Error");
 
-			//Act
-
 			QAction.Run(protocol.Object);
-
-			//Assert
 
 			protocol.Verify(p => p.GetParameter(Parameter.responsecategories_6), Times.Never);
 			protocol.Verify(p => p.FillArray(It.IsAny<int>(), It.IsAny<object[]>()), Times.Never);
@@ -42,7 +33,6 @@
 		[TestMethod]
 		public void RunTest_ShouldReturn_ErrorCheckFails()
 		{
-			//Arrange
 			protocol.Setup(p => p.GetParameter(Parameter.statuscodecategories_5)).Returns("HTTP/1.1 500 Internal Server Error");
 
 			var latestListing = new Categories
@@ -58,11 +48,7 @@
 
 			protocol.Setup(p => p.GetParameter(Parameter.responsecategories_6)).Returns(json);
 
-			//Act
-
 			QAction.Run(protocol.Object);
-
-			//Assert
 
 			protocol.Verify(p => p.FillArray(It.IsAny<int>(), It.IsAny<object[]>()), Times.Never);
 		}
@@ -70,7 +56,6 @@
 		[TestMethod]
 		public void RunTest_ShouldFillAray_InvalidInputIdNull()
 		{
-			//Arrange
 			protocol.Setup(p => p.GetParameter(Parameter.statuscodecategories_5)).Returns("HTTP/1.1 200 OK");
 
 			var categories = new Categories
@@ -103,21 +88,15 @@
 
 			protocol.Setup(p => p.GetParameter(Parameter.responsecategories_6)).Returns(json);
 
-			//Act
-
 			QAction.Run(protocol.Object);
-
-			//Assert
 
 			protocol.Verify(p => p.Log(It.IsAny<string>(), It.IsAny<LogType>(), It.IsAny<LogLevel>()));
 			protocol.Verify(p => p.FillArray(It.IsAny<int>(), It.IsAny<List<object[]>>(), NotifyProtocol.SaveOption.Full), Times.Never);
-
 		}
 
 		[TestMethod]
 		public void RunTest_ShouldFillAray_ValidInputs()
 		{
-			//Arrange
 			protocol.Setup(p => p.GetParameter(Parameter.statuscodecategories_5)).Returns("HTTP/1.1 200 OK");
 
 			var categories = new Categories
@@ -150,11 +129,7 @@
 
 			protocol.Setup(p => p.GetParameter(Parameter.responsecategories_6)).Returns(json);
 
-			//Act
-
 			QAction.Run(protocol.Object);
-
-			//Assert
 
 			protocol.Verify(p => p.Log(It.IsAny<string>(), It.IsAny<LogType>(), It.IsAny<LogLevel>()), Times.Never);
 			protocol.Verify(p => p.FillArray(It.IsAny<int>(), It.IsAny<List<object[]>>(), NotifyProtocol.SaveOption.Full), Times.Once);

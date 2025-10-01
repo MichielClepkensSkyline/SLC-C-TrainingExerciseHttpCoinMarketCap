@@ -1,12 +1,9 @@
 ﻿namespace Skyline.Protocol.QAction_1.Tests
 {
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-	using Moq;
-
-	using Skyline.DataMiner.Scripting;
-
 	using System;
+	using Microsoft.VisualStudio.TestTools.UnitTesting;
+	using Moq;
+	using Skyline.DataMiner.Scripting;
 
 	[TestClass]
 	public class StatusCodeTests
@@ -19,11 +16,9 @@
 			protocol = new Mock<SLProtocol>();
 		}
 
-
 		[TestMethod]
 		public void CheckStatusCode_ShouldReturnTrue_For200Status()
 		{
-			// protocol returns "HTTP/1.1 200 OK" if GetParameter is called
 			protocol.Setup(p => p.GetParameter(It.IsAny<int>())).Returns("HTTP/1.1 200 OK");
 
 			bool result = StatusCode.CheckStatusCode(protocol.Object, 1);
@@ -48,10 +43,7 @@
 
 			StatusCode.CheckStatusCode(protocol.Object, 1);
 
-			protocol.Verify(
-				p => p.Log(
-				It.Is<string>(msg => msg.Contains("Status of the response is: 500")),
-				LogType.Error, LogLevel.NoLogging), Times.Once);
+			protocol.Verify(p => p.Log(It.Is<string>(msg => msg.Contains("Status of the response is: 500")), LogType.Error, LogLevel.NoLogging), Times.Once);
 		}
 
 		[TestMethod]
@@ -68,7 +60,6 @@
 		[TestMethod]
 		public void CheckErrorCode_ShouldReturnTrue_For0ErrorCode()
 		{
-
 			bool result = StatusCode.CheckErrorCode(protocol.Object, 0, null);
 
 			Assert.IsTrue(result);
@@ -77,7 +68,6 @@
 		[TestMethod]
 		public void CheckErrorCode_ShouldReturnFalse_ForNot0ErrorCode()
 		{
-
 			bool result = StatusCode.CheckErrorCode(protocol.Object, 1, "Error message");
 
 			Assert.IsFalse(result);
@@ -86,13 +76,9 @@
 		[TestMethod]
 		public void CheckErrorCode_ShouldLogError_ForNot0ErrorCode()
 		{
-
 			bool result = StatusCode.CheckErrorCode(protocol.Object, 1, "Not Authorized");
 
-			protocol.Verify(
-				p => p.Log(
-				It.Is<string>(msg => msg.Contains("Status of the response is: 1 \n Error Message: Not Authorized")),
-				LogType.Error, LogLevel.NoLogging), Times.Once);
+			protocol.Verify(p => p.Log(It.Is<string>(msg => msg.Contains("Status of the response is: 1 \n Error Message: Not Authorized")), LogType.Error, LogLevel.NoLogging), Times.Once);
 		}
 
 		[TestMethod]
@@ -103,6 +89,5 @@
 				StatusCode.CheckErrorCode(protocol.Object, 888, null);
 			});
 		}
-
 	}
 }
