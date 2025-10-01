@@ -1436,7 +1436,7 @@ Any inquiries can be addressed to:
 				<Id>1</Id>
 			</Content>
 		</Trigger>
-		<Trigger id="3">
+		<Trigger id="2">
 			<Name>On Token Change</Name>
 			<On id="5">parameter</On>
 			<Time>change</Time>
