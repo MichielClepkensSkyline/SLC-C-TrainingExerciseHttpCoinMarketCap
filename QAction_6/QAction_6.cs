@@ -14,7 +14,9 @@ public static class QAction
 	{
 		try
 		{
-			string api = FormUrl(protocol);
+			string rowPK = protocol.RowKey();
+
+			string api = FormUrl(rowPK);
 
 			protocol.SetParameter(Parameter.individualcategoryapi_11, api);
 		}
@@ -24,12 +26,11 @@ public static class QAction
 		}
 	}
 
-	private static string FormUrl(SLProtocol protocol)
+	public static string FormUrl(string rowPK)
 	{
-		var rowPK = protocol.RowKey();
 		string firstPartOfUrl = "api/custom/coinmarketcap?content=category&id=";
 
-		string completeUrl = firstPartOfUrl + rowPK.ToString();
+		string completeUrl = firstPartOfUrl + rowPK;
 
 		return completeUrl;
 	}
