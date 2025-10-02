@@ -67,6 +67,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QAction_5Tests", "QAction_5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QAction_6Tests", "QAction_6Tests\QAction_6Tests.csproj", "{F15E9EDF-2AC8-40A4-86C1-CC0869CBE395}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QAction_7Tests", "QAction_7Tests\QAction_7Tests.csproj", "{614AEC98-BE07-45A3-B631-808D746F1023}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{F15E9EDF-2AC8-40A4-86C1-CC0869CBE395}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F15E9EDF-2AC8-40A4-86C1-CC0869CBE395}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F15E9EDF-2AC8-40A4-86C1-CC0869CBE395}.Release|Any CPU.Build.0 = Release|Any CPU
+		{614AEC98-BE07-45A3-B631-808D746F1023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{614AEC98-BE07-45A3-B631-808D746F1023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{614AEC98-BE07-45A3-B631-808D746F1023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{614AEC98-BE07-45A3-B631-808D746F1023}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
