@@ -234,15 +234,20 @@ Any inquiries can be addressed to:
 				</Subtext>
 			</Information>
 			<Interprete>
-				<RawType>other</RawType>
-				<Type>string</Type>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
 				<LengthType>next param</LengthType>
 			</Interprete>
+			<!-- SuppressValidator 2.9.7 There is no need for a unit tag in this parameter -->
 			<Display>
 				<RTDisplay>true</RTDisplay>
+				<Range>
+					<Low>1</Low>
+				</Range>
 			</Display>
+			<!-- /SuppressValidator 2.9.7 -->
 			<Measurement>
-				<Type>string</Type>
+				<Type>number</Type>
 			</Measurement>
 		</Param>
 		<Param id="105" trending="true">
