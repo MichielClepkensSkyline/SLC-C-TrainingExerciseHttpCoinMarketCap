@@ -2072,7 +2072,7 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="312" trending="false" save="true">
+		<Param id="312" trending="false">
 			<Name>accesKeyToken</Name>
 			<Description>Access Key Token</Description>
 			<Type>read</Type>
@@ -2248,6 +2248,7 @@ Any inquiries can be addressed to:
 			<Type>action</Type>
 			<Content>
 				<Id>1</Id>
+				<Id>7</Id>
 			</Content>
 		</Trigger>
 		<Trigger id="2">
@@ -2303,14 +2304,22 @@ Any inquiries can be addressed to:
 			<On id="6">group</On>
 			<Type>execute next</Type>
 		</Action>
+		<Action id="7">
+			<Name>Copy</Name>
+			<On id="312">parameter</On>
+			<Type id="311">copy</Type>
+		</Action>
 	</Actions>
 
 	<Timers>
 		<Timer id="1">
 			<Name>Fast Timer (10s)</Name>
-			<Time initial="true">10000</Time>
+			<Time initial="true">60000</Time>
 			<Interval>75</Interval>
 			<Content>
+				<Group>3</Group>
+				<Group>4</Group>
+				<Group>5</Group>
 			</Content>
 		</Timer>
 		<Timer id="2">
@@ -2318,9 +2327,6 @@ Any inquiries can be addressed to:
 			<Time initial="true" dataDisplay="30000">60000</Time>
 			<Interval>75</Interval>
 			<Content>
-				<Group>3</Group>
-				<Group>4</Group>
-				<Group>5</Group>
 			</Content>
 		</Timer>
 		<Timer id="3">
