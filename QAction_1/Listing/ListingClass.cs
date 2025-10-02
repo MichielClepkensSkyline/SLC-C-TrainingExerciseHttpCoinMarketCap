@@ -20,7 +20,7 @@ namespace Skyline.DataMiner.Scripting.Listing
         public string Slug { get; set; }
 
         [JsonProperty("num_market_pairs")]
-        public int NumMarketPairs { get; set; }
+        public int? NumMarketPairs { get; set; }
 
         [JsonProperty("date_added")]
         public DateTime DateAdded { get; set; }
@@ -32,10 +32,10 @@ namespace Skyline.DataMiner.Scripting.Listing
         public double? MaxSupply { get; set; }
 
         [JsonProperty("circulating_supply")]
-        public double CirculatingSupply { get; set; }
+        public double? CirculatingSupply { get; set; }
 
         [JsonProperty("total_supply")]
-        public double TotalSupply { get; set; }
+        public double? TotalSupply { get; set; }
 
         [JsonProperty("infinite_supply")]
         public bool InfiniteSupply { get; set; }
@@ -44,7 +44,7 @@ namespace Skyline.DataMiner.Scripting.Listing
         public Platform Platform { get; set; }
 
         [JsonProperty("cmc_rank")]
-        public int CmcRank { get; set; }
+        public int? CmcRank { get; set; }
 
         [JsonProperty("self_reported_circulating_supply")]
         public double? SelfReportedCirculatingSupply { get; set; }

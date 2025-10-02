@@ -475,6 +475,13 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="">
+						
+						<Display state="disabled">No Name</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -496,6 +503,12 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="">
+						<Display state="disabled">No Symbol</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -518,6 +531,12 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>0</Decimals>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">No Rank</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm type="absolute:204">
 				<Monitored>true</Monitored>
@@ -533,7 +552,6 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 			<Display>
 				<RTDisplay>true</RTDisplay>
 				<Units>Units</Units>
-				<Decimals>0</Decimals>
 				<Range>
 					<Low>0</Low>
 				</Range>
@@ -556,6 +574,12 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>0</Decimals>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm type="relative:205">
 				<Monitored>true</Monitored>
@@ -593,6 +617,12 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm type="relative:206">
 				<Monitored>true</Monitored>
@@ -630,6 +660,12 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm type="relative:207">
 				<Monitored>true</Monitored>
@@ -700,6 +736,12 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>8</Decimals>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">No Time Known</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -723,6 +765,12 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>8</Decimals>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">No Time Known</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -738,13 +786,20 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[Percentage of Total Value Locked.]]>
+					<![CDATA[The ratio of a crypto project's market value compared to the amount of money locked in its platform.
+It helps show if the project is fairly valued based on how much value is actually used on it.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -809,6 +864,12 @@ A market quote in the currency conversion option.]]>
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="">
+						<Display state="disabled">No Quote</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -830,6 +891,12 @@ A market quote in the currency conversion option.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm type="relative:214">
 				<Monitored>true</Monitored>
@@ -869,6 +936,12 @@ A market quote in the currency conversion option.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm type="relative:215">
 				<Monitored>true</Monitored>
@@ -908,6 +981,12 @@ A market quote in the currency conversion option.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -939,13 +1018,19 @@ A market quote in the currency conversion option.]]>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[Market cap in the specified currency.]]>
+					<![CDATA[The total value of all coins or tokens currently in circulation, measured in the specified currency.]]>
 				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm type="relative:217">
 				<Monitored>true</Monitored>
@@ -978,13 +1063,19 @@ A market quote in the currency conversion option.]]>
 			<Type>read</Type>
 			<Information>
 				<Subtext>
-					<![CDATA[Market cap dominance in the specified currency.]]>
+					<![CDATA[The total value of all coins or tokens currently in circulation, measured in the specified currency. (Market Capitalization)]]>
 				</Subtext>
 			</Information>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm type="relative:218">
 				<Monitored>true</Monitored>
@@ -1023,6 +1114,12 @@ A market quote in the currency conversion option.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1061,6 +1158,12 @@ A market quote in the currency conversion option.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1099,6 +1202,12 @@ A market quote in the currency conversion option.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1180,7 +1289,7 @@ A market quote in the currency conversion option.]]>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type options="tab=columns:401|0-402|1-403|2-404|3-406|5-405|4-407|6-408|7-409|8-410|9-411|10-412|11-413|12,width:0-100-122-142-142-122-100-129-156-107-156-100-100,sort:STRING-STRING-INT-INT-INT-INT|DESC|1-INT-INT-INT-STRING-STRING|DESC|0-STRING-STRING,lines:25,filter:true">table</Type>
+				<Type options="tab=columns:401|0-402|1-403|2-404|3-406|5-405|4-407|6-408|7-409|8-410|9-411|10-412|11-413|12,width:0-100-122-142-142-122-100-129-156-107-156-100-100,sort:STRING-STRING-INT-INT-INT-INT-INT-INT-INT-STRING-STRING|DESC|0-STRING-STRING,lines:25,filter:true">table</Type>
 			</Measurement>
 		</Param>
 		<Param id="401" trending="false">
@@ -1218,6 +1327,12 @@ The unique ID of the category.]]>
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="">
+						<Display state="disabled">No Name</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1239,6 +1354,12 @@ The unique ID of the category.]]>
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="">
+						<Display state="disabled">No Title</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1260,6 +1381,12 @@ The unique ID of the category.]]>
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="">
+						<Display state="disabled">No Description</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1282,6 +1409,12 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>0</Decimals>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1308,6 +1441,12 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1346,6 +1485,12 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm type="relative:407">
 				<Monitored>true</Monitored>
@@ -1385,6 +1530,12 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1423,6 +1574,12 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm type="relative:409">
 				<Monitored>true</Monitored>
@@ -1462,6 +1619,12 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1501,6 +1664,12 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>8</Decimals>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">No Time Known</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1572,6 +1741,12 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>0</Decimals>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1606,6 +1781,12 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>0</Decimals>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1640,6 +1821,12 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>0</Decimals>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm type="relative:602">
 				<Monitored>true</Monitored>
@@ -1685,6 +1872,12 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>0</Decimals>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1719,6 +1912,12 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>0</Decimals>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -1752,6 +1951,12 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1798,6 +2003,12 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -1844,6 +2055,12 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm type="relative:607">
 				<Monitored>true</Monitored>
@@ -1889,6 +2106,12 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm type="relative:608">
 				<Monitored>true</Monitored>
@@ -1934,6 +2157,12 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm type="relative:609">
 				<Monitored>true</Monitored>
@@ -1980,6 +2209,12 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm type="relative:610">
 				<Monitored>true</Monitored>
@@ -2026,6 +2261,12 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -2072,6 +2313,12 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm type="relative:612">
 				<Monitored>true</Monitored>
@@ -2118,6 +2365,12 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm type="relative:613">
 				<Monitored>true</Monitored>
@@ -2164,6 +2417,12 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm>
 				<Monitored>true</Monitored>
@@ -2211,6 +2470,12 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>0</Decimals>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -2245,6 +2510,12 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>0</Decimals>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm type="relative:616">
 				<Monitored>true</Monitored>
@@ -2289,6 +2560,12 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm type="relative:617">
 				<Monitored>true</Monitored>
@@ -2335,6 +2612,12 @@ The unique ID of the category.]]>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">Null</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Alarm type="relative:618">
 				<Monitored>true</Monitored>
@@ -2382,6 +2665,12 @@ The unique ID of the category.]]>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<Decimals>8</Decimals>
+				<Exceptions>
+					<Exception id="1" value="-1">
+						<Display state="disabled">No Time Known</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>

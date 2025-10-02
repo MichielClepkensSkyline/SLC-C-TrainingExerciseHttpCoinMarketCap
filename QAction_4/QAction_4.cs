@@ -1,13 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
 using Skyline.DataMiner.Scripting;
 using Skyline.DataMiner.Scripting.Category;
 using Skyline.DataMiner.Scripting.HTTP;
 using Skyline.DataMiner.Utils.Protocol.Extension;
 using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Text;
 using static Skyline.DataMiner.Scripting.Parameter;
 
 /// <summary>
@@ -51,21 +51,21 @@ public static class QAction
         Dictionary<string, CategoriesQActionRow> categoryRows = new Dictionary<string, CategoriesQActionRow>();
         foreach (Category category in categories)
         {
-            if (category != null)
+            if (category != null && category.Id != null)
             {
                 CategoriesQActionRow categoryQActionRow = new CategoriesQActionRow
                 {
                     Categoriesid = category.Id,
-                    Categoriesname = category.Name,
-                    Categoriestitle = category.Title,
-                    Categoriesdescription = category.Description,
-                    Categoriesnumberoftokens = category.NumTokens,
-                    Categoriesaveragepricechange = category.AvgPriceChange,
-                    Categoriesmarketcap = category.MarketCap,
-                    Categoriesmarketcapchange = category.MarketCapChange,
-                    Categoriesvolume = category.Volume,
-                    Categoriesvolumechange = category.VolumeChange,
-                    Categorieslastupdated = category.LastUpdated.ToLocalTime().ToOADate(),
+                    Categoriesname = category.Name == null ? string.Empty : category.Name,
+                    Categoriestitle = category.Title == null ? string.Empty : category.Title,
+                    Categoriesdescription = category.Description == null ? string.Empty : category.Description,
+                    Categoriesnumberoftokens = category.NumTokens == null ? -1 : category.NumTokens,
+                    Categoriesaveragepricechange = category.AvgPriceChange == null ? -1 : category.AvgPriceChange,
+                    Categoriesmarketcap = category.MarketCap == null ? -1 : category.MarketCap,
+                    Categoriesmarketcapchange = category.MarketCapChange == null ? -1 : category.MarketCapChange,
+                    Categoriesvolume = category.Volume == null ? -1 : category.Volume,
+                    Categoriesvolumechange = category.VolumeChange == null ? -1 : category.VolumeChange,
+                    Categorieslastupdated = category.LastUpdated == null ? -1 : category.LastUpdated.ToLocalTime().ToOADate(),
                 };
                 categoryRows.Add(category.Id, categoryQActionRow);
             }

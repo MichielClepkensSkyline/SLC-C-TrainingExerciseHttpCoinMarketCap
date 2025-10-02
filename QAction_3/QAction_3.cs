@@ -58,31 +58,31 @@ public static class QAction
 		Dictionary<string, LastlistingQActionRow> lastListingRows = new Dictionary<string, LastlistingQActionRow>();
 		foreach (Listing listing in lastListings)
 		{
-			if (listing != null)
+			if (listing != null && listing.Id != null)
 			{
 				LastlistingQActionRow lastlistingQActionRow = new LastlistingQActionRow
 				{
 					Lastlistingid = listing.Id,
-					Lastlistingname = listing.Name,
-					Lastlistingsymbol = listing.Symbol,
-					Lastlistingcoinmarketcaprank = listing.CmcRank,
-					Lastlistingnummarketpairs = listing.NumMarketPairs,
-					Lastlistingcirculatingsupply = listing.CirculatingSupply,
-					Lastlistingtotalsupply = listing.TotalSupply,
+					Lastlistingname = listing.Name == null ? string.Empty : listing.Name,
+					Lastlistingsymbol = listing.Symbol == null ? string.Empty : listing.Symbol,
+					Lastlistingcoinmarketcaprank = listing.CmcRank == null ? -1 : listing.CmcRank,
+					Lastlistingnummarketpairs = listing.NumMarketPairs == null ? -1 : listing.NumMarketPairs,
+					Lastlistingcirculatingsupply = listing.CirculatingSupply == null ? -1 : listing.CirculatingSupply,
+					Lastlistingtotalsupply = listing.TotalSupply == null ? -1 : listing.TotalSupply,
 					Lastlistingmaxsupply = listing.MaxSupply == null ? -1 : listing.MaxSupply,
-					Lastlistinglastupdated = listing.LastUpdated.ToLocalTime().ToOADate(),
-					Lastlistingdateadded = listing.DateAdded.ToOADate(),
-					Lastlistingtotalvaluelockedratio = listing.TvlRatio == null ? 0 : listing.TvlRatio,
+					Lastlistinglastupdated = listing.LastUpdated == null ? -1 : listing.LastUpdated.ToLocalTime().ToOADate(),
+					Lastlistingdateadded = listing.DateAdded == null ? -1 : listing.DateAdded.ToOADate(),
+					Lastlistingtotalvaluelockedratio = listing.TvlRatio == null ? -1 : listing.TvlRatio,
 					Lastlistingplatformname = listing.Platform?.Name == null ? "no platform" : listing.Platform?.Name,
-					Lastlistingquote = listing.Quote?.USD.ToString().Split('.').Last(),
-					Lastlistingquoteprice = listing.Quote?.USD?.Price,
-					Lastlistingquotevolume24h = listing.Quote?.USD?.Volume24h,
-					Lastlistingquotevolumechange24h = listing.Quote?.USD?.PercentChange24h,
-					Lastlistingmarketcap = listing.Quote?.USD?.MarketCap,
-					Lastlistingmarketcapdominance = listing.Quote?.USD?.MarketCapDominance,
-					Lastlistingquotepercentchange1h = listing.Quote?.USD?.PercentChange1h,
-					Lastlistingquotepercentchange24h = listing.Quote?.USD?.PercentChange24h,
-					Lastlistingquotepercentchange7d = listing.Quote?.USD?.PercentChange7d,
+					Lastlistingquote = listing.Quote?.USD == null ?string.Empty : listing.Quote?.USD.ToString().Split('.').Last(),
+					Lastlistingquoteprice = listing.Quote?.USD?.Price == null ? -1 : listing.Quote?.USD?.Price,
+					Lastlistingquotevolume24h = listing.Quote?.USD?.Volume24h == null ? -1 : listing.Quote?.USD?.Volume24h,
+					Lastlistingquotevolumechange24h = listing.Quote?.USD?.PercentChange24h == null ? -1 : listing.Quote?.USD?.PercentChange24h,
+					Lastlistingmarketcap = listing.Quote?.USD?.MarketCap == null ? -1 : listing.Quote?.USD?.MarketCap,
+					Lastlistingmarketcapdominance = listing.Quote?.USD?.MarketCapDominance == null ? -1 : listing.Quote?.USD?.MarketCapDominance,
+					Lastlistingquotepercentchange1h = listing.Quote?.USD?.PercentChange1h == null ? -1 : listing.Quote?.USD?.PercentChange1h,
+					Lastlistingquotepercentchange24h = listing.Quote?.USD?.PercentChange24h == null ? -1 : listing.Quote?.USD?.PercentChange24h,
+					Lastlistingquotepercentchange7d = listing.Quote?.USD?.PercentChange7d == null ? -1 : listing.Quote?.USD?.PercentChange7d,
 				};
 				lastListingRows.Add(listing.Id, lastlistingQActionRow);
 			}
