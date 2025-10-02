@@ -1,75 +1,75 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Moq;
-using QAction_1;
-using Skyline.DataMiner.Scripting;
-using Skyline.Protocol.MyExtension;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Skyline.Protocol.MyExtension.Tests
+﻿namespace Skyline.Protocol.MyExtension.Tests
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Moq;
+    using QAction_1;
+    using Skyline.DataMiner.Scripting;
+    using Skyline.Protocol.MyExtension;
 
     [TestClass()]
     public class HelperMethodsTests
     {
-      Mock<SLProtocol> mock = new Mock<SLProtocol>();
+      public Mock<SLProtocol> mock = new Mock<SLProtocol>();
 
-        [TestMethod()]
-        public void CheckStatusCodeTestTrueResponse()
+      [TestMethod]
+      public void CheckStatusCodeTestTrueResponse()
         {
-            //Arrange
+            // Arrange
             var helpermethods = new HelperMethods();
             string input = "HTTP/1.1 200 OK";
 
-            //Act
-            bool isValid = helpermethods.CheckStatusCode(input, mock.Object);
-            
-            //Assert
+            // Act
+            bool isValid = helpermethods.CheckStatusCode(input, this.mock.Object);
+
+            // Assert
             Assert.IsTrue(isValid);
         }
 
-        [TestMethod()]
-        public void CheckStatusCodeTestFalseResponse()
+      [TestMethod]
+      public void CheckStatusCodeTestFalseResponse()
         {
-            //Arrange
+            // Arrange
             var helpermethods = new HelperMethods();
             string input = "HTTP/1.1 400 Bad Request";
 
-            //Act
+            // Act
             bool isValid = helpermethods.CheckStatusCode(input, mock.Object);
 
-            //Assert
+            // Assert
             Assert.IsFalse(isValid);
         }
 
-        [TestMethod()]
-        public void CheckJSONResponseStatusTestTrueResponse()
+      [TestMethod]
+      public void CheckJSONResponseStatusTestTrueResponse()
         {
-            //Arrange
+            // Arrange
             var helpermethods = new HelperMethods();
             string json = "{\"status\":{\"timestamp\":\"2025-10-01T07:59:19.8730715Z\",\"error_code\":0,\"error_message\":null,\"elapsed\":12,\"credit_count\":1,\"notice\":null,\"total_count\":9783}}";
             LatestListings deserializedStatus = Newtonsoft.Json.JsonConvert.DeserializeObject<LatestListings>(json);
-            //Act
+
+            // Act
             bool isValid = helpermethods.CheckJSONResponseStatus(deserializedStatus.Status, mock.Object);
 
-            //Assert
+            // Assert
             Assert.IsTrue(isValid);
         }
 
-        [TestMethod()]
-        public void CheckJSONResponseStatusTestFalseResponse()
+      [TestMethod]
+      public void CheckJSONResponseStatusTestFalseResponse()
         {
-            //Arrange
+            // Arrange
             var helpermethods = new HelperMethods();
             string jsonFail = "{\"status\":{\"timestamp\":\"2025-10-01T07:59:19.8730715Z\",\"error_code\":1,\"error_message\":\"Not Good\",\"elapsed\":12,\"credit_count\":1,\"notice\":null,\"total_count\":9783}}";
             LatestListings deserializedStatusFail = Newtonsoft.Json.JsonConvert.DeserializeObject<LatestListings>(jsonFail);
-            //Act
-            bool isValid = helpermethods.CheckJSONResponseStatus(deserializedStatusFail.Status, mock.Object);
+            // Act
+            bool isValid = helpermethods.CheckJSONResponseStatus(deserializedStatusFail.Status, this.mock.Object);
 
-            //Assert
+            // Assert
             Assert.IsFalse(isValid);
         }
     }
