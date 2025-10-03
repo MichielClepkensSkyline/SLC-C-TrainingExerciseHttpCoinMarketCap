@@ -538,16 +538,12 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 					</Exception>
 				</Exceptions>
 			</Interprete>
-			<Alarm type="absolute:204">
+			<Alarm>
 				<Monitored>true</Monitored>
-				<CL>5</CL>
-				<MaL>3</MaL>
-				<MiL>2</MiL>
-				<WaL>1</WaL>
-				<WaH>1</WaH>
-				<MiH>2</MiH>
-				<MaH>3</MaH>
-				<CH>5</CH>
+				<WaH>100</WaH>
+				<MiH>200</MiH>
+				<MaH>300</MaH>
+				<CH>500</CH>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -581,16 +577,12 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 					</Exception>
 				</Exceptions>
 			</Interprete>
-			<Alarm type="relative:205">
+			<Alarm>
 				<Monitored>true</Monitored>
-				<CL>50</CL>
-				<MaL>30</MaL>
-				<MiL>20</MiL>
-				<WaL>10</WaL>
-				<WaH>10</WaH>
-				<MiH>20</MiH>
-				<MaH>30</MaH>
-				<CH>50</CH>
+				<CL>25</CL>
+				<MaL>50</MaL>
+				<MiL>100</MiL>
+				<WaL>200</WaL>
 			</Alarm>
 			<Display>
 				<RTDisplay>true</RTDisplay>
