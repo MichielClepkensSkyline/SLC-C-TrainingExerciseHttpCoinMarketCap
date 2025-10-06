@@ -2238,6 +2238,15 @@ Any inquiries can be addressed to:
 				<Session>4</Session>
 			</Content>
 		</Group>
+		<Group id="7">
+			<Condition><![CDATA[id:311 != empty]]></Condition>
+			<Name>Copy Bearer Token Value</Name>
+			<Description>Copy Bearer Token Value</Description>
+			<Type>poll action</Type>
+			<Content>
+				<Action>7</Action>
+			</Content>
+		</Group>
 	</Groups>
 
 	<Triggers>
@@ -2248,7 +2257,7 @@ Any inquiries can be addressed to:
 			<Type>action</Type>
 			<Content>
 				<Id>1</Id>
-				<Id>7</Id>
+				<Id>8</Id>
 			</Content>
 		</Trigger>
 		<Trigger id="2">
@@ -2305,26 +2314,28 @@ Any inquiries can be addressed to:
 			<Type>execute next</Type>
 		</Action>
 		<Action id="7">
-			<Name>Copy</Name>
+			<Name>Copy Bearer Token Value To Access Key Token</Name>
 			<On id="312">parameter</On>
 			<Type id="311">copy</Type>
+		</Action>
+		<Action id="8">
+			<Name>Execute Copy Bearer Token Value Group</Name>
+			<On id="7">group</On>
+			<Type>execute next</Type>
 		</Action>
 	</Actions>
 
 	<Timers>
 		<Timer id="1">
 			<Name>Fast Timer (10s)</Name>
-			<Time initial="true">60000</Time>
+			<Time initial="true">10000</Time>
 			<Interval>75</Interval>
 			<Content>
-				<Group>3</Group>
-				<Group>4</Group>
-				<Group>5</Group>
 			</Content>
 		</Timer>
 		<Timer id="2">
 			<Name>Medium Timer (1m)</Name>
-			<Time initial="true" dataDisplay="30000">60000</Time>
+			<Time initial="true">60000</Time>
 			<Interval>75</Interval>
 			<Content>
 			</Content>
@@ -2334,6 +2345,9 @@ Any inquiries can be addressed to:
 			<Time initial="true">3600000</Time>
 			<Interval>75</Interval>
 			<Content>
+				<Group>3</Group>
+				<Group>4</Group>
+				<Group>5</Group>
 			</Content>
 		</Timer>
 	</Timers>
