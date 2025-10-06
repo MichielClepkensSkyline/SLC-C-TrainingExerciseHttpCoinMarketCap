@@ -27,24 +27,21 @@ public static class QAction
 			if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodelastlistings, Parameter.responsecontentlastlistings, Parameter.urllastlistings))
 			{
 				Root root = SecureNewtonsoftDeserialization.DeserializeObject<Root>(protocol.GetParameter(Parameter.responsecontentlastlistings).ToString());
-				if (root != null)
+				if (root == null)
 				{
-					if (root.Status == null)
-					{
-						protocol.Log($"QA{protocol.QActionID}|Run|root.Status is null", LogType.Error, LogLevel.NoLogging);
-					}
-					else if (root.Status.ErrorCode == 0)
-					{
-						FillLastListings(protocol, root.Listings);
-					}
-					else
-					{
-						protocol.Log($"QA{protocol.QActionID}|Run|{root.Status.ErrorMessage}", LogType.Error, LogLevel.NoLogging);
-					}
+                    protocol.Log($"QA{protocol.QActionID}|Run|root is null", LogType.Error, LogLevel.NoLogging);
+                }
+				else if (root.Status == null)
+				{
+					protocol.Log($"QA{protocol.QActionID}|Run|root.Status is null", LogType.Error, LogLevel.NoLogging);
+				}
+				else if (root.Status.ErrorCode == 0)
+				{
+					FillLastListings(protocol, root.Listings);
 				}
 				else
 				{
-					protocol.Log($"QA{protocol.QActionID}|Run|Failed to deserialize response into object.", LogType.Error, LogLevel.NoLogging);
+					protocol.Log($"QA{protocol.QActionID}|Run|{root.Status.ErrorMessage}", LogType.Error, LogLevel.NoLogging);
 				}
             }
 		}

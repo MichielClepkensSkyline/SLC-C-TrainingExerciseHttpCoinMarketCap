@@ -27,7 +27,11 @@ public static class QAction
             if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodeonecategory, Parameter.responsecontentonecategory, Parameter.urlonecategory))
             {
                 RootOneCategory root = SecureNewtonsoftDeserialization.DeserializeObject<RootOneCategory>(protocol.GetParameter(Parameter.responsecontentonecategory).ToString());
-                if (root.Status == null)
+                if (root == null)
+                {
+                    protocol.Log($"QA{protocol.QActionID}|Run|root is null", LogType.Error, LogLevel.NoLogging);
+                }
+                else if(root.Status == null)
                 {
                     protocol.Log($"QA{protocol.QActionID}|Run|root.Status is null", LogType.Error, LogLevel.NoLogging);
                 }
