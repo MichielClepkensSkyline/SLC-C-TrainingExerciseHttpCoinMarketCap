@@ -38,6 +38,23 @@
 		}
 
 		/// <summary>
+		/// Testmethod with a correct statuscode but without OK.
+		/// </summary>
+		[TestMethod]
+		public void CheckStatusCodeTestWithoutOK()
+		{
+			// Arrange
+			string statusCode = "HTTP/1.1 200";
+			fakeProtocol.Setup(p => p.GetParameters(new uint[] { 50, 51, 52 })).Returns(new object[] { statusCode, ResponseContent, Url });
+
+			// Act
+			bool result = StatusCode.CheckStatusCode(fakeProtocol.Object, 50, 51, 52);
+
+			// Assert
+			Assert.IsTrue(result);
+		}
+
+		/// <summary>
 		/// Testmethod with a different statuscode.
 		/// </summary>
 		[TestMethod]
@@ -65,6 +82,26 @@
 		{
 			// Arrange
 			string statusCode = "This 200 does not make sense!";
+			fakeProtocol.Setup(p => p.GetParameters(new uint[] { 50, 51, 52 })).Returns(new object[] { statusCode, ResponseContent, Url });
+			fakeProtocol.Setup(p => p.QActionID).Returns(QActionID);
+			string expectedMessage = this.BuildExpectedMessage(statusCode);
+
+			// Act
+			bool result = StatusCode.CheckStatusCode(fakeProtocol.Object, 50, 51, 52);
+
+			// Assert
+			Assert.IsFalse(result);
+			fakeProtocol.Verify(p => p.Log(It.Is<string>(msg => msg == expectedMessage), LogType.Error, LogLevel.NoLogging));
+		}
+
+		/// <summary>
+		/// Testmethod with an empty statuscode.
+		/// </summary>
+		[TestMethod]
+		public void CheckEmptyStatusCode()
+		{
+			// Arrange
+			string statusCode = string.Empty;
 			fakeProtocol.Setup(p => p.GetParameters(new uint[] { 50, 51, 52 })).Returns(new object[] { statusCode, ResponseContent, Url });
 			fakeProtocol.Setup(p => p.QActionID).Returns(QActionID);
 			string expectedMessage = this.BuildExpectedMessage(statusCode);
