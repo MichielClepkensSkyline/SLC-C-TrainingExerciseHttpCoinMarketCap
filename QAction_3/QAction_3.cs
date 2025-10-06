@@ -16,10 +16,11 @@ using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
 public static class QAction
 {
 	private const int ExceptionValue = -1;
-	/// <summary>
-	/// The QAction entry point.
-	/// </summary>
-	/// <param name="protocol">Link with SLProtocol process.</param>
+
+    /// <summary>
+    /// The QAction entry point.
+    /// </summary>
+    /// <param name="protocol">Link with SLProtocol process.</param>
 	public static void Run(SLProtocolExt protocol)
 	{
 		try
@@ -27,11 +28,11 @@ public static class QAction
 			if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodelastlistings, Parameter.responsecontentlastlistings, Parameter.urllastlistings))
 			{
 				Root root = SecureNewtonsoftDeserialization.DeserializeObject<Root>(protocol.GetParameter(Parameter.responsecontentlastlistings).ToString());
-				if (root == null)
+				if (string.IsNullOrWhiteSpace(root.ToString()))
 				{
                     protocol.Log($"QA{protocol.QActionID}|Run|root is null", LogType.Error, LogLevel.NoLogging);
                 }
-				else if (root.Status == null)
+				else if (string.IsNullOrWhiteSpace(root.Status.ToString()))
 				{
 					protocol.Log($"QA{protocol.QActionID}|Run|root.Status is null", LogType.Error, LogLevel.NoLogging);
 				}
@@ -56,7 +57,7 @@ public static class QAction
 		Dictionary<string, LastlistingQActionRow> lastListingRows = new Dictionary<string, LastlistingQActionRow>();
 		foreach (Listing listing in lastListings)
 		{
-			if (listing != null && listing.Id != null)
+			if (!string.IsNullOrWhiteSpace(listing.ToString()) && !string.IsNullOrWhiteSpace(listing.Id.ToString()))
 			{
 				LastlistingQActionRow lastlistingQActionRow = new LastlistingQActionRow
 				{

@@ -27,11 +27,11 @@ public static class QAction
             if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodeonecategory, Parameter.responsecontentonecategory, Parameter.urlonecategory))
             {
                 RootOneCategory root = SecureNewtonsoftDeserialization.DeserializeObject<RootOneCategory>(protocol.GetParameter(Parameter.responsecontentonecategory).ToString());
-                if (root == null)
+                if (string.IsNullOrWhiteSpace(root.ToString()))
                 {
                     protocol.Log($"QA{protocol.QActionID}|Run|root is null", LogType.Error, LogLevel.NoLogging);
                 }
-                else if(root.Status == null)
+                else if(string.IsNullOrWhiteSpace(root.Status.ToString()))
                 {
                     protocol.Log($"QA{protocol.QActionID}|Run|root.Status is null", LogType.Error, LogLevel.NoLogging);
                 }
@@ -51,9 +51,9 @@ public static class QAction
 		}
 	}
 
-	private static void FillCategory(SLProtocolExt protocol, OneCategory category)
+    private static void FillCategory(SLProtocolExt protocol, OneCategory category)
     {
-        if (category != null && category.Id != null)
+        if (!string.IsNullOrWhiteSpace(category.ToString()) && !string.IsNullOrWhiteSpace(category.Id.ToString()))
         {
             CategoriesQActionRow categoryQActionRow = new CategoriesQActionRow
             {

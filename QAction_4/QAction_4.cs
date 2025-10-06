@@ -27,11 +27,11 @@ public static class QAction
             if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodecategories, Parameter.responsecontentcategories, Parameter.urlcategories))
             {
                 Root root = SecureNewtonsoftDeserialization.DeserializeObject<Root>(protocol.GetParameter(Parameter.responsecontentcategories).ToString());
-                if (root == null)
+                if (string.IsNullOrWhiteSpace(root.ToString()))
                 {
                     protocol.Log($"QA{protocol.QActionID}|Run|root is null", LogType.Error, LogLevel.NoLogging);
                 }
-                else if(root.Status == null)
+                else if(string.IsNullOrWhiteSpace(root.Status.ToString()))
                 {
                     protocol.Log($"QA{protocol.QActionID}|Run|root.Status is null", LogType.Error, LogLevel.NoLogging);
                 }
@@ -56,7 +56,7 @@ public static class QAction
         Dictionary<string, CategoriesQActionRow> categoryRows = new Dictionary<string, CategoriesQActionRow>();
         foreach (Category category in categories)
         {
-            if (category != null && category.Id != null)
+            if (!string.IsNullOrWhiteSpace(category.ToString()) && !string.IsNullOrWhiteSpace(category.Id.ToString()))
             {
                 CategoriesQActionRow categoryQActionRow = new CategoriesQActionRow
                 {
