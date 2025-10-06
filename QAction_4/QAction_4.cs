@@ -72,7 +72,7 @@ public static class QAction
                     Categoriesvolumechange = category.VolumeChange == null ? ExceptionValue : category.VolumeChange,
                     Categorieslastupdated = category.LastUpdated == null ? ExceptionValue : category.LastUpdated.ToLocalTime().ToOADate(),
                 };
-                categoryRows.Add(category.Id, categoryQActionRow);
+                categoryRows[category.Id] = categoryQActionRow;
             }
         }
 

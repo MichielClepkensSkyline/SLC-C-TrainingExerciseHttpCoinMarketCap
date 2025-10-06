@@ -82,7 +82,7 @@ public static class QAction
 					Lastlistingquotepercentchange24h = listing.Quote?.USD?.PercentChange24h == null ? ExceptionValue : listing.Quote?.USD?.PercentChange24h,
 					Lastlistingquotepercentchange7d = listing.Quote?.USD?.PercentChange7d == null ? ExceptionValue : listing.Quote?.USD?.PercentChange7d,
 				};
-				lastListingRows.Add(listing.Id, lastlistingQActionRow);
+				lastListingRows[listing.Id] = lastlistingQActionRow;
 			}
         }
 
