@@ -10,22 +10,24 @@ namespace Skyline.Protocol
             public static bool CheckStatusCode(SLProtocol protocol, int parameterId)
             {
 				string statusCode = protocol.GetParameter(parameterId).ToString();
-				int status = Int32.Parse(statusCode.Split(' ')[1]);
+				string statusOK = "200";
 
-				if (status == 200)
+				if (statusCode.Contains(statusOK))
 				{
 					return true;
 				}
 				else
 				{
-					protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown: Status of the response is: {status}", LogType.Error, LogLevel.NoLogging);
+					protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown: Status of the response is: {statusCode}", LogType.Error, LogLevel.NoLogging);
 					return false;
 				}
 			}
 
             public static bool CheckErrorCode(SLProtocol protocol, int errorCode, object errorMessage)
 			{
-				if (errorCode == 0)
+				int errorCodeOK = 0;
+
+				if (errorCode == errorCodeOK)
 				{
 					return true;
 				}
