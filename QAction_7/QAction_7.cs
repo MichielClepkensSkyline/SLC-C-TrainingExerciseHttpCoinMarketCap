@@ -25,6 +25,12 @@ public static class QAction
 			string json = protocol.GetParameter(Parameter.responseindividualcategory_10).ToString();
 			Category category = SecureNewtonsoftDeserialization.DeserializeObject<Category>(json);
 
+			if (category == null)
+			{
+				protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run| Category is null", LogType.Error, LogLevel.NoLogging);
+				return;
+			}
+
 			if (!StatusCode.CheckErrorCode(protocol, category.Status.ErrorCode, category.Status.ErrorMessage))
 			{
 				return;
@@ -40,21 +46,28 @@ public static class QAction
 
 	private static void UpdateCategoryRow(SLProtocol protocol, Data category)
 	{
-		var exceptionValue = -100;
-
-		object[] newCategoryRow = new CategoriesQActionRow
+		try
 		{
-			Categoriesid_201 = category.Id.ToString(),
-			Categoriesname_202 = category.Name ?? exceptionValue.ToString(),
-			Categoriesnumberoftokens_203 = category.NumTokens ?? exceptionValue,
-			Categoriesaveragepricechange_204 = category.AvgPriceChange ?? exceptionValue,
-			Categoriesmarketcap_205 = category.MarketCap ?? exceptionValue,
-			Categoriesmarketcapchange_206 = category.MarketCapChange ?? exceptionValue,
-			Categoriesvolume_207 = category.Volume ?? exceptionValue,
-			Categoriesvolumechange_208 = category.VolumeChange ?? exceptionValue,
-			Categorieslastupdated_209 = category.LastUpdated.ToOADate(),
-		};
+			var exceptionValue = -100;
 
-		protocol.SetRow(Parameter.Categories.tablePid, category.Id, newCategoryRow);
+			object[] newCategoryRow = new CategoriesQActionRow
+			{
+				Categoriesid_201 = category.Id.ToString(),
+				Categoriesname_202 = category.Name ?? exceptionValue.ToString(),
+				Categoriesnumberoftokens_203 = category.NumTokens ?? exceptionValue,
+				Categoriesaveragepricechange_204 = category.AvgPriceChange ?? exceptionValue,
+				Categoriesmarketcap_205 = category.MarketCap ?? exceptionValue,
+				Categoriesmarketcapchange_206 = category.MarketCapChange ?? exceptionValue,
+				Categoriesvolume_207 = category.Volume ?? exceptionValue,
+				Categoriesvolumechange_208 = category.VolumeChange ?? exceptionValue,
+				Categorieslastupdated_209 = category.LastUpdated.ToLocalTime().ToOADate(),
+			};
+
+			protocol.SetRow(Parameter.Categories.tablePid, category.Id, newCategoryRow);
+		}
+		catch (Exception ex)
+		{
+			protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}{ex}", LogType.Error, LogLevel.NoLogging);
+		}
 	}
 }

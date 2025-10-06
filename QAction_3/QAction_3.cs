@@ -27,6 +27,12 @@ public static class QAction
 			string json = protocol.GetParameter(Parameter.responselatestlistings_4).ToString();
 			LatestListings latestListings = SecureNewtonsoftDeserialization.DeserializeObject<LatestListings>(json);
 
+			if(latestListings == null)
+			{
+				protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run| Latest listing is null", LogType.Error, LogLevel.NoLogging);
+				return;
+			}
+
 			if (!StatusCode.CheckErrorCode(protocol, latestListings.Status.ErrorCode, latestListings.Status.ErrorMessage))
 			{
 				return;
@@ -61,10 +67,10 @@ public static class QAction
 					Latestlistingsid_101 = latest_listing.Id.ToString(),
 					Latestlistingsname_102 = latest_listing.Name ?? exceptionValue.ToString(),
 					Latestlistingssymbol_103 = latest_listing.Symbol ?? exceptionValue.ToString(),
-					Latestlistingsdateadded_104 = latest_listing.DateAdded.ToOADate(),
+					Latestlistingsdateadded_104 = latest_listing.DateAdded.ToLocalTime().ToOADate(),
 					Latestlistingscirculatingsupply_105 = latest_listing.TotalSupply,
 					Latestlistingsrank_106 = latest_listing.CmcRank ?? exceptionValue,
-					Latestlistingslastupdated_107 = latest_listing.LastUpdated.ToOADate(),
+					Latestlistingslastupdated_107 = latest_listing.LastUpdated.ToLocalTime().ToOADate(),
 					Latestlistingsquoteprice_108 = latest_listing.Quote.USD.Price ?? exceptionValue,
 					Latestlistings1hpercentagechange_109 = latest_listing.Quote.USD.PercentChange1h ?? exceptionValue,
 					Latestlistingsquotevolumechange24h_110 = latest_listing.Quote.USD.VolumeChange24h ?? exceptionValue,
