@@ -9,33 +9,26 @@
 	using Moq;
 	using Skyline.DataMiner.Scripting.HTTP;
 
+	/// <summary>
+	/// Unit Test Class.
+	/// </summary>
 	[TestClass]
 	public class StatusCodeTests
 	{
 		private const string ResponseContent = "{This is an empty response body for testing}";
 		private const string Url = "url/unit/testing";
 		private const int QActionID = 0;
-		private static Mock<SLProtocol>? fakeProtocol;
+		private static Mock<SLProtocol> fakeProtocol = new Mock<SLProtocol>();
 
-		[TestInitialize]
-		public void TestInitialize()
-		{
-			fakeProtocol = new Mock<SLProtocol>();
-			fakeProtocol.Setup(p => p.GetParameter(51)).Returns(ResponseContent);
-			fakeProtocol.Setup(p => p.GetParameter(52)).Returns(Url);
-		}
-
-		private string BuildExpectedMessage(string statusCode)
-		{
-			return $"QA{QActionID}|CheckStatusCode|Bad statuscode:\nURL API call: {Url} \nStatuscode: {statusCode}\nResponse content: {ResponseContent}";
-		}
-
-		[TestMethod()]
+		/// <summary>
+		/// Testmethod with a correct statuscode.
+		/// </summary>
+		[TestMethod]
 		public void CheckStatusCodeTest()
 		{
 			// Arrange
 			string statusCode = "HTTP/1.1 200 OK";
-			fakeProtocol.Setup(p => p.GetParameter(50)).Returns(statusCode);
+			fakeProtocol.Setup(p => p.GetParameters(new uint[] { 50, 51, 52 })).Returns(new object[] { statusCode, ResponseContent, Url });
 
 			// Act
 			bool result = StatusCode.CheckStatusCode(fakeProtocol.Object, 50, 51, 52);
@@ -44,12 +37,15 @@
 			Assert.IsTrue(result);
 		}
 
-		[TestMethod()]
+		/// <summary>
+		/// Testmethod with a different statuscode.
+		/// </summary>
+		[TestMethod]
 		public void CheckStatusCodeNot200()
 		{
 			// Arrange
 			string statusCode = "HTTP/1.1 204 No Content";
-			fakeProtocol.Setup(p => p.GetParameter(50)).Returns(statusCode);
+			fakeProtocol.Setup(p => p.GetParameters(new uint[] { 50, 51, 52 })).Returns(new object[] { statusCode, ResponseContent, Url });
 			fakeProtocol.Setup(p => p.QActionID).Returns(QActionID);
 			string expectedMessage = this.BuildExpectedMessage(statusCode);
 
@@ -61,12 +57,15 @@
 			fakeProtocol.Verify(p => p.Log(It.Is<string>(msg => msg == expectedMessage), LogType.Error, LogLevel.NoLogging));
 		}
 
-		[TestMethod()]
+		/// <summary>
+		/// Testmethod with a badly formed statuscode.
+		/// </summary>
+		[TestMethod]
 		public void CheckWrongFormedStatusCode()
 		{
 			// Arrange
 			string statusCode = "This 200 does not make sense!";
-			fakeProtocol.Setup(p => p.GetParameter(50)).Returns(statusCode);
+			fakeProtocol.Setup(p => p.GetParameters(new uint[] { 50, 51, 52 })).Returns(new object[] { statusCode, ResponseContent, Url });
 			fakeProtocol.Setup(p => p.QActionID).Returns(QActionID);
 			string expectedMessage = this.BuildExpectedMessage(statusCode);
 
@@ -76,6 +75,11 @@
 			// Assert
 			Assert.IsFalse(result);
 			fakeProtocol.Verify(p => p.Log(It.Is<string>(msg => msg == expectedMessage), LogType.Error, LogLevel.NoLogging));
+		}
+
+		private string BuildExpectedMessage(string statusCode)
+		{
+			return $"QA{QActionID}|CheckStatusCode|Bad statuscode:\nURL API call: {Url} \nStatuscode: {statusCode}\nResponse content: {ResponseContent}";
 		}
 	}
 }
