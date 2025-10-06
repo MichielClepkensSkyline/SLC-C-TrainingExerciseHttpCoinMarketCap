@@ -12,11 +12,12 @@ using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
 /// </summary>
 public static class QAction
 {
-	/// <summary>
-	/// The QAction entry point.
-	/// </summary>
-	/// <param name="protocol">Link with SLProtocol process.</param>
-	public static void Run(SLProtocolExt protocol)
+    private const int ExceptionValue = -1;
+    /// <summary>
+    /// The QAction entry point.
+    /// </summary>
+    /// <param name="protocol">Link with SLProtocol process.</param>
+    public static void Run(SLProtocolExt protocol)
 	{
 		try
 		{
@@ -49,26 +50,26 @@ public static class QAction
         {
             Dictionary<int, object> parameters = new Dictionary<int, object>
             {
-                { Parameter.activecryptocurrencies, data.ActiveCryptocurrencies == null ? -1 : data.ActiveCryptocurrencies },
-                { Parameter.totalcryptocurrencies, data.TotalCryptocurrencies == null ? -1 : data.TotalCryptocurrencies },
-                { Parameter.activemarketpairs, data.ActiveMarketPairs == null ? -1 : data.ActiveMarketPairs },
-                { Parameter.activeexchanges,data.ActiveExchanges == null ? -1 : data.ActiveExchanges },
-                { Parameter.totalexchanges, data.TotalExchanges == null ? -1 : data.TotalExchanges },
-                { Parameter.ethereumdominance, data.EthDominance == null ? -1 : data.EthDominance },
-                { Parameter.bitcoindominance, data.BtcDominance == null ? -1 : data.BtcDominance },
-                { Parameter.ethereumdominance24hpercentagechange, data.EthDominance24hPercentageChange == null ? -1 : data.EthDominance24hPercentageChange },
-                { Parameter.bitcoindominance24hpercentagechange, data.BtcDominance24hPercentageChange == null ? -1 : data.BtcDominance24hPercentageChange },
-                { Parameter.defivolume24h, data.DefiVolume24h == null ? -1 : data.DefiVolume24h },
-                { Parameter.defimarketcap, data.DefiMarketCap == null ? -1 : data.DefiMarketCap },
-                { Parameter.defi24hpercentagechange, data.Defi24hPercentageChange == null ? -1 : data.Defi24hPercentageChange },
-                { Parameter.stablecoinvolume24h, data.StablecoinVolume24h == null ? -1 : data.StablecoinVolume24h },
-                { Parameter.stablecoinmarketcap, data.StablecoinMarketCap == null ? -1 : data.StablecoinMarketCap },
-                { Parameter.stablecoin24hpercentagechange, data.Stablecoin24hPercentageChange == null ? -1 : data.Stablecoin24hPercentageChange },
-                { Parameter.totalcryptodexcurrencies, data.TotalCryptoDexCurrencies == null ? -1 : data.TotalCryptoDexCurrencies },
-                { Parameter.past24hincrementalcryptonumber, data.Past24hIncrementalCryptoNumber == null ? -1 : data.Past24hIncrementalCryptoNumber },
-                { Parameter.totalmarketcap, data.Quote?.USD?.TotalMarketCap == null ? -1 : data.Quote?.USD?.TotalMarketCap },
-                { Parameter.totalvolume24h, data.Quote?.USD?.TotalVolume24h == null ? -1 : data.Quote?.USD?.TotalVolume24h },
-                { Parameter.lastupdated, data.LastUpdated == null ? -1 : data.LastUpdated.ToLocalTime().ToOADate() },
+                { Parameter.activecryptocurrencies, data.ActiveCryptocurrencies == null ? ExceptionValue : data.ActiveCryptocurrencies },
+                { Parameter.totalcryptocurrencies, data.TotalCryptocurrencies == null ? ExceptionValue : data.TotalCryptocurrencies },
+                { Parameter.activemarketpairs, data.ActiveMarketPairs == null ? ExceptionValue : data.ActiveMarketPairs },
+                { Parameter.activeexchanges,data.ActiveExchanges == null ? ExceptionValue : data.ActiveExchanges },
+                { Parameter.totalexchanges, data.TotalExchanges == null ? ExceptionValue : data.TotalExchanges },
+                { Parameter.ethereumdominance, data.EthDominance == null ? ExceptionValue : data.EthDominance },
+                { Parameter.bitcoindominance, data.BtcDominance == null ? ExceptionValue : data.BtcDominance },
+                { Parameter.ethereumdominance24hpercentagechange, data.EthDominance24hPercentageChange == null ? ExceptionValue : data.EthDominance24hPercentageChange },
+                { Parameter.bitcoindominance24hpercentagechange, data.BtcDominance24hPercentageChange == null ? ExceptionValue : data.BtcDominance24hPercentageChange },
+                { Parameter.defivolume24h, data.DefiVolume24h == null ? ExceptionValue : data.DefiVolume24h },
+                { Parameter.defimarketcap, data.DefiMarketCap == null ? ExceptionValue : data.DefiMarketCap },
+                { Parameter.defi24hpercentagechange, data.Defi24hPercentageChange == null ? ExceptionValue : data.Defi24hPercentageChange },
+                { Parameter.stablecoinvolume24h, data.StablecoinVolume24h == null ? ExceptionValue : data.StablecoinVolume24h },
+                { Parameter.stablecoinmarketcap, data.StablecoinMarketCap == null ? ExceptionValue : data.StablecoinMarketCap },
+                { Parameter.stablecoin24hpercentagechange, data.Stablecoin24hPercentageChange == null ? ExceptionValue : data.Stablecoin24hPercentageChange },
+                { Parameter.totalcryptodexcurrencies, data.TotalCryptoDexCurrencies == null ? ExceptionValue : data.TotalCryptoDexCurrencies },
+                { Parameter.past24hincrementalcryptonumber, data.Past24hIncrementalCryptoNumber == null ? ExceptionValue : data.Past24hIncrementalCryptoNumber },
+                { Parameter.totalmarketcap, data.Quote?.USD?.TotalMarketCap == null ? ExceptionValue : data.Quote?.USD?.TotalMarketCap },
+                { Parameter.totalvolume24h, data.Quote?.USD?.TotalVolume24h == null ? ExceptionValue : data.Quote?.USD?.TotalVolume24h },
+                { Parameter.lastupdated, data.LastUpdated == null ? ExceptionValue : data.LastUpdated.ToLocalTime().ToOADate() },
             };
             uint[] array_succes = (uint[])protocol.SetParameters(parameters.Keys.ToArray(),parameters.Values.ToArray());
             if (!array_succes.All(r => r == 0))

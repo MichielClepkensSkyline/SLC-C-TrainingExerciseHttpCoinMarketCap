@@ -477,7 +477,6 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<LengthType>next param</LengthType>
 				<Exceptions>
 					<Exception id="1" value="">
-						
 						<Display state="disabled">No Name</Display>
 						<Value>0</Value>
 					</Exception>
@@ -698,7 +697,7 @@ The unique CoinMarketCap ID for this cryptocurrency.]]>
 				<Exceptions>
 					<Exception id="1" value="-1">
 						<Display state="disabled">No Max Supply</Display>
-						<Value>0</Value>
+						<Value>-1</Value>
 					</Exception>
 				</Exceptions>
 			</Interprete>
@@ -829,7 +828,7 @@ The name of the parent platform cryptocurrency.]]>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
 				<Exceptions>
-					<Exception id="1" value="no platform">
+					<Exception id="1" value="">
 						<Display state="disabled">No Platform</Display>
 						<Value>0</Value>
 					</Exception>

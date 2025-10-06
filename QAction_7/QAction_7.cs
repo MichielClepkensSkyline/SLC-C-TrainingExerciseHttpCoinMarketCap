@@ -15,11 +15,12 @@ using Skyline.DataMiner.Utils.SecureCoding.SecureSerialization.Json.Newtonsoft;
 /// </summary>
 public static class QAction
 {
-	/// <summary>
-	/// The QAction entry point.
-	/// </summary>
-	/// <param name="protocol">Link with SLProtocol process.</param>
-	public static void Run(SLProtocolExt protocol)
+    private const int ExceptionValue = -1;
+    /// <summary>
+    /// The QAction entry point.
+    /// </summary>
+    /// <param name="protocol">Link with SLProtocol process.</param>
+    public static void Run(SLProtocolExt protocol)
 	{
 		try
 		{
@@ -53,16 +54,16 @@ public static class QAction
             CategoriesQActionRow categoryQActionRow = new CategoriesQActionRow
             {
                 Categoriesid = category.Id,
-                Categoriesname = category.Name,
-                Categoriestitle = category.Title,
-                Categoriesdescription = category.Description,
-                Categoriesnumberoftokens = category.NumTokens,
-                Categoriesaveragepricechange = category.AvgPriceChange,
-                Categoriesmarketcap = category.MarketCap,
-                Categoriesmarketcapchange = category.MarketCapChange,
-                Categoriesvolume = category.Volume,
-                Categoriesvolumechange = category.VolumeChange,
-                Categorieslastupdated = category.LastUpdated.ToLocalTime().ToOADate(),
+                Categoriesname = category.Name == null ? string.Empty : category.Name,
+                Categoriestitle = category.Title == null ? string.Empty : category.Title,
+                Categoriesdescription = category.Description == null ? string.Empty : category.Description,
+                Categoriesnumberoftokens = category.NumTokens == null ? ExceptionValue : category.NumTokens,
+                Categoriesaveragepricechange = category.AvgPriceChange == null ? ExceptionValue : category.AvgPriceChange,
+                Categoriesmarketcap = category.MarketCap == null ? ExceptionValue : category.MarketCap,
+                Categoriesmarketcapchange = category.MarketCapChange == null ? ExceptionValue : category.MarketCapChange,
+                Categoriesvolume = category.Volume == null ? ExceptionValue : category.Volume,
+                Categoriesvolumechange = category.VolumeChange == null ? ExceptionValue : category.VolumeChange,
+                Categorieslastupdated = category.LastUpdated == null ? ExceptionValue : category.LastUpdated.ToLocalTime().ToOADate(),
             };
             bool succes = (bool)protocol.categories.SetRow(category.Id, categoryQActionRow)[0];
             if (!succes)
