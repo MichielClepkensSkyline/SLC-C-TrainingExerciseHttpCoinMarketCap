@@ -28,11 +28,11 @@ public static class QAction
 			if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodelastlistings, Parameter.responsecontentlastlistings, Parameter.urllastlistings))
 			{
 				Root root = SecureNewtonsoftDeserialization.DeserializeObject<Root>(protocol.GetParameter(Parameter.responsecontentlastlistings).ToString());
-				if (string.IsNullOrWhiteSpace(root.ToString()))
+				if (root == null || string.IsNullOrWhiteSpace(root.ToString()))
 				{
                     protocol.Log($"QA{protocol.QActionID}|Run|root is null", LogType.Error, LogLevel.NoLogging);
                 }
-				else if (string.IsNullOrWhiteSpace(root.Status.ToString()))
+				else if (root.Status == null || string.IsNullOrWhiteSpace(root.Status.ToString()))
 				{
 					protocol.Log($"QA{protocol.QActionID}|Run|root.Status is null", LogType.Error, LogLevel.NoLogging);
 				}
