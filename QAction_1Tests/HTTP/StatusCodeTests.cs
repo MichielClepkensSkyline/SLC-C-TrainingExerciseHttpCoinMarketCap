@@ -18,6 +18,9 @@
 		private const string ResponseContent = "{This is an empty response body for testing}";
 		private const string Url = "url/unit/testing";
 		private const int QActionID = 0;
+		private const int StatusCodePID = 50;
+		private const int ResponseContentPID = 51;
+		private const int UrlPID = 52;
 		private static Mock<SLProtocol> fakeProtocol = new Mock<SLProtocol>();
 
 		/// <summary>
@@ -28,10 +31,10 @@
 		{
 			// Arrange
 			string statusCode = "HTTP/1.1 200 OK";
-			fakeProtocol.Setup(p => p.GetParameters(new uint[] { 50, 51, 52 })).Returns(new object[] { statusCode, ResponseContent, Url });
+			fakeProtocol.Setup(p => p.GetParameters(new uint[] { StatusCodePID, ResponseContentPID, UrlPID })).Returns(new object[] { statusCode, ResponseContent, Url });
 
 			// Act
-			bool result = StatusCode.CheckStatusCode(fakeProtocol.Object, 50, 51, 52);
+			bool result = StatusCode.CheckStatusCode(fakeProtocol.Object, StatusCodePID, ResponseContentPID, UrlPID);
 
 			// Assert
 			Assert.IsTrue(result);
@@ -45,10 +48,10 @@
 		{
 			// Arrange
 			string statusCode = "HTTP/1.1 200";
-			fakeProtocol.Setup(p => p.GetParameters(new uint[] { 50, 51, 52 })).Returns(new object[] { statusCode, ResponseContent, Url });
+			fakeProtocol.Setup(p => p.GetParameters(new uint[] { StatusCodePID, ResponseContentPID, UrlPID })).Returns(new object[] { statusCode, ResponseContent, Url });
 
 			// Act
-			bool result = StatusCode.CheckStatusCode(fakeProtocol.Object, 50, 51, 52);
+			bool result = StatusCode.CheckStatusCode(fakeProtocol.Object, StatusCodePID, ResponseContentPID, UrlPID);
 
 			// Assert
 			Assert.IsTrue(result);
@@ -62,12 +65,12 @@
 		{
 			// Arrange
 			string statusCode = "HTTP/1.1 204 No Content";
-			fakeProtocol.Setup(p => p.GetParameters(new uint[] { 50, 51, 52 })).Returns(new object[] { statusCode, ResponseContent, Url });
+			fakeProtocol.Setup(p => p.GetParameters(new uint[] { StatusCodePID, ResponseContentPID, UrlPID })).Returns(new object[] { statusCode, ResponseContent, Url });
 			fakeProtocol.Setup(p => p.QActionID).Returns(QActionID);
 			string expectedMessage = this.BuildExpectedMessage(statusCode);
 
 			// Act
-			bool result = StatusCode.CheckStatusCode(fakeProtocol.Object, 50, 51, 52);
+			bool result = StatusCode.CheckStatusCode(fakeProtocol.Object, StatusCodePID, ResponseContentPID, UrlPID);
 
 			// Assert
 			Assert.IsFalse(result);
@@ -82,12 +85,12 @@
 		{
 			// Arrange
 			string statusCode = "This 200 does not make sense!";
-			fakeProtocol.Setup(p => p.GetParameters(new uint[] { 50, 51, 52 })).Returns(new object[] { statusCode, ResponseContent, Url });
+			fakeProtocol.Setup(p => p.GetParameters(new uint[] { StatusCodePID, ResponseContentPID, UrlPID })).Returns(new object[] { statusCode, ResponseContent, Url });
 			fakeProtocol.Setup(p => p.QActionID).Returns(QActionID);
 			string expectedMessage = this.BuildExpectedMessage(statusCode);
 
 			// Act
-			bool result = StatusCode.CheckStatusCode(fakeProtocol.Object, 50, 51, 52);
+			bool result = StatusCode.CheckStatusCode(fakeProtocol.Object, StatusCodePID, ResponseContentPID, UrlPID);
 
 			// Assert
 			Assert.IsFalse(result);
@@ -102,12 +105,12 @@
 		{
 			// Arrange
 			string statusCode = string.Empty;
-			fakeProtocol.Setup(p => p.GetParameters(new uint[] { 50, 51, 52 })).Returns(new object[] { statusCode, ResponseContent, Url });
+			fakeProtocol.Setup(p => p.GetParameters(new uint[] { StatusCodePID, ResponseContentPID, UrlPID })).Returns(new object[] { statusCode, ResponseContent, Url });
 			fakeProtocol.Setup(p => p.QActionID).Returns(QActionID);
 			string expectedMessage = this.BuildExpectedMessage(statusCode);
 
 			// Act
-			bool result = StatusCode.CheckStatusCode(fakeProtocol.Object, 50, 51, 52);
+			bool result = StatusCode.CheckStatusCode(fakeProtocol.Object, StatusCodePID, ResponseContentPID, UrlPID);
 
 			// Assert
 			Assert.IsFalse(result);
