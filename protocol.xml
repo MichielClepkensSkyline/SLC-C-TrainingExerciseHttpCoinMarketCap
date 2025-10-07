@@ -1267,7 +1267,7 @@ Any inquiries can be addressed to:
 				<Type>string</Type>
 			</Measurement>
 		</Param>
-		<Param id="600" trending="false" save="true">
+		<Param id="600" trending="false">
 			<Name>BearerTokenValue</Name>
 			<Description>Token Value</Description>
 			<Type>read</Type>
@@ -1439,6 +1439,7 @@ Any inquiries can be addressed to:
 			<Type>action</Type>
 			<Content>
 				<Id>1</Id>
+				<Id>7</Id>
 			</Content>
 		</Trigger>
 		<Trigger id="2">
@@ -1493,6 +1494,11 @@ Any inquiries can be addressed to:
 			<Name>Execute Group Refresh Category</Name>
 			<On id="6">group</On>
 			<Type>execute one now</Type>
+		</Action>
+		<Action id="7">
+			<Name>Copy 5 To 600</Name>
+			<On id="600">parameter</On>
+			<Type id="5">copy</Type>
 		</Action>
 	</Actions>
 
