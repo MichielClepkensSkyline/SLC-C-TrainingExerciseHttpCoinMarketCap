@@ -27,12 +27,13 @@ public static class QAction
 		{
 			if (StatusCode.CheckStatusCode(protocol, Parameter.statuscodelastlistings, Parameter.responsecontentlastlistings, Parameter.urllastlistings))
 			{
-				Root root = SecureNewtonsoftDeserialization.DeserializeObject<Root>(protocol.GetParameter(Parameter.responsecontentlastlistings).ToString());
-				if (root == null || string.IsNullOrWhiteSpace(root.ToString()))
+				string rootstring = Convert.ToString(protocol.GetParameter(Parameter.responsecontentlastlistings));
+				Root root = SecureNewtonsoftDeserialization.DeserializeObject<Root>(rootstring);
+				if (root == null)
 				{
                     protocol.Log($"QA{protocol.QActionID}|Run|root is null", LogType.Error, LogLevel.NoLogging);
                 }
-				else if (root.Status == null || string.IsNullOrWhiteSpace(root.Status.ToString()))
+				else if (root.Status == null)
 				{
 					protocol.Log($"QA{protocol.QActionID}|Run|root.Status is null", LogType.Error, LogLevel.NoLogging);
 				}

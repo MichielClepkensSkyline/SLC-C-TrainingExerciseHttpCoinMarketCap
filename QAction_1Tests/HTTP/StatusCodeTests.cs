@@ -58,7 +58,7 @@
 		}
 
 		/// <summary>
-		/// Testmethod with a different statuscode.
+		/// Testmethod with a statuscode different than 200.
 		/// </summary>
 		[TestMethod]
 		public void CheckStatusCodeNot200()
